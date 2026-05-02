@@ -1,11 +1,11 @@
 {
   "zero_slop_policy": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
-  "report_id": "REDO-IMPACT-dfms-ui-console-run-20260501-185746",
+  "report_id": "REDO-IMPACT-dfms-ui-console-run-20260501-191327",
   "project": "DFMS UI Console Run",
   "source_request": "UI-REDO-REQUEST",
   "selected_node": "NODE-02-PRD-MD",
   "selected_node_path": "02-prd.md",
-  "generated_at": "2026-05-02T01:57:46+00:00",
+  "generated_at": "2026-05-02T02:13:27+00:00",
   "closure": {
     "impacted_node_count": 11,
     "impacted_nodes": [
@@ -608,7 +608,7 @@
     "df-dashboard-control"
   ],
   "task_bead": {
-    "bead_id": "TB-REDO-20260501-185746",
+    "bead_id": "TB-REDO-20260501-191327",
     "state": "planned",
     "gate": "GATE-REDO-IMPACT",
     "evidence_target": "redo-impact-report.json"
