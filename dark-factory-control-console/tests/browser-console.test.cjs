@@ -23,6 +23,7 @@ const { chromium } = require("playwright");
   assert((await page.locator("#providerQuorumBoard").textContent()).includes("OpenAI"), "provider quorum should render");
   assert((await page.locator("#specGraphExplorer").textContent()).includes("nodes"), "Spec Graph explorer should render");
 
+  await page.click('[data-panel-target="start"]');
   await page.fill("#projectName", "Browser Smoke Governed Product");
   await page.selectOption("#scenarioMode", "greenfield-product");
   await page.selectOption("#templateId", "agentic-sdlc-factory");
@@ -35,14 +36,17 @@ const { chromium } = require("playwright");
   await page.waitForFunction(() => document.querySelector("#humanInterrupts")?.textContent.includes("approve_factory_scenario"));
   await page.click('[data-interrupt-decision="approve"]');
   await page.waitForFunction(() => document.querySelector("#aguiEventStream")?.textContent.includes("HUMAN_DECISION_RECORDED"));
+  await page.click('[data-panel-target="debug"]');
   await page.fill("#agentMessage", "Explain the active stage and what the legal next action is.");
   await page.click("#sendAgentMessage");
   await page.waitForFunction(() => document.querySelector("#agentResponse")?.textContent.includes("Current legal focus"));
   await page.waitForFunction(() => document.querySelector("#aguiEventStream")?.textContent.includes("USER_MESSAGE"));
+  await page.click('[data-panel-target="evidence"]');
   await page.click("#executePipeline");
   await page.waitForFunction(() => document.querySelector("#currentStage")?.textContent.includes("01-interrogation"));
   await page.waitForFunction(() => document.querySelector("#activeAgent")?.textContent.includes("Spec Interrogator"));
 
+  await page.click('[data-panel-target="start"]');
   const fields = await page.locator("[data-question]").elementHandles();
   for (const field of fields) {
     const qid = await field.getAttribute("data-question");
@@ -53,6 +57,7 @@ const { chromium } = require("playwright");
   }
 
   await page.waitForFunction(() => document.querySelector("#completionScore")?.textContent.trim() === "100%");
+  await page.click('[data-panel-target="evidence"]');
   await page.click("#executePipeline");
   await page.waitForFunction(() => Number(document.querySelector("#recordCount")?.textContent || "0") >= 5);
   await page.click("#runRalphAudit");
@@ -65,10 +70,12 @@ const { chromium } = require("playwright");
   });
   assert.strictEqual(validateStatus, "pass", "validate endpoint should expose a passing run validator");
 
+  await page.click('[data-panel-target="graph"]');
   await page.click("#redoClosure");
   await page.waitForFunction(() => document.querySelector("#redoResult")?.textContent.includes("Impacted nodes:"));
 
   assert((await page.locator("#portalStatus").textContent()).length > 1, "project portal status should render");
+  await page.click('[data-panel-target="change"]');
   await page.fill("#changeTitle", "Browser design resteer");
   await page.selectOption("#changeImpact", "design");
   await page.selectOption("#changeTargetStage", "stage-04-artifacts");
@@ -77,6 +84,7 @@ const { chromium } = require("playwright");
   await page.fill("#changeReason", "Browser smoke test proves a human can resteer the project after reviewing portal evidence.");
   await page.click("#openChangeRequest");
   await page.waitForFunction(() => document.querySelector("#changeResult")?.textContent.includes("Opened CR-"));
+  await page.click('[data-panel-target="evidence"]');
   await page.waitForFunction(() => document.querySelector("#portalStatus")?.textContent.includes("change_control"));
   await page.waitForFunction(() => document.querySelector("#legalNextAction")?.textContent.includes("active change request"));
   await page.waitForFunction(() => document.querySelector("#changeRequestList")?.textContent.includes("Browser design resteer"));

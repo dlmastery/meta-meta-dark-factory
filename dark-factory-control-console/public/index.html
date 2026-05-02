@@ -66,7 +66,46 @@
         </div>
       </section>
 
-      <section class="band agentic-workbench" aria-labelledby="agentic-workbench-title">
+      <section class="focus-console" aria-labelledby="focus-title">
+        <div class="focus-main">
+          <div class="deck-kicker">Human Supervisor View</div>
+          <h2 id="focus-title">One active factory run. One next decision.</h2>
+          <p id="focusSummary">Start or select a project. The factory will surface the next human decision before agents execute material work.</p>
+          <div class="focus-lane">
+            <div>
+              <span>Factory route</span>
+              <strong id="focusRoute">--</strong>
+            </div>
+            <div>
+              <span>Agent mode</span>
+              <strong id="focusAgentMode">--</strong>
+            </div>
+            <div>
+              <span>Proof posture</span>
+              <strong id="focusProof">--</strong>
+            </div>
+          </div>
+        </div>
+        <aside class="focus-action">
+          <div class="next-action-label">Decision Queue</div>
+          <div id="focusDecisionList" class="focus-decisions"></div>
+          <div class="focus-buttons">
+            <button id="focusPrimaryAction" class="button primary">Open Workbench</button>
+            <button id="focusSecondaryAction" class="button secondary">Inspect Evidence</button>
+          </div>
+        </aside>
+      </section>
+
+      <nav class="workspace-tabs" aria-label="Workspace sections">
+        <button class="tab-button active" data-panel-target="overview">Overview</button>
+        <button class="tab-button" data-panel-target="start">Start / Grill</button>
+        <button class="tab-button" data-panel-target="evidence">Evidence</button>
+        <button class="tab-button" data-panel-target="graph">Graph / Redo</button>
+        <button class="tab-button" data-panel-target="change">Change</button>
+        <button class="tab-button" data-panel-target="debug">Agent Protocol</button>
+      </nav>
+
+      <section class="band agentic-workbench ux-panel active" data-panel="overview" aria-labelledby="agentic-workbench-title">
         <div class="section-head">
           <div>
             <h2 id="agentic-workbench-title">Agentic SDLC Workbench</h2>
@@ -110,88 +149,7 @@
         </div>
       </section>
 
-      <section class="band protocol-workbench" aria-labelledby="protocol-title">
-        <div class="section-head">
-          <div>
-            <h2 id="protocol-title">Agent Interaction Protocol Workbench</h2>
-            <p>AG-UI event stream, A2UI dynamic surfaces, and MCP Apps tool/resources for step-by-step SDLC factory control.</p>
-          </div>
-          <div class="protocol-pills" aria-label="Protocol status">
-            <span id="protocolAguiStatus" class="status-chip strong">AG-UI: --</span>
-            <span id="protocolA2uiStatus" class="status-chip accent">A2UI: --</span>
-            <span id="protocolMcpStatus" class="status-chip">MCP Apps: --</span>
-          </div>
-        </div>
-
-        <div class="protocol-grid">
-          <div class="agent-question-panel">
-            <div class="section-head tight">
-              <div>
-                <h3>Ask Or Resteer Anytime</h3>
-                <p>The agent responds with the active stage report, blockers, legal next action, and change-control path.</p>
-              </div>
-            </div>
-            <div class="agent-input-row">
-              <select id="agentMessageMode" aria-label="Agent message mode">
-                <option value="ask">Ask</option>
-                <option value="audit">Audit</option>
-                <option value="resteer">Resteer</option>
-                <option value="explain">Explain</option>
-              </select>
-              <button id="sendAgentMessage" class="button primary">Send To Agent</button>
-            </div>
-            <textarea id="agentMessage" rows="4" placeholder="Ask what is blocked, request a stage report, or describe a design change to route through change control."></textarea>
-            <div id="agentResponse" class="agent-response"></div>
-          </div>
-
-          <div class="stage-report-panel">
-            <div class="stage-report-header">
-              <span>Current Stage Report</span>
-              <strong id="stageReportTitle">No active stage</strong>
-            </div>
-            <p id="stageReportBody">Start or select a project to inspect agent protocol state.</p>
-            <div id="aguiEventStream" class="event-stream"></div>
-          </div>
-        </div>
-
-        <div class="protocol-grid lower">
-          <div>
-            <h3>A2UI Declared Surfaces</h3>
-            <div id="a2uiSurfaces" class="surface-grid"></div>
-          </div>
-          <div>
-            <h3>MCP Apps Tools And Resources</h3>
-            <div id="mcpAppsList" class="stack-list protocol-list"></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="band truth-inventory" aria-labelledby="truth-title">
-        <div class="section-head">
-          <div>
-            <h2 id="truth-title">Recovery Truth Inventory</h2>
-            <p>Proof classes, overclaim boundaries, and the next recovery batch. Progress here is evidence-backed, not optimism-backed.</p>
-          </div>
-          <div class="scorebox">
-            <span id="truthRiskScore">--</span>
-            <small>risk rows</small>
-          </div>
-        </div>
-        <div id="proofClassCounts" class="truth-counts"></div>
-        <div class="truth-columns">
-          <div>
-            <h3>Trust Now</h3>
-            <div id="trustNowList" class="stack-list"></div>
-          </div>
-          <div>
-            <h3>Do Not Trust Yet</h3>
-            <div id="dontTrustList" class="stack-list"></div>
-          </div>
-        </div>
-        <div id="truthRows" class="truth-row-list"></div>
-      </section>
-
-      <section class="band agentic-grid" aria-labelledby="swarm-title">
+      <section class="band agentic-grid ux-panel active" data-panel="overview" aria-labelledby="swarm-title">
         <div>
           <div class="section-head tight">
             <div>
@@ -212,7 +170,7 @@
         </div>
       </section>
 
-      <section class="band compact" aria-labelledby="start-title">
+      <section class="band compact ux-panel" data-panel="start" aria-labelledby="start-title">
         <div class="section-head">
           <div>
             <h2 id="start-title">Start A Governed Project</h2>
@@ -274,7 +232,7 @@
               <option value="xhigh">Extra high</option>
             </select>
           </label>
-          <label class="span-2">
+          <label class="span-3">
             <span>Reapproval trigger</span>
             <input id="reapprovalTrigger" value="Any scope, production, security, privacy, budget, or artifact expansion beyond this iteration.">
           </label>
@@ -285,7 +243,103 @@
         </div>
       </section>
 
-      <section class="band" aria-labelledby="portal-title">
+      <section class="band ux-panel" data-panel="start" aria-labelledby="grill-title">
+        <div class="section-head">
+          <div>
+            <h2 id="grill-title">Customer Grill</h2>
+            <p>Answer capture, contradiction scoring, and re-interrogation blockers.</p>
+          </div>
+          <div class="scorebox">
+            <span id="completionScore">0%</span>
+            <small>complete</small>
+          </div>
+        </div>
+        <div id="questionList" class="question-list"></div>
+        <div id="contradictions" class="alerts" aria-live="polite"></div>
+      </section>
+
+      <section class="band protocol-workbench ux-panel" data-panel="debug" aria-labelledby="protocol-title">
+        <div class="section-head">
+          <div>
+            <h2 id="protocol-title">Agent Interaction Protocol Workbench</h2>
+            <p>AG-UI event stream, A2UI dynamic surfaces, and MCP Apps tool/resources for step-by-step SDLC factory control.</p>
+          </div>
+          <div class="protocol-pills" aria-label="Protocol status">
+            <span id="protocolAguiStatus" class="status-chip strong">AG-UI: --</span>
+            <span id="protocolA2uiStatus" class="status-chip accent">A2UI: --</span>
+            <span id="protocolMcpStatus" class="status-chip">MCP Apps: --</span>
+          </div>
+        </div>
+
+        <div class="protocol-grid">
+          <div class="agent-question-panel">
+            <div class="section-head tight">
+              <div>
+                <h3>Ask Or Resteer Anytime</h3>
+                <p>The agent responds with the active stage report, blockers, legal next action, and change-control path.</p>
+              </div>
+            </div>
+            <div class="agent-input-row">
+              <select id="agentMessageMode" aria-label="Agent message mode">
+                <option value="ask">Ask</option>
+                <option value="audit">Audit</option>
+                <option value="resteer">Resteer</option>
+                <option value="explain">Explain</option>
+              </select>
+              <button id="sendAgentMessage" class="button primary">Send To Agent</button>
+            </div>
+            <textarea id="agentMessage" rows="4" placeholder="Ask what is blocked, request a stage report, or describe a design change to route through change control."></textarea>
+            <div id="agentResponse" class="agent-response"></div>
+          </div>
+
+          <div class="stage-report-panel">
+            <div class="stage-report-header">
+              <span>Current Stage Report</span>
+              <strong id="stageReportTitle">No active stage</strong>
+            </div>
+            <p id="stageReportBody">Start or select a project to inspect agent protocol state.</p>
+            <div id="aguiEventStream" class="event-stream"></div>
+          </div>
+        </div>
+
+        <div class="protocol-grid lower">
+          <div>
+            <h3>A2UI Declared Surfaces</h3>
+            <div id="a2uiSurfaces" class="surface-grid"></div>
+          </div>
+          <div>
+            <h3>MCP Apps Tools And Resources</h3>
+            <div id="mcpAppsList" class="stack-list protocol-list"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band truth-inventory ux-panel" data-panel="evidence" aria-labelledby="truth-title">
+        <div class="section-head">
+          <div>
+            <h2 id="truth-title">Recovery Truth Inventory</h2>
+            <p>Proof classes, overclaim boundaries, and the next recovery batch. Progress here is evidence-backed, not optimism-backed.</p>
+          </div>
+          <div class="scorebox">
+            <span id="truthRiskScore">--</span>
+            <small>risk rows</small>
+          </div>
+        </div>
+        <div id="proofClassCounts" class="truth-counts"></div>
+        <div class="truth-columns">
+          <div>
+            <h3>Trust Now</h3>
+            <div id="trustNowList" class="stack-list"></div>
+          </div>
+          <div>
+            <h3>Do Not Trust Yet</h3>
+            <div id="dontTrustList" class="stack-list"></div>
+          </div>
+        </div>
+        <div id="truthRows" class="truth-row-list"></div>
+      </section>
+
+      <section class="band ux-panel" data-panel="evidence" aria-labelledby="portal-title">
         <div class="section-head">
           <div>
             <h2 id="portal-title">Human Project Portal</h2>
@@ -314,7 +368,7 @@
         </div>
       </section>
 
-      <section class="band" aria-labelledby="change-title">
+      <section class="band ux-panel" data-panel="change" aria-labelledby="change-title">
         <div class="section-head">
           <div>
             <h2 id="change-title">Resteer Or Change Design</h2>
@@ -372,22 +426,7 @@
         <div id="changeResult" class="result"></div>
       </section>
 
-      <section class="band" aria-labelledby="grill-title">
-        <div class="section-head">
-          <div>
-            <h2 id="grill-title">Customer Grill</h2>
-            <p>Answer capture, contradiction scoring, and re-interrogation blockers.</p>
-          </div>
-          <div class="scorebox">
-            <span id="completionScore">0%</span>
-            <small>complete</small>
-          </div>
-        </div>
-        <div id="questionList" class="question-list"></div>
-        <div id="contradictions" class="alerts" aria-live="polite"></div>
-      </section>
-
-      <section class="band split" aria-labelledby="progress-title">
+      <section class="band split ux-panel" data-panel="evidence" aria-labelledby="progress-title">
         <div>
           <div class="section-head tight">
             <div>
@@ -412,7 +451,7 @@
         </div>
       </section>
 
-      <section class="band split" aria-labelledby="factory-title">
+      <section class="band split ux-panel" data-panel="evidence" aria-labelledby="factory-title">
         <div>
           <div class="section-head tight">
             <div>
@@ -445,7 +484,7 @@
         </div>
       </section>
 
-      <section class="band split" aria-labelledby="dashboard-title">
+      <section class="band split ux-panel" data-panel="graph" aria-labelledby="dashboard-title">
         <div>
           <div class="section-head tight">
             <div>
@@ -476,7 +515,7 @@
         </div>
       </section>
 
-      <section class="band" aria-labelledby="packet-title">
+      <section class="band ux-panel" data-panel="debug" aria-labelledby="packet-title">
         <div class="section-head tight">
           <div>
             <h2 id="packet-title">Invocation Packet</h2>

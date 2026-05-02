@@ -4,6 +4,7 @@ const state = {
   portal: null,
   protocol: null,
   truth: null,
+  activePanel: "overview",
   busy: false
 };
 
@@ -37,6 +38,7 @@ function setBusy(value) {
     if (element) element.disabled = value;
   }
   renderCommandCenter();
+  renderFocusConsole();
 }
 
 async function init() {
@@ -67,6 +69,31 @@ function wireEvents() {
   $("openChangeRequest").addEventListener("click", openChangeRequest);
   $("sendAgentMessage").addEventListener("click", sendAgentMessage);
   $("projectSelect").addEventListener("change", (event) => loadRun(event.target.value));
+  document.querySelectorAll("[data-panel-target]").forEach((button) => {
+    button.addEventListener("click", () => switchPanel(button.dataset.panelTarget));
+  });
+  $("focusPrimaryAction").addEventListener("click", () => {
+    const pending = (state.protocol?.human_interrupts || state.run?.human_interrupts || []).find((item) => item.state === "pending");
+    if (pending) return switchPanel("overview");
+    if (!state.run) return switchPanel("start");
+    if (state.run.interrogation?.gate !== "pass") return switchPanel("start");
+    return switchPanel("evidence");
+  });
+  $("focusSecondaryAction").addEventListener("click", () => switchPanel("evidence"));
+}
+
+function switchPanel(panel) {
+  state.activePanel = panel || "overview";
+  renderPanelVisibility();
+}
+
+function renderPanelVisibility() {
+  document.querySelectorAll("[data-panel-target]").forEach((button) => {
+    button.classList.toggle("active", button.dataset.panelTarget === state.activePanel);
+  });
+  document.querySelectorAll(".ux-panel").forEach((panel) => {
+    panel.classList.toggle("active", panel.dataset.panel === state.activePanel);
+  });
 }
 
 async function refreshBootstrap() {
@@ -83,6 +110,7 @@ async function loadRun(runId) {
     await refreshPortal(false);
     await refreshProtocol(false);
     await refreshTruth(false);
+    state.activePanel = "overview";
     renderRun();
     renderPortal();
     renderProtocol();
@@ -144,6 +172,8 @@ function renderBootstrap() {
   renderProjectSelector();
   renderProjectList();
   renderAgenticWorkbench();
+  renderFocusConsole();
+  renderPanelVisibility();
   renderPacket(state.run?.invocation_packet || {});
 }
 
@@ -236,6 +266,56 @@ function renderAgenticSurface(stages = currentStages()) {
   }
 }
 
+function renderFocusConsole() {
+  const run = state.run;
+  const protocol = state.protocol || {};
+  const pending = (protocol.human_interrupts || run?.human_interrupts || []).filter((item) => item.state === "pending");
+  const active = currentStages().find((stage) => stage.id === run?.current_stage) || currentStages()[0];
+  const validation = state.portal?.progress?.validation_status || (run ? "pending" : "--");
+  const route = run ? `${run.scenario_mode || run.project_type || "project"} / ${run.template_id || "template"}` : "Choose scenario and template";
+  const proof = run ? `${run.execution_outputs?.length || 0} records, ${validation}` : "No run yet";
+  const next = state.portal?.next_actions?.[0] || (run ? "Continue the active stage." : "Create the governed run first.");
+
+  setText("focusSummary", run
+    ? `${run.project_name} is at ${active?.title || "the first stage"}. ${next}`
+    : "Start or select a project. The factory will surface the next human decision before agents execute material work.");
+  setText("focusRoute", route);
+  setText("focusAgentMode", active ? `${agentPersona(active)} working on ${active.title}` : "--");
+  setText("focusProof", proof);
+
+  const decisionList = $("focusDecisionList");
+  if (decisionList) {
+    if (!run) {
+      decisionList.innerHTML = `<div class="focus-empty">No project is active. Start with scenario, template, token band, and raw intent.</div>`;
+    } else if (pending.length) {
+      decisionList.innerHTML = pending.map((interrupt) => `
+        <article class="focus-decision">
+          <strong>${escapeHtml(interrupt.action)}</strong>
+          <span>${escapeHtml(interrupt.description || "")}</span>
+          <div class="interrupt-actions">
+            <button class="button primary" data-interrupt-decision="approve" data-interrupt-id="${escapeAttr(interrupt.interrupt_id)}">Approve</button>
+            <button class="button secondary" data-interrupt-decision="edit" data-interrupt-id="${escapeAttr(interrupt.interrupt_id)}">Edit</button>
+            <button class="button secondary" data-interrupt-decision="reject" data-interrupt-id="${escapeAttr(interrupt.interrupt_id)}">Reject</button>
+          </div>
+        </article>
+      `).join("");
+    } else {
+      decisionList.innerHTML = `
+        <article class="focus-decision calm">
+          <strong>${escapeHtml(active?.title || "Factory")}</strong>
+          <span>${escapeHtml(next)}</span>
+        </article>
+      `;
+    }
+    decisionList.querySelectorAll("[data-interrupt-decision]").forEach((button) => {
+      button.addEventListener("click", () => decideInterrupt(button.dataset.interruptId, button.dataset.interruptDecision));
+    });
+  }
+
+  setText("focusPrimaryAction", pending.length ? "Review Decision" : run ? "Open Evidence" : "Start Project");
+  setText("focusSecondaryAction", run ? "Inspect Evidence" : "See Start Form");
+}
+
 function agentPersona(stage) {
   const byKind = {
     "meta-meta": "Meta-Attractor",
@@ -318,6 +398,7 @@ async function createRun() {
     await refreshPortal(false);
     await refreshProtocol(false);
     await refreshTruth(false);
+    state.activePanel = "overview";
     renderRun();
     renderPortal();
     renderProtocol();
@@ -582,6 +663,8 @@ function renderRun() {
     renderProtocol();
     renderTruthInventory();
     renderAgenticWorkbench();
+    renderFocusConsole();
+    renderPanelVisibility();
     renderCommandCenter();
     return;
   }
@@ -601,6 +684,8 @@ function renderRun() {
   renderProtocol();
   renderTruthInventory();
   renderAgenticWorkbench();
+  renderFocusConsole();
+  renderPanelVisibility();
   renderCommandCenter();
 }
 
@@ -714,6 +799,8 @@ function renderProtocol() {
     showAgentResponse(latest.response?.summary || "Agent response recorded.", false);
   }
   renderAgenticWorkbench();
+  renderFocusConsole();
+  renderPanelVisibility();
 }
 
 function renderAgenticWorkbench() {
@@ -855,6 +942,7 @@ function renderTruthInventory() {
       </div>
     </article>
   `).join("");
+  renderFocusConsole();
 }
 
 function renderTruthStack(rows, empty) {
