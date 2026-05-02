@@ -11,7 +11,9 @@ const { chromium } = require("playwright");
   const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
   await page.goto("http://127.0.0.1:4187/", { waitUntil: "networkidle" });
 
-  assert((await page.locator("h1").textContent()).includes("Meta-Meta First"), "console title should render");
+  assert((await page.locator("h1").textContent()).includes("Dark Factory Studio"), "studio title should render");
+  assert((await page.locator("#studio-title").textContent()).includes("Describe the mission"), "mission composer should lead the first screen");
+  assert((await page.locator("#studioPrimaryAction").textContent()).trim().length > 5, "studio primary action should be visible");
   assert((await page.locator("#skillCount").textContent()).includes("Skills:"), "skill count should render");
   assert((await page.locator("#agentSwarm").textContent()).includes("Meta-Attractor"), "agent swarm should render the meta-attractor");
   assert((await page.locator("#flowMap").textContent()).includes("Meta-Meta Attractor"), "critical path should render the stage map");

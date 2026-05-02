@@ -90,6 +90,6 @@ Mandatory interpretation:
 - Spec Graph identity, upstream/downstream impact, no-duplicate-path reuse rules, and redo transitive closure must be visible before changing requirements, designs, tests, code, or production artifacts.
 - Google Material 3-style principles apply to web UI: adaptive layout, accessible contrast, design tokens, native controls, clear state layers, and predictable components. Use tokens/components rather than decorative styling.
 - A dashboard is not proof. It is a control and inspection surface. Missing artifacts, missing code, missing tests, or missing runtime behavior remain missing until instantiated and verified.
+- AI Studio / Apple-grade UX rescue gate: before implementing or revising a serious app, portal, or factory console after user frustration, create a UX rescue brief that defines the human journey, first-viewport contract, primary action, preview/proposal canvas, inspector model, progressive disclosure plan, mobile order, and 15-check acceptance rubric. The first viewport must answer: what mission is active, what the human can ask, what the primary action does, which agent/stage is active, what decision needs approval, and where evidence/graph/tests/audit can be inspected.
 
 Reject any app or portal that cannot answer, on screen and via machine-readable state: what is the current legal next action, what is blocked, who must approve, what changed, what artifacts/tests/gates are affected, what evidence exists, what is only a descriptor/template, and what happens if the human resteers now.
-

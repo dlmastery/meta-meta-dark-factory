@@ -32,7 +32,9 @@ function setBusy(value) {
     "redoClosure",
     "refreshProject",
     "openChangeRequest",
-    "sendAgentMessage"
+    "sendAgentMessage",
+    "studioPrimaryAction",
+    "studioRefineAction"
   ]) {
     const element = $(id);
     if (element) element.disabled = value;
@@ -68,6 +70,12 @@ function wireEvents() {
   $("refreshProject").addEventListener("click", refreshCurrentProject);
   $("openChangeRequest").addEventListener("click", openChangeRequest);
   $("sendAgentMessage").addEventListener("click", sendAgentMessage);
+  $("studioPrimaryAction").addEventListener("click", runStudioPrimary);
+  $("studioSecondaryAction").addEventListener("click", () => switchPanel("start"));
+  $("studioRefineAction").addEventListener("click", runStudioRefine);
+  document.querySelectorAll("[data-studio-scenario]").forEach((button) => {
+    button.addEventListener("click", () => selectStudioScenario(button.dataset.studioScenario));
+  });
   $("projectSelect").addEventListener("change", (event) => loadRun(event.target.value));
   document.querySelectorAll("[data-panel-target]").forEach((button) => {
     button.addEventListener("click", () => switchPanel(button.dataset.panelTarget));
@@ -80,6 +88,43 @@ function wireEvents() {
     return switchPanel("evidence");
   });
   $("focusSecondaryAction").addEventListener("click", () => switchPanel("evidence"));
+}
+
+function selectStudioScenario(scenario) {
+  if ($("scenarioMode")) $("scenarioMode").value = scenario;
+  document.querySelectorAll("[data-studio-scenario]").forEach((button) => {
+    button.classList.toggle("active", button.dataset.studioScenario === scenario);
+  });
+}
+
+function syncStudioMissionToStartForm() {
+  if ($("studioProjectName")?.value) $("projectName").value = $("studioProjectName").value;
+  if ($("studioIntent")?.value) $("intent").value = $("studioIntent").value;
+  if ($("studioTokenBand")?.value) $("tokenBand").value = $("studioTokenBand").value;
+  const activeScenario = document.querySelector("[data-studio-scenario].active")?.dataset.studioScenario;
+  if (activeScenario) $("scenarioMode").value = activeScenario;
+}
+
+async function runStudioPrimary() {
+  syncStudioMissionToStartForm();
+  if (!state.run) return createRun();
+  const pending = (state.protocol?.human_interrupts || state.run?.human_interrupts || []).some((item) => item.state === "pending");
+  if (pending) return switchPanel("overview");
+  if (state.run.status === "change_control") return switchPanel("change");
+  if (state.run.interrogation?.gate !== "pass") return switchPanel("start");
+  return executePipeline();
+}
+
+async function runStudioRefine() {
+  const message = $("studioRefineInput").value.trim();
+  if (!message) return switchPanel("debug");
+  if (!state.run) {
+    $("intent").value = `${$("studioIntent").value}\n\nRefinement request: ${message}`;
+    return switchPanel("start");
+  }
+  $("agentMessageMode").value = /change|resteer|reopen|redo/i.test(message) ? "resteer" : "ask";
+  $("agentMessage").value = message;
+  await sendAgentMessage();
 }
 
 function switchPanel(panel) {
@@ -173,6 +218,7 @@ function renderBootstrap() {
   renderProjectList();
   renderAgenticWorkbench();
   renderFocusConsole();
+  renderStudioState();
   renderPanelVisibility();
   renderPacket(state.run?.invocation_packet || {});
 }
@@ -314,6 +360,42 @@ function renderFocusConsole() {
 
   setText("focusPrimaryAction", pending.length ? "Review Decision" : run ? "Open Evidence" : "Start Project");
   setText("focusSecondaryAction", run ? "Inspect Evidence" : "See Start Form");
+  renderStudioState();
+}
+
+function renderStudioState() {
+  const run = state.run;
+  const protocol = state.protocol || {};
+  const pending = (protocol.human_interrupts || run?.human_interrupts || []).filter((item) => item.state === "pending");
+  const active = currentStages().find((stage) => stage.id === run?.current_stage) || currentStages()[0];
+  const scenario = run?.scenario_mode || $("scenarioMode")?.value || "greenfield-product";
+  selectStudioScenario(scenario);
+
+  if (!run) {
+    setText("studioPrimaryAction", "Start Factory Run");
+    setText("studioSecondaryAction", "Open Detailed Grill");
+    setText("runPreviewState", "Waiting for mission");
+    return;
+  }
+
+  if ($("studioProjectName") && $("studioProjectName").value === "New governed product") {
+    $("studioProjectName").value = run.project_name || $("studioProjectName").value;
+  }
+
+  const previewState = pending.length
+    ? "Human decision required"
+    : run.status === "change_control"
+      ? "Change control open"
+      : `${active?.title || "Factory"} active`;
+  setText("runPreviewState", previewState);
+  setText("studioPrimaryAction", pending.length
+    ? "Review Decision"
+    : run.status === "change_control"
+      ? "Open Change Control"
+      : run.interrogation?.gate !== "pass"
+        ? "Continue Grill"
+        : "Continue Factory");
+  setText("studioSecondaryAction", "Inspect Evidence");
 }
 
 function agentPersona(stage) {
