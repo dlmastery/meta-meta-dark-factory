@@ -147,7 +147,8 @@ const PROTOCOL_PROFILE = {
       "GATE_PASSED",
       "GATE_BLOCKED",
       "PIPELINE_EXECUTED",
-      "RALPH_AUDIT_COMPLETED"
+      "RALPH_AUDIT_COMPLETED",
+      "GOAL_RALPH_AUDIT_COMPLETED"
     ],
     contract: "Every meaningful user, agent, gate, stage, and state transition is persisted as a structured event."
   },
@@ -1671,6 +1672,139 @@ function runRalphAudit(runId, loops = 20) {
   return { audit, run: loadRun(run.run_id), record: rel };
 }
 
+function runGoalAchievementAudit(runId, loops = 10) {
+  const run = loadRun(runId);
+  const validation = validateRunExecution(run);
+  const loopSpecs = [
+    ["Meta-meta entry", "Can governed work bypass the meta-meta attractor?"],
+    ["Protocol contracts", "Are AG-UI, A2UI, and MCP Apps explicit machine-readable contracts?"],
+    ["AG-UI event ledger", "Are user, agent, stage, gate, and state transitions persisted as events?"],
+    ["A2UI dynamic surfaces", "Can the agent declare the stage report, interrogation, change-control, evidence, and protocol surfaces?"],
+    ["MCP Apps manifest", "Do tool descriptors expose UI resource URIs, schemas, JSON resources, and ui resources?"],
+    ["Human interrogation", "Can a human ask the agent at any point and get a recorded, stage-aware answer?"],
+    ["Resteer and change control", "Can a human reopen downstream work through a change request instead of mutating accepted evidence?"],
+    ["No-skip execution", "Does the validator prevent locked/future stages and missing accepted-stage evidence?"],
+    ["Detailed stage reporting", "Does the active stage report include skills, gate, records, blockers, and next safe action?"],
+    ["Goal evidence package", "Are goal audit, protocol state, tests, and task-bead evidence tied back into the project ledger?"]
+  ];
+  const loopsOut = loopSpecs.slice(0, loops).map(([name, attack], index) => {
+    const findings = goalLoopFindings(name, run, validation);
+    return {
+      loop: index + 1,
+      review: name,
+      attack,
+      learn: findings.length ? "Gap found in the goal-specific workflow proof." : "Goal check is backed by current run evidence.",
+      patch: findings.length ? "Patch or execute the missing capability, then rerun this goal audit." : "No patch required for this goal check.",
+      harden: "Goal achievement RALPH loop recorded with evidence links and residual risk.",
+      findings
+    };
+  });
+  const p1 = loopsOut.flatMap((loop) => loop.findings).filter((finding) => finding.priority === "P1").length;
+  const p2 = loopsOut.flatMap((loop) => loop.findings).filter((finding) => finding.priority === "P2").length;
+  const audit = {
+    zero_slop_policy: ZERO_SLOP,
+    record_type: "goal_achievement_ralph_10_audit",
+    goal: "Agent-centric DFMS workflow using AG-UI-style events, A2UI-style surfaces, and MCP Apps-style tool/resources for greenfield or brownfield projects with anytime interrogation and resteer.",
+    run_id: run.run_id,
+    created_at: nowIso(),
+    validation,
+    loops: loopsOut,
+    status: p1 ? "fail" : p2 ? "conditional_pass" : "pass",
+    achieved: p1 === 0,
+    p1_count: p1,
+    p2_count: p2,
+    summary: `${loopsOut.length} goal RALPH loops executed; ${p1} P1 findings, ${p2} P2 findings.`
+  };
+  const file = path.join(runRecordsDir(run.run_id), "goal-achievement-ralph-10-audit.json");
+  writeJson(file, audit);
+  const rel = path.relative(ROOT, file).replace(/\\/g, "/");
+  run.execution_outputs = Array.from(new Set([...(run.execution_outputs || []), rel]));
+  run.goal_achievement = {
+    at: nowIso(),
+    status: audit.status,
+    achieved: audit.achieved,
+    record: rel,
+    p1_count: p1,
+    p2_count: p2
+  };
+  run.audit_log.push({ at: nowIso(), event: "goal_ralph_10_audit", detail: audit.summary });
+  appendAguiEvent(run, "GOAL_RALPH_AUDIT_COMPLETED", {
+    loops: loopsOut.length,
+    status: audit.status,
+    achieved: audit.achieved,
+    p1_count: p1,
+    p2_count: p2,
+    record: rel
+  });
+  saveRun(run);
+  return { audit, run: loadRun(run.run_id), record: rel };
+}
+
+function goalLoopFindings(name, run, validation) {
+  const findings = [];
+  const add = (priority, title, detail) => findings.push({ priority, title, detail });
+  const protocol = run.invocation_packet?.agent_protocols || {};
+  const surfaces = buildA2uiSurfaces(run);
+  const mcp = buildMcpAppsManifest(run);
+  const events = run.agui_events || [];
+  const eventTypes = new Set(events.map((event) => event.type));
+  const stageReport = buildStageReport(run);
+  if (name === "Meta-meta entry") {
+    if ((run.stages || [])[0]?.id !== "stage-00-meta-meta") add("P1", "Meta-meta not first", "Run stage sequence does not start with the meta-meta attractor.");
+    if (run.generated_meta_skill?.generated_from !== "df-meta-attractor") add("P1", "Generated meta-skill source missing", "Run does not prove df-meta-attractor generated the project-tailored meta-skill.");
+  }
+  if (name === "Protocol contracts") {
+    for (const key of ["agui", "a2ui", "mcp_apps"]) {
+      if (!protocol[key]) add("P1", "Protocol contract missing", `${key} missing from invocation packet.`);
+    }
+  }
+  if (name === "AG-UI event ledger") {
+    for (const type of ["RUN_STARTED", "STAGE_ACTIVE", "STAGE_INVOKED", "GATE_PASSED", "PIPELINE_EXECUTED"]) {
+      if (!eventTypes.has(type)) add("P1", "Required AG-UI event missing", `${type} not found in event ledger.`);
+    }
+    if (!events.every((event) => event.zero_slop_policy === ZERO_SLOP && event.protocol === "AG-UI")) add("P1", "Malformed AG-UI event", "One or more events lack protocol or zero-slop metadata.");
+  }
+  if (name === "A2UI dynamic surfaces") {
+    for (const required of PROTOCOL_PROFILE.a2ui.surfaces) {
+      if (!surfaces.some((surface) => surface.surface_id === required)) add("P1", "A2UI surface missing", `${required} surface missing.`);
+    }
+  }
+  if (name === "MCP Apps manifest") {
+    if ((mcp.tools || []).length < 5) add("P1", "MCP Apps tools underspecified", "Expected at least five workflow tools.");
+    for (const tool of mcp.tools || []) {
+      if (!tool._meta?.ui?.resourceUri) add("P1", "MCP Apps tool lacks UI resource", `${tool.name} has no _meta.ui.resourceUri.`);
+    }
+    if (!(mcp.ui_resources || []).some((resource) => resource.mimeType === PROTOCOL_PROFILE.mcp_apps.resource_mime_type)) add("P1", "MCP Apps UI resource missing", "No ui resource declares the MCP Apps HTML profile.");
+  }
+  if (name === "Human interrogation") {
+    if (!(run.agent_messages || []).length) add("P1", "Agent interrogation not proven", "No agent-message interaction record exists for this run.");
+    if (!eventTypes.has("USER_MESSAGE")) add("P1", "User message event missing", "Human interrogation did not create a USER_MESSAGE event.");
+    if (!(run.execution_outputs || []).some((item) => item.includes("agent-interaction-record.json"))) add("P1", "Agent interaction evidence missing", "No agent interaction record appears in execution outputs.");
+  }
+  if (name === "Resteer and change control") {
+    if (!(run.change_requests || []).length) add("P1", "Resteer path not proven", "No change request exists for this run.");
+    if (!eventTypes.has("USER_RESTEER_REQUESTED")) add("P1", "Resteer event missing", "Change control did not create a USER_RESTEER_REQUESTED event.");
+    if (!(run.execution_outputs || []).some((item) => item.includes("human-communication-record.json"))) add("P1", "Human communication evidence missing", "No human communication record appears in execution outputs.");
+  }
+  if (name === "No-skip execution") {
+    if (validation.status === "fail") add("P1", "Run validator failed", JSON.stringify(validation.findings.slice(0, 5)));
+    if ((run.stages || []).some((stage, index) => stage.status === "accepted" && index > 0 && run.stages[index - 1].status !== "accepted")) {
+      add("P1", "Non-contiguous accepted stages", "A downstream stage is accepted while an upstream stage is not accepted.");
+    }
+  }
+  if (name === "Detailed stage reporting") {
+    for (const key of ["stage_id", "stage_title", "skills", "gate", "expected_records", "next_action"]) {
+      if (!stageReport[key] || (Array.isArray(stageReport[key]) && !stageReport[key].length)) add("P1", "Stage report field missing", `${key} missing from active stage report.`);
+    }
+  }
+  if (name === "Goal evidence package") {
+    if (!run.invocation_packet?.agent_protocols) add("P1", "Protocol packet evidence missing", "Invocation packet lacks protocol contracts.");
+    if (!(run.execution_outputs || []).length) add("P1", "Execution outputs missing", "Run has no evidence outputs.");
+    if (!run.audit_log?.some((entry) => entry.event === "pipeline_execute")) add("P2", "Pipeline audit event missing", "Pipeline execution was not recorded in the audit log.");
+  }
+  return findings;
+}
+
 function ralphLoopFindings(name, run, base) {
   const byTitle = (title) => base.findings.filter((finding) => finding.title.toLowerCase().includes(title.toLowerCase()));
   const map = {
@@ -1961,6 +2095,10 @@ async function handleApi(req, res) {
       const id = url.pathname.split("/")[3];
       return sendJson(res, 200, runRalphAudit(id, 20));
     }
+    if (req.method === "POST" && url.pathname.match(/^\/api\/runs\/[^/]+\/goal-ralph$/)) {
+      const id = url.pathname.split("/")[3];
+      return sendJson(res, 200, runGoalAchievementAudit(id, 10));
+    }
     if (req.method === "GET" && url.pathname.match(/^\/api\/runs\/[^/]+$/)) {
       return sendJson(res, 200, loadRun(url.pathname.split("/").pop()));
     }
@@ -2003,6 +2141,7 @@ module.exports = {
   executeReadyPipeline,
   validateRunExecution,
   runRalphAudit,
+  runGoalAchievementAudit,
   scoreInterrogation,
   buildInvocationPacket,
   buildStageReport,

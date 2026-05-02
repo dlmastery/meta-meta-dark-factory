@@ -97,6 +97,11 @@ function main() {
   assert(change.run.execution_outputs.some((record) => record.includes("human-communication-record.json")), "human communication evidence should be recorded");
   const changeValidation = consoleApp.validateRunExecution(change.run.run_id);
   assert.notStrictEqual(changeValidation.status, "fail", `change-control run should not fail structural validation: ${JSON.stringify(changeValidation.findings)}`);
+  const goalAudit = consoleApp.runGoalAchievementAudit(change.run.run_id, 10);
+  assert.strictEqual(goalAudit.audit.loops.length, 10, "goal audit should run 10 RALPH loops");
+  assert.strictEqual(goalAudit.audit.status, "pass", `goal audit should pass: ${JSON.stringify(goalAudit.audit.loops.flatMap((loop) => loop.findings))}`);
+  assert.strictEqual(goalAudit.audit.achieved, true, "agent-centric workflow goal should be achieved after interrogation and resteer proof");
+  assert(goalAudit.run.execution_outputs.some((record) => record.includes("goal-achievement-ralph-10-audit.json")), "goal audit record should be written");
 
   const summary = consoleApp.projectBookSummary();
   assert(summary.nodes > 0, "project-book dashboard should expose nodes");

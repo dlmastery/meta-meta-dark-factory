@@ -69,6 +69,8 @@ const { chromium } = require("playwright");
   await page.waitForFunction(() => document.querySelector("#portalStatus")?.textContent.includes("change_control"));
   await page.waitForFunction(() => document.querySelector("#legalNextAction")?.textContent.includes("active change request"));
   await page.waitForFunction(() => document.querySelector("#changeRequestList")?.textContent.includes("Browser design resteer"));
+  await page.click("#runGoalRalphAudit");
+  await page.waitForFunction(() => document.querySelector("#goalAuditResult")?.textContent.includes("Goal achieved: yes"));
   const portalAfterChange = await page.evaluate(async () => {
     const bootstrap = await fetch("/api/bootstrap").then((response) => response.json());
     const runId = bootstrap.runs[0].run_id;

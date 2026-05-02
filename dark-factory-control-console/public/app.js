@@ -26,6 +26,7 @@ function setBusy(value) {
     "advanceStage",
     "executePipeline",
     "runRalphAudit",
+    "runGoalRalphAudit",
     "redoClosure",
     "refreshProject",
     "openChangeRequest",
@@ -58,6 +59,7 @@ function wireEvents() {
   $("advanceStage").addEventListener("click", advanceStage);
   $("executePipeline").addEventListener("click", executePipeline);
   $("runRalphAudit").addEventListener("click", runRalphAudit);
+  $("runGoalRalphAudit").addEventListener("click", runGoalRalphAudit);
   $("redoClosure").addEventListener("click", redoClosure);
   $("refreshProject").addEventListener("click", refreshCurrentProject);
   $("openChangeRequest").addEventListener("click", openChangeRequest);
@@ -424,6 +426,26 @@ async function runRalphAudit() {
   }
 }
 
+async function runGoalRalphAudit() {
+  if (!state.run) return showGoalAuditResult("Start a run first.", true);
+  setBusy(true);
+  try {
+    const result = await api(`/api/runs/${encodeURIComponent(state.run.run_id)}/goal-ralph`, { method: "POST", body: "{}" });
+    state.run = result.run;
+    await refreshBootstrap();
+    await refreshPortal(false);
+    await refreshProtocol(false);
+    renderRun();
+    renderPortal();
+    renderProtocol();
+    showGoalAuditResult(`${result.audit.summary} Goal achieved: ${result.audit.achieved ? "yes" : "no"}. Record: ${result.record}`, result.audit.status === "fail");
+  } catch (error) {
+    showGoalAuditResult(error.message, true);
+  } finally {
+    setBusy(false);
+  }
+}
+
 async function openChangeRequest() {
   if (!state.run) return showChangeResult("Start or select a governed project first.", true);
   setBusy(true);
@@ -679,6 +701,10 @@ function setText(id, value) {
 
 function showAuditResult(message, isError) {
   $("auditResult").innerHTML = `<div class="${isError ? "alert" : ""}">${escapeHtml(message)}</div>`;
+}
+
+function showGoalAuditResult(message, isError) {
+  $("goalAuditResult").innerHTML = `<div class="${isError ? "alert" : ""}">${escapeHtml(message)}</div>`;
 }
 
 function showChangeResult(message, isError) {

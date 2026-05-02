@@ -47,6 +47,7 @@ Protocol endpoints:
 
 - `GET /api/runs/:id/protocol`
 - `POST /api/runs/:id/agent-message`
+- `POST /api/runs/:id/goal-ralph`
 
 ## Human Project Portal
 

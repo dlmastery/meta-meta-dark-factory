@@ -74,6 +74,7 @@
 | `TB-20260429-023` | `accepted` | Run RALPH-20 artifact-catalog completeness audit for the todo/habits demonstrator | Codex | `CG-NODE-TODO-ARTIFACT-CATALOG-COVERAGE-001` | `WL-TODO-ARTIFACT-CATALOG-COVERAGE-001` | `KG:TB-20260429-023` | catalog coverage audit document, coverage matrix, audit validator, portal and layer-map updates | `GATE-TODO-ARTIFACT-CATALOG-COVERAGE-001:pass-with-gaps` | 63 catalog IDs checked; 12 standalone, 12 combined, 17 partial, 8 not applicable, 0 deferred, 14 missing; validators pass | `RUN-CLOSED` | truthful catalog coverage matrix complete; full saturation is explicitly failed |
 | `TB-20260429-024` | `accepted` | Update DFMS skills so serious runs default to full artifact saturation and cannot silently tailor down | Codex | `CG-NODE-FULL-ARTIFACT-SATURATION-GUARD-001` | `WL-FULL-ARTIFACT-SATURATION-GUARD-001` | `KG:TB-20260429-024` | live and workspace skill updates, artifact coverage matrix template, strict coverage validator | `GATE-FULL-ARTIFACT-SATURATION-GUARD-001:pass` | skill bundle pass, template library pass, validator compile pass, negative rejection of incomplete todo/habits coverage matrix confirmed | `RUN-CLOSED` | future serious runs require full saturation or explicit human-approved waivers |
 | `TB-20260501-025` | `accepted` | Add AG-UI, A2UI, and MCP Apps agent-centric workflow cockpit to the local DFMS control console | Codex | `CG-NODE-AGENT-PROTOCOL-UX-001` | `WL-AGENT-PROTOCOL-UX-001` | `KG:TB-20260501-025` | protocol profile, run event ledger, A2UI surface descriptors, MCP Apps manifest, ask/resteer panel, protocol tests | `GATE-AGENT-PROTOCOL-UX-001:pass` | official protocol source check, server and client syntax pass, unit regression pass, Playwright workflow pass, public repo sync planned | `RUN-CLOSED` | local agent-centric protocol cockpit boundary complete |
+| `TB-20260502-026` | `accepted` | Add goal-specific RALPH-10 certification gate for the agent-centric protocol workflow | Codex | `CG-NODE-GOAL-RALPH10-AGENT-WORKFLOW-001` | `WL-GOAL-RALPH10-AGENT-WORKFLOW-001` | `KG:TB-20260502-026` | goal audit endpoint, UI control, tests, live browser-smoke goal record | `GATE-GOAL-RALPH10-AGENT-WORKFLOW-001:pass` | 10 goal loops passed with 0 P1 and 0 P2 on live run; unit and browser regressions pass; task ledger validates | `RUN-CLOSED` | bounded local agent-centric protocol workflow goal achieved |
 
 ## Deferred And Retired Beads
 
@@ -682,6 +683,30 @@
 - Re-entry trigger: Any future claim that DFMS has agent-centric interactive protocol support without persisted events, dynamic surfaces, MCP-style tool/resource descriptors, or browser workflow evidence.
 - Residual risk: The console exposes MCP Apps-style descriptors and local endpoints; it is not yet packaged as a separate installable remote MCP server.
 
+### `TB-20260502-026`
+
+- Objective: Add goal-specific RALPH-10 certification gate for the agent-centric protocol workflow.
+- Scope boundary: Bounded local control-console goal achievement for agent-centric workflow proof; not a claim that the entire multi-user hosted outsourcing replacement platform is complete.
+- Source intent: User requested RALPH loop 10 times until the goal is achieved after the prior status said the local agent-centric workflow foundation was only partly complete.
+- Requirement links: AG-UI event stream, A2UI dynamic surfaces, MCP Apps tool/resources, greenfield/brownfield workflow initiation, stage reports, human interrogation, human resteer, strict no-skip execution, browser/WYSIWYG proof, task-bead accountability.
+- Interrogation answer links: current user message in this thread.
+- Control graph node: `CG-NODE-GOAL-RALPH10-AGENT-WORKFLOW-001`
+- Work-ledger item: `WL-GOAL-RALPH10-AGENT-WORKFLOW-001`
+- Knowledge-graph node: `KG:TB-20260502-026`
+- Inputs: protocol-aware control console from `TB-20260501-025`, live browser-smoke run, goal requirements from user thread.
+- Outputs: `runGoalAchievementAudit`, `POST /api/runs/:id/goal-ralph`, `Run Goal RALPH-10` UI control, updated unit/browser tests, live goal audit record.
+- Acceptance gate: A run must pass 10 goal loops covering meta-meta entry, protocol contracts, AG-UI events, A2UI surfaces, MCP Apps manifest, human interrogation, resteer/change control, no-skip validation, stage reporting, and evidence packaging with 0 P1 and 0 P2 findings.
+- Evidence required: syntax checks, unit regression, browser workflow, live goal audit result, task ledger validation.
+- Evidence provided: `node --check server.js`, `node --check public/app.js`, `npm test`, `npm run test:browser`, live `goal_achievement.status=pass`, live `goal_achievement.achieved=true`, 61 AG-UI events, 5 A2UI surfaces, 5 MCP-style tools, task ledger pass.
+- Primary critics: Goal Acceptance Auditor, Agent Protocol Evidence Architect, TPM No-Skip Reviewer.
+- Adversarial critics: Partial-Goal Overclaim Critic, Protocol-Theater Critic, Human-Resteer Failure Critic.
+- RALPH loops: 10 loops executed by `goal-achievement-ralph-10-audit.json`.
+- Token SWAG: low to medium for local certification gate; high for future hosted multi-user platform completion.
+- Approval state: user explicitly requested RALPH-10 until goal achieved.
+- Next bead: `RUN-CLOSED` for bounded local agent-centric protocol workflow goal.
+- Re-entry trigger: Any future code change to protocol state, stage execution, change control, or browser workflow must rerun goal RALPH-10.
+- Residual risk: Hosted multi-user auth/RBAC, durable database queue, and remote packaged MCP server remain future product-platform work, not part of this bounded local goal pass.
+
 ## Open Approvals
 
 | Approval ID | Bead ID | Approver | Decision Needed | Token/Scope Impact | Due | State |
@@ -785,6 +810,10 @@
 | `VAL-20260501-086` | `npm test` | protocol-aware control-console backend regression | pass | invocation packet protocol contracts, AG-UI run events, A2UI surfaces, MCP Apps manifest, agent-message record, pipeline, RALPH, portal, and change-control assertions passed | keep as API regression |
 | `VAL-20260501-087` | `npm run test:browser` | protocol-aware console browser workflow | pass | browser rendered protocol workbench, created run, asked agent, saw AG-UI event, executed pipeline, ran RALPH, validated, computed redo, opened change request, and saved screenshots | keep as WYSIWYG regression |
 | `VAL-20260501-088` | `validate_tasks_md.py` | `dark-factory-meta-skills-design/TASKS.md` after protocol cockpit bead update | pass | strict bead ledger validation completed after adding `TB-20260501-025` | maintain on every governed update |
+| `VAL-20260502-089` | `node --check` | control console after goal RALPH-10 gate update | pass | server and browser-controller syntax accepted after goal audit endpoint and UI button | rerun after console code changes |
+| `VAL-20260502-090` | `npm test` | goal RALPH-10 backend regression | pass | unit test proves goal audit runs 10 loops and passes after agent interrogation and change-control proof | keep as API regression |
+| `VAL-20260502-091` | `npm run test:browser` | goal RALPH-10 browser workflow | pass | browser created run, asked agent, executed pipeline, opened change request, ran goal audit, and saw `Goal achieved: yes` | keep as WYSIWYG regression |
+| `VAL-20260502-092` | live protocol and goal smoke | `http://127.0.0.1:4187` latest browser-smoke run | pass | latest run has `goal_achievement.status=pass`, `achieved=true`, 0 P1, 0 P2, 61 AG-UI events, 5 A2UI surfaces, and 5 MCP-style tools | rerun after server restart or workflow changes |
 
 ## Change Log
 
@@ -817,3 +846,4 @@
 | 2026-04-29 | Codex | `TB-20260429-023` | Added 63-item artifact-catalog coverage matrix, validator, and RALPH-20 completeness audit | User requested rigorous testing after not finding all todo/habits artifacts | catalog coverage audit pass-with-gaps, portal validator pass, layer-map test pass, task ledger pass |
 | 2026-04-29 | Codex | `TB-20260429-024` | Hardened DFMS skills to default serious runs to full artifact saturation and require explicit human-approved tailoring waivers | User rejected lazy assumptions and asked to update instructions and skills | skill bundle pass, template library pass, validator compile pass, negative rejection check |
 | 2026-05-01 | Codex | `TB-20260501-025` | Added AG-UI, A2UI, and MCP Apps protocol-aware agent workflow cockpit to the local control console | User requested an agent-centric UX for greenfield and brownfield DFMS runs with step reports, interrogation, and resteer | source check, syntax checks, unit regression, Playwright workflow pass |
+| 2026-05-02 | Codex | `TB-20260502-026` | Added goal-specific RALPH-10 gate and achieved the bounded local agent-centric workflow goal | User requested ten RALPH loops until goal achieved | goal audit endpoint, UI button, unit/browser regressions, live goal pass |
