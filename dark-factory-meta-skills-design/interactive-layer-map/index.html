@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DFMS Document Generation Hierarchy</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="top-bar">
+      <div>
+        <p class="policy">NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS</p>
+        <h1>Document Generation Hierarchy</h1>
+      </div>
+      <div class="status-strip" aria-label="Current map status">
+        <span>3 layers</span>
+        <span>63 catalog artifacts</span>
+        <span>todo gaps exposed</span>
+      </div>
+    </header>
+
+    <main class="app-shell">
+      <aside class="side-panel" aria-label="Hierarchy controls">
+        <section class="panel-block">
+          <label class="field-label" for="searchBox">Search artifacts</label>
+          <input id="searchBox" class="search-input" type="search" placeholder="requirement, test, portal, code" />
+        </section>
+
+        <section class="panel-block">
+          <p class="field-label">Focus</p>
+          <div class="segmented" role="tablist" aria-label="Layer focus">
+            <button class="segment is-active" data-focus="all" type="button">All</button>
+            <button class="segment" data-focus="l1" type="button">Meta-meta</button>
+            <button class="segment" data-focus="l2" type="button">Meta-skill</button>
+            <button class="segment" data-focus="l3" type="button">Product</button>
+          </div>
+        </section>
+
+        <section class="panel-block">
+          <p class="field-label">Trace mode</p>
+          <button id="traceExample" class="action-button" type="button">Todo plus habits trace</button>
+          <button id="expandAll" class="ghost-button" type="button">Expand all groups</button>
+          <button id="collapseAll" class="ghost-button" type="button">Collapse all groups</button>
+        </section>
+
+        <nav id="miniTree" class="mini-tree" aria-label="Compact hierarchy"></nav>
+      </aside>
+
+      <section class="map-surface" aria-label="Interactive top down hierarchy">
+        <div class="map-header">
+          <div>
+            <p class="eyebrow">Top down factory chain</p>
+            <h2 id="mapTitle">Raw intent to delivered product evidence</h2>
+          </div>
+          <a class="source-link" href="../63-document-generation-layer-map.md">Source reference</a>
+        </div>
+
+        <div id="hierarchy" class="hierarchy"></div>
+      </section>
+
+      <aside class="detail-panel" aria-live="polite">
+        <div class="detail-header">
+          <p class="eyebrow" id="detailLayer">Selected node</p>
+          <h2 id="detailTitle">Meta-meta skill execution</h2>
+        </div>
+        <p id="detailSummary" class="detail-summary"></p>
+
+        <div class="detail-grid">
+          <div>
+            <p class="field-label">Owns</p>
+            <ul id="detailOwns" class="detail-list"></ul>
+          </div>
+          <div>
+            <p class="field-label">Must not claim</p>
+            <ul id="detailLimits" class="detail-list"></ul>
+          </div>
+        </div>
+
+        <section class="detail-section">
+          <p class="field-label">Representative outputs</p>
+          <div id="artifactList" class="artifact-list"></div>
+        </section>
+
+        <section class="detail-section">
+          <p class="field-label">Todo plus habits example</p>
+          <div id="exampleList" class="artifact-list compact"></div>
+        </section>
+      </aside>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

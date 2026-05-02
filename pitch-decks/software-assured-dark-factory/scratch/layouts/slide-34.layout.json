@@ -1,0 +1,3088 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/qtrvuc",
+    "id": "qtrvuc",
+    "slide": 34,
+    "layoutId": "39df3ad4-e207-4cff-a7b3-0934322c7183",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "9c364795-fe59-472e-ba8a-a667cb58489e",
+    "masterLayoutName": "Master",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "39df3ad4-e207-4cff-a7b3-0934322c7183",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "9c364795-fe59-472e-ba8a-a667cb58489e",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "9c364795-fe59-472e-ba8a-a667cb58489e",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/dsji5sne",
+      "id": "1",
+      "name": "background",
+      "bbox": [
+        0,
+        0,
+        1920,
+        1080
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#09100F",
+      "lineColor": "#09100F",
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/61032lsz",
+      "id": "2",
+      "name": "roadmap-eyebrow",
+      "bbox": [
+        88,
+        64,
+        1744,
+        22
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.0.0"
+      },
+      "geometry": "rect",
+      "text": "ROADMAP",
+      "textPreview": "ROADMAP",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "fontSize": 21,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "ROADMAP"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "ROADMAP",
+          "runs": [
+            {
+              "index": 1,
+              "text": "ROADMAP",
+              "fontSize": 21,
+              "color": "#9AF2C8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vmtwra5g",
+      "id": "3",
+      "name": "roadmap-title",
+      "bbox": [
+        88,
+        98,
+        1382,
+        110
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.0.1"
+      },
+      "geometry": "rect",
+      "text": "A staged product path from skill bundle to enterprise control room.",
+      "textPreview": "A staged product path from skill bundle to enterprise control room.",
+      "resolvedFontSize": 55,
+      "resolvedTextStyle": {
+        "fontSize": 55,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "A staged product path from skill bundle to enterprise"
+          },
+          {
+            "index": 2,
+            "text": "control room."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "A staged product path from skill bundle to enterprise control room.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "A staged product path from skill bundle to enterprise control room.",
+              "fontSize": 55,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/oj2t83it",
+      "id": "4",
+      "name": "roadmap-subtitle",
+      "bbox": [
+        88,
+        222,
+        1232,
+        26
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.0.2"
+      },
+      "geometry": "rect",
+      "text": "Start with Codex skills and evidence artifacts; graduate to dashboards, integrations, and organization-level assurance.",
+      "textPreview": "Start with Codex skills and evidence artifacts; graduate to dashboards, integrations, and organization-level assurance.",
+      "resolvedFontSize": 26,
+      "resolvedTextStyle": {
+        "fontSize": 26,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Start with Codex skills and evidence artifacts; graduate to dashboards, integrations, and organization-level"
+          },
+          {
+            "index": 2,
+            "text": "assurance."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Start with Codex skills and evidence artifacts; graduate to dashboards, integrations, and organization-level assurance.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Start with Codex skills and evidence artifacts; graduate to dashboards, integrations, and organization-level assurance.",
+              "fontSize": 26,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/d4vmtwra",
+      "id": "5",
+      "name": "step-0-skill-bundle",
+      "bbox": [
+        88,
+        506.5,
+        418,
+        106
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.0"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#111D1A",
+      "lineColor": "#29443B",
+      "lineWidth": 1
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6dcbulwv",
+      "id": "6",
+      "name": "step-num-0",
+      "bbox": [
+        112,
+        526,
+        44,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.0.0.0"
+      },
+      "geometry": "rect",
+      "text": "0",
+      "textPreview": "0",
+      "resolvedFontSize": 23,
+      "resolvedTextStyle": {
+        "fontSize": 23,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "0"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "0",
+          "runs": [
+            {
+              "index": 1,
+              "text": "0",
+              "fontSize": 23,
+              "color": "#2DD4BF",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vy90je9c",
+      "id": "7",
+      "name": "step-title-0",
+      "bbox": [
+        174,
+        526,
+        308,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.0.0.1.0"
+      },
+      "geometry": "rect",
+      "text": "Skill bundle",
+      "textPreview": "Skill bundle",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Skill bundle"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Skill bundle",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Skill bundle",
+              "fontSize": 24,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/onyd0z61",
+      "id": "8",
+      "name": "step-body-0",
+      "bbox": [
+        174,
+        556,
+        308,
+        36
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.0.0.1.1"
+      },
+      "geometry": "rect",
+      "text": "Installable DFMS skills, templates, validators, and project books.",
+      "textPreview": "Installable DFMS skills, templates, validators, and project books.",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Installable DFMS skills, templates,"
+          },
+          {
+            "index": 2,
+            "text": "validators, and project books."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Installable DFMS skills, templates, validators, and project books.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Installable DFMS skills, templates, validators, and project books.",
+              "fontSize": 18,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/d8v6psfi",
+      "id": "9",
+      "name": "step-1-pilot-runtime",
+      "bbox": [
+        530,
+        506.5,
+        418,
+        106
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.1"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#111D1A",
+      "lineColor": "#29443B",
+      "lineWidth": 1
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/twra5gbq",
+      "id": "10",
+      "name": "step-num-1",
+      "bbox": [
+        554,
+        526,
+        44,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.1.0.0"
+      },
+      "geometry": "rect",
+      "text": "1",
+      "textPreview": "1",
+      "resolvedFontSize": 23,
+      "resolvedTextStyle": {
+        "fontSize": 23,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "1"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "1",
+          "runs": [
+            {
+              "index": 1,
+              "text": "1",
+              "fontSize": 23,
+              "color": "#46D17E",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4byhgn29",
+      "id": "11",
+      "name": "step-title-1",
+      "bbox": [
+        616,
+        526,
+        308,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.1.0.1.0"
+      },
+      "geometry": "rect",
+      "text": "Pilot runtime",
+      "textPreview": "Pilot runtime",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Pilot runtime"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Pilot runtime",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Pilot runtime",
+              "fontSize": 24,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/bq1oryts",
+      "id": "12",
+      "name": "step-body-1",
+      "bbox": [
+        616,
+        556,
+        308,
+        36
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.1.0.1.1"
+      },
+      "geometry": "rect",
+      "text": "Guided greenfield and brownfield runs with token governance.",
+      "textPreview": "Guided greenfield and brownfield runs with token governance.",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Guided greenfield and brownfield runs"
+          },
+          {
+            "index": 2,
+            "text": "with token governance."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Guided greenfield and brownfield runs with token governance.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Guided greenfield and brownfield runs with token governance.",
+              "fontSize": 18,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/m58z25kb",
+      "id": "13",
+      "name": "step-2-control-dashboard",
+      "bbox": [
+        972,
+        506.5,
+        418,
+        106
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.2"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#111D1A",
+      "lineColor": "#29443B",
+      "lineWidth": 1
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/t83itgfm",
+      "id": "14",
+      "name": "step-num-2",
+      "bbox": [
+        996,
+        526,
+        44,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.2.0.0"
+      },
+      "geometry": "rect",
+      "text": "2",
+      "textPreview": "2",
+      "resolvedFontSize": 23,
+      "resolvedTextStyle": {
+        "fontSize": 23,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "2"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "2",
+          "runs": [
+            {
+              "index": 1,
+              "text": "2",
+              "fontSize": 23,
+              "color": "#F2B84B",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4nap4r65",
+      "id": "15",
+      "name": "step-title-2",
+      "bbox": [
+        1058,
+        526,
+        308,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.2.0.1.0"
+      },
+      "geometry": "rect",
+      "text": "Control dashboard",
+      "textPreview": "Control dashboard",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Control dashboard"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Control dashboard",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Control dashboard",
+              "fontSize": 24,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/b2hwfyxo",
+      "id": "16",
+      "name": "step-body-2",
+      "bbox": [
+        1058,
+        556,
+        308,
+        36
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.2.0.1.1"
+      },
+      "geometry": "rect",
+      "text": "Live graph, ledger, evidence, budget, and checkpoint state.",
+      "textPreview": "Live graph, ledger, evidence, budget, and checkpoint state.",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Live graph, ledger, evidence, budget, and"
+          },
+          {
+            "index": 2,
+            "text": "checkpoint state."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Live graph, ledger, evidence, budget, and checkpoint state.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Live graph, ledger, evidence, budget, and checkpoint state.",
+              "fontSize": 18,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/mhk3q5o7",
+      "id": "17",
+      "name": "step-3-enterprise-assurance",
+      "bbox": [
+        1414,
+        506.5,
+        418,
+        106
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.3"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#111D1A",
+      "lineColor": "#29443B",
+      "lineWidth": 1
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/tgfmlkjm",
+      "id": "18",
+      "name": "step-num-3",
+      "bbox": [
+        1438,
+        526,
+        44,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.3.0.0"
+      },
+      "geometry": "rect",
+      "text": "3",
+      "textPreview": "3",
+      "resolvedFontSize": 23,
+      "resolvedTextStyle": {
+        "fontSize": 23,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "3"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "3",
+          "runs": [
+            {
+              "index": 1,
+              "text": "3",
+              "fontSize": 23,
+              "color": "#F26464",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4vmtwra5",
+      "id": "19",
+      "name": "step-title-3",
+      "bbox": [
+        1500,
+        526,
+        308,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.3.0.1.0"
+      },
+      "geometry": "rect",
+      "text": "Enterprise assurance",
+      "textPreview": "Enterprise assurance",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Enterprise assurance"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Enterprise assurance",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Enterprise assurance",
+              "fontSize": 24,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gr2p8nqx",
+      "id": "20",
+      "name": "step-body-3",
+      "bbox": [
+        1500,
+        556,
+        308,
+        36
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.3.0.1.1"
+      },
+      "geometry": "rect",
+      "text": "SSO, policy packs, repo integrations, audit export, org memory.",
+      "textPreview": "SSO, policy packs, repo integrations, audit export, org memory.",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "SSO, policy packs, repo integrations, audit"
+          },
+          {
+            "index": 2,
+            "text": "export, org memory."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "SSO, policy packs, repo integrations, audit export, org memory.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "SSO, policy packs, repo integrations, audit export, org memory.",
+              "fontSize": 18,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9cvixcze",
+      "id": "21",
+      "name": "roadmap-rule",
+      "bbox": [
+        88,
+        638,
+        1744,
+        2
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1"
+      },
+      "geometry": "rect",
+      "fillColor": "#29443B",
+      "lineColor": "#29443B",
+      "lineWidth": 0
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ylc7u54z",
+      "id": "22",
+      "name": "roadmap-proof",
+      "bbox": [
+        88,
+        666,
+        1400,
+        64
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.2"
+      },
+      "geometry": "rect",
+      "text": "The critical product proof is not a demo app. It is a repeatable run where a skeptical buyer can inspect the evidence and approve the next iteration with confidence.",
+      "textPreview": "The critical product proof is not a demo app. It is a repeatable run where a skeptical buyer can inspect the evidence and approve the nex...",
+      "resolvedFontSize": 32,
+      "resolvedTextStyle": {
+        "fontSize": 32,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "The critical product proof is not a demo app. It is a repeatable run where a skeptical buyer can inspect"
+          },
+          {
+            "index": 2,
+            "text": "the evidence and approve the next iteration with confidence."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "The critical product proof is not a demo app. It is a repeatable run where a skeptical buyer can inspect the evidence and approve the next iteration with confidence.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "The critical product proof is not a demo app. It is a repeatable run where a skeptical buyer can inspect the evidence and approve the next iteration with confidence.",
+              "fontSize": 32,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 23,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/r65wjudg",
+      "id": "23",
+      "name": "roadmap-footer",
+      "bbox": [
+        88,
+        990,
+        268,
+        28
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.2.0"
+      },
+      "geometry": "rect",
+      "text": "DFMS pitch deck | software assurance dark factory",
+      "textPreview": "DFMS pitch deck | software assurance dark factory",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "DFMS pitch deck | software assurance dark factory"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "DFMS pitch deck | software assurance dark factory",
+          "runs": [
+            {
+              "index": 1,
+              "text": "DFMS pitch deck | software assurance dark factory",
+              "fontSize": 13,
+              "color": "#6E7C74"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 24,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/g3ex0nux",
+      "id": "24",
+      "name": "roadmap-page",
+      "bbox": [
+        1792,
+        998,
+        40,
+        12
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.2.1"
+      },
+      "geometry": "rect",
+      "text": "34",
+      "textPreview": "34",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "34"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "34",
+          "runs": [
+            {
+              "index": 1,
+              "text": "34",
+              "fontSize": 13,
+              "color": "#6E7C74",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "composeRuns": [
+    {
+      "index": 1,
+      "frame": {
+        "left": 0,
+        "top": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "baseUnit": 8,
+      "root": {
+        "path": "0",
+        "kind": "layers",
+        "name": "roadmap-root",
+        "requestedSize": {
+          "width": {
+            "mode": "fill",
+            "value": 1
+          },
+          "height": {
+            "mode": "fill",
+            "value": 1
+          }
+        },
+        "intrinsicSize": {
+          "width": 0,
+          "height": 0
+        },
+        "frame": {
+          "left": 0,
+          "top": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "children": [
+          {
+            "path": "0.0",
+            "kind": "shape",
+            "name": "background",
+            "requestedSize": {
+              "width": {
+                "mode": "fill",
+                "value": 1
+              },
+              "height": {
+                "mode": "fill",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 0,
+              "height": 0
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "snappedFrame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/dsji5sne",
+              "id": "1",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.1",
+            "kind": "column",
+            "name": "roadmap-content",
+            "requestedSize": {
+              "width": {
+                "mode": "fill",
+                "value": 1
+              },
+              "height": {
+                "mode": "fill",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 176,
+              "height": 392
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "children": [
+              {
+                "path": "0.1.0",
+                "kind": "column",
+                "name": "roadmap-title-stack",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "hug"
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 1382.34,
+                  "height": 183
+                },
+                "frame": {
+                  "left": 88,
+                  "top": 64,
+                  "width": 1744,
+                  "height": 183
+                },
+                "children": [
+                  {
+                    "path": "0.1.0.0",
+                    "kind": "text",
+                    "name": "roadmap-eyebrow",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 21
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 64,
+                      "width": 1744,
+                      "height": 21
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 64,
+                      "width": 1744,
+                      "height": 22
+                    },
+                    "children": [],
+                    "text": "ROADMAP",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/61032lsz",
+                      "id": "2",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.0.1",
+                    "kind": "text",
+                    "name": "roadmap-title",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "wrap",
+                        "max": 1500
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 1382.34,
+                      "height": 110
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 98,
+                      "width": 1382.34,
+                      "height": 110
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 98,
+                      "width": 1382,
+                      "height": 110
+                    },
+                    "children": [],
+                    "text": "A staged product path from skill bundle to enterprise control room.",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/vmtwra5g",
+                      "id": "3",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.0.2",
+                    "kind": "text",
+                    "name": "roadmap-subtitle",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "wrap",
+                        "max": 1330
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 1232.31,
+                      "height": 26
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 221,
+                      "width": 1232.31,
+                      "height": 26
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 222,
+                      "width": 1232,
+                      "height": 26
+                    },
+                    "children": [],
+                    "text": "Start with Codex skills and evidence artifacts; graduate to dashboards, integrations, and organization-level assurance.",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/oj2t83it",
+                      "id": "4",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "gap": 13,
+                "effectiveGap": 13,
+                "justifyOffset": 0,
+                "align": "start",
+                "justify": "start",
+                "contentFrame": {
+                  "left": 88,
+                  "top": 64,
+                  "width": 1744,
+                  "height": 183
+                },
+                "items": [
+                  {
+                    "path": "0.1.0.0",
+                    "frame": {
+                      "left": 88,
+                      "top": 64,
+                      "width": 1744,
+                      "height": 21
+                    }
+                  },
+                  {
+                    "path": "0.1.0.1",
+                    "frame": {
+                      "left": 88,
+                      "top": 98,
+                      "width": 1382.34,
+                      "height": 110
+                    }
+                  },
+                  {
+                    "path": "0.1.0.2",
+                    "frame": {
+                      "left": 88,
+                      "top": 221,
+                      "width": 1232.31,
+                      "height": 26
+                    }
+                  }
+                ]
+              },
+              {
+                "path": "0.1.1",
+                "kind": "column",
+                "name": "roadmap-body",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "fill",
+                    "value": 1
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 1400.1,
+                  "height": 206
+                },
+                "frame": {
+                  "left": 88,
+                  "top": 281,
+                  "width": 1744,
+                  "height": 675
+                },
+                "children": [
+                  {
+                    "path": "0.1.1.0",
+                    "kind": "grid",
+                    "name": "roadmap-grid",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 72,
+                      "height": 88
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 506.5,
+                      "width": 1744,
+                      "height": 106
+                    },
+                    "children": [
+                      {
+                        "path": "0.1.1.0.0",
+                        "kind": "panel",
+                        "name": "step-0-skill-bundle",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 48,
+                          "height": 88
+                        },
+                        "frame": {
+                          "left": 88,
+                          "top": 506.5,
+                          "width": 418,
+                          "height": 106
+                        },
+                        "snappedFrame": {
+                          "left": 88,
+                          "top": 506.5,
+                          "width": 418,
+                          "height": 106
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.0.0.0",
+                            "kind": "row",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 62,
+                              "height": 48
+                            },
+                            "frame": {
+                              "left": 112,
+                              "top": 526.5,
+                              "width": 370,
+                              "height": 66
+                            },
+                            "children": [
+                              {
+                                "path": "0.1.1.0.0.0.0",
+                                "kind": "text",
+                                "name": "step-num-0",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fixed",
+                                    "value": 44
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 44,
+                                  "height": 23
+                                },
+                                "frame": {
+                                  "left": 112,
+                                  "top": 526.5,
+                                  "width": 44,
+                                  "height": 23
+                                },
+                                "snappedFrame": {
+                                  "left": 112,
+                                  "top": 526,
+                                  "width": 44,
+                                  "height": 24
+                                },
+                                "children": [],
+                                "text": "0",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/6dcbulwv",
+                                  "id": "6",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.1.1.0.0.0.1",
+                                "kind": "column",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 48
+                                },
+                                "frame": {
+                                  "left": 174,
+                                  "top": 526.5,
+                                  "width": 308,
+                                  "height": 66
+                                },
+                                "children": [
+                                  {
+                                    "path": "0.1.1.0.0.0.1.0",
+                                    "kind": "text",
+                                    "name": "step-title-0",
+                                    "requestedSize": {
+                                      "width": {
+                                        "mode": "fill",
+                                        "value": 1
+                                      },
+                                      "height": {
+                                        "mode": "hug"
+                                      }
+                                    },
+                                    "intrinsicSize": {
+                                      "width": 0,
+                                      "height": 24
+                                    },
+                                    "frame": {
+                                      "left": 174,
+                                      "top": 526.5,
+                                      "width": 308,
+                                      "height": 24
+                                    },
+                                    "snappedFrame": {
+                                      "left": 174,
+                                      "top": 526,
+                                      "width": 308,
+                                      "height": 24
+                                    },
+                                    "children": [],
+                                    "text": "Skill bundle",
+                                    "transform": "none",
+                                    "element": {
+                                      "aid": "sh/vy90je9c",
+                                      "id": "7",
+                                      "kind": "shape"
+                                    }
+                                  },
+                                  {
+                                    "path": "0.1.1.0.0.0.1.1",
+                                    "kind": "text",
+                                    "name": "step-body-0",
+                                    "requestedSize": {
+                                      "width": {
+                                        "mode": "fill",
+                                        "value": 1
+                                      },
+                                      "height": {
+                                        "mode": "hug"
+                                      }
+                                    },
+                                    "intrinsicSize": {
+                                      "width": 0,
+                                      "height": 18
+                                    },
+                                    "frame": {
+                                      "left": 174,
+                                      "top": 556.5,
+                                      "width": 308,
+                                      "height": 36
+                                    },
+                                    "snappedFrame": {
+                                      "left": 174,
+                                      "top": 556,
+                                      "width": 308,
+                                      "height": 36
+                                    },
+                                    "children": [],
+                                    "text": "Installable DFMS skills, templates, validators, and project books.",
+                                    "transform": "none",
+                                    "element": {
+                                      "aid": "sh/onyd0z61",
+                                      "id": "8",
+                                      "kind": "shape"
+                                    }
+                                  }
+                                ],
+                                "padding": {
+                                  "top": 0,
+                                  "right": 0,
+                                  "bottom": 0,
+                                  "left": 0
+                                },
+                                "gap": 6,
+                                "effectiveGap": 6,
+                                "justifyOffset": 0,
+                                "align": "start",
+                                "justify": "start",
+                                "contentFrame": {
+                                  "left": 174,
+                                  "top": 526.5,
+                                  "width": 308,
+                                  "height": 66
+                                },
+                                "items": [
+                                  {
+                                    "path": "0.1.1.0.0.0.1.0",
+                                    "frame": {
+                                      "left": 174,
+                                      "top": 526.5,
+                                      "width": 308,
+                                      "height": 24
+                                    }
+                                  },
+                                  {
+                                    "path": "0.1.1.0.0.0.1.1",
+                                    "frame": {
+                                      "left": 174,
+                                      "top": 556.5,
+                                      "width": 308,
+                                      "height": 36
+                                    }
+                                  }
+                                ]
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 18,
+                            "effectiveGap": 18,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 112,
+                              "top": 526.5,
+                              "width": 370,
+                              "height": 66
+                            },
+                            "items": [
+                              {
+                                "path": "0.1.1.0.0.0.0",
+                                "frame": {
+                                  "left": 112,
+                                  "top": 526.5,
+                                  "width": 44,
+                                  "height": 23
+                                }
+                              },
+                              {
+                                "path": "0.1.1.0.0.0.1",
+                                "frame": {
+                                  "left": 174,
+                                  "top": 526.5,
+                                  "width": 308,
+                                  "height": 66
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "padding": {
+                          "top": 20,
+                          "right": 24,
+                          "bottom": 20,
+                          "left": 24
+                        },
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 112,
+                          "top": 526.5,
+                          "width": 370,
+                          "height": 66
+                        },
+                        "element": {
+                          "aid": "sh/d4vmtwra",
+                          "id": "5",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.1.1.0.1",
+                        "kind": "panel",
+                        "name": "step-1-pilot-runtime",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 48,
+                          "height": 88
+                        },
+                        "frame": {
+                          "left": 530,
+                          "top": 506.5,
+                          "width": 418,
+                          "height": 106
+                        },
+                        "snappedFrame": {
+                          "left": 530,
+                          "top": 506.5,
+                          "width": 418,
+                          "height": 106
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.0.1.0",
+                            "kind": "row",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 62,
+                              "height": 48
+                            },
+                            "frame": {
+                              "left": 554,
+                              "top": 526.5,
+                              "width": 370,
+                              "height": 66
+                            },
+                            "children": [
+                              {
+                                "path": "0.1.1.0.1.0.0",
+                                "kind": "text",
+                                "name": "step-num-1",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fixed",
+                                    "value": 44
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 44,
+                                  "height": 23
+                                },
+                                "frame": {
+                                  "left": 554,
+                                  "top": 526.5,
+                                  "width": 44,
+                                  "height": 23
+                                },
+                                "snappedFrame": {
+                                  "left": 554,
+                                  "top": 526,
+                                  "width": 44,
+                                  "height": 24
+                                },
+                                "children": [],
+                                "text": "1",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/twra5gbq",
+                                  "id": "10",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.1.1.0.1.0.1",
+                                "kind": "column",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 48
+                                },
+                                "frame": {
+                                  "left": 616,
+                                  "top": 526.5,
+                                  "width": 308,
+                                  "height": 66
+                                },
+                                "children": [
+                                  {
+                                    "path": "0.1.1.0.1.0.1.0",
+                                    "kind": "text",
+                                    "name": "step-title-1",
+                                    "requestedSize": {
+                                      "width": {
+                                        "mode": "fill",
+                                        "value": 1
+                                      },
+                                      "height": {
+                                        "mode": "hug"
+                                      }
+                                    },
+                                    "intrinsicSize": {
+                                      "width": 0,
+                                      "height": 24
+                                    },
+                                    "frame": {
+                                      "left": 616,
+                                      "top": 526.5,
+                                      "width": 308,
+                                      "height": 24
+                                    },
+                                    "snappedFrame": {
+                                      "left": 616,
+                                      "top": 526,
+                                      "width": 308,
+                                      "height": 24
+                                    },
+                                    "children": [],
+                                    "text": "Pilot runtime",
+                                    "transform": "none",
+                                    "element": {
+                                      "aid": "sh/4byhgn29",
+                                      "id": "11",
+                                      "kind": "shape"
+                                    }
+                                  },
+                                  {
+                                    "path": "0.1.1.0.1.0.1.1",
+                                    "kind": "text",
+                                    "name": "step-body-1",
+                                    "requestedSize": {
+                                      "width": {
+                                        "mode": "fill",
+                                        "value": 1
+                                      },
+                                      "height": {
+                                        "mode": "hug"
+                                      }
+                                    },
+                                    "intrinsicSize": {
+                                      "width": 0,
+                                      "height": 18
+                                    },
+                                    "frame": {
+                                      "left": 616,
+                                      "top": 556.5,
+                                      "width": 308,
+                                      "height": 36
+                                    },
+                                    "snappedFrame": {
+                                      "left": 616,
+                                      "top": 556,
+                                      "width": 308,
+                                      "height": 36
+                                    },
+                                    "children": [],
+                                    "text": "Guided greenfield and brownfield runs with token governance.",
+                                    "transform": "none",
+                                    "element": {
+                                      "aid": "sh/bq1oryts",
+                                      "id": "12",
+                                      "kind": "shape"
+                                    }
+                                  }
+                                ],
+                                "padding": {
+                                  "top": 0,
+                                  "right": 0,
+                                  "bottom": 0,
+                                  "left": 0
+                                },
+                                "gap": 6,
+                                "effectiveGap": 6,
+                                "justifyOffset": 0,
+                                "align": "start",
+                                "justify": "start",
+                                "contentFrame": {
+                                  "left": 616,
+                                  "top": 526.5,
+                                  "width": 308,
+                                  "height": 66
+                                },
+                                "items": [
+                                  {
+                                    "path": "0.1.1.0.1.0.1.0",
+                                    "frame": {
+                                      "left": 616,
+                                      "top": 526.5,
+                                      "width": 308,
+                                      "height": 24
+                                    }
+                                  },
+                                  {
+                                    "path": "0.1.1.0.1.0.1.1",
+                                    "frame": {
+                                      "left": 616,
+                                      "top": 556.5,
+                                      "width": 308,
+                                      "height": 36
+                                    }
+                                  }
+                                ]
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 18,
+                            "effectiveGap": 18,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 554,
+                              "top": 526.5,
+                              "width": 370,
+                              "height": 66
+                            },
+                            "items": [
+                              {
+                                "path": "0.1.1.0.1.0.0",
+                                "frame": {
+                                  "left": 554,
+                                  "top": 526.5,
+                                  "width": 44,
+                                  "height": 23
+                                }
+                              },
+                              {
+                                "path": "0.1.1.0.1.0.1",
+                                "frame": {
+                                  "left": 616,
+                                  "top": 526.5,
+                                  "width": 308,
+                                  "height": 66
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "padding": {
+                          "top": 20,
+                          "right": 24,
+                          "bottom": 20,
+                          "left": 24
+                        },
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 554,
+                          "top": 526.5,
+                          "width": 370,
+                          "height": 66
+                        },
+                        "element": {
+                          "aid": "sh/d8v6psfi",
+                          "id": "9",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.1.1.0.2",
+                        "kind": "panel",
+                        "name": "step-2-control-dashboard",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 48,
+                          "height": 88
+                        },
+                        "frame": {
+                          "left": 972,
+                          "top": 506.5,
+                          "width": 418,
+                          "height": 106
+                        },
+                        "snappedFrame": {
+                          "left": 972,
+                          "top": 506.5,
+                          "width": 418,
+                          "height": 106
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.0.2.0",
+                            "kind": "row",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 62,
+                              "height": 48
+                            },
+                            "frame": {
+                              "left": 996,
+                              "top": 526.5,
+                              "width": 370,
+                              "height": 66
+                            },
+                            "children": [
+                              {
+                                "path": "0.1.1.0.2.0.0",
+                                "kind": "text",
+                                "name": "step-num-2",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fixed",
+                                    "value": 44
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 44,
+                                  "height": 23
+                                },
+                                "frame": {
+                                  "left": 996,
+                                  "top": 526.5,
+                                  "width": 44,
+                                  "height": 23
+                                },
+                                "snappedFrame": {
+                                  "left": 996,
+                                  "top": 526,
+                                  "width": 44,
+                                  "height": 24
+                                },
+                                "children": [],
+                                "text": "2",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/t83itgfm",
+                                  "id": "14",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.1.1.0.2.0.1",
+                                "kind": "column",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 48
+                                },
+                                "frame": {
+                                  "left": 1058,
+                                  "top": 526.5,
+                                  "width": 308,
+                                  "height": 66
+                                },
+                                "children": [
+                                  {
+                                    "path": "0.1.1.0.2.0.1.0",
+                                    "kind": "text",
+                                    "name": "step-title-2",
+                                    "requestedSize": {
+                                      "width": {
+                                        "mode": "fill",
+                                        "value": 1
+                                      },
+                                      "height": {
+                                        "mode": "hug"
+                                      }
+                                    },
+                                    "intrinsicSize": {
+                                      "width": 0,
+                                      "height": 24
+                                    },
+                                    "frame": {
+                                      "left": 1058,
+                                      "top": 526.5,
+                                      "width": 308,
+                                      "height": 24
+                                    },
+                                    "snappedFrame": {
+                                      "left": 1058,
+                                      "top": 526,
+                                      "width": 308,
+                                      "height": 24
+                                    },
+                                    "children": [],
+                                    "text": "Control dashboard",
+                                    "transform": "none",
+                                    "element": {
+                                      "aid": "sh/4nap4r65",
+                                      "id": "15",
+                                      "kind": "shape"
+                                    }
+                                  },
+                                  {
+                                    "path": "0.1.1.0.2.0.1.1",
+                                    "kind": "text",
+                                    "name": "step-body-2",
+                                    "requestedSize": {
+                                      "width": {
+                                        "mode": "fill",
+                                        "value": 1
+                                      },
+                                      "height": {
+                                        "mode": "hug"
+                                      }
+                                    },
+                                    "intrinsicSize": {
+                                      "width": 0,
+                                      "height": 18
+                                    },
+                                    "frame": {
+                                      "left": 1058,
+                                      "top": 556.5,
+                                      "width": 308,
+                                      "height": 36
+                                    },
+                                    "snappedFrame": {
+                                      "left": 1058,
+                                      "top": 556,
+                                      "width": 308,
+                                      "height": 36
+                                    },
+                                    "children": [],
+                                    "text": "Live graph, ledger, evidence, budget, and checkpoint state.",
+                                    "transform": "none",
+                                    "element": {
+                                      "aid": "sh/b2hwfyxo",
+                                      "id": "16",
+                                      "kind": "shape"
+                                    }
+                                  }
+                                ],
+                                "padding": {
+                                  "top": 0,
+                                  "right": 0,
+                                  "bottom": 0,
+                                  "left": 0
+                                },
+                                "gap": 6,
+                                "effectiveGap": 6,
+                                "justifyOffset": 0,
+                                "align": "start",
+                                "justify": "start",
+                                "contentFrame": {
+                                  "left": 1058,
+                                  "top": 526.5,
+                                  "width": 308,
+                                  "height": 66
+                                },
+                                "items": [
+                                  {
+                                    "path": "0.1.1.0.2.0.1.0",
+                                    "frame": {
+                                      "left": 1058,
+                                      "top": 526.5,
+                                      "width": 308,
+                                      "height": 24
+                                    }
+                                  },
+                                  {
+                                    "path": "0.1.1.0.2.0.1.1",
+                                    "frame": {
+                                      "left": 1058,
+                                      "top": 556.5,
+                                      "width": 308,
+                                      "height": 36
+                                    }
+                                  }
+                                ]
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 18,
+                            "effectiveGap": 18,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 996,
+                              "top": 526.5,
+                              "width": 370,
+                              "height": 66
+                            },
+                            "items": [
+                              {
+                                "path": "0.1.1.0.2.0.0",
+                                "frame": {
+                                  "left": 996,
+                                  "top": 526.5,
+                                  "width": 44,
+                                  "height": 23
+                                }
+                              },
+                              {
+                                "path": "0.1.1.0.2.0.1",
+                                "frame": {
+                                  "left": 1058,
+                                  "top": 526.5,
+                                  "width": 308,
+                                  "height": 66
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "padding": {
+                          "top": 20,
+                          "right": 24,
+                          "bottom": 20,
+                          "left": 24
+                        },
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 996,
+                          "top": 526.5,
+                          "width": 370,
+                          "height": 66
+                        },
+                        "element": {
+                          "aid": "sh/m58z25kb",
+                          "id": "13",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.1.1.0.3",
+                        "kind": "panel",
+                        "name": "step-3-enterprise-assurance",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 48,
+                          "height": 88
+                        },
+                        "frame": {
+                          "left": 1414,
+                          "top": 506.5,
+                          "width": 418,
+                          "height": 106
+                        },
+                        "snappedFrame": {
+                          "left": 1414,
+                          "top": 506.5,
+                          "width": 418,
+                          "height": 106
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.0.3.0",
+                            "kind": "row",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 62,
+                              "height": 48
+                            },
+                            "frame": {
+                              "left": 1438,
+                              "top": 526.5,
+                              "width": 370,
+                              "height": 66
+                            },
+                            "children": [
+                              {
+                                "path": "0.1.1.0.3.0.0",
+                                "kind": "text",
+                                "name": "step-num-3",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fixed",
+                                    "value": 44
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 44,
+                                  "height": 23
+                                },
+                                "frame": {
+                                  "left": 1438,
+                                  "top": 526.5,
+                                  "width": 44,
+                                  "height": 23
+                                },
+                                "snappedFrame": {
+                                  "left": 1438,
+                                  "top": 526,
+                                  "width": 44,
+                                  "height": 24
+                                },
+                                "children": [],
+                                "text": "3",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/tgfmlkjm",
+                                  "id": "18",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.1.1.0.3.0.1",
+                                "kind": "column",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 48
+                                },
+                                "frame": {
+                                  "left": 1500,
+                                  "top": 526.5,
+                                  "width": 308,
+                                  "height": 66
+                                },
+                                "children": [
+                                  {
+                                    "path": "0.1.1.0.3.0.1.0",
+                                    "kind": "text",
+                                    "name": "step-title-3",
+                                    "requestedSize": {
+                                      "width": {
+                                        "mode": "fill",
+                                        "value": 1
+                                      },
+                                      "height": {
+                                        "mode": "hug"
+                                      }
+                                    },
+                                    "intrinsicSize": {
+                                      "width": 0,
+                                      "height": 24
+                                    },
+                                    "frame": {
+                                      "left": 1500,
+                                      "top": 526.5,
+                                      "width": 308,
+                                      "height": 24
+                                    },
+                                    "snappedFrame": {
+                                      "left": 1500,
+                                      "top": 526,
+                                      "width": 308,
+                                      "height": 24
+                                    },
+                                    "children": [],
+                                    "text": "Enterprise assurance",
+                                    "transform": "none",
+                                    "element": {
+                                      "aid": "sh/4vmtwra5",
+                                      "id": "19",
+                                      "kind": "shape"
+                                    }
+                                  },
+                                  {
+                                    "path": "0.1.1.0.3.0.1.1",
+                                    "kind": "text",
+                                    "name": "step-body-3",
+                                    "requestedSize": {
+                                      "width": {
+                                        "mode": "fill",
+                                        "value": 1
+                                      },
+                                      "height": {
+                                        "mode": "hug"
+                                      }
+                                    },
+                                    "intrinsicSize": {
+                                      "width": 0,
+                                      "height": 18
+                                    },
+                                    "frame": {
+                                      "left": 1500,
+                                      "top": 556.5,
+                                      "width": 308,
+                                      "height": 36
+                                    },
+                                    "snappedFrame": {
+                                      "left": 1500,
+                                      "top": 556,
+                                      "width": 308,
+                                      "height": 36
+                                    },
+                                    "children": [],
+                                    "text": "SSO, policy packs, repo integrations, audit export, org memory.",
+                                    "transform": "none",
+                                    "element": {
+                                      "aid": "sh/gr2p8nqx",
+                                      "id": "20",
+                                      "kind": "shape"
+                                    }
+                                  }
+                                ],
+                                "padding": {
+                                  "top": 0,
+                                  "right": 0,
+                                  "bottom": 0,
+                                  "left": 0
+                                },
+                                "gap": 6,
+                                "effectiveGap": 6,
+                                "justifyOffset": 0,
+                                "align": "start",
+                                "justify": "start",
+                                "contentFrame": {
+                                  "left": 1500,
+                                  "top": 526.5,
+                                  "width": 308,
+                                  "height": 66
+                                },
+                                "items": [
+                                  {
+                                    "path": "0.1.1.0.3.0.1.0",
+                                    "frame": {
+                                      "left": 1500,
+                                      "top": 526.5,
+                                      "width": 308,
+                                      "height": 24
+                                    }
+                                  },
+                                  {
+                                    "path": "0.1.1.0.3.0.1.1",
+                                    "frame": {
+                                      "left": 1500,
+                                      "top": 556.5,
+                                      "width": 308,
+                                      "height": 36
+                                    }
+                                  }
+                                ]
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 18,
+                            "effectiveGap": 18,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 1438,
+                              "top": 526.5,
+                              "width": 370,
+                              "height": 66
+                            },
+                            "items": [
+                              {
+                                "path": "0.1.1.0.3.0.0",
+                                "frame": {
+                                  "left": 1438,
+                                  "top": 526.5,
+                                  "width": 44,
+                                  "height": 23
+                                }
+                              },
+                              {
+                                "path": "0.1.1.0.3.0.1",
+                                "frame": {
+                                  "left": 1500,
+                                  "top": 526.5,
+                                  "width": 308,
+                                  "height": 66
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "padding": {
+                          "top": 20,
+                          "right": 24,
+                          "bottom": 20,
+                          "left": 24
+                        },
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 1438,
+                          "top": 526.5,
+                          "width": 370,
+                          "height": 66
+                        },
+                        "element": {
+                          "aid": "sh/mhk3q5o7",
+                          "id": "17",
+                          "kind": "shape"
+                        }
+                      }
+                    ],
+                    "padding": {
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    },
+                    "columnGap": 24,
+                    "rowGap": 0,
+                    "alignItems": "stretch",
+                    "justifyItems": "stretch",
+                    "contentFrame": {
+                      "left": 88,
+                      "top": 506.5,
+                      "width": 1744,
+                      "height": 106
+                    },
+                    "columns": [
+                      {
+                        "mode": "fr",
+                        "value": 1
+                      },
+                      {
+                        "mode": "fr",
+                        "value": 1
+                      },
+                      {
+                        "mode": "fr",
+                        "value": 1
+                      },
+                      {
+                        "mode": "fr",
+                        "value": 1
+                      }
+                    ],
+                    "autoRows": "auto",
+                    "resolvedRows": [
+                      "auto"
+                    ],
+                    "columnSizes": [
+                      418,
+                      418,
+                      418,
+                      418
+                    ],
+                    "rowSizes": [
+                      106
+                    ],
+                    "cells": [
+                      {
+                        "path": "0.1.1.0.0",
+                        "column": 0,
+                        "row": 0,
+                        "columnSpan": 1,
+                        "rowSpan": 1,
+                        "cellFrame": {
+                          "left": 88,
+                          "top": 506.5,
+                          "width": 418,
+                          "height": 106
+                        }
+                      },
+                      {
+                        "path": "0.1.1.0.1",
+                        "column": 1,
+                        "row": 0,
+                        "columnSpan": 1,
+                        "rowSpan": 1,
+                        "cellFrame": {
+                          "left": 530,
+                          "top": 506.5,
+                          "width": 418,
+                          "height": 106
+                        }
+                      },
+                      {
+                        "path": "0.1.1.0.2",
+                        "column": 2,
+                        "row": 0,
+                        "columnSpan": 1,
+                        "rowSpan": 1,
+                        "cellFrame": {
+                          "left": 972,
+                          "top": 506.5,
+                          "width": 418,
+                          "height": 106
+                        }
+                      },
+                      {
+                        "path": "0.1.1.0.3",
+                        "column": 3,
+                        "row": 0,
+                        "columnSpan": 1,
+                        "rowSpan": 1,
+                        "cellFrame": {
+                          "left": 1414,
+                          "top": 506.5,
+                          "width": 418,
+                          "height": 106
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "path": "0.1.1.1",
+                    "kind": "rule",
+                    "name": "roadmap-rule",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 2
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 2
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 638.5,
+                      "width": 1744,
+                      "height": 2
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 638,
+                      "width": 1744,
+                      "height": 2
+                    },
+                    "children": [],
+                    "weight": 2,
+                    "element": {
+                      "aid": "sh/9cvixcze",
+                      "id": "21",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.1.2",
+                    "kind": "text",
+                    "name": "roadmap-proof",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "wrap",
+                        "max": 1450
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 1400.1,
+                      "height": 64
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 666.5,
+                      "width": 1400.1,
+                      "height": 64
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 666,
+                      "width": 1400,
+                      "height": 64
+                    },
+                    "children": [],
+                    "text": "The critical product proof is not a demo app. It is a repeatable run where a skeptical buyer can inspect the evidence and approve the next iteration with confidence.",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/ylc7u54z",
+                      "id": "22",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "gap": 26,
+                "effectiveGap": 26,
+                "justifyOffset": 225.5,
+                "align": "start",
+                "justify": "center",
+                "contentFrame": {
+                  "left": 88,
+                  "top": 281,
+                  "width": 1744,
+                  "height": 675
+                },
+                "items": [
+                  {
+                    "path": "0.1.1.0",
+                    "frame": {
+                      "left": 88,
+                      "top": 506.5,
+                      "width": 1744,
+                      "height": 106
+                    }
+                  },
+                  {
+                    "path": "0.1.1.1",
+                    "frame": {
+                      "left": 88,
+                      "top": 638.5,
+                      "width": 1744,
+                      "height": 2
+                    }
+                  },
+                  {
+                    "path": "0.1.1.2",
+                    "frame": {
+                      "left": 88,
+                      "top": 666.5,
+                      "width": 1400.1,
+                      "height": 64
+                    }
+                  }
+                ]
+              },
+              {
+                "path": "0.1.2",
+                "kind": "row",
+                "name": "roadmap-footer-row",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "hug"
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 307.84,
+                  "height": 13
+                },
+                "frame": {
+                  "left": 88,
+                  "top": 990,
+                  "width": 1744,
+                  "height": 26
+                },
+                "children": [
+                  {
+                    "path": "0.1.2.0",
+                    "kind": "text",
+                    "name": "roadmap-footer",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "wrap",
+                        "max": 1200
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 267.84,
+                      "height": 13
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 990,
+                      "width": 267.84,
+                      "height": 28
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 990,
+                      "width": 268,
+                      "height": 28
+                    },
+                    "children": [],
+                    "text": "DFMS pitch deck | software assurance dark factory",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/r65wjudg",
+                      "id": "23",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.2.1",
+                    "kind": "text",
+                    "name": "roadmap-page",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 40
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 40,
+                      "height": 13
+                    },
+                    "frame": {
+                      "left": 1792,
+                      "top": 998,
+                      "width": 40,
+                      "height": 12
+                    },
+                    "snappedFrame": {
+                      "left": 1792,
+                      "top": 998,
+                      "width": 40,
+                      "height": 12
+                    },
+                    "children": [],
+                    "text": "34",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/g3ex0nux",
+                      "id": "24",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "gap": 0,
+                "effectiveGap": 1436.16,
+                "justifyOffset": 0,
+                "align": "center",
+                "justify": "between",
+                "contentFrame": {
+                  "left": 88,
+                  "top": 990,
+                  "width": 1744,
+                  "height": 26
+                },
+                "items": [
+                  {
+                    "path": "0.1.2.0",
+                    "frame": {
+                      "left": 88,
+                      "top": 990,
+                      "width": 267.84,
+                      "height": 28
+                    }
+                  },
+                  {
+                    "path": "0.1.2.1",
+                    "frame": {
+                      "left": 1792,
+                      "top": 998,
+                      "width": 40,
+                      "height": 12
+                    }
+                  }
+                ]
+              }
+            ],
+            "padding": {
+              "top": 64,
+              "right": 88,
+              "bottom": 64,
+              "left": 88
+            },
+            "gap": 34,
+            "effectiveGap": 34,
+            "justifyOffset": 0,
+            "align": "start",
+            "justify": "start",
+            "contentFrame": {
+              "left": 88,
+              "top": 64,
+              "width": 1744,
+              "height": 952
+            },
+            "items": [
+              {
+                "path": "0.1.0",
+                "frame": {
+                  "left": 88,
+                  "top": 64,
+                  "width": 1744,
+                  "height": 183
+                }
+              },
+              {
+                "path": "0.1.1",
+                "frame": {
+                  "left": 88,
+                  "top": 281,
+                  "width": 1744,
+                  "height": 675
+                }
+              },
+              {
+                "path": "0.1.2",
+                "frame": {
+                  "left": 88,
+                  "top": 990,
+                  "width": 1744,
+                  "height": 26
+                }
+              }
+            ]
+          }
+        ],
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignItems": "stretch",
+        "justifyItems": "stretch",
+        "contentFrame": {
+          "left": 0,
+          "top": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "items": [
+          {
+            "path": "0.0",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            }
+          },
+          {
+            "path": "0.1",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

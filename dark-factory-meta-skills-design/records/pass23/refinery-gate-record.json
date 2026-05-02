@@ -1,0 +1,31 @@
+{
+  "id": "RFG-PASS23-001",
+  "name": "Pass 23 patch-level refinery gate",
+  "status": "pass",
+  "verdict_rationale": "Pass 23 closes the quality-certificate validation gap by requiring live certificate IDs, 3 reviewers, matching reviewer scores, sufficient scores, panel and refinery links, review evidence, failed-point fix evidence, certificate evidence, and residual-risk state. This is patch-level only.",
+  "next_action": "Run a full greenfield and brownfield project-book simulation before claiming runtime readiness.",
+  "evidence": {
+    "test_reports": [
+      "DFMS hardening checks complete",
+      "quality certificate pass fixture: pass",
+      "bad certificate low-score fixture: rejected",
+      "bad certificate missing-gate fixture: rejected",
+      "bad certificate reviewer-score mismatch fixture: rejected",
+      "bad certificate low-threshold fixture: rejected",
+      "quality certificate template fixture: rejected"
+    ],
+    "rubric_scorecards": [
+      "23-ralph-loop-critic-review-and-fix-record.md"
+    ],
+    "trace_reports": [
+      "records/pass23 merged records",
+      "ATTR-PASS23-001",
+      "CG-PASS23-001",
+      "WL-PASS23-001",
+      "installed and workspace validator hashes match"
+    ],
+    "certificates": [
+      "patch-level pass only"
+    ]
+  }
+}

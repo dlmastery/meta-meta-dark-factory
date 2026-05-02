@@ -1,0 +1,28 @@
+{
+  "id": "WL-PASS19-001",
+  "title": "Ralph loop pass 19 recursive specification hardening",
+  "current_state": "accepted",
+  "next_action": "Use the hardened intake package validation in the next DFMS critic loop or project simulation.",
+  "revalidation_trigger": "Any future critic finding that branch interviews, decomposition, traceability, or meta-attractor governance can be bypassed.",
+  "owner": {
+    "accountable": "codex",
+    "responsible": "codex"
+  },
+  "acceptance_criteria": [
+    "Pass 19 findings are documented",
+    "Live and workspace skills are patched",
+    "Positive fixtures pass",
+    "Negative fixtures are rejected",
+    "Merged control-plane records validate"
+  ],
+  "evidence_required": [
+    "pass19 critic/fix record",
+    "validation runner output",
+    "bundle hash comparison"
+  ],
+  "evidence_provided": [
+    "19-ralph-loop-critic-review-and-fix-record.md",
+    "DFMS hardening checks complete",
+    "INSTALLED_WORKSPACE_HASHES_MATCH"
+  ]
+}

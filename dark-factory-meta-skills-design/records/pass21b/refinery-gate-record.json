@@ -1,0 +1,28 @@
+{
+  "id": "RFG-PASS21B-001",
+  "name": "Pass 21B patch-level refinery gate",
+  "status": "pass",
+  "verdict_rationale": "Pass 21B closes meta-meta control-plane bypasses by enforcing required attractor outputs, full node contracts, expert panels, rubrics, feedback loops, gates, and cross-record linkage. This is patch-level only.",
+  "next_action": "Use the hardened merged-record validator in the next governed project-book simulation.",
+  "evidence": {
+    "test_reports": [
+      "DFMS hardening checks complete",
+      "merged records missing attractor required outputs: rejected",
+      "merged records missing node contract: rejected",
+      "merged records with orphan control-plane id: rejected"
+    ],
+    "rubric_scorecards": [
+      "21B-ralph-loop-critic-review-and-fix-record.md"
+    ],
+    "trace_reports": [
+      "records/pass21b merged records",
+      "ATTR-PASS21B-001",
+      "CG-PASS21B-001",
+      "WL-PASS21B-001",
+      "installed and workspace validator hashes match"
+    ],
+    "certificates": [
+      "patch-level pass only"
+    ]
+  }
+}

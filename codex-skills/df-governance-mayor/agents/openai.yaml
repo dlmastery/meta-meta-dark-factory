@@ -1,0 +1,4 @@
+interface:
+  display_name: "DF Governance Mayor"
+  short_description: "Govern SDLC gates and ownership"
+  default_prompt: "Use $df-governance-mayor to enforce process, standards, RASCI, and stage gates."

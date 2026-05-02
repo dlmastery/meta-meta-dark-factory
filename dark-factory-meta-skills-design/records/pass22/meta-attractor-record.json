@@ -1,0 +1,94 @@
+{
+  "record_id": "ATTR-PASS22-001",
+  "created_on": "2026-04-25",
+  "source_signals": [
+    "User requested Ralph loop pass 22 critic review",
+    "Pass 21B hardened merged control-plane records",
+    "Original transcript requires 3 experts, 15-point rubrics, failed-point fixes, refinery gates, certificates, traceability, and repeated verification"
+  ],
+  "attractor_state": "stable",
+  "goal": "Close quality-refinery bypasses where expert rubric scoring or refinery gate validation could claim pass without enforcing the transcript's proof standard.",
+  "layer_map": {
+    "product_specific": [
+      "No application product scope; this pass hardens reusable DFMS quality gates."
+    ],
+    "factory_reusable": [
+      "Rubric thresholds, failed-point fix evidence, and refinery pass gates apply to all future greenfield and brownfield runs."
+    ],
+    "meta_meta_governance": [
+      "Pass 22 is governed by Attractor, control graph, work ledger, refinery gate, and hardening-runner evidence."
+    ]
+  },
+  "control_plane_links": {
+    "control_graph": "CG-PASS22-001",
+    "work_ledger": "WL-PASS22-001",
+    "refinery_gate": "RFG-PASS22-001"
+  },
+  "selected_mode": "skill-system-revision",
+  "selected_skills": [
+    {
+      "skill": "df-meta-attractor",
+      "reason": "govern this as a meta-meta hardening pass",
+      "load_now": true
+    },
+    {
+      "skill": "df-quality-refinery",
+      "reason": "harden expert rubric and refinery gate acceptance",
+      "load_now": true
+    },
+    {
+      "skill": "df-traceability-evidence",
+      "reason": "preserve trace and evidence requirements for accepted gates",
+      "load_now": true
+    },
+    {
+      "skill": "dark-factory-orchestrator",
+      "reason": "confirm quality gates remain part of governed orchestration",
+      "load_now": true
+    }
+  ],
+  "gates": [
+    "rubric thresholds below 96 percent require a complete threshold-lowering waiver",
+    "any rubric check below 4 requires fix evidence or resolution evidence",
+    "pass refinery gates reject failed core checks and missing rubric, trace, or certificate evidence",
+    "refinery gate validator is compiled and exercised by the hardening runner",
+    "pass 22 merged records validate"
+  ],
+  "node_contract": {
+    "what": "Run pass 22 critic review and harden quality-refinery enforcement.",
+    "why": "The transcript demands expert rubrics and verified refinery gates, not just field presence.",
+    "how": "Prove bypasses, patch live validators, sync workspace files, add fixtures and regression checks, then validate.",
+    "where": "df-quality-refinery installed skill, workspace bundle, validation fixtures, and design records.",
+    "when": "Before accepting pass 22.",
+    "who": "Codex as responsible fixer; human owner as Ralph-loop driver.",
+    "how_good": "Negative fixtures reject low thresholds, unresolved failed points, bad pass gates, and templates while positive fixtures pass."
+  },
+  "expert_debate": {
+    "system_theorist": "Quality gates are attractors for all downstream artifacts, so weak thresholds poison the whole factory.",
+    "requirements_governance_architect": "A lowered rubric threshold is a controlled deviation and must carry owner, reason, revalidation, and residual risk.",
+    "verification_safety_critic": "A pass gate with failed checks or empty evidence is false proof and must be rejected mechanically.",
+    "synthesis": "Harden the executable validators and keep semantic truth as a residual risk for expert review and full simulations."
+  },
+  "human_decisions": [
+    "Human owner requested pass 22 and asked to fix new findings."
+  ],
+  "assumptions": [
+    "Pass 22 remains a patch-level quality-gate hardening pass, not a full application simulation."
+  ],
+  "risks": [
+    "Validators enforce structure and evidence presence, not the real-world correctness of the evidence."
+  ],
+  "evidence_commitments": [
+    "low-threshold rubric fixture is rejected",
+    "unresolved rubric failed-point fixture is rejected",
+    "bad refinery pass fixture is rejected",
+    "refinery gate template fixture is rejected",
+    "installed and workspace quality-refinery files remain in sync"
+  ],
+  "anti_overfit_checks": [
+    "No todo-app-specific rules are introduced.",
+    "Quality gate rules apply to any governed artifact, code change, handoff, or project-book run."
+  ],
+  "verdict": "pass",
+  "next_safe_action": "Use the stricter quality-refinery validators before issuing future quality certificates or pass gates."
+}

@@ -1,0 +1,96 @@
+{
+  "record_id": "ATTR-PASS28-001",
+  "created_on": "2026-04-25",
+  "source_signals": [
+    "User requested Ralph loop pass 28 super critic review",
+    "Pass 27 closed production handoff to outage drill bundle validation",
+    "Pass 27 residual risk noted that control graph and work-ledger references were still ID-format checks"
+  ],
+  "attractor_state": "stable",
+  "goal": "Close the production handoff control-plane proof gap so control graph, work ledger, and refinery gate references are verified against actual files.",
+  "layer_map": {
+    "product_specific": [
+      "No product-specific behavior is introduced; this hardens reusable production handoff governance."
+    ],
+    "factory_reusable": [
+      "Production handoff bundles must include the actual control graph, work ledger, and refinery gate files that govern the outage drill."
+    ],
+    "meta_meta_governance": [
+      "Pass 28 is governed by Attractor, control graph, work ledger, refinery gate, and hardening-runner evidence."
+    ]
+  },
+  "control_plane_links": {
+    "control_graph": "CG-PASS28-001",
+    "work_ledger": "WL-PASS28-001",
+    "refinery_gate": "RFG-PASS28-001"
+  },
+  "selected_mode": "skill-system-revision",
+  "selected_skills": [
+    {
+      "skill": "df-meta-attractor",
+      "reason": "govern this as a meta-meta hardening pass",
+      "load_now": true
+    },
+    {
+      "skill": "df-production-sre-handoff",
+      "reason": "harden production handoff control-plane bundle validation",
+      "load_now": true
+    },
+    {
+      "skill": "df-traceability-evidence",
+      "reason": "make operational handoff references bidirectionally provable against actual governance records",
+      "load_now": true
+    },
+    {
+      "skill": "df-quality-refinery",
+      "reason": "add regression checks for missing and mismatched control-plane bundle records",
+      "load_now": true
+    }
+  ],
+  "gates": [
+    "production handoff validation requires --control-graph, --work-ledger, and --refinery-gate bundle evidence",
+    "outage drill control_graph_node must exist in the provided control graph",
+    "outage drill work_ledger_item must match the provided work ledger",
+    "production handoff and outage drill refinery_gate must match the provided pass refinery gate",
+    "work ledger evidence must mention production handoff and outage drill IDs",
+    "pass 28 merged records validate"
+  ],
+  "node_contract": {
+    "what": "Run pass 28 critic review and harden production handoff control-plane bundle validation.",
+    "why": "Control graph, work ledger, and refinery gate references are only trustworthy when checked against actual records.",
+    "how": "Add control-plane bundle arguments, load and compare IDs, node presence, gate status, ledger state, and ledger evidence mentions, then add regression checks.",
+    "where": "df-production-sre-handoff installed skill, workspace bundle, validation runner, and project-book records.",
+    "when": "Before future production handoff bundles are accepted as governed release evidence.",
+    "who": "Codex as responsible fixer; human owner as Ralph-loop driver and accountable release approver.",
+    "how_good": "Complete control-plane bundle passes while missing or mismatched control-plane evidence rejects."
+  },
+  "expert_debate": {
+    "system_theorist": "Pass 27 connected handoff to drill, but the governance graph remained a loose edge unless actual files are loaded.",
+    "requirements_governance_architect": "The handoff must prove the drill node exists in the control graph, is tracked by the ledger, and is gated by the pass refinery record.",
+    "verification_safety_critic": "ID prefixes are not evidence; the validator must reject missing and mismatched control-plane files.",
+    "synthesis": "Require control graph, work ledger, and refinery gate bundle inputs for production handoff validation."
+  },
+  "human_decisions": [
+    "Human owner requested pass 28 and asked to fix any new findings."
+  ],
+  "assumptions": [
+    "Pass 28 is a patch-level control-plane bundle hardening pass, not a full production simulation."
+  ],
+  "risks": [
+    "Bundle validation proves record consistency, not live operational execution.",
+    "Full greenfield and brownfield simulations remain future work."
+  ],
+  "evidence_commitments": [
+    "production handoff pass fixture validates with outage drill and control-plane bundle files",
+    "production handoff missing control-plane bundle fixture is rejected",
+    "bad production control-plane bundle mismatch fixture is rejected",
+    "existing production, certificate, rubric, trace, intake, decomposition, and merged-control checks still pass or reject as expected",
+    "installed and workspace production validators remain in sync"
+  ],
+  "anti_overfit_checks": [
+    "No todo-app-specific rule is introduced.",
+    "Control-plane bundle validation applies to any governed production handoff."
+  ],
+  "verdict": "pass",
+  "next_safe_action": "Validate future production handoffs with outage drill, control graph, work ledger, and refinery gate bundle inputs."
+}

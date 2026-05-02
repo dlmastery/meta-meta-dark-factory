@@ -1,0 +1,23 @@
+{
+  "id": "RFG-PASS20-001",
+  "name": "Pass 20 patch-level refinery gate",
+  "status": "pass",
+  "verdict_rationale": "Pass 20 closes additional structural bypasses with integrated package validation, skipped-level rejection, disconnected-node rejection, and runner evidence. This is patch-level only.",
+  "next_action": "Run another critic review or full greenfield/brownfield simulation when requested.",
+  "evidence": {
+    "test_reports": [
+      "DFMS hardening checks complete"
+    ],
+    "rubric_scorecards": [
+      "20-ralph-loop-critic-review-and-fix-record.md"
+    ],
+    "trace_reports": [
+      "negative skipped-level fixture rejected",
+      "negative disconnected fixture rejected",
+      "records/pass20 merged records"
+    ],
+    "certificates": [
+      "patch-level pass only"
+    ]
+  }
+}

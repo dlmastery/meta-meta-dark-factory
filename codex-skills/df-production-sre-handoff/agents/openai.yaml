@@ -1,0 +1,4 @@
+interface:
+  display_name: "DF Production Handoff"
+  short_description: "Prepare release and SRE handoff"
+  default_prompt: "Use $df-production-sre-handoff to build a human-owned production and maintenance handoff package."

@@ -1,0 +1,33 @@
+{
+  "id": "WL-PASS25-001",
+  "title": "Ralph loop pass 25 structured evidence hardening",
+  "current_state": "accepted",
+  "next_action": "Use structured evidence validation for all future pass certificates and refinery gates.",
+  "revalidation_trigger": "Any future finding that IDs can satisfy certificate or gate validation by appearing only in prose or that pass gates can have empty scope.",
+  "owner": {
+    "accountable": "codex",
+    "responsible": "codex"
+  },
+  "acceptance_criteria": [
+    "Pass 25 findings documented",
+    "Certificate bundle validation checks structured refinery scope and evidence lists",
+    "Pass refinery gates require non-empty scope",
+    "Pass refinery gates require non-empty verdict rationale and next action",
+    "Hardening runner includes structured-evidence and empty-scope negative checks"
+  ],
+  "evidence_required": [
+    "pass25 critic/fix record",
+    "DFMS hardening runner output",
+    "pass25 merged-record validation",
+    "installed/workspace hash comparison"
+  ],
+  "evidence_provided": [
+    "25-ralph-loop-critic-review-and-fix-record.md",
+    "DFMS hardening checks complete",
+    "ATTR-PASS25-001",
+    "CG-PASS25-001",
+    "RFG-PASS25-001",
+    "records/pass25 merged records",
+    "INSTALLED_WORKSPACE_HASHES_MATCH"
+  ]
+}

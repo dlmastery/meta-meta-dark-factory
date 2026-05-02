@@ -1,0 +1,88 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+    "strict_compliance": "Mandatory. Every claim must be project-specific, evidence-backed, trace-linked, reviewer-challenged, and free of unsupported invention.",
+    "missing_evidence_rule": "If evidence is missing, mark it as an assumption, risk, open question, or failure."
+  },
+  "template_only": true,
+  "record_id": "JURY-000",
+  "run_id": "",
+  "step_id": "",
+  "bead_id": "",
+  "transition": {
+    "from_state": "",
+    "to_state": "",
+    "requested_by": "",
+    "requested_at": "",
+    "rationale": ""
+  },
+  "roles": {
+    "tpm_judge": {
+      "persona_contract": "",
+      "decision_rights": [
+        "reject skipped dependencies",
+        "reject missing next step",
+        "reject stale or ownerless work"
+      ],
+      "vote": "pending",
+      "findings": []
+    },
+    "evidence_clerk": {
+      "persona_contract": "",
+      "decision_rights": [
+        "reject missing evidence",
+        "reject template-as-proof",
+        "reject placeholder proof"
+      ],
+      "vote": "pending",
+      "findings": []
+    },
+    "standards_juror": {
+      "persona_contract": "",
+      "vote": "pending",
+      "findings": []
+    },
+    "domain_artifact_juror": {
+      "persona_contract": "",
+      "vote": "pending",
+      "findings": []
+    },
+    "verification_juror": {
+      "persona_contract": "",
+      "vote": "pending",
+      "findings": []
+    },
+    "adversarial_prosecutor": {
+      "persona_contract": "",
+      "attack_mandate": [
+        "prove skipped steps",
+        "prove fake completion",
+        "prove hallucinated or unsupported claims",
+        "prove reward hacking"
+      ],
+      "stand_down": false,
+      "attacks": []
+    },
+    "jury_foreperson": {
+      "persona_contract": "",
+      "synthesis": "",
+      "verdict": "pending",
+      "dissent": [],
+      "required_patch_beads": []
+    }
+  },
+  "evidence_reviewed": [],
+  "dependency_check": {
+    "predecessors_accepted_or_waived": false,
+    "pert_next_step_valid": false,
+    "current_bead_matches": false
+  },
+  "verdict": {
+    "outcome": "pending",
+    "conditions": [],
+    "residual_risks": [],
+    "next_step_id": "",
+    "next_bead_id": ""
+  },
+  "template_marker": true
+}

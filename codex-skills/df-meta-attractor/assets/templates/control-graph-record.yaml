@@ -1,0 +1,56 @@
+zero_slop_policy:
+  statement: "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+  strict_compliance: "Mandatory. Every claim must be project-specific, evidence-backed, trace-linked, reviewer-challenged, and free of unsupported invention."
+  missing_evidence_rule: "If evidence is missing, mark it as an assumption, risk, open question, or failure."
+
+id: CG-000
+name: ""
+version: "0.1"
+status: proposed
+goal: ""
+source_signals:
+  - ""
+attractor_state: forming
+standards_basis:
+  - ISO/IEC/IEEE 12207:2017
+  - ISO/IEC/IEEE 15289:2019
+nodes:
+  - id: NODE-001
+    label: ""
+    type: intake | artifact | design | implementation | verification | human_gate | refinery_gate | handoff | retrospective
+    owner: ""
+    node_contract:
+      what: ""
+      why: ""
+      how: ""
+      where: ""
+      when: ""
+      who: ""
+      how_good: ""
+    expert_panel:
+      - ""
+      - ""
+      - ""
+    rubrics: []
+    feedback_loop: ""
+    child_skills: []
+    inputs: []
+    outputs: []
+    required_artifacts: []
+    gates: []
+    evidence_outputs: []
+    human_decisions: []
+    retry_or_reentry: ""
+edges:
+  - from: NODE-001
+    to: NODE-002
+    condition: ""
+    rationale: ""
+trace:
+  derives_from: []
+  satisfies: []
+  verifies: []
+risks: []
+approval:
+  required_by: ""
+  state: pending

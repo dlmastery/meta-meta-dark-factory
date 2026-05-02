@@ -1,0 +1,52 @@
+id: RFG-VALIDATION-001
+name: "Validation refinery gate fixture"
+status: pass
+scope:
+  work_items:
+    - WL-VALIDATION-001
+  artifacts:
+    - ART-VALIDATION-001
+  code_changes: []
+  release_items: []
+required_checks:
+  attractor_record: pass
+  control_graph: pass
+  work_ledger: pass
+  build: not_applicable
+  automated_tests: not_applicable
+  static_analysis: not_applicable
+  security: not_applicable
+  accessibility: not_applicable
+  performance_reliability: not_applicable
+  holdout_scenarios: not_applicable
+  transfer_tests: not_applicable
+  traceability: pass
+  expert_rubrics: pass
+  handoff_replay: not_applicable
+thresholds:
+  governance_percent: 98
+  expert_minimum_percent: 96
+  mandatory_traceability_percent: 100
+  critical_security_findings_allowed: 0
+evidence:
+  test_reports:
+    - DFMS hardening checks complete
+  rubric_scorecards:
+    - EVD-RUBRIC-PANEL-VALIDATION
+  trace_reports:
+    - TRACE-VALIDATION-001
+  holdout_reports: []
+  transfer_test_reports: []
+  review_comments: []
+  certificates:
+    - CERT-VALIDATION-001
+failed_checks: []
+required_fixes: []
+residual_risks:
+  - "Fixture proves structure only."
+human_decision:
+  required: false
+  approver: ""
+  decision: pending
+verdict_rationale: "Positive fixture for a structurally complete patch-level refinery gate."
+next_action: "Use real project evidence for production gates."

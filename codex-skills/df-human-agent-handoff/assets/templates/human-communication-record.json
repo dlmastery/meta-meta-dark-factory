@@ -1,0 +1,41 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+    "strict_compliance": "Mandatory. Every claim must be project-specific, evidence-backed, trace-linked, reviewer-challenged, and free of unsupported invention.",
+    "missing_evidence_rule": "If evidence is missing, mark it as an assumption, risk, open question, or failure."
+  },
+  "id": "COM-000",
+  "type": "async_review|clarification|taste_gate|confidence_delegation|disagreement|approval|risk_acceptance",
+  "status": "open|incorporated|deferred|escalated|closed",
+  "source": {
+    "actor": "",
+    "reference": "",
+    "at": ""
+  },
+  "summary": "",
+  "classification": "",
+  "confidence": {
+    "level": "high|medium|low",
+    "reason": ""
+  },
+  "links": {
+    "requirements": [],
+    "artifacts": [],
+    "code": [],
+    "tests": [],
+    "control_graph_nodes": [],
+    "work_ledger_items": [],
+    "refinery_gates": []
+  },
+  "decision": {
+    "required": false,
+    "owner": "",
+    "decision": "pending",
+    "rationale": ""
+  },
+  "incorporation": {
+    "action": "",
+    "verification": "",
+    "residual_risk": ""
+  }
+}

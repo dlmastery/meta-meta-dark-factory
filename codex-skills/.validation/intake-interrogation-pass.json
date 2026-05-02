@@ -1,0 +1,121 @@
+{
+  "id": "ITR-VALIDATION-001",
+  "status": "accepted",
+  "threshold_percent": 96,
+  "source": {
+    "kind": "validation-fixture",
+    "reference": "pass19"
+  },
+  "rounds": [
+    {"round": "context", "questions": ["What is the goal?"], "answers": ["ANS-ROOT-001"]},
+    {"round": "outcome", "questions": ["What proves success?"], "answers": ["ANS-VAL-001"]},
+    {"round": "constraint", "questions": ["What constraints apply?"], "answers": ["ANS-VAL-002"]},
+    {"round": "scenario", "questions": ["What scenarios prove behavior?"], "answers": ["ANS-VAL-001"]},
+    {"round": "operations", "questions": ["Who owns operation?"], "answers": ["ANS-INT-001"]},
+    {"round": "contradiction", "questions": ["What conflicts remain?"], "answers": ["ANS-INT-002"]},
+    {"round": "approval", "questions": ["Can this proceed?"], "answers": ["ANS-ROOT-001"]}
+  ],
+  "answers": [
+    {
+      "answer_id": "ANS-ROOT-001",
+      "source_reference": "pass19:user",
+      "summary": "The factory must convert raw intent into a recursively decomposed, validated, traceable spec.",
+      "confidence": "high",
+      "owner": "human-owner",
+      "links": {
+        "requirements": ["REQ-SPEC-001"],
+        "scenarios": ["TST-SPEC-001"],
+        "risks": [],
+        "artifacts": ["SDR-VALIDATION-001"],
+        "work_ledger_items": ["WL-SPEC-001"],
+        "spec_decomposition_nodes": ["SDN-ROOT"]
+      },
+      "revalidation_trigger": "Goal changes or benchmark becomes product-specific."
+    },
+    {
+      "answer_id": "ANS-INT-001",
+      "source_reference": "pass19:user",
+      "summary": "Each branch must be interviewed for intent, users, behavior, data, NFRs, interfaces, exceptions, contradictions, and approval.",
+      "confidence": "high",
+      "owner": "requirements-lead",
+      "links": {
+        "requirements": ["REQ-SPEC-001"],
+        "scenarios": ["TST-SPEC-001"],
+        "risks": [],
+        "artifacts": ["SDR-VALIDATION-001"],
+        "work_ledger_items": ["WL-SPEC-001"],
+        "spec_decomposition_nodes": ["SDN-CAP-INTERVIEW", "SDN-LEAF-ANSWERS"]
+      },
+      "revalidation_trigger": "A branch lacks answer IDs."
+    },
+    {
+      "answer_id": "ANS-INT-002",
+      "source_reference": "pass19:user",
+      "summary": "Contradictions must be resolved, deferred with owner, or escalated before requirement freeze.",
+      "confidence": "high",
+      "owner": "requirements-lead",
+      "links": {
+        "requirements": ["REQ-SPEC-001"],
+        "scenarios": ["TST-SPEC-001"],
+        "risks": [],
+        "artifacts": ["SDR-VALIDATION-001"],
+        "work_ledger_items": ["WL-SPEC-001"],
+        "spec_decomposition_nodes": ["SDN-LEAF-CONTRADICTIONS"]
+      },
+      "revalidation_trigger": "New conflicting answer appears."
+    },
+    {
+      "answer_id": "ANS-VAL-001",
+      "source_reference": "pass19:user",
+      "summary": "Every leaf must be atomic and independently testable.",
+      "confidence": "high",
+      "owner": "verification-lead",
+      "links": {
+        "requirements": ["REQ-SPEC-002"],
+        "scenarios": ["TST-SPEC-002"],
+        "risks": [],
+        "artifacts": ["SDR-VALIDATION-001"],
+        "work_ledger_items": ["WL-SPEC-001"],
+        "spec_decomposition_nodes": ["SDN-CAP-VALIDATE", "SDN-LEAF-ATOMIC"]
+      },
+      "revalidation_trigger": "A leaf contains multiple behaviors or validation paths."
+    },
+    {
+      "answer_id": "ANS-VAL-002",
+      "source_reference": "pass19:user",
+      "summary": "Every leaf must trace to requirement, test, control graph node, work ledger item, and refinery gate.",
+      "confidence": "high",
+      "owner": "verification-lead",
+      "links": {
+        "requirements": ["REQ-SPEC-002"],
+        "scenarios": ["TST-SPEC-002"],
+        "risks": [],
+        "artifacts": ["SDR-VALIDATION-001"],
+        "work_ledger_items": ["WL-SPEC-001"],
+        "spec_decomposition_nodes": ["SDN-LEAF-TRACE"]
+      },
+      "revalidation_trigger": "Strict trace validation fails."
+    }
+  ],
+  "scores": {
+    "goal_clarity": 4,
+    "scope": 4,
+    "functional_completeness": 4,
+    "nonfunctional_completeness": 4,
+    "security_privacy_compliance": 4,
+    "operations_handoff": 4,
+    "scenario_readiness": 4,
+    "contradiction_resolution": 4,
+    "owner_approval": 4,
+    "traceability_readiness": 4
+  },
+  "contradictions": [],
+  "assumptions": [],
+  "deferred_questions": [],
+  "approval": {
+    "required": true,
+    "approver": "human-owner",
+    "decision": "approved",
+    "at": "2026-04-24T14:00:00-07:00"
+  }
+}

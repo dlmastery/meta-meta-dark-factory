@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Northstar Daily</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <div id="app" class="shell">
+      <aside class="side-panel" aria-label="Workspace navigation">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">N</div>
+          <div>
+            <p class="eyebrow">Northstar Daily</p>
+            <h1>Today, then better.</h1>
+          </div>
+        </div>
+        <nav class="nav" aria-label="Primary">
+          <button class="nav-button active" data-view="today" type="button" aria-pressed="true">Today</button>
+          <button class="nav-button" data-view="plan" type="button" aria-pressed="false">Plan</button>
+          <button class="nav-button" data-view="habits" type="button" aria-pressed="false">Habits</button>
+          <button class="nav-button" data-view="focus" type="button" aria-pressed="false">Focus</button>
+          <button class="nav-button" data-view="review" type="button" aria-pressed="false">Review</button>
+        </nav>
+        <section class="coach-card" aria-labelledby="coach-title">
+          <p class="eyebrow" id="coach-title">Daily ritual</p>
+          <ol class="ritual-list">
+            <li>Reflect</li>
+            <li>Choose</li>
+            <li>Timebox</li>
+            <li>Focus</li>
+            <li>Shutdown</li>
+          </ol>
+        </section>
+      </aside>
+
+      <main id="main" class="workspace" tabindex="-1">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow" id="current-date"></p>
+            <h2 id="view-title">Today</h2>
+          </div>
+          <form id="quick-add-form" class="quick-add" autocomplete="off">
+            <label class="visually-hidden" for="quick-add-input">Quick add task or habit</label>
+            <input id="quick-add-input" name="quickAdd" type="text" placeholder="Add: write brief p1 today 30m #work">
+            <button type="submit">Add</button>
+          </form>
+        </header>
+
+        <section class="metrics-grid" aria-label="Daily metrics" aria-live="polite">
+          <article class="metric-card">
+            <span class="metric-label">Planned</span>
+            <strong id="metric-planned">0h</strong>
+            <span id="metric-capacity">0 percent of capacity</span>
+          </article>
+          <article class="metric-card">
+            <span class="metric-label">Completion</span>
+            <strong id="metric-completion">0%</strong>
+            <span id="metric-completion-detail">0 of 0 done</span>
+          </article>
+          <article class="metric-card">
+            <span class="metric-label">Habit health</span>
+            <strong id="metric-habits">0%</strong>
+            <span id="metric-habits-detail">0 checked today</span>
+          </article>
+          <article class="metric-card accent">
+            <span class="metric-label">Next best action</span>
+            <strong id="metric-next">Plan</strong>
+            <span id="metric-next-detail">No overload detected</span>
+          </article>
+        </section>
+
+        <section id="view-today" class="view active" aria-labelledby="today-heading">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Command center</p>
+              <h3 id="today-heading">Now list</h3>
+            </div>
+            <div class="segmented" role="group" aria-label="Task filter">
+              <button class="segment active" data-filter="today" type="button" aria-pressed="true">Today</button>
+              <button class="segment" data-filter="upcoming" type="button" aria-pressed="false">Upcoming</button>
+              <button class="segment" data-filter="inbox" type="button" aria-pressed="false">Inbox</button>
+            </div>
+          </div>
+          <div class="two-column">
+            <section class="panel" aria-labelledby="tasks-heading">
+              <h4 id="tasks-heading">Tasks</h4>
+              <div id="task-list" class="task-list"></div>
+            </section>
+            <section class="panel" aria-labelledby="habits-heading">
+              <h4 id="habits-heading">Habit prompts</h4>
+              <div id="habit-strip" class="habit-strip"></div>
+            </section>
+          </div>
+        </section>
+
+        <section id="view-plan" class="view" aria-labelledby="plan-heading">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Daily planning</p>
+              <h3 id="plan-heading">A realistic day</h3>
+            </div>
+            <button id="rebalance-plan" class="secondary-button" type="button">Rebalance</button>
+          </div>
+          <div class="plan-grid">
+            <section class="panel" aria-labelledby="timeline-heading">
+              <h4 id="timeline-heading">Timeboxed sequence</h4>
+              <div id="timeline" class="timeline"></div>
+            </section>
+            <section class="panel" aria-labelledby="matrix-heading">
+              <h4 id="matrix-heading">Priority matrix</h4>
+              <div id="matrix" class="matrix"></div>
+            </section>
+            <section class="panel plan-audit-panel" aria-labelledby="plan-audit-heading">
+              <h4 id="plan-audit-heading">Plan audit</h4>
+              <div id="plan-audit" class="audit-list"></div>
+            </section>
+          </div>
+        </section>
+
+        <section id="view-habits" class="view" aria-labelledby="habits-view-heading">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Behavior design</p>
+              <h3 id="habits-view-heading">Tiny actions, visible momentum</h3>
+            </div>
+            <button id="add-sample-habit" class="secondary-button" type="button">Add tiny habit</button>
+          </div>
+          <div id="habit-board" class="habit-board"></div>
+          <section class="panel habit-insight-panel" aria-labelledby="habit-insight-heading">
+            <h4 id="habit-insight-heading">Friction insight</h4>
+            <div id="habit-insight" class="audit-list"></div>
+          </section>
+        </section>
+
+        <section id="view-focus" class="view" aria-labelledby="focus-heading">
+          <div class="focus-layout">
+            <section class="focus-card" aria-labelledby="focus-heading">
+              <p class="eyebrow">Focus mode</p>
+              <h3 id="focus-heading">Single lane</h3>
+              <p id="focus-task-title" class="focus-title">Choose a task to begin.</p>
+              <div class="focus-ring" aria-label="Focus progress">
+                <span id="focus-minutes">25</span>
+                <small>minutes</small>
+              </div>
+              <div class="focus-controls">
+                <button id="start-focus" type="button">Start</button>
+                <button id="complete-focus" class="secondary-button" type="button">Complete</button>
+              </div>
+            </section>
+            <section class="panel" aria-labelledby="focus-queue-heading">
+              <h4 id="focus-queue-heading">Queue</h4>
+              <div id="focus-queue" class="task-list compact"></div>
+            </section>
+          </div>
+        </section>
+
+        <section id="view-review" class="view" aria-labelledby="review-heading">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Shutdown and learning</p>
+              <h3 id="review-heading">Close the loop</h3>
+            </div>
+            <button id="export-state" class="secondary-button" type="button">Export</button>
+          </div>
+          <div class="review-grid">
+            <section class="panel">
+              <h4>Wins and misses</h4>
+              <label class="visually-hidden" for="review-note">Review note</label>
+              <textarea id="review-note" rows="6" placeholder="What mattered today? What should tomorrow know?"></textarea>
+              <button id="save-review" type="button">Save review</button>
+            </section>
+            <section class="panel">
+              <h4>History</h4>
+              <div id="review-history" class="review-history"></div>
+            </section>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>

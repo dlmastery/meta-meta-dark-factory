@@ -1,0 +1,102 @@
+{
+  "record_id": "ATTR-PASS31-001",
+  "created_on": "2026-04-25",
+  "source_signals": [
+    "Human owner reframed DFMS as replacing outsourcing firms such as TCS or Infosys with a dark-factory agent swarm",
+    "Human owner required client check-ins, token budget SWAGs, approvals, change management, and iterative delivery",
+    "Prior hardening focused on artifact evidence but did not fully encode the client/vendor engagement layer"
+  ],
+  "attractor_state": "stable",
+  "goal": "Make DFMS an outsourcing-grade client/dark-factory engagement model with governed token budgets, checkpoints, iteration approvals, and change-control gates.",
+  "layer_map": {
+    "product_specific": [
+      "No product-specific behavior is introduced; this hardens all governed DFMS engagements."
+    ],
+    "factory_reusable": [
+      "Every governed run must establish client owner, delivery owner, rough token SWAG, checkpoint cadence, iteration approvals, and change-control reapproval triggers."
+    ],
+    "meta_meta_governance": [
+      "Pass 31 is governed by Attractor, control graph, work ledger, refinery gate, and hardening-runner evidence."
+    ]
+  },
+  "control_plane_links": {
+    "control_graph": "CG-PASS31-001",
+    "work_ledger": "WL-PASS31-001",
+    "refinery_gate": "RFG-PASS31-001"
+  },
+  "selected_mode": "skill-system-revision",
+  "selected_skills": [
+    {
+      "skill": "df-meta-attractor",
+      "reason": "encode the meta-meta engagement goal and token budget requirement",
+      "load_now": true
+    },
+    {
+      "skill": "dark-factory-orchestrator",
+      "reason": "block material factory work without engagement governance",
+      "load_now": true
+    },
+    {
+      "skill": "df-governance-mayor",
+      "reason": "own client checkpoints, rough token SWAGs, iterations, and change approvals",
+      "load_now": true
+    },
+    {
+      "skill": "df-human-agent-handoff",
+      "reason": "surface token and change-state during client/agent handoffs",
+      "load_now": true
+    },
+    {
+      "skill": "df-feedback-learning",
+      "reason": "turn iterative feedback into approved change requests with token impact",
+      "load_now": true
+    }
+  ],
+  "gates": [
+    "engagement governance record validates",
+    "engagement template is rejected",
+    "missing token budget approval rejects",
+    "incomplete change-control impact fields reject",
+    "system design and lifecycle include engagement governance and token budget checkpoints",
+    "pass 31 merged records validate"
+  ],
+  "node_contract": {
+    "what": "Encode outsourcing-grade engagement governance and token-budget approval into DFMS.",
+    "why": "The dark factory must feel safer than a human outsourcing firm by making scope, budget, checkpoints, iteration, and change control explicit.",
+    "how": "Add engagement governance template, validator, fixture, runner checks, skill instructions, and design/lifecycle updates.",
+    "where": "df-governance-mayor, df-meta-attractor, dark-factory-orchestrator, df-human-agent-handoff, df-feedback-learning, design docs, and validation suite.",
+    "when": "Before future governed DFMS runs spend material tokens or start iterations.",
+    "who": "Codex as responsible fixer; human owner as client/product owner in the engagement model.",
+    "how_good": "Approved engagement fixture passes while draft/template, missing budget approval, and incomplete change-control fixtures reject."
+  },
+  "expert_debate": {
+    "system_theorist": "The dark factory needs a client/vendor control loop above artifact generation so token spend and iteration do not become uncontrolled recursion.",
+    "requirements_governance_architect": "An outsourcing-grade run needs engagement charter, checkpoint cadence, token budget approval, iteration approvals, and change-request impact analysis.",
+    "verification_safety_critic": "The requirement must be executable; a validator must reject unapproved budgets, missing checkpoint approvals, and incomplete change-control fields.",
+    "synthesis": "Install engagement governance as a first-class governance gate before material DFMS execution."
+  },
+  "human_decisions": [
+    "Human owner clarified the meta-meta goal and required token budget negotiation plus approvals for change management and iterations."
+  ],
+  "assumptions": [
+    "Token budgets are rough SWAGs, not precise billing estimates.",
+    "Approval timestamps in validation fixtures are evidence placeholders for the validator, not real external signatures."
+  ],
+  "risks": [
+    "Validator proves structure and approval fields, not actual client satisfaction.",
+    "Runtime UI for live token tracking remains future work."
+  ],
+  "evidence_commitments": [
+    "engagement governance pass fixture validates",
+    "engagement governance template rejects",
+    "missing token budget approval rejects",
+    "incomplete change-control fields reject",
+    "installed and workspace governance files remain in sync"
+  ],
+  "anti_overfit_checks": [
+    "No todo-app-specific rule is introduced.",
+    "The model applies to any governed greenfield, brownfield, artifact, or handoff engagement."
+  ],
+  "verdict": "pass",
+  "next_safe_action": "Require engagement governance validation before future material governed DFMS work."
+}

@@ -1,0 +1,96 @@
+{
+  "record_id": "ATTR-PASS27-001",
+  "created_on": "2026-04-25",
+  "source_signals": [
+    "User requested Ralph loop pass 27 super critic review",
+    "Pass 26 introduced production handoff and outage drill validators",
+    "Pass 26 residual risk noted missing cross-file bundle validation between production handoff and referenced outage drills"
+  ],
+  "attractor_state": "stable",
+  "goal": "Close the production handoff bundle-proof gap so outage drill references cannot pass as unverified strings.",
+  "layer_map": {
+    "product_specific": [
+      "No example-app behavior is introduced; this validates reusable release handoff evidence."
+    ],
+    "factory_reusable": [
+      "Production handoffs must be validated with the actual outage drill records they reference."
+    ],
+    "meta_meta_governance": [
+      "Pass 27 is governed by Attractor, control graph, work ledger, refinery gate, and hardening-runner evidence."
+    ]
+  },
+  "control_plane_links": {
+    "control_graph": "CG-PASS27-001",
+    "work_ledger": "WL-PASS27-001",
+    "refinery_gate": "RFG-PASS27-001"
+  },
+  "selected_mode": "skill-system-revision",
+  "selected_skills": [
+    {
+      "skill": "df-meta-attractor",
+      "reason": "govern this as a meta-meta hardening pass",
+      "load_now": true
+    },
+    {
+      "skill": "df-production-sre-handoff",
+      "reason": "harden production handoff to outage drill bundle validation",
+      "load_now": true
+    },
+    {
+      "skill": "df-traceability-evidence",
+      "reason": "make referenced operational records bidirectionally provable",
+      "load_now": true
+    },
+    {
+      "skill": "df-quality-refinery",
+      "reason": "add regression checks for bundle mismatch and unbundled handoff evidence",
+      "load_now": true
+    }
+  ],
+  "gates": [
+    "production handoff validation requires --outage-drill bundle evidence",
+    "referenced outage drill IDs must be provided exactly",
+    "outage drill release, refinery gate, operator, approver, and runbook replay evidence must match the production handoff",
+    "unbundled production handoff evidence is rejected",
+    "bad outage drill bundle mismatch is rejected",
+    "pass 27 merged records validate"
+  ],
+  "node_contract": {
+    "what": "Run pass 27 critic review and harden production handoff bundle validation.",
+    "why": "A string reference to an outage drill is not proof that the drill exists or matches the release being handed off.",
+    "how": "Add --outage-drill bundle mode, compare referenced drill IDs and key handoff fields, add negative fixtures, and validate the suite.",
+    "where": "df-production-sre-handoff installed skill, workspace bundle, validation runner, and project-book records.",
+    "when": "Before future production handoffs are accepted as operator-readiness evidence.",
+    "who": "Codex as responsible fixer; human owner as Ralph-loop driver and production approver.",
+    "how_good": "Complete bundled handoff passes while unbundled or mismatched drill evidence rejects."
+  },
+  "expert_debate": {
+    "system_theorist": "The release handoff and outage drill are coupled records; validating them independently leaves a broken evidence edge.",
+    "requirements_governance_architect": "Operational handoff traceability must bind release, gate, operator, approver, and replay evidence across files.",
+    "verification_safety_critic": "An ID string can spoof evidence unless the validator loads and checks the referenced drill file.",
+    "synthesis": "Require bundle mode for production handoffs and add regression checks for unbundled and mismatched outage drill evidence."
+  },
+  "human_decisions": [
+    "Human owner requested pass 27 and asked to fix any new findings."
+  ],
+  "assumptions": [
+    "Pass 27 is a patch-level bundle-validation hardening pass, not a full live outage game day."
+  ],
+  "risks": [
+    "Bundle validation proves file consistency, not operator performance under real incident pressure.",
+    "Full project simulation and runtime dashboard remain future work."
+  ],
+  "evidence_commitments": [
+    "bundled production handoff pass fixture is accepted",
+    "standalone outage drill pass fixture remains accepted",
+    "unbundled production handoff fixture is rejected",
+    "bad production outage-drill bundle mismatch fixture is rejected",
+    "installed and workspace production handoff validators remain in sync"
+  ],
+  "anti_overfit_checks": [
+    "No todo-specific rule is introduced.",
+    "Bundle checks apply to any governed production handoff that references outage drills."
+  ],
+  "verdict": "pass",
+  "next_safe_action": "Validate future production handoffs in bundle mode with every referenced outage drill record."
+}

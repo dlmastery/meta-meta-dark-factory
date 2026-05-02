@@ -1,0 +1,94 @@
+{
+  "record_id": "ATTR-PASS21-001",
+  "created_on": "2026-04-24",
+  "source_signals": [
+    "User requested Ralph loop pass 21 critic review",
+    "Pass 20 closed package, skipped-level, and disconnected-tree bypasses",
+    "Original transcript requires governed waivers, recursive customer interrogation, bidirectional traceability, repeated expert review, and no template-as-proof acceptance"
+  ],
+  "attractor_state": "stable",
+  "goal": "Find and close remaining pass-through paths where governed DFMS records could pass without real waiver discipline, threshold integrity, or exact answer-node reciprocity.",
+  "layer_map": {
+    "product_specific": [
+      "No application product scope; this is a DFMS skill-system hardening pass."
+    ],
+    "factory_reusable": [
+      "Waiver completeness, threshold integrity, and answer-node reciprocity must apply to future greenfield and brownfield runs."
+    ],
+    "meta_meta_governance": [
+      "Meta-attractor, control graph, work ledger, and refinery gate records govern this pass."
+    ]
+  },
+  "control_plane_links": {
+    "control_graph": "CG-PASS21-001",
+    "work_ledger": "WL-PASS21-001",
+    "refinery_gate": "RFG-PASS21-001"
+  },
+  "selected_mode": "skill-system-revision",
+  "selected_skills": [
+    {
+      "skill": "df-meta-attractor",
+      "reason": "govern the pass as a meta-meta revision and prevent bypass of the control plane",
+      "load_now": true
+    },
+    {
+      "skill": "df-intake-spec-lab",
+      "reason": "harden interrogation and recursive decomposition validation",
+      "load_now": true
+    },
+    {
+      "skill": "df-traceability-evidence",
+      "reason": "require complete waivers and governed trace proof",
+      "load_now": true
+    },
+    {
+      "skill": "df-quality-refinery",
+      "reason": "run critic review, record fixes, and gate acceptance",
+      "load_now": true
+    }
+  ],
+  "gates": [
+    "low completeness thresholds are rejected without a complete threshold-lowering waiver",
+    "all waivers require owner, reason, expiry or revalidation trigger, and residual risk",
+    "each cited decomposition node and customer answer must link to each other exactly",
+    "full DFMS hardening runner passes after live and workspace validators are synced",
+    "merged control-plane records validate for this pass"
+  ],
+  "node_contract": {
+    "what": "Close remaining enforceable bypasses discovered in Ralph loop pass 21.",
+    "why": "The original transcript requires serious, auditable, human-grade controls rather than checklist-only assurance.",
+    "how": "Run expert critique, patch validators, sync live and workspace skills, and prove positive and negative paths.",
+    "where": "Installed Codex skills plus the shareable codex-skills workspace bundle.",
+    "when": "Before any future DFMS project-book simulation claims these gates.",
+    "who": "Codex as responsible fixer, with the human owner driving the Ralph loop.",
+    "how_good": "Full hardening runner passes, merged records validate, and residual risks remain explicit."
+  },
+  "expert_debate": {
+    "system_theorist": "The remaining failure modes were governance bypasses, not ordinary syntax bugs.",
+    "requirements_governance_architect": "Waivers and thresholds must behave like controlled deviations with owners and revalidation.",
+    "verification_safety_critic": "Bidirectional answer-node trace must be exact and backed by negative fixtures.",
+    "synthesis": "Patch validators where structure can be enforced and keep semantic truth as a recorded residual risk."
+  },
+  "human_decisions": [
+    "Human owner requested another Ralph-loop critic pass and authorized the hardening direction."
+  ],
+  "assumptions": [
+    "Pass 21 is a skill-system hardening pass, not a full greenfield or brownfield simulation."
+  ],
+  "risks": [
+    "Validators still prove structural integrity, not semantic truth."
+  ],
+  "evidence_commitments": [
+    "low-threshold decomposition fixture is rejected",
+    "low-threshold intake fixture is rejected",
+    "incomplete intake waiver fixture is rejected",
+    "incomplete waiver decomposition fixture is rejected",
+    "installed and workspace bundles remain in sync"
+  ],
+  "anti_overfit_checks": [
+    "No todo-app-specific rule is introduced.",
+    "Checks apply to generic governed DFMS records."
+  ],
+  "verdict": "pass",
+  "next_safe_action": "Use the hardened waiver, threshold, and reciprocal-link validators in the next full project-book simulation."
+}

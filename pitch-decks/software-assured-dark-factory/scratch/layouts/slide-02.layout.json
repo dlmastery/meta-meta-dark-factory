@@ -1,0 +1,2935 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/srqdas",
+    "id": "srqdas",
+    "slide": 2,
+    "layoutId": "39df3ad4-e207-4cff-a7b3-0934322c7183",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "9c364795-fe59-472e-ba8a-a667cb58489e",
+    "masterLayoutName": "Master",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "39df3ad4-e207-4cff-a7b3-0934322c7183",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "9c364795-fe59-472e-ba8a-a667cb58489e",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "9c364795-fe59-472e-ba8a-a667cb58489e",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/uxc3ylc7",
+      "id": "1",
+      "name": "background",
+      "bbox": [
+        0,
+        0,
+        1920,
+        1080
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#09100F",
+      "lineColor": "#09100F",
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1kre1w7m",
+      "id": "2",
+      "name": "tension-eyebrow",
+      "bbox": [
+        88,
+        64,
+        1744,
+        22
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.0.0"
+      },
+      "geometry": "rect",
+      "text": "THE PROBLEM",
+      "textPreview": "THE PROBLEM",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "fontSize": 21,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "THE PROBLEM"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "THE PROBLEM",
+          "runs": [
+            {
+              "index": 1,
+              "text": "THE PROBLEM",
+              "fontSize": 21,
+              "color": "#9AF2C8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/c3ylc7u5",
+      "id": "3",
+      "name": "tension-title",
+      "bbox": [
+        88,
+        98,
+        1292,
+        110
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.0.1"
+      },
+      "geometry": "rect",
+      "text": "Enterprise buyers are being asked to trust speed without assurance.",
+      "textPreview": "Enterprise buyers are being asked to trust speed without assurance.",
+      "resolvedFontSize": 55,
+      "resolvedTextStyle": {
+        "fontSize": 55,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Enterprise buyers are being asked to trust speed without"
+          },
+          {
+            "index": 2,
+            "text": "assurance."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Enterprise buyers are being asked to trust speed without assurance.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Enterprise buyers are being asked to trust speed without assurance.",
+              "fontSize": 55,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/j6tovaho",
+      "id": "4",
+      "name": "tension-subtitle",
+      "bbox": [
+        88,
+        222,
+        1268,
+        26
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.0.2"
+      },
+      "geometry": "rect",
+      "text": "Classic outsourcing is slow and opaque. AI coding is fast but thin on evidence. Regulated teams need the missing middle.",
+      "textPreview": "Classic outsourcing is slow and opaque. AI coding is fast but thin on evidence. Regulated teams need the missing middle.",
+      "resolvedFontSize": 26,
+      "resolvedTextStyle": {
+        "fontSize": 26,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Classic outsourcing is slow and opaque. AI coding is fast but thin on evidence. Regulated teams need the missing middle."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Classic outsourcing is slow and opaque. AI coding is fast but thin on evidence. Regulated teams need the missing middle.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Classic outsourcing is slow and opaque. AI coding is fast but thin on evidence. Regulated teams need the missing middle.",
+              "fontSize": 26,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ulwval87",
+      "id": "5",
+      "name": "metric-value-human-sdlc-checkpoints-arrive-late",
+      "bbox": [
+        88,
+        416,
+        754,
+        70
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.0.0"
+      },
+      "geometry": "rect",
+      "text": "slow",
+      "textPreview": "slow",
+      "resolvedFontSize": 70,
+      "resolvedTextStyle": {
+        "fontSize": 70,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "slow"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "slow",
+          "runs": [
+            {
+              "index": 1,
+              "text": "slow",
+              "fontSize": 70,
+              "color": "#F2B84B",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1cfa9w3m",
+      "id": "6",
+      "name": "metric-label-human-sdlc-checkpoints-arrive-late",
+      "bbox": [
+        88,
+        492,
+        304,
+        22
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.0.1"
+      },
+      "geometry": "rect",
+      "text": "human SDLC checkpoints arrive late",
+      "textPreview": "human SDLC checkpoints arrive late",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "fontSize": 21,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "human SDLC checkpoints arrive"
+          },
+          {
+            "index": 2,
+            "text": "late"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "human SDLC checkpoints arrive late",
+          "runs": [
+            {
+              "index": 1,
+              "text": "human SDLC checkpoints arrive late",
+              "fontSize": 21,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/crmhk3q5",
+      "id": "7",
+      "name": "metric-value-outsourcing-status-is-often-summarized-not-proven",
+      "bbox": [
+        88,
+        538,
+        754,
+        70
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.1.0"
+      },
+      "geometry": "rect",
+      "text": "opaque",
+      "textPreview": "opaque",
+      "resolvedFontSize": 70,
+      "resolvedTextStyle": {
+        "fontSize": 70,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "opaque"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "opaque",
+          "runs": [
+            {
+              "index": 1,
+              "text": "opaque",
+              "fontSize": 70,
+              "color": "#F26464",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/j2t83itg",
+      "id": "8",
+      "name": "metric-label-outsourcing-status-is-often-summarized-not-proven",
+      "bbox": [
+        88,
+        614,
+        224,
+        42
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.1.1"
+      },
+      "geometry": "rect",
+      "text": "outsourcing status is often summarized, not proven",
+      "textPreview": "outsourcing status is often summarized, not proven",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "fontSize": 21,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "outsourcing status is"
+          },
+          {
+            "index": 2,
+            "text": "often summarized, not"
+          },
+          {
+            "index": 3,
+            "text": "proven"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "outsourcing status is often summarized, not proven",
+          "runs": [
+            {
+              "index": 1,
+              "text": "outsourcing status is often summarized, not proven",
+              "fontSize": 21,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qh0fepkz",
+      "id": "9",
+      "name": "metric-value-ai-output-often-lacks-traceable-acceptance-evidence",
+      "bbox": [
+        88,
+        680,
+        754,
+        70
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.2.0"
+      },
+      "geometry": "rect",
+      "text": "fragile",
+      "textPreview": "fragile",
+      "resolvedFontSize": 70,
+      "resolvedTextStyle": {
+        "fontSize": 70,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "fragile"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "fragile",
+          "runs": [
+            {
+              "index": 1,
+              "text": "fragile",
+              "fontSize": 70,
+              "color": "#2DD4BF",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/s36hcrmh",
+      "id": "10",
+      "name": "metric-label-ai-output-often-lacks-traceable-acceptance-evidence",
+      "bbox": [
+        88,
+        758,
+        260,
+        64
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.2.1"
+      },
+      "geometry": "rect",
+      "text": "AI output often lacks traceable acceptance evidence",
+      "textPreview": "AI output often lacks traceable acceptance evidence",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "fontSize": 21,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "AI output often lacks"
+          },
+          {
+            "index": 2,
+            "text": "traceable acceptance"
+          },
+          {
+            "index": 3,
+            "text": "evidence"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "AI output often lacks traceable acceptance evidence",
+          "runs": [
+            {
+              "index": 1,
+              "text": "AI output often lacks traceable acceptance evidence",
+              "fontSize": 21,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hoza1gvy",
+      "id": "11",
+      "name": "dot-the-buyer-s-real-question-is-not-can-it-code",
+      "bbox": [
+        912,
+        492,
+        13,
+        56
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.0.0"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#2DD4BF",
+      "lineColor": "#2DD4BF",
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/a1gvy90j",
+      "id": "12",
+      "name": "statement-title-the-buyer-s-real-question-is-not-can-it-code",
+      "bbox": [
+        946,
+        490,
+        886,
+        30
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.0.1.0"
+      },
+      "geometry": "rect",
+      "text": "The buyer's real question is not 'can it code?'",
+      "textPreview": "The buyer's real question is not 'can it code?'",
+      "resolvedFontSize": 29,
+      "resolvedTextStyle": {
+        "fontSize": 29,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "The buyer's real question is not 'can it code?'"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "The buyer's real question is not 'can it code?'",
+          "runs": [
+            {
+              "index": 1,
+              "text": "The buyer's real question is not 'can it code?'",
+              "fontSize": 29,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zidonyd0",
+      "id": "13",
+      "name": "statement-body-the-buyer-s-real-question-is-not-can-it-code",
+      "bbox": [
+        946,
+        524,
+        850,
+        22
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.0.1.1"
+      },
+      "geometry": "rect",
+      "text": "It is whether the delivery system can explain, prove, hand off, and keep improving the software.",
+      "textPreview": "It is whether the delivery system can explain, prove, hand off, and keep improving the software.",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "It is whether the delivery system can explain, prove, hand off, and keep improving the"
+          },
+          {
+            "index": 2,
+            "text": "software."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "It is whether the delivery system can explain, prove, hand off, and keep improving the software.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "It is whether the delivery system can explain, prove, hand off, and keep improving the software.",
+              "fontSize": 22,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/svu9knih",
+      "id": "14",
+      "name": "dot-the-vendor-s-real-question-is-not-did-the-model-answer",
+      "bbox": [
+        912,
+        580,
+        13,
+        56
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.1.0"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#46D17E",
+      "lineColor": "#46D17E",
+      "lineWidth": 0
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hgn29gr2",
+      "id": "15",
+      "name": "statement-title-the-vendor-s-real-question-is-not-did-the-model-answer",
+      "bbox": [
+        946,
+        578,
+        886,
+        30
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.1.1.0"
+      },
+      "geometry": "rect",
+      "text": "The vendor's real question is not 'did the model answer?'",
+      "textPreview": "The vendor's real question is not 'did the model answer?'",
+      "resolvedFontSize": 29,
+      "resolvedTextStyle": {
+        "fontSize": 29,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "The vendor's real question is not 'did the model answer?'"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "The vendor's real question is not 'did the model answer?'",
+          "runs": [
+            {
+              "index": 1,
+              "text": "The vendor's real question is not 'did the model answer?'",
+              "fontSize": 29,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ap4r65wj",
+      "id": "16",
+      "name": "statement-body-the-vendor-s-real-question-is-not-did-the-model-answer",
+      "bbox": [
+        946,
+        612,
+        802,
+        22
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.1.1.1"
+      },
+      "geometry": "rect",
+      "text": "It is whether every requirement, decision, artifact, test, and residual risk survived scrutiny.",
+      "textPreview": "It is whether every requirement, decision, artifact, test, and residual risk survived scrutiny.",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "It is whether every requirement, decision, artifact, test, and residual risk survived"
+          },
+          {
+            "index": 2,
+            "text": "scrutiny."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "It is whether every requirement, decision, artifact, test, and residual risk survived scrutiny.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "It is whether every requirement, decision, artifact, test, and residual risk survived scrutiny.",
+              "fontSize": 22,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/za1gvy90",
+      "id": "17",
+      "name": "dot-the-cost-center-changes-form",
+      "bbox": [
+        912,
+        668,
+        13,
+        56
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.2.0"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#F2B84B",
+      "lineColor": "#F2B84B",
+      "lineWidth": 0
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/sji5snel",
+      "id": "18",
+      "name": "statement-title-the-cost-center-changes-form",
+      "bbox": [
+        946,
+        666,
+        886,
+        30
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.2.1.0"
+      },
+      "geometry": "rect",
+      "text": "The cost center changes form.",
+      "textPreview": "The cost center changes form.",
+      "resolvedFontSize": 29,
+      "resolvedTextStyle": {
+        "fontSize": 29,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "The cost center changes form."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "The cost center changes form.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "The cost center changes form.",
+              "fontSize": 29,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/h4byhgn2",
+      "id": "19",
+      "name": "statement-body-the-cost-center-changes-form",
+      "bbox": [
+        946,
+        700,
+        914,
+        44
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.2.1.1"
+      },
+      "geometry": "rect",
+      "text": "Dollars become tokens, but scope, approvals, change control, and confidence still have to be managed.",
+      "textPreview": "Dollars become tokens, but scope, approvals, change control, and confidence still have to be managed.",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Dollars become tokens, but scope, approvals, change control, and confidence still have to be"
+          },
+          {
+            "index": 2,
+            "text": "managed."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Dollars become tokens, but scope, approvals, change control, and confidence still have to be managed.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Dollars become tokens, but scope, approvals, change control, and confidence still have to be managed.",
+              "fontSize": 22,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/psfil0rq",
+      "id": "20",
+      "name": "tension-footer",
+      "bbox": [
+        88,
+        990,
+        268,
+        28
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.2.0"
+      },
+      "geometry": "rect",
+      "text": "DFMS pitch deck | software assurance dark factory",
+      "textPreview": "DFMS pitch deck | software assurance dark factory",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "DFMS pitch deck | software assurance dark factory"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "DFMS pitch deck | software assurance dark factory",
+          "runs": [
+            {
+              "index": 1,
+              "text": "DFMS pitch deck | software assurance dark factory",
+              "fontSize": 13,
+              "color": "#6E7C74"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/w7mp0bi9",
+      "id": "21",
+      "name": "tension-page",
+      "bbox": [
+        1792,
+        998,
+        40,
+        12
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.2.1"
+      },
+      "geometry": "rect",
+      "text": "02",
+      "textPreview": "02",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "02"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "02",
+          "runs": [
+            {
+              "index": 1,
+              "text": "02",
+              "fontSize": 13,
+              "color": "#6E7C74",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "composeRuns": [
+    {
+      "index": 1,
+      "frame": {
+        "left": 0,
+        "top": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "baseUnit": 8,
+      "root": {
+        "path": "0",
+        "kind": "layers",
+        "name": "tension-root",
+        "requestedSize": {
+          "width": {
+            "mode": "fill",
+            "value": 1
+          },
+          "height": {
+            "mode": "fill",
+            "value": 1
+          }
+        },
+        "intrinsicSize": {
+          "width": 0,
+          "height": 0
+        },
+        "frame": {
+          "left": 0,
+          "top": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "children": [
+          {
+            "path": "0.0",
+            "kind": "shape",
+            "name": "background",
+            "requestedSize": {
+              "width": {
+                "mode": "fill",
+                "value": 1
+              },
+              "height": {
+                "mode": "fill",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 0,
+              "height": 0
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "snappedFrame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/uxc3ylc7",
+              "id": "1",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.1",
+            "kind": "column",
+            "name": "tension-content",
+            "requestedSize": {
+              "width": {
+                "mode": "fill",
+                "value": 1
+              },
+              "height": {
+                "mode": "fill",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 176,
+              "height": 392
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "children": [
+              {
+                "path": "0.1.0",
+                "kind": "column",
+                "name": "tension-title-stack",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "hug"
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 1291.49,
+                  "height": 183
+                },
+                "frame": {
+                  "left": 88,
+                  "top": 64,
+                  "width": 1744,
+                  "height": 183
+                },
+                "children": [
+                  {
+                    "path": "0.1.0.0",
+                    "kind": "text",
+                    "name": "tension-eyebrow",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 21
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 64,
+                      "width": 1744,
+                      "height": 21
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 64,
+                      "width": 1744,
+                      "height": 22
+                    },
+                    "children": [],
+                    "text": "THE PROBLEM",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/1kre1w7m",
+                      "id": "2",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.0.1",
+                    "kind": "text",
+                    "name": "tension-title",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "wrap",
+                        "max": 1500
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 1291.49,
+                      "height": 110
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 98,
+                      "width": 1291.49,
+                      "height": 110
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 98,
+                      "width": 1292,
+                      "height": 110
+                    },
+                    "children": [],
+                    "text": "Enterprise buyers are being asked to trust speed without assurance.",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/c3ylc7u5",
+                      "id": "3",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.0.2",
+                    "kind": "text",
+                    "name": "tension-subtitle",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "wrap",
+                        "max": 1330
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 1267.71,
+                      "height": 26
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 221,
+                      "width": 1267.71,
+                      "height": 26
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 222,
+                      "width": 1268,
+                      "height": 26
+                    },
+                    "children": [],
+                    "text": "Classic outsourcing is slow and opaque. AI coding is fast but thin on evidence. Regulated teams need the missing middle.",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/j6tovaho",
+                      "id": "4",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "gap": 13,
+                "effectiveGap": 13,
+                "justifyOffset": 0,
+                "align": "start",
+                "justify": "start",
+                "contentFrame": {
+                  "left": 88,
+                  "top": 64,
+                  "width": 1744,
+                  "height": 183
+                },
+                "items": [
+                  {
+                    "path": "0.1.0.0",
+                    "frame": {
+                      "left": 88,
+                      "top": 64,
+                      "width": 1744,
+                      "height": 21
+                    }
+                  },
+                  {
+                    "path": "0.1.0.1",
+                    "frame": {
+                      "left": 88,
+                      "top": 98,
+                      "width": 1291.49,
+                      "height": 110
+                    }
+                  },
+                  {
+                    "path": "0.1.0.2",
+                    "frame": {
+                      "left": 88,
+                      "top": 221,
+                      "width": 1267.71,
+                      "height": 26
+                    }
+                  }
+                ]
+              },
+              {
+                "path": "0.1.1",
+                "kind": "grid",
+                "name": "tension-grid",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "fill",
+                    "value": 1
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 70,
+                  "height": 480
+                },
+                "frame": {
+                  "left": 88,
+                  "top": 281,
+                  "width": 1744,
+                  "height": 675
+                },
+                "children": [
+                  {
+                    "path": "0.1.1.0",
+                    "kind": "column",
+                    "name": "tension-metrics",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 480
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 384
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 378,
+                      "width": 753.3,
+                      "height": 480
+                    },
+                    "children": [
+                      {
+                        "path": "0.1.1.0.0",
+                        "kind": "column",
+                        "name": "metric-human-sdlc-checkpoints-arrive-late",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 304.3,
+                          "height": 98
+                        },
+                        "frame": {
+                          "left": 88,
+                          "top": 415.5,
+                          "width": 753.3,
+                          "height": 98
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.0.0.0",
+                            "kind": "text",
+                            "name": "metric-value-human-sdlc-checkpoints-arrive-late",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 70
+                            },
+                            "frame": {
+                              "left": 88,
+                              "top": 415.5,
+                              "width": 753.3,
+                              "height": 70
+                            },
+                            "snappedFrame": {
+                              "left": 88,
+                              "top": 416,
+                              "width": 754,
+                              "height": 70
+                            },
+                            "children": [],
+                            "text": "slow",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/ulwval87",
+                              "id": "5",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.0.0.1",
+                            "kind": "text",
+                            "name": "metric-label-human-sdlc-checkpoints-arrive-late",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "wrap",
+                                "max": 320
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 304.3,
+                              "height": 21
+                            },
+                            "frame": {
+                              "left": 88,
+                              "top": 492.5,
+                              "width": 304.3,
+                              "height": 21
+                            },
+                            "snappedFrame": {
+                              "left": 88,
+                              "top": 492,
+                              "width": 304,
+                              "height": 22
+                            },
+                            "children": [],
+                            "text": "human SDLC checkpoints arrive late",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/1cfa9w3m",
+                              "id": "6",
+                              "kind": "shape"
+                            }
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 7,
+                        "effectiveGap": 7,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 88,
+                          "top": 415.5,
+                          "width": 753.3,
+                          "height": 98
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.0.0.0",
+                            "frame": {
+                              "left": 88,
+                              "top": 415.5,
+                              "width": 753.3,
+                              "height": 70
+                            }
+                          },
+                          {
+                            "path": "0.1.1.0.0.1",
+                            "frame": {
+                              "left": 88,
+                              "top": 492.5,
+                              "width": 304.3,
+                              "height": 21
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "path": "0.1.1.0.1",
+                        "kind": "column",
+                        "name": "metric-outsourcing-status-is-often-summarized-not-proven",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 224.55,
+                          "height": 119
+                        },
+                        "frame": {
+                          "left": 88,
+                          "top": 537.5,
+                          "width": 753.3,
+                          "height": 119
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.0.1.0",
+                            "kind": "text",
+                            "name": "metric-value-outsourcing-status-is-often-summarized-not-proven",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 70
+                            },
+                            "frame": {
+                              "left": 88,
+                              "top": 537.5,
+                              "width": 753.3,
+                              "height": 70
+                            },
+                            "snappedFrame": {
+                              "left": 88,
+                              "top": 538,
+                              "width": 754,
+                              "height": 70
+                            },
+                            "children": [],
+                            "text": "opaque",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/crmhk3q5",
+                              "id": "7",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.0.1.1",
+                            "kind": "text",
+                            "name": "metric-label-outsourcing-status-is-often-summarized-not-proven",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "wrap",
+                                "max": 320
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 224.55,
+                              "height": 42
+                            },
+                            "frame": {
+                              "left": 88,
+                              "top": 614.5,
+                              "width": 224.55,
+                              "height": 42
+                            },
+                            "snappedFrame": {
+                              "left": 88,
+                              "top": 614,
+                              "width": 224,
+                              "height": 42
+                            },
+                            "children": [],
+                            "text": "outsourcing status is often summarized, not proven",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/j2t83itg",
+                              "id": "8",
+                              "kind": "shape"
+                            }
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 7,
+                        "effectiveGap": 7,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 88,
+                          "top": 537.5,
+                          "width": 753.3,
+                          "height": 119
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.0.1.0",
+                            "frame": {
+                              "left": 88,
+                              "top": 537.5,
+                              "width": 753.3,
+                              "height": 70
+                            }
+                          },
+                          {
+                            "path": "0.1.1.0.1.1",
+                            "frame": {
+                              "left": 88,
+                              "top": 614.5,
+                              "width": 224.55,
+                              "height": 42
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "path": "0.1.1.0.2",
+                        "kind": "column",
+                        "name": "metric-ai-output-often-lacks-traceable-acceptance-evidence",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 260.93,
+                          "height": 119
+                        },
+                        "frame": {
+                          "left": 88,
+                          "top": 680.5,
+                          "width": 753.3,
+                          "height": 140
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.0.2.0",
+                            "kind": "text",
+                            "name": "metric-value-ai-output-often-lacks-traceable-acceptance-evidence",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 70
+                            },
+                            "frame": {
+                              "left": 88,
+                              "top": 680.5,
+                              "width": 753.3,
+                              "height": 70
+                            },
+                            "snappedFrame": {
+                              "left": 88,
+                              "top": 680,
+                              "width": 754,
+                              "height": 70
+                            },
+                            "children": [],
+                            "text": "fragile",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/qh0fepkz",
+                              "id": "9",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.0.2.1",
+                            "kind": "text",
+                            "name": "metric-label-ai-output-often-lacks-traceable-acceptance-evidence",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "wrap",
+                                "max": 320
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 260.93,
+                              "height": 42
+                            },
+                            "frame": {
+                              "left": 88,
+                              "top": 757.5,
+                              "width": 260.93,
+                              "height": 63
+                            },
+                            "snappedFrame": {
+                              "left": 88,
+                              "top": 758,
+                              "width": 260,
+                              "height": 64
+                            },
+                            "children": [],
+                            "text": "AI output often lacks traceable acceptance evidence",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/s36hcrmh",
+                              "id": "10",
+                              "kind": "shape"
+                            }
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 7,
+                        "effectiveGap": 7,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 88,
+                          "top": 680.5,
+                          "width": 753.3,
+                          "height": 140
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.0.2.0",
+                            "frame": {
+                              "left": 88,
+                              "top": 680.5,
+                              "width": 753.3,
+                              "height": 70
+                            }
+                          },
+                          {
+                            "path": "0.1.1.0.2.1",
+                            "frame": {
+                              "left": 88,
+                              "top": 757.5,
+                              "width": 260.93,
+                              "height": 63
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "padding": {
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    },
+                    "gap": 24,
+                    "effectiveGap": 24,
+                    "justifyOffset": 37.5,
+                    "align": "start",
+                    "justify": "center",
+                    "contentFrame": {
+                      "left": 88,
+                      "top": 378,
+                      "width": 753.3,
+                      "height": 480
+                    },
+                    "items": [
+                      {
+                        "path": "0.1.1.0.0",
+                        "frame": {
+                          "left": 88,
+                          "top": 415.5,
+                          "width": 753.3,
+                          "height": 98
+                        }
+                      },
+                      {
+                        "path": "0.1.1.0.1",
+                        "frame": {
+                          "left": 88,
+                          "top": 537.5,
+                          "width": 753.3,
+                          "height": 119
+                        }
+                      },
+                      {
+                        "path": "0.1.1.0.2",
+                        "frame": {
+                          "left": 88,
+                          "top": 680.5,
+                          "width": 753.3,
+                          "height": 140
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "path": "0.1.1.1",
+                    "kind": "column",
+                    "name": "tension-statements",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 232
+                    },
+                    "frame": {
+                      "left": 911.3,
+                      "top": 490,
+                      "width": 920.7,
+                      "height": 256
+                    },
+                    "children": [
+                      {
+                        "path": "0.1.1.1.0",
+                        "kind": "row",
+                        "name": "statement-the-buyer-s-real-question-is-not-can-it-code",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 35,
+                          "height": 56
+                        },
+                        "frame": {
+                          "left": 911.3,
+                          "top": 490,
+                          "width": 920.7,
+                          "height": 56
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.1.0.0",
+                            "kind": "shape",
+                            "name": "dot-the-buyer-s-real-question-is-not-can-it-code",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fixed",
+                                "value": 13
+                              },
+                              "height": {
+                                "mode": "fixed",
+                                "value": 56
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 13,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 911.3,
+                              "top": 490,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "snappedFrame": {
+                              "left": 912,
+                              "top": 492,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "children": [],
+                            "geometry": "rect",
+                            "element": {
+                              "aid": "sh/hoza1gvy",
+                              "id": "11",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.1.0.1",
+                            "kind": "column",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 850.38,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 946.3,
+                              "top": 490,
+                              "width": 885.7,
+                              "height": 56
+                            },
+                            "children": [
+                              {
+                                "path": "0.1.1.1.0.1.0",
+                                "kind": "text",
+                                "name": "statement-title-the-buyer-s-real-question-is-not-can-it-code",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 29
+                                },
+                                "frame": {
+                                  "left": 946.3,
+                                  "top": 490,
+                                  "width": 885.7,
+                                  "height": 29
+                                },
+                                "snappedFrame": {
+                                  "left": 946,
+                                  "top": 490,
+                                  "width": 886,
+                                  "height": 30
+                                },
+                                "children": [],
+                                "text": "The buyer's real question is not 'can it code?'",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/a1gvy90j",
+                                  "id": "12",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.1.1.1.0.1.1",
+                                "kind": "text",
+                                "name": "statement-body-the-buyer-s-real-question-is-not-can-it-code",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "wrap",
+                                    "max": 1030
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 850.38,
+                                  "height": 22
+                                },
+                                "frame": {
+                                  "left": 946.3,
+                                  "top": 524,
+                                  "width": 850.38,
+                                  "height": 22
+                                },
+                                "snappedFrame": {
+                                  "left": 946,
+                                  "top": 524,
+                                  "width": 850,
+                                  "height": 22
+                                },
+                                "children": [],
+                                "text": "It is whether the delivery system can explain, prove, hand off, and keep improving the software.",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/zidonyd0",
+                                  "id": "13",
+                                  "kind": "shape"
+                                }
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 5,
+                            "effectiveGap": 5,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 946.3,
+                              "top": 490,
+                              "width": 885.7,
+                              "height": 56
+                            },
+                            "items": [
+                              {
+                                "path": "0.1.1.1.0.1.0",
+                                "frame": {
+                                  "left": 946.3,
+                                  "top": 490,
+                                  "width": 885.7,
+                                  "height": 29
+                                }
+                              },
+                              {
+                                "path": "0.1.1.1.0.1.1",
+                                "frame": {
+                                  "left": 946.3,
+                                  "top": 524,
+                                  "width": 850.38,
+                                  "height": 22
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 22,
+                        "effectiveGap": 22,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 911.3,
+                          "top": 490,
+                          "width": 920.7,
+                          "height": 56
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.1.0.0",
+                            "frame": {
+                              "left": 911.3,
+                              "top": 490,
+                              "width": 13,
+                              "height": 56
+                            }
+                          },
+                          {
+                            "path": "0.1.1.1.0.1",
+                            "frame": {
+                              "left": 946.3,
+                              "top": 490,
+                              "width": 885.7,
+                              "height": 56
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "path": "0.1.1.1.1",
+                        "kind": "row",
+                        "name": "statement-the-vendor-s-real-question-is-not-did-the-model-answer",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 35,
+                          "height": 56
+                        },
+                        "frame": {
+                          "left": 911.3,
+                          "top": 578,
+                          "width": 920.7,
+                          "height": 56
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.1.1.0",
+                            "kind": "shape",
+                            "name": "dot-the-vendor-s-real-question-is-not-did-the-model-answer",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fixed",
+                                "value": 13
+                              },
+                              "height": {
+                                "mode": "fixed",
+                                "value": 56
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 13,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 911.3,
+                              "top": 578,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "snappedFrame": {
+                              "left": 912,
+                              "top": 580,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "children": [],
+                            "geometry": "rect",
+                            "element": {
+                              "aid": "sh/svu9knih",
+                              "id": "14",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.1.1.1",
+                            "kind": "column",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 802.06,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 946.3,
+                              "top": 578,
+                              "width": 885.7,
+                              "height": 56
+                            },
+                            "children": [
+                              {
+                                "path": "0.1.1.1.1.1.0",
+                                "kind": "text",
+                                "name": "statement-title-the-vendor-s-real-question-is-not-did-the-model-answer",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 29
+                                },
+                                "frame": {
+                                  "left": 946.3,
+                                  "top": 578,
+                                  "width": 885.7,
+                                  "height": 29
+                                },
+                                "snappedFrame": {
+                                  "left": 946,
+                                  "top": 578,
+                                  "width": 886,
+                                  "height": 30
+                                },
+                                "children": [],
+                                "text": "The vendor's real question is not 'did the model answer?'",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/hgn29gr2",
+                                  "id": "15",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.1.1.1.1.1.1",
+                                "kind": "text",
+                                "name": "statement-body-the-vendor-s-real-question-is-not-did-the-model-answer",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "wrap",
+                                    "max": 1030
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 802.06,
+                                  "height": 22
+                                },
+                                "frame": {
+                                  "left": 946.3,
+                                  "top": 612,
+                                  "width": 802.06,
+                                  "height": 22
+                                },
+                                "snappedFrame": {
+                                  "left": 946,
+                                  "top": 612,
+                                  "width": 802,
+                                  "height": 22
+                                },
+                                "children": [],
+                                "text": "It is whether every requirement, decision, artifact, test, and residual risk survived scrutiny.",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/ap4r65wj",
+                                  "id": "16",
+                                  "kind": "shape"
+                                }
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 5,
+                            "effectiveGap": 5,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 946.3,
+                              "top": 578,
+                              "width": 885.7,
+                              "height": 56
+                            },
+                            "items": [
+                              {
+                                "path": "0.1.1.1.1.1.0",
+                                "frame": {
+                                  "left": 946.3,
+                                  "top": 578,
+                                  "width": 885.7,
+                                  "height": 29
+                                }
+                              },
+                              {
+                                "path": "0.1.1.1.1.1.1",
+                                "frame": {
+                                  "left": 946.3,
+                                  "top": 612,
+                                  "width": 802.06,
+                                  "height": 22
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 22,
+                        "effectiveGap": 22,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 911.3,
+                          "top": 578,
+                          "width": 920.7,
+                          "height": 56
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.1.1.0",
+                            "frame": {
+                              "left": 911.3,
+                              "top": 578,
+                              "width": 13,
+                              "height": 56
+                            }
+                          },
+                          {
+                            "path": "0.1.1.1.1.1",
+                            "frame": {
+                              "left": 946.3,
+                              "top": 578,
+                              "width": 885.7,
+                              "height": 56
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "path": "0.1.1.1.2",
+                        "kind": "row",
+                        "name": "statement-the-cost-center-changes-form",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 35,
+                          "height": 56
+                        },
+                        "frame": {
+                          "left": 911.3,
+                          "top": 666,
+                          "width": 920.7,
+                          "height": 78
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.1.2.0",
+                            "kind": "shape",
+                            "name": "dot-the-cost-center-changes-form",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fixed",
+                                "value": 13
+                              },
+                              "height": {
+                                "mode": "fixed",
+                                "value": 56
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 13,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 911.3,
+                              "top": 666,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "snappedFrame": {
+                              "left": 912,
+                              "top": 668,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "children": [],
+                            "geometry": "rect",
+                            "element": {
+                              "aid": "sh/za1gvy90",
+                              "id": "17",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.1.2.1",
+                            "kind": "column",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 914.74,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 946.3,
+                              "top": 666,
+                              "width": 885.7,
+                              "height": 78
+                            },
+                            "children": [
+                              {
+                                "path": "0.1.1.1.2.1.0",
+                                "kind": "text",
+                                "name": "statement-title-the-cost-center-changes-form",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 29
+                                },
+                                "frame": {
+                                  "left": 946.3,
+                                  "top": 666,
+                                  "width": 885.7,
+                                  "height": 29
+                                },
+                                "snappedFrame": {
+                                  "left": 946,
+                                  "top": 666,
+                                  "width": 886,
+                                  "height": 30
+                                },
+                                "children": [],
+                                "text": "The cost center changes form.",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/sji5snel",
+                                  "id": "18",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.1.1.1.2.1.1",
+                                "kind": "text",
+                                "name": "statement-body-the-cost-center-changes-form",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "wrap",
+                                    "max": 1030
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 914.74,
+                                  "height": 22
+                                },
+                                "frame": {
+                                  "left": 946.3,
+                                  "top": 700,
+                                  "width": 914.74,
+                                  "height": 44
+                                },
+                                "snappedFrame": {
+                                  "left": 946,
+                                  "top": 700,
+                                  "width": 914,
+                                  "height": 44
+                                },
+                                "children": [],
+                                "text": "Dollars become tokens, but scope, approvals, change control, and confidence still have to be managed.",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/h4byhgn2",
+                                  "id": "19",
+                                  "kind": "shape"
+                                }
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 5,
+                            "effectiveGap": 5,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 946.3,
+                              "top": 666,
+                              "width": 885.7,
+                              "height": 78
+                            },
+                            "items": [
+                              {
+                                "path": "0.1.1.1.2.1.0",
+                                "frame": {
+                                  "left": 946.3,
+                                  "top": 666,
+                                  "width": 885.7,
+                                  "height": 29
+                                }
+                              },
+                              {
+                                "path": "0.1.1.1.2.1.1",
+                                "frame": {
+                                  "left": 946.3,
+                                  "top": 700,
+                                  "width": 914.74,
+                                  "height": 44
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 22,
+                        "effectiveGap": 22,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 911.3,
+                          "top": 666,
+                          "width": 920.7,
+                          "height": 78
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.1.2.0",
+                            "frame": {
+                              "left": 911.3,
+                              "top": 666,
+                              "width": 13,
+                              "height": 56
+                            }
+                          },
+                          {
+                            "path": "0.1.1.1.2.1",
+                            "frame": {
+                              "left": 946.3,
+                              "top": 666,
+                              "width": 885.7,
+                              "height": 78
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "padding": {
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    },
+                    "gap": 32,
+                    "effectiveGap": 32,
+                    "justifyOffset": 0,
+                    "align": "start",
+                    "justify": "start",
+                    "contentFrame": {
+                      "left": 911.3,
+                      "top": 490,
+                      "width": 920.7,
+                      "height": 256
+                    },
+                    "items": [
+                      {
+                        "path": "0.1.1.1.0",
+                        "frame": {
+                          "left": 911.3,
+                          "top": 490,
+                          "width": 920.7,
+                          "height": 56
+                        }
+                      },
+                      {
+                        "path": "0.1.1.1.1",
+                        "frame": {
+                          "left": 911.3,
+                          "top": 578,
+                          "width": 920.7,
+                          "height": 56
+                        }
+                      },
+                      {
+                        "path": "0.1.1.1.2",
+                        "frame": {
+                          "left": 911.3,
+                          "top": 666,
+                          "width": 920.7,
+                          "height": 78
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "columnGap": 70,
+                "rowGap": 0,
+                "alignItems": "center",
+                "justifyItems": "stretch",
+                "contentFrame": {
+                  "left": 88,
+                  "top": 281,
+                  "width": 1744,
+                  "height": 675
+                },
+                "columns": [
+                  {
+                    "mode": "fr",
+                    "value": 0.9
+                  },
+                  {
+                    "mode": "fr",
+                    "value": 1.1
+                  }
+                ],
+                "autoRows": "auto",
+                "resolvedRows": [
+                  "auto"
+                ],
+                "columnSizes": [
+                  753.3,
+                  920.7
+                ],
+                "rowSizes": [
+                  675
+                ],
+                "cells": [
+                  {
+                    "path": "0.1.1.0",
+                    "column": 0,
+                    "row": 0,
+                    "columnSpan": 1,
+                    "rowSpan": 1,
+                    "cellFrame": {
+                      "left": 88,
+                      "top": 281,
+                      "width": 753.3,
+                      "height": 675
+                    }
+                  },
+                  {
+                    "path": "0.1.1.1",
+                    "column": 1,
+                    "row": 0,
+                    "columnSpan": 1,
+                    "rowSpan": 1,
+                    "cellFrame": {
+                      "left": 911.3,
+                      "top": 281,
+                      "width": 920.7,
+                      "height": 675
+                    }
+                  }
+                ]
+              },
+              {
+                "path": "0.1.2",
+                "kind": "row",
+                "name": "tension-footer-row",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "hug"
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 307.84,
+                  "height": 13
+                },
+                "frame": {
+                  "left": 88,
+                  "top": 990,
+                  "width": 1744,
+                  "height": 26
+                },
+                "children": [
+                  {
+                    "path": "0.1.2.0",
+                    "kind": "text",
+                    "name": "tension-footer",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "wrap",
+                        "max": 1200
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 267.84,
+                      "height": 13
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 990,
+                      "width": 267.84,
+                      "height": 28
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 990,
+                      "width": 268,
+                      "height": 28
+                    },
+                    "children": [],
+                    "text": "DFMS pitch deck | software assurance dark factory",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/psfil0rq",
+                      "id": "20",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.2.1",
+                    "kind": "text",
+                    "name": "tension-page",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 40
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 40,
+                      "height": 13
+                    },
+                    "frame": {
+                      "left": 1792,
+                      "top": 998,
+                      "width": 40,
+                      "height": 12
+                    },
+                    "snappedFrame": {
+                      "left": 1792,
+                      "top": 998,
+                      "width": 40,
+                      "height": 12
+                    },
+                    "children": [],
+                    "text": "02",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/w7mp0bi9",
+                      "id": "21",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "gap": 0,
+                "effectiveGap": 1436.16,
+                "justifyOffset": 0,
+                "align": "center",
+                "justify": "between",
+                "contentFrame": {
+                  "left": 88,
+                  "top": 990,
+                  "width": 1744,
+                  "height": 26
+                },
+                "items": [
+                  {
+                    "path": "0.1.2.0",
+                    "frame": {
+                      "left": 88,
+                      "top": 990,
+                      "width": 267.84,
+                      "height": 28
+                    }
+                  },
+                  {
+                    "path": "0.1.2.1",
+                    "frame": {
+                      "left": 1792,
+                      "top": 998,
+                      "width": 40,
+                      "height": 12
+                    }
+                  }
+                ]
+              }
+            ],
+            "padding": {
+              "top": 64,
+              "right": 88,
+              "bottom": 64,
+              "left": 88
+            },
+            "gap": 34,
+            "effectiveGap": 34,
+            "justifyOffset": 0,
+            "align": "start",
+            "justify": "start",
+            "contentFrame": {
+              "left": 88,
+              "top": 64,
+              "width": 1744,
+              "height": 952
+            },
+            "items": [
+              {
+                "path": "0.1.0",
+                "frame": {
+                  "left": 88,
+                  "top": 64,
+                  "width": 1744,
+                  "height": 183
+                }
+              },
+              {
+                "path": "0.1.1",
+                "frame": {
+                  "left": 88,
+                  "top": 281,
+                  "width": 1744,
+                  "height": 675
+                }
+              },
+              {
+                "path": "0.1.2",
+                "frame": {
+                  "left": 88,
+                  "top": 990,
+                  "width": 1744,
+                  "height": 26
+                }
+              }
+            ]
+          }
+        ],
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignItems": "stretch",
+        "justifyItems": "stretch",
+        "contentFrame": {
+          "left": 0,
+          "top": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "items": [
+          {
+            "path": "0.0",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            }
+          },
+          {
+            "path": "0.1",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

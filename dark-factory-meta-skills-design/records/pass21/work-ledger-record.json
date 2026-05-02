@@ -1,0 +1,36 @@
+{
+  "id": "WL-PASS21-001",
+  "title": "Ralph loop pass 21 waiver and reciprocal trace hardening",
+  "current_state": "accepted",
+  "next_action": "Apply the stricter validators to future governed project-book and skill-system runs.",
+  "revalidation_trigger": "Any future finding that a governed record can pass with an incomplete waiver, self-lowered threshold, or one-way answer-to-node citation.",
+  "owner": {
+    "accountable": "codex",
+    "responsible": "codex"
+  },
+  "acceptance_criteria": [
+    "Pass 21 critic findings documented",
+    "Waiver completeness enforced in decomposition and trace validation",
+    "Waiver completeness enforced in intake package validation",
+    "Threshold lowering rejected unless explicitly and completely waived",
+    "Exact answer-to-node reciprocity enforced in intake package validation",
+    "Validation runner proves positive and negative paths"
+  ],
+  "evidence_required": [
+    "pass21 critic/fix record",
+    "DFMS hardening runner output",
+    "incomplete intake waiver rejection evidence",
+    "merged control-plane validation",
+    "installed/workspace bundle hash comparison"
+  ],
+  "evidence_provided": [
+    "21-ralph-loop-critic-review-and-fix-record.md",
+    "DFMS hardening checks complete",
+    "incomplete intake waiver fixture rejected",
+    "ATTR-PASS21-001",
+    "CG-PASS21-001",
+    "RFG-PASS21-001",
+    "records/pass21 merged records",
+    "INSTALLED_WORKSPACE_HASHES_MATCH"
+  ]
+}

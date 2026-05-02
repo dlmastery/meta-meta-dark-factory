@@ -1,0 +1,25 @@
+zero_slop_policy:
+  statement: "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+gate_id: GATE-NORTHSTAR-MATERIAL-UI-PASS
+run_id: DFRUN-NORTHSTAR-20260425-001
+bead_id: TB-20260426-107
+verdict: pass
+scope:
+  - Google Material 3 UI standards alignment
+  - Material 3 Expressive direction alignment
+  - tokenized design system implementation
+  - accessibility contrast and interaction state checks
+  - desktop and mobile WYSIWYG verification
+required_evidence:
+  - project-book/14-material-ui-standards-conformance-record.md
+  - project-book/evidence/material-ui-panel-record.json
+  - project-book/evidence/material-ui-conformance-certificate.json
+  - project-book/evidence/static-ui-audit-results.json
+  - project-book/evidence/accessibility-certification-results.json
+  - project-book/evidence/browser-wysiwyg-results.json
+  - project-book/evidence/core-test-output.txt
+residual_risks:
+  - External Google or third-party certification is not claimed.
+  - Dynamic color is role-token based, not runtime wallpaper extraction.
+  - Native Android Material Components and Material Web packages are out of scope for this static local demonstrator.
+next_action: RUN-CLOSED unless a new change request opens.

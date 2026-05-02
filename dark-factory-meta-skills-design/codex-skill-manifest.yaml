@@ -1,0 +1,254 @@
+version: 0.2
+generated_on: "2026-04-26"
+package: dark-factory-meta-skills
+purpose: >
+  Codex-instantiable meta-skill hierarchy for standards-based greenfield and
+  brownfield dark factory workflows with expert debate, artifact generation,
+  traceability, verification, human-agent handoff, and production handoff.
+
+skills:
+  - name: df-meta-attractor
+    phase: 0
+    description: >
+      Meta-meta dark-factory attractor for shaping raw, ambitious, contradictory,
+      incomplete, or evolving intent into a stable governed factory run before
+      ordinary orchestration. Use to design or revise the meta-skill hierarchy,
+      decide which skills should trigger, prevent overfitting to one benchmark,
+      and produce Attractor-style run records, control graphs, knowledge graph
+      seeds, strict task beads, TPM flow ledgers, PERT dependency plans, AI
+      judge/jury gates, execution-kernel next-action reports, work ledgers,
+      SDLC stage coverage matrices, implementation/test assurance gates,
+      browser/WYSIWYG testing obligations, refinery gates, trace commitments,
+      product-tailored generated meta-skill contracts, factory instantiation
+      records, Hawkeye conformance audit, waivers, and next safe action.
+    precedes:
+      - dark-factory-orchestrator
+    uses:
+      - df-swarm-coordination
+      - df-quality-refinery
+      - df-traceability-evidence
+      - df-feedback-learning
+
+  - name: dark-factory-orchestrator
+    phase: 1
+    description: >
+      Use when Codex must run a new project, brownfield change, standards-based
+      SDLC workflow, artifact factory, expert debate workflow, triple review,
+      production handoff, or full dark-factory process.
+    depends_on:
+      - df-governance-mayor
+      - df-artifact-factory
+      - df-quality-refinery
+      - df-traceability-evidence
+
+  - name: df-governance-mayor
+    phase: 1
+    description: >
+      Governance and stage-gate control for strict SDLC process adherence,
+      standards tailoring, RASCI, change control, human-agent ownership, and
+      acceptance thresholds. Enforces TASKS.md bead state and approval rules
+      plus TPM flow ledger, PERT dependency rules, and execution-kernel
+      preflight for governed work. Blocks docs-only completion when code,
+      UI, scenario, or production evidence is required. Validates product-
+      tailored generated meta-skill contracts for meta-meta factory runs and
+      requires Hawkeye conformance audit before pass/closure.
+    resources:
+      - references/standards-baseline.md
+      - references/rasci.md
+      - references/gate-policy.md
+      - assets/templates/TASKS.md
+      - assets/templates/task-bead-record.json
+      - assets/templates/tpm-flow-ledger.json
+      - assets/templates/factory-pert-plan.json
+      - assets/templates/execution-kernel-state.json
+      - assets/templates/workflow-transition-request.json
+      - assets/templates/next-action-report.json
+      - assets/templates/sdlc-stage-coverage-matrix.json
+      - assets/templates/product-tailoring-profile.json
+      - assets/templates/generated-meta-skill-contract.json
+      - assets/templates/hawkeye-conformance-audit-record.json
+      - scripts/validate_tasks_md.py
+      - scripts/validate_tpm_flow.py
+      - scripts/dfms_execution_kernel.py
+      - scripts/validate_sdlc_stage_coverage.py
+      - scripts/validate_meta_meta_skill_contract.py
+      - scripts/validate_hawkeye_conformance.py
+
+  - name: df-intake-spec-lab
+    phase: 1
+    description: >
+      Turn raw human intent into project profiles, requirements, constraints,
+      functional and non-functional scenarios, acceptance criteria, assumptions,
+      and clarification requests before factory execution.
+    resources:
+      - references/intake-question-bank.md
+      - references/spec-quality-rubric.md
+      - references/spec-decomposition-protocol.md
+      - assets/templates/spec-decomposition-record.json
+      - scripts/validate_spec_decomposition.py
+      - scripts/validate_intake_package.py
+
+  - name: df-artifact-factory
+    phase: 1
+    description: >
+      Generate and update standards-based SDLC artifacts including BRD, SRS,
+      HLD, LLD, ADRs, MDA models, DDD maps, test plans, traceability matrices,
+      runbooks, release notes, and handoff packages.
+    resources:
+      - references/artifact-catalog.md
+      - references/artifact-tailoring.md
+      - assets/templates/
+      - scripts/validate_artifact_catalog_ids.py
+
+  - name: df-quality-refinery
+    phase: 1
+    description: >
+      Enforce triple expert review, 15-point role rubrics, anti-slop checks,
+      verification gates, evidence thresholds, and quality certificates for
+      every material artifact and code change.
+    resources:
+      - references/expert-rubrics.md
+      - references/review-thresholds.md
+      - scripts/score_rubric_matrix.py
+      - scripts/validate_refinery_gate.py
+
+  - name: df-traceability-evidence
+    phase: 1
+    description: >
+      Maintain bidirectional traceability from human intent to requirements,
+      models, decisions, code, tests, operations, reviews, evidence, and
+      residual risk using both trace records and graphified typed nodes/edges.
+    resources:
+      - references/trace-schema.md
+      - references/evidence-schema.md
+      - assets/templates/knowledge-graph-record.json
+      - scripts/validate_trace_links.py
+      - scripts/validate_knowledge_graph.py
+      - ../codex-skills/.validation/pre17-greenfield-trace.json
+      - ../codex-skills/.validation/pre17-brownfield-trace.json
+      - ../codex-skills/.validation/pre17-negative-missing-governed-links.json
+
+  - name: df-dashboard-control
+    phase: 1
+    description: >
+      Build human-review dashboard control for project books and generated
+      factories: artifact graph indexes, typed nodes and edges, selected-node
+      redo requests, downstream transitive closure, reopened gate/certificate
+      lists, rerun test lists, redo task beads, token SWAG checkpoints, and
+      change-impact reports.
+    depends_on:
+      - df-traceability-evidence
+      - df-governance-mayor
+      - df-quality-refinery
+    resources:
+      - references/dashboard-control-protocol.md
+      - assets/templates/artifact-dashboard-index.json
+      - assets/templates/dashboard-control-record.json
+      - assets/templates/redo-node-request.json
+      - assets/templates/redo-impact-report.json
+      - scripts/df_dashboard_control.py
+
+  - name: df-brownfield-recon
+    phase: 2
+    description: >
+      Use for existing repositories, legacy systems, bug fixes, migrations, and
+      enhancement work where Codex must understand current architecture,
+      behavior, tests, conventions, and impact before modifying code.
+
+  - name: df-human-agent-handoff
+    phase: 2
+    description: >
+      Use when humans and agents can swap roles at any stage, including async
+      review, human takeover, agent takeover, decision handoff, and resumable
+      state transfer.
+
+  - name: df-context-memory
+    phase: 2
+    description: >
+      Use to prevent context rot in long-running or large-context projects with
+      short sessions, project book indexes, structured handoffs, predecessor
+      queries, evidence-ledger retrieval, graph-backed memory, TASKS.md resume
+      state, and compact context packs.
+
+  - name: df-methodology-blender
+    phase: 3
+    description: >
+      Blend RUP, MDA, DDD, TDD, BDD, Agile, SRE, ISO life-cycle processes, and
+      company-specific delivery methods into one coherent project workflow.
+    resources:
+      - references/rup-mda-ddd-tdd.md
+      - assets/templates/methodology-blend-record.json
+      - assets/templates/sdlc-stage-coverage-matrix.json
+      - assets/templates/scenario-test-matrix.json
+
+  - name: df-swarm-coordination
+    phase: 3
+    description: >
+      Assign expert roles, coordinate 3-expert debates, decompose work
+      recursively, synthesize alternatives, and route decisions through quality
+      gates, AI judge/jury transition panels, and boundary-human escalation
+      where required.
+    resources:
+      - references/role-roster.md
+      - references/debate-protocol.md
+      - assets/templates/expert-debate-record.json
+      - assets/templates/ai-judge-jury-record.json
+
+  - name: df-production-sre-handoff
+    phase: 4
+    description: >
+      Prepare release, deployment, rollback, observability, incident response,
+      support, on-call, and maintenance handoff artifacts when humans retain
+      production and SRE ownership.
+    resources:
+      - references/release-readiness.md
+      - references/sre-runbook.md
+      - assets/templates/production-handoff-record.json
+      - assets/templates/outage-drill-record.json
+
+  - name: df-feedback-learning
+    phase: 5
+    description: >
+      Turn human feedback, review comments, incidents, retrospectives, and
+      standards changes into updated requirements, scenarios, templates,
+      rubrics, and future factory improvements.
+
+default_thresholds:
+  governance_compliance: 98
+  selected_expert_minimum: 96
+  traceability_completeness: 100
+  critical_security_findings_allowed: 0
+  high_security_findings_allowed: 0
+
+artifact_record_templates:
+  - artifact-record.yaml
+  - requirement-record.yaml
+  - decision-record.yaml
+  - control-graph-record.yaml
+  - knowledge-graph-record.json
+  - work-ledger-record.yaml
+  - task-bead-record.json
+  - TASKS.md
+  - tpm-flow-ledger.json
+  - factory-pert-plan.json
+  - ai-judge-jury-record.json
+  - execution-kernel-state.json
+  - workflow-transition-request.json
+  - next-action-report.json
+  - sdlc-stage-coverage-matrix.json
+  - implementation-execution-record.json
+  - scenario-test-matrix.json
+  - wysiwyg-browser-test-record.json
+  - product-tailoring-profile.json
+  - generated-meta-skill-contract.json
+  - dark-factory-instantiation-record.json
+  - hawkeye-conformance-audit-record.json
+  - expert-debate-record.yaml
+  - rubric-score-record.yaml
+  - refinery-gate-record.yaml
+  - quality-certificate.yaml
+  - handoff-record.yaml
+  - artifact-dashboard-index.json
+  - dashboard-control-record.json
+  - redo-node-request.json
+  - redo-impact-report.json

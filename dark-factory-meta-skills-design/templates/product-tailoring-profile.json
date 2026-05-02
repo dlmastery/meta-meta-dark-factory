@@ -1,0 +1,65 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+    "strict_compliance": "Mandatory. Every claim must be project-specific, evidence-backed, trace-linked, reviewer-challenged, and free of unsupported invention.",
+    "missing_evidence_rule": "If evidence is missing, mark it as an assumption, risk, open question, or failure."
+  },
+  "template_only": true,
+  "profile_id": "PRODUCT-TAILORING-000",
+  "run_id": "",
+  "product_name": "",
+  "product_archetype": "",
+  "lifecycle_mode": "greenfield | brownfield | artifact_only | planning_phase_only | release_only | maintenance | skill_system_revision",
+  "surface_flags": {
+    "code_producing": false,
+    "ui_surface": false,
+    "api_surface": false,
+    "data_surface": false,
+    "production_surface": false,
+    "brownfield": false,
+    "scenario_driven": false,
+    "regulated_or_high_assurance": false
+  },
+  "risk_profile": {
+    "safety": "low | medium | high",
+    "money": "low | medium | high",
+    "privacy": "low | medium | high",
+    "security": "low | medium | high",
+    "reliability": "low | medium | high",
+    "compliance": "low | medium | high",
+    "ux": "low | medium | high",
+    "migration": "low | medium | high",
+    "scale": "low | medium | high"
+  },
+  "methodology_blend": {
+    "rup": {
+      "included": false,
+      "reason": ""
+    },
+    "mda": {
+      "included": false,
+      "reason": ""
+    },
+    "ddd": {
+      "included": false,
+      "reason": ""
+    },
+    "tdd_bdd": {
+      "included": false,
+      "reason": ""
+    },
+    "sre": {
+      "included": false,
+      "reason": ""
+    },
+    "ssdf_owasp_samm": {
+      "included": false,
+      "reason": ""
+    }
+  },
+  "mandatory_testing_classes": [],
+  "mandatory_artifact_ids": [],
+  "combined_or_deferred_artifacts": [],
+  "human_boundary_triggers": [],
+  "template_marker": true
+}

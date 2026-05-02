@@ -1,0 +1,29 @@
+{
+  "id": "RFG-PASS24-001",
+  "name": "Pass 24 patch-level refinery gate",
+  "status": "pass",
+  "verdict_rationale": "Pass 24 closes cross-file certificate evidence bypasses by requiring bundle validation against actual panel score and refinery gate files before a pass certificate is accepted. This is patch-level only.",
+  "next_action": "Run a full greenfield and brownfield project-book simulation before claiming runtime readiness.",
+  "evidence": {
+    "test_reports": [
+      "DFMS hardening checks complete",
+      "quality certificate bundle pass fixture: pass",
+      "bad certificate unbundled pass fixture: rejected",
+      "bad certificate panel-file mismatch fixture: rejected",
+      "bad certificate gate-file mismatch fixture: rejected"
+    ],
+    "rubric_scorecards": [
+      "24-ralph-loop-critic-review-and-fix-record.md"
+    ],
+    "trace_reports": [
+      "records/pass24 merged records",
+      "ATTR-PASS24-001",
+      "CG-PASS24-001",
+      "WL-PASS24-001",
+      "installed and workspace validator hashes match"
+    ],
+    "certificates": [
+      "patch-level pass only"
+    ]
+  }
+}

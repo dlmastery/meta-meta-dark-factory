@@ -1,0 +1,40 @@
+{
+  "id": "WL-PASS26-001",
+  "title": "Ralph loop pass 26 production/SRE handoff hardening",
+  "current_state": "accepted",
+  "next_action": "Use production/SRE handoff validation for all future release readiness, outage drill, runbook replay, and operator readiness evidence.",
+  "revalidation_trigger": "Any future finding that production handoff records, outage drills, runbook replays, or operator signoffs can pass as templates, unsigned drafts, or low-readiness evidence.",
+  "owner": {
+    "accountable": "human-release-owner",
+    "responsible": "codex"
+  },
+  "acceptance_criteria": [
+    "Pass 26 findings documented",
+    "Production handoff validator added to installed and workspace skill bundles",
+    "Validator rejects templates and low-readiness or unsigned production evidence",
+    "Hardening runner compiles validator and exercises positive and negative fixtures",
+    "Manifest lists production/SRE validator and fixtures"
+  ],
+  "evidence_required": [
+    "pass26 critic/fix record",
+    "production handoff pass fixture",
+    "outage drill pass fixture",
+    "template and low-readiness rejection checks",
+    "DFMS hardening runner output",
+    "pass26 merged-record validation",
+    "installed/workspace hash comparison"
+  ],
+  "evidence_provided": [
+    "26-ralph-loop-critic-review-and-fix-record.md",
+    "production-handoff-pass.json",
+    "REL-HND-PASS26-001",
+    "outage-drill-pass.json",
+    "OPS-DRILL-PASS26-001",
+    "DFMS hardening checks complete",
+    "ATTR-PASS26-001",
+    "CG-PASS26-001",
+    "RFG-PASS26-001",
+    "records/pass26 merged records",
+    "INSTALLED_WORKSPACE_HASHES_MATCH"
+  ]
+}

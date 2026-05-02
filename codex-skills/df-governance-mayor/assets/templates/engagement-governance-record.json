@@ -1,0 +1,66 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+    "strict_compliance": "Mandatory. Every claim must be project-specific, evidence-backed, trace-linked, reviewer-challenged, and free of unsupported invention.",
+    "missing_evidence_rule": "If evidence is missing, mark it as an assumption, risk, open question, or failure."
+  },
+  "id": "ENG-GOV-000",
+  "status": "draft",
+  "engagement_model": "client_dark_factory_outsourcing",
+  "client_owner": "",
+  "dark_factory_delivery_owner": "",
+  "scope_baseline": {
+    "in_scope": [],
+    "out_of_scope": [],
+    "assumptions": [],
+    "acceptance_definition": ""
+  },
+  "standards_baseline": [],
+  "token_budget": {
+    "currency": "tokens",
+    "estimate_class": "rough_swag",
+    "swag": {
+      "low": 0,
+      "mid": 0,
+      "high": 0
+    },
+    "confidence": "low|medium|high",
+    "assumptions": [],
+    "exclusions": [],
+    "approval": {
+      "approver": "",
+      "decision": "pending",
+      "at": ""
+    },
+    "reapproval_rules": {
+      "token_delta_percent": 15,
+      "scope_change_requires_approval": true,
+      "iteration_overrun_requires_approval": true
+    }
+  },
+  "client_checkpoints": [],
+  "iterations": [],
+  "change_control": {
+    "approval_required": true,
+    "required_impact_fields": [
+      "scope",
+      "tokens",
+      "schedule",
+      "quality",
+      "risk"
+    ],
+    "rebaseline_trigger": "",
+    "approval": {
+      "approver": "",
+      "decision": "pending",
+      "at": ""
+    },
+    "change_requests": []
+  },
+  "trace": {
+    "attractor_record": "",
+    "control_graph": "",
+    "work_ledger": "",
+    "refinery_gate": ""
+  }
+}

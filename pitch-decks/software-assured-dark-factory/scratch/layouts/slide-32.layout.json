@@ -1,0 +1,2379 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/jwjb8c",
+    "id": "jwjb8c",
+    "slide": 32,
+    "layoutId": "39df3ad4-e207-4cff-a7b3-0934322c7183",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "9c364795-fe59-472e-ba8a-a667cb58489e",
+    "masterLayoutName": "Master",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "39df3ad4-e207-4cff-a7b3-0934322c7183",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "9c364795-fe59-472e-ba8a-a667cb58489e",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "9c364795-fe59-472e-ba8a-a667cb58489e",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/kzupwb2h",
+      "id": "1",
+      "name": "background",
+      "bbox": [
+        0,
+        0,
+        1920,
+        1080
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#09100F",
+      "lineColor": "#09100F",
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/re1w7mp0",
+      "id": "2",
+      "name": "packaging-gtm-eyebrow",
+      "bbox": [
+        88,
+        64,
+        1744,
+        22
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.0.0"
+      },
+      "geometry": "rect",
+      "text": "GO-TO-MARKET",
+      "textPreview": "GO-TO-MARKET",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "fontSize": 21,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "GO-TO-MARKET"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "GO-TO-MARKET",
+          "runs": [
+            {
+              "index": 1,
+              "text": "GO-TO-MARKET",
+              "fontSize": 21,
+              "color": "#9AF2C8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2t83itgf",
+      "id": "3",
+      "name": "packaging-gtm-title",
+      "bbox": [
+        88,
+        98,
+        1318,
+        56
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.0.1"
+      },
+      "geometry": "rect",
+      "text": "Package it as assurance infrastructure for agentic delivery.",
+      "textPreview": "Package it as assurance infrastructure for agentic delivery.",
+      "resolvedFontSize": 55,
+      "resolvedTextStyle": {
+        "fontSize": 55,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Package it as assurance infrastructure for agentic delivery."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Package it as assurance infrastructure for agentic delivery.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Package it as assurance infrastructure for agentic delivery.",
+              "fontSize": 55,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9w3m94fu",
+      "id": "4",
+      "name": "packaging-gtm-subtitle",
+      "bbox": [
+        88,
+        166,
+        1238,
+        52
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.0.2"
+      },
+      "geometry": "rect",
+      "text": "The wedge is not cheaper coding. The wedge is a buyer-approved delivery system that makes agent work inspectable.",
+      "textPreview": "The wedge is not cheaper coding. The wedge is a buyer-approved delivery system that makes agent work inspectable.",
+      "resolvedFontSize": 26,
+      "resolvedTextStyle": {
+        "fontSize": 26,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "The wedge is not cheaper coding. The wedge is a buyer-approved delivery system that makes agent work inspectable."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "The wedge is not cheaper coding. The wedge is a buyer-approved delivery system that makes agent work inspectable.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "The wedge is not cheaper coding. The wedge is a buyer-approved delivery system that makes agent work inspectable.",
+              "fontSize": 26,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/kb6xkf6d",
+      "id": "5",
+      "name": "step-Pilot-assured-project-run",
+      "bbox": [
+        88,
+        550,
+        564,
+        108
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#111D1A",
+      "lineColor": "#29443B",
+      "lineWidth": 1
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/rqd4vmtw",
+      "id": "6",
+      "name": "step-num-Pilot",
+      "bbox": [
+        112,
+        570,
+        44,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.0.0"
+      },
+      "geometry": "rect",
+      "text": "Pilot",
+      "textPreview": "Pilot",
+      "resolvedFontSize": 23,
+      "resolvedTextStyle": {
+        "fontSize": 23,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Pilot"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Pilot",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Pilot",
+              "fontSize": 23,
+              "color": "#2DD4BF",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/25kb6xkf",
+      "id": "7",
+      "name": "step-title-Pilot",
+      "bbox": [
+        174,
+        570,
+        454,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.0.1.0"
+      },
+      "geometry": "rect",
+      "text": "Assured project run",
+      "textPreview": "Assured project run",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Assured project run"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Assured project run",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Assured project run",
+              "fontSize": 24,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/94fu18jq",
+      "id": "8",
+      "name": "step-body-Pilot",
+      "bbox": [
+        174,
+        600,
+        454,
+        36
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.0.1.1"
+      },
+      "geometry": "rect",
+      "text": "One greenfield and one brownfield run with project book and evidence ledger.",
+      "textPreview": "One greenfield and one brownfield run with project book and evidence ledger.",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "One greenfield and one brownfield run with project book and"
+          },
+          {
+            "index": 2,
+            "text": "evidence ledger."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "One greenfield and one brownfield run with project book and evidence ledger.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "One greenfield and one brownfield run with project book and evidence ledger.",
+              "fontSize": 18,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/kjm1cfa9",
+      "id": "9",
+      "name": "step-Team-delivery-control-plane",
+      "bbox": [
+        678,
+        550,
+        564,
+        108
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#111D1A",
+      "lineColor": "#29443B",
+      "lineWidth": 1
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/mlkjm1cf",
+      "id": "10",
+      "name": "step-num-Team",
+      "bbox": [
+        702,
+        570,
+        44,
+        46
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.0.0"
+      },
+      "geometry": "rect",
+      "text": "Team",
+      "textPreview": "Team",
+      "resolvedFontSize": 23,
+      "resolvedTextStyle": {
+        "fontSize": 23,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Tea"
+          },
+          {
+            "index": 2,
+            "text": "m"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Team",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Team",
+              "fontSize": 23,
+              "color": "#46D17E",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/f6dcbulw",
+      "id": "11",
+      "name": "step-title-Team",
+      "bbox": [
+        764,
+        570,
+        454,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.0.1.0"
+      },
+      "geometry": "rect",
+      "text": "Delivery control plane",
+      "textPreview": "Delivery control plane",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Delivery control plane"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Delivery control plane",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Delivery control plane",
+              "fontSize": 24,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4r65wjud",
+      "id": "12",
+      "name": "step-body-Team",
+      "bbox": [
+        764,
+        600,
+        454,
+        36
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.0.1.1"
+      },
+      "geometry": "rect",
+      "text": "Reusable skill bundle, templates, validators, checkpoint process.",
+      "textPreview": "Reusable skill bundle, templates, validators, checkpoint process.",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Reusable skill bundle, templates, validators, checkpoint"
+          },
+          {
+            "index": 2,
+            "text": "process."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Reusable skill bundle, templates, validators, checkpoint process.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Reusable skill bundle, templates, validators, checkpoint process.",
+              "fontSize": 18,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/xc3ylc7u",
+      "id": "13",
+      "name": "step-Enterprise-assurance-platform",
+      "bbox": [
+        1268,
+        550,
+        564,
+        108
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.2"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#111D1A",
+      "lineColor": "#29443B",
+      "lineWidth": 1
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/mtwra5gb",
+      "id": "14",
+      "name": "step-num-Enterprise",
+      "bbox": [
+        1292,
+        570,
+        44,
+        70
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.2.0.0"
+      },
+      "geometry": "rect",
+      "text": "Enterprise",
+      "textPreview": "Enterprise",
+      "resolvedFontSize": 23,
+      "resolvedTextStyle": {
+        "fontSize": 23,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Ente"
+          },
+          {
+            "index": 2,
+            "text": "rpris"
+          },
+          {
+            "index": 3,
+            "text": "e"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Enterprise",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Enterprise",
+              "fontSize": 23,
+              "color": "#F2B84B",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fepkzupw",
+      "id": "15",
+      "name": "step-title-Enterprise",
+      "bbox": [
+        1354,
+        570,
+        454,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.2.0.1.0"
+      },
+      "geometry": "rect",
+      "text": "Assurance platform",
+      "textPreview": "Assurance platform",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Assurance platform"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Assurance platform",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Assurance platform",
+              "fontSize": 24,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4zidonyd",
+      "id": "16",
+      "name": "step-body-Enterprise",
+      "bbox": [
+        1354,
+        600,
+        454,
+        36
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.2.0.1.1"
+      },
+      "geometry": "rect",
+      "text": "Policy packs, dashboard, SSO, repo/CI integrations, audit export.",
+      "textPreview": "Policy packs, dashboard, SSO, repo/CI integrations, audit export.",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Policy packs, dashboard, SSO, repo/CI integrations, audit"
+          },
+          {
+            "index": 2,
+            "text": "export."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Policy packs, dashboard, SSO, repo/CI integrations, audit export.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Policy packs, dashboard, SSO, repo/CI integrations, audit export.",
+              "fontSize": 18,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/xkf6dcbu",
+      "id": "17",
+      "name": "packaging-gtm-footer",
+      "bbox": [
+        88,
+        990,
+        268,
+        28
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.2.0"
+      },
+      "geometry": "rect",
+      "text": "DFMS pitch deck | software assurance dark factory",
+      "textPreview": "DFMS pitch deck | software assurance dark factory",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "DFMS pitch deck | software assurance dark factory"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "DFMS pitch deck | software assurance dark factory",
+          "runs": [
+            {
+              "index": 1,
+              "text": "DFMS pitch deck | software assurance dark factory",
+              "fontSize": 13,
+              "color": "#6E7C74"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qxs72x4n",
+      "id": "18",
+      "name": "packaging-gtm-page",
+      "bbox": [
+        1792,
+        998,
+        40,
+        12
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.2.1"
+      },
+      "geometry": "rect",
+      "text": "32",
+      "textPreview": "32",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "32"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "32",
+          "runs": [
+            {
+              "index": 1,
+              "text": "32",
+              "fontSize": 13,
+              "color": "#6E7C74",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "composeRuns": [
+    {
+      "index": 1,
+      "frame": {
+        "left": 0,
+        "top": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "baseUnit": 8,
+      "root": {
+        "path": "0",
+        "kind": "layers",
+        "name": "packaging-gtm-root",
+        "requestedSize": {
+          "width": {
+            "mode": "fill",
+            "value": 1
+          },
+          "height": {
+            "mode": "fill",
+            "value": 1
+          }
+        },
+        "intrinsicSize": {
+          "width": 0,
+          "height": 0
+        },
+        "frame": {
+          "left": 0,
+          "top": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "children": [
+          {
+            "path": "0.0",
+            "kind": "shape",
+            "name": "background",
+            "requestedSize": {
+              "width": {
+                "mode": "fill",
+                "value": 1
+              },
+              "height": {
+                "mode": "fill",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 0,
+              "height": 0
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "snappedFrame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/kzupwb2h",
+              "id": "1",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.1",
+            "kind": "column",
+            "name": "packaging-gtm-content",
+            "requestedSize": {
+              "width": {
+                "mode": "fill",
+                "value": 1
+              },
+              "height": {
+                "mode": "fill",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 176,
+              "height": 337
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "children": [
+              {
+                "path": "0.1.0",
+                "kind": "column",
+                "name": "packaging-gtm-title-stack",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "hug"
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 1317.43,
+                  "height": 128
+                },
+                "frame": {
+                  "left": 88,
+                  "top": 64,
+                  "width": 1744,
+                  "height": 154
+                },
+                "children": [
+                  {
+                    "path": "0.1.0.0",
+                    "kind": "text",
+                    "name": "packaging-gtm-eyebrow",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 21
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 64,
+                      "width": 1744,
+                      "height": 21
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 64,
+                      "width": 1744,
+                      "height": 22
+                    },
+                    "children": [],
+                    "text": "GO-TO-MARKET",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/re1w7mp0",
+                      "id": "2",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.0.1",
+                    "kind": "text",
+                    "name": "packaging-gtm-title",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "wrap",
+                        "max": 1500
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 1317.43,
+                      "height": 55
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 98,
+                      "width": 1317.43,
+                      "height": 55
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 98,
+                      "width": 1318,
+                      "height": 56
+                    },
+                    "children": [],
+                    "text": "Package it as assurance infrastructure for agentic delivery.",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/2t83itgf",
+                      "id": "3",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.0.2",
+                    "kind": "text",
+                    "name": "packaging-gtm-subtitle",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "wrap",
+                        "max": 1330
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 1237.13,
+                      "height": 26
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 166,
+                      "width": 1237.13,
+                      "height": 52
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 166,
+                      "width": 1238,
+                      "height": 52
+                    },
+                    "children": [],
+                    "text": "The wedge is not cheaper coding. The wedge is a buyer-approved delivery system that makes agent work inspectable.",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/9w3m94fu",
+                      "id": "4",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "gap": 13,
+                "effectiveGap": 13,
+                "justifyOffset": 0,
+                "align": "start",
+                "justify": "start",
+                "contentFrame": {
+                  "left": 88,
+                  "top": 64,
+                  "width": 1744,
+                  "height": 154
+                },
+                "items": [
+                  {
+                    "path": "0.1.0.0",
+                    "frame": {
+                      "left": 88,
+                      "top": 64,
+                      "width": 1744,
+                      "height": 21
+                    }
+                  },
+                  {
+                    "path": "0.1.0.1",
+                    "frame": {
+                      "left": 88,
+                      "top": 98,
+                      "width": 1317.43,
+                      "height": 55
+                    }
+                  },
+                  {
+                    "path": "0.1.0.2",
+                    "frame": {
+                      "left": 88,
+                      "top": 166,
+                      "width": 1237.13,
+                      "height": 52
+                    }
+                  }
+                ]
+              },
+              {
+                "path": "0.1.1",
+                "kind": "grid",
+                "name": "gtm-grid",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "fill",
+                    "value": 1
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 52,
+                  "height": 109
+                },
+                "frame": {
+                  "left": 88,
+                  "top": 252,
+                  "width": 1744,
+                  "height": 704
+                },
+                "children": [
+                  {
+                    "path": "0.1.1.0",
+                    "kind": "panel",
+                    "name": "step-Pilot-assured-project-run",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 48,
+                      "height": 88
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 550,
+                      "width": 564,
+                      "height": 108
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 550,
+                      "width": 564,
+                      "height": 108
+                    },
+                    "children": [
+                      {
+                        "path": "0.1.1.0.0",
+                        "kind": "row",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 62,
+                          "height": 48
+                        },
+                        "frame": {
+                          "left": 112,
+                          "top": 570,
+                          "width": 516,
+                          "height": 66
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.0.0.0",
+                            "kind": "text",
+                            "name": "step-num-Pilot",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fixed",
+                                "value": 44
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 44,
+                              "height": 23
+                            },
+                            "frame": {
+                              "left": 112,
+                              "top": 570,
+                              "width": 44,
+                              "height": 23
+                            },
+                            "snappedFrame": {
+                              "left": 112,
+                              "top": 570,
+                              "width": 44,
+                              "height": 24
+                            },
+                            "children": [],
+                            "text": "Pilot",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/rqd4vmtw",
+                              "id": "6",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.0.0.1",
+                            "kind": "column",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 48
+                            },
+                            "frame": {
+                              "left": 174,
+                              "top": 570,
+                              "width": 454,
+                              "height": 66
+                            },
+                            "children": [
+                              {
+                                "path": "0.1.1.0.0.1.0",
+                                "kind": "text",
+                                "name": "step-title-Pilot",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 24
+                                },
+                                "frame": {
+                                  "left": 174,
+                                  "top": 570,
+                                  "width": 454,
+                                  "height": 24
+                                },
+                                "snappedFrame": {
+                                  "left": 174,
+                                  "top": 570,
+                                  "width": 454,
+                                  "height": 24
+                                },
+                                "children": [],
+                                "text": "Assured project run",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/25kb6xkf",
+                                  "id": "7",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.1.1.0.0.1.1",
+                                "kind": "text",
+                                "name": "step-body-Pilot",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 18
+                                },
+                                "frame": {
+                                  "left": 174,
+                                  "top": 600,
+                                  "width": 454,
+                                  "height": 36
+                                },
+                                "snappedFrame": {
+                                  "left": 174,
+                                  "top": 600,
+                                  "width": 454,
+                                  "height": 36
+                                },
+                                "children": [],
+                                "text": "One greenfield and one brownfield run with project book and evidence ledger.",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/94fu18jq",
+                                  "id": "8",
+                                  "kind": "shape"
+                                }
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 6,
+                            "effectiveGap": 6,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 174,
+                              "top": 570,
+                              "width": 454,
+                              "height": 66
+                            },
+                            "items": [
+                              {
+                                "path": "0.1.1.0.0.1.0",
+                                "frame": {
+                                  "left": 174,
+                                  "top": 570,
+                                  "width": 454,
+                                  "height": 24
+                                }
+                              },
+                              {
+                                "path": "0.1.1.0.0.1.1",
+                                "frame": {
+                                  "left": 174,
+                                  "top": 600,
+                                  "width": 454,
+                                  "height": 36
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 18,
+                        "effectiveGap": 18,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 112,
+                          "top": 570,
+                          "width": 516,
+                          "height": 66
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.0.0.0",
+                            "frame": {
+                              "left": 112,
+                              "top": 570,
+                              "width": 44,
+                              "height": 23
+                            }
+                          },
+                          {
+                            "path": "0.1.1.0.0.1",
+                            "frame": {
+                              "left": 174,
+                              "top": 570,
+                              "width": 454,
+                              "height": 66
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "padding": {
+                      "top": 20,
+                      "right": 24,
+                      "bottom": 20,
+                      "left": 24
+                    },
+                    "align": "start",
+                    "justify": "start",
+                    "contentFrame": {
+                      "left": 112,
+                      "top": 570,
+                      "width": 516,
+                      "height": 68
+                    },
+                    "element": {
+                      "aid": "sh/kb6xkf6d",
+                      "id": "5",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.1.1",
+                    "kind": "panel",
+                    "name": "step-Team-delivery-control-plane",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 48,
+                      "height": 88
+                    },
+                    "frame": {
+                      "left": 678,
+                      "top": 550,
+                      "width": 564,
+                      "height": 108
+                    },
+                    "snappedFrame": {
+                      "left": 678,
+                      "top": 550,
+                      "width": 564,
+                      "height": 108
+                    },
+                    "children": [
+                      {
+                        "path": "0.1.1.1.0",
+                        "kind": "row",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 62,
+                          "height": 48
+                        },
+                        "frame": {
+                          "left": 702,
+                          "top": 570,
+                          "width": 516,
+                          "height": 66
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.1.0.0",
+                            "kind": "text",
+                            "name": "step-num-Team",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fixed",
+                                "value": 44
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 44,
+                              "height": 46
+                            },
+                            "frame": {
+                              "left": 702,
+                              "top": 570,
+                              "width": 44,
+                              "height": 46
+                            },
+                            "snappedFrame": {
+                              "left": 702,
+                              "top": 570,
+                              "width": 44,
+                              "height": 46
+                            },
+                            "children": [],
+                            "text": "Team",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/mlkjm1cf",
+                              "id": "10",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.1.0.1",
+                            "kind": "column",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 48
+                            },
+                            "frame": {
+                              "left": 764,
+                              "top": 570,
+                              "width": 454,
+                              "height": 66
+                            },
+                            "children": [
+                              {
+                                "path": "0.1.1.1.0.1.0",
+                                "kind": "text",
+                                "name": "step-title-Team",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 24
+                                },
+                                "frame": {
+                                  "left": 764,
+                                  "top": 570,
+                                  "width": 454,
+                                  "height": 24
+                                },
+                                "snappedFrame": {
+                                  "left": 764,
+                                  "top": 570,
+                                  "width": 454,
+                                  "height": 24
+                                },
+                                "children": [],
+                                "text": "Delivery control plane",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/f6dcbulw",
+                                  "id": "11",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.1.1.1.0.1.1",
+                                "kind": "text",
+                                "name": "step-body-Team",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 18
+                                },
+                                "frame": {
+                                  "left": 764,
+                                  "top": 600,
+                                  "width": 454,
+                                  "height": 36
+                                },
+                                "snappedFrame": {
+                                  "left": 764,
+                                  "top": 600,
+                                  "width": 454,
+                                  "height": 36
+                                },
+                                "children": [],
+                                "text": "Reusable skill bundle, templates, validators, checkpoint process.",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/4r65wjud",
+                                  "id": "12",
+                                  "kind": "shape"
+                                }
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 6,
+                            "effectiveGap": 6,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 764,
+                              "top": 570,
+                              "width": 454,
+                              "height": 66
+                            },
+                            "items": [
+                              {
+                                "path": "0.1.1.1.0.1.0",
+                                "frame": {
+                                  "left": 764,
+                                  "top": 570,
+                                  "width": 454,
+                                  "height": 24
+                                }
+                              },
+                              {
+                                "path": "0.1.1.1.0.1.1",
+                                "frame": {
+                                  "left": 764,
+                                  "top": 600,
+                                  "width": 454,
+                                  "height": 36
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 18,
+                        "effectiveGap": 18,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 702,
+                          "top": 570,
+                          "width": 516,
+                          "height": 66
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.1.0.0",
+                            "frame": {
+                              "left": 702,
+                              "top": 570,
+                              "width": 44,
+                              "height": 46
+                            }
+                          },
+                          {
+                            "path": "0.1.1.1.0.1",
+                            "frame": {
+                              "left": 764,
+                              "top": 570,
+                              "width": 454,
+                              "height": 66
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "padding": {
+                      "top": 20,
+                      "right": 24,
+                      "bottom": 20,
+                      "left": 24
+                    },
+                    "align": "start",
+                    "justify": "start",
+                    "contentFrame": {
+                      "left": 702,
+                      "top": 570,
+                      "width": 516,
+                      "height": 68
+                    },
+                    "element": {
+                      "aid": "sh/kjm1cfa9",
+                      "id": "9",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.1.2",
+                    "kind": "panel",
+                    "name": "step-Enterprise-assurance-platform",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 48,
+                      "height": 109
+                    },
+                    "frame": {
+                      "left": 1268,
+                      "top": 550,
+                      "width": 564,
+                      "height": 108
+                    },
+                    "snappedFrame": {
+                      "left": 1268,
+                      "top": 550,
+                      "width": 564,
+                      "height": 108
+                    },
+                    "children": [
+                      {
+                        "path": "0.1.1.2.0",
+                        "kind": "row",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 62,
+                          "height": 69
+                        },
+                        "frame": {
+                          "left": 1292,
+                          "top": 570,
+                          "width": 516,
+                          "height": 69
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.2.0.0",
+                            "kind": "text",
+                            "name": "step-num-Enterprise",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fixed",
+                                "value": 44
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 44,
+                              "height": 69
+                            },
+                            "frame": {
+                              "left": 1292,
+                              "top": 570,
+                              "width": 44,
+                              "height": 69
+                            },
+                            "snappedFrame": {
+                              "left": 1292,
+                              "top": 570,
+                              "width": 44,
+                              "height": 70
+                            },
+                            "children": [],
+                            "text": "Enterprise",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/mtwra5gb",
+                              "id": "14",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.2.0.1",
+                            "kind": "column",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 48
+                            },
+                            "frame": {
+                              "left": 1354,
+                              "top": 570,
+                              "width": 454,
+                              "height": 66
+                            },
+                            "children": [
+                              {
+                                "path": "0.1.1.2.0.1.0",
+                                "kind": "text",
+                                "name": "step-title-Enterprise",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 24
+                                },
+                                "frame": {
+                                  "left": 1354,
+                                  "top": 570,
+                                  "width": 454,
+                                  "height": 24
+                                },
+                                "snappedFrame": {
+                                  "left": 1354,
+                                  "top": 570,
+                                  "width": 454,
+                                  "height": 24
+                                },
+                                "children": [],
+                                "text": "Assurance platform",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/fepkzupw",
+                                  "id": "15",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.1.1.2.0.1.1",
+                                "kind": "text",
+                                "name": "step-body-Enterprise",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 18
+                                },
+                                "frame": {
+                                  "left": 1354,
+                                  "top": 600,
+                                  "width": 454,
+                                  "height": 36
+                                },
+                                "snappedFrame": {
+                                  "left": 1354,
+                                  "top": 600,
+                                  "width": 454,
+                                  "height": 36
+                                },
+                                "children": [],
+                                "text": "Policy packs, dashboard, SSO, repo/CI integrations, audit export.",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/4zidonyd",
+                                  "id": "16",
+                                  "kind": "shape"
+                                }
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 6,
+                            "effectiveGap": 6,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 1354,
+                              "top": 570,
+                              "width": 454,
+                              "height": 66
+                            },
+                            "items": [
+                              {
+                                "path": "0.1.1.2.0.1.0",
+                                "frame": {
+                                  "left": 1354,
+                                  "top": 570,
+                                  "width": 454,
+                                  "height": 24
+                                }
+                              },
+                              {
+                                "path": "0.1.1.2.0.1.1",
+                                "frame": {
+                                  "left": 1354,
+                                  "top": 600,
+                                  "width": 454,
+                                  "height": 36
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 18,
+                        "effectiveGap": 18,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 1292,
+                          "top": 570,
+                          "width": 516,
+                          "height": 69
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.2.0.0",
+                            "frame": {
+                              "left": 1292,
+                              "top": 570,
+                              "width": 44,
+                              "height": 69
+                            }
+                          },
+                          {
+                            "path": "0.1.1.2.0.1",
+                            "frame": {
+                              "left": 1354,
+                              "top": 570,
+                              "width": 454,
+                              "height": 66
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "padding": {
+                      "top": 20,
+                      "right": 24,
+                      "bottom": 20,
+                      "left": 24
+                    },
+                    "align": "start",
+                    "justify": "start",
+                    "contentFrame": {
+                      "left": 1292,
+                      "top": 570,
+                      "width": 516,
+                      "height": 68
+                    },
+                    "element": {
+                      "aid": "sh/xc3ylc7u",
+                      "id": "13",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "columnGap": 26,
+                "rowGap": 0,
+                "alignItems": "center",
+                "justifyItems": "stretch",
+                "contentFrame": {
+                  "left": 88,
+                  "top": 252,
+                  "width": 1744,
+                  "height": 704
+                },
+                "columns": [
+                  {
+                    "mode": "fr",
+                    "value": 1
+                  },
+                  {
+                    "mode": "fr",
+                    "value": 1
+                  },
+                  {
+                    "mode": "fr",
+                    "value": 1
+                  }
+                ],
+                "autoRows": "auto",
+                "resolvedRows": [
+                  "auto"
+                ],
+                "columnSizes": [
+                  564,
+                  564,
+                  564
+                ],
+                "rowSizes": [
+                  704
+                ],
+                "cells": [
+                  {
+                    "path": "0.1.1.0",
+                    "column": 0,
+                    "row": 0,
+                    "columnSpan": 1,
+                    "rowSpan": 1,
+                    "cellFrame": {
+                      "left": 88,
+                      "top": 252,
+                      "width": 564,
+                      "height": 704
+                    }
+                  },
+                  {
+                    "path": "0.1.1.1",
+                    "column": 1,
+                    "row": 0,
+                    "columnSpan": 1,
+                    "rowSpan": 1,
+                    "cellFrame": {
+                      "left": 678,
+                      "top": 252,
+                      "width": 564,
+                      "height": 704
+                    }
+                  },
+                  {
+                    "path": "0.1.1.2",
+                    "column": 2,
+                    "row": 0,
+                    "columnSpan": 1,
+                    "rowSpan": 1,
+                    "cellFrame": {
+                      "left": 1268,
+                      "top": 252,
+                      "width": 564,
+                      "height": 704
+                    }
+                  }
+                ]
+              },
+              {
+                "path": "0.1.2",
+                "kind": "row",
+                "name": "packaging-gtm-footer-row",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "hug"
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 307.84,
+                  "height": 13
+                },
+                "frame": {
+                  "left": 88,
+                  "top": 990,
+                  "width": 1744,
+                  "height": 26
+                },
+                "children": [
+                  {
+                    "path": "0.1.2.0",
+                    "kind": "text",
+                    "name": "packaging-gtm-footer",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "wrap",
+                        "max": 1200
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 267.84,
+                      "height": 13
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 990,
+                      "width": 267.84,
+                      "height": 28
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 990,
+                      "width": 268,
+                      "height": 28
+                    },
+                    "children": [],
+                    "text": "DFMS pitch deck | software assurance dark factory",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/xkf6dcbu",
+                      "id": "17",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.2.1",
+                    "kind": "text",
+                    "name": "packaging-gtm-page",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 40
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 40,
+                      "height": 13
+                    },
+                    "frame": {
+                      "left": 1792,
+                      "top": 998,
+                      "width": 40,
+                      "height": 12
+                    },
+                    "snappedFrame": {
+                      "left": 1792,
+                      "top": 998,
+                      "width": 40,
+                      "height": 12
+                    },
+                    "children": [],
+                    "text": "32",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/qxs72x4n",
+                      "id": "18",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "gap": 0,
+                "effectiveGap": 1436.16,
+                "justifyOffset": 0,
+                "align": "center",
+                "justify": "between",
+                "contentFrame": {
+                  "left": 88,
+                  "top": 990,
+                  "width": 1744,
+                  "height": 26
+                },
+                "items": [
+                  {
+                    "path": "0.1.2.0",
+                    "frame": {
+                      "left": 88,
+                      "top": 990,
+                      "width": 267.84,
+                      "height": 28
+                    }
+                  },
+                  {
+                    "path": "0.1.2.1",
+                    "frame": {
+                      "left": 1792,
+                      "top": 998,
+                      "width": 40,
+                      "height": 12
+                    }
+                  }
+                ]
+              }
+            ],
+            "padding": {
+              "top": 64,
+              "right": 88,
+              "bottom": 64,
+              "left": 88
+            },
+            "gap": 34,
+            "effectiveGap": 34,
+            "justifyOffset": 0,
+            "align": "start",
+            "justify": "start",
+            "contentFrame": {
+              "left": 88,
+              "top": 64,
+              "width": 1744,
+              "height": 952
+            },
+            "items": [
+              {
+                "path": "0.1.0",
+                "frame": {
+                  "left": 88,
+                  "top": 64,
+                  "width": 1744,
+                  "height": 154
+                }
+              },
+              {
+                "path": "0.1.1",
+                "frame": {
+                  "left": 88,
+                  "top": 252,
+                  "width": 1744,
+                  "height": 704
+                }
+              },
+              {
+                "path": "0.1.2",
+                "frame": {
+                  "left": 88,
+                  "top": 990,
+                  "width": 1744,
+                  "height": 26
+                }
+              }
+            ]
+          }
+        ],
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignItems": "stretch",
+        "justifyItems": "stretch",
+        "contentFrame": {
+          "left": 0,
+          "top": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "items": [
+          {
+            "path": "0.0",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            }
+          },
+          {
+            "path": "0.1",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

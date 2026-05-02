@@ -1,0 +1,4459 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/ynz5i5",
+    "id": "ynz5i5",
+    "slide": 1,
+    "layoutId": "39df3ad4-e207-4cff-a7b3-0934322c7183",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "9c364795-fe59-472e-ba8a-a667cb58489e",
+    "masterLayoutName": "Master",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "39df3ad4-e207-4cff-a7b3-0934322c7183",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "9c364795-fe59-472e-ba8a-a667cb58489e",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "9c364795-fe59-472e-ba8a-a667cb58489e",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ex0nuxc3",
+      "id": "1",
+      "name": "background",
+      "bbox": [
+        0,
+        0,
+        1920,
+        1080
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.9.2.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#09100F",
+      "lineColor": "#09100F",
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/loj2t83i",
+      "id": "2",
+      "name": "cover-kicker",
+      "bbox": [
+        96,
+        340,
+        860,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.9.3"
+      },
+      "geometry": "rect",
+      "text": "SOFTWARE-ASSURED",
+      "textPreview": "SOFTWARE-ASSURED",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "SOFTWARE-ASSURED"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "SOFTWARE-ASSURED",
+          "runs": [
+            {
+              "index": 1,
+              "text": "SOFTWARE-ASSURED",
+              "fontSize": 24,
+              "color": "#9AF2C8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/w3m94fu1",
+      "id": "3",
+      "name": "cover-title",
+      "bbox": [
+        96,
+        392,
+        608,
+        160
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.9.3.0"
+      },
+      "geometry": "rect",
+      "text": "Standardized Dark Factory",
+      "textPreview": "Standardized Dark Factory",
+      "resolvedFontSize": 80,
+      "resolvedTextStyle": {
+        "fontSize": 80,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Standardized"
+          },
+          {
+            "index": 2,
+            "text": "Dark Factory"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Standardized Dark Factory",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Standardized Dark Factory",
+              "fontSize": 80,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3q5o7qpg",
+      "id": "4",
+      "name": "cover-subtitle",
+      "bbox": [
+        96,
+        580,
+        776,
+        88
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.2.0"
+      },
+      "geometry": "rect",
+      "text": "A governed agent swarm that delivers software like a high-trust outsourcing firm, with stronger evidence, standards mapping, and token-budget control.",
+      "textPreview": "A governed agent swarm that delivers software like a high-trust outsourcing firm, with stronger evidence, standards mapping, and token-bu...",
+      "resolvedFontSize": 29,
+      "resolvedTextStyle": {
+        "fontSize": 29,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "A governed agent swarm that delivers software like a high-trust"
+          },
+          {
+            "index": 2,
+            "text": "outsourcing firm, with stronger evidence, standards mapping, and"
+          },
+          {
+            "index": 3,
+            "text": "token-budget control."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "A governed agent swarm that delivers software like a high-trust outsourcing firm, with stronger evidence, standards mapping, and token-budget control.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "A governed agent swarm that delivers software like a high-trust outsourcing firm, with stronger evidence, standards mapping, and token-budget control.",
+              "fontSize": 29,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/e9cvixcz",
+      "id": "5",
+      "name": "pill-standards-based",
+      "bbox": [
+        96,
+        695.5,
+        200,
+        46
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.2.1"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#112A19",
+      "lineColor": "#46D17E",
+      "lineWidth": 1
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/lwval87e",
+      "id": "6",
+      "name": "pill-text-standards-based",
+      "bbox": [
+        114,
+        710,
+        164,
+        16
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.0.3.0.0"
+      },
+      "geometry": "rect",
+      "text": "standards based",
+      "textPreview": "standards based",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "standards based"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "standards based",
+          "runs": [
+            {
+              "index": 1,
+              "text": "standards based",
+              "fontSize": 16,
+              "color": "#BFFAD1",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wb2hwfyx",
+      "id": "7",
+      "name": "pill-evidence-gated",
+      "bbox": [
+        310,
+        695.5,
+        190,
+        46
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.0.3.1"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#102D29",
+      "lineColor": "#2DD4BF",
+      "lineWidth": 1
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/32lszqtc",
+      "id": "8",
+      "name": "pill-text-evidence-gated",
+      "bbox": [
+        328,
+        710,
+        156,
+        16
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.0.3.1.0"
+      },
+      "geometry": "rect",
+      "text": "evidence gated",
+      "textPreview": "evidence gated",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "evidence gated"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "evidence gated",
+          "runs": [
+            {
+              "index": 1,
+              "text": "evidence gated",
+              "fontSize": 16,
+              "color": "#9AF2C8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ahoza1gv",
+      "id": "9",
+      "name": "pill-token-governed",
+      "bbox": [
+        514,
+        695.5,
+        190,
+        46
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.0.3.2"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#2C2414",
+      "lineColor": "#F2B84B",
+      "lineWidth": 1
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cj6tovah",
+      "id": "10",
+      "name": "pill-text-token-governed",
+      "bbox": [
+        532,
+        710,
+        156,
+        16
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.0.3.2.0"
+      },
+      "geometry": "rect",
+      "text": "token governed",
+      "textPreview": "token governed",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "token governed"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "token governed",
+          "runs": [
+            {
+              "index": 1,
+              "text": "token governed",
+              "fontSize": 16,
+              "color": "#FFE1A1",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/54zidony",
+      "id": "11",
+      "name": "cover-lattice-label",
+      "bbox": [
+        1032,
+        234,
+        792,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0"
+      },
+      "geometry": "rect",
+      "text": "CONTROL GRAPH",
+      "textPreview": "CONTROL GRAPH",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "CONTROL GRAPH"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "CONTROL GRAPH",
+          "runs": [
+            {
+              "index": 1,
+              "text": "CONTROL GRAPH",
+              "fontSize": 18,
+              "color": "#6E7C74",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/udg7adsj",
+      "id": "12",
+      "name": "cover-gate-0-a",
+      "bbox": [
+        1032,
+        276,
+        70,
+        10
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.0"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#2DD4BF",
+      "lineColor": "#29443B",
+      "lineWidth": 0
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nyd0z610",
+      "id": "13",
+      "name": "cover-gate-0-b",
+      "bbox": [
+        1116,
+        276,
+        18,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.1"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#46D17E",
+      "lineColor": "#29443B",
+      "lineWidth": 0
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cvixczed",
+      "id": "14",
+      "name": "cover-gate-0-c",
+      "bbox": [
+        1144,
+        272,
+        160,
+        10
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.2"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#29443B",
+      "lineColor": "#29443B",
+      "lineWidth": 0
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5gbq1ory",
+      "id": "15",
+      "name": "cover-gate-1-a",
+      "bbox": [
+        1032,
+        344,
+        98,
+        10
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.2.0"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#F2B84B",
+      "lineColor": "#29443B",
+      "lineWidth": 0
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/upwb2hwf",
+      "id": "16",
+      "name": "cover-gate-1-b",
+      "bbox": [
+        1144,
+        340,
+        18,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.2.1"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#F26464",
+      "lineColor": "#29443B",
+      "lineWidth": 0
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nap4r65w",
+      "id": "17",
+      "name": "cover-gate-1-c",
+      "bbox": [
+        1176,
+        344,
+        182,
+        10
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.2.2"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#29443B",
+      "lineColor": "#29443B",
+      "lineWidth": 0
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/c7u54zid",
+      "id": "18",
+      "name": "cover-gate-2-a",
+      "bbox": [
+        1032,
+        408,
+        126,
+        10
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.3.0"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#29443B",
+      "lineColor": "#29443B",
+      "lineWidth": 0
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1orytsvu",
+      "id": "19",
+      "name": "cover-gate-2-b",
+      "bbox": [
+        1172,
+        408,
+        18,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.3.1"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#46D17E",
+      "lineColor": "#29443B",
+      "lineWidth": 0
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5kb6xkf6",
+      "id": "20",
+      "name": "cover-gate-2-c",
+      "bbox": [
+        1200,
+        408,
+        204,
+        10
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.3.2"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#29443B",
+      "lineColor": "#29443B",
+      "lineWidth": 0
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/czed8v6p",
+      "id": "21",
+      "name": "cover-gate-3-a",
+      "bbox": [
+        1032,
+        472,
+        70,
+        10
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.4.0"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#2DD4BF",
+      "lineColor": "#29443B",
+      "lineWidth": 0
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/neloj2t8",
+      "id": "22",
+      "name": "cover-gate-3-b",
+      "bbox": [
+        1116,
+        472,
+        18,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.4.1"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#F26464",
+      "lineColor": "#29443B",
+      "lineWidth": 0
+    },
+    {
+      "order": 23,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ytsvu9kn",
+      "id": "23",
+      "name": "cover-gate-3-c",
+      "bbox": [
+        1144,
+        472,
+        226,
+        10
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.4.2"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#29443B",
+      "lineColor": "#29443B",
+      "lineWidth": 0
+    },
+    {
+      "order": 24,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5sneloj2",
+      "id": "24",
+      "name": "cover-gate-4-a",
+      "bbox": [
+        1032,
+        536,
+        98,
+        10
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.5.0"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#F2B84B",
+      "lineColor": "#29443B",
+      "lineWidth": 0
+    },
+    {
+      "order": 25,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cbulwval",
+      "id": "25",
+      "name": "cover-gate-4-b",
+      "bbox": [
+        1144,
+        540,
+        18,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.5.1"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#46D17E",
+      "lineColor": "#29443B",
+      "lineWidth": 0
+    },
+    {
+      "order": 26,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nqxs72x4",
+      "id": "26",
+      "name": "cover-gate-4-c",
+      "bbox": [
+        1176,
+        536,
+        160,
+        10
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.5.2"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#29443B",
+      "lineColor": "#29443B",
+      "lineWidth": 0
+    },
+    {
+      "order": 27,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/u54zidon",
+      "id": "27",
+      "name": "cover-gate-5-a",
+      "bbox": [
+        1032,
+        608,
+        126,
+        10
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.6.0"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#29443B",
+      "lineColor": "#29443B",
+      "lineWidth": 0
+    },
+    {
+      "order": 28,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5wjudg7a",
+      "id": "28",
+      "name": "cover-gate-5-b",
+      "bbox": [
+        1172,
+        604,
+        18,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.6.1"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#F26464",
+      "lineColor": "#29443B",
+      "lineWidth": 0
+    },
+    {
+      "order": 29,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gbq1oryt",
+      "id": "29",
+      "name": "cover-gate-5-c",
+      "bbox": [
+        1200,
+        608,
+        182,
+        10
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.6.2"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#29443B",
+      "lineColor": "#29443B",
+      "lineWidth": 0
+    },
+    {
+      "order": 30,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qd4vmtwr",
+      "id": "30",
+      "name": "cover-gate-6-a",
+      "bbox": [
+        1032,
+        672,
+        70,
+        10
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.7.0"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#2DD4BF",
+      "lineColor": "#29443B",
+      "lineWidth": 0
+    },
+    {
+      "order": 31,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fyxobm58",
+      "id": "31",
+      "name": "cover-gate-6-b",
+      "bbox": [
+        1116,
+        672,
+        18,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.7.1"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#46D17E",
+      "lineColor": "#29443B",
+      "lineWidth": 0
+    },
+    {
+      "order": 32,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8jqh0fep",
+      "id": "32",
+      "name": "cover-gate-6-c",
+      "bbox": [
+        1144,
+        672,
+        204,
+        10
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.7.2"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#29443B",
+      "lineColor": "#29443B",
+      "lineWidth": 0
+    },
+    {
+      "order": 33,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/x4nap4r6",
+      "id": "33",
+      "name": "cover-gate-7-a",
+      "bbox": [
+        1032,
+        736,
+        98,
+        10
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.8.0"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#F2B84B",
+      "lineColor": "#29443B",
+      "lineWidth": 0
+    },
+    {
+      "order": 34,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qpg3ex0n",
+      "id": "34",
+      "name": "cover-gate-7-b",
+      "bbox": [
+        1144,
+        736,
+        18,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.8.1"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#F26464",
+      "lineColor": "#29443B",
+      "lineWidth": 0
+    },
+    {
+      "order": 35,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fa9w3m94",
+      "id": "35",
+      "name": "cover-gate-7-c",
+      "bbox": [
+        1176,
+        736,
+        226,
+        10
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.8.2"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#29443B",
+      "lineColor": "#29443B",
+      "lineWidth": 0
+    },
+    {
+      "order": 36,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8v6psfil",
+      "id": "36",
+      "name": "pill-trace",
+      "bbox": [
+        1031.04,
+        802,
+        116,
+        46
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.9.0"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#102D29",
+      "lineColor": "#2DD4BF",
+      "lineWidth": 1
+    },
+    {
+      "order": 37,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/xczed8v6",
+      "id": "37",
+      "name": "pill-text-trace",
+      "bbox": [
+        1050,
+        818,
+        80,
+        16
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.9.0.0"
+      },
+      "geometry": "rect",
+      "text": "trace",
+      "textPreview": "trace",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "trace"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "trace",
+          "runs": [
+            {
+              "index": 1,
+              "text": "trace",
+              "fontSize": 16,
+              "color": "#9AF2C8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 38,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qtcj6tov",
+      "id": "38",
+      "name": "pill-rubric",
+      "bbox": [
+        1163.04,
+        802,
+        128,
+        46
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.9.1"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#112A19",
+      "lineColor": "#46D17E",
+      "lineWidth": 1
+    },
+    {
+      "order": 39,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/je9cvixc",
+      "id": "39",
+      "name": "pill-text-rubric",
+      "bbox": [
+        1182,
+        818,
+        92,
+        16
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.9.1.0"
+      },
+      "geometry": "rect",
+      "text": "rubric",
+      "textPreview": "rubric",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "rubric"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "rubric",
+          "runs": [
+            {
+              "index": 1,
+              "text": "rubric",
+              "fontSize": 16,
+              "color": "#BFFAD1",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 40,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3itgfmlk",
+      "id": "40",
+      "name": "pill-handoff",
+      "bbox": [
+        1307.04,
+        802,
+        138,
+        46
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.9.2"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#2C2414",
+      "lineColor": "#F2B84B",
+      "lineWidth": 1
+    },
+    {
+      "order": 41,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ex0nuxc3",
+      "id": "41",
+      "name": "pill-text-handoff",
+      "bbox": [
+        1324,
+        818,
+        104,
+        16
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.9.2.0"
+      },
+      "geometry": "rect",
+      "text": "handoff",
+      "textPreview": "handoff",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "handoff"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "handoff",
+          "runs": [
+            {
+              "index": 1,
+              "text": "handoff",
+              "fontSize": 16,
+              "color": "#FFE1A1",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 42,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/loj2t83i",
+      "id": "42",
+      "name": "pill-sre",
+      "bbox": [
+        1461.04,
+        802,
+        98,
+        46
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.9.3"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#2B1717",
+      "lineColor": "#F26464",
+      "lineWidth": 1
+    },
+    {
+      "order": 43,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/w3m94fu1",
+      "id": "43",
+      "name": "pill-text-sre",
+      "bbox": [
+        1478,
+        818,
+        64,
+        16
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.9.3.0"
+      },
+      "geometry": "rect",
+      "text": "SRE",
+      "textPreview": "SRE",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "SRE"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "SRE",
+          "runs": [
+            {
+              "index": 1,
+              "text": "SRE",
+              "fontSize": 16,
+              "color": "#FFC2C2",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 44,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3q5o7qpg",
+      "id": "44",
+      "name": "cover-footer-left",
+      "bbox": [
+        96,
+        1020,
+        186,
+        12
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.2.0"
+      },
+      "geometry": "rect",
+      "text": "Pitch deck | DFMS product concept",
+      "textPreview": "Pitch deck | DFMS product concept",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Pitch deck | DFMS product"
+          },
+          {
+            "index": 2,
+            "text": "concept"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Pitch deck | DFMS product concept",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Pitch deck | DFMS product concept",
+              "fontSize": 13,
+              "color": "#6E7C74"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 45,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/e9cvixcz",
+      "id": "45",
+      "name": "cover-footer-right",
+      "bbox": [
+        1798,
+        1004,
+        26,
+        28
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.2.1"
+      },
+      "geometry": "rect",
+      "text": "2026",
+      "textPreview": "2026",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "202"
+          },
+          {
+            "index": 2,
+            "text": "6"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "2026",
+          "runs": [
+            {
+              "index": 1,
+              "text": "2026",
+              "fontSize": 13,
+              "color": "#6E7C74",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "composeRuns": [
+    {
+      "index": 1,
+      "frame": {
+        "left": 0,
+        "top": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "baseUnit": 8,
+      "root": {
+        "path": "0",
+        "kind": "layers",
+        "name": "cover-root",
+        "requestedSize": {
+          "width": {
+            "mode": "fill",
+            "value": 1
+          },
+          "height": {
+            "mode": "fill",
+            "value": 1
+          }
+        },
+        "intrinsicSize": {
+          "width": 0,
+          "height": 109
+        },
+        "frame": {
+          "left": 0,
+          "top": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "children": [
+          {
+            "path": "0.0",
+            "kind": "shape",
+            "name": "background",
+            "requestedSize": {
+              "width": {
+                "mode": "fill",
+                "value": 1
+              },
+              "height": {
+                "mode": "fill",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 0,
+              "height": 0
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "snappedFrame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/ex0nuxc3",
+              "id": "1",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.1",
+            "kind": "grid",
+            "name": "cover-grid",
+            "requestedSize": {
+              "width": {
+                "mode": "fill",
+                "value": 1
+              },
+              "height": {
+                "mode": "fill",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 268,
+              "height": 814
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "children": [
+              {
+                "path": "0.1.0",
+                "kind": "column",
+                "name": "cover-type",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 650
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 775.35,
+                  "height": 401
+                },
+                "frame": {
+                  "left": 96,
+                  "top": 216,
+                  "width": 859.04,
+                  "height": 650
+                },
+                "children": [
+                  {
+                    "path": "0.1.0.0",
+                    "kind": "text",
+                    "name": "cover-kicker",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 24
+                    },
+                    "frame": {
+                      "left": 96,
+                      "top": 340.5,
+                      "width": 859.04,
+                      "height": 24
+                    },
+                    "snappedFrame": {
+                      "left": 96,
+                      "top": 340,
+                      "width": 860,
+                      "height": 24
+                    },
+                    "children": [],
+                    "text": "SOFTWARE-ASSURED",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/loj2t83i",
+                      "id": "2",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.0.1",
+                    "kind": "text",
+                    "name": "cover-title",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "wrap",
+                        "max": 850
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 608.03,
+                      "height": 160
+                    },
+                    "frame": {
+                      "left": 96,
+                      "top": 392.5,
+                      "width": 608.03,
+                      "height": 160
+                    },
+                    "snappedFrame": {
+                      "left": 96,
+                      "top": 392,
+                      "width": 608,
+                      "height": 160
+                    },
+                    "children": [],
+                    "text": "Standardized Dark Factory",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/w3m94fu1",
+                      "id": "3",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.0.2",
+                    "kind": "text",
+                    "name": "cover-subtitle",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "wrap",
+                        "max": 860
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 775.35,
+                      "height": 87
+                    },
+                    "frame": {
+                      "left": 96,
+                      "top": 580.5,
+                      "width": 775.35,
+                      "height": 87
+                    },
+                    "snappedFrame": {
+                      "left": 96,
+                      "top": 580,
+                      "width": 776,
+                      "height": 88
+                    },
+                    "children": [],
+                    "text": "A governed agent swarm that delivers software like a high-trust outsourcing firm, with stronger evidence, standards mapping, and token-budget control.",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/3q5o7qpg",
+                      "id": "4",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.0.3",
+                    "kind": "row",
+                    "name": "cover-pills",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 608,
+                      "height": 46
+                    },
+                    "frame": {
+                      "left": 96,
+                      "top": 695.5,
+                      "width": 859.04,
+                      "height": 46
+                    },
+                    "children": [
+                      {
+                        "path": "0.1.0.3.0",
+                        "kind": "panel",
+                        "name": "pill-standards-based",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fixed",
+                            "value": 200
+                          },
+                          "height": {
+                            "mode": "fixed",
+                            "value": 46
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 36,
+                          "height": 36
+                        },
+                        "frame": {
+                          "left": 96,
+                          "top": 695.5,
+                          "width": 200,
+                          "height": 46
+                        },
+                        "snappedFrame": {
+                          "left": 96,
+                          "top": 695.5,
+                          "width": 200,
+                          "height": 46
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.0.3.0.0",
+                            "kind": "text",
+                            "name": "pill-text-standards-based",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 16
+                            },
+                            "frame": {
+                              "left": 114,
+                              "top": 710,
+                              "width": 164,
+                              "height": 16
+                            },
+                            "snappedFrame": {
+                              "left": 114,
+                              "top": 710,
+                              "width": 164,
+                              "height": 16
+                            },
+                            "children": [],
+                            "text": "standards based",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/lwval87e",
+                              "id": "6",
+                              "kind": "shape"
+                            }
+                          }
+                        ],
+                        "padding": {
+                          "top": 10,
+                          "right": 18,
+                          "bottom": 10,
+                          "left": 18
+                        },
+                        "align": "center",
+                        "justify": "center",
+                        "contentFrame": {
+                          "left": 114,
+                          "top": 705.5,
+                          "width": 164,
+                          "height": 26
+                        },
+                        "element": {
+                          "aid": "sh/e9cvixcz",
+                          "id": "5",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.1.0.3.1",
+                        "kind": "panel",
+                        "name": "pill-evidence-gated",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fixed",
+                            "value": 190
+                          },
+                          "height": {
+                            "mode": "fixed",
+                            "value": 46
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 36,
+                          "height": 36
+                        },
+                        "frame": {
+                          "left": 310,
+                          "top": 695.5,
+                          "width": 190,
+                          "height": 46
+                        },
+                        "snappedFrame": {
+                          "left": 310,
+                          "top": 695.5,
+                          "width": 190,
+                          "height": 46
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.0.3.1.0",
+                            "kind": "text",
+                            "name": "pill-text-evidence-gated",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 16
+                            },
+                            "frame": {
+                              "left": 328,
+                              "top": 710,
+                              "width": 156,
+                              "height": 16
+                            },
+                            "snappedFrame": {
+                              "left": 328,
+                              "top": 710,
+                              "width": 156,
+                              "height": 16
+                            },
+                            "children": [],
+                            "text": "evidence gated",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/32lszqtc",
+                              "id": "8",
+                              "kind": "shape"
+                            }
+                          }
+                        ],
+                        "padding": {
+                          "top": 10,
+                          "right": 18,
+                          "bottom": 10,
+                          "left": 18
+                        },
+                        "align": "center",
+                        "justify": "center",
+                        "contentFrame": {
+                          "left": 328,
+                          "top": 705.5,
+                          "width": 154,
+                          "height": 26
+                        },
+                        "element": {
+                          "aid": "sh/wb2hwfyx",
+                          "id": "7",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.1.0.3.2",
+                        "kind": "panel",
+                        "name": "pill-token-governed",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fixed",
+                            "value": 190
+                          },
+                          "height": {
+                            "mode": "fixed",
+                            "value": 46
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 36,
+                          "height": 36
+                        },
+                        "frame": {
+                          "left": 514,
+                          "top": 695.5,
+                          "width": 190,
+                          "height": 46
+                        },
+                        "snappedFrame": {
+                          "left": 514,
+                          "top": 695.5,
+                          "width": 190,
+                          "height": 46
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.0.3.2.0",
+                            "kind": "text",
+                            "name": "pill-text-token-governed",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 16
+                            },
+                            "frame": {
+                              "left": 532,
+                              "top": 710,
+                              "width": 156,
+                              "height": 16
+                            },
+                            "snappedFrame": {
+                              "left": 532,
+                              "top": 710,
+                              "width": 156,
+                              "height": 16
+                            },
+                            "children": [],
+                            "text": "token governed",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/cj6tovah",
+                              "id": "10",
+                              "kind": "shape"
+                            }
+                          }
+                        ],
+                        "padding": {
+                          "top": 10,
+                          "right": 18,
+                          "bottom": 10,
+                          "left": 18
+                        },
+                        "align": "center",
+                        "justify": "center",
+                        "contentFrame": {
+                          "left": 532,
+                          "top": 705.5,
+                          "width": 154,
+                          "height": 26
+                        },
+                        "element": {
+                          "aid": "sh/ahoza1gv",
+                          "id": "9",
+                          "kind": "shape"
+                        }
+                      }
+                    ],
+                    "padding": {
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    },
+                    "gap": 14,
+                    "effectiveGap": 14,
+                    "justifyOffset": 0,
+                    "align": "start",
+                    "justify": "start",
+                    "contentFrame": {
+                      "left": 96,
+                      "top": 695.5,
+                      "width": 859.04,
+                      "height": 46
+                    },
+                    "items": [
+                      {
+                        "path": "0.1.0.3.0",
+                        "frame": {
+                          "left": 96,
+                          "top": 695.5,
+                          "width": 200,
+                          "height": 46
+                        }
+                      },
+                      {
+                        "path": "0.1.0.3.1",
+                        "frame": {
+                          "left": 310,
+                          "top": 695.5,
+                          "width": 190,
+                          "height": 46
+                        }
+                      },
+                      {
+                        "path": "0.1.0.3.2",
+                        "frame": {
+                          "left": 514,
+                          "top": 695.5,
+                          "width": 190,
+                          "height": 46
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "gap": 28,
+                "effectiveGap": 28,
+                "justifyOffset": 124.5,
+                "align": "start",
+                "justify": "center",
+                "contentFrame": {
+                  "left": 96,
+                  "top": 216,
+                  "width": 859.04,
+                  "height": 650
+                },
+                "items": [
+                  {
+                    "path": "0.1.0.0",
+                    "frame": {
+                      "left": 96,
+                      "top": 340.5,
+                      "width": 859.04,
+                      "height": 24
+                    }
+                  },
+                  {
+                    "path": "0.1.0.1",
+                    "frame": {
+                      "left": 96,
+                      "top": 392.5,
+                      "width": 608.03,
+                      "height": 160
+                    }
+                  },
+                  {
+                    "path": "0.1.0.2",
+                    "frame": {
+                      "left": 96,
+                      "top": 580.5,
+                      "width": 775.35,
+                      "height": 87
+                    }
+                  },
+                  {
+                    "path": "0.1.0.3",
+                    "frame": {
+                      "left": 96,
+                      "top": 695.5,
+                      "width": 859.04,
+                      "height": 46
+                    }
+                  }
+                ]
+              },
+              {
+                "path": "0.1.1",
+                "kind": "column",
+                "name": "cover-lattice",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 650
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 0,
+                  "height": 614
+                },
+                "frame": {
+                  "left": 1031.04,
+                  "top": 216,
+                  "width": 792.96,
+                  "height": 650
+                },
+                "children": [
+                  {
+                    "path": "0.1.1.0",
+                    "kind": "text",
+                    "name": "cover-lattice-label",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 18
+                    },
+                    "frame": {
+                      "left": 1031.04,
+                      "top": 234,
+                      "width": 792.96,
+                      "height": 18
+                    },
+                    "snappedFrame": {
+                      "left": 1032,
+                      "top": 234,
+                      "width": 792,
+                      "height": 18
+                    },
+                    "children": [],
+                    "text": "CONTROL GRAPH",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/54zidony",
+                      "id": "11",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.1.1",
+                    "kind": "row",
+                    "name": "cover-rail-row-0",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 44
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 276,
+                      "height": 18
+                    },
+                    "frame": {
+                      "left": 1031.04,
+                      "top": 274,
+                      "width": 792.96,
+                      "height": 44
+                    },
+                    "children": [
+                      {
+                        "path": "0.1.1.1.0",
+                        "kind": "shape",
+                        "name": "cover-gate-0-a",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fixed",
+                            "value": 70
+                          },
+                          "height": {
+                            "mode": "fixed",
+                            "value": 10
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 70,
+                          "height": 10
+                        },
+                        "frame": {
+                          "left": 1031.04,
+                          "top": 274,
+                          "width": 70,
+                          "height": 10
+                        },
+                        "snappedFrame": {
+                          "left": 1032,
+                          "top": 276,
+                          "width": 70,
+                          "height": 10
+                        },
+                        "children": [],
+                        "geometry": "rect",
+                        "element": {
+                          "aid": "sh/udg7adsj",
+                          "id": "12",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.1.1.1.1",
+                        "kind": "shape",
+                        "name": "cover-gate-0-b",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fixed",
+                            "value": 18
+                          },
+                          "height": {
+                            "mode": "fixed",
+                            "value": 18
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 18,
+                          "height": 18
+                        },
+                        "frame": {
+                          "left": 1115.04,
+                          "top": 274,
+                          "width": 18,
+                          "height": 18
+                        },
+                        "snappedFrame": {
+                          "left": 1116,
+                          "top": 276,
+                          "width": 18,
+                          "height": 18
+                        },
+                        "children": [],
+                        "geometry": "rect",
+                        "element": {
+                          "aid": "sh/nyd0z610",
+                          "id": "13",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.1.1.1.2",
+                        "kind": "shape",
+                        "name": "cover-gate-0-c",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fixed",
+                            "value": 160
+                          },
+                          "height": {
+                            "mode": "fixed",
+                            "value": 10
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 160,
+                          "height": 10
+                        },
+                        "frame": {
+                          "left": 1147.04,
+                          "top": 274,
+                          "width": 160,
+                          "height": 10
+                        },
+                        "snappedFrame": {
+                          "left": 1144,
+                          "top": 272,
+                          "width": 160,
+                          "height": 10
+                        },
+                        "children": [],
+                        "geometry": "rect",
+                        "element": {
+                          "aid": "sh/cvixczed",
+                          "id": "14",
+                          "kind": "shape"
+                        }
+                      }
+                    ],
+                    "padding": {
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    },
+                    "gap": 14,
+                    "effectiveGap": 14,
+                    "justifyOffset": 0,
+                    "align": "start",
+                    "justify": "start",
+                    "contentFrame": {
+                      "left": 1031.04,
+                      "top": 274,
+                      "width": 792.96,
+                      "height": 44
+                    },
+                    "items": [
+                      {
+                        "path": "0.1.1.1.0",
+                        "frame": {
+                          "left": 1031.04,
+                          "top": 274,
+                          "width": 70,
+                          "height": 10
+                        }
+                      },
+                      {
+                        "path": "0.1.1.1.1",
+                        "frame": {
+                          "left": 1115.04,
+                          "top": 274,
+                          "width": 18,
+                          "height": 18
+                        }
+                      },
+                      {
+                        "path": "0.1.1.1.2",
+                        "frame": {
+                          "left": 1147.04,
+                          "top": 274,
+                          "width": 160,
+                          "height": 10
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "path": "0.1.1.2",
+                    "kind": "row",
+                    "name": "cover-rail-row-1",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 44
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 326,
+                      "height": 18
+                    },
+                    "frame": {
+                      "left": 1031.04,
+                      "top": 340,
+                      "width": 792.96,
+                      "height": 44
+                    },
+                    "children": [
+                      {
+                        "path": "0.1.1.2.0",
+                        "kind": "shape",
+                        "name": "cover-gate-1-a",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fixed",
+                            "value": 98
+                          },
+                          "height": {
+                            "mode": "fixed",
+                            "value": 10
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 98,
+                          "height": 10
+                        },
+                        "frame": {
+                          "left": 1031.04,
+                          "top": 340,
+                          "width": 98,
+                          "height": 10
+                        },
+                        "snappedFrame": {
+                          "left": 1032,
+                          "top": 344,
+                          "width": 98,
+                          "height": 10
+                        },
+                        "children": [],
+                        "geometry": "rect",
+                        "element": {
+                          "aid": "sh/5gbq1ory",
+                          "id": "15",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.1.1.2.1",
+                        "kind": "shape",
+                        "name": "cover-gate-1-b",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fixed",
+                            "value": 18
+                          },
+                          "height": {
+                            "mode": "fixed",
+                            "value": 18
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 18,
+                          "height": 18
+                        },
+                        "frame": {
+                          "left": 1143.04,
+                          "top": 340,
+                          "width": 18,
+                          "height": 18
+                        },
+                        "snappedFrame": {
+                          "left": 1144,
+                          "top": 340,
+                          "width": 18,
+                          "height": 18
+                        },
+                        "children": [],
+                        "geometry": "rect",
+                        "element": {
+                          "aid": "sh/upwb2hwf",
+                          "id": "16",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.1.1.2.2",
+                        "kind": "shape",
+                        "name": "cover-gate-1-c",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fixed",
+                            "value": 182
+                          },
+                          "height": {
+                            "mode": "fixed",
+                            "value": 10
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 182,
+                          "height": 10
+                        },
+                        "frame": {
+                          "left": 1175.04,
+                          "top": 340,
+                          "width": 182,
+                          "height": 10
+                        },
+                        "snappedFrame": {
+                          "left": 1176,
+                          "top": 344,
+                          "width": 182,
+                          "height": 10
+                        },
+                        "children": [],
+                        "geometry": "rect",
+                        "element": {
+                          "aid": "sh/nap4r65w",
+                          "id": "17",
+                          "kind": "shape"
+                        }
+                      }
+                    ],
+                    "padding": {
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    },
+                    "gap": 14,
+                    "effectiveGap": 14,
+                    "justifyOffset": 0,
+                    "align": "start",
+                    "justify": "start",
+                    "contentFrame": {
+                      "left": 1031.04,
+                      "top": 340,
+                      "width": 792.96,
+                      "height": 44
+                    },
+                    "items": [
+                      {
+                        "path": "0.1.1.2.0",
+                        "frame": {
+                          "left": 1031.04,
+                          "top": 340,
+                          "width": 98,
+                          "height": 10
+                        }
+                      },
+                      {
+                        "path": "0.1.1.2.1",
+                        "frame": {
+                          "left": 1143.04,
+                          "top": 340,
+                          "width": 18,
+                          "height": 18
+                        }
+                      },
+                      {
+                        "path": "0.1.1.2.2",
+                        "frame": {
+                          "left": 1175.04,
+                          "top": 340,
+                          "width": 182,
+                          "height": 10
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "path": "0.1.1.3",
+                    "kind": "row",
+                    "name": "cover-rail-row-2",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 44
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 376,
+                      "height": 18
+                    },
+                    "frame": {
+                      "left": 1031.04,
+                      "top": 406,
+                      "width": 792.96,
+                      "height": 44
+                    },
+                    "children": [
+                      {
+                        "path": "0.1.1.3.0",
+                        "kind": "shape",
+                        "name": "cover-gate-2-a",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fixed",
+                            "value": 126
+                          },
+                          "height": {
+                            "mode": "fixed",
+                            "value": 10
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 126,
+                          "height": 10
+                        },
+                        "frame": {
+                          "left": 1031.04,
+                          "top": 406,
+                          "width": 126,
+                          "height": 10
+                        },
+                        "snappedFrame": {
+                          "left": 1032,
+                          "top": 408,
+                          "width": 126,
+                          "height": 10
+                        },
+                        "children": [],
+                        "geometry": "rect",
+                        "element": {
+                          "aid": "sh/c7u54zid",
+                          "id": "18",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.1.1.3.1",
+                        "kind": "shape",
+                        "name": "cover-gate-2-b",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fixed",
+                            "value": 18
+                          },
+                          "height": {
+                            "mode": "fixed",
+                            "value": 18
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 18,
+                          "height": 18
+                        },
+                        "frame": {
+                          "left": 1171.04,
+                          "top": 406,
+                          "width": 18,
+                          "height": 18
+                        },
+                        "snappedFrame": {
+                          "left": 1172,
+                          "top": 408,
+                          "width": 18,
+                          "height": 18
+                        },
+                        "children": [],
+                        "geometry": "rect",
+                        "element": {
+                          "aid": "sh/1orytsvu",
+                          "id": "19",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.1.1.3.2",
+                        "kind": "shape",
+                        "name": "cover-gate-2-c",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fixed",
+                            "value": 204
+                          },
+                          "height": {
+                            "mode": "fixed",
+                            "value": 10
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 204,
+                          "height": 10
+                        },
+                        "frame": {
+                          "left": 1203.04,
+                          "top": 406,
+                          "width": 204,
+                          "height": 10
+                        },
+                        "snappedFrame": {
+                          "left": 1200,
+                          "top": 408,
+                          "width": 204,
+                          "height": 10
+                        },
+                        "children": [],
+                        "geometry": "rect",
+                        "element": {
+                          "aid": "sh/5kb6xkf6",
+                          "id": "20",
+                          "kind": "shape"
+                        }
+                      }
+                    ],
+                    "padding": {
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    },
+                    "gap": 14,
+                    "effectiveGap": 14,
+                    "justifyOffset": 0,
+                    "align": "start",
+                    "justify": "start",
+                    "contentFrame": {
+                      "left": 1031.04,
+                      "top": 406,
+                      "width": 792.96,
+                      "height": 44
+                    },
+                    "items": [
+                      {
+                        "path": "0.1.1.3.0",
+                        "frame": {
+                          "left": 1031.04,
+                          "top": 406,
+                          "width": 126,
+                          "height": 10
+                        }
+                      },
+                      {
+                        "path": "0.1.1.3.1",
+                        "frame": {
+                          "left": 1171.04,
+                          "top": 406,
+                          "width": 18,
+                          "height": 18
+                        }
+                      },
+                      {
+                        "path": "0.1.1.3.2",
+                        "frame": {
+                          "left": 1203.04,
+                          "top": 406,
+                          "width": 204,
+                          "height": 10
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "path": "0.1.1.4",
+                    "kind": "row",
+                    "name": "cover-rail-row-3",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 44
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 342,
+                      "height": 18
+                    },
+                    "frame": {
+                      "left": 1031.04,
+                      "top": 472,
+                      "width": 792.96,
+                      "height": 44
+                    },
+                    "children": [
+                      {
+                        "path": "0.1.1.4.0",
+                        "kind": "shape",
+                        "name": "cover-gate-3-a",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fixed",
+                            "value": 70
+                          },
+                          "height": {
+                            "mode": "fixed",
+                            "value": 10
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 70,
+                          "height": 10
+                        },
+                        "frame": {
+                          "left": 1031.04,
+                          "top": 472,
+                          "width": 70,
+                          "height": 10
+                        },
+                        "snappedFrame": {
+                          "left": 1032,
+                          "top": 472,
+                          "width": 70,
+                          "height": 10
+                        },
+                        "children": [],
+                        "geometry": "rect",
+                        "element": {
+                          "aid": "sh/czed8v6p",
+                          "id": "21",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.1.1.4.1",
+                        "kind": "shape",
+                        "name": "cover-gate-3-b",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fixed",
+                            "value": 18
+                          },
+                          "height": {
+                            "mode": "fixed",
+                            "value": 18
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 18,
+                          "height": 18
+                        },
+                        "frame": {
+                          "left": 1115.04,
+                          "top": 472,
+                          "width": 18,
+                          "height": 18
+                        },
+                        "snappedFrame": {
+                          "left": 1116,
+                          "top": 472,
+                          "width": 18,
+                          "height": 18
+                        },
+                        "children": [],
+                        "geometry": "rect",
+                        "element": {
+                          "aid": "sh/neloj2t8",
+                          "id": "22",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.1.1.4.2",
+                        "kind": "shape",
+                        "name": "cover-gate-3-c",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fixed",
+                            "value": 226
+                          },
+                          "height": {
+                            "mode": "fixed",
+                            "value": 10
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 226,
+                          "height": 10
+                        },
+                        "frame": {
+                          "left": 1147.04,
+                          "top": 472,
+                          "width": 226,
+                          "height": 10
+                        },
+                        "snappedFrame": {
+                          "left": 1144,
+                          "top": 472,
+                          "width": 226,
+                          "height": 10
+                        },
+                        "children": [],
+                        "geometry": "rect",
+                        "element": {
+                          "aid": "sh/ytsvu9kn",
+                          "id": "23",
+                          "kind": "shape"
+                        }
+                      }
+                    ],
+                    "padding": {
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    },
+                    "gap": 14,
+                    "effectiveGap": 14,
+                    "justifyOffset": 0,
+                    "align": "start",
+                    "justify": "start",
+                    "contentFrame": {
+                      "left": 1031.04,
+                      "top": 472,
+                      "width": 792.96,
+                      "height": 44
+                    },
+                    "items": [
+                      {
+                        "path": "0.1.1.4.0",
+                        "frame": {
+                          "left": 1031.04,
+                          "top": 472,
+                          "width": 70,
+                          "height": 10
+                        }
+                      },
+                      {
+                        "path": "0.1.1.4.1",
+                        "frame": {
+                          "left": 1115.04,
+                          "top": 472,
+                          "width": 18,
+                          "height": 18
+                        }
+                      },
+                      {
+                        "path": "0.1.1.4.2",
+                        "frame": {
+                          "left": 1147.04,
+                          "top": 472,
+                          "width": 226,
+                          "height": 10
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "path": "0.1.1.5",
+                    "kind": "row",
+                    "name": "cover-rail-row-4",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 44
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 304,
+                      "height": 18
+                    },
+                    "frame": {
+                      "left": 1031.04,
+                      "top": 538,
+                      "width": 792.96,
+                      "height": 44
+                    },
+                    "children": [
+                      {
+                        "path": "0.1.1.5.0",
+                        "kind": "shape",
+                        "name": "cover-gate-4-a",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fixed",
+                            "value": 98
+                          },
+                          "height": {
+                            "mode": "fixed",
+                            "value": 10
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 98,
+                          "height": 10
+                        },
+                        "frame": {
+                          "left": 1031.04,
+                          "top": 538,
+                          "width": 98,
+                          "height": 10
+                        },
+                        "snappedFrame": {
+                          "left": 1032,
+                          "top": 536,
+                          "width": 98,
+                          "height": 10
+                        },
+                        "children": [],
+                        "geometry": "rect",
+                        "element": {
+                          "aid": "sh/5sneloj2",
+                          "id": "24",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.1.1.5.1",
+                        "kind": "shape",
+                        "name": "cover-gate-4-b",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fixed",
+                            "value": 18
+                          },
+                          "height": {
+                            "mode": "fixed",
+                            "value": 18
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 18,
+                          "height": 18
+                        },
+                        "frame": {
+                          "left": 1143.04,
+                          "top": 538,
+                          "width": 18,
+                          "height": 18
+                        },
+                        "snappedFrame": {
+                          "left": 1144,
+                          "top": 540,
+                          "width": 18,
+                          "height": 18
+                        },
+                        "children": [],
+                        "geometry": "rect",
+                        "element": {
+                          "aid": "sh/cbulwval",
+                          "id": "25",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.1.1.5.2",
+                        "kind": "shape",
+                        "name": "cover-gate-4-c",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fixed",
+                            "value": 160
+                          },
+                          "height": {
+                            "mode": "fixed",
+                            "value": 10
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 160,
+                          "height": 10
+                        },
+                        "frame": {
+                          "left": 1175.04,
+                          "top": 538,
+                          "width": 160,
+                          "height": 10
+                        },
+                        "snappedFrame": {
+                          "left": 1176,
+                          "top": 536,
+                          "width": 160,
+                          "height": 10
+                        },
+                        "children": [],
+                        "geometry": "rect",
+                        "element": {
+                          "aid": "sh/nqxs72x4",
+                          "id": "26",
+                          "kind": "shape"
+                        }
+                      }
+                    ],
+                    "padding": {
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    },
+                    "gap": 14,
+                    "effectiveGap": 14,
+                    "justifyOffset": 0,
+                    "align": "start",
+                    "justify": "start",
+                    "contentFrame": {
+                      "left": 1031.04,
+                      "top": 538,
+                      "width": 792.96,
+                      "height": 44
+                    },
+                    "items": [
+                      {
+                        "path": "0.1.1.5.0",
+                        "frame": {
+                          "left": 1031.04,
+                          "top": 538,
+                          "width": 98,
+                          "height": 10
+                        }
+                      },
+                      {
+                        "path": "0.1.1.5.1",
+                        "frame": {
+                          "left": 1143.04,
+                          "top": 538,
+                          "width": 18,
+                          "height": 18
+                        }
+                      },
+                      {
+                        "path": "0.1.1.5.2",
+                        "frame": {
+                          "left": 1175.04,
+                          "top": 538,
+                          "width": 160,
+                          "height": 10
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "path": "0.1.1.6",
+                    "kind": "row",
+                    "name": "cover-rail-row-5",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 44
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 354,
+                      "height": 18
+                    },
+                    "frame": {
+                      "left": 1031.04,
+                      "top": 604,
+                      "width": 792.96,
+                      "height": 44
+                    },
+                    "children": [
+                      {
+                        "path": "0.1.1.6.0",
+                        "kind": "shape",
+                        "name": "cover-gate-5-a",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fixed",
+                            "value": 126
+                          },
+                          "height": {
+                            "mode": "fixed",
+                            "value": 10
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 126,
+                          "height": 10
+                        },
+                        "frame": {
+                          "left": 1031.04,
+                          "top": 604,
+                          "width": 126,
+                          "height": 10
+                        },
+                        "snappedFrame": {
+                          "left": 1032,
+                          "top": 608,
+                          "width": 126,
+                          "height": 10
+                        },
+                        "children": [],
+                        "geometry": "rect",
+                        "element": {
+                          "aid": "sh/u54zidon",
+                          "id": "27",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.1.1.6.1",
+                        "kind": "shape",
+                        "name": "cover-gate-5-b",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fixed",
+                            "value": 18
+                          },
+                          "height": {
+                            "mode": "fixed",
+                            "value": 18
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 18,
+                          "height": 18
+                        },
+                        "frame": {
+                          "left": 1171.04,
+                          "top": 604,
+                          "width": 18,
+                          "height": 18
+                        },
+                        "snappedFrame": {
+                          "left": 1172,
+                          "top": 604,
+                          "width": 18,
+                          "height": 18
+                        },
+                        "children": [],
+                        "geometry": "rect",
+                        "element": {
+                          "aid": "sh/5wjudg7a",
+                          "id": "28",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.1.1.6.2",
+                        "kind": "shape",
+                        "name": "cover-gate-5-c",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fixed",
+                            "value": 182
+                          },
+                          "height": {
+                            "mode": "fixed",
+                            "value": 10
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 182,
+                          "height": 10
+                        },
+                        "frame": {
+                          "left": 1203.04,
+                          "top": 604,
+                          "width": 182,
+                          "height": 10
+                        },
+                        "snappedFrame": {
+                          "left": 1200,
+                          "top": 608,
+                          "width": 182,
+                          "height": 10
+                        },
+                        "children": [],
+                        "geometry": "rect",
+                        "element": {
+                          "aid": "sh/gbq1oryt",
+                          "id": "29",
+                          "kind": "shape"
+                        }
+                      }
+                    ],
+                    "padding": {
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    },
+                    "gap": 14,
+                    "effectiveGap": 14,
+                    "justifyOffset": 0,
+                    "align": "start",
+                    "justify": "start",
+                    "contentFrame": {
+                      "left": 1031.04,
+                      "top": 604,
+                      "width": 792.96,
+                      "height": 44
+                    },
+                    "items": [
+                      {
+                        "path": "0.1.1.6.0",
+                        "frame": {
+                          "left": 1031.04,
+                          "top": 604,
+                          "width": 126,
+                          "height": 10
+                        }
+                      },
+                      {
+                        "path": "0.1.1.6.1",
+                        "frame": {
+                          "left": 1171.04,
+                          "top": 604,
+                          "width": 18,
+                          "height": 18
+                        }
+                      },
+                      {
+                        "path": "0.1.1.6.2",
+                        "frame": {
+                          "left": 1203.04,
+                          "top": 604,
+                          "width": 182,
+                          "height": 10
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "path": "0.1.1.7",
+                    "kind": "row",
+                    "name": "cover-rail-row-6",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 44
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 320,
+                      "height": 18
+                    },
+                    "frame": {
+                      "left": 1031.04,
+                      "top": 670,
+                      "width": 792.96,
+                      "height": 44
+                    },
+                    "children": [
+                      {
+                        "path": "0.1.1.7.0",
+                        "kind": "shape",
+                        "name": "cover-gate-6-a",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fixed",
+                            "value": 70
+                          },
+                          "height": {
+                            "mode": "fixed",
+                            "value": 10
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 70,
+                          "height": 10
+                        },
+                        "frame": {
+                          "left": 1031.04,
+                          "top": 670,
+                          "width": 70,
+                          "height": 10
+                        },
+                        "snappedFrame": {
+                          "left": 1032,
+                          "top": 672,
+                          "width": 70,
+                          "height": 10
+                        },
+                        "children": [],
+                        "geometry": "rect",
+                        "element": {
+                          "aid": "sh/qd4vmtwr",
+                          "id": "30",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.1.1.7.1",
+                        "kind": "shape",
+                        "name": "cover-gate-6-b",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fixed",
+                            "value": 18
+                          },
+                          "height": {
+                            "mode": "fixed",
+                            "value": 18
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 18,
+                          "height": 18
+                        },
+                        "frame": {
+                          "left": 1115.04,
+                          "top": 670,
+                          "width": 18,
+                          "height": 18
+                        },
+                        "snappedFrame": {
+                          "left": 1116,
+                          "top": 672,
+                          "width": 18,
+                          "height": 18
+                        },
+                        "children": [],
+                        "geometry": "rect",
+                        "element": {
+                          "aid": "sh/fyxobm58",
+                          "id": "31",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.1.1.7.2",
+                        "kind": "shape",
+                        "name": "cover-gate-6-c",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fixed",
+                            "value": 204
+                          },
+                          "height": {
+                            "mode": "fixed",
+                            "value": 10
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 204,
+                          "height": 10
+                        },
+                        "frame": {
+                          "left": 1147.04,
+                          "top": 670,
+                          "width": 204,
+                          "height": 10
+                        },
+                        "snappedFrame": {
+                          "left": 1144,
+                          "top": 672,
+                          "width": 204,
+                          "height": 10
+                        },
+                        "children": [],
+                        "geometry": "rect",
+                        "element": {
+                          "aid": "sh/8jqh0fep",
+                          "id": "32",
+                          "kind": "shape"
+                        }
+                      }
+                    ],
+                    "padding": {
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    },
+                    "gap": 14,
+                    "effectiveGap": 14,
+                    "justifyOffset": 0,
+                    "align": "start",
+                    "justify": "start",
+                    "contentFrame": {
+                      "left": 1031.04,
+                      "top": 670,
+                      "width": 792.96,
+                      "height": 44
+                    },
+                    "items": [
+                      {
+                        "path": "0.1.1.7.0",
+                        "frame": {
+                          "left": 1031.04,
+                          "top": 670,
+                          "width": 70,
+                          "height": 10
+                        }
+                      },
+                      {
+                        "path": "0.1.1.7.1",
+                        "frame": {
+                          "left": 1115.04,
+                          "top": 670,
+                          "width": 18,
+                          "height": 18
+                        }
+                      },
+                      {
+                        "path": "0.1.1.7.2",
+                        "frame": {
+                          "left": 1147.04,
+                          "top": 670,
+                          "width": 204,
+                          "height": 10
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "path": "0.1.1.8",
+                    "kind": "row",
+                    "name": "cover-rail-row-7",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 44
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 370,
+                      "height": 18
+                    },
+                    "frame": {
+                      "left": 1031.04,
+                      "top": 736,
+                      "width": 792.96,
+                      "height": 44
+                    },
+                    "children": [
+                      {
+                        "path": "0.1.1.8.0",
+                        "kind": "shape",
+                        "name": "cover-gate-7-a",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fixed",
+                            "value": 98
+                          },
+                          "height": {
+                            "mode": "fixed",
+                            "value": 10
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 98,
+                          "height": 10
+                        },
+                        "frame": {
+                          "left": 1031.04,
+                          "top": 736,
+                          "width": 98,
+                          "height": 10
+                        },
+                        "snappedFrame": {
+                          "left": 1032,
+                          "top": 736,
+                          "width": 98,
+                          "height": 10
+                        },
+                        "children": [],
+                        "geometry": "rect",
+                        "element": {
+                          "aid": "sh/x4nap4r6",
+                          "id": "33",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.1.1.8.1",
+                        "kind": "shape",
+                        "name": "cover-gate-7-b",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fixed",
+                            "value": 18
+                          },
+                          "height": {
+                            "mode": "fixed",
+                            "value": 18
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 18,
+                          "height": 18
+                        },
+                        "frame": {
+                          "left": 1143.04,
+                          "top": 736,
+                          "width": 18,
+                          "height": 18
+                        },
+                        "snappedFrame": {
+                          "left": 1144,
+                          "top": 736,
+                          "width": 18,
+                          "height": 18
+                        },
+                        "children": [],
+                        "geometry": "rect",
+                        "element": {
+                          "aid": "sh/qpg3ex0n",
+                          "id": "34",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.1.1.8.2",
+                        "kind": "shape",
+                        "name": "cover-gate-7-c",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fixed",
+                            "value": 226
+                          },
+                          "height": {
+                            "mode": "fixed",
+                            "value": 10
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 226,
+                          "height": 10
+                        },
+                        "frame": {
+                          "left": 1175.04,
+                          "top": 736,
+                          "width": 226,
+                          "height": 10
+                        },
+                        "snappedFrame": {
+                          "left": 1176,
+                          "top": 736,
+                          "width": 226,
+                          "height": 10
+                        },
+                        "children": [],
+                        "geometry": "rect",
+                        "element": {
+                          "aid": "sh/fa9w3m94",
+                          "id": "35",
+                          "kind": "shape"
+                        }
+                      }
+                    ],
+                    "padding": {
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    },
+                    "gap": 14,
+                    "effectiveGap": 14,
+                    "justifyOffset": 0,
+                    "align": "start",
+                    "justify": "start",
+                    "contentFrame": {
+                      "left": 1031.04,
+                      "top": 736,
+                      "width": 792.96,
+                      "height": 44
+                    },
+                    "items": [
+                      {
+                        "path": "0.1.1.8.0",
+                        "frame": {
+                          "left": 1031.04,
+                          "top": 736,
+                          "width": 98,
+                          "height": 10
+                        }
+                      },
+                      {
+                        "path": "0.1.1.8.1",
+                        "frame": {
+                          "left": 1143.04,
+                          "top": 736,
+                          "width": 18,
+                          "height": 18
+                        }
+                      },
+                      {
+                        "path": "0.1.1.8.2",
+                        "frame": {
+                          "left": 1175.04,
+                          "top": 736,
+                          "width": 226,
+                          "height": 10
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "path": "0.1.1.9",
+                    "kind": "row",
+                    "name": "cover-proof-strip",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 528,
+                      "height": 46
+                    },
+                    "frame": {
+                      "left": 1031.04,
+                      "top": 802,
+                      "width": 792.96,
+                      "height": 46
+                    },
+                    "children": [
+                      {
+                        "path": "0.1.1.9.0",
+                        "kind": "panel",
+                        "name": "pill-trace",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fixed",
+                            "value": 116
+                          },
+                          "height": {
+                            "mode": "fixed",
+                            "value": 46
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 36,
+                          "height": 36
+                        },
+                        "frame": {
+                          "left": 1031.04,
+                          "top": 802,
+                          "width": 116,
+                          "height": 46
+                        },
+                        "snappedFrame": {
+                          "left": 1031.04,
+                          "top": 802,
+                          "width": 116,
+                          "height": 46
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.9.0.0",
+                            "kind": "text",
+                            "name": "pill-text-trace",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 16
+                            },
+                            "frame": {
+                              "left": 1050,
+                              "top": 818,
+                              "width": 80,
+                              "height": 16
+                            },
+                            "snappedFrame": {
+                              "left": 1050,
+                              "top": 818,
+                              "width": 80,
+                              "height": 16
+                            },
+                            "children": [],
+                            "text": "trace",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/xczed8v6",
+                              "id": "37",
+                              "kind": "shape"
+                            }
+                          }
+                        ],
+                        "padding": {
+                          "top": 10,
+                          "right": 18,
+                          "bottom": 10,
+                          "left": 18
+                        },
+                        "align": "center",
+                        "justify": "center",
+                        "contentFrame": {
+                          "left": 1049.04,
+                          "top": 812,
+                          "width": 80,
+                          "height": 26
+                        },
+                        "element": {
+                          "aid": "sh/8v6psfil",
+                          "id": "36",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.1.1.9.1",
+                        "kind": "panel",
+                        "name": "pill-rubric",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fixed",
+                            "value": 128
+                          },
+                          "height": {
+                            "mode": "fixed",
+                            "value": 46
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 36,
+                          "height": 36
+                        },
+                        "frame": {
+                          "left": 1163.04,
+                          "top": 802,
+                          "width": 128,
+                          "height": 46
+                        },
+                        "snappedFrame": {
+                          "left": 1163.04,
+                          "top": 802,
+                          "width": 128,
+                          "height": 46
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.9.1.0",
+                            "kind": "text",
+                            "name": "pill-text-rubric",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 16
+                            },
+                            "frame": {
+                              "left": 1182,
+                              "top": 818,
+                              "width": 92,
+                              "height": 16
+                            },
+                            "snappedFrame": {
+                              "left": 1182,
+                              "top": 818,
+                              "width": 92,
+                              "height": 16
+                            },
+                            "children": [],
+                            "text": "rubric",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/je9cvixc",
+                              "id": "39",
+                              "kind": "shape"
+                            }
+                          }
+                        ],
+                        "padding": {
+                          "top": 10,
+                          "right": 18,
+                          "bottom": 10,
+                          "left": 18
+                        },
+                        "align": "center",
+                        "justify": "center",
+                        "contentFrame": {
+                          "left": 1181.04,
+                          "top": 812,
+                          "width": 92,
+                          "height": 26
+                        },
+                        "element": {
+                          "aid": "sh/qtcj6tov",
+                          "id": "38",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.1.1.9.2",
+                        "kind": "panel",
+                        "name": "pill-handoff",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fixed",
+                            "value": 138
+                          },
+                          "height": {
+                            "mode": "fixed",
+                            "value": 46
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 36,
+                          "height": 36
+                        },
+                        "frame": {
+                          "left": 1307.04,
+                          "top": 802,
+                          "width": 138,
+                          "height": 46
+                        },
+                        "snappedFrame": {
+                          "left": 1307.04,
+                          "top": 802,
+                          "width": 138,
+                          "height": 46
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.9.2.0",
+                            "kind": "text",
+                            "name": "pill-text-handoff",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 16
+                            },
+                            "frame": {
+                              "left": 1324,
+                              "top": 818,
+                              "width": 104,
+                              "height": 16
+                            },
+                            "snappedFrame": {
+                              "left": 1324,
+                              "top": 818,
+                              "width": 104,
+                              "height": 16
+                            },
+                            "children": [],
+                            "text": "handoff",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/ex0nuxc3",
+                              "id": "41",
+                              "kind": "shape"
+                            }
+                          }
+                        ],
+                        "padding": {
+                          "top": 10,
+                          "right": 18,
+                          "bottom": 10,
+                          "left": 18
+                        },
+                        "align": "center",
+                        "justify": "center",
+                        "contentFrame": {
+                          "left": 1325.04,
+                          "top": 812,
+                          "width": 102,
+                          "height": 26
+                        },
+                        "element": {
+                          "aid": "sh/3itgfmlk",
+                          "id": "40",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.1.1.9.3",
+                        "kind": "panel",
+                        "name": "pill-sre",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fixed",
+                            "value": 98
+                          },
+                          "height": {
+                            "mode": "fixed",
+                            "value": 46
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 36,
+                          "height": 36
+                        },
+                        "frame": {
+                          "left": 1461.04,
+                          "top": 802,
+                          "width": 98,
+                          "height": 46
+                        },
+                        "snappedFrame": {
+                          "left": 1461.04,
+                          "top": 802,
+                          "width": 98,
+                          "height": 46
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.9.3.0",
+                            "kind": "text",
+                            "name": "pill-text-sre",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 16
+                            },
+                            "frame": {
+                              "left": 1478,
+                              "top": 818,
+                              "width": 64,
+                              "height": 16
+                            },
+                            "snappedFrame": {
+                              "left": 1478,
+                              "top": 818,
+                              "width": 64,
+                              "height": 16
+                            },
+                            "children": [],
+                            "text": "SRE",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/w3m94fu1",
+                              "id": "43",
+                              "kind": "shape"
+                            }
+                          }
+                        ],
+                        "padding": {
+                          "top": 10,
+                          "right": 18,
+                          "bottom": 10,
+                          "left": 18
+                        },
+                        "align": "center",
+                        "justify": "center",
+                        "contentFrame": {
+                          "left": 1479.04,
+                          "top": 812,
+                          "width": 62,
+                          "height": 26
+                        },
+                        "element": {
+                          "aid": "sh/loj2t83i",
+                          "id": "42",
+                          "kind": "shape"
+                        }
+                      }
+                    ],
+                    "padding": {
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    },
+                    "gap": 16,
+                    "effectiveGap": 16,
+                    "justifyOffset": 0,
+                    "align": "start",
+                    "justify": "start",
+                    "contentFrame": {
+                      "left": 1031.04,
+                      "top": 802,
+                      "width": 792.96,
+                      "height": 46
+                    },
+                    "items": [
+                      {
+                        "path": "0.1.1.9.0",
+                        "frame": {
+                          "left": 1031.04,
+                          "top": 802,
+                          "width": 116,
+                          "height": 46
+                        }
+                      },
+                      {
+                        "path": "0.1.1.9.1",
+                        "frame": {
+                          "left": 1163.04,
+                          "top": 802,
+                          "width": 128,
+                          "height": 46
+                        }
+                      },
+                      {
+                        "path": "0.1.1.9.2",
+                        "frame": {
+                          "left": 1307.04,
+                          "top": 802,
+                          "width": 138,
+                          "height": 46
+                        }
+                      },
+                      {
+                        "path": "0.1.1.9.3",
+                        "frame": {
+                          "left": 1461.04,
+                          "top": 802,
+                          "width": 98,
+                          "height": 46
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "gap": 22,
+                "effectiveGap": 22,
+                "justifyOffset": 18,
+                "align": "start",
+                "justify": "center",
+                "contentFrame": {
+                  "left": 1031.04,
+                  "top": 216,
+                  "width": 792.96,
+                  "height": 650
+                },
+                "items": [
+                  {
+                    "path": "0.1.1.0",
+                    "frame": {
+                      "left": 1031.04,
+                      "top": 234,
+                      "width": 792.96,
+                      "height": 18
+                    }
+                  },
+                  {
+                    "path": "0.1.1.1",
+                    "frame": {
+                      "left": 1031.04,
+                      "top": 274,
+                      "width": 792.96,
+                      "height": 44
+                    }
+                  },
+                  {
+                    "path": "0.1.1.2",
+                    "frame": {
+                      "left": 1031.04,
+                      "top": 340,
+                      "width": 792.96,
+                      "height": 44
+                    }
+                  },
+                  {
+                    "path": "0.1.1.3",
+                    "frame": {
+                      "left": 1031.04,
+                      "top": 406,
+                      "width": 792.96,
+                      "height": 44
+                    }
+                  },
+                  {
+                    "path": "0.1.1.4",
+                    "frame": {
+                      "left": 1031.04,
+                      "top": 472,
+                      "width": 792.96,
+                      "height": 44
+                    }
+                  },
+                  {
+                    "path": "0.1.1.5",
+                    "frame": {
+                      "left": 1031.04,
+                      "top": 538,
+                      "width": 792.96,
+                      "height": 44
+                    }
+                  },
+                  {
+                    "path": "0.1.1.6",
+                    "frame": {
+                      "left": 1031.04,
+                      "top": 604,
+                      "width": 792.96,
+                      "height": 44
+                    }
+                  },
+                  {
+                    "path": "0.1.1.7",
+                    "frame": {
+                      "left": 1031.04,
+                      "top": 670,
+                      "width": 792.96,
+                      "height": 44
+                    }
+                  },
+                  {
+                    "path": "0.1.1.8",
+                    "frame": {
+                      "left": 1031.04,
+                      "top": 736,
+                      "width": 792.96,
+                      "height": 44
+                    }
+                  },
+                  {
+                    "path": "0.1.1.9",
+                    "frame": {
+                      "left": 1031.04,
+                      "top": 802,
+                      "width": 792.96,
+                      "height": 46
+                    }
+                  }
+                ]
+              }
+            ],
+            "padding": {
+              "top": 82,
+              "right": 96,
+              "bottom": 82,
+              "left": 96
+            },
+            "columnGap": 76,
+            "rowGap": 0,
+            "alignItems": "center",
+            "justifyItems": "stretch",
+            "contentFrame": {
+              "left": 96,
+              "top": 82,
+              "width": 1728,
+              "height": 916
+            },
+            "columns": [
+              {
+                "mode": "fr",
+                "value": 1.04
+              },
+              {
+                "mode": "fr",
+                "value": 0.96
+              }
+            ],
+            "autoRows": "auto",
+            "resolvedRows": [
+              "auto"
+            ],
+            "columnSizes": [
+              859.04,
+              792.96
+            ],
+            "rowSizes": [
+              916
+            ],
+            "cells": [
+              {
+                "path": "0.1.0",
+                "column": 0,
+                "row": 0,
+                "columnSpan": 1,
+                "rowSpan": 1,
+                "cellFrame": {
+                  "left": 96,
+                  "top": 82,
+                  "width": 859.04,
+                  "height": 916
+                }
+              },
+              {
+                "path": "0.1.1",
+                "column": 1,
+                "row": 0,
+                "columnSpan": 1,
+                "rowSpan": 1,
+                "cellFrame": {
+                  "left": 1031.04,
+                  "top": 82,
+                  "width": 792.96,
+                  "height": 916
+                }
+              }
+            ]
+          },
+          {
+            "path": "0.2",
+            "kind": "row",
+            "name": "cover-footer",
+            "requestedSize": {
+              "width": {
+                "mode": "fill",
+                "value": 1
+              },
+              "height": {
+                "mode": "hug"
+              }
+            },
+            "intrinsicSize": {
+              "width": 404.75,
+              "height": 109
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "children": [
+              {
+                "path": "0.2.0",
+                "kind": "text",
+                "name": "cover-footer-left",
+                "requestedSize": {
+                  "width": {
+                    "mode": "wrap",
+                    "max": 600
+                  },
+                  "height": {
+                    "mode": "hug"
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 186.39,
+                  "height": 13
+                },
+                "frame": {
+                  "left": 96,
+                  "top": 1020,
+                  "width": 186.39,
+                  "height": 12
+                },
+                "snappedFrame": {
+                  "left": 96,
+                  "top": 1020,
+                  "width": 186,
+                  "height": 12
+                },
+                "children": [],
+                "text": "Pitch deck | DFMS product concept",
+                "transform": "none",
+                "element": {
+                  "aid": "sh/3q5o7qpg",
+                  "id": "44",
+                  "kind": "shape"
+                }
+              },
+              {
+                "path": "0.2.1",
+                "kind": "text",
+                "name": "cover-footer-right",
+                "requestedSize": {
+                  "width": {
+                    "mode": "wrap",
+                    "max": 120
+                  },
+                  "height": {
+                    "mode": "hug"
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 26.36,
+                  "height": 13
+                },
+                "frame": {
+                  "left": 1797.64,
+                  "top": 1004,
+                  "width": 26.36,
+                  "height": 28
+                },
+                "snappedFrame": {
+                  "left": 1798,
+                  "top": 1004,
+                  "width": 26,
+                  "height": 28
+                },
+                "children": [],
+                "text": "2026",
+                "transform": "none",
+                "element": {
+                  "aid": "sh/e9cvixcz",
+                  "id": "45",
+                  "kind": "shape"
+                }
+              }
+            ],
+            "padding": {
+              "top": 48,
+              "right": 96,
+              "bottom": 48,
+              "left": 96
+            },
+            "gap": 0,
+            "effectiveGap": 1515.25,
+            "justifyOffset": 0,
+            "align": "end",
+            "justify": "between",
+            "contentFrame": {
+              "left": 96,
+              "top": 48,
+              "width": 1728,
+              "height": 984
+            },
+            "items": [
+              {
+                "path": "0.2.0",
+                "frame": {
+                  "left": 96,
+                  "top": 1020,
+                  "width": 186.39,
+                  "height": 12
+                }
+              },
+              {
+                "path": "0.2.1",
+                "frame": {
+                  "left": 1797.64,
+                  "top": 1004,
+                  "width": 26.36,
+                  "height": 28
+                }
+              }
+            ]
+          }
+        ],
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignItems": "stretch",
+        "justifyItems": "stretch",
+        "contentFrame": {
+          "left": 0,
+          "top": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "items": [
+          {
+            "path": "0.0",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            }
+          },
+          {
+            "path": "0.1",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            }
+          },
+          {
+            "path": "0.2",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

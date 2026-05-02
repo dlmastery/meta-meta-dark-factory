@@ -1,0 +1,313 @@
+{
+  "titlePageConcept": {
+    "promptRead": "A serious enterprise product pitch for standardized agentic software delivery with assurance controls.",
+    "audiencePromise": "This is the control plane that lets buyers trust a dark-factory agent swarm the way they trust a top outsourcing partner, but with stronger evidence.",
+    "coverThesis": "The product turns agent delivery into a governed, auditable software factory.",
+    "chosenArchetype": "typographic poster",
+    "rejectedCliches": [
+      "dashboard opener",
+      "hero plus card rail",
+      "KPI strip",
+      "generic AI gradient"
+    ],
+    "dominantElement": "Monumental product category title with a factory control lattice.",
+    "typographyMove": "Large left-anchored phrase, short measure, strong line breaks, quiet proof line.",
+    "paletteMove": "Near-black assurance field with mint/amber/red evidence-control accents.",
+    "imageOrEvidenceMove": "Native control lattice and gate marks, no fake screenshots or invented logos.",
+    "negativeSpacePlan": "Open right-side field implies a machine room without crowding the title.",
+    "whyThisCouldOnlyBeThisDeck": "The cover joins software assurance, dark-factory delivery, and standards evidence in one category phrase."
+  },
+  "deckPlan": [
+    "Cover",
+    "Market tension",
+    "Buyer confidence bar",
+    "Category shift",
+    "Product",
+    "Whole system map",
+    "Operating model",
+    "Lifecycle stages",
+    "Meta hierarchy",
+    "Greenfield task tree",
+    "Brownfield task tree",
+    "Interrogation protocol",
+    "Recursive decomposition",
+    "Assurance layer",
+    "Expert review depth",
+    "Client governance",
+    "Token economics",
+    "Project book",
+    "Modules",
+    "Comprehensive assurance skill mesh",
+    "External skill supply chain",
+    "Skill curation matrix",
+    "Core data objects",
+    "Standards",
+    "Trace model",
+    "Control room surface",
+    "SRE handoff",
+    "Memory and learning",
+    "Risk controls",
+    "Use cases",
+    "Competitive position",
+    "Packaging and GTM",
+    "Moat",
+    "Roadmap",
+    "Pilot ask"
+  ],
+  "slideCount": 35,
+  "exportedDeck": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\output\\output.pptx",
+  "previews": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\previews",
+  "layouts": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts",
+  "layoutSummaries": [
+    {
+      "slide": 1,
+      "elements": 45,
+      "textElements": 13,
+      "path": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-01.layout.json",
+      "preview": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\previews\\slide-01.png"
+    },
+    {
+      "slide": 2,
+      "elements": 21,
+      "textElements": 17,
+      "path": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-02.layout.json",
+      "preview": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\previews\\slide-02.png"
+    },
+    {
+      "slide": 3,
+      "elements": 30,
+      "textElements": 23,
+      "path": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-03.layout.json",
+      "preview": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\previews\\slide-03.png"
+    },
+    {
+      "slide": 4,
+      "elements": 18,
+      "textElements": 14,
+      "path": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-04.layout.json",
+      "preview": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\previews\\slide-04.png"
+    },
+    {
+      "slide": 5,
+      "elements": 24,
+      "textElements": 19,
+      "path": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-05.layout.json",
+      "preview": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\previews\\slide-05.png"
+    },
+    {
+      "slide": 6,
+      "elements": 30,
+      "textElements": 23,
+      "path": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-06.layout.json",
+      "preview": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\previews\\slide-06.png"
+    },
+    {
+      "slide": 7,
+      "elements": 38,
+      "textElements": 29,
+      "path": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-07.layout.json",
+      "preview": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\previews\\slide-07.png"
+    },
+    {
+      "slide": 8,
+      "elements": 30,
+      "textElements": 23,
+      "path": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-08.layout.json",
+      "preview": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\previews\\slide-08.png"
+    },
+    {
+      "slide": 9,
+      "elements": 24,
+      "textElements": 19,
+      "path": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-09.layout.json",
+      "preview": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\previews\\slide-09.png"
+    },
+    {
+      "slide": 10,
+      "elements": 30,
+      "textElements": 23,
+      "path": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-10.layout.json",
+      "preview": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\previews\\slide-10.png"
+    },
+    {
+      "slide": 11,
+      "elements": 30,
+      "textElements": 23,
+      "path": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-11.layout.json",
+      "preview": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\previews\\slide-11.png"
+    },
+    {
+      "slide": 12,
+      "elements": 30,
+      "textElements": 23,
+      "path": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-12.layout.json",
+      "preview": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\previews\\slide-12.png"
+    },
+    {
+      "slide": 13,
+      "elements": 34,
+      "textElements": 25,
+      "path": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-13.layout.json",
+      "preview": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\previews\\slide-13.png"
+    },
+    {
+      "slide": 14,
+      "elements": 21,
+      "textElements": 17,
+      "path": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-14.layout.json",
+      "preview": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\previews\\slide-14.png"
+    },
+    {
+      "slide": 15,
+      "elements": 24,
+      "textElements": 19,
+      "path": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-15.layout.json",
+      "preview": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\previews\\slide-15.png"
+    },
+    {
+      "slide": 16,
+      "elements": 21,
+      "textElements": 15,
+      "path": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-16.layout.json",
+      "preview": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\previews\\slide-16.png"
+    },
+    {
+      "slide": 17,
+      "elements": 22,
+      "textElements": 17,
+      "path": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-17.layout.json",
+      "preview": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\previews\\slide-17.png"
+    },
+    {
+      "slide": 18,
+      "elements": 30,
+      "textElements": 23,
+      "path": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-18.layout.json",
+      "preview": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\previews\\slide-18.png"
+    },
+    {
+      "slide": 19,
+      "elements": 42,
+      "textElements": 32,
+      "path": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-19.layout.json",
+      "preview": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\previews\\slide-19.png"
+    },
+    {
+      "slide": 20,
+      "elements": 21,
+      "textElements": 17,
+      "path": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-20.layout.json",
+      "preview": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\previews\\slide-20.png"
+    },
+    {
+      "slide": 21,
+      "elements": 22,
+      "textElements": 17,
+      "path": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-21.layout.json",
+      "preview": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\previews\\slide-21.png"
+    },
+    {
+      "slide": 22,
+      "elements": 30,
+      "textElements": 23,
+      "path": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-22.layout.json",
+      "preview": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\previews\\slide-22.png"
+    },
+    {
+      "slide": 23,
+      "elements": 30,
+      "textElements": 23,
+      "path": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-23.layout.json",
+      "preview": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\previews\\slide-23.png"
+    },
+    {
+      "slide": 24,
+      "elements": 20,
+      "textElements": 15,
+      "path": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-24.layout.json",
+      "preview": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\previews\\slide-24.png"
+    },
+    {
+      "slide": 25,
+      "elements": 22,
+      "textElements": 17,
+      "path": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-25.layout.json",
+      "preview": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\previews\\slide-25.png"
+    },
+    {
+      "slide": 26,
+      "elements": 34,
+      "textElements": 24,
+      "path": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-26.layout.json",
+      "preview": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\previews\\slide-26.png"
+    },
+    {
+      "slide": 27,
+      "elements": 30,
+      "textElements": 23,
+      "path": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-27.layout.json",
+      "preview": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\previews\\slide-27.png"
+    },
+    {
+      "slide": 28,
+      "elements": 24,
+      "textElements": 17,
+      "path": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-28.layout.json",
+      "preview": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\previews\\slide-28.png"
+    },
+    {
+      "slide": 29,
+      "elements": 30,
+      "textElements": 23,
+      "path": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-29.layout.json",
+      "preview": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\previews\\slide-29.png"
+    },
+    {
+      "slide": 30,
+      "elements": 30,
+      "textElements": 23,
+      "path": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-30.layout.json",
+      "preview": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\previews\\slide-30.png"
+    },
+    {
+      "slide": 31,
+      "elements": 26,
+      "textElements": 20,
+      "path": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-31.layout.json",
+      "preview": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\previews\\slide-31.png"
+    },
+    {
+      "slide": 32,
+      "elements": 18,
+      "textElements": 14,
+      "path": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-32.layout.json",
+      "preview": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\previews\\slide-32.png"
+    },
+    {
+      "slide": 33,
+      "elements": 20,
+      "textElements": 15,
+      "path": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-33.layout.json",
+      "preview": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\previews\\slide-33.png"
+    },
+    {
+      "slide": 34,
+      "elements": 24,
+      "textElements": 18,
+      "path": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-34.layout.json",
+      "preview": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\previews\\slide-34.png"
+    },
+    {
+      "slide": 35,
+      "elements": 21,
+      "textElements": 16,
+      "path": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-35.layout.json",
+      "preview": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\previews\\slide-35.png"
+    }
+  ],
+  "qaNotes": [
+    "All slides were exported to PNG previews from the authored presentation.",
+    "Layout JSON was exported for every slide to support text and bounds inspection.",
+    "Deck avoids external market-size claims; product claims are based on DFMS source artifacts."
+  ]
+}

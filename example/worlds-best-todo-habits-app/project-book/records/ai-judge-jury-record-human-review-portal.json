@@ -1,0 +1,64 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+  },
+  "template_only": false,
+  "record_id": "AJJ-NORTHSTAR-20260426-008",
+  "step_id": "STEP-NORTHSTAR-008",
+  "transition": "human_review_portal_to_closed",
+  "roles": {
+    "tpm_judge": {
+      "persona_contract": "Legendary TPM judge accountable for reopening the closed run with a new bead before adding portal requirements and making sure the portal mirrors the flow ledgers.",
+      "vote": "pass",
+      "rationale": "TB-20260426-108 and STEP-NORTHSTAR-008 were added as a new governed continuation after the Material UI bead."
+    },
+    "documentation_juror": {
+      "persona_contract": "Documentation juror accountable for role-based onboarding, artifact discoverability, and dashboard usability.",
+      "vote": "pass",
+      "rationale": "The portal provides role paths, documentation library, records, evidence, diagrams, and next-action section."
+    },
+    "traceability_juror": {
+      "persona_contract": "Traceability juror accountable for coverage of Markdown docs, records, evidence, diagrams, gates, and certificates.",
+      "vote": "pass",
+      "rationale": "The portal index and validator cover the required project-book surfaces."
+    },
+    "verification_juror": {
+      "persona_contract": "Verification juror accountable for executable portal coverage checks.",
+      "vote": "pass",
+      "rationale": "Portal audit and meta-attractor portal validator pass."
+    },
+    "hawkeye_auditor": {
+      "persona_contract": "Independent conformance auditor accountable for rejecting dashboard theater, stale ledgers, and missing handoff readiness.",
+      "vote": "pass",
+      "rationale": "Hawkeye record includes the human review portal stage and process audit."
+    },
+    "adversarial_prosecutor": {
+      "persona_contract": "Adversarial prosecutor accountable for attacking fake completeness, broken links, and unindexed review artifacts.",
+      "stand_down": true,
+      "rationale": "Portal coverage validation and certificate bound the claim."
+    },
+    "jury_foreperson": {
+      "persona_contract": "Foreperson accountable for final verdict, dissent, residual risks, and legal next action.",
+      "verdict": "pass",
+      "rationale": "No open P0/P1 portal readiness finding remains for this bounded demonstrator."
+    }
+  },
+  "evidence_reviewed": [
+    "project-book/15-human-review-onboarding-portal-record.md",
+    "project-book/portal/index.html",
+    "project-book/portal/portal-data.json",
+    "project-book/portal/diagrams.md",
+    "project-book/records/human-review-portal-record.json",
+    "project-book/evidence/human-review-portal-certificate.json",
+    "project-book/evidence/human-review-portal-validation.json"
+  ],
+  "dependency_check": {
+    "predecessors_accepted_or_waived": true,
+    "pert_next_step_valid": true,
+    "current_bead_matches": true
+  },
+  "verdict": {
+    "outcome": "pass",
+    "next_action": "RUN-CLOSED unless a new change request is opened"
+  }
+}

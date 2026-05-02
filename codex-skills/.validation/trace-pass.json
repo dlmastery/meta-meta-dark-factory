@@ -1,0 +1,133 @@
+[
+  {
+    "record_id": "ATTR-VALIDATION-001",
+    "goal": "Validate governed trace links."
+  },
+  {
+    "id": "CG-VALIDATION-001",
+    "nodes": [
+      {
+        "id": "NODE-VALIDATION-001",
+        "owner": "codex"
+      }
+    ],
+    "edges": [
+      {
+        "from": "ATTR-VALIDATION-001",
+        "to": "NODE-VALIDATION-001"
+      }
+    ]
+  },
+  {
+    "id": "NODE-VALIDATION-001",
+    "type": "evidence"
+  },
+  {
+    "id": "WL-VALIDATION-001",
+    "status": "accepted",
+    "next_action": "Use strict trace validation.",
+    "links": {
+      "requirements": [
+        "REQ-VALIDATION-001"
+      ],
+      "artifacts": [
+        "ART-VALIDATION-001"
+      ],
+      "control_graph_nodes": [
+        "NODE-VALIDATION-001"
+      ],
+      "gated_by": [
+        "RFG-VALIDATION-001"
+      ]
+    }
+  },
+  {
+    "id": "RFG-VALIDATION-001",
+    "status": "pass",
+    "evidence": {
+      "test_reports": [
+        "TST-VALIDATION-001"
+      ],
+      "rubric_scorecards": [
+        "EVD-RUBRIC-VALIDATION-001"
+      ],
+      "trace_reports": [
+        "EVD-TRACE-VALIDATION-001"
+      ]
+    }
+  },
+  {
+    "id": "REQ-VALIDATION-001",
+    "type": "functional",
+    "source": "validation-fixture",
+    "statement": "The system records governed trace links.",
+    "owner": "test-owner",
+    "status": "accepted",
+    "links": {
+      "verifies": [
+        "TST-VALIDATION-001"
+      ],
+      "routes_to": [
+        "NODE-VALIDATION-001"
+      ],
+      "tracked_by": [
+        "WL-VALIDATION-001"
+      ],
+      "gated_by": [
+        "RFG-VALIDATION-001"
+      ]
+    }
+  },
+  {
+    "id": "ART-VALIDATION-001",
+    "name": "Validation Artifact",
+    "standard_basis": [
+      "ISO/IEC/IEEE 12207:2017"
+    ],
+    "reviewers": [
+      "governance-reviewer",
+      "verification-reviewer",
+      "delivery-reviewer"
+    ],
+    "evidence": [
+      "EVD-RUBRIC-VALIDATION-001",
+      "EVD-TRACE-VALIDATION-001"
+    ],
+    "residual_risks": [],
+    "trace": {
+      "derives_from": [
+        "REQ-VALIDATION-001"
+      ],
+      "verified_by": [
+        "TST-VALIDATION-001"
+      ],
+      "routes_to": [
+        "NODE-VALIDATION-001"
+      ],
+      "tracked_by": [
+        "WL-VALIDATION-001"
+      ],
+      "gated_by": [
+        "RFG-VALIDATION-001"
+      ]
+    }
+  },
+  {
+    "id": "TST-VALIDATION-001",
+    "type": "evidence",
+    "links": {
+      "verifies": [
+        "REQ-VALIDATION-001",
+        "ART-VALIDATION-001"
+      ]
+    }
+  },
+  {
+    "id": "EVD-RUBRIC-VALIDATION-001",
+    "type": "evidence"
+  },
+  {
+    "id": "EVD-TRACE-VALIDATION-001",
+    "type": "evidence"
+  }
+]

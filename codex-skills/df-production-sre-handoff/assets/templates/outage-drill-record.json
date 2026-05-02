@@ -1,0 +1,33 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+    "strict_compliance": "Mandatory. Every claim must be project-specific, evidence-backed, trace-linked, reviewer-challenged, and free of unsupported invention.",
+    "missing_evidence_rule": "If evidence is missing, mark it as an assumption, risk, open question, or failure."
+  },
+  "id": "OPS-DRILL-000",
+  "status": "draft",
+  "scenario": "",
+  "system_or_release": "",
+  "participants": [],
+  "operator": "",
+  "control_graph_node": "",
+  "work_ledger_item": "",
+  "runbook_used": "",
+  "signals_presented": [],
+  "diagnosis_steps_taken": [],
+  "mitigation_or_rollback_steps": [],
+  "communications": [],
+  "time_to_detect": "",
+  "time_to_mitigate": "",
+  "gaps_found": [],
+  "follow_up_work_items": [],
+  "operator_readiness_score": null,
+  "operator_signoff": {
+    "required": true,
+    "approver": "",
+    "decision": "pending",
+    "at": ""
+  },
+  "evidence": [],
+  "refinery_gate": ""
+}

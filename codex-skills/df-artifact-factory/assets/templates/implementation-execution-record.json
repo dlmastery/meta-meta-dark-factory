@@ -1,0 +1,25 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+    "strict_compliance": "Mandatory. Every claim must be project-specific, evidence-backed, trace-linked, reviewer-challenged, and free of unsupported invention.",
+    "missing_evidence_rule": "If evidence is missing, mark it as an assumption, risk, open question, or failure."
+  },
+  "template_only": true,
+  "implementation_record_id": "IMPLEMENTATION-000",
+  "run_id": "",
+  "code_change_sets": [],
+  "build_commands": [],
+  "test_commands": [],
+  "lint_typecheck_commands": [],
+  "security_commands": [],
+  "artifacts_changed": [],
+  "source_requirements": [],
+  "source_decisions": [],
+  "test_evidence": [],
+  "build_evidence": [],
+  "review_evidence": [],
+  "known_failures": [],
+  "patch_beads": [],
+  "status": "planned | passed | failed | deferred | waived",
+  "template_marker": true
+}

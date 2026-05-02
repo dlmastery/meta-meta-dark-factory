@@ -1,0 +1,29 @@
+{
+  "id": "RFG-PASS28-001",
+  "name": "Pass 28 patch-level refinery gate",
+  "status": "pass",
+  "verdict_rationale": "Pass 28 closes the production handoff control-plane proof gap by requiring bundle validation against actual control graph, work ledger, and refinery gate files, including node presence, ledger match, gate status, and ledger evidence mentions. This is patch-level only.",
+  "next_action": "Run a full greenfield and brownfield production handoff simulation before claiming runtime readiness.",
+  "evidence": {
+    "test_reports": [
+      "DFMS hardening checks complete",
+      "production handoff pass fixture with outage drill and control-plane bundle files: pass",
+      "production handoff missing control-plane bundle fixture: rejected",
+      "bad production control-plane bundle mismatch fixture: rejected",
+      "pass 28 merged records: pass"
+    ],
+    "rubric_scorecards": [
+      "28-ralph-loop-critic-review-and-fix-record.md"
+    ],
+    "trace_reports": [
+      "records/pass28 merged records",
+      "ATTR-PASS28-001",
+      "CG-PASS28-001",
+      "WL-PASS28-001",
+      "installed and workspace production validator hashes match"
+    ],
+    "certificates": [
+      "patch-level pass only"
+    ]
+  }
+}

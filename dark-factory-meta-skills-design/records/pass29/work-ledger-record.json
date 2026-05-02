@@ -1,0 +1,39 @@
+{
+  "id": "WL-PASS29-001",
+  "title": "Ralph loop pass 29 physical evidence-file bundle validation",
+  "current_state": "accepted",
+  "next_action": "Use evidence-file bundle validation for every governed production handoff.",
+  "revalidation_trigger": "Any future finding that file-like ledger evidence can pass without the actual artifact file or without key handoff/drill/replay IDs in evidence contents.",
+  "owner": {
+    "accountable": "human-release-owner",
+    "responsible": "codex"
+  },
+  "acceptance_criteria": [
+    "Pass 29 findings documented",
+    "Production handoff validator requires evidence-file bundle inputs",
+    "Validator checks file-like work ledger evidence against provided evidence file basenames",
+    "Validator checks evidence files mention production handoff, outage drill, and runbook replay IDs",
+    "Hardening runner includes missing and drifted evidence-file negative checks"
+  ],
+  "evidence_required": [
+    "pass29 critic/fix record",
+    "evidence-file bundled production handoff pass fixture",
+    "missing evidence-file bundle rejection",
+    "bad ledger evidence-file mapping rejection",
+    "DFMS hardening runner output",
+    "pass29 merged-record validation",
+    "installed/workspace hash comparison"
+  ],
+  "evidence_provided": [
+    "29-ralph-loop-critic-review-and-fix-record.md",
+    "production-handoff-pass.json with evidence-file bundle files",
+    "production handoff missing evidence-file bundle fixture: rejected",
+    "bad production ledger evidence-file mapping fixture: rejected",
+    "DFMS hardening checks complete",
+    "ATTR-PASS29-001",
+    "CG-PASS29-001",
+    "RFG-PASS29-001",
+    "records/pass29 merged records",
+    "INSTALLED_WORKSPACE_HASHES_MATCH"
+  ]
+}

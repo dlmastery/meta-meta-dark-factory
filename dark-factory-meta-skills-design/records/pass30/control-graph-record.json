@@ -1,0 +1,137 @@
+{
+  "id": "CG-PASS30-001",
+  "name": "Pass 30 generalized physical evidence validation",
+  "goal": "Ensure traceability validation rejects file-like evidence references without supplied instantiated files.",
+  "risks": [
+    "Non-production artifacts could cite evidence filenames that do not exist",
+    "Provided evidence files could be unrelated to the records that cite them",
+    "Physical evidence validation could remain isolated to production handoff only"
+  ],
+  "links": {
+    "attractor": "ATTR-PASS30-001",
+    "work_ledger": "WL-PASS30-001",
+    "refinery_gate": "RFG-PASS30-001"
+  },
+  "nodes": [
+    {
+      "id": "NODE-PASS30-CRITIC",
+      "label": "Pass 30 generalized evidence critic review",
+      "owner": "codex",
+      "node_contract": {
+        "what": "Review whether non-production artifact evidence can remain file-shaped prose.",
+        "why": "The original transcript requires full project-book evidence, not only production handoff evidence.",
+        "how": "Inspect trace validator, trace schema, validation fixtures, and runner coverage for physical evidence handling.",
+        "where": "df-traceability-evidence validator and DFMS hardening runner.",
+        "when": "Before pass 30 fixes are accepted.",
+        "who": "Codex using traceability, artifact-governance, and verification expert lenses.",
+        "how_good": "Every new physical-evidence bypass becomes executable validation or an explicit residual risk."
+      },
+      "expert_panel": [
+        "traceability-evidence-reviewer",
+        "artifact-governance-reviewer",
+        "verification-safety-critic"
+      ],
+      "rubrics": [
+        "generalized evidence closure",
+        "project-book file integrity",
+        "negative fixture coverage"
+      ],
+      "feedback_loop": "Any unproven file-like evidence reference becomes validator logic and a runner fixture.",
+      "gates": [
+        "physical evidence gap documented",
+        "trace validator patch scoped",
+        "runner regression added"
+      ],
+      "evidence_outputs": [
+        "30-ralph-loop-critic-review-and-fix-record.md"
+      ]
+    },
+    {
+      "id": "NODE-PASS30-FIX",
+      "label": "General trace evidence-file validator implementation",
+      "owner": "codex",
+      "node_contract": {
+        "what": "Extend trace validation with evidence-file bundle checks.",
+        "why": "Artifact, gate, ledger, and certificate evidence files must be physically present in the project book bundle.",
+        "how": "Add --evidence-file parsing, collect file-like evidence obligations, read supplied files, require basename matches and citing-record ID mentions, then add fixtures.",
+        "where": "Installed and workspace df-traceability-evidence validators plus runner.",
+        "when": "After critic review and before verification closure.",
+        "who": "Codex as implementer.",
+        "how_good": "Complete evidence bundle passes; missing file, bad content, and bad mapping fail."
+      },
+      "expert_panel": [
+        "traceability-engineer",
+        "artifact-factory-reviewer",
+        "test-automation-reviewer"
+      ],
+      "rubrics": [
+        "CLI bundle enforcement",
+        "file obligation discovery",
+        "regression protection"
+      ],
+      "feedback_loop": "Rerun the full hardening suite after every trace evidence validation change.",
+      "gates": [
+        "installed validator compiles",
+        "workspace validator compiles",
+        "physical evidence fixtures pass and reject as expected"
+      ],
+      "evidence_outputs": [
+        "validate_trace_links.py",
+        "physical-evidence-trace-pass.json",
+        "physical-evidence-trace-report.md",
+        "run_pre17_hardening_checks.ps1"
+      ]
+    },
+    {
+      "id": "NODE-PASS30-VERIFY",
+      "label": "Pass 30 verification sweep",
+      "owner": "codex",
+      "node_contract": {
+        "what": "Verify final pass 30 state.",
+        "why": "Generalized physical-evidence hardening only counts if the full suite and merged records pass.",
+        "how": "Run hardening suite, merged-record validation, hash sync, JSON, ASCII, and artifact ID checks.",
+        "where": "Workspace validation suite and pass 30 records.",
+        "when": "After all fixes and records are written.",
+        "who": "Codex as verification runner.",
+        "how_good": "All checks pass and residual risks remain explicit."
+      },
+      "expert_panel": [
+        "verification-lead",
+        "governance-auditor",
+        "project-book-reviewer"
+      ],
+      "rubrics": [
+        "positive-path preservation",
+        "negative-path rejection",
+        "physical evidence completeness"
+      ],
+      "feedback_loop": "Any failed check reopens the fix node.",
+      "gates": [
+        "hardening runner passes",
+        "pass 30 merged records validate",
+        "installed/workspace traceability validator hashes match"
+      ],
+      "evidence_outputs": [
+        "DFMS hardening checks complete",
+        "records/pass30 merged records"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "ATTR-PASS30-001",
+      "to": "NODE-PASS30-CRITIC",
+      "type": "governs"
+    },
+    {
+      "from": "NODE-PASS30-CRITIC",
+      "to": "NODE-PASS30-FIX",
+      "type": "requires"
+    },
+    {
+      "from": "NODE-PASS30-FIX",
+      "to": "NODE-PASS30-VERIFY",
+      "type": "must_validate"
+    }
+  ]
+}

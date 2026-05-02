@@ -1,0 +1,3303 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/urcotx",
+    "id": "urcotx",
+    "slide": 9,
+    "layoutId": "39df3ad4-e207-4cff-a7b3-0934322c7183",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "9c364795-fe59-472e-ba8a-a667cb58489e",
+    "masterLayoutName": "Master",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "39df3ad4-e207-4cff-a7b3-0934322c7183",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "9c364795-fe59-472e-ba8a-a667cb58489e",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "9c364795-fe59-472e-ba8a-a667cb58489e",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/dcbulwva",
+      "id": "1",
+      "name": "background",
+      "bbox": [
+        0,
+        0,
+        1920,
+        1080
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.3.1.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#09100F",
+      "lineColor": "#09100F",
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6psfil0r",
+      "id": "2",
+      "name": "meta-hierarchy-eyebrow",
+      "bbox": [
+        88,
+        64,
+        1744,
+        22
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.3.1.1"
+      },
+      "geometry": "rect",
+      "text": "META + META-META",
+      "textPreview": "META + META-META",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "fontSize": 21,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "META + META-META"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "META + META-META",
+          "runs": [
+            {
+              "index": 1,
+              "text": "META + META-META",
+              "fontSize": 21,
+              "color": "#9AF2C8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/val87ed8",
+      "id": "3",
+      "name": "meta-hierarchy-title",
+      "bbox": [
+        88,
+        98,
+        1390,
+        110
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.2.0"
+      },
+      "geometry": "rect",
+      "text": "The meta-meta layer protects the whole factory from narrow thinking.",
+      "textPreview": "The meta-meta layer protects the whole factory from narrow thinking.",
+      "resolvedFontSize": 55,
+      "resolvedTextStyle": {
+        "fontSize": 55,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "The meta-meta layer protects the whole factory from"
+          },
+          {
+            "index": 2,
+            "text": "narrow thinking."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "The meta-meta layer protects the whole factory from narrow thinking.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "The meta-meta layer protects the whole factory from narrow thinking.",
+              "fontSize": 55,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/k3q5o7qp",
+      "id": "4",
+      "name": "meta-hierarchy-subtitle",
+      "bbox": [
+        88,
+        222,
+        1204,
+        52
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.2.1"
+      },
+      "geometry": "rect",
+      "text": "It forms the field before any specialized skill acts, so a run cannot overfit to one artifact, one app, or one local task.",
+      "textPreview": "It forms the field before any specialized skill acts, so a run cannot overfit to one artifact, one app, or one local task.",
+      "resolvedFontSize": 26,
+      "resolvedTextStyle": {
+        "fontSize": 26,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "It forms the field before any specialized skill acts, so a run cannot overfit to one artifact, one app, or one local"
+          },
+          {
+            "index": 2,
+            "text": "task."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "It forms the field before any specialized skill acts, so a run cannot overfit to one artifact, one app, or one local task.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "It forms the field before any specialized skill acts, so a run cannot overfit to one artifact, one app, or one local task.",
+              "fontSize": 26,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/donyd0z6",
+      "id": "5",
+      "name": "metric-value-attractor-for-intent-governance-and-routing",
+      "bbox": [
+        88,
+        442,
+        760,
+        70
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.0.0"
+      },
+      "geometry": "rect",
+      "text": "meta-meta",
+      "textPreview": "meta-meta",
+      "resolvedFontSize": 70,
+      "resolvedTextStyle": {
+        "fontSize": 70,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "meta-meta"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "meta-meta",
+          "runs": [
+            {
+              "index": 1,
+              "text": "meta-meta",
+              "fontSize": 70,
+              "color": "#2DD4BF",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2x4nap4r",
+      "id": "6",
+      "name": "metric-label-attractor-for-intent-governance-and-routing",
+      "bbox": [
+        88,
+        518,
+        310,
+        42
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.0.1"
+      },
+      "geometry": "rect",
+      "text": "attractor for intent, governance, and routing",
+      "textPreview": "attractor for intent, governance, and routing",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "fontSize": 21,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "attractor for intent, governance,"
+          },
+          {
+            "index": 2,
+            "text": "and routing"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "attractor for intent, governance, and routing",
+          "runs": [
+            {
+              "index": 1,
+              "text": "attractor for intent, governance, and routing",
+              "fontSize": 21,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vixczed8",
+      "id": "7",
+      "name": "metric-value-orchestrated-skills-for-project-delivery",
+      "bbox": [
+        88,
+        572,
+        760,
+        70
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.1.0"
+      },
+      "geometry": "rect",
+      "text": "meta",
+      "textPreview": "meta",
+      "resolvedFontSize": 70,
+      "resolvedTextStyle": {
+        "fontSize": 70,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "meta"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "meta",
+          "runs": [
+            {
+              "index": 1,
+              "text": "meta",
+              "fontSize": 70,
+              "color": "#46D17E",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/kf6dcbul",
+      "id": "8",
+      "name": "metric-label-orchestrated-skills-for-project-delivery",
+      "bbox": [
+        88,
+        650,
+        248,
+        42
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.1.1"
+      },
+      "geometry": "rect",
+      "text": "orchestrated skills for project delivery",
+      "textPreview": "orchestrated skills for project delivery",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "fontSize": 21,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "orchestrated skills for"
+          },
+          {
+            "index": 2,
+            "text": "project delivery"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "orchestrated skills for project delivery",
+          "runs": [
+            {
+              "index": 1,
+              "text": "orchestrated skills for project delivery",
+              "fontSize": 21,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/d0z61032",
+      "id": "9",
+      "name": "metric-value-bounded-work-with-rubrics-and-evidence",
+      "bbox": [
+        88,
+        704,
+        760,
+        70
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.2.0"
+      },
+      "geometry": "rect",
+      "text": "node",
+      "textPreview": "node",
+      "resolvedFontSize": 70,
+      "resolvedTextStyle": {
+        "fontSize": 70,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "node"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "node",
+          "runs": [
+            {
+              "index": 1,
+              "text": "node",
+              "fontSize": 70,
+              "color": "#F2B84B",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/dsji5sne",
+      "id": "10",
+      "name": "metric-label-bounded-work-with-rubrics-and-evidence",
+      "bbox": [
+        88,
+        780,
+        268,
+        42
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.2.1"
+      },
+      "geometry": "rect",
+      "text": "bounded work with rubrics and evidence",
+      "textPreview": "bounded work with rubrics and evidence",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "fontSize": 21,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "bounded work with rubrics and"
+          },
+          {
+            "index": 2,
+            "text": "evidence"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "bounded work with rubrics and evidence",
+          "runs": [
+            {
+              "index": 1,
+              "text": "bounded work with rubrics and evidence",
+              "fontSize": 21,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/o7qpg3ex",
+      "id": "11",
+      "name": "dot-meta-attractor",
+      "bbox": [
+        904,
+        476,
+        13,
+        56
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.0.0"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#2DD4BF",
+      "lineColor": "#2DD4BF",
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vmtwra5g",
+      "id": "12",
+      "name": "statement-title-meta-attractor",
+      "bbox": [
+        938,
+        476,
+        894,
+        30
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.0.1.0"
+      },
+      "geometry": "rect",
+      "text": "Meta-attractor",
+      "textPreview": "Meta-attractor",
+      "resolvedFontSize": 29,
+      "resolvedTextStyle": {
+        "fontSize": 29,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Meta-attractor"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Meta-attractor",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Meta-attractor",
+              "fontSize": 29,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/61032lsz",
+      "id": "13",
+      "name": "statement-body-meta-attractor",
+      "bbox": [
+        938,
+        510,
+        700,
+        22
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.0.1.1"
+      },
+      "geometry": "rect",
+      "text": "Separates durable intent from examples, contradictions, and transient context.",
+      "textPreview": "Separates durable intent from examples, contradictions, and transient context.",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Separates durable intent from examples, contradictions, and transient"
+          },
+          {
+            "index": 2,
+            "text": "context."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Separates durable intent from examples, contradictions, and transient context.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Separates durable intent from examples, contradictions, and transient context.",
+              "fontSize": 22,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/d4vmtwra",
+      "id": "14",
+      "name": "dot-dark-factory-orchestrator",
+      "bbox": [
+        904,
+        556,
+        13,
+        56
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.1.0"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#46D17E",
+      "lineColor": "#46D17E",
+      "lineWidth": 0
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/oj2t83it",
+      "id": "15",
+      "name": "statement-title-dark-factory-orchestrator",
+      "bbox": [
+        938,
+        554,
+        894,
+        30
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.1.1.0"
+      },
+      "geometry": "rect",
+      "text": "Dark-factory orchestrator",
+      "textPreview": "Dark-factory orchestrator",
+      "resolvedFontSize": 29,
+      "resolvedTextStyle": {
+        "fontSize": 29,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Dark-factory orchestrator"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Dark-factory orchestrator",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Dark-factory orchestrator",
+              "fontSize": 29,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vy90je9c",
+      "id": "16",
+      "name": "statement-body-dark-factory-orchestrator",
+      "bbox": [
+        938,
+        588,
+        952,
+        22
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.1.1.1"
+      },
+      "geometry": "rect",
+      "text": "Routes greenfield, brownfield, artifact-only, review-only, handoff, recovery, and governance-update modes.",
+      "textPreview": "Routes greenfield, brownfield, artifact-only, review-only, handoff, recovery, and governance-update modes.",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Routes greenfield, brownfield, artifact-only, review-only, handoff, recovery, and governance-update"
+          },
+          {
+            "index": 2,
+            "text": "modes."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Routes greenfield, brownfield, artifact-only, review-only, handoff, recovery, and governance-update modes.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Routes greenfield, brownfield, artifact-only, review-only, handoff, recovery, and governance-update modes.",
+              "fontSize": 22,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6dcbulwv",
+      "id": "17",
+      "name": "dot-specialized-skills",
+      "bbox": [
+        904,
+        632,
+        13,
+        56
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.2.0"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#F2B84B",
+      "lineColor": "#F2B84B",
+      "lineWidth": 0
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/d8v6psfi",
+      "id": "18",
+      "name": "statement-title-specialized-skills",
+      "bbox": [
+        938,
+        632,
+        894,
+        30
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.2.1.0"
+      },
+      "geometry": "rect",
+      "text": "Specialized skills",
+      "textPreview": "Specialized skills",
+      "resolvedFontSize": 29,
+      "resolvedTextStyle": {
+        "fontSize": 29,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Specialized skills"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Specialized skills",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Specialized skills",
+              "fontSize": 29,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/onyd0z61",
+      "id": "19",
+      "name": "statement-body-specialized-skills",
+      "bbox": [
+        938,
+        666,
+        876,
+        22
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.2.1.1"
+      },
+      "geometry": "rect",
+      "text": "Intake, methodology, artifact generation, review, traceability, SRE, memory, and feedback learning.",
+      "textPreview": "Intake, methodology, artifact generation, review, traceability, SRE, memory, and feedback learning.",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Intake, methodology, artifact generation, review, traceability, SRE, memory, and feedback"
+          },
+          {
+            "index": 2,
+            "text": "learning."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Intake, methodology, artifact generation, review, traceability, SRE, memory, and feedback learning.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Intake, methodology, artifact generation, review, traceability, SRE, memory, and feedback learning.",
+              "fontSize": 22,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/kre1w7mp",
+      "id": "20",
+      "name": "dot-control-objects",
+      "bbox": [
+        904,
+        712,
+        13,
+        56
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.3.0"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#F26464",
+      "lineColor": "#F26464",
+      "lineWidth": 0
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/dcbulwva",
+      "id": "21",
+      "name": "statement-title-control-objects",
+      "bbox": [
+        938,
+        710,
+        894,
+        30
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.3.1.0"
+      },
+      "geometry": "rect",
+      "text": "Control objects",
+      "textPreview": "Control objects",
+      "resolvedFontSize": 29,
+      "resolvedTextStyle": {
+        "fontSize": 29,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Control objects"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Control objects",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Control objects",
+              "fontSize": 29,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6psfil0r",
+      "id": "22",
+      "name": "statement-body-control-objects",
+      "bbox": [
+        938,
+        744,
+        794,
+        44
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.3.1.1"
+      },
+      "geometry": "rect",
+      "text": "Attractor record, control graph, work ledger, refinery gate, token budget, change request.",
+      "textPreview": "Attractor record, control graph, work ledger, refinery gate, token budget, change request.",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Attractor record, control graph, work ledger, refinery gate, token budget, change request."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Attractor record, control graph, work ledger, refinery gate, token budget, change request.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Attractor record, control graph, work ledger, refinery gate, token budget, change request.",
+              "fontSize": 22,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 23,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/val87ed8",
+      "id": "23",
+      "name": "meta-hierarchy-footer",
+      "bbox": [
+        88,
+        990,
+        268,
+        28
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.2.0"
+      },
+      "geometry": "rect",
+      "text": "DFMS pitch deck | software assurance dark factory",
+      "textPreview": "DFMS pitch deck | software assurance dark factory",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "DFMS pitch deck | software assurance dark factory"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "DFMS pitch deck | software assurance dark factory",
+          "runs": [
+            {
+              "index": 1,
+              "text": "DFMS pitch deck | software assurance dark factory",
+              "fontSize": 13,
+              "color": "#6E7C74"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 24,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/k3q5o7qp",
+      "id": "24",
+      "name": "meta-hierarchy-page",
+      "bbox": [
+        1792,
+        998,
+        40,
+        12
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.2.1"
+      },
+      "geometry": "rect",
+      "text": "09",
+      "textPreview": "09",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "09"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "09",
+          "runs": [
+            {
+              "index": 1,
+              "text": "09",
+              "fontSize": 13,
+              "color": "#6E7C74",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "composeRuns": [
+    {
+      "index": 1,
+      "frame": {
+        "left": 0,
+        "top": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "baseUnit": 8,
+      "root": {
+        "path": "0",
+        "kind": "layers",
+        "name": "meta-hierarchy-root",
+        "requestedSize": {
+          "width": {
+            "mode": "fill",
+            "value": 1
+          },
+          "height": {
+            "mode": "fill",
+            "value": 1
+          }
+        },
+        "intrinsicSize": {
+          "width": 0,
+          "height": 0
+        },
+        "frame": {
+          "left": 0,
+          "top": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "children": [
+          {
+            "path": "0.0",
+            "kind": "shape",
+            "name": "background",
+            "requestedSize": {
+              "width": {
+                "mode": "fill",
+                "value": 1
+              },
+              "height": {
+                "mode": "fill",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 0,
+              "height": 0
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "snappedFrame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/dcbulwva",
+              "id": "1",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.1",
+            "kind": "column",
+            "name": "meta-hierarchy-content",
+            "requestedSize": {
+              "width": {
+                "mode": "fill",
+                "value": 1
+              },
+              "height": {
+                "mode": "fill",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 176,
+              "height": 392
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "children": [
+              {
+                "path": "0.1.0",
+                "kind": "column",
+                "name": "meta-hierarchy-title-stack",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "hug"
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 1390.87,
+                  "height": 183
+                },
+                "frame": {
+                  "left": 88,
+                  "top": 64,
+                  "width": 1744,
+                  "height": 209
+                },
+                "children": [
+                  {
+                    "path": "0.1.0.0",
+                    "kind": "text",
+                    "name": "meta-hierarchy-eyebrow",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 21
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 64,
+                      "width": 1744,
+                      "height": 21
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 64,
+                      "width": 1744,
+                      "height": 22
+                    },
+                    "children": [],
+                    "text": "META + META-META",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/6psfil0r",
+                      "id": "2",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.0.1",
+                    "kind": "text",
+                    "name": "meta-hierarchy-title",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "wrap",
+                        "max": 1500
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 1390.87,
+                      "height": 110
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 98,
+                      "width": 1390.87,
+                      "height": 110
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 98,
+                      "width": 1390,
+                      "height": 110
+                    },
+                    "children": [],
+                    "text": "The meta-meta layer protects the whole factory from narrow thinking.",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/val87ed8",
+                      "id": "3",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.0.2",
+                    "kind": "text",
+                    "name": "meta-hierarchy-subtitle",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "wrap",
+                        "max": 1330
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 1204.78,
+                      "height": 26
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 221,
+                      "width": 1204.78,
+                      "height": 52
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 222,
+                      "width": 1204,
+                      "height": 52
+                    },
+                    "children": [],
+                    "text": "It forms the field before any specialized skill acts, so a run cannot overfit to one artifact, one app, or one local task.",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/k3q5o7qp",
+                      "id": "4",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "gap": 13,
+                "effectiveGap": 13,
+                "justifyOffset": 0,
+                "align": "start",
+                "justify": "start",
+                "contentFrame": {
+                  "left": 88,
+                  "top": 64,
+                  "width": 1744,
+                  "height": 209
+                },
+                "items": [
+                  {
+                    "path": "0.1.0.0",
+                    "frame": {
+                      "left": 88,
+                      "top": 64,
+                      "width": 1744,
+                      "height": 21
+                    }
+                  },
+                  {
+                    "path": "0.1.0.1",
+                    "frame": {
+                      "left": 88,
+                      "top": 98,
+                      "width": 1390.87,
+                      "height": 110
+                    }
+                  },
+                  {
+                    "path": "0.1.0.2",
+                    "frame": {
+                      "left": 88,
+                      "top": 221,
+                      "width": 1204.78,
+                      "height": 52
+                    }
+                  }
+                ]
+              },
+              {
+                "path": "0.1.1",
+                "kind": "grid",
+                "name": "meta-hierarchy-grid",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "fill",
+                    "value": 1
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 56,
+                  "height": 620
+                },
+                "frame": {
+                  "left": 88,
+                  "top": 307,
+                  "width": 1744,
+                  "height": 649
+                },
+                "children": [
+                  {
+                    "path": "0.1.1.0",
+                    "kind": "column",
+                    "name": "meta-left",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 620
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 381
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 322,
+                      "width": 759.6,
+                      "height": 620
+                    },
+                    "children": [
+                      {
+                        "path": "0.1.1.0.0",
+                        "kind": "column",
+                        "name": "metric-attractor-for-intent-governance-and-routing",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 310.24,
+                          "height": 119
+                        },
+                        "frame": {
+                          "left": 88,
+                          "top": 441.5,
+                          "width": 759.6,
+                          "height": 119
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.0.0.0",
+                            "kind": "text",
+                            "name": "metric-value-attractor-for-intent-governance-and-routing",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 70
+                            },
+                            "frame": {
+                              "left": 88,
+                              "top": 441.5,
+                              "width": 759.6,
+                              "height": 70
+                            },
+                            "snappedFrame": {
+                              "left": 88,
+                              "top": 442,
+                              "width": 760,
+                              "height": 70
+                            },
+                            "children": [],
+                            "text": "meta-meta",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/donyd0z6",
+                              "id": "5",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.0.0.1",
+                            "kind": "text",
+                            "name": "metric-label-attractor-for-intent-governance-and-routing",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "wrap",
+                                "max": 320
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 310.24,
+                              "height": 42
+                            },
+                            "frame": {
+                              "left": 88,
+                              "top": 518.5,
+                              "width": 310.24,
+                              "height": 42
+                            },
+                            "snappedFrame": {
+                              "left": 88,
+                              "top": 518,
+                              "width": 310,
+                              "height": 42
+                            },
+                            "children": [],
+                            "text": "attractor for intent, governance, and routing",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/2x4nap4r",
+                              "id": "6",
+                              "kind": "shape"
+                            }
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 7,
+                        "effectiveGap": 7,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 88,
+                          "top": 441.5,
+                          "width": 759.6,
+                          "height": 119
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.0.0.0",
+                            "frame": {
+                              "left": 88,
+                              "top": 441.5,
+                              "width": 759.6,
+                              "height": 70
+                            }
+                          },
+                          {
+                            "path": "0.1.1.0.0.1",
+                            "frame": {
+                              "left": 88,
+                              "top": 518.5,
+                              "width": 310.24,
+                              "height": 42
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "path": "0.1.1.0.1",
+                        "kind": "column",
+                        "name": "metric-orchestrated-skills-for-project-delivery",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 248.02,
+                          "height": 119
+                        },
+                        "frame": {
+                          "left": 88,
+                          "top": 572.5,
+                          "width": 759.6,
+                          "height": 119
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.0.1.0",
+                            "kind": "text",
+                            "name": "metric-value-orchestrated-skills-for-project-delivery",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 70
+                            },
+                            "frame": {
+                              "left": 88,
+                              "top": 572.5,
+                              "width": 759.6,
+                              "height": 70
+                            },
+                            "snappedFrame": {
+                              "left": 88,
+                              "top": 572,
+                              "width": 760,
+                              "height": 70
+                            },
+                            "children": [],
+                            "text": "meta",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/vixczed8",
+                              "id": "7",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.0.1.1",
+                            "kind": "text",
+                            "name": "metric-label-orchestrated-skills-for-project-delivery",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "wrap",
+                                "max": 320
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 248.02,
+                              "height": 42
+                            },
+                            "frame": {
+                              "left": 88,
+                              "top": 649.5,
+                              "width": 248.02,
+                              "height": 42
+                            },
+                            "snappedFrame": {
+                              "left": 88,
+                              "top": 650,
+                              "width": 248,
+                              "height": 42
+                            },
+                            "children": [],
+                            "text": "orchestrated skills for project delivery",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/kf6dcbul",
+                              "id": "8",
+                              "kind": "shape"
+                            }
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 7,
+                        "effectiveGap": 7,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 88,
+                          "top": 572.5,
+                          "width": 759.6,
+                          "height": 119
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.0.1.0",
+                            "frame": {
+                              "left": 88,
+                              "top": 572.5,
+                              "width": 759.6,
+                              "height": 70
+                            }
+                          },
+                          {
+                            "path": "0.1.1.0.1.1",
+                            "frame": {
+                              "left": 88,
+                              "top": 649.5,
+                              "width": 248.02,
+                              "height": 42
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "path": "0.1.1.0.2",
+                        "kind": "column",
+                        "name": "metric-bounded-work-with-rubrics-and-evidence",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 267.11,
+                          "height": 119
+                        },
+                        "frame": {
+                          "left": 88,
+                          "top": 703.5,
+                          "width": 759.6,
+                          "height": 119
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.0.2.0",
+                            "kind": "text",
+                            "name": "metric-value-bounded-work-with-rubrics-and-evidence",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 70
+                            },
+                            "frame": {
+                              "left": 88,
+                              "top": 703.5,
+                              "width": 759.6,
+                              "height": 70
+                            },
+                            "snappedFrame": {
+                              "left": 88,
+                              "top": 704,
+                              "width": 760,
+                              "height": 70
+                            },
+                            "children": [],
+                            "text": "node",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/d0z61032",
+                              "id": "9",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.0.2.1",
+                            "kind": "text",
+                            "name": "metric-label-bounded-work-with-rubrics-and-evidence",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "wrap",
+                                "max": 320
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 267.11,
+                              "height": 42
+                            },
+                            "frame": {
+                              "left": 88,
+                              "top": 780.5,
+                              "width": 267.11,
+                              "height": 42
+                            },
+                            "snappedFrame": {
+                              "left": 88,
+                              "top": 780,
+                              "width": 268,
+                              "height": 42
+                            },
+                            "children": [],
+                            "text": "bounded work with rubrics and evidence",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/dsji5sne",
+                              "id": "10",
+                              "kind": "shape"
+                            }
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 7,
+                        "effectiveGap": 7,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 88,
+                          "top": 703.5,
+                          "width": 759.6,
+                          "height": 119
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.0.2.0",
+                            "frame": {
+                              "left": 88,
+                              "top": 703.5,
+                              "width": 759.6,
+                              "height": 70
+                            }
+                          },
+                          {
+                            "path": "0.1.1.0.2.1",
+                            "frame": {
+                              "left": 88,
+                              "top": 780.5,
+                              "width": 267.11,
+                              "height": 42
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "padding": {
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    },
+                    "gap": 12,
+                    "effectiveGap": 12,
+                    "justifyOffset": 119.5,
+                    "align": "start",
+                    "justify": "center",
+                    "contentFrame": {
+                      "left": 88,
+                      "top": 322,
+                      "width": 759.6,
+                      "height": 620
+                    },
+                    "items": [
+                      {
+                        "path": "0.1.1.0.0",
+                        "frame": {
+                          "left": 88,
+                          "top": 441.5,
+                          "width": 759.6,
+                          "height": 119
+                        }
+                      },
+                      {
+                        "path": "0.1.1.0.1",
+                        "frame": {
+                          "left": 88,
+                          "top": 572.5,
+                          "width": 759.6,
+                          "height": 119
+                        }
+                      },
+                      {
+                        "path": "0.1.1.0.2",
+                        "frame": {
+                          "left": 88,
+                          "top": 703.5,
+                          "width": 759.6,
+                          "height": 119
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "path": "0.1.1.1",
+                    "kind": "column",
+                    "name": "meta-right",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 290
+                    },
+                    "frame": {
+                      "left": 903.6,
+                      "top": 476,
+                      "width": 928.4,
+                      "height": 312
+                    },
+                    "children": [
+                      {
+                        "path": "0.1.1.1.0",
+                        "kind": "row",
+                        "name": "statement-meta-attractor",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 35,
+                          "height": 56
+                        },
+                        "frame": {
+                          "left": 903.6,
+                          "top": 476,
+                          "width": 928.4,
+                          "height": 56
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.1.0.0",
+                            "kind": "shape",
+                            "name": "dot-meta-attractor",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fixed",
+                                "value": 13
+                              },
+                              "height": {
+                                "mode": "fixed",
+                                "value": 56
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 13,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 903.6,
+                              "top": 476,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "snappedFrame": {
+                              "left": 904,
+                              "top": 476,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "children": [],
+                            "geometry": "rect",
+                            "element": {
+                              "aid": "sh/o7qpg3ex",
+                              "id": "11",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.1.0.1",
+                            "kind": "column",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 700.07,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 938.6,
+                              "top": 476,
+                              "width": 893.4,
+                              "height": 56
+                            },
+                            "children": [
+                              {
+                                "path": "0.1.1.1.0.1.0",
+                                "kind": "text",
+                                "name": "statement-title-meta-attractor",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 29
+                                },
+                                "frame": {
+                                  "left": 938.6,
+                                  "top": 476,
+                                  "width": 893.4,
+                                  "height": 29
+                                },
+                                "snappedFrame": {
+                                  "left": 938,
+                                  "top": 476,
+                                  "width": 894,
+                                  "height": 30
+                                },
+                                "children": [],
+                                "text": "Meta-attractor",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/vmtwra5g",
+                                  "id": "12",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.1.1.1.0.1.1",
+                                "kind": "text",
+                                "name": "statement-body-meta-attractor",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "wrap",
+                                    "max": 1030
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 700.07,
+                                  "height": 22
+                                },
+                                "frame": {
+                                  "left": 938.6,
+                                  "top": 510,
+                                  "width": 700.07,
+                                  "height": 22
+                                },
+                                "snappedFrame": {
+                                  "left": 938,
+                                  "top": 510,
+                                  "width": 700,
+                                  "height": 22
+                                },
+                                "children": [],
+                                "text": "Separates durable intent from examples, contradictions, and transient context.",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/61032lsz",
+                                  "id": "13",
+                                  "kind": "shape"
+                                }
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 5,
+                            "effectiveGap": 5,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 938.6,
+                              "top": 476,
+                              "width": 893.4,
+                              "height": 56
+                            },
+                            "items": [
+                              {
+                                "path": "0.1.1.1.0.1.0",
+                                "frame": {
+                                  "left": 938.6,
+                                  "top": 476,
+                                  "width": 893.4,
+                                  "height": 29
+                                }
+                              },
+                              {
+                                "path": "0.1.1.1.0.1.1",
+                                "frame": {
+                                  "left": 938.6,
+                                  "top": 510,
+                                  "width": 700.07,
+                                  "height": 22
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 22,
+                        "effectiveGap": 22,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 903.6,
+                          "top": 476,
+                          "width": 928.4,
+                          "height": 56
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.1.0.0",
+                            "frame": {
+                              "left": 903.6,
+                              "top": 476,
+                              "width": 13,
+                              "height": 56
+                            }
+                          },
+                          {
+                            "path": "0.1.1.1.0.1",
+                            "frame": {
+                              "left": 938.6,
+                              "top": 476,
+                              "width": 893.4,
+                              "height": 56
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "path": "0.1.1.1.1",
+                        "kind": "row",
+                        "name": "statement-dark-factory-orchestrator",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 35,
+                          "height": 56
+                        },
+                        "frame": {
+                          "left": 903.6,
+                          "top": 554,
+                          "width": 928.4,
+                          "height": 56
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.1.1.0",
+                            "kind": "shape",
+                            "name": "dot-dark-factory-orchestrator",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fixed",
+                                "value": 13
+                              },
+                              "height": {
+                                "mode": "fixed",
+                                "value": 56
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 13,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 903.6,
+                              "top": 554,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "snappedFrame": {
+                              "left": 904,
+                              "top": 556,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "children": [],
+                            "geometry": "rect",
+                            "element": {
+                              "aid": "sh/d4vmtwra",
+                              "id": "14",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.1.1.1",
+                            "kind": "column",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 952.66,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 938.6,
+                              "top": 554,
+                              "width": 893.4,
+                              "height": 56
+                            },
+                            "children": [
+                              {
+                                "path": "0.1.1.1.1.1.0",
+                                "kind": "text",
+                                "name": "statement-title-dark-factory-orchestrator",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 29
+                                },
+                                "frame": {
+                                  "left": 938.6,
+                                  "top": 554,
+                                  "width": 893.4,
+                                  "height": 29
+                                },
+                                "snappedFrame": {
+                                  "left": 938,
+                                  "top": 554,
+                                  "width": 894,
+                                  "height": 30
+                                },
+                                "children": [],
+                                "text": "Dark-factory orchestrator",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/oj2t83it",
+                                  "id": "15",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.1.1.1.1.1.1",
+                                "kind": "text",
+                                "name": "statement-body-dark-factory-orchestrator",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "wrap",
+                                    "max": 1030
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 952.66,
+                                  "height": 22
+                                },
+                                "frame": {
+                                  "left": 938.6,
+                                  "top": 588,
+                                  "width": 952.66,
+                                  "height": 22
+                                },
+                                "snappedFrame": {
+                                  "left": 938,
+                                  "top": 588,
+                                  "width": 952,
+                                  "height": 22
+                                },
+                                "children": [],
+                                "text": "Routes greenfield, brownfield, artifact-only, review-only, handoff, recovery, and governance-update modes.",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/vy90je9c",
+                                  "id": "16",
+                                  "kind": "shape"
+                                }
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 5,
+                            "effectiveGap": 5,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 938.6,
+                              "top": 554,
+                              "width": 893.4,
+                              "height": 56
+                            },
+                            "items": [
+                              {
+                                "path": "0.1.1.1.1.1.0",
+                                "frame": {
+                                  "left": 938.6,
+                                  "top": 554,
+                                  "width": 893.4,
+                                  "height": 29
+                                }
+                              },
+                              {
+                                "path": "0.1.1.1.1.1.1",
+                                "frame": {
+                                  "left": 938.6,
+                                  "top": 588,
+                                  "width": 952.66,
+                                  "height": 22
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 22,
+                        "effectiveGap": 22,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 903.6,
+                          "top": 554,
+                          "width": 928.4,
+                          "height": 56
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.1.1.0",
+                            "frame": {
+                              "left": 903.6,
+                              "top": 554,
+                              "width": 13,
+                              "height": 56
+                            }
+                          },
+                          {
+                            "path": "0.1.1.1.1.1",
+                            "frame": {
+                              "left": 938.6,
+                              "top": 554,
+                              "width": 893.4,
+                              "height": 56
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "path": "0.1.1.1.2",
+                        "kind": "row",
+                        "name": "statement-specialized-skills",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 35,
+                          "height": 56
+                        },
+                        "frame": {
+                          "left": 903.6,
+                          "top": 632,
+                          "width": 928.4,
+                          "height": 56
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.1.2.0",
+                            "kind": "shape",
+                            "name": "dot-specialized-skills",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fixed",
+                                "value": 13
+                              },
+                              "height": {
+                                "mode": "fixed",
+                                "value": 56
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 13,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 903.6,
+                              "top": 632,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "snappedFrame": {
+                              "left": 904,
+                              "top": 632,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "children": [],
+                            "geometry": "rect",
+                            "element": {
+                              "aid": "sh/6dcbulwv",
+                              "id": "17",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.1.2.1",
+                            "kind": "column",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 876.78,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 938.6,
+                              "top": 632,
+                              "width": 893.4,
+                              "height": 56
+                            },
+                            "children": [
+                              {
+                                "path": "0.1.1.1.2.1.0",
+                                "kind": "text",
+                                "name": "statement-title-specialized-skills",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 29
+                                },
+                                "frame": {
+                                  "left": 938.6,
+                                  "top": 632,
+                                  "width": 893.4,
+                                  "height": 29
+                                },
+                                "snappedFrame": {
+                                  "left": 938,
+                                  "top": 632,
+                                  "width": 894,
+                                  "height": 30
+                                },
+                                "children": [],
+                                "text": "Specialized skills",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/d8v6psfi",
+                                  "id": "18",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.1.1.1.2.1.1",
+                                "kind": "text",
+                                "name": "statement-body-specialized-skills",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "wrap",
+                                    "max": 1030
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 876.78,
+                                  "height": 22
+                                },
+                                "frame": {
+                                  "left": 938.6,
+                                  "top": 666,
+                                  "width": 876.78,
+                                  "height": 22
+                                },
+                                "snappedFrame": {
+                                  "left": 938,
+                                  "top": 666,
+                                  "width": 876,
+                                  "height": 22
+                                },
+                                "children": [],
+                                "text": "Intake, methodology, artifact generation, review, traceability, SRE, memory, and feedback learning.",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/onyd0z61",
+                                  "id": "19",
+                                  "kind": "shape"
+                                }
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 5,
+                            "effectiveGap": 5,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 938.6,
+                              "top": 632,
+                              "width": 893.4,
+                              "height": 56
+                            },
+                            "items": [
+                              {
+                                "path": "0.1.1.1.2.1.0",
+                                "frame": {
+                                  "left": 938.6,
+                                  "top": 632,
+                                  "width": 893.4,
+                                  "height": 29
+                                }
+                              },
+                              {
+                                "path": "0.1.1.1.2.1.1",
+                                "frame": {
+                                  "left": 938.6,
+                                  "top": 666,
+                                  "width": 876.78,
+                                  "height": 22
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 22,
+                        "effectiveGap": 22,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 903.6,
+                          "top": 632,
+                          "width": 928.4,
+                          "height": 56
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.1.2.0",
+                            "frame": {
+                              "left": 903.6,
+                              "top": 632,
+                              "width": 13,
+                              "height": 56
+                            }
+                          },
+                          {
+                            "path": "0.1.1.1.2.1",
+                            "frame": {
+                              "left": 938.6,
+                              "top": 632,
+                              "width": 893.4,
+                              "height": 56
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "path": "0.1.1.1.3",
+                        "kind": "row",
+                        "name": "statement-control-objects",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 35,
+                          "height": 56
+                        },
+                        "frame": {
+                          "left": 903.6,
+                          "top": 710,
+                          "width": 928.4,
+                          "height": 78
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.1.3.0",
+                            "kind": "shape",
+                            "name": "dot-control-objects",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fixed",
+                                "value": 13
+                              },
+                              "height": {
+                                "mode": "fixed",
+                                "value": 56
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 13,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 903.6,
+                              "top": 710,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "snappedFrame": {
+                              "left": 904,
+                              "top": 712,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "children": [],
+                            "geometry": "rect",
+                            "element": {
+                              "aid": "sh/kre1w7mp",
+                              "id": "20",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.1.3.1",
+                            "kind": "column",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 793.29,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 938.6,
+                              "top": 710,
+                              "width": 893.4,
+                              "height": 78
+                            },
+                            "children": [
+                              {
+                                "path": "0.1.1.1.3.1.0",
+                                "kind": "text",
+                                "name": "statement-title-control-objects",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 29
+                                },
+                                "frame": {
+                                  "left": 938.6,
+                                  "top": 710,
+                                  "width": 893.4,
+                                  "height": 29
+                                },
+                                "snappedFrame": {
+                                  "left": 938,
+                                  "top": 710,
+                                  "width": 894,
+                                  "height": 30
+                                },
+                                "children": [],
+                                "text": "Control objects",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/dcbulwva",
+                                  "id": "21",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.1.1.1.3.1.1",
+                                "kind": "text",
+                                "name": "statement-body-control-objects",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "wrap",
+                                    "max": 1030
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 793.29,
+                                  "height": 22
+                                },
+                                "frame": {
+                                  "left": 938.6,
+                                  "top": 744,
+                                  "width": 793.29,
+                                  "height": 44
+                                },
+                                "snappedFrame": {
+                                  "left": 938,
+                                  "top": 744,
+                                  "width": 794,
+                                  "height": 44
+                                },
+                                "children": [],
+                                "text": "Attractor record, control graph, work ledger, refinery gate, token budget, change request.",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/6psfil0r",
+                                  "id": "22",
+                                  "kind": "shape"
+                                }
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 5,
+                            "effectiveGap": 5,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 938.6,
+                              "top": 710,
+                              "width": 893.4,
+                              "height": 78
+                            },
+                            "items": [
+                              {
+                                "path": "0.1.1.1.3.1.0",
+                                "frame": {
+                                  "left": 938.6,
+                                  "top": 710,
+                                  "width": 893.4,
+                                  "height": 29
+                                }
+                              },
+                              {
+                                "path": "0.1.1.1.3.1.1",
+                                "frame": {
+                                  "left": 938.6,
+                                  "top": 744,
+                                  "width": 793.29,
+                                  "height": 44
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 22,
+                        "effectiveGap": 22,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 903.6,
+                          "top": 710,
+                          "width": 928.4,
+                          "height": 78
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.1.3.0",
+                            "frame": {
+                              "left": 903.6,
+                              "top": 710,
+                              "width": 13,
+                              "height": 56
+                            }
+                          },
+                          {
+                            "path": "0.1.1.1.3.1",
+                            "frame": {
+                              "left": 938.6,
+                              "top": 710,
+                              "width": 893.4,
+                              "height": 78
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "padding": {
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    },
+                    "gap": 22,
+                    "effectiveGap": 22,
+                    "justifyOffset": 0,
+                    "align": "start",
+                    "justify": "start",
+                    "contentFrame": {
+                      "left": 903.6,
+                      "top": 476,
+                      "width": 928.4,
+                      "height": 312
+                    },
+                    "items": [
+                      {
+                        "path": "0.1.1.1.0",
+                        "frame": {
+                          "left": 903.6,
+                          "top": 476,
+                          "width": 928.4,
+                          "height": 56
+                        }
+                      },
+                      {
+                        "path": "0.1.1.1.1",
+                        "frame": {
+                          "left": 903.6,
+                          "top": 554,
+                          "width": 928.4,
+                          "height": 56
+                        }
+                      },
+                      {
+                        "path": "0.1.1.1.2",
+                        "frame": {
+                          "left": 903.6,
+                          "top": 632,
+                          "width": 928.4,
+                          "height": 56
+                        }
+                      },
+                      {
+                        "path": "0.1.1.1.3",
+                        "frame": {
+                          "left": 903.6,
+                          "top": 710,
+                          "width": 928.4,
+                          "height": 78
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "columnGap": 56,
+                "rowGap": 0,
+                "alignItems": "center",
+                "justifyItems": "stretch",
+                "contentFrame": {
+                  "left": 88,
+                  "top": 307,
+                  "width": 1744,
+                  "height": 649
+                },
+                "columns": [
+                  {
+                    "mode": "fr",
+                    "value": 0.9
+                  },
+                  {
+                    "mode": "fr",
+                    "value": 1.1
+                  }
+                ],
+                "autoRows": "auto",
+                "resolvedRows": [
+                  "auto"
+                ],
+                "columnSizes": [
+                  759.6,
+                  928.4
+                ],
+                "rowSizes": [
+                  649
+                ],
+                "cells": [
+                  {
+                    "path": "0.1.1.0",
+                    "column": 0,
+                    "row": 0,
+                    "columnSpan": 1,
+                    "rowSpan": 1,
+                    "cellFrame": {
+                      "left": 88,
+                      "top": 307,
+                      "width": 759.6,
+                      "height": 649
+                    }
+                  },
+                  {
+                    "path": "0.1.1.1",
+                    "column": 1,
+                    "row": 0,
+                    "columnSpan": 1,
+                    "rowSpan": 1,
+                    "cellFrame": {
+                      "left": 903.6,
+                      "top": 307,
+                      "width": 928.4,
+                      "height": 649
+                    }
+                  }
+                ]
+              },
+              {
+                "path": "0.1.2",
+                "kind": "row",
+                "name": "meta-hierarchy-footer-row",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "hug"
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 307.84,
+                  "height": 13
+                },
+                "frame": {
+                  "left": 88,
+                  "top": 990,
+                  "width": 1744,
+                  "height": 26
+                },
+                "children": [
+                  {
+                    "path": "0.1.2.0",
+                    "kind": "text",
+                    "name": "meta-hierarchy-footer",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "wrap",
+                        "max": 1200
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 267.84,
+                      "height": 13
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 990,
+                      "width": 267.84,
+                      "height": 28
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 990,
+                      "width": 268,
+                      "height": 28
+                    },
+                    "children": [],
+                    "text": "DFMS pitch deck | software assurance dark factory",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/val87ed8",
+                      "id": "23",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.2.1",
+                    "kind": "text",
+                    "name": "meta-hierarchy-page",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 40
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 40,
+                      "height": 13
+                    },
+                    "frame": {
+                      "left": 1792,
+                      "top": 998,
+                      "width": 40,
+                      "height": 12
+                    },
+                    "snappedFrame": {
+                      "left": 1792,
+                      "top": 998,
+                      "width": 40,
+                      "height": 12
+                    },
+                    "children": [],
+                    "text": "09",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/k3q5o7qp",
+                      "id": "24",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "gap": 0,
+                "effectiveGap": 1436.16,
+                "justifyOffset": 0,
+                "align": "center",
+                "justify": "between",
+                "contentFrame": {
+                  "left": 88,
+                  "top": 990,
+                  "width": 1744,
+                  "height": 26
+                },
+                "items": [
+                  {
+                    "path": "0.1.2.0",
+                    "frame": {
+                      "left": 88,
+                      "top": 990,
+                      "width": 267.84,
+                      "height": 28
+                    }
+                  },
+                  {
+                    "path": "0.1.2.1",
+                    "frame": {
+                      "left": 1792,
+                      "top": 998,
+                      "width": 40,
+                      "height": 12
+                    }
+                  }
+                ]
+              }
+            ],
+            "padding": {
+              "top": 64,
+              "right": 88,
+              "bottom": 64,
+              "left": 88
+            },
+            "gap": 34,
+            "effectiveGap": 34,
+            "justifyOffset": 0,
+            "align": "start",
+            "justify": "start",
+            "contentFrame": {
+              "left": 88,
+              "top": 64,
+              "width": 1744,
+              "height": 952
+            },
+            "items": [
+              {
+                "path": "0.1.0",
+                "frame": {
+                  "left": 88,
+                  "top": 64,
+                  "width": 1744,
+                  "height": 209
+                }
+              },
+              {
+                "path": "0.1.1",
+                "frame": {
+                  "left": 88,
+                  "top": 307,
+                  "width": 1744,
+                  "height": 649
+                }
+              },
+              {
+                "path": "0.1.2",
+                "frame": {
+                  "left": 88,
+                  "top": 990,
+                  "width": 1744,
+                  "height": 26
+                }
+              }
+            ]
+          }
+        ],
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignItems": "stretch",
+        "justifyItems": "stretch",
+        "contentFrame": {
+          "left": 0,
+          "top": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "items": [
+          {
+            "path": "0.0",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            }
+          },
+          {
+            "path": "0.1",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

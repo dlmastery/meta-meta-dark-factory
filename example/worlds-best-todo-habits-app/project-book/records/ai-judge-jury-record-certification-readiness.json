@@ -1,0 +1,62 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+  },
+  "template_only": false,
+  "record_id": "AJJ-NORTHSTAR-20260426-005",
+  "step_id": "STEP-NORTHSTAR-005",
+  "transition": "certification_readiness_to_closed",
+  "roles": {
+    "tpm_judge": {
+      "persona_contract": "Legendary TPM judge accountable for ensuring certification-readiness work is a separate bead after closure and that legal next action comes from TASKS, TPM, PERT, KG, and kernel records.",
+      "vote": "pass",
+      "rationale": "TB-20260426-105 and STEP-NORTHSTAR-005 are present and accepted."
+    },
+    "evidence_clerk": {
+      "persona_contract": "Evidence clerk accountable for rejecting certification claims without executable proof, structured evidence, and updated certificates.",
+      "vote": "pass",
+      "rationale": "Accessibility certification audit output and structured results are present."
+    },
+    "standards_juror": {
+      "persona_contract": "Standards juror accountable for separating internal DFMS readiness from external accredited certification.",
+      "vote": "pass",
+      "rationale": "Certification-readiness certificate states boundaries and revalidation triggers."
+    },
+    "domain_artifact_juror": {
+      "persona_contract": "Product artifact juror accountable for ensuring UI changes are actually useful to the local-static productivity app.",
+      "vote": "pass",
+      "rationale": "Contrast and textarea labeling fixes improve real product accessibility."
+    },
+    "verification_juror": {
+      "persona_contract": "Verification juror accountable for proving certification gaps through deterministic tests instead of prose.",
+      "vote": "pass",
+      "rationale": "New accessibility certification audit passed with contrast, keyboard, ARIA, label, and touch target checks."
+    },
+    "adversarial_prosecutor": {
+      "persona_contract": "Adversarial prosecutor accountable for attacking fake certification language, checkbox accessibility, stale evidence, and skipped controls.",
+      "stand_down": true,
+      "rationale": "The record no longer claims external certification and the new executable audit passes."
+    },
+    "jury_foreperson": {
+      "persona_contract": "Foreperson accountable for final verdict, dissent, residual risks, and legal next action.",
+      "verdict": "pass",
+      "rationale": "No open P0/P1 certification-readiness findings remain for this bounded static demonstrator."
+    }
+  },
+  "evidence_reviewed": [
+    "project-book/12-certification-readiness-hardening-record.md",
+    "tests/accessibility-certification-audit.cjs",
+    "project-book/evidence/accessibility-certification-results.json",
+    "project-book/evidence/certification-readiness-certificate.json",
+    "project-book/evidence/quality-refinery-gate-certification-readiness.yaml"
+  ],
+  "dependency_check": {
+    "predecessors_accepted_or_waived": true,
+    "pert_next_step_valid": true,
+    "current_bead_matches": true
+  },
+  "verdict": {
+    "outcome": "pass",
+    "next_action": "RUN-CLOSED unless a new change request is opened"
+  }
+}

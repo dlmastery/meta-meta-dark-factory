@@ -1,0 +1,99 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+  },
+  "template_only": true,
+  "record_id": "HRP-<PROJECT>-<YYYYMMDD>-001",
+  "run_id": "<RUN-ID>",
+  "bead_id": "<TASK-BEAD-ID>",
+  "portal_title": "<Project Human Review And Onboarding Portal>",
+  "portal_type": "static_documentation_dashboard",
+  "portal_paths": {
+    "human_dashboard": "project-book/portal/index.html",
+    "machine_index": "project-book/portal/portal-data.json",
+    "diagram_atlas": "project-book/portal/diagrams.md",
+    "readme": "project-book/portal/README.md"
+  },
+  "required_sections": [
+    "zero_slop_policy",
+    "executive_brief",
+    "role_based_onboarding_paths",
+    "current_state_and_next_action",
+    "sdlc_stage_dashboard",
+    "artifact_bom",
+    "markdown_documentation_index",
+    "structured_records_index",
+    "evidence_and_test_index",
+    "mermaid_diagram_atlas",
+    "traceability_map",
+    "decision_and_risk_register_links",
+    "review_panel_and_certificate_links",
+    "handoff_and_runbook_links",
+    "open_questions_and_change_control",
+    "fresh_reviewer_start_here"
+  ],
+  "role_onboarding_paths": [
+    {
+      "role": "Client Executive",
+      "first_documents": [],
+      "decision_focus": [],
+      "expected_review_time_minutes": 20
+    },
+    {
+      "role": "Technical Program Manager",
+      "first_documents": [],
+      "decision_focus": [],
+      "expected_review_time_minutes": 35
+    },
+    {
+      "role": "Architect Or Engineer",
+      "first_documents": [],
+      "decision_focus": [],
+      "expected_review_time_minutes": 45
+    },
+    {
+      "role": "QA, Security, Or Compliance Auditor",
+      "first_documents": [],
+      "decision_focus": [],
+      "expected_review_time_minutes": 45
+    },
+    {
+      "role": "Incoming Agent Or Human Maintainer",
+      "first_documents": [],
+      "decision_focus": [],
+      "expected_review_time_minutes": 30
+    }
+  ],
+  "coverage_requirements": {
+    "all_top_level_markdown_indexed": true,
+    "all_project_records_indexed": true,
+    "all_root_evidence_files_indexed": true,
+    "all_mermaid_diagrams_indexed": true,
+    "screenshots_or_visual_evidence_indexed_when_ui_surface": true,
+    "stage_gate_status_visible": true,
+    "next_safe_action_visible": true,
+    "machine_readable_index_present": true,
+    "validation_evidence_present": true
+  },
+  "review_panel": [
+    "Documentation Information Architect",
+    "Client Onboarding Lead",
+    "TPM Governance Auditor",
+    "Traceability And Evidence Auditor",
+    "Adversarial Anti-Slop Prosecutor"
+  ],
+  "quality_gate": {
+    "gate_id": "GATE-<PROJECT>-HUMAN-PORTAL-PASS",
+    "minimum_reviewer_result": "pass",
+    "minimum_ralph_loops": 5,
+    "no_unindexed_required_artifacts": true,
+    "no_broken_required_links": true,
+    "no_placeholder_sections": true
+  },
+  "validation": {
+    "validator": "scripts/validate_human_review_portal.py",
+    "status": "<pass|fail|conditional>",
+    "evidence": []
+  },
+  "residual_risks": []
+}

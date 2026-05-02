@@ -1,0 +1,35 @@
+{
+  "zero_slop_policy": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+  "template_marker": "TEMPLATE_ONLY_NOT_EVIDENCE",
+  "report_id": "REDO-IMPACT-<project>-<yyyymmdd>-001",
+  "project": "<project name>",
+  "source_request": "<redo-node-request.json>",
+  "selected_node": "<node id>",
+  "generated_at": "<ISO-8601 timestamp>",
+  "closure": {
+    "impacted_node_count": 0,
+    "impacted_nodes": [],
+    "edge_reasons": []
+  },
+  "redo_order": [],
+  "gates_to_reopen": [],
+  "certificates_to_reissue": [],
+  "tests_to_rerun": [],
+  "artifacts_to_regenerate": [],
+  "human_approvals": [],
+  "required_skills": [
+    "df-governance-mayor",
+    "df-artifact-factory",
+    "df-quality-refinery",
+    "df-traceability-evidence",
+    "df-human-agent-handoff"
+  ],
+  "task_bead": {
+    "bead_id": "<task bead id>",
+    "state": "planned",
+    "gate": "<gate id>",
+    "evidence_target": "<path>"
+  },
+  "assumptions": [],
+  "residual_risks": []
+}

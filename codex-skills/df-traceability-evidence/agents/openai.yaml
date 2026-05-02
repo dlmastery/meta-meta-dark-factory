@@ -1,0 +1,4 @@
+interface:
+  display_name: "DF Trace Evidence"
+  short_description: "Maintain audit trace evidence"
+  default_prompt: "Use $df-traceability-evidence to validate requirement, design, code, test, and evidence links."

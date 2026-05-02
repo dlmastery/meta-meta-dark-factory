@@ -1,0 +1,29 @@
+{
+  "zero_slop_policy": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+  "record_type": "redo_node_request",
+  "request_id": "REDO-REQ-PRD-20260426",
+  "project": "Northstar Todo Habits",
+  "created_at": "2026-04-26",
+  "selected_node_id": "NODE-02-PRD-MD",
+  "selected_node_path": "02-prd.md",
+  "reason": "Demonstrate that a human can select a project-book node and receive a downstream transitive closure before redo work starts.",
+  "change_type": "simulation",
+  "force_boundary": false,
+  "approval": {
+    "state": "approved_for_control_validation_only",
+    "approver": "user_requested_dashboard_meta_skill",
+    "material_change_allowed": false,
+    "reapproval_trigger": "Any actual PRD content rewrite or downstream artifact regeneration."
+  },
+  "token_swag": {
+    "low": "low",
+    "mid": "low",
+    "high": "medium",
+    "basis": "Build graph index, compute impact report, update skill wiring and evidence records."
+  },
+  "reviewers": [
+    "Dashboard Control Architect",
+    "Traceability Auditor",
+    "Hawkeye Conformance Auditor"
+  ]
+}

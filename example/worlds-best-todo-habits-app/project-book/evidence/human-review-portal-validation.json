@@ -1,0 +1,19 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+  },
+  "template_only": false,
+  "record_id": "PORTAL-AUDIT-NORTHSTAR-20260426-001",
+  "status": "pass",
+  "counts": {
+    "topLevelMarkdown": 19,
+    "records": 34,
+    "evidenceRootFiles": 42,
+    "mermaidSources": 6,
+    "onboardingPaths": 5
+  },
+  "exclusions": [
+    "Browser runtime profile subdirectories under project-book/evidence are excluded because they are not review artifacts."
+  ],
+  "failures": []
+}

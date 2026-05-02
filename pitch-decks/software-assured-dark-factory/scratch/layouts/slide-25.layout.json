@@ -1,0 +1,3036 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/m2u5x0",
+    "id": "m2u5x0",
+    "slide": 25,
+    "layoutId": "39df3ad4-e207-4cff-a7b3-0934322c7183",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "9c364795-fe59-472e-ba8a-a667cb58489e",
+    "masterLayoutName": "Master",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "39df3ad4-e207-4cff-a7b3-0934322c7183",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "9c364795-fe59-472e-ba8a-a667cb58489e",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "9c364795-fe59-472e-ba8a-a667cb58489e",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5o7qpg3e",
+      "id": "1",
+      "name": "background",
+      "bbox": [
+        0,
+        0,
+        1920,
+        1080
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#09100F",
+      "lineColor": "#09100F",
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/yxobm58z",
+      "id": "2",
+      "name": "trace-model-eyebrow",
+      "bbox": [
+        88,
+        64,
+        1744,
+        22
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.0.0"
+      },
+      "geometry": "rect",
+      "text": "TRACEABILITY",
+      "textPreview": "TRACEABILITY",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "fontSize": 21,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "TRACEABILITY"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "TRACEABILITY",
+          "runs": [
+            {
+              "index": 1,
+              "text": "TRACEABILITY",
+              "fontSize": 21,
+              "color": "#9AF2C8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nih4byhg",
+      "id": "3",
+      "name": "trace-model-title",
+      "bbox": [
+        88,
+        98,
+        1258,
+        88
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.0.1"
+      },
+      "geometry": "rect",
+      "text": "Every important object must explain why it exists and what proves it.",
+      "textPreview": "Every important object must explain why it exists and what proves it.",
+      "resolvedFontSize": 44,
+      "resolvedTextStyle": {
+        "fontSize": 44,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Every important object must explain why it exists and what proves"
+          },
+          {
+            "index": 2,
+            "text": "it."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Every important object must explain why it exists and what proves it.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Every important object must explain why it exists and what proves it.",
+              "fontSize": 44,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gr2p8nqx",
+      "id": "4",
+      "name": "trace-model-subtitle",
+      "bbox": [
+        88,
+        200,
+        1318,
+        26
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.0.2"
+      },
+      "geometry": "rect",
+      "text": "Bidirectional traceability ties customer answers to requirements, artifacts, decisions, code, tests, operations, and acceptance.",
+      "textPreview": "Bidirectional traceability ties customer answers to requirements, artifacts, decisions, code, tests, operations, and acceptance.",
+      "resolvedFontSize": 26,
+      "resolvedTextStyle": {
+        "fontSize": 26,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Bidirectional traceability ties customer answers to requirements, artifacts, decisions, code, tests, operations, and acceptance."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Bidirectional traceability ties customer answers to requirements, artifacts, decisions, code, tests, operations, and acceptance.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Bidirectional traceability ties customer answers to requirements, artifacts, decisions, code, tests, operations, and acceptance.",
+              "fontSize": 26,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9cvixcze",
+      "id": "5",
+      "name": "metric-value-intent-requirement-design-code-test-handoff",
+      "bbox": [
+        88,
+        474,
+        740,
+        70
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.0.0"
+      },
+      "geometry": "rect",
+      "text": "forward",
+      "textPreview": "forward",
+      "resolvedFontSize": 70,
+      "resolvedTextStyle": {
+        "fontSize": 70,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "forward"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "forward",
+          "runs": [
+            {
+              "index": 1,
+              "text": "forward",
+              "fontSize": 70,
+              "color": "#2DD4BF",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ylc7u54z",
+      "id": "6",
+      "name": "metric-label-intent-requirement-design-code-test-handoff",
+      "bbox": [
+        88,
+        552,
+        288,
+        42
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.0.1"
+      },
+      "geometry": "rect",
+      "text": "intent -> requirement -> design -> code -> test -> handoff",
+      "textPreview": "intent -> requirement -> design -> code -> test -> handoff",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "fontSize": 21,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "intent -> requirement -> design ->"
+          },
+          {
+            "index": 2,
+            "text": "code -> test -> handoff"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "intent -> requirement -> design -> code -> test -> handoff",
+          "runs": [
+            {
+              "index": 1,
+              "text": "intent -> requirement -> design -> code -> test -> handoff",
+              "fontSize": 21,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/r65wjudg",
+      "id": "7",
+      "name": "metric-value-artifact-proof-decision-answer-owner",
+      "bbox": [
+        88,
+        624,
+        740,
+        70
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.1.0"
+      },
+      "geometry": "rect",
+      "text": "reverse",
+      "textPreview": "reverse",
+      "resolvedFontSize": 70,
+      "resolvedTextStyle": {
+        "fontSize": 70,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "reverse"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "reverse",
+          "runs": [
+            {
+              "index": 1,
+              "text": "reverse",
+              "fontSize": 70,
+              "color": "#46D17E",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gfmlkjm1",
+      "id": "8",
+      "name": "metric-label-artifact-proof-decision-answer-owner",
+      "bbox": [
+        88,
+        700,
+        318,
+        42
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.1.1"
+      },
+      "geometry": "rect",
+      "text": "artifact -> proof -> decision -> answer -> owner",
+      "textPreview": "artifact -> proof -> decision -> answer -> owner",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "fontSize": 21,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "artifact -> proof -> decision ->"
+          },
+          {
+            "index": 2,
+            "text": "answer -> owner"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "artifact -> proof -> decision -> answer -> owner",
+          "runs": [
+            {
+              "index": 1,
+              "text": "artifact -> proof -> decision -> answer -> owner",
+              "fontSize": 21,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/90je9cvi",
+      "id": "9",
+      "name": "dot-link-classes",
+      "bbox": [
+        892,
+        432,
+        13,
+        56
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.0.0"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#2DD4BF",
+      "lineColor": "#2DD4BF",
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/lc7u54zi",
+      "id": "10",
+      "name": "statement-title-link-classes",
+      "bbox": [
+        926,
+        430,
+        906,
+        30
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.0.1.0"
+      },
+      "geometry": "rect",
+      "text": "Link classes",
+      "textPreview": "Link classes",
+      "resolvedFontSize": 29,
+      "resolvedTextStyle": {
+        "fontSize": 29,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Link classes"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Link classes",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Link classes",
+              "fontSize": 29,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wra5gbq1",
+      "id": "11",
+      "name": "statement-body-link-classes",
+      "bbox": [
+        926,
+        464,
+        746,
+        44
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.0.1.1"
+      },
+      "geometry": "rect",
+      "text": "satisfies, verifies, derives_from, implements, mitigates, decides, supersedes, blocks.",
+      "textPreview": "satisfies, verifies, derives_from, implements, mitigates, decides, supersedes, blocks.",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "satisfies, verifies, derives_from, implements, mitigates, decides, supersedes, blocks."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "satisfies, verifies, derives_from, implements, mitigates, decides, supersedes, blocks.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "satisfies, verifies, derives_from, implements, mitigates, decides, supersedes, blocks.",
+              "fontSize": 22,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/36hcrmhk",
+      "id": "12",
+      "name": "dot-control-proof",
+      "bbox": [
+        892,
+        532,
+        13,
+        56
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.1.0"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#46D17E",
+      "lineColor": "#46D17E",
+      "lineWidth": 0
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/eloj2t83",
+      "id": "13",
+      "name": "statement-title-control-proof",
+      "bbox": [
+        926,
+        530,
+        906,
+        30
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.1.1.0"
+      },
+      "geometry": "rect",
+      "text": "Control proof",
+      "textPreview": "Control proof",
+      "resolvedFontSize": 29,
+      "resolvedTextStyle": {
+        "fontSize": 29,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Control proof"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Control proof",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Control proof",
+              "fontSize": 29,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/l0rqd4vm",
+      "id": "14",
+      "name": "statement-body-control-proof",
+      "bbox": [
+        926,
+        564,
+        812,
+        44
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.1.1.1"
+      },
+      "geometry": "rect",
+      "text": "Material work maps to a control graph node and work-ledger item or has an explicit waiver.",
+      "textPreview": "Material work maps to a control graph node and work-ledger item or has an explicit waiver.",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Material work maps to a control graph node and work-ledger item or has an explicit"
+          },
+          {
+            "index": 2,
+            "text": "waiver."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Material work maps to a control graph node and work-ledger item or has an explicit waiver.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Material work maps to a control graph node and work-ledger item or has an explicit waiver.",
+              "fontSize": 22,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wfyxobm5",
+      "id": "15",
+      "name": "dot-refinery-proof",
+      "bbox": [
+        892,
+        632,
+        13,
+        56
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.2.0"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#F2B84B",
+      "lineColor": "#F2B84B",
+      "lineWidth": 0
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7u54zido",
+      "id": "16",
+      "name": "statement-title-refinery-proof",
+      "bbox": [
+        926,
+        630,
+        906,
+        30
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.2.1.0"
+      },
+      "geometry": "rect",
+      "text": "Refinery proof",
+      "textPreview": "Refinery proof",
+      "resolvedFontSize": 29,
+      "resolvedTextStyle": {
+        "fontSize": 29,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Refinery proof"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Refinery proof",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Refinery proof",
+              "fontSize": 29,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ed8bat47",
+      "id": "17",
+      "name": "statement-body-refinery-proof",
+      "bbox": [
+        926,
+        664,
+        670,
+        22
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.2.1.1"
+      },
+      "geometry": "rect",
+      "text": "Acceptance or rework outcome is recorded with evidence and residual risk.",
+      "textPreview": "Acceptance or rework outcome is recorded with evidence and residual risk.",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Acceptance or rework outcome is recorded with evidence and residual risk."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Acceptance or rework outcome is recorded with evidence and residual risk.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Acceptance or rework outcome is recorded with evidence and residual risk.",
+              "fontSize": 22,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/psfil0rq",
+      "id": "18",
+      "name": "dot-replay-proof",
+      "bbox": [
+        892,
+        708,
+        13,
+        56
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.3.0"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#F26464",
+      "lineColor": "#F26464",
+      "lineWidth": 0
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/w7mp0bi9",
+      "id": "19",
+      "name": "statement-title-replay-proof",
+      "bbox": [
+        926,
+        708,
+        906,
+        30
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.3.1.0"
+      },
+      "geometry": "rect",
+      "text": "Replay proof",
+      "textPreview": "Replay proof",
+      "resolvedFontSize": 29,
+      "resolvedTextStyle": {
+        "fontSize": 29,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Replay proof"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Replay proof",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Replay proof",
+              "fontSize": 29,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wb2hwfyx",
+      "id": "20",
+      "name": "statement-body-replay-proof",
+      "bbox": [
+        926,
+        742,
+        654,
+        44
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.3.1.1"
+      },
+      "geometry": "rect",
+      "text": "A fresh human or agent can continue from the package without guessing.",
+      "textPreview": "A fresh human or agent can continue from the package without guessing.",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "A fresh human or agent can continue from the package without guessing."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "A fresh human or agent can continue from the package without guessing.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "A fresh human or agent can continue from the package without guessing.",
+              "fontSize": 22,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/lwval87e",
+      "id": "21",
+      "name": "trace-model-footer",
+      "bbox": [
+        88,
+        990,
+        268,
+        28
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.2.0"
+      },
+      "geometry": "rect",
+      "text": "DFMS pitch deck | software assurance dark factory",
+      "textPreview": "DFMS pitch deck | software assurance dark factory",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "DFMS pitch deck | software assurance dark factory"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "DFMS pitch deck | software assurance dark factory",
+          "runs": [
+            {
+              "index": 1,
+              "text": "DFMS pitch deck | software assurance dark factory",
+              "fontSize": 13,
+              "color": "#6E7C74"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/e9cvixcz",
+      "id": "22",
+      "name": "trace-model-page",
+      "bbox": [
+        1792,
+        998,
+        40,
+        12
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.2.1"
+      },
+      "geometry": "rect",
+      "text": "25",
+      "textPreview": "25",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "25"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "25",
+          "runs": [
+            {
+              "index": 1,
+              "text": "25",
+              "fontSize": 13,
+              "color": "#6E7C74",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "composeRuns": [
+    {
+      "index": 1,
+      "frame": {
+        "left": 0,
+        "top": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "baseUnit": 8,
+      "root": {
+        "path": "0",
+        "kind": "layers",
+        "name": "trace-model-root",
+        "requestedSize": {
+          "width": {
+            "mode": "fill",
+            "value": 1
+          },
+          "height": {
+            "mode": "fill",
+            "value": 1
+          }
+        },
+        "intrinsicSize": {
+          "width": 0,
+          "height": 0
+        },
+        "frame": {
+          "left": 0,
+          "top": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "children": [
+          {
+            "path": "0.0",
+            "kind": "shape",
+            "name": "background",
+            "requestedSize": {
+              "width": {
+                "mode": "fill",
+                "value": 1
+              },
+              "height": {
+                "mode": "fill",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 0,
+              "height": 0
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "snappedFrame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/5o7qpg3e",
+              "id": "1",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.1",
+            "kind": "column",
+            "name": "trace-model-content",
+            "requestedSize": {
+              "width": {
+                "mode": "fill",
+                "value": 1
+              },
+              "height": {
+                "mode": "fill",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 176,
+              "height": 326
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "children": [
+              {
+                "path": "0.1.0",
+                "kind": "column",
+                "name": "trace-model-title-stack",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "hug"
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 1317.3,
+                  "height": 117
+                },
+                "frame": {
+                  "left": 88,
+                  "top": 64,
+                  "width": 1744,
+                  "height": 161
+                },
+                "children": [
+                  {
+                    "path": "0.1.0.0",
+                    "kind": "text",
+                    "name": "trace-model-eyebrow",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 21
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 64,
+                      "width": 1744,
+                      "height": 21
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 64,
+                      "width": 1744,
+                      "height": 22
+                    },
+                    "children": [],
+                    "text": "TRACEABILITY",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/yxobm58z",
+                      "id": "2",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.0.1",
+                    "kind": "text",
+                    "name": "trace-model-title",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "wrap",
+                        "max": 1500
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 1258.73,
+                      "height": 44
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 98,
+                      "width": 1258.73,
+                      "height": 88
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 98,
+                      "width": 1258,
+                      "height": 88
+                    },
+                    "children": [],
+                    "text": "Every important object must explain why it exists and what proves it.",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/nih4byhg",
+                      "id": "3",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.0.2",
+                    "kind": "text",
+                    "name": "trace-model-subtitle",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "wrap",
+                        "max": 1330
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 1317.3,
+                      "height": 26
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 199,
+                      "width": 1317.3,
+                      "height": 26
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 200,
+                      "width": 1318,
+                      "height": 26
+                    },
+                    "children": [],
+                    "text": "Bidirectional traceability ties customer answers to requirements, artifacts, decisions, code, tests, operations, and acceptance.",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/gr2p8nqx",
+                      "id": "4",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "gap": 13,
+                "effectiveGap": 13,
+                "justifyOffset": 0,
+                "align": "start",
+                "justify": "start",
+                "contentFrame": {
+                  "left": 88,
+                  "top": 64,
+                  "width": 1744,
+                  "height": 161
+                },
+                "items": [
+                  {
+                    "path": "0.1.0.0",
+                    "frame": {
+                      "left": 88,
+                      "top": 64,
+                      "width": 1744,
+                      "height": 21
+                    }
+                  },
+                  {
+                    "path": "0.1.0.1",
+                    "frame": {
+                      "left": 88,
+                      "top": 98,
+                      "width": 1258.73,
+                      "height": 88
+                    }
+                  },
+                  {
+                    "path": "0.1.0.2",
+                    "frame": {
+                      "left": 88,
+                      "top": 199,
+                      "width": 1317.3,
+                      "height": 26
+                    }
+                  }
+                ]
+              },
+              {
+                "path": "0.1.1",
+                "kind": "grid",
+                "name": "trace-model-grid",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "fill",
+                    "value": 1
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 62,
+                  "height": 290
+                },
+                "frame": {
+                  "left": 88,
+                  "top": 259,
+                  "width": 1744,
+                  "height": 697
+                },
+                "children": [
+                  {
+                    "path": "0.1.1.0",
+                    "kind": "column",
+                    "name": "trace-left",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 268
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 474,
+                      "width": 740.08,
+                      "height": 268
+                    },
+                    "children": [
+                      {
+                        "path": "0.1.1.0.0",
+                        "kind": "column",
+                        "name": "metric-intent-requirement-design-code-test-handoff",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 287.59,
+                          "height": 119
+                        },
+                        "frame": {
+                          "left": 88,
+                          "top": 474,
+                          "width": 740.08,
+                          "height": 119
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.0.0.0",
+                            "kind": "text",
+                            "name": "metric-value-intent-requirement-design-code-test-handoff",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 70
+                            },
+                            "frame": {
+                              "left": 88,
+                              "top": 474,
+                              "width": 740.08,
+                              "height": 70
+                            },
+                            "snappedFrame": {
+                              "left": 88,
+                              "top": 474,
+                              "width": 740,
+                              "height": 70
+                            },
+                            "children": [],
+                            "text": "forward",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/9cvixcze",
+                              "id": "5",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.0.0.1",
+                            "kind": "text",
+                            "name": "metric-label-intent-requirement-design-code-test-handoff",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "wrap",
+                                "max": 320
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 287.59,
+                              "height": 42
+                            },
+                            "frame": {
+                              "left": 88,
+                              "top": 551,
+                              "width": 287.59,
+                              "height": 42
+                            },
+                            "snappedFrame": {
+                              "left": 88,
+                              "top": 552,
+                              "width": 288,
+                              "height": 42
+                            },
+                            "children": [],
+                            "text": "intent -> requirement -> design -> code -> test -> handoff",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/ylc7u54z",
+                              "id": "6",
+                              "kind": "shape"
+                            }
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 7,
+                        "effectiveGap": 7,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 88,
+                          "top": 474,
+                          "width": 740.08,
+                          "height": 119
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.0.0.0",
+                            "frame": {
+                              "left": 88,
+                              "top": 474,
+                              "width": 740.08,
+                              "height": 70
+                            }
+                          },
+                          {
+                            "path": "0.1.1.0.0.1",
+                            "frame": {
+                              "left": 88,
+                              "top": 551,
+                              "width": 287.59,
+                              "height": 42
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "path": "0.1.1.0.1",
+                        "kind": "column",
+                        "name": "metric-artifact-proof-decision-answer-owner",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 318.93,
+                          "height": 119
+                        },
+                        "frame": {
+                          "left": 88,
+                          "top": 623,
+                          "width": 740.08,
+                          "height": 119
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.0.1.0",
+                            "kind": "text",
+                            "name": "metric-value-artifact-proof-decision-answer-owner",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 70
+                            },
+                            "frame": {
+                              "left": 88,
+                              "top": 623,
+                              "width": 740.08,
+                              "height": 70
+                            },
+                            "snappedFrame": {
+                              "left": 88,
+                              "top": 624,
+                              "width": 740,
+                              "height": 70
+                            },
+                            "children": [],
+                            "text": "reverse",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/r65wjudg",
+                              "id": "7",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.0.1.1",
+                            "kind": "text",
+                            "name": "metric-label-artifact-proof-decision-answer-owner",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "wrap",
+                                "max": 320
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 318.93,
+                              "height": 42
+                            },
+                            "frame": {
+                              "left": 88,
+                              "top": 700,
+                              "width": 318.93,
+                              "height": 42
+                            },
+                            "snappedFrame": {
+                              "left": 88,
+                              "top": 700,
+                              "width": 318,
+                              "height": 42
+                            },
+                            "children": [],
+                            "text": "artifact -> proof -> decision -> answer -> owner",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/gfmlkjm1",
+                              "id": "8",
+                              "kind": "shape"
+                            }
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 7,
+                        "effectiveGap": 7,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 88,
+                          "top": 623,
+                          "width": 740.08,
+                          "height": 119
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.0.1.0",
+                            "frame": {
+                              "left": 88,
+                              "top": 623,
+                              "width": 740.08,
+                              "height": 70
+                            }
+                          },
+                          {
+                            "path": "0.1.1.0.1.1",
+                            "frame": {
+                              "left": 88,
+                              "top": 700,
+                              "width": 318.93,
+                              "height": 42
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "padding": {
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    },
+                    "gap": 30,
+                    "effectiveGap": 30,
+                    "justifyOffset": 0,
+                    "align": "start",
+                    "justify": "start",
+                    "contentFrame": {
+                      "left": 88,
+                      "top": 474,
+                      "width": 740.08,
+                      "height": 268
+                    },
+                    "items": [
+                      {
+                        "path": "0.1.1.0.0",
+                        "frame": {
+                          "left": 88,
+                          "top": 474,
+                          "width": 740.08,
+                          "height": 119
+                        }
+                      },
+                      {
+                        "path": "0.1.1.0.1",
+                        "frame": {
+                          "left": 88,
+                          "top": 623,
+                          "width": 740.08,
+                          "height": 119
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "path": "0.1.1.1",
+                    "kind": "column",
+                    "name": "trace-right",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 290
+                    },
+                    "frame": {
+                      "left": 890.08,
+                      "top": 430,
+                      "width": 941.92,
+                      "height": 356
+                    },
+                    "children": [
+                      {
+                        "path": "0.1.1.1.0",
+                        "kind": "row",
+                        "name": "statement-link-classes",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 35,
+                          "height": 56
+                        },
+                        "frame": {
+                          "left": 890.08,
+                          "top": 430,
+                          "width": 941.92,
+                          "height": 78
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.1.0.0",
+                            "kind": "shape",
+                            "name": "dot-link-classes",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fixed",
+                                "value": 13
+                              },
+                              "height": {
+                                "mode": "fixed",
+                                "value": 56
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 13,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 890.08,
+                              "top": 430,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "snappedFrame": {
+                              "left": 892,
+                              "top": 432,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "children": [],
+                            "geometry": "rect",
+                            "element": {
+                              "aid": "sh/90je9cvi",
+                              "id": "9",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.1.0.1",
+                            "kind": "column",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 745.09,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 925.08,
+                              "top": 430,
+                              "width": 906.92,
+                              "height": 78
+                            },
+                            "children": [
+                              {
+                                "path": "0.1.1.1.0.1.0",
+                                "kind": "text",
+                                "name": "statement-title-link-classes",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 29
+                                },
+                                "frame": {
+                                  "left": 925.08,
+                                  "top": 430,
+                                  "width": 906.92,
+                                  "height": 29
+                                },
+                                "snappedFrame": {
+                                  "left": 926,
+                                  "top": 430,
+                                  "width": 906,
+                                  "height": 30
+                                },
+                                "children": [],
+                                "text": "Link classes",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/lc7u54zi",
+                                  "id": "10",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.1.1.1.0.1.1",
+                                "kind": "text",
+                                "name": "statement-body-link-classes",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "wrap",
+                                    "max": 1030
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 745.09,
+                                  "height": 22
+                                },
+                                "frame": {
+                                  "left": 925.08,
+                                  "top": 464,
+                                  "width": 745.09,
+                                  "height": 44
+                                },
+                                "snappedFrame": {
+                                  "left": 926,
+                                  "top": 464,
+                                  "width": 746,
+                                  "height": 44
+                                },
+                                "children": [],
+                                "text": "satisfies, verifies, derives_from, implements, mitigates, decides, supersedes, blocks.",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/wra5gbq1",
+                                  "id": "11",
+                                  "kind": "shape"
+                                }
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 5,
+                            "effectiveGap": 5,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 925.08,
+                              "top": 430,
+                              "width": 906.92,
+                              "height": 78
+                            },
+                            "items": [
+                              {
+                                "path": "0.1.1.1.0.1.0",
+                                "frame": {
+                                  "left": 925.08,
+                                  "top": 430,
+                                  "width": 906.92,
+                                  "height": 29
+                                }
+                              },
+                              {
+                                "path": "0.1.1.1.0.1.1",
+                                "frame": {
+                                  "left": 925.08,
+                                  "top": 464,
+                                  "width": 745.09,
+                                  "height": 44
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 22,
+                        "effectiveGap": 22,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 890.08,
+                          "top": 430,
+                          "width": 941.92,
+                          "height": 78
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.1.0.0",
+                            "frame": {
+                              "left": 890.08,
+                              "top": 430,
+                              "width": 13,
+                              "height": 56
+                            }
+                          },
+                          {
+                            "path": "0.1.1.1.0.1",
+                            "frame": {
+                              "left": 925.08,
+                              "top": 430,
+                              "width": 906.92,
+                              "height": 78
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "path": "0.1.1.1.1",
+                        "kind": "row",
+                        "name": "statement-control-proof",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 35,
+                          "height": 56
+                        },
+                        "frame": {
+                          "left": 890.08,
+                          "top": 530,
+                          "width": 941.92,
+                          "height": 78
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.1.1.0",
+                            "kind": "shape",
+                            "name": "dot-control-proof",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fixed",
+                                "value": 13
+                              },
+                              "height": {
+                                "mode": "fixed",
+                                "value": 56
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 13,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 890.08,
+                              "top": 530,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "snappedFrame": {
+                              "left": 892,
+                              "top": 532,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "children": [],
+                            "geometry": "rect",
+                            "element": {
+                              "aid": "sh/36hcrmhk",
+                              "id": "12",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.1.1.1",
+                            "kind": "column",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 812.37,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 925.08,
+                              "top": 530,
+                              "width": 906.92,
+                              "height": 78
+                            },
+                            "children": [
+                              {
+                                "path": "0.1.1.1.1.1.0",
+                                "kind": "text",
+                                "name": "statement-title-control-proof",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 29
+                                },
+                                "frame": {
+                                  "left": 925.08,
+                                  "top": 530,
+                                  "width": 906.92,
+                                  "height": 29
+                                },
+                                "snappedFrame": {
+                                  "left": 926,
+                                  "top": 530,
+                                  "width": 906,
+                                  "height": 30
+                                },
+                                "children": [],
+                                "text": "Control proof",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/eloj2t83",
+                                  "id": "13",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.1.1.1.1.1.1",
+                                "kind": "text",
+                                "name": "statement-body-control-proof",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "wrap",
+                                    "max": 1030
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 812.37,
+                                  "height": 22
+                                },
+                                "frame": {
+                                  "left": 925.08,
+                                  "top": 564,
+                                  "width": 812.37,
+                                  "height": 44
+                                },
+                                "snappedFrame": {
+                                  "left": 926,
+                                  "top": 564,
+                                  "width": 812,
+                                  "height": 44
+                                },
+                                "children": [],
+                                "text": "Material work maps to a control graph node and work-ledger item or has an explicit waiver.",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/l0rqd4vm",
+                                  "id": "14",
+                                  "kind": "shape"
+                                }
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 5,
+                            "effectiveGap": 5,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 925.08,
+                              "top": 530,
+                              "width": 906.92,
+                              "height": 78
+                            },
+                            "items": [
+                              {
+                                "path": "0.1.1.1.1.1.0",
+                                "frame": {
+                                  "left": 925.08,
+                                  "top": 530,
+                                  "width": 906.92,
+                                  "height": 29
+                                }
+                              },
+                              {
+                                "path": "0.1.1.1.1.1.1",
+                                "frame": {
+                                  "left": 925.08,
+                                  "top": 564,
+                                  "width": 812.37,
+                                  "height": 44
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 22,
+                        "effectiveGap": 22,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 890.08,
+                          "top": 530,
+                          "width": 941.92,
+                          "height": 78
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.1.1.0",
+                            "frame": {
+                              "left": 890.08,
+                              "top": 530,
+                              "width": 13,
+                              "height": 56
+                            }
+                          },
+                          {
+                            "path": "0.1.1.1.1.1",
+                            "frame": {
+                              "left": 925.08,
+                              "top": 530,
+                              "width": 906.92,
+                              "height": 78
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "path": "0.1.1.1.2",
+                        "kind": "row",
+                        "name": "statement-refinery-proof",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 35,
+                          "height": 56
+                        },
+                        "frame": {
+                          "left": 890.08,
+                          "top": 630,
+                          "width": 941.92,
+                          "height": 56
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.1.2.0",
+                            "kind": "shape",
+                            "name": "dot-refinery-proof",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fixed",
+                                "value": 13
+                              },
+                              "height": {
+                                "mode": "fixed",
+                                "value": 56
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 13,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 890.08,
+                              "top": 630,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "snappedFrame": {
+                              "left": 892,
+                              "top": 632,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "children": [],
+                            "geometry": "rect",
+                            "element": {
+                              "aid": "sh/wfyxobm5",
+                              "id": "15",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.1.2.1",
+                            "kind": "column",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 669.87,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 925.08,
+                              "top": 630,
+                              "width": 906.92,
+                              "height": 56
+                            },
+                            "children": [
+                              {
+                                "path": "0.1.1.1.2.1.0",
+                                "kind": "text",
+                                "name": "statement-title-refinery-proof",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 29
+                                },
+                                "frame": {
+                                  "left": 925.08,
+                                  "top": 630,
+                                  "width": 906.92,
+                                  "height": 29
+                                },
+                                "snappedFrame": {
+                                  "left": 926,
+                                  "top": 630,
+                                  "width": 906,
+                                  "height": 30
+                                },
+                                "children": [],
+                                "text": "Refinery proof",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/7u54zido",
+                                  "id": "16",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.1.1.1.2.1.1",
+                                "kind": "text",
+                                "name": "statement-body-refinery-proof",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "wrap",
+                                    "max": 1030
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 669.87,
+                                  "height": 22
+                                },
+                                "frame": {
+                                  "left": 925.08,
+                                  "top": 664,
+                                  "width": 669.87,
+                                  "height": 22
+                                },
+                                "snappedFrame": {
+                                  "left": 926,
+                                  "top": 664,
+                                  "width": 670,
+                                  "height": 22
+                                },
+                                "children": [],
+                                "text": "Acceptance or rework outcome is recorded with evidence and residual risk.",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/ed8bat47",
+                                  "id": "17",
+                                  "kind": "shape"
+                                }
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 5,
+                            "effectiveGap": 5,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 925.08,
+                              "top": 630,
+                              "width": 906.92,
+                              "height": 56
+                            },
+                            "items": [
+                              {
+                                "path": "0.1.1.1.2.1.0",
+                                "frame": {
+                                  "left": 925.08,
+                                  "top": 630,
+                                  "width": 906.92,
+                                  "height": 29
+                                }
+                              },
+                              {
+                                "path": "0.1.1.1.2.1.1",
+                                "frame": {
+                                  "left": 925.08,
+                                  "top": 664,
+                                  "width": 669.87,
+                                  "height": 22
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 22,
+                        "effectiveGap": 22,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 890.08,
+                          "top": 630,
+                          "width": 941.92,
+                          "height": 56
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.1.2.0",
+                            "frame": {
+                              "left": 890.08,
+                              "top": 630,
+                              "width": 13,
+                              "height": 56
+                            }
+                          },
+                          {
+                            "path": "0.1.1.1.2.1",
+                            "frame": {
+                              "left": 925.08,
+                              "top": 630,
+                              "width": 906.92,
+                              "height": 56
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "path": "0.1.1.1.3",
+                        "kind": "row",
+                        "name": "statement-replay-proof",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 35,
+                          "height": 56
+                        },
+                        "frame": {
+                          "left": 890.08,
+                          "top": 708,
+                          "width": 941.92,
+                          "height": 78
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.1.3.0",
+                            "kind": "shape",
+                            "name": "dot-replay-proof",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fixed",
+                                "value": 13
+                              },
+                              "height": {
+                                "mode": "fixed",
+                                "value": 56
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 13,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 890.08,
+                              "top": 708,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "snappedFrame": {
+                              "left": 892,
+                              "top": 708,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "children": [],
+                            "geometry": "rect",
+                            "element": {
+                              "aid": "sh/psfil0rq",
+                              "id": "18",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.1.3.1",
+                            "kind": "column",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 653.18,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 925.08,
+                              "top": 708,
+                              "width": 906.92,
+                              "height": 78
+                            },
+                            "children": [
+                              {
+                                "path": "0.1.1.1.3.1.0",
+                                "kind": "text",
+                                "name": "statement-title-replay-proof",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 29
+                                },
+                                "frame": {
+                                  "left": 925.08,
+                                  "top": 708,
+                                  "width": 906.92,
+                                  "height": 29
+                                },
+                                "snappedFrame": {
+                                  "left": 926,
+                                  "top": 708,
+                                  "width": 906,
+                                  "height": 30
+                                },
+                                "children": [],
+                                "text": "Replay proof",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/w7mp0bi9",
+                                  "id": "19",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.1.1.1.3.1.1",
+                                "kind": "text",
+                                "name": "statement-body-replay-proof",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "wrap",
+                                    "max": 1030
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 653.18,
+                                  "height": 22
+                                },
+                                "frame": {
+                                  "left": 925.08,
+                                  "top": 742,
+                                  "width": 653.18,
+                                  "height": 44
+                                },
+                                "snappedFrame": {
+                                  "left": 926,
+                                  "top": 742,
+                                  "width": 654,
+                                  "height": 44
+                                },
+                                "children": [],
+                                "text": "A fresh human or agent can continue from the package without guessing.",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/wb2hwfyx",
+                                  "id": "20",
+                                  "kind": "shape"
+                                }
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 5,
+                            "effectiveGap": 5,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 925.08,
+                              "top": 708,
+                              "width": 906.92,
+                              "height": 78
+                            },
+                            "items": [
+                              {
+                                "path": "0.1.1.1.3.1.0",
+                                "frame": {
+                                  "left": 925.08,
+                                  "top": 708,
+                                  "width": 906.92,
+                                  "height": 29
+                                }
+                              },
+                              {
+                                "path": "0.1.1.1.3.1.1",
+                                "frame": {
+                                  "left": 925.08,
+                                  "top": 742,
+                                  "width": 653.18,
+                                  "height": 44
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 22,
+                        "effectiveGap": 22,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 890.08,
+                          "top": 708,
+                          "width": 941.92,
+                          "height": 78
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.1.3.0",
+                            "frame": {
+                              "left": 890.08,
+                              "top": 708,
+                              "width": 13,
+                              "height": 56
+                            }
+                          },
+                          {
+                            "path": "0.1.1.1.3.1",
+                            "frame": {
+                              "left": 925.08,
+                              "top": 708,
+                              "width": 906.92,
+                              "height": 78
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "padding": {
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    },
+                    "gap": 22,
+                    "effectiveGap": 22,
+                    "justifyOffset": 0,
+                    "align": "start",
+                    "justify": "start",
+                    "contentFrame": {
+                      "left": 890.08,
+                      "top": 430,
+                      "width": 941.92,
+                      "height": 356
+                    },
+                    "items": [
+                      {
+                        "path": "0.1.1.1.0",
+                        "frame": {
+                          "left": 890.08,
+                          "top": 430,
+                          "width": 941.92,
+                          "height": 78
+                        }
+                      },
+                      {
+                        "path": "0.1.1.1.1",
+                        "frame": {
+                          "left": 890.08,
+                          "top": 530,
+                          "width": 941.92,
+                          "height": 78
+                        }
+                      },
+                      {
+                        "path": "0.1.1.1.2",
+                        "frame": {
+                          "left": 890.08,
+                          "top": 630,
+                          "width": 941.92,
+                          "height": 56
+                        }
+                      },
+                      {
+                        "path": "0.1.1.1.3",
+                        "frame": {
+                          "left": 890.08,
+                          "top": 708,
+                          "width": 941.92,
+                          "height": 78
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "columnGap": 62,
+                "rowGap": 0,
+                "alignItems": "center",
+                "justifyItems": "stretch",
+                "contentFrame": {
+                  "left": 88,
+                  "top": 259,
+                  "width": 1744,
+                  "height": 697
+                },
+                "columns": [
+                  {
+                    "mode": "fr",
+                    "value": 0.88
+                  },
+                  {
+                    "mode": "fr",
+                    "value": 1.12
+                  }
+                ],
+                "autoRows": "auto",
+                "resolvedRows": [
+                  "auto"
+                ],
+                "columnSizes": [
+                  740.08,
+                  941.92
+                ],
+                "rowSizes": [
+                  697
+                ],
+                "cells": [
+                  {
+                    "path": "0.1.1.0",
+                    "column": 0,
+                    "row": 0,
+                    "columnSpan": 1,
+                    "rowSpan": 1,
+                    "cellFrame": {
+                      "left": 88,
+                      "top": 259,
+                      "width": 740.08,
+                      "height": 697
+                    }
+                  },
+                  {
+                    "path": "0.1.1.1",
+                    "column": 1,
+                    "row": 0,
+                    "columnSpan": 1,
+                    "rowSpan": 1,
+                    "cellFrame": {
+                      "left": 890.08,
+                      "top": 259,
+                      "width": 941.92,
+                      "height": 697
+                    }
+                  }
+                ]
+              },
+              {
+                "path": "0.1.2",
+                "kind": "row",
+                "name": "trace-model-footer-row",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "hug"
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 307.84,
+                  "height": 13
+                },
+                "frame": {
+                  "left": 88,
+                  "top": 990,
+                  "width": 1744,
+                  "height": 26
+                },
+                "children": [
+                  {
+                    "path": "0.1.2.0",
+                    "kind": "text",
+                    "name": "trace-model-footer",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "wrap",
+                        "max": 1200
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 267.84,
+                      "height": 13
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 990,
+                      "width": 267.84,
+                      "height": 28
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 990,
+                      "width": 268,
+                      "height": 28
+                    },
+                    "children": [],
+                    "text": "DFMS pitch deck | software assurance dark factory",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/lwval87e",
+                      "id": "21",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.2.1",
+                    "kind": "text",
+                    "name": "trace-model-page",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 40
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 40,
+                      "height": 13
+                    },
+                    "frame": {
+                      "left": 1792,
+                      "top": 998,
+                      "width": 40,
+                      "height": 12
+                    },
+                    "snappedFrame": {
+                      "left": 1792,
+                      "top": 998,
+                      "width": 40,
+                      "height": 12
+                    },
+                    "children": [],
+                    "text": "25",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/e9cvixcz",
+                      "id": "22",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "gap": 0,
+                "effectiveGap": 1436.16,
+                "justifyOffset": 0,
+                "align": "center",
+                "justify": "between",
+                "contentFrame": {
+                  "left": 88,
+                  "top": 990,
+                  "width": 1744,
+                  "height": 26
+                },
+                "items": [
+                  {
+                    "path": "0.1.2.0",
+                    "frame": {
+                      "left": 88,
+                      "top": 990,
+                      "width": 267.84,
+                      "height": 28
+                    }
+                  },
+                  {
+                    "path": "0.1.2.1",
+                    "frame": {
+                      "left": 1792,
+                      "top": 998,
+                      "width": 40,
+                      "height": 12
+                    }
+                  }
+                ]
+              }
+            ],
+            "padding": {
+              "top": 64,
+              "right": 88,
+              "bottom": 64,
+              "left": 88
+            },
+            "gap": 34,
+            "effectiveGap": 34,
+            "justifyOffset": 0,
+            "align": "start",
+            "justify": "start",
+            "contentFrame": {
+              "left": 88,
+              "top": 64,
+              "width": 1744,
+              "height": 952
+            },
+            "items": [
+              {
+                "path": "0.1.0",
+                "frame": {
+                  "left": 88,
+                  "top": 64,
+                  "width": 1744,
+                  "height": 161
+                }
+              },
+              {
+                "path": "0.1.1",
+                "frame": {
+                  "left": 88,
+                  "top": 259,
+                  "width": 1744,
+                  "height": 697
+                }
+              },
+              {
+                "path": "0.1.2",
+                "frame": {
+                  "left": 88,
+                  "top": 990,
+                  "width": 1744,
+                  "height": 26
+                }
+              }
+            ]
+          }
+        ],
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignItems": "stretch",
+        "justifyItems": "stretch",
+        "contentFrame": {
+          "left": 0,
+          "top": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "items": [
+          {
+            "path": "0.0",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            }
+          },
+          {
+            "path": "0.1",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

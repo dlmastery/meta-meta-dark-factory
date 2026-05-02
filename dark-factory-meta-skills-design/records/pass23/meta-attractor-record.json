@@ -1,0 +1,96 @@
+{
+  "record_id": "ATTR-PASS23-001",
+  "created_on": "2026-04-25",
+  "source_signals": [
+    "User requested Ralph loop pass 23 critic review",
+    "Pass 22 recorded missing quality-certificate validation as residual risk",
+    "Original transcript requires stage certificates backed by expert rubrics, evidence, traceability, and residual-risk state"
+  ],
+  "attractor_state": "stable",
+  "goal": "Close quality-certificate bypasses so stage certificates cannot be template-like, under-reviewed, under-scored, unlinked, or evidence-empty.",
+  "layer_map": {
+    "product_specific": [
+      "No product-specific rule is introduced; this is reusable DFMS quality-certificate hardening."
+    ],
+    "factory_reusable": [
+      "Every future artifact, code change, handoff, or project-book certificate must pass certificate validation."
+    ],
+    "meta_meta_governance": [
+      "Pass 23 is governed by Attractor, control graph, work ledger, refinery gate, and hardening-runner evidence."
+    ]
+  },
+  "control_plane_links": {
+    "control_graph": "CG-PASS23-001",
+    "work_ledger": "WL-PASS23-001",
+    "refinery_gate": "RFG-PASS23-001"
+  },
+  "selected_mode": "skill-system-revision",
+  "selected_skills": [
+    {
+      "skill": "df-meta-attractor",
+      "reason": "govern this as a meta-meta hardening pass",
+      "load_now": true
+    },
+    {
+      "skill": "df-quality-refinery",
+      "reason": "add executable quality-certificate validation",
+      "load_now": true
+    },
+    {
+      "skill": "df-traceability-evidence",
+      "reason": "ensure certificate links to panel, gate, evidence, and residual risk state",
+      "load_now": true
+    },
+    {
+      "skill": "dark-factory-orchestrator",
+      "reason": "keep certificate validation in governed acceptance flow",
+      "load_now": true
+    }
+  ],
+  "gates": [
+    "quality certificates must have live IDs, live status, artifact, 3 reviewers, matching reviewer scores, panel score record, refinery gate, evidence, and residual-risk state",
+    "pass certificates require every reviewer score to be at least 96 percent unless threshold lowering is completely waived",
+    "pass certificates require independent review evidence, cross-critique evidence, failed-point fix evidence, refinery gate link, and certificate evidence",
+    "certificate template, low-score, missing-gate, reviewer-score mismatch, and low-threshold fixtures are rejected",
+    "pass 23 merged records validate"
+  ],
+  "node_contract": {
+    "what": "Run pass 23 critic review and harden quality-certificate validation.",
+    "why": "The transcript requires certificates at every stage; a certificate without executable validation is only ceremony.",
+    "how": "Add a certificate validator, positive fixture, negative fixtures, runner checks, skill guidance, and pass records.",
+    "where": "df-quality-refinery installed skill, workspace bundle, validation fixtures, and design records.",
+    "when": "Before future DFMS work issues a quality certificate.",
+    "who": "Codex as responsible fixer; human owner as Ralph-loop driver.",
+    "how_good": "Positive certificate passes; template, low-score, missing-gate, reviewer-mismatch, and low-threshold certificates reject."
+  },
+  "expert_debate": {
+    "system_theorist": "Certificates are closure objects; if weak, they falsely collapse unresolved work into done.",
+    "requirements_governance_architect": "Certificate threshold lowering and reviewer identity must follow the same waiver and trace discipline as other gates.",
+    "verification_safety_critic": "A pass certificate must mechanically prove panel evidence, cross-critique evidence, failed-point handling, refinery linkage, and score sufficiency.",
+    "synthesis": "Add executable certificate validation and preserve semantic truth as a residual risk for real project simulations."
+  },
+  "human_decisions": [
+    "Human owner requested pass 23 and asked to fix new findings."
+  ],
+  "assumptions": [
+    "Pass 23 is a patch-level certificate hardening pass, not a full greenfield or brownfield simulation."
+  ],
+  "risks": [
+    "Certificate validator proves evidence structure and linkage, not real-world correctness of the certified artifact."
+  ],
+  "evidence_commitments": [
+    "quality certificate pass fixture is accepted",
+    "bad certificate low-score fixture is rejected",
+    "bad certificate missing-gate fixture is rejected",
+    "bad certificate reviewer-score mismatch fixture is rejected",
+    "bad certificate low-threshold fixture is rejected",
+    "quality certificate template fixture is rejected",
+    "installed and workspace quality certificate validator files remain in sync"
+  ],
+  "anti_overfit_checks": [
+    "No todo-app-specific rule is introduced.",
+    "Certificate rules apply to all governed artifacts and stage gates."
+  ],
+  "verdict": "pass",
+  "next_safe_action": "Use validate_quality_certificate.py before issuing future DFMS quality certificates."
+}

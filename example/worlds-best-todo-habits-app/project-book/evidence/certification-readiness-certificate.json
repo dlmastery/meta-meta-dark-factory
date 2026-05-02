@@ -1,0 +1,54 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+  },
+  "template_only": false,
+  "certificate_id": "CERT-NORTHSTAR-DFMS-READY-20260426-001",
+  "run_id": "DFRUN-NORTHSTAR-20260425-001",
+  "bead_id": "TB-20260426-105",
+  "scope": "Internal DFMS certification-readiness pass for the bounded Northstar Daily local-static demonstrator slice.",
+  "verdict": "pass",
+  "issued_by": "Certification Readiness Panel and Hawkeye Conformance Auditor",
+  "issued_at": "2026-04-26T10:45:00-07:00",
+  "certification_boundary": {
+    "internal_dfms_readiness": true,
+    "external_accredited_certification": false,
+    "production_readiness": false,
+    "regulated_data_readiness": false
+  },
+  "evidence": [
+    "project-book/12-certification-readiness-hardening-record.md",
+    "tests/accessibility-certification-audit.cjs",
+    "project-book/evidence/accessibility-certification-output.txt",
+    "project-book/evidence/accessibility-certification-results.json",
+    "project-book/evidence/certification-readiness-panel-record.json",
+    "project-book/evidence/execution-kernel-report.json",
+    "project-book/records/hawkeye-conformance-audit-record.json"
+  ],
+  "passed_gates": [
+    "implementation evidence",
+    "unit/domain tests",
+    "static UI audit",
+    "browser WYSIWYG/E2E tests",
+    "scenario/holdout/transfer evidence",
+    "accessibility certification-readiness audit",
+    "standards/meta-meta charter audit",
+    "Hawkeye conformance",
+    "TASKS/TPM/PERT/KG validators",
+    "execution kernel closed state"
+  ],
+  "remaining_external_steps": [
+    "Choose target external certification body or audit standard.",
+    "Freeze certification scope and version baseline.",
+    "Run auditor-prescribed evidence collection.",
+    "Complete human/vendor review and signoff."
+  ],
+  "revalidation_triggers": [
+    "new product surface",
+    "backend, sync, auth, mobile, hosting, or production scope",
+    "official external certification claim",
+    "regulated data or contractual compliance requirement",
+    "accessibility lab or screen-reader certification request",
+    "new material requirement or risk"
+  ]
+}

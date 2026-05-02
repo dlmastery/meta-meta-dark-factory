@@ -1,0 +1,3 @@
+display_name: Dashboard Control
+short_description: Builds project-book dashboards and redo impact closures.
+default_prompt: Build or refresh the project dashboard, then compute redo impact for any selected artifact node.

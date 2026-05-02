@@ -1,0 +1,28 @@
+zero_slop_policy:
+  statement: "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+gate_id: GATE-NORTHSTAR-HUMAN-PORTAL-PASS
+run_id: DFRUN-NORTHSTAR-20260425-001
+bead_id: TB-20260426-108
+verdict: pass
+scope:
+  - human review and onboarding portal
+  - project-book dashboard
+  - documentation index
+  - evidence index
+  - Mermaid diagram atlas
+  - role-based onboarding paths
+  - portal validation
+required_evidence:
+  - project-book/15-human-review-onboarding-portal-record.md
+  - project-book/portal/index.html
+  - project-book/portal/portal-data.json
+  - project-book/portal/diagrams.md
+  - project-book/records/human-review-portal-record.json
+  - project-book/evidence/human-review-portal-panel-record.json
+  - project-book/evidence/human-review-portal-certificate.json
+  - project-book/evidence/human-review-portal-validation.json
+residual_risks:
+  - Hosted documentation portal, SSO, comments, and server-side search are future scope.
+  - Markdown rendering is handled by local browser/editor rather than an embedded renderer.
+  - Browser runtime profile folders are excluded from review-artifact coverage.
+next_action: RUN-CLOSED unless a new change-controlled bead is opened.

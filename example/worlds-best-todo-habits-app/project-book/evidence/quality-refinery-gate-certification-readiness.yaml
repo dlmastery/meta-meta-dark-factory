@@ -1,0 +1,20 @@
+zero_slop_policy:
+  statement: "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+gate_id: GATE-NORTHSTAR-CERTIFICATION-READY-PASS
+run_id: DFRUN-NORTHSTAR-20260425-001
+bead_id: TB-20260426-105
+verdict: pass
+scope:
+  - internal DFMS certification readiness
+  - accessibility hardening
+  - certification boundary cleanup
+  - executable accessibility evidence
+required_evidence:
+  - project-book/12-certification-readiness-hardening-record.md
+  - tests/accessibility-certification-audit.cjs
+  - project-book/evidence/accessibility-certification-results.json
+  - project-book/evidence/certification-readiness-certificate.json
+residual_risks:
+  - External accredited certification is a separate human/vendor process.
+  - Production, backend, sync, auth, mobile packaging, and regulated-data scope remain out of scope.
+next_action: RUN-CLOSED unless a new change request opens.

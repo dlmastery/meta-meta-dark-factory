@@ -1,0 +1,63 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+  },
+  "template_only": false,
+  "record_id": "AJJ-NORTHSTAR-20260426-003",
+  "step_id": "STEP-NORTHSTAR-003",
+  "transition": "ralph20_e2e_to_closed",
+  "roles": {
+    "tpm_judge": {
+      "persona_contract": "Legendary TPM judge accountable for enforcing a new bead after a closed run and verifying no step was skipped.",
+      "vote": "pass",
+      "rationale": "The continuation is tracked as TB-20260426-103 with TPM, PERT, KG, and Hawkeye links."
+    },
+    "evidence_clerk": {
+      "persona_contract": "Evidence clerk accountable for rejecting stale evidence, screenshot-only claims, and hidden test gaps.",
+      "vote": "pass",
+      "rationale": "Core, static, and browser E2E evidence were regenerated after the patch."
+    },
+    "standards_juror": {
+      "persona_contract": "Standards juror accountable for lifecycle evidence, traceability, and legal next action.",
+      "vote": "pass",
+      "rationale": "Task ledger, TPM, PERT, KG, Hawkeye, and kernel records are updated."
+    },
+    "domain_artifact_juror": {
+      "persona_contract": "Productivity domain juror accountable for testing complete user outcomes rather than screen presence.",
+      "vote": "pass",
+      "rationale": "E2E now covers capture, completion, habit check, rebalance, focus visibility, review save, and export."
+    },
+    "verification_juror": {
+      "persona_contract": "Verification juror accountable for deterministic E2E testing across desktop/mobile with no console or layout risk.",
+      "vote": "pass",
+      "rationale": "Browser test isolates contexts, checks state changes, and passes on desktop/mobile."
+    },
+    "adversarial_prosecutor": {
+      "persona_contract": "Adversarial prosecutor accountable for attacking hidden duplicate DOM targets, stale evidence, and fake completion.",
+      "stand_down": true,
+      "rationale": "A hidden-view locator bug was found and fixed; evidence was regenerated."
+    },
+    "jury_foreperson": {
+      "persona_contract": "Foreperson accountable for final verdict, dissent, residual risk, and next action.",
+      "verdict": "pass",
+      "rationale": "Twenty loops completed with no open P0/P1 finding for this bounded slice."
+    }
+  },
+  "evidence_reviewed": [
+    "project-book/10-ralph-20-e2e-completeness-record.md",
+    "tests/browser-wysiwyg.test.cjs",
+    "tests/core.test.cjs",
+    "tests/static-ui-audit.cjs",
+    "project-book/evidence/browser-wysiwyg-results.json",
+    "project-book/evidence/execution-kernel-report.json"
+  ],
+  "dependency_check": {
+    "predecessors_accepted_or_waived": true,
+    "pert_next_step_valid": true,
+    "current_bead_matches": true
+  },
+  "verdict": {
+    "outcome": "pass",
+    "next_action": "RUN-CLOSED unless a new change request is opened"
+  }
+}

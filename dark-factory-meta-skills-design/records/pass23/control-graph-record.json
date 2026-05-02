@@ -1,0 +1,136 @@
+{
+  "id": "CG-PASS23-001",
+  "name": "Pass 23 quality-certificate hardening",
+  "goal": "Ensure quality certificates cannot claim stage acceptance without reviewer, score, panel, refinery, evidence, and residual-risk proof.",
+  "risks": [
+    "A template-like quality certificate could be issued as stage proof",
+    "Certificate reviewer scores could belong to unlisted reviewers",
+    "A certificate could omit its refinery gate or lower its threshold"
+  ],
+  "links": {
+    "attractor": "ATTR-PASS23-001",
+    "work_ledger": "WL-PASS23-001",
+    "refinery_gate": "RFG-PASS23-001"
+  },
+  "nodes": [
+    {
+      "id": "NODE-PASS23-CRITIC",
+      "label": "Pass 23 certificate critic review",
+      "owner": "codex",
+      "node_contract": {
+        "what": "Review quality certificate enforcement against transcript requirements.",
+        "why": "Certificates are the stage acceptance boundary and must not be decorative.",
+        "how": "Inspect templates, skills, runner coverage, and validator gaps.",
+        "where": "df-quality-refinery skill, certificate template, validation runner, and pass 22 residual risks.",
+        "when": "Before pass 23 fixes are accepted.",
+        "who": "Codex using governance, quality, and verification expert lenses.",
+        "how_good": "Findings are concrete, reproducible, and closed with regression checks."
+      },
+      "expert_panel": [
+        "quality-refinery-reviewer",
+        "requirements-governance-architect",
+        "verification-safety-critic"
+      ],
+      "rubrics": [
+        "certificate completeness",
+        "reviewer-score integrity",
+        "certificate evidence linkage"
+      ],
+      "feedback_loop": "Each finding becomes validator logic and a hardening-runner negative fixture.",
+      "gates": [
+        "certificate validator added",
+        "negative fixtures added",
+        "runner passes"
+      ],
+      "evidence_outputs": [
+        "23-ralph-loop-critic-review-and-fix-record.md"
+      ]
+    },
+    {
+      "id": "NODE-PASS23-FIX",
+      "label": "Certificate validator implementation",
+      "owner": "codex",
+      "node_contract": {
+        "what": "Add and wire executable quality-certificate validation.",
+        "why": "Future certificates need enforceable proof before acceptance.",
+        "how": "Create validate_quality_certificate.py, update template and skill guidance, sync workspace, add fixtures.",
+        "where": "df-quality-refinery installed skill and workspace bundle.",
+        "when": "After critic review and before evidence closure.",
+        "who": "Codex as implementer.",
+        "how_good": "Positive certificate passes and weak certificates fail."
+      },
+      "expert_panel": [
+        "quality-lead",
+        "governance-auditor",
+        "validation-engineer"
+      ],
+      "rubrics": [
+        "validator enforceability",
+        "template inheritance",
+        "regression coverage"
+      ],
+      "feedback_loop": "Rerun the full hardening suite after every validator change.",
+      "gates": [
+        "installed validator compiles",
+        "workspace validator compiles",
+        "positive and negative fixtures behave as expected"
+      ],
+      "evidence_outputs": [
+        "validate_quality_certificate.py",
+        "quality-certificate-pass.json",
+        "run_pre17_hardening_checks.ps1"
+      ]
+    },
+    {
+      "id": "NODE-PASS23-VERIFY",
+      "label": "Pass 23 verification sweep",
+      "owner": "codex",
+      "node_contract": {
+        "what": "Verify final pass 23 state.",
+        "why": "The certificate hardening only counts if the runner and merged records prove it.",
+        "how": "Run hardening suite, merged-record validation, hash sync, JSON, ASCII, and artifact ID checks.",
+        "where": "Workspace validation suite and pass 23 records.",
+        "when": "After all fixes and records are written.",
+        "who": "Codex as verification runner.",
+        "how_good": "All checks pass and residual risks remain explicit."
+      },
+      "expert_panel": [
+        "verification-lead",
+        "traceability-lead",
+        "release-readiness-reviewer"
+      ],
+      "rubrics": [
+        "positive-path preservation",
+        "negative-path rejection",
+        "evidence completeness"
+      ],
+      "feedback_loop": "Any failed check reopens the fix node.",
+      "gates": [
+        "hardening runner passes",
+        "pass 23 merged records validate",
+        "hash sync succeeds"
+      ],
+      "evidence_outputs": [
+        "DFMS hardening checks complete",
+        "records/pass23 merged records"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "ATTR-PASS23-001",
+      "to": "NODE-PASS23-CRITIC",
+      "type": "governs"
+    },
+    {
+      "from": "NODE-PASS23-CRITIC",
+      "to": "NODE-PASS23-FIX",
+      "type": "requires"
+    },
+    {
+      "from": "NODE-PASS23-FIX",
+      "to": "NODE-PASS23-VERIFY",
+      "type": "must_validate"
+    }
+  ]
+}

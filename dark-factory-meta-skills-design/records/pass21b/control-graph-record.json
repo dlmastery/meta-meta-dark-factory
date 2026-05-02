@@ -1,0 +1,136 @@
+{
+  "id": "CG-PASS21B-001",
+  "name": "Pass 21B meta-meta control-plane hardening",
+  "goal": "Ensure merged control-plane records enforce required meta-meta outputs, per-node contracts, expert governance, and cross-record links.",
+  "risks": [
+    "A meta-attractor record could omit required outputs while still passing",
+    "A control graph node could lack what why how where when who how good governance",
+    "Merged records could be valid individually but unrelated as a run"
+  ],
+  "links": {
+    "attractor": "ATTR-PASS21B-001",
+    "work_ledger": "WL-PASS21B-001",
+    "refinery_gate": "RFG-PASS21B-001"
+  },
+  "nodes": [
+    {
+      "id": "NODE-PASS21B-CRITIC",
+      "label": "Second pass 21 critic review",
+      "owner": "codex",
+      "node_contract": {
+        "what": "Review merged control-plane enforcement against transcript requirements.",
+        "why": "The system must not claim human-grade SDLC rigor with weak meta records.",
+        "how": "Apply system, governance, and verification expert lenses.",
+        "where": "Meta-attractor validator, control graph template, pass records, and hardening runner.",
+        "when": "Before pass 21B acceptance.",
+        "who": "Codex acting through three expert perspectives.",
+        "how_good": "Every finding is concrete, fixed, and covered by regression evidence."
+      },
+      "expert_panel": [
+        "system-theorist",
+        "requirements-governance-architect",
+        "verification-safety-critic"
+      ],
+      "rubrics": [
+        "meta-meta output completeness",
+        "per-node governance completeness",
+        "merged-object linkage"
+      ],
+      "feedback_loop": "Any new bypass becomes a validator/template patch or explicit residual risk.",
+      "gates": [
+        "findings recorded",
+        "fixes applied",
+        "negative evidence added"
+      ],
+      "evidence_outputs": [
+        "21B-ralph-loop-critic-review-and-fix-record.md"
+      ]
+    },
+    {
+      "id": "NODE-PASS21B-FIX",
+      "label": "Validator and template hardening",
+      "owner": "codex",
+      "node_contract": {
+        "what": "Patch meta-attractor validation and control graph template.",
+        "why": "Future Codex sessions must inherit enforceable node governance rules.",
+        "how": "Update installed skill files, sync workspace copies, and update pass records.",
+        "where": "df-meta-attractor script and assets.",
+        "when": "Before final validation.",
+        "who": "Codex as responsible implementer.",
+        "how_good": "The hardening runner rejects missing required outputs, missing node contracts, and orphan IDs."
+      },
+      "expert_panel": [
+        "governance-auditor",
+        "workflow-graph-architect",
+        "validation-engineer"
+      ],
+      "rubrics": [
+        "validator enforceability",
+        "template inheritance",
+        "workspace-install sync"
+      ],
+      "feedback_loop": "Rerun validation after each patch.",
+      "gates": [
+        "installed script compiles",
+        "workspace script compiles",
+        "records validate"
+      ],
+      "evidence_outputs": [
+        "validate_merged_records.py",
+        "control-graph-record.yaml",
+        "run_pre17_hardening_checks.ps1"
+      ]
+    },
+    {
+      "id": "NODE-PASS21B-VERIFY",
+      "label": "Regression and evidence validation",
+      "owner": "codex",
+      "node_contract": {
+        "what": "Verify the final pass 21B state.",
+        "why": "The patch must prove both acceptance and rejection behavior.",
+        "how": "Run the full DFMS hardening suite, merged-record validation, hash sync, JSON, ASCII, and ID checks.",
+        "where": "Workspace validation suite and design records.",
+        "when": "After all fixes.",
+        "who": "Codex as verification runner.",
+        "how_good": "All checks pass and residual risks are explicitly recorded."
+      },
+      "expert_panel": [
+        "quality-refinery-reviewer",
+        "traceability-lead",
+        "release-readiness-reviewer"
+      ],
+      "rubrics": [
+        "negative fixture coverage",
+        "control-plane traceability",
+        "patch-level readiness"
+      ],
+      "feedback_loop": "Any failed validation reopens fix work.",
+      "gates": [
+        "hardening runner passes",
+        "pass 21B merged records validate",
+        "hash sync succeeds"
+      ],
+      "evidence_outputs": [
+        "DFMS hardening checks complete",
+        "records/pass21b merged records"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "ATTR-PASS21B-001",
+      "to": "NODE-PASS21B-CRITIC",
+      "type": "governs"
+    },
+    {
+      "from": "NODE-PASS21B-CRITIC",
+      "to": "NODE-PASS21B-FIX",
+      "type": "requires"
+    },
+    {
+      "from": "NODE-PASS21B-FIX",
+      "to": "NODE-PASS21B-VERIFY",
+      "type": "must_validate"
+    }
+  ]
+}

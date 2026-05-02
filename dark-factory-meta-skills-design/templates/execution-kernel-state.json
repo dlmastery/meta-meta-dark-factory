@@ -1,0 +1,42 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+    "strict_compliance": "Mandatory. Every claim must be project-specific, evidence-backed, trace-linked, reviewer-challenged, and free of unsupported invention.",
+    "missing_evidence_rule": "If evidence is missing, mark it as an assumption, risk, open question, or failure."
+  },
+  "template_only": true,
+  "kernel_state_id": "KERNEL-000",
+  "run_id": "",
+  "tasks_md_path": "",
+  "tpm_flow_ledger_path": "",
+  "pert_plan_path": "",
+  "knowledge_graph_path": "",
+  "judge_jury_records": [],
+  "preflight_status": "not_run",
+  "current": {
+    "bead_id": "",
+    "step_id": "",
+    "state": "",
+    "owner": "",
+    "token_posture": "",
+    "boundary_human_required": false
+  },
+  "consistency_checks": {
+    "tasks_matches_ledger": false,
+    "ledger_matches_pert": false,
+    "ledger_matches_knowledge_graph": false,
+    "judge_jury_records_valid": false,
+    "templates_not_used_as_proof": false
+  },
+  "legal_next_action": {
+    "status": "unknown",
+    "step_id": "",
+    "bead_id": "",
+    "action": "",
+    "why": "",
+    "blocked_by": [],
+    "requires_change_control": false,
+    "requires_human_boundary_approval": false
+  },
+  "template_marker": true
+}

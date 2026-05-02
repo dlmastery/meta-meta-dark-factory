@@ -1,0 +1,95 @@
+{
+  "record_id": "ATTR-PASS25-001",
+  "created_on": "2026-04-25",
+  "source_signals": [
+    "User requested Ralph loop pass 25 critic review",
+    "Pass 24 made quality certificates bundle-aware",
+    "Original transcript requires evidence-backed certificates, traceable acceptance gates, and no superficial pass records"
+  ],
+  "attractor_state": "stable",
+  "goal": "Close remaining quality certificate and refinery gate evidence-placement bypasses where required IDs could appear only in prose or pass gates could have empty scope.",
+  "layer_map": {
+    "product_specific": [
+      "No product-specific rule is introduced; this hardens reusable certificate and refinery gate validation."
+    ],
+    "factory_reusable": [
+      "Every future pass certificate and pass refinery gate must bind to structured evidence and scoped work."
+    ],
+    "meta_meta_governance": [
+      "Pass 25 is governed by Attractor, control graph, work ledger, refinery gate, and hardening-runner evidence."
+    ]
+  },
+  "control_plane_links": {
+    "control_graph": "CG-PASS25-001",
+    "work_ledger": "WL-PASS25-001",
+    "refinery_gate": "RFG-PASS25-001"
+  },
+  "selected_mode": "skill-system-revision",
+  "selected_skills": [
+    {
+      "skill": "df-meta-attractor",
+      "reason": "govern this as a meta-meta hardening pass",
+      "load_now": true
+    },
+    {
+      "skill": "df-quality-refinery",
+      "reason": "harden certificate structured evidence and refinery pass scope",
+      "load_now": true
+    },
+    {
+      "skill": "df-traceability-evidence",
+      "reason": "ensure acceptance evidence is traceable through structured fields",
+      "load_now": true
+    },
+    {
+      "skill": "dark-factory-orchestrator",
+      "reason": "keep scope and certificate evidence in governed acceptance flow",
+      "load_now": true
+    }
+  ],
+  "gates": [
+    "certificate bundle validation requires artifact ID in refinery scope.artifacts",
+    "certificate bundle validation requires panel ID in refinery evidence.rubric_scorecards",
+    "certificate bundle validation requires certificate ID in refinery evidence.certificates",
+    "pass refinery gates require at least one scoped work item, artifact, code change, or release item",
+    "pass refinery gates require non-empty verdict rationale and next action",
+    "pass 25 merged records validate"
+  ],
+  "node_contract": {
+    "what": "Run pass 25 critic review and harden structured evidence placement in certificate and refinery validation.",
+    "why": "Evidence IDs appearing in prose are not equivalent to traceable structured evidence.",
+    "how": "Add structured list extraction, require exact list membership, add bad structured-evidence and empty-scope negative fixtures, and validate the suite.",
+    "where": "df-quality-refinery installed skill, workspace bundle, validation fixtures, and design records.",
+    "when": "Before future DFMS pass certificates or pass refinery gates are trusted.",
+    "who": "Codex as responsible fixer; human owner as Ralph-loop driver.",
+    "how_good": "Positive fixtures pass while prose-only evidence and empty-scope pass gates reject."
+  },
+  "expert_debate": {
+    "system_theorist": "Acceptance gates must point to structured evidence fields or the system can satisfy itself with decorative text.",
+    "requirements_governance_architect": "Scope, certificate, panel, and artifact links must be auditable as list entries, not prose mentions.",
+    "verification_safety_critic": "Pass gates without scope or rationale cannot tell a future reviewer what was accepted or why.",
+    "synthesis": "Harden the YAML-list extraction path and keep full semantic review as a residual risk for project simulation."
+  },
+  "human_decisions": [
+    "Human owner requested pass 25 and asked to fix new findings."
+  ],
+  "assumptions": [
+    "Pass 25 is a patch-level structured-evidence hardening pass, not a full project simulation."
+  ],
+  "risks": [
+    "The refinery gate parser remains a small YAML subset parser, though stricter than before."
+  ],
+  "evidence_commitments": [
+    "bad certificate gate structured-evidence fixture is rejected",
+    "bad refinery empty-scope fixture is rejected",
+    "quality certificate bundle pass fixture remains accepted",
+    "existing quality-refinery negative fixtures still reject",
+    "installed and workspace quality-refinery files remain in sync"
+  ],
+  "anti_overfit_checks": [
+    "No todo-app-specific rule is introduced.",
+    "Structured evidence rules apply to all governed pass certificates and refinery gates."
+  ],
+  "verdict": "pass",
+  "next_safe_action": "Use the stricter structured-evidence validators before accepting future pass gates or certificates."
+}

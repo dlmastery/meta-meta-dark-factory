@@ -1,0 +1,696 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+    "strict_compliance": "Mandatory. Every claim must be project-specific, evidence-backed, trace-linked, reviewer-challenged, and free of unsupported invention.",
+    "missing_evidence_rule": "If evidence is missing, mark it as an assumption, risk, open question, or failure."
+  },
+  "template_only": false,
+  "record_id": "KG-DFMS-META-SKILL-DESIGN",
+  "title": "DFMS Knowledge Graph And Task Bead Tracking Update",
+  "project": {
+    "name": "Software-Assured Standardized Dark Factory Meta-Meta Skill System",
+    "run_id": "RUN-DFMS-GRAPHIFY-20260425",
+    "attractor_state": "stable",
+    "control_graph_id": "CG-DFMS-META-SKILL-DESIGN",
+    "work_ledger_id": "WL-DFMS-META-SKILL-DESIGN",
+    "tasks_md_path": "dark-factory-meta-skills-design/TASKS.md",
+    "project_book_root": "dark-factory-meta-skills-design"
+  },
+  "governance": {
+    "standards_basis": [
+      "ISO/IEC/IEEE 12207:2017",
+      "ISO/IEC/IEEE 15289:2019",
+      "SWEBOK",
+      "RUP",
+      "MDA",
+      "DDD",
+      "TDD/BDD",
+      "SRE"
+    ],
+    "token_budget_policy": {
+      "required_for_material_work": true,
+      "current_swag_band": "low for this revision; future full runtime/UI expansion requires explicit approval",
+      "approval_state": "user_requested_continuation",
+      "reapproval_triggers": [
+        "scope expands to full graph database runtime",
+        "scope expands to UI",
+        "scope expands to automated multi-artifact RALPH execution"
+      ]
+    },
+    "change_control_policy": {
+      "required_for_scope_or_budget_change": true,
+      "open_change_requests": []
+    }
+  },
+  "node_type_registry": [
+    "intent",
+    "interrogation_answer",
+    "requirement",
+    "nfr",
+    "assumption",
+    "risk",
+    "decision",
+    "control_graph_node",
+    "work_ledger_item",
+    "task_bead",
+    "artifact",
+    "artifact_template",
+    "rubric",
+    "expert_role",
+    "review_record",
+    "ralph_loop",
+    "evidence",
+    "test",
+    "code_change",
+    "handoff",
+    "certificate",
+    "memory_pack",
+    "lesson"
+  ],
+  "edge_type_registry": [
+    "derives_from",
+    "decomposes_to",
+    "answers",
+    "satisfies",
+    "implements",
+    "verifies",
+    "mitigates",
+    "raises",
+    "decides",
+    "supersedes",
+    "depends_on",
+    "blocks",
+    "tracked_by",
+    "gated_by",
+    "reviewed_by",
+    "attacked_by",
+    "requires_patch",
+    "patched_by",
+    "hardened_by",
+    "evidenced_by",
+    "certified_by",
+    "waived_by",
+    "hands_off_to",
+    "resumes_from",
+    "learns_from",
+    "next_bead"
+  ],
+  "nodes": [
+    {
+      "id": "INTENT-GRAPHIFY-001",
+      "type": "intent",
+      "title": "Graphify DFMS knowledge and strict task tracking",
+      "status": "accepted",
+      "owner": "client",
+      "summary": "User requested a knowledge graph build and strict TASKS.md bead-style tracking."
+    },
+    {
+      "id": "ANSWER-GRAPHIFY-001",
+      "type": "interrogation_answer",
+      "title": "Current steering answer",
+      "status": "accepted",
+      "owner": "client",
+      "summary": "The desired tracking shape is graphified knowledge plus strict bead-by-bead task state."
+    },
+    {
+      "id": "REQ-GRAPH-KG-001",
+      "type": "requirement",
+      "title": "Knowledge graph truth map",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "DFMS must represent material factory objects as typed nodes and typed edges."
+    },
+    {
+      "id": "REQ-GRAPH-TASKS-001",
+      "type": "requirement",
+      "title": "Strict task bead ledger",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "DFMS must use TASKS.md as a visible execution ledger with bead state, owner, evidence, gate, and next bead."
+    },
+    {
+      "id": "NFR-GRAPH-TRACE-001",
+      "type": "nfr",
+      "title": "Traceable and resumable execution",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "A future human or agent must be able to resume from graph state and bead state without relying on chat memory."
+    },
+    {
+      "id": "RISK-GRAPH-001",
+      "type": "risk",
+      "title": "Graph controls become decorative",
+      "status": "open",
+      "owner": "Codex",
+      "summary": "If graph and beads are not enforced by skills and validators, they become documentation rather than governance."
+    },
+    {
+      "id": "DEC-GRAPH-001",
+      "type": "decision",
+      "title": "Use file-based graph and TASKS.md before runtime graph database",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "Start with standards-based JSON and Markdown records so the skill system can instantiate immediately; defer graph database UI/runtime as future scope."
+    },
+    {
+      "id": "CG-NODE-GRAPH-DESIGN",
+      "type": "control_graph_node",
+      "title": "Graph design node",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "Define node types, edge types, bead states, task rules, and integration points."
+    },
+    {
+      "id": "CG-NODE-GRAPH-ASSETS",
+      "type": "control_graph_node",
+      "title": "Graph asset node",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "Create reusable templates and validators."
+    },
+    {
+      "id": "CG-NODE-GRAPH-INSTALL",
+      "type": "control_graph_node",
+      "title": "Graph install node",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "Install graph and bead controls into live skills."
+    },
+    {
+      "id": "CG-NODE-GRAPH-VALIDATE",
+      "type": "control_graph_node",
+      "title": "Graph validation node",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "Run structural checks and report validation status."
+    },
+    {
+      "id": "WL-GRAPH-001",
+      "type": "work_ledger_item",
+      "title": "Design bead work item",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "Work item for graph design."
+    },
+    {
+      "id": "WL-GRAPH-002",
+      "type": "work_ledger_item",
+      "title": "Asset bead work item",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "Work item for templates and validators."
+    },
+    {
+      "id": "WL-GRAPH-003",
+      "type": "work_ledger_item",
+      "title": "Install bead work item",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "Work item for live skill installation."
+    },
+    {
+      "id": "WL-GRAPH-004",
+      "type": "work_ledger_item",
+      "title": "Validation bead work item",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "Work item for structural validation."
+    },
+    {
+      "id": "TB-20260425-001",
+      "type": "task_bead",
+      "title": "Design graph and bead model",
+      "status": "accepted",
+      "state": "accepted",
+      "owner": "Codex",
+      "summary": "Created graphified knowledge model and strict bead-tracking design.",
+      "control_graph_node": "CG-NODE-GRAPH-DESIGN",
+      "work_ledger_item": "WL-GRAPH-001",
+      "evidence_provided": [
+        "EVD-GRAPH-001"
+      ],
+      "gate": "GATE-GRAPH-001",
+      "next_bead": "TB-20260425-002"
+    },
+    {
+      "id": "TB-20260425-002",
+      "type": "task_bead",
+      "title": "Create graph and bead assets",
+      "status": "accepted",
+      "state": "accepted",
+      "owner": "Codex",
+      "summary": "Created graph, bead, TASKS, and validator assets.",
+      "control_graph_node": "CG-NODE-GRAPH-ASSETS",
+      "work_ledger_item": "WL-GRAPH-002",
+      "evidence_provided": [
+        "EVD-GRAPH-002"
+      ],
+      "gate": "GATE-GRAPH-002",
+      "next_bead": "TB-20260425-003"
+    },
+    {
+      "id": "TB-20260425-003",
+      "type": "task_bead",
+      "title": "Install live skill controls",
+      "status": "accepted",
+      "state": "accepted",
+      "owner": "Codex",
+      "summary": "Updated live skills and installed graph/bead assets.",
+      "control_graph_node": "CG-NODE-GRAPH-INSTALL",
+      "work_ledger_item": "WL-GRAPH-003",
+      "evidence_provided": [
+        "EVD-GRAPH-003"
+      ],
+      "gate": "GATE-GRAPH-003",
+      "next_bead": "TB-20260425-004"
+    },
+    {
+      "id": "TB-20260425-004",
+      "type": "task_bead",
+      "title": "Validate graph and bead controls",
+      "status": "accepted",
+      "state": "accepted",
+      "owner": "Codex",
+      "summary": "Run structural validation for templates, scripts, graph, and TASKS.md.",
+      "control_graph_node": "CG-NODE-GRAPH-VALIDATE",
+      "work_ledger_item": "WL-GRAPH-004",
+      "evidence_provided": [
+        "EVD-GRAPH-004"
+      ],
+      "gate": "GATE-GRAPH-004",
+      "next_bead": "RUN-CLOSED"
+    },
+    {
+      "id": "ART-GRAPH-001",
+      "type": "artifact",
+      "title": "Knowledge graph and task bead design record",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "Design record that specifies graph layers, nodes, edges, bead states, TASKS.md contract, and validators."
+    },
+    {
+      "id": "ART-TEMPLATE-KG-001",
+      "type": "artifact_template",
+      "title": "Knowledge graph record template",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "Reusable JSON template for DFMS graph records. It is not proof by itself."
+    },
+    {
+      "id": "RUBRIC-GRAPH-001",
+      "type": "rubric",
+      "title": "Graph and bead structural validation rubric",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "Checks for typed nodes, typed edges, bead evidence, template rejection, and orphan prevention."
+    },
+    {
+      "id": "EXPERT-GOV-001",
+      "type": "expert_role",
+      "title": "Governance gatekeeper",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "Reviews whether bead state and approvals block bypass."
+    },
+    {
+      "id": "REVIEW-GRAPH-001",
+      "type": "review_record",
+      "title": "Graph and bead control review",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "Review record for this focused graph-tracking update."
+    },
+    {
+      "id": "RALPH-GRAPH-001",
+      "type": "ralph_loop",
+      "title": "Focused RALPH hardening for graph tracking",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "A focused loop to prevent template-only proof and task invisibility."
+    },
+    {
+      "id": "EVD-GRAPH-001",
+      "type": "evidence",
+      "title": "Graph design record evidence",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "The design record exists at dark-factory-meta-skills-design/41-knowledge-graph-and-task-bead-tracking.md."
+    },
+    {
+      "id": "EVD-GRAPH-002",
+      "type": "evidence",
+      "title": "Template and validator evidence",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "The graph, bead, TASKS, and validator assets exist in dark-factory-meta-skills-design/templates and scripts."
+    },
+    {
+      "id": "EVD-GRAPH-003",
+      "type": "evidence",
+      "title": "Installed skill evidence",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "Live skills were updated to require knowledge graph and task bead controls for governed work."
+    },
+    {
+      "id": "EVD-GRAPH-004",
+      "type": "evidence",
+      "title": "Structural validation pass evidence",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "JSON parse, validator compile, template-mode validation, instantiated knowledge graph validation, and actual TASKS.md validation passed after linking the orphan NFR."
+    },
+    {
+      "id": "TEST-GRAPH-001",
+      "type": "test",
+      "title": "Structural validation run",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "Run parser, compiler, graph validator, and TASKS.md validator checks."
+    },
+    {
+      "id": "CODE-GRAPH-001",
+      "type": "code_change",
+      "title": "Graph and TASKS validators",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "Added Python validators for knowledge graph records and TASKS.md bead discipline."
+    },
+    {
+      "id": "HANDOFF-GRAPH-001",
+      "type": "handoff",
+      "title": "Future session graph and bead handoff",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "Future sessions resume from TASKS.md, knowledge graph record, and updated live skill guidance."
+    },
+    {
+      "id": "CERT-GRAPH-001",
+      "type": "certificate",
+      "title": "Focused graph tracking update certificate",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "Focused certificate that this update created graph and bead controls; semantic correctness still requires expert review in future full release."
+    },
+    {
+      "id": "MEM-GRAPH-001",
+      "type": "memory_pack",
+      "title": "Graph tracking resume memory",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "Context memory now treats knowledge graph and TASKS.md as resume surfaces."
+    },
+    {
+      "id": "LESSON-GRAPH-001",
+      "type": "lesson",
+      "title": "Tracking must be graph-backed and bead-visible",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "Process lesson: control graph and work ledger are not enough without graphified truth and strict task beads."
+    }
+  ],
+  "edges": [
+    {
+      "id": "EDGE-GRAPH-001",
+      "type": "answers",
+      "source": "ANSWER-GRAPHIFY-001",
+      "target": "INTENT-GRAPHIFY-001",
+      "rationale": "The current steering answer clarifies the user's request."
+    },
+    {
+      "id": "EDGE-GRAPH-002",
+      "type": "derives_from",
+      "source": "REQ-GRAPH-KG-001",
+      "target": "INTENT-GRAPHIFY-001",
+      "rationale": "The knowledge graph requirement derives from graphify request."
+    },
+    {
+      "id": "EDGE-GRAPH-003",
+      "type": "derives_from",
+      "source": "REQ-GRAPH-TASKS-001",
+      "target": "INTENT-GRAPHIFY-001",
+      "rationale": "The TASKS.md requirement derives from strict bead tracking request."
+    },
+    {
+      "id": "EDGE-GRAPH-004",
+      "type": "decomposes_to",
+      "source": "REQ-GRAPH-KG-001",
+      "target": "TB-20260425-001",
+      "rationale": "The graph requirement decomposes first into the design bead."
+    },
+    {
+      "id": "EDGE-GRAPH-005",
+      "type": "decomposes_to",
+      "source": "REQ-GRAPH-TASKS-001",
+      "target": "TB-20260425-002",
+      "rationale": "The bead tracking requirement decomposes into template and validator assets."
+    },
+    {
+      "id": "EDGE-GRAPH-006",
+      "type": "tracked_by",
+      "source": "REQ-GRAPH-KG-001",
+      "target": "WL-GRAPH-001",
+      "rationale": "The design work item tracks the graph requirement."
+    },
+    {
+      "id": "EDGE-GRAPH-007",
+      "type": "tracked_by",
+      "source": "REQ-GRAPH-TASKS-001",
+      "target": "WL-GRAPH-002",
+      "rationale": "The asset work item tracks the bead tracking requirement."
+    },
+    {
+      "id": "EDGE-GRAPH-008",
+      "type": "gated_by",
+      "source": "TB-20260425-001",
+      "target": "CERT-GRAPH-001",
+      "rationale": "Accepted design bead is gated by focused certificate."
+    },
+    {
+      "id": "EDGE-GRAPH-009",
+      "type": "gated_by",
+      "source": "TB-20260425-002",
+      "target": "CERT-GRAPH-001",
+      "rationale": "Accepted asset bead is gated by focused certificate."
+    },
+    {
+      "id": "EDGE-GRAPH-010",
+      "type": "gated_by",
+      "source": "TB-20260425-003",
+      "target": "CERT-GRAPH-001",
+      "rationale": "Accepted install bead is gated by focused certificate."
+    },
+    {
+      "id": "EDGE-GRAPH-011",
+      "type": "next_bead",
+      "source": "TB-20260425-001",
+      "target": "TB-20260425-002",
+      "rationale": "Design proceeds to asset creation."
+    },
+    {
+      "id": "EDGE-GRAPH-012",
+      "type": "next_bead",
+      "source": "TB-20260425-002",
+      "target": "TB-20260425-003",
+      "rationale": "Assets proceed to live skill installation."
+    },
+    {
+      "id": "EDGE-GRAPH-013",
+      "type": "next_bead",
+      "source": "TB-20260425-003",
+      "target": "TB-20260425-004",
+      "rationale": "Installation proceeds to validation."
+    },
+    {
+      "id": "EDGE-GRAPH-014",
+      "type": "satisfies",
+      "source": "ART-GRAPH-001",
+      "target": "REQ-GRAPH-KG-001",
+      "rationale": "The design record satisfies the graph model requirement."
+    },
+    {
+      "id": "EDGE-GRAPH-015",
+      "type": "satisfies",
+      "source": "ART-TEMPLATE-KG-001",
+      "target": "REQ-GRAPH-TASKS-001",
+      "rationale": "The template set supports the strict tracking requirement."
+    },
+    {
+      "id": "EDGE-GRAPH-016",
+      "type": "reviewed_by",
+      "source": "ART-GRAPH-001",
+      "target": "EXPERT-GOV-001",
+      "rationale": "Governance gatekeeper role reviews bypass prevention."
+    },
+    {
+      "id": "EDGE-GRAPH-017",
+      "type": "attacked_by",
+      "source": "ART-GRAPH-001",
+      "target": "REVIEW-GRAPH-001",
+      "rationale": "Focused review attacks template-only and orphan evidence risks."
+    },
+    {
+      "id": "EDGE-GRAPH-018",
+      "type": "requires_patch",
+      "source": "REVIEW-GRAPH-001",
+      "target": "TB-20260425-002",
+      "rationale": "Review required concrete templates and validators."
+    },
+    {
+      "id": "EDGE-GRAPH-019",
+      "type": "patched_by",
+      "source": "REVIEW-GRAPH-001",
+      "target": "TB-20260425-002",
+      "rationale": "Template and validator assets patch the finding."
+    },
+    {
+      "id": "EDGE-GRAPH-020",
+      "type": "hardened_by",
+      "source": "RISK-GRAPH-001",
+      "target": "RALPH-GRAPH-001",
+      "rationale": "Focused RALPH hardening reduces risk of decorative controls."
+    },
+    {
+      "id": "EDGE-GRAPH-021",
+      "type": "evidenced_by",
+      "source": "ART-GRAPH-001",
+      "target": "EVD-GRAPH-001",
+      "rationale": "Evidence names the created design record."
+    },
+    {
+      "id": "EDGE-GRAPH-022",
+      "type": "evidenced_by",
+      "source": "TB-20260425-002",
+      "target": "EVD-GRAPH-002",
+      "rationale": "Evidence names created assets."
+    },
+    {
+      "id": "EDGE-GRAPH-023",
+      "type": "evidenced_by",
+      "source": "TB-20260425-003",
+      "target": "EVD-GRAPH-003",
+      "rationale": "Evidence names installed skill updates."
+    },
+    {
+      "id": "EDGE-GRAPH-024",
+      "type": "certified_by",
+      "source": "ART-GRAPH-001",
+      "target": "CERT-GRAPH-001",
+      "rationale": "Focused certificate covers this graph tracking update."
+    },
+    {
+      "id": "EDGE-GRAPH-025",
+      "type": "verifies",
+      "source": "TEST-GRAPH-001",
+      "target": "ART-GRAPH-001",
+      "rationale": "Structural validation verifies the created artifacts exist and parse."
+    },
+    {
+      "id": "EDGE-GRAPH-026",
+      "type": "implements",
+      "source": "CODE-GRAPH-001",
+      "target": "REQ-GRAPH-TASKS-001",
+      "rationale": "Validator scripts implement structural checks for bead tracking."
+    },
+    {
+      "id": "EDGE-GRAPH-027",
+      "type": "mitigates",
+      "source": "DEC-GRAPH-001",
+      "target": "RISK-GRAPH-001",
+      "rationale": "File-backed records with validators reduce decorative-control risk."
+    },
+    {
+      "id": "EDGE-GRAPH-028",
+      "type": "raises",
+      "source": "RISK-GRAPH-001",
+      "target": "REQ-GRAPH-KG-001",
+      "rationale": "The decorative-control risk raises a need for graph enforcement."
+    },
+    {
+      "id": "EDGE-GRAPH-029",
+      "type": "decides",
+      "source": "DEC-GRAPH-001",
+      "target": "ART-TEMPLATE-KG-001",
+      "rationale": "Decision selects file-based records first."
+    },
+    {
+      "id": "EDGE-GRAPH-030",
+      "type": "depends_on",
+      "source": "TB-20260425-004",
+      "target": "TB-20260425-003",
+      "rationale": "Validation depends on installed controls."
+    },
+    {
+      "id": "EDGE-GRAPH-031",
+      "type": "hands_off_to",
+      "source": "HANDOFF-GRAPH-001",
+      "target": "MEM-GRAPH-001",
+      "rationale": "Future handoff uses graph and bead memory."
+    },
+    {
+      "id": "EDGE-GRAPH-032",
+      "type": "resumes_from",
+      "source": "MEM-GRAPH-001",
+      "target": "TB-20260425-004",
+      "rationale": "Future work resumes from current bead state."
+    },
+    {
+      "id": "EDGE-GRAPH-033",
+      "type": "learns_from",
+      "source": "LESSON-GRAPH-001",
+      "target": "RISK-GRAPH-001",
+      "rationale": "The lesson comes from the risk that controls can become decorative."
+    },
+    {
+      "id": "EDGE-GRAPH-034",
+      "type": "waived_by",
+      "source": "TB-20260425-004",
+      "target": "DEC-GRAPH-001",
+      "rationale": "Full runtime graph database is outside this focused revision and deferred by decision."
+    },
+    {
+      "id": "EDGE-GRAPH-035",
+      "type": "supersedes",
+      "source": "ART-GRAPH-001",
+      "target": "DEC-GRAPH-001",
+      "rationale": "The design record supersedes informal tracking expectations for this area."
+    },
+    {
+      "id": "EDGE-GRAPH-036",
+      "type": "verifies",
+      "source": "TEST-GRAPH-001",
+      "target": "NFR-GRAPH-TRACE-001",
+      "rationale": "Structural validation supports resumable and traceable execution checks."
+    },
+    {
+      "id": "EDGE-GRAPH-037",
+      "type": "evidenced_by",
+      "source": "TB-20260425-004",
+      "target": "EVD-GRAPH-004",
+      "rationale": "The validation bead is backed by completed structural validation evidence."
+    },
+    {
+      "id": "EDGE-GRAPH-038",
+      "type": "verifies",
+      "source": "TEST-GRAPH-001",
+      "target": "CODE-GRAPH-001",
+      "rationale": "Validator compile and execution checks cover the new validator scripts."
+    }
+  ],
+  "waivers": [
+    {
+      "id": "WAIVER-GRAPH-RUNTIME-001",
+      "owner": "Codex",
+      "rationale": "This bead implements standards-based file records and validators, not a graph database runtime or visual UI.",
+      "expiry": "next request for graph runtime, graph UI, or automated multi-artifact runtime enforcement",
+      "residual_risk": "Manual linking is still possible until a runtime graph database or UI exists.",
+      "revalidation_trigger": "User requests graph runtime, visual explorer, or automated enforcement across all future project books."
+    }
+  ],
+  "quality_gate": {
+    "status": "passed",
+    "validator": "scripts/validate_knowledge_graph.py",
+    "last_run": "2026-04-25",
+    "findings": []
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+    "strict_compliance": "Mandatory. Every claim must be project-specific, evidence-backed, trace-linked, reviewer-challenged, and free of unsupported invention.",
+    "missing_evidence_rule": "If evidence is missing, mark it as an assumption, risk, open question, or failure."
+  },
+  "template_only": false,
+  "ledger_id": "TPM-FLOW-DFMS-20260425",
+  "run_id": "RUN-DFMS-TPM-FLOW-20260425",
+  "title": "DFMS TPM Flow And AI Jury Enforcement Ledger",
+  "current_step_id": "RUN-CLOSED",
+  "current_bead_id": "RUN-CLOSED",
+  "pert_plan_id": "PERT-DFMS-TPM-FLOW-20260425",
+  "knowledge_graph_id": "KG-DFMS-META-SKILL-DESIGN",
+  "tasks_md_path": "dark-factory-meta-skills-design/TASKS.md",
+  "allowed_transition_states": [
+    "planned",
+    "ready",
+    "active",
+    "self_check",
+    "judge_review",
+    "jury_review",
+    "rework",
+    "accepted",
+    "next_ready",
+    "closed",
+    "blocked",
+    "waived",
+    "retired"
+  ],
+  "steps": [
+    {
+      "step_id": "STEP-TPM-FLOW-001",
+      "bead_id": "TB-20260425-005",
+      "title": "Add strict TPM flow ledger, PERT, and AI judge/jury enforcement",
+      "state": "accepted",
+      "owner": "Legendary TPM Agent",
+      "scope_boundary": "Focused DFMS meta-meta workflow enforcement artifacts, validators, and live skill guidance.",
+      "predecessors": [],
+      "successors": [
+        "RUN-CLOSED"
+      ],
+      "entry_criteria": [
+        "User requested strict ledger taskflow and PERT assurance",
+        "Prior graph and TASKS.md controls exist"
+      ],
+      "exit_criteria": [
+        "Design record exists",
+        "Templates exist",
+        "Validator exists",
+        "AI judge/jury record passes",
+        "Live skill guidance updated"
+      ],
+      "inputs": [
+        "User request for legendary TPM rigor and AI judge/jury enforcement",
+        "Existing graph and task bead controls"
+      ],
+      "outputs": [
+        "dark-factory-meta-skills-design/42-legendary-tpm-flow-ledger-and-ai-jury-enforcement.md",
+        "dark-factory-meta-skills-design/templates/tpm-flow-ledger.json",
+        "dark-factory-meta-skills-design/templates/factory-pert-plan.json",
+        "dark-factory-meta-skills-design/templates/ai-judge-jury-record.json",
+        "dark-factory-meta-skills-design/scripts/validate_tpm_flow.py"
+      ],
+      "control_graph_node": "CG-NODE-TPM-FLOW-001",
+      "work_ledger_item": "WL-TPM-FLOW-001",
+      "knowledge_graph_node": "KG:TB-20260425-005",
+      "judge_jury_record": "JURY-TPM-FLOW-20260425",
+      "gate_id": "GATE-TPM-FLOW-001",
+      "evidence_required": [
+        "design record",
+        "templates",
+        "validator",
+        "live skill installation",
+        "validation result"
+      ],
+      "evidence_provided": [
+        "EVD-TPM-FLOW-001"
+      ],
+      "token_swag": {
+        "low": "low",
+        "mid": "low",
+        "high": "medium",
+        "approval_state": "user_requested_quality_first_update"
+      },
+      "next_step_id": "RUN-CLOSED",
+      "closure_rationale": "Focused TPM flow enforcement update complete.",
+      "blockers": [],
+      "waiver": null,
+      "template_marker": false
+    }
+  ],
+  "transition_log": [
+    {
+      "at": "2026-04-25",
+      "actor": "Codex",
+      "step_id": "STEP-TPM-FLOW-001",
+      "from_state": "jury_review",
+      "to_state": "accepted",
+      "judge_jury_record": "JURY-TPM-FLOW-20260425",
+      "evidence": [
+        "EVD-TPM-FLOW-001"
+      ],
+      "rationale": "AI judge/jury gate accepted the focused TPM flow enforcement update."
+    }
+  ],
+  "quality_gate": {
+    "validator": "scripts/validate_tpm_flow.py",
+    "status": "passed",
+    "last_run": "2026-04-25",
+    "findings": []
+  }
+}

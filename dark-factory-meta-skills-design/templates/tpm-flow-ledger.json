@@ -1,0 +1,85 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+    "strict_compliance": "Mandatory. Every claim must be project-specific, evidence-backed, trace-linked, reviewer-challenged, and free of unsupported invention.",
+    "missing_evidence_rule": "If evidence is missing, mark it as an assumption, risk, open question, or failure."
+  },
+  "template_only": true,
+  "ledger_id": "TPM-FLOW-000",
+  "run_id": "",
+  "title": "",
+  "current_step_id": "",
+  "current_bead_id": "",
+  "pert_plan_id": "",
+  "knowledge_graph_id": "",
+  "tasks_md_path": "",
+  "allowed_transition_states": [
+    "planned",
+    "ready",
+    "active",
+    "self_check",
+    "judge_review",
+    "jury_review",
+    "rework",
+    "accepted",
+    "next_ready",
+    "closed",
+    "blocked",
+    "waived",
+    "retired"
+  ],
+  "steps": [
+    {
+      "step_id": "STEP-001",
+      "bead_id": "TB-00000000-001",
+      "title": "Example governed step",
+      "state": "planned",
+      "owner": "Legendary TPM Agent",
+      "scope_boundary": "Replace with real step scope.",
+      "predecessors": [],
+      "successors": [
+        "RUN-CLOSED"
+      ],
+      "entry_criteria": [],
+      "exit_criteria": [],
+      "inputs": [],
+      "outputs": [],
+      "control_graph_node": "CG-NODE-001",
+      "work_ledger_item": "WL-001",
+      "knowledge_graph_node": "KG:STEP-001",
+      "judge_jury_record": "",
+      "gate_id": "GATE-001",
+      "evidence_required": [],
+      "evidence_provided": [],
+      "token_swag": {
+        "low": "",
+        "mid": "",
+        "high": "",
+        "approval_state": "pending"
+      },
+      "next_step_id": "RUN-CLOSED",
+      "closure_rationale": "",
+      "blockers": [],
+      "waiver": null,
+      "template_marker": true
+    }
+  ],
+  "transition_log": [
+    {
+      "at": "",
+      "actor": "",
+      "step_id": "STEP-001",
+      "from_state": "",
+      "to_state": "planned",
+      "judge_jury_record": "",
+      "evidence": [],
+      "rationale": ""
+    }
+  ],
+  "quality_gate": {
+    "validator": "scripts/validate_tpm_flow.py",
+    "status": "not_evaluated",
+    "last_run": "",
+    "findings": []
+  }
+}

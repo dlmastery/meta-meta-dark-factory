@@ -1,0 +1,68 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+  },
+  "template_only": true,
+  "index_id": "DPI-<PROJECT>-<YYYYMMDD>-001",
+  "project": "<PROJECT>",
+  "run_id": "<RUN-ID>",
+  "generated_at": "<ISO-8601>",
+  "portal_record": "project-book/records/human-review-portal-record.json",
+  "summary": {
+    "current_state": "<accepted|active|blocked|closed>",
+    "legal_next_action": "<next action>",
+    "certification_boundary": "<internal/external/none>"
+  },
+  "onboarding_paths": [],
+  "sections": [
+    {
+      "section_id": "start_here",
+      "title": "Start Here",
+      "items": []
+    },
+    {
+      "section_id": "sdlc_and_governance",
+      "title": "SDLC And Governance",
+      "items": []
+    },
+    {
+      "section_id": "product_and_architecture",
+      "title": "Product And Architecture",
+      "items": []
+    },
+    {
+      "section_id": "implementation_and_tests",
+      "title": "Implementation And Tests",
+      "items": []
+    },
+    {
+      "section_id": "quality_reviews_and_certificates",
+      "title": "Quality Reviews And Certificates",
+      "items": []
+    },
+    {
+      "section_id": "diagrams",
+      "title": "Diagrams",
+      "items": []
+    },
+    {
+      "section_id": "handoff_and_operations",
+      "title": "Handoff And Operations",
+      "items": []
+    }
+  ],
+  "coverage": {
+    "markdown_files": [],
+    "record_files": [],
+    "evidence_files": [],
+    "diagram_sources": [],
+    "screenshots": [],
+    "code_and_test_files": []
+  },
+  "validation": {
+    "status": "<pass|fail|conditional>",
+    "unindexed_required_files": [],
+    "broken_required_links": [],
+    "notes": []
+  }
+}

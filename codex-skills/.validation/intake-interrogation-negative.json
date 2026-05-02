@@ -1,0 +1,43 @@
+{
+  "id": "ITR-NEGATIVE-001",
+  "status": "accepted",
+  "source": {
+    "kind": "validation-fixture",
+    "reference": "negative"
+  },
+  "rounds": [
+    {"round": "context", "questions": [], "answers": []}
+  ],
+  "answers": [
+    {
+      "answer_id": "ANS-UNUSED-001",
+      "source_reference": "",
+      "summary": "",
+      "confidence": "unknown",
+      "owner": "",
+      "links": {
+        "requirements": [],
+        "spec_decomposition_nodes": []
+      },
+      "revalidation_trigger": ""
+    }
+  ],
+  "scores": {
+    "goal_clarity": 1,
+    "scope": 1,
+    "functional_completeness": 1,
+    "nonfunctional_completeness": 0,
+    "security_privacy_compliance": 0,
+    "operations_handoff": 0,
+    "scenario_readiness": 0,
+    "contradiction_resolution": 0,
+    "owner_approval": 0,
+    "traceability_readiness": 0
+  },
+  "approval": {
+    "required": true,
+    "approver": "",
+    "decision": "pending",
+    "at": ""
+  }
+}

@@ -1,0 +1,229 @@
+[
+  {
+    "record_id": "ATTR-PRE17-GF",
+    "goal": "Greenfield todo benchmark pre-review simulation."
+  },
+  {
+    "id": "CG-PRE17-GF",
+    "nodes": [
+      {
+        "id": "NODE-PRE17-GF-INTAKE",
+        "owner": "codex"
+      },
+      {
+        "id": "NODE-PRE17-GF-METHOD",
+        "owner": "codex"
+      }
+    ],
+    "edges": [
+      {
+        "from": "ATTR-PRE17-GF",
+        "to": "NODE-PRE17-GF-INTAKE"
+      },
+      {
+        "from": "NODE-PRE17-GF-INTAKE",
+        "to": "NODE-PRE17-GF-METHOD"
+      }
+    ]
+  },
+  {
+    "id": "NODE-PRE17-GF-INTAKE",
+    "type": "evidence"
+  },
+  {
+    "id": "NODE-PRE17-GF-METHOD",
+    "type": "evidence"
+  },
+  {
+    "id": "WL-PRE17-GF",
+    "status": "accepted",
+    "next_action": "Use the benchmark only as a transfer test, not as the factory target.",
+    "links": {
+      "requirements": [
+        "REQ-PRE17-GF-001"
+      ],
+      "artifacts": [
+        "ART-PRE17-GF-PRD",
+        "MBR-PRE17-GF-001",
+        "EVD-DEBATE-PRE17-GF-001"
+      ],
+      "control_graph_nodes": [
+        "NODE-PRE17-GF-INTAKE",
+        "NODE-PRE17-GF-METHOD"
+      ],
+      "gated_by": [
+        "RFG-PRE17-GF"
+      ]
+    }
+  },
+  {
+    "id": "RFG-PRE17-GF",
+    "status": "pass",
+    "evidence": {
+      "test_reports": [
+        "TST-PRE17-GF-001"
+      ],
+      "rubric_scorecards": [
+        "EVD-RUBRIC-PRE17-GF"
+      ],
+      "trace_reports": [
+        "EVD-TRACE-PRE17-GF"
+      ],
+      "certificates": [
+        "CERT-PRE17-GF"
+      ]
+    }
+  },
+  {
+    "id": "REQ-PRE17-GF-001",
+    "type": "functional",
+    "source": "ITR-PRE17-GF-A001",
+    "statement": "The greenfield benchmark starts with customer interrogation, answer capture, contradiction checks, validation, and approval before requirements are frozen.",
+    "owner": "human-owner",
+    "status": "accepted",
+    "from_interrogation": true,
+    "links": {
+      "answers": [
+        "ITR-PRE17-GF-A001"
+      ],
+      "verifies": [
+        "TST-PRE17-GF-001"
+      ],
+      "routes_to": [
+        "NODE-PRE17-GF-INTAKE"
+      ],
+      "tracked_by": [
+        "WL-PRE17-GF"
+      ],
+      "gated_by": [
+        "RFG-PRE17-GF"
+      ]
+    }
+  },
+  {
+    "id": "ART-PRE17-GF-PRD",
+    "name": "Greenfield Benchmark PRD",
+    "standard_basis": [
+      "ISO/IEC/IEEE 15289:2019",
+      "ISO/IEC/IEEE 29148:2018"
+    ],
+    "reviewers": [
+      "requirements-governance-architect",
+      "verification-safety-critic",
+      "delivery-operator"
+    ],
+    "evidence": [
+      "EVD-RUBRIC-PRE17-GF",
+      "EVD-TRACE-PRE17-GF"
+    ],
+    "residual_risks": [],
+    "trace": {
+      "derives_from": [
+        "REQ-PRE17-GF-001"
+      ],
+      "verified_by": [
+        "TST-PRE17-GF-001"
+      ],
+      "routes_to": [
+        "NODE-PRE17-GF-INTAKE"
+      ],
+      "tracked_by": [
+        "WL-PRE17-GF"
+      ],
+      "gated_by": [
+        "RFG-PRE17-GF"
+      ]
+    }
+  },
+  {
+    "id": "MBR-PRE17-GF-001",
+    "name": "Greenfield Methodology Blend Record",
+    "standard_basis": [
+      "RUP",
+      "MDA",
+      "DDD",
+      "TDD",
+      "BDD"
+    ],
+    "reviewers": [
+      "methodology-architect",
+      "domain-modeler",
+      "test-strategy-lead"
+    ],
+    "evidence": [
+      "EVD-DEBATE-PRE17-GF-001",
+      "EVD-RUBRIC-PRE17-GF"
+    ],
+    "residual_risks": [],
+    "links": {
+      "derives_from": [
+        "REQ-PRE17-GF-001"
+      ],
+      "routes_to": [
+        "NODE-PRE17-GF-METHOD"
+      ],
+      "tracked_by": [
+        "WL-PRE17-GF"
+      ],
+      "gated_by": [
+        "RFG-PRE17-GF"
+      ]
+    }
+  },
+  {
+    "id": "EVD-DEBATE-PRE17-GF-001",
+    "name": "Greenfield Expert Debate Record",
+    "standard_basis": [
+      "DFMS expert debate protocol"
+    ],
+    "reviewers": [
+      "system-theorist",
+      "requirements-governance-architect",
+      "verification-safety-critic"
+    ],
+    "evidence": [
+      "EVD-RUBRIC-PRE17-GF"
+    ],
+    "residual_risks": [],
+    "links": {
+      "derives_from": [
+        "REQ-PRE17-GF-001"
+      ],
+      "routes_to": [
+        "NODE-PRE17-GF-METHOD"
+      ],
+      "tracked_by": [
+        "WL-PRE17-GF"
+      ],
+      "gated_by": [
+        "RFG-PRE17-GF"
+      ]
+    }
+  },
+  {
+    "id": "ITR-PRE17-GF-A001",
+    "type": "evidence"
+  },
+  {
+    "id": "TST-PRE17-GF-001",
+    "type": "evidence",
+    "links": {
+      "verifies": [
+        "REQ-PRE17-GF-001",
+        "ART-PRE17-GF-PRD"
+      ]
+    }
+  },
+  {
+    "id": "EVD-RUBRIC-PRE17-GF",
+    "type": "evidence"
+  },
+  {
+    "id": "EVD-TRACE-PRE17-GF",
+    "type": "evidence"
+  },
+  {
+    "id": "CERT-PRE17-GF",
+    "type": "evidence"
+  }
+]

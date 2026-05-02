@@ -1,0 +1,96 @@
+{
+  "record_id": "ATTR-PASS30-001",
+  "created_on": "2026-04-25",
+  "source_signals": [
+    "User requested Ralph loop pass 30 super critic review",
+    "Pass 29 hardened physical evidence files for production handoff bundles",
+    "Pass 29 residual risk noted generalized physical evidence validation for non-production artifacts"
+  ],
+  "attractor_state": "stable",
+  "goal": "Generalize physical evidence-file validation into traceability so non-production artifacts cannot cite file-like evidence without supplied files.",
+  "layer_map": {
+    "product_specific": [
+      "No product-specific behavior is introduced; this applies to all governed trace records."
+    ],
+    "factory_reusable": [
+      "Artifact, ledger, gate, certificate, handoff, and evidence records with file-like evidence references must resolve to actual supplied evidence files."
+    ],
+    "meta_meta_governance": [
+      "Pass 30 is governed by Attractor, control graph, work ledger, refinery gate, and hardening-runner evidence."
+    ]
+  },
+  "control_plane_links": {
+    "control_graph": "CG-PASS30-001",
+    "work_ledger": "WL-PASS30-001",
+    "refinery_gate": "RFG-PASS30-001"
+  },
+  "selected_mode": "skill-system-revision",
+  "selected_skills": [
+    {
+      "skill": "df-meta-attractor",
+      "reason": "govern this as a meta-meta hardening pass",
+      "load_now": true
+    },
+    {
+      "skill": "df-traceability-evidence",
+      "reason": "harden generalized physical evidence-file validation",
+      "load_now": true
+    },
+    {
+      "skill": "df-artifact-factory",
+      "reason": "ensure project-book artifact evidence names resolve to files",
+      "load_now": true
+    },
+    {
+      "skill": "df-quality-refinery",
+      "reason": "add regression checks for missing, mismatched, and content-disconnected evidence files",
+      "load_now": true
+    }
+  ],
+  "gates": [
+    "trace validation accepts repeated --evidence-file bundle inputs",
+    "file-like evidence references require supplied evidence files",
+    "supplied evidence files must mention the citing record ID",
+    "missing evidence-file bundle rejects",
+    "bad evidence content and bad filename mapping reject",
+    "pass 30 merged records validate"
+  ],
+  "node_contract": {
+    "what": "Run pass 30 critic review and harden generalized physical evidence validation.",
+    "why": "Project-book evidence must be inspectable files, not just names in artifact or gate records.",
+    "how": "Extend validate_trace_links.py with --evidence-file bundle inputs, file-like evidence obligation discovery, file-content ID checks, positive and negative fixtures, and runner wiring.",
+    "where": "df-traceability-evidence installed skill, workspace bundle, validation fixtures, manifest, runner, and project-book records.",
+    "when": "Before future governed artifact or certificate trace records are trusted as physical evidence.",
+    "who": "Codex as responsible fixer; human owner as Ralph-loop driver and accountable reviewer.",
+    "how_good": "Complete physical evidence trace fixture passes while missing file, bad content, and bad mapping fixtures reject."
+  },
+  "expert_debate": {
+    "system_theorist": "Production evidence now has a closed bundle, but the broader project-book graph still needs physical-evidence closure.",
+    "requirements_governance_architect": "Artifact and gate evidence that names a file must resolve to an instantiated file in strict trace validation.",
+    "verification_safety_critic": "A supplied file must also mention the record that cites it, or an unrelated file can satisfy the bundle.",
+    "synthesis": "Move physical evidence-file validation into the traceability validator with strict runner fixtures."
+  },
+  "human_decisions": [
+    "Human owner requested pass 30 and asked to fix any new findings."
+  ],
+  "assumptions": [
+    "Pass 30 is a patch-level generalized evidence-file validation pass, not a full artifact semantic review engine."
+  ],
+  "risks": [
+    "Evidence-file validation proves file presence and citing-record ID mentions, not deep semantic correctness.",
+    "Full greenfield and brownfield project-book simulations remain future work."
+  ],
+  "evidence_commitments": [
+    "physical evidence trace pass fixture validates with --evidence-file",
+    "physical evidence trace missing-file fixture is rejected",
+    "physical evidence trace bad-content fixture is rejected",
+    "physical evidence trace bad-file-mapping fixture is rejected",
+    "installed and workspace traceability validators remain in sync"
+  ],
+  "anti_overfit_checks": [
+    "No todo-app-specific rule is introduced.",
+    "Physical evidence validation applies to any governed trace record with file-like evidence."
+  ],
+  "verdict": "pass",
+  "next_safe_action": "Use --evidence-file bundle inputs for strict trace validation whenever project-book records cite physical files."
+}

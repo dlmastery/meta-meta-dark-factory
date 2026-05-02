@@ -1,0 +1,29 @@
+{
+  "id": "RFG-PASS21-001",
+  "name": "Pass 21 patch-level refinery gate",
+  "status": "pass",
+  "verdict_rationale": "Pass 21 closes three governance bypasses: incomplete waivers, ungoverned threshold lowering, and non-reciprocal answer-to-node links. Validation evidence covers both positive fixtures and new negative rejection cases. This is patch-level only.",
+  "next_action": "Run another critic pass or a full greenfield and brownfield project-book simulation when requested.",
+  "evidence": {
+    "test_reports": [
+      "DFMS hardening checks complete",
+      "low-threshold decomposition fixture: rejected",
+      "incomplete waiver decomposition fixture: rejected",
+      "low-threshold intake fixture: rejected",
+      "incomplete intake waiver fixture: rejected"
+    ],
+    "rubric_scorecards": [
+      "21-ralph-loop-critic-review-and-fix-record.md"
+    ],
+    "trace_reports": [
+      "records/pass21 merged records",
+      "ATTR-PASS21-001",
+      "CG-PASS21-001",
+      "WL-PASS21-001",
+      "installed and workspace validator hashes match"
+    ],
+    "certificates": [
+      "patch-level pass only"
+    ]
+  }
+}

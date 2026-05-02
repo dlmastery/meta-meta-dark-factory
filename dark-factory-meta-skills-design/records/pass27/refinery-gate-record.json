@@ -1,0 +1,29 @@
+{
+  "id": "RFG-PASS27-001",
+  "name": "Pass 27 patch-level refinery gate",
+  "status": "pass",
+  "verdict_rationale": "Pass 27 closes the production handoff bundle-proof gap by requiring production handoffs to be validated with the actual referenced outage drill files and by checking drill ID, release, refinery gate, operator, approver, and runbook replay linkage. This is patch-level only.",
+  "next_action": "Run a full greenfield and brownfield production handoff simulation before claiming runtime readiness.",
+  "evidence": {
+    "test_reports": [
+      "DFMS hardening checks complete",
+      "production handoff pass fixture with --outage-drill: pass",
+      "unbundled production handoff fixture: rejected",
+      "bad production outage-drill bundle mismatch fixture: rejected",
+      "pass 27 merged records: pass"
+    ],
+    "rubric_scorecards": [
+      "27-ralph-loop-critic-review-and-fix-record.md"
+    ],
+    "trace_reports": [
+      "records/pass27 merged records",
+      "ATTR-PASS27-001",
+      "CG-PASS27-001",
+      "WL-PASS27-001",
+      "installed and workspace production validator hashes match"
+    ],
+    "certificates": [
+      "patch-level pass only"
+    ]
+  }
+}

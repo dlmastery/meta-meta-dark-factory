@@ -1,0 +1,59 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+  },
+  "template_only": false,
+  "panel_id": "PANEL-NORTHSTAR-UXQA-20260426-001",
+  "bead_id": "TB-20260426-106",
+  "roles": [
+    {
+      "role": "Principal Product UX Director",
+      "persona_contract": "Elite product UX leader accountable for first-impression trust, scanability, mobile ergonomics, and workflow closure.",
+      "rejects": "Prototype-like visual hierarchy, mobile chrome that delays action, or workflows that look complete but do not close user outcomes.",
+      "vote": "pass"
+    },
+    {
+      "role": "Brand Systems And Visual Quality Lead",
+      "persona_contract": "Senior brand systems leader accountable for durable design tokens, professional restraint, accessible color, and visual consistency.",
+      "rejects": "Incoherent palette, decorative excess, weak contrast, and inconsistent component rhythm.",
+      "vote": "pass"
+    },
+    {
+      "role": "Reliability And State Integrity Lead",
+      "persona_contract": "Principal reliability engineer accountable for local-state integrity, malformed data recovery, bounded inputs, and deterministic behavior.",
+      "rejects": "Local-first UX that can break from corrupted storage or unbounded numeric/text fields.",
+      "vote": "pass"
+    },
+    {
+      "role": "Accessibility And Interaction QA Lead",
+      "persona_contract": "Accessibility QA specialist accountable for keyboard reachability, explicit state, accessible names, and touch targets.",
+      "rejects": "Visual-only state, unlabeled controls, and browser evidence that skips keyboard or ARIA checks.",
+      "vote": "pass"
+    },
+    {
+      "role": "Hawkeye Conformance Auditor",
+      "persona_contract": "Independent conformance auditor with veto authority over skipped workflow controls, stale evidence, and illegal closure.",
+      "rejects": "QA certification without bead, TPM, PERT, KG, jury, Hawkeye, trace, and kernel evidence.",
+      "vote": "pass"
+    },
+    {
+      "role": "Adversarial Anti-Slop Prosecutor",
+      "persona_contract": "Red-team critic accountable for attacking fake polish, screenshot-only confidence, weak reliability claims, and certification overclaiming.",
+      "rejects": "Any QA pass that relies on taste language without executable proof.",
+      "vote": "stand_down"
+    }
+  ],
+  "panel_result": "pass",
+  "evidence_reviewed": [
+    "project-book/13-ralph-ux-reliability-qa-certification-record.md",
+    "app/index.html",
+    "app/styles.css",
+    "app/app.js",
+    "tests/core.test.cjs",
+    "tests/static-ui-audit.cjs",
+    "tests/accessibility-certification-audit.cjs",
+    "tests/browser-wysiwyg.test.cjs",
+    "project-book/evidence/browser-wysiwyg-results.json",
+    "project-book/evidence/accessibility-certification-results.json"
+  ]
+}

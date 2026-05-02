@@ -1,0 +1,17 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+  },
+  "bead_id": "TB-20260425-201",
+  "state": "deferred",
+  "objective": "Add cloud sync, accounts, notifications, production hosting, and deeper security model.",
+  "owner": "Abhir",
+  "control_graph_node": "CGN-NORTHSTAR-FUTURE-SYNC",
+  "work_ledger_item": "WLI-NORTHSTAR-FUTURE-SYNC",
+  "knowledge_graph_node": "TB-20260425-201",
+  "gate": "CHANGE-CONTROL-REQUIRED",
+  "evidence": [
+    "project-book/00-factory-run-summary.md"
+  ],
+  "next_bead": "NEW-CHANGE-REQUEST"
+}

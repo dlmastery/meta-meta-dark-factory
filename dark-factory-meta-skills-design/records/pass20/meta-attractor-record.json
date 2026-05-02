@@ -1,0 +1,48 @@
+{
+  "record_id": "ATTR-PASS20-001",
+  "created_on": "2026-04-24",
+  "source_signals": [
+    "User requested Ralph loop pass 20",
+    "Previous pass 19 added intake package and decomposition validation",
+    "Original transcript requires recursive decomposition, validation, traceability, and repeated expert review"
+  ],
+  "attractor_state": "stable",
+  "goal": "Find and fix remaining bypasses in recursive spec development and validation before claiming patch-level acceptance.",
+  "selected_mode": "skill-system-revision",
+  "selected_skills": [
+    {
+      "skill": "df-meta-attractor",
+      "reason": "govern the pass as a meta-meta revision",
+      "load_now": true
+    },
+    {
+      "skill": "df-intake-spec-lab",
+      "reason": "harden decomposition and intake validation",
+      "load_now": true
+    },
+    {
+      "skill": "df-traceability-evidence",
+      "reason": "ensure fixtures preserve strict trace proof",
+      "load_now": true
+    },
+    {
+      "skill": "df-quality-refinery",
+      "reason": "record critic findings and negative evidence",
+      "load_now": true
+    }
+  ],
+  "gates": [
+    "intake package validator calls decomposition validator",
+    "skipped decomposition levels are rejected without owner-scoped waiver",
+    "disconnected decomposition nodes are rejected",
+    "full DFMS hardening runner passes",
+    "merged control-plane records validate"
+  ],
+  "evidence_commitments": [
+    "positive fixtures pass",
+    "negative skipped-level fixture fails",
+    "negative disconnected fixture fails",
+    "installed and workspace bundles remain in sync"
+  ],
+  "next_safe_action": "Run validation suite and record residual risks."
+}

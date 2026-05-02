@@ -1,0 +1,142 @@
+[
+  {
+    "record_id": "ATTR-PHYS-001",
+    "goal": "Validate generalized physical evidence-file traceability."
+  },
+  {
+    "id": "CG-PHYS-001",
+    "nodes": [
+      {
+        "id": "NODE-PHYS-001",
+        "owner": "codex"
+      }
+    ],
+    "edges": [
+      {
+        "from": "ATTR-PHYS-001",
+        "to": "NODE-PHYS-001"
+      }
+    ]
+  },
+  {
+    "id": "NODE-PHYS-001",
+    "type": "evidence"
+  },
+  {
+    "id": "WL-PHYS-001",
+    "status": "accepted",
+    "next_action": "Use physical evidence-file validation for project-book artifacts.",
+    "evidence_provided": [
+      "physical-evidence-trace-report.md"
+    ],
+    "links": {
+      "requirements": [
+        "REQ-PHYS-001"
+      ],
+      "artifacts": [
+        "ART-PHYS-001"
+      ],
+      "evidence": [
+        "EVD-PHYS-001"
+      ],
+      "control_graph_nodes": [
+        "NODE-PHYS-001"
+      ],
+      "gated_by": [
+        "RFG-PHYS-001"
+      ]
+    }
+  },
+  {
+    "id": "RFG-PHYS-001",
+    "status": "pass",
+    "evidence": {
+      "test_reports": [
+        "physical-evidence-trace-report.md"
+      ],
+      "rubric_scorecards": [
+        "EVD-RUBRIC-PHYS-001"
+      ],
+      "trace_reports": [
+        "EVD-TRACE-PHYS-001"
+      ]
+    }
+  },
+  {
+    "id": "REQ-PHYS-001",
+    "type": "functional",
+    "source": "ITR-PHYS-A001",
+    "statement": "The project book rejects file-like evidence references unless the actual evidence files are supplied.",
+    "owner": "test-owner",
+    "status": "accepted",
+    "links": {
+      "verifies": [
+        "TST-PHYS-001"
+      ],
+      "routes_to": [
+        "NODE-PHYS-001"
+      ],
+      "tracked_by": [
+        "WL-PHYS-001"
+      ],
+      "gated_by": [
+        "RFG-PHYS-001"
+      ]
+    }
+  },
+  {
+    "id": "ART-PHYS-001",
+    "name": "Physical Evidence Validation Artifact",
+    "standard_basis": [
+      "ISO/IEC/IEEE 15289:2019"
+    ],
+    "reviewers": [
+      "traceability-reviewer",
+      "artifact-governance-reviewer",
+      "verification-safety-critic"
+    ],
+    "evidence": [
+      "physical-evidence-trace-report.md"
+    ],
+    "residual_risks": [],
+    "trace": {
+      "derives_from": [
+        "REQ-PHYS-001"
+      ],
+      "verified_by": [
+        "TST-PHYS-001"
+      ],
+      "routes_to": [
+        "NODE-PHYS-001"
+      ],
+      "tracked_by": [
+        "WL-PHYS-001"
+      ],
+      "gated_by": [
+        "RFG-PHYS-001"
+      ]
+    }
+  },
+  {
+    "id": "TST-PHYS-001",
+    "type": "evidence",
+    "links": {
+      "verifies": [
+        "REQ-PHYS-001",
+        "ART-PHYS-001"
+      ]
+    }
+  },
+  {
+    "id": "EVD-PHYS-001",
+    "type": "evidence"
+  },
+  {
+    "id": "EVD-RUBRIC-PHYS-001",
+    "type": "evidence"
+  },
+  {
+    "id": "EVD-TRACE-PHYS-001",
+    "type": "evidence"
+  }
+]

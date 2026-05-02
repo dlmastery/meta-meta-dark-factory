@@ -1,0 +1,30 @@
+{
+  "id": "RFG-PASS30-001",
+  "name": "Pass 30 patch-level refinery gate",
+  "status": "pass",
+  "verdict_rationale": "Pass 30 generalizes physical evidence-file validation into traceability by requiring file-like evidence references to resolve to supplied --evidence-file inputs and by requiring those evidence files to mention the citing record ID. This is patch-level only.",
+  "next_action": "Run a full greenfield and brownfield project-book simulation before claiming runtime readiness.",
+  "evidence": {
+    "test_reports": [
+      "DFMS hardening checks complete",
+      "physical evidence trace pass fixture: pass",
+      "physical evidence trace missing-file fixture: rejected",
+      "physical evidence trace bad-content fixture: rejected",
+      "physical evidence trace bad-file-mapping fixture: rejected",
+      "pass 30 merged records: pass"
+    ],
+    "rubric_scorecards": [
+      "30-ralph-loop-critic-review-and-fix-record.md"
+    ],
+    "trace_reports": [
+      "records/pass30 merged records",
+      "ATTR-PASS30-001",
+      "CG-PASS30-001",
+      "WL-PASS30-001",
+      "installed and workspace traceability validator hashes match"
+    ],
+    "certificates": [
+      "patch-level pass only"
+    ]
+  }
+}

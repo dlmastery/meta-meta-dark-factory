@@ -1,0 +1,48 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+    "strict_compliance": "Mandatory. Every claim must be project-specific, evidence-backed, trace-linked, reviewer-challenged, and free of unsupported invention.",
+    "missing_evidence_rule": "If evidence is missing, mark it as an assumption, risk, open question, or failure."
+  },
+  "record_id": "ATTR-000",
+  "created_on": "",
+  "source_signals": [],
+  "attractor_state": "chaotic|forming|stable|splitting|collapsing|blocked",
+  "goal": "",
+  "layer_map": {
+    "product_specific": [],
+    "factory_reusable": [],
+    "meta_meta_governance": []
+  },
+  "selected_mode": "",
+  "selected_skills": [
+    {
+      "skill": "",
+      "reason": "",
+      "load_now": false
+    }
+  ],
+  "node_contract": {
+    "what": "",
+    "why": "",
+    "how": "",
+    "where": "",
+    "when": "",
+    "who": "",
+    "how_good": ""
+  },
+  "expert_debate": {
+    "system_theorist": "",
+    "requirements_governance_architect": "",
+    "verification_safety_critic": "",
+    "synthesis": ""
+  },
+  "gates": [],
+  "human_decisions": [],
+  "assumptions": [],
+  "risks": [],
+  "evidence_commitments": [],
+  "anti_overfit_checks": [],
+  "next_safe_action": "",
+  "verdict": "pass|conditional_pass|revise|escalate"
+}

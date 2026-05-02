@@ -1,0 +1,30 @@
+{
+  "id": "RFG-PASS31-001",
+  "name": "Pass 31 patch-level refinery gate",
+  "status": "pass",
+  "verdict_rationale": "Pass 31 encodes the DFMS meta-meta goal as an outsourcing-grade client/dark-factory engagement with approved scope baseline, token SWAG, iteration checkpoint, change-control impact analysis, and reapproval triggers. This is patch-level only.",
+  "next_action": "Use engagement governance validation before future material DFMS runs and run a full greenfield/brownfield simulation before claiming runtime readiness.",
+  "evidence": {
+    "test_reports": [
+      "DFMS hardening checks complete",
+      "engagement governance pass fixture: pass",
+      "engagement governance template fixture: rejected",
+      "bad engagement missing token budget approval fixture: rejected",
+      "bad engagement incomplete change-control fixture: rejected",
+      "pass 31 merged records: pass"
+    ],
+    "rubric_scorecards": [
+      "31-outsourcing-engagement-governance-fix-record.md"
+    ],
+    "trace_reports": [
+      "records/pass31 merged records",
+      "ATTR-PASS31-001",
+      "CG-PASS31-001",
+      "WL-PASS31-001",
+      "installed and workspace governance hashes match"
+    ],
+    "certificates": [
+      "patch-level pass only"
+    ]
+  }
+}

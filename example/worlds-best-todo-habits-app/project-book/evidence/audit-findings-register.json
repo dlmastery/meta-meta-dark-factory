@@ -1,0 +1,40 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+  },
+  "template_only": false,
+  "register_id": "AUD-FIND-REG-NORTHSTAR-20260426-001",
+  "bead_id": "TB-20260426-104",
+  "findings": [
+    {
+      "id": "AUD-FIND-001",
+      "severity": "P2",
+      "finding": "The earlier quality refinery gate still listed export browser assertion as a residual risk even though RALPH-20 resolved it.",
+      "status": "resolved",
+      "fix_evidence": "project-book/evidence/quality-refinery-gate.yaml now references RALPH-20 browser export evidence and removes the stale residual risk."
+    },
+    {
+      "id": "AUD-FIND-002",
+      "severity": "P2",
+      "finding": "External accredited ISO certification was not performed.",
+      "status": "accepted_residual",
+      "fix_evidence": "project-book/11-standards-meta-meta-charter-audit.md states this is internal conformance only."
+    },
+    {
+      "id": "AUD-FIND-003",
+      "severity": "P3",
+      "finding": "Accessibility evidence was initially basic and did not include certification-readiness checks for contrast, keyboard reachability, ARIA reference integrity, explicit names, and target sizing.",
+      "status": "resolved",
+      "fix_evidence": "project-book/evidence/accessibility-certification-results.json passes after contrast and review-label fixes."
+    },
+    {
+      "id": "AUD-FIND-004",
+      "severity": "P2",
+      "finding": "External accredited certification has not been performed and cannot be self-issued by the dark factory.",
+      "status": "boundary_condition",
+      "fix_evidence": "project-book/evidence/certification-readiness-certificate.json states internal readiness only and lists external certification steps."
+    }
+  ],
+  "open_p0_p1": [],
+  "overall_result": "pass"
+}

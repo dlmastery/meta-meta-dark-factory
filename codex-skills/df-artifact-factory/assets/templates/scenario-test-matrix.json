@@ -1,0 +1,41 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+    "strict_compliance": "Mandatory. Every claim must be project-specific, evidence-backed, trace-linked, reviewer-challenged, and free of unsupported invention.",
+    "missing_evidence_rule": "If evidence is missing, mark it as an assumption, risk, open question, or failure."
+  },
+  "template_only": true,
+  "scenario_matrix_id": "SCENARIO-TEST-000",
+  "run_id": "",
+  "requirements": [],
+  "scenarios": [
+    {
+      "scenario_id": "SCN-001",
+      "title": "",
+      "type": "positive | negative | edge | failure | holdout | transfer",
+      "requirement_ids": [],
+      "acceptance_criteria": [],
+      "steps": [],
+      "expected_results": [],
+      "automation": {
+        "automated": false,
+        "tool": "",
+        "test_path": "",
+        "evidence": []
+      },
+      "status": "planned | passed | failed | deferred | waived",
+      "findings": [],
+      "patch_beads": []
+    }
+  ],
+  "coverage_summary": {
+    "positive_count": 0,
+    "negative_count": 0,
+    "edge_count": 0,
+    "failure_count": 0,
+    "holdout_count": 0,
+    "transfer_count": 0,
+    "requirements_without_scenarios": []
+  },
+  "template_marker": true
+}

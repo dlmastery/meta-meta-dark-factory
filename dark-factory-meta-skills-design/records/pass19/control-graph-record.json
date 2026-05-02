@@ -1,0 +1,55 @@
+{
+  "id": "CG-PASS19-001",
+  "name": "Pass 19 recursive specification hardening control graph",
+  "goal": "Close gaps between meta-meta governance, meta-skill intake behavior, decomposition validation, and trace evidence.",
+  "risks": [
+    "Recursive decomposition may be claimed without branch interview proof",
+    "Spec decomposition may pass without strict trace evidence",
+    "Meta-attractor governance may not be visible in the fix record"
+  ],
+  "nodes": [
+    {
+      "id": "NODE-PASS19-CRITIC",
+      "label": "Three-expert critic review",
+      "owner": "codex",
+      "evidence_outputs": [
+        "19-ralph-loop-critic-review-and-fix-record.md"
+      ]
+    },
+    {
+      "id": "NODE-PASS19-FIX",
+      "label": "Validator and skill hardening",
+      "owner": "codex",
+      "evidence_outputs": [
+        "validate_spec_decomposition.py",
+        "validate_intake_package.py",
+        "run_dfms_hardening_checks.ps1"
+      ]
+    },
+    {
+      "id": "NODE-PASS19-VERIFY",
+      "label": "Regression validation",
+      "owner": "codex",
+      "evidence_outputs": [
+        "DFMS hardening checks complete"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "ATTR-PASS19-001",
+      "to": "NODE-PASS19-CRITIC",
+      "type": "governs"
+    },
+    {
+      "from": "NODE-PASS19-CRITIC",
+      "to": "NODE-PASS19-FIX",
+      "type": "requires"
+    },
+    {
+      "from": "NODE-PASS19-FIX",
+      "to": "NODE-PASS19-VERIFY",
+      "type": "must_validate"
+    }
+  ]
+}

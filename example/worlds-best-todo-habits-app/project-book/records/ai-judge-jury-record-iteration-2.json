@@ -1,0 +1,64 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+  },
+  "template_only": false,
+  "record_id": "AJJ-NORTHSTAR-20260426-002",
+  "step_id": "STEP-NORTHSTAR-002",
+  "transition": "hardening_to_closed",
+  "roles": {
+    "tpm_judge": {
+      "persona_contract": "Legendary TPM judge accountable for continuation after closed run, bead legality, dependency order, evidence, and closure discipline.",
+      "vote": "pass",
+      "rationale": "User opened continuation; hardening bead is tracked, tested, and closed through RUN-CLOSED."
+    },
+    "evidence_clerk": {
+      "persona_contract": "Evidence clerk accountable for rejecting stale screenshots, template-as-proof, and unsupported product claims.",
+      "vote": "pass",
+      "rationale": "Core tests, static audit, and browser/WYSIWYG evidence were refreshed after the patch."
+    },
+    "standards_juror": {
+      "persona_contract": "Standards juror accountable for change-control traceability and stage-gate continuity.",
+      "vote": "pass",
+      "rationale": "Iteration 2 is recorded as its own accepted bead and gate."
+    },
+    "domain_artifact_juror": {
+      "persona_contract": "Productivity app juror accountable for reducing planning slop and improving behavioral usefulness.",
+      "vote": "pass",
+      "rationale": "Plan audit and habit friction insight address concrete product-quality gaps."
+    },
+    "verification_juror": {
+      "persona_contract": "Verification juror accountable for changed behavior and changed UI evidence.",
+      "vote": "pass",
+      "rationale": "New functions are unit tested and new panels are browser-tested."
+    },
+    "adversarial_prosecutor": {
+      "persona_contract": "Adversarial prosecutor accountable for attacking fake iteration progress and stale evidence reuse.",
+      "stand_down": true,
+      "rationale": "Evidence was regenerated after changes; no stale-only pass remains."
+    },
+    "jury_foreperson": {
+      "persona_contract": "Foreperson accountable for preserving dissent, final verdict, residual risk, and next action.",
+      "verdict": "pass",
+      "rationale": "Iteration 2 has no open P0/P1 finding."
+    }
+  },
+  "evidence_reviewed": [
+    "app/app.js",
+    "app/index.html",
+    "app/styles.css",
+    "tests/core.test.cjs",
+    "tests/static-ui-audit.cjs",
+    "tests/browser-wysiwyg.test.cjs",
+    "project-book/evidence/browser-wysiwyg-results.json"
+  ],
+  "dependency_check": {
+    "predecessors_accepted_or_waived": true,
+    "pert_next_step_valid": true,
+    "current_bead_matches": true
+  },
+  "verdict": {
+    "outcome": "pass",
+    "next_action": "RUN-CLOSED unless a new change request is opened"
+  }
+}

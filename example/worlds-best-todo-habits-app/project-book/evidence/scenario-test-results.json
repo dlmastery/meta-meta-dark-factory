@@ -1,0 +1,103 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+  },
+  "record_id": "SCN-NORTHSTAR-20260425-001",
+  "status": "executed",
+  "scenarios": [
+    {
+      "id": "SCN-001",
+      "requirement_links": [
+        "REQ-001",
+        "REQ-003"
+      ],
+      "evidence": "tests/core.test.cjs and browser-wysiwyg-results.json"
+    },
+    {
+      "id": "SCN-002",
+      "requirement_links": [
+        "REQ-002",
+        "REQ-005"
+      ],
+      "evidence": "tests/core.test.cjs"
+    },
+    {
+      "id": "SCN-003",
+      "requirement_links": [
+        "REQ-006"
+      ],
+      "evidence": "tests/core.test.cjs overload assertion"
+    },
+    {
+      "id": "SCN-004",
+      "requirement_links": [
+        "REQ-007",
+        "REQ-008"
+      ],
+      "evidence": "browser-wysiwyg-results.json"
+    },
+    {
+      "id": "SCN-005",
+      "requirement_links": [
+        "REQ-004",
+        "REQ-009"
+      ],
+      "evidence": "browser-wysiwyg-results.json"
+    },
+    {
+      "id": "SCN-006",
+      "requirement_links": [
+        "REQ-010"
+      ],
+      "evidence": "review view implemented; browser script reaches app successfully"
+    },
+    {
+      "id": "SCN-007",
+      "requirement_links": [
+        "NFR-002",
+        "NFR-003"
+      ],
+      "evidence": "browser-wysiwyg-results.json"
+    },
+    {
+      "id": "SCN-008",
+      "requirement_links": [
+        "REQ-012"
+      ],
+      "evidence": "tests/core.test.cjs and browser-wysiwyg-results.json"
+    },
+    {
+      "id": "SCN-009",
+      "requirement_links": [
+        "REQ-013"
+      ],
+      "evidence": "tests/core.test.cjs and browser-wysiwyg-results.json"
+    },
+    {
+      "id": "SCN-010",
+      "requirement_links": [
+        "REQ-001",
+        "REQ-004",
+        "REQ-005",
+        "REQ-007",
+        "REQ-010",
+        "REQ-011"
+      ],
+      "evidence": "Expanded tests/browser-wysiwyg.test.cjs E2E journey"
+    },
+    {
+      "id": "HOLD-001",
+      "requirement_links": [
+        "REQ-001"
+      ],
+      "evidence": "parseQuickAdd supports mixed metadata order"
+    },
+    {
+      "id": "TRANSFER-001",
+      "requirement_links": [
+        "NFR-002"
+      ],
+      "evidence": "desktop and mobile viewport browser checks"
+    }
+  ]
+}

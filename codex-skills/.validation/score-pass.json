@@ -1,0 +1,80 @@
+{
+  "id": "EVD-RUBRIC-PANEL-VALIDATION",
+  "artifact": "ART-VALIDATION-001",
+  "rubric_version": "2026-04-24",
+  "threshold_percent": 96,
+  "reviewers": [
+    {
+      "reviewer_role": "requirements-governance-architect",
+      "independent_review_at": "2026-04-24T12:00:00-07:00",
+      "checks": [
+        {"id": "CHK-01", "name": "source intent mapped", "score": 4, "rationale": "The artifact traces to explicit intent."},
+        {"id": "CHK-02", "name": "requirements complete", "score": 4, "rationale": "Required fields are present."},
+        {"id": "CHK-03", "name": "standards basis", "score": 4, "rationale": "Standards mapping is present."},
+        {"id": "CHK-04", "name": "governance route", "score": 4, "rationale": "Control graph route exists."},
+        {"id": "CHK-05", "name": "ledger ownership", "score": 4, "rationale": "Work ledger ownership exists."},
+        {"id": "CHK-06", "name": "gate evidence", "score": 4, "rationale": "Refinery gate evidence exists."},
+        {"id": "CHK-07", "name": "human approval", "score": 4, "rationale": "Human decision path is recorded."},
+        {"id": "CHK-08", "name": "risk treatment", "score": 4, "rationale": "Residual risk state is recorded."},
+        {"id": "CHK-09", "name": "artifact specificity", "score": 4, "rationale": "The record is project-specific."},
+        {"id": "CHK-10", "name": "anti-overfit", "score": 4, "rationale": "Example workload is marked as simulation."},
+        {"id": "CHK-11", "name": "handoff path", "score": 4, "rationale": "Continuation path exists."},
+        {"id": "CHK-12", "name": "change control", "score": 4, "rationale": "Revalidation trigger exists."},
+        {"id": "CHK-13", "name": "reviewability", "score": 4, "rationale": "Evidence can be independently checked."},
+        {"id": "CHK-14", "name": "deferral handling", "score": 4, "rationale": "No hidden deferrals are present."},
+        {"id": "CHK-15", "name": "acceptance clarity", "score": 4, "rationale": "Pass conditions are explicit."}
+      ]
+    },
+    {
+      "reviewer_role": "verification-safety-critic",
+      "independent_review_at": "2026-04-24T12:05:00-07:00",
+      "checks": [
+        {"id": "CHK-01", "name": "testability", "score": 4, "rationale": "Verification links are present."},
+        {"id": "CHK-02", "name": "negative test", "score": 4, "rationale": "A failing fixture exists."},
+        {"id": "CHK-03", "name": "template rejection", "score": 4, "rationale": "Templates are rejected."},
+        {"id": "CHK-04", "name": "strict mode", "score": 4, "rationale": "Strict validation is available."},
+        {"id": "CHK-05", "name": "reference resolution", "score": 4, "rationale": "Strict references are checked."},
+        {"id": "CHK-06", "name": "bidirectional proof", "score": 4, "rationale": "Strict inbound and outbound trace is checked."},
+        {"id": "CHK-07", "name": "gate completeness", "score": 4, "rationale": "Pass gates require evidence."},
+        {"id": "CHK-08", "name": "BOM safety", "score": 4, "rationale": "Validators read UTF-8 BOM-safe JSON."},
+        {"id": "CHK-09", "name": "unknown links", "score": 4, "rationale": "Unknown link fields are rejected."},
+        {"id": "CHK-10", "name": "owner waivers", "score": 4, "rationale": "Waivers need owner and reason."},
+        {"id": "CHK-11", "name": "material detection", "score": 4, "rationale": "Material prefixes trigger strict checks."},
+        {"id": "CHK-12", "name": "artifact evidence", "score": 4, "rationale": "Artifacts require evidence."},
+        {"id": "CHK-13", "name": "review evidence", "score": 4, "rationale": "Artifacts require reviewers."},
+        {"id": "CHK-14", "name": "regression coverage", "score": 4, "rationale": "Greenfield and brownfield fixtures exist."},
+        {"id": "CHK-15", "name": "failure visibility", "score": 4, "rationale": "Failures are printed as explicit problems."}
+      ]
+    },
+    {
+      "reviewer_role": "delivery-operations-lead",
+      "independent_review_at": "2026-04-24T12:10:00-07:00",
+      "checks": [
+        {"id": "CHK-01", "name": "operator path", "score": 4, "rationale": "Brownfield fixture includes operator handoff."},
+        {"id": "CHK-02", "name": "outage drill", "score": 4, "rationale": "Brownfield fixture includes outage drill evidence."},
+        {"id": "CHK-03", "name": "release gate", "score": 4, "rationale": "Refinery gate controls acceptance."},
+        {"id": "CHK-04", "name": "run repeatability", "score": 4, "rationale": "A runner executes the checks."},
+        {"id": "CHK-05", "name": "portable failure mode", "score": 4, "rationale": "Negative fixture documents expected rejection."},
+        {"id": "CHK-06", "name": "bundle sync", "score": 4, "rationale": "Workspace bundle contains the updated fixtures."},
+        {"id": "CHK-07", "name": "human handoff", "score": 4, "rationale": "Handoff artifact is represented."},
+        {"id": "CHK-08", "name": "maintenance flow", "score": 4, "rationale": "Brownfield recon is represented."},
+        {"id": "CHK-09", "name": "greenfield flow", "score": 4, "rationale": "Greenfield interrogation is represented."},
+        {"id": "CHK-10", "name": "method blend", "score": 4, "rationale": "Methodology blend is represented."},
+        {"id": "CHK-11", "name": "debate record", "score": 4, "rationale": "Expert debate is represented."},
+        {"id": "CHK-12", "name": "trace report", "score": 4, "rationale": "Trace report evidence is represented."},
+        {"id": "CHK-13", "name": "certificate boundary", "score": 4, "rationale": "Validation remains patch-level."},
+        {"id": "CHK-14", "name": "residual risk", "score": 4, "rationale": "Residual risk state exists."},
+        {"id": "CHK-15", "name": "next action", "score": 4, "rationale": "Ledger next action exists."}
+      ]
+    }
+  ],
+  "cross_critique": {
+    "at": "2026-04-24T12:30:00-07:00",
+    "summary": "Reviewers challenged trace closure, template rejection, and transfer-test coverage."
+  },
+  "synthesis": {
+    "verdict": "pass",
+    "failed_points_resolved": true,
+    "evidence": "All panel checks scored 4 with explicit rationale."
+  }
+}

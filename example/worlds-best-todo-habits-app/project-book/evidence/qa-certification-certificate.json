@@ -1,0 +1,53 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+  },
+  "template_only": false,
+  "certificate_id": "CERT-NORTHSTAR-UXQA-20260426-001",
+  "run_id": "DFRUN-NORTHSTAR-20260425-001",
+  "bead_id": "TB-20260426-106",
+  "scope": "Internal DFMS QA certification for UX, branding, accessibility, reliability, evidence, and governance of the bounded Northstar Daily local-static demonstrator.",
+  "verdict": "pass",
+  "issued_by": "UX QA Certification Panel and Hawkeye Conformance Auditor",
+  "issued_at": "2026-04-26T11:20:00-07:00",
+  "certification_boundary": {
+    "internal_dfms_qa_certification": true,
+    "external_qa_vendor_certification": false,
+    "external_accredited_certification": false,
+    "production_readiness": false,
+    "regulated_data_readiness": false
+  },
+  "passed_gates": [
+    "product UX hierarchy",
+    "mobile ergonomics",
+    "brand visual quality",
+    "accessibility certification-readiness",
+    "state reliability and recovery",
+    "unit/domain tests",
+    "static UI audit",
+    "browser WYSIWYG/E2E test",
+    "Hawkeye conformance",
+    "TASKS/TPM/PERT/KG validators",
+    "AI judge/jury transition",
+    "execution kernel closed state"
+  ],
+  "evidence": [
+    "project-book/13-ralph-ux-reliability-qa-certification-record.md",
+    "project-book/evidence/qa-certification-panel-record.json",
+    "project-book/evidence/core-test-output.txt",
+    "project-book/evidence/static-ui-audit-output.txt",
+    "project-book/evidence/browser-wysiwyg-output.txt",
+    "project-book/evidence/accessibility-certification-output.txt",
+    "project-book/evidence/browser-wysiwyg-results.json",
+    "project-book/evidence/accessibility-certification-results.json",
+    "project-book/evidence/execution-kernel-report.json"
+  ],
+  "revalidation_triggers": [
+    "new product surface",
+    "material UX or brand redesign",
+    "new state persistence model",
+    "backend, sync, auth, mobile, hosting, or production scope",
+    "external QA vendor certification claim",
+    "regulated data or contractual compliance requirement"
+  ]
+}

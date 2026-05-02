@@ -1,0 +1,24 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+  },
+  "bead_id": "TB-20260426-108",
+  "state": "accepted",
+  "objective": "Create a human review and onboarding portal that organizes all project-book documentation, records, evidence, diagrams, gates, certificates, and next actions.",
+  "owner": "Codex",
+  "control_graph_node": "CGN-NORTHSTAR-HUMAN-PORTAL",
+  "work_ledger_item": "WLI-NORTHSTAR-HUMAN-PORTAL",
+  "knowledge_graph_node": "TB-20260426-108",
+  "gate": "GATE-NORTHSTAR-HUMAN-PORTAL-PASS",
+  "evidence": [
+    "project-book/15-human-review-onboarding-portal-record.md",
+    "project-book/portal/index.html",
+    "project-book/portal/portal-data.json",
+    "project-book/portal/diagrams.md",
+    "project-book/records/human-review-portal-record.json",
+    "project-book/evidence/human-review-portal-certificate.json",
+    "project-book/evidence/human-review-portal-validation.json"
+  ],
+  "next_bead": "RUN-CLOSED",
+  "closure_rationale": "Human review and onboarding portal completed with static dashboard, machine index, diagram atlas, validation, review panel, gate, certificate, and meta-meta skill updates."
+}

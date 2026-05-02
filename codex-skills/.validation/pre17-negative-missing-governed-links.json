@@ -1,0 +1,23 @@
+[
+  {
+    "id": "ART-PRE17-BAD",
+    "name": "Ungated Artifact",
+    "standard_basis": [
+      "ISO/IEC/IEEE 15289:2019"
+    ],
+    "reviewers": [
+      "reviewer-a",
+      "reviewer-b",
+      "reviewer-c"
+    ],
+    "evidence": [
+      "EVD-PRE17-BAD"
+    ],
+    "residual_risks": [],
+    "links": {
+      "derives_from": [
+        "REQ-PRE17-BAD"
+      ]
+    }
+  }
+]

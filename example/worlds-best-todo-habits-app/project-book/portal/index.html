@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Northstar Daily Human Review Portal</title>
+  <link rel="stylesheet" href="portal.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="rail">
+      <div class="brand">
+        <div class="brand-mark">N</div>
+        <p class="eyebrow">Northstar Daily</p>
+        <strong>Human Review Portal</strong>
+        <span class="small">NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS</span>
+      </div>
+      <nav class="nav" aria-label="Portal sections">
+        <a href="#start">Start here</a>
+        <a href="#roles">Role onboarding</a>
+        <a href="#stages">SDLC stages</a>
+        <a href="#docs">Documentation</a>
+        <a href="#records">Records</a>
+        <a href="#evidence">Evidence</a>
+        <a href="#diagrams">Diagrams</a>
+        <a href="#next">Next action</a>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <section class="hero" id="start">
+        <p class="eyebrow">Fresh Reviewer Start Here</p>
+        <h1>Understand the whole dark-factory run without reading the repository blindly.</h1>
+        <p>This dashboard organizes the product, SDLC artifacts, expert reviews, gates, certificates, evidence, screenshots, Mermaid diagrams, and handoff state produced so far. It is a bounded local-static demonstrator, not a full hundreds-of-artifacts saturation run.</p>
+        <div class="summary-grid">
+          <article class="card ok">
+            <span class="metric">Closed</span>
+            <span>Current run state</span>
+          </article>
+          <article class="card bounded">
+            <span class="metric">8</span>
+            <span>Accepted task beads</span>
+          </article>
+          <article class="card ok">
+            <span class="metric">Pass</span>
+            <span>Internal QA and Material conformance</span>
+          </article>
+          <article class="card warn">
+            <span class="metric">New bead</span>
+            <span>Required for future scope</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel" id="roles">
+        <p class="eyebrow">Role-Based Onboarding</p>
+        <h2>Choose your review path</h2>
+        <div class="role-grid">
+          <article class="card">
+            <h3>Client Executive</h3>
+            <ul class="link-list">
+              <li><a href="../00-factory-run-summary.md">Factory run summary</a><span class="small">Scope, confidence, and next action.</span></li>
+              <li><a href="../02-prd.md">PRD</a><span class="small">Product outcomes and boundaries.</span></li>
+              <li><a href="../evidence/material-ui-conformance-certificate.json">Material certificate</a><span class="small">UI conformance boundary.</span></li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Technical Program Manager</h3>
+            <ul class="link-list">
+              <li><a href="../records/TASKS.md">TASKS bead ledger</a><span class="small">Bead state and approvals.</span></li>
+              <li><a href="../records/tpm-flow-ledger.json">TPM flow ledger</a><span class="small">Dependency-aware flow.</span></li>
+              <li><a href="../records/factory-pert-plan.json">PERT plan</a><span class="small">Critical path and closure.</span></li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Architect Or Engineer</h3>
+            <ul class="link-list">
+              <li><a href="../03-architecture.md">Architecture</a><span class="small">Static local-first design.</span></li>
+              <li><a href="../../app/app.js">Application logic</a><span class="small">Domain model and rendering.</span></li>
+              <li><a href="../../tests/core.test.cjs">Core tests</a><span class="small">Behavior regression checks.</span></li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>QA Or Auditor</h3>
+            <ul class="link-list">
+              <li><a href="../04-test-strategy.md">Test strategy</a><span class="small">Levels and scenarios.</span></li>
+              <li><a href="../records/artifact-catalog-coverage-matrix.json">Artifact coverage matrix</a><span class="small">Truth map against the 63-artifact catalog.</span></li>
+              <li><a href="../records/hawkeye-conformance-audit-record.json">Hawkeye audit</a><span class="small">Independent conformance view.</span></li>
+              <li><a href="../evidence/validation-summary.json">Validation summary</a><span class="small">Accepted checks.</span></li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Incoming Maintainer</h3>
+            <ul class="link-list">
+              <li><a href="../07-handoff-and-runbook.md">Handoff and runbook</a><span class="small">How to operate and extend.</span></li>
+              <li><a href="../05-traceability-matrix.md">Traceability matrix</a><span class="small">Why each item exists.</span></li>
+              <li><a href="portal-data.json">Machine index</a><span class="small">Programmatic portal map.</span></li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel" id="stages">
+        <p class="eyebrow">SDLC Stage Dashboard</p>
+        <h2>Stage and gate status</h2>
+        <div class="stage-grid">
+          <article class="card ok"><h3>Intake and decomposition</h3><p>Accepted. Interrogation and recursive spec decomposition records exist.</p></article>
+          <article class="card ok"><h3>Requirements and architecture</h3><p>Accepted. PRD, architecture, traceability, and design decisions are present.</p></article>
+          <article class="card ok"><h3>Implementation</h3><p>Accepted. Static app, CSS, and JS are implemented and tested.</p></article>
+          <article class="card ok"><h3>Testing and WYSIWYG</h3><p>Accepted. Core, static, accessibility, browser, scenario, and visual evidence exist.</p></article>
+          <article class="card ok"><h3>QA certificates</h3><p>Accepted. Certification-readiness, UX QA, and Material conformance certificates exist.</p></article>
+          <article class="card bounded"><h3>Production</h3><p>Not applicable. Hosting, backend, sync, auth, mobile packaging, and production require a new bead.</p></article>
+        </div>
+      </section>
+
+      <section class="panel" id="docs">
+        <p class="eyebrow">Documentation Library</p>
+        <h2>Project-book Markdown</h2>
+        <div class="library-grid">
+          <ul class="link-list">
+            <li><a href="../00-factory-run-summary.md">00 Factory Run Summary</a></li>
+            <li><a href="../01-research-competitive-benchmark.md">01 Research Competitive Benchmark</a></li>
+            <li><a href="../02-prd.md">02 Product Requirements Document</a></li>
+            <li><a href="../03-architecture.md">03 Architecture And Design</a></li>
+            <li><a href="../04-test-strategy.md">04 Test Strategy</a></li>
+            <li><a href="../05-traceability-matrix.md">05 Traceability Matrix</a></li>
+            <li><a href="../06-expert-review-and-ralph.md">06 Expert Review And RALPH</a></li>
+            <li><a href="../07-handoff-and-runbook.md">07 Handoff And Runbook</a></li>
+          </ul>
+          <ul class="link-list">
+            <li><a href="../08-hawkeye-blocker-and-change-record.md">08 Hawkeye Blocker And Change Record</a></li>
+            <li><a href="../09-iteration-2-hardening-record.md">09 Iteration 2 Hardening Record</a></li>
+            <li><a href="../10-ralph-20-e2e-completeness-record.md">10 RALPH-20 E2E Completeness Record</a></li>
+            <li><a href="../11-standards-meta-meta-charter-audit.md">11 Standards And Meta-Meta Charter Audit</a></li>
+            <li><a href="../12-certification-readiness-hardening-record.md">12 Certification Readiness Hardening Record</a></li>
+            <li><a href="../13-ralph-ux-reliability-qa-certification-record.md">13 UX Reliability QA Certification</a></li>
+            <li><a href="../14-material-ui-standards-conformance-record.md">14 Material UI Standards Conformance</a></li>
+            <li><a href="../15-human-review-onboarding-portal-record.md">15 Human Review Onboarding Portal</a></li>
+            <li><a href="../16-dashboard-control-redo-record.md">16 Dashboard Control Redo Record</a></li>
+            <li><a href="../17-actual-vs-promised-artifact-gap-audit.md">17 Actual Vs Promised Artifact Gap Audit</a></li>
+            <li><a href="../18-ralph-20-artifact-completeness-audit.md">18 RALPH-20 Artifact Completeness Audit</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="panel" id="records">
+        <p class="eyebrow">Structured Records</p>
+        <h2>Governance, traceability, and flow records</h2>
+        <div class="library-grid">
+          <ul class="link-list">
+            <li><a href="../records/TASKS.md">TASKS.md</a></li>
+            <li><a href="../records/tpm-flow-ledger.json">TPM flow ledger</a></li>
+            <li><a href="../records/factory-pert-plan.json">Factory PERT plan</a></li>
+            <li><a href="../records/knowledge-graph.json">Knowledge graph</a></li>
+            <li><a href="../records/sdlc-stage-coverage-matrix.json">SDLC stage coverage matrix</a></li>
+            <li><a href="../records/hawkeye-conformance-audit-record.json">Hawkeye conformance audit</a></li>
+            <li><a href="../records/engagement-governance-record.json">Engagement governance</a></li>
+            <li><a href="../records/human-review-portal-record.json">Human review portal record</a></li>
+          </ul>
+          <ul class="link-list">
+            <li><a href="../records/product-tailoring-profile.json">Product tailoring profile</a></li>
+            <li><a href="../records/generated-meta-skill-contract.json">Generated meta-skill contract</a></li>
+            <li><a href="../records/dark-factory-instantiation-record.json">Dark factory instantiation record</a></li>
+            <li><a href="../records/interrogation-record.json">Interrogation record</a></li>
+            <li><a href="../records/spec-decomposition-record.json">Spec decomposition record</a></li>
+            <li><a href="../records/standards-conformance-audit-record.json">Standards conformance audit</a></li>
+            <li><a href="../records/artifact-bom-audit-record.json">Artifact BOM audit</a></li>
+            <li><a href="../records/artifact-catalog-coverage-matrix.json">Artifact catalog coverage matrix</a></li>
+            <li><a href="../records/meta-meta-charter-compliance-matrix.json">Meta-meta charter compliance matrix</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="panel">
+        <p class="eyebrow">Task Beads And Jury Records</p>
+        <h2>Iteration trail</h2>
+        <div class="library-grid">
+          <ul class="link-list">
+            <li><a href="../records/task-bead-TB-20260425-101.json">TB-20260425-101</a></li>
+            <li><a href="../records/task-bead-TB-20260426-102.json">TB-20260426-102</a></li>
+            <li><a href="../records/task-bead-TB-20260426-103.json">TB-20260426-103</a></li>
+            <li><a href="../records/task-bead-TB-20260426-104.json">TB-20260426-104</a></li>
+            <li><a href="../records/task-bead-TB-20260426-105.json">TB-20260426-105</a></li>
+            <li><a href="../records/task-bead-TB-20260426-106.json">TB-20260426-106</a></li>
+            <li><a href="../records/task-bead-TB-20260426-107.json">TB-20260426-107</a></li>
+            <li><a href="../records/task-bead-TB-20260426-108.json">TB-20260426-108</a></li>
+          </ul>
+          <ul class="link-list">
+            <li><a href="../records/ai-judge-jury-record.json">Initial AI judge/jury</a></li>
+            <li><a href="../records/ai-judge-jury-record-iteration-2.json">Iteration 2 jury</a></li>
+            <li><a href="../records/ai-judge-jury-record-ralph-20.json">RALPH-20 jury</a></li>
+            <li><a href="../records/ai-judge-jury-record-standards-audit.json">Standards audit jury</a></li>
+            <li><a href="../records/ai-judge-jury-record-certification-readiness.json">Certification readiness jury</a></li>
+            <li><a href="../records/ai-judge-jury-record-ux-qa-certification.json">UX QA jury</a></li>
+            <li><a href="../records/ai-judge-jury-record-material-ui.json">Material UI jury</a></li>
+            <li><a href="../records/ai-judge-jury-record-human-review-portal.json">Human portal jury</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="panel" id="evidence">
+        <p class="eyebrow">Evidence Library</p>
+        <h2>Tests, gates, certificates, screenshots</h2>
+        <div class="library-grid">
+          <ul class="link-list">
+            <li><a href="../evidence/validation-summary.json">Validation summary</a></li>
+            <li><a href="../evidence/core-test-output.txt">Core test output</a></li>
+            <li><a href="../evidence/static-ui-audit-output.txt">Static UI audit output</a></li>
+            <li><a href="../evidence/static-ui-audit-results.json">Static UI audit results</a></li>
+            <li><a href="../evidence/browser-wysiwyg-output.txt">Browser WYSIWYG output</a></li>
+            <li><a href="../evidence/browser-wysiwyg-results.json">Browser WYSIWYG results</a></li>
+            <li><a href="../evidence/accessibility-certification-output.txt">Accessibility audit output</a></li>
+            <li><a href="../evidence/accessibility-certification-results.json">Accessibility audit results</a></li>
+            <li><a href="../evidence/scenario-test-results.json">Scenario test results</a></li>
+            <li><a href="../evidence/implementation-execution-record.json">Implementation execution record</a></li>
+            <li><a href="../evidence/execution-kernel-report.json">Execution kernel report</a></li>
+            <li><a href="../evidence/material-governance-validation-output.txt">Material governance validation output</a></li>
+            <li><a href="../evidence/human-review-portal-validation-output.txt">Human portal validation output</a></li>
+            <li><a href="../evidence/human-review-portal-meta-validator-output.txt">Human portal meta-validator output</a></li>
+            <li><a href="../evidence/human-review-portal-validation.json">Human portal validation JSON</a></li>
+            <li><a href="../evidence/artifact-catalog-coverage-audit-results.json">Artifact catalog coverage audit results</a></li>
+            <li><a href="../evidence/human-review-portal-screenshot.png">Human portal screenshot</a></li>
+          </ul>
+          <ul class="link-list">
+            <li><a href="../evidence/quality-refinery-gate.yaml">Base quality gate</a></li>
+            <li><a href="../evidence/quality-refinery-gate-standards-audit.yaml">Standards audit gate</a></li>
+            <li><a href="../evidence/quality-refinery-gate-certification-readiness.yaml">Certification readiness gate</a></li>
+            <li><a href="../evidence/quality-refinery-gate-ux-qa-certification.yaml">UX QA gate</a></li>
+            <li><a href="../evidence/quality-refinery-gate-material-ui.yaml">Material UI gate</a></li>
+            <li><a href="../evidence/quality-refinery-gate-human-review-portal.yaml">Human portal gate</a></li>
+            <li><a href="../evidence/audit-quality-certificate.json">Audit quality certificate</a></li>
+            <li><a href="../evidence/certification-readiness-certificate.json">Certification readiness certificate</a></li>
+            <li><a href="../evidence/qa-certification-certificate.json">QA certification certificate</a></li>
+            <li><a href="../evidence/material-ui-conformance-certificate.json">Material UI certificate</a></li>
+            <li><a href="../evidence/human-review-portal-certificate.json">Human portal certificate</a></li>
+            <li><a href="../evidence/wysiwyg-desktop.png">Desktop WYSIWYG screenshot</a></li>
+            <li><a href="../evidence/wysiwyg-mobile.png">Mobile WYSIWYG screenshot</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="panel" id="diagrams">
+        <p class="eyebrow">Mermaid Diagram Atlas</p>
+        <h2>Diagrams and flow maps</h2>
+        <ul class="link-list">
+          <li><a href="diagrams.md">Portal diagram atlas</a><span class="small">Project portal map plus indexed meta-skill Mermaid diagrams.</span></li>
+          <li><a href="../../../../dark-factory-meta-skills-design/00-system-design.md">DFMS system design diagram source</a></li>
+          <li><a href="../../../../dark-factory-meta-skills-design/11-best-of-all-merged-control-plane.md">Best-of-all merged control plane diagram source</a></li>
+          <li><a href="../../../../dark-factory-meta-skills-design/50-control-console-ui-record.md">Control console workflow diagram source</a></li>
+          <li><a href="../../../../dark-factory-meta-skills-design/51-factory-execution-ux-record.md">Factory execution UX diagram source</a></li>
+          <li><a href="../../../../dark-factory-meta-skills-design/63-document-generation-layer-map.md">Document generation layer map source</a></li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <p class="eyebrow">Code And Test Surface</p>
+        <h2>Working product and validation scripts</h2>
+        <div class="library-grid">
+          <ul class="link-list">
+            <li><a href="../../app/index.html">App HTML</a></li>
+            <li><a href="../../app/styles.css">App CSS</a></li>
+            <li><a href="../../app/app.js">App JavaScript</a></li>
+          </ul>
+          <ul class="link-list">
+            <li><a href="../../tests/core.test.cjs">Core behavior tests</a></li>
+            <li><a href="../../tests/static-ui-audit.cjs">Static UI audit</a></li>
+            <li><a href="../../tests/accessibility-certification-audit.cjs">Accessibility certification audit</a></li>
+            <li><a href="../../tests/browser-wysiwyg.test.cjs">Browser WYSIWYG test</a></li>
+            <li><a href="../../tests/portal-index-audit.cjs">Portal index audit</a></li>
+            <li><a href="../../tests/artifact-catalog-coverage-audit.cjs">Artifact catalog coverage audit</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="panel" id="next">
+        <p class="eyebrow">Next Safe Action</p>
+        <h2>Run is closed</h2>
+        <p>The bounded local-static demonstrator is accepted through portal readiness. Any backend, sync, mobile packaging, hosted documentation portal, production deployment, external certification, or new product surface must open a new change-controlled bead with token SWAG, scope, owner, and acceptance gate.</p>
+        <div class="pill-row">
+          <span class="pill">Portal record: TB-20260426-108</span>
+          <span class="pill">Gate: GATE-NORTHSTAR-HUMAN-PORTAL-PASS</span>
+          <span class="pill">Status: internal DFMS pass</span>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

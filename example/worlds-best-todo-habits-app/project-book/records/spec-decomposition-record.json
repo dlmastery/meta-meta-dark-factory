@@ -1,0 +1,539 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+    "strict_compliance": "Mandatory. Every claim must be project-specific, evidence-backed, trace-linked, reviewer-challenged, and free of unsupported invention.",
+    "missing_evidence_rule": "If evidence is missing, mark it as an assumption, risk, open question, or failure."
+  },
+  "id": "SDR-NORTHSTAR-20260425-001",
+  "status": "accepted",
+  "source_interrogation": "ITR-NORTHSTAR-20260425-001",
+  "version": "1.0",
+  "standard_basis": [
+    "ISO/IEC/IEEE 29148",
+    "ISO/IEC/IEEE 15289",
+    "RUP use-case decomposition",
+    "Agile story slicing",
+    "DDD domain decomposition"
+  ],
+  "reviewers": [
+    "Product Strategist",
+    "Behavioral Design Specialist",
+    "Verification Lead"
+  ],
+  "evidence": [
+    "project-book/02-prd.md",
+    "project-book/04-test-strategy.md",
+    "project-book/05-traceability-matrix.md"
+  ],
+  "residual_risks": [
+    "Backend, sync, notification, and full accessibility work are future change-controlled increments."
+  ],
+  "links": {
+    "derives_from": [
+      "ITR-NORTHSTAR-20260425-001"
+    ],
+    "routes_to": [
+      "project-book/02-prd.md"
+    ],
+    "tracked_by": [
+      "TB-20260425-101"
+    ],
+    "gated_by": [
+      "GATE-NORTHSTAR-HARDENED"
+    ]
+  },
+  "threshold_percent": 96,
+  "nodes": [
+    {
+      "node_id": "SDN-0",
+      "level": "L0",
+      "title": "Northstar Daily product slice",
+      "type": "vision",
+      "parent_id": null,
+      "owner": "Abhir",
+      "priority": "must",
+      "source_answer_ids": [
+        "ANS-NS-001",
+        "ANS-NS-004"
+      ],
+      "assumption_ids": [],
+      "statement": "Create a rigorous local-first todo and habits app demonstrator with real code and factory evidence.",
+      "children": [
+        "SDN-1",
+        "SDN-2"
+      ],
+      "coverage_rationale": "The first slice covers productivity execution and behavior-change loops.",
+      "acceptance_criteria": [],
+      "validation_methods": [],
+      "evidence_targets": [],
+      "dependencies": [],
+      "risks": [
+        "RISK-NORTHSTAR-001"
+      ],
+      "trace": {
+        "requirements": [
+          "REQ-001",
+          "REQ-002",
+          "NFR-005"
+        ],
+        "tests": [
+          "tests/core.test.cjs",
+          "tests/browser-wysiwyg.test.cjs"
+        ],
+        "control_graph_nodes": [
+          "CGN-NORTHSTAR-IMPLEMENT"
+        ],
+        "work_ledgers": [
+          "WLI-NORTHSTAR-IMPLEMENT"
+        ],
+        "refinery_gates": [
+          "GATE-NORTHSTAR-HARDENED"
+        ]
+      },
+      "scores": {
+        "intent_preserved": 4,
+        "coverage": 4,
+        "atomic_testable": 4,
+        "functional": 4,
+        "nfr_security_ops": 4,
+        "data_state_interface": 4,
+        "edge_abuse_failure": 4,
+        "dependencies_sequence": 4,
+        "contradictions": 4,
+        "owners_acceptance": 4,
+        "scenario_holdout_transfer": 4,
+        "traceability": 4,
+        "assumptions_waivers": 4,
+        "brownfield_regression": 4,
+        "fresh_reviewer_ready": 4
+      },
+      "reinterrogation_triggers": [
+        "Scope changes to production service"
+      ]
+    },
+    {
+      "node_id": "SDN-1",
+      "level": "L1",
+      "title": "Daily task command center",
+      "type": "capability",
+      "parent_id": "SDN-0",
+      "owner": "Codex",
+      "priority": "must",
+      "source_answer_ids": [
+        "ANS-NS-002"
+      ],
+      "assumption_ids": [],
+      "statement": "The app must help users capture, plan, prioritize, and focus tasks.",
+      "children": [
+        "SDN-1A",
+        "SDN-1B"
+      ],
+      "coverage_rationale": "Captures the task side of the product promise.",
+      "acceptance_criteria": [],
+      "validation_methods": [],
+      "evidence_targets": [],
+      "dependencies": [],
+      "risks": [
+        "RISK-NORTHSTAR-001"
+      ],
+      "trace": {
+        "requirements": [
+          "REQ-001",
+          "REQ-003",
+          "REQ-006",
+          "REQ-007",
+          "REQ-008",
+          "REQ-009"
+        ],
+        "tests": [
+          "tests/core.test.cjs",
+          "tests/browser-wysiwyg.test.cjs"
+        ],
+        "control_graph_nodes": [
+          "CGN-NORTHSTAR-IMPLEMENT"
+        ],
+        "work_ledgers": [
+          "WLI-NORTHSTAR-IMPLEMENT"
+        ],
+        "refinery_gates": [
+          "GATE-NORTHSTAR-HARDENED"
+        ]
+      },
+      "scores": {
+        "intent_preserved": 4,
+        "coverage": 4,
+        "atomic_testable": 4,
+        "functional": 4,
+        "nfr_security_ops": 4,
+        "data_state_interface": 4,
+        "edge_abuse_failure": 4,
+        "dependencies_sequence": 4,
+        "contradictions": 4,
+        "owners_acceptance": 4,
+        "scenario_holdout_transfer": 4,
+        "traceability": 4,
+        "assumptions_waivers": 4,
+        "brownfield_regression": 4,
+        "fresh_reviewer_ready": 4
+      },
+      "reinterrogation_triggers": [
+        "User chooses a different planning method"
+      ]
+    },
+    {
+      "node_id": "SDN-1A",
+      "level": "L5",
+      "title": "Quick add task leaf",
+      "type": "acceptance_leaf",
+      "parent_id": "SDN-1",
+      "owner": "Codex",
+      "priority": "must",
+      "source_answer_ids": [
+        "ANS-NS-002"
+      ],
+      "assumption_ids": [],
+      "statement": "Quick add extracts title, priority, due date, estimate, and tags.",
+      "children": [],
+      "coverage_rationale": "Directly validates capture speed.",
+      "acceptance_criteria": [
+        "Input with p1 today 45m #tag creates matching task fields."
+      ],
+      "validation_methods": [
+        "Unit test",
+        "Browser scenario"
+      ],
+      "evidence_targets": [
+        "tests/core.test.cjs",
+        "project-book/evidence/browser-wysiwyg-results.json"
+      ],
+      "dependencies": [],
+      "risks": [],
+      "trace": {
+        "requirements": [
+          "REQ-001"
+        ],
+        "tests": [
+          "tests/core.test.cjs"
+        ],
+        "control_graph_nodes": [
+          "CGN-NORTHSTAR-IMPLEMENT"
+        ],
+        "work_ledgers": [
+          "WLI-NORTHSTAR-IMPLEMENT"
+        ],
+        "refinery_gates": [
+          "GATE-NORTHSTAR-HARDENED"
+        ]
+      },
+      "scores": {
+        "intent_preserved": 4,
+        "coverage": 4,
+        "atomic_testable": 4,
+        "functional": 4,
+        "nfr_security_ops": 4,
+        "data_state_interface": 4,
+        "edge_abuse_failure": 4,
+        "dependencies_sequence": 4,
+        "contradictions": 4,
+        "owners_acceptance": 4,
+        "scenario_holdout_transfer": 4,
+        "traceability": 4,
+        "assumptions_waivers": 4,
+        "brownfield_regression": 4,
+        "fresh_reviewer_ready": 4
+      },
+      "reinterrogation_triggers": []
+    },
+    {
+      "node_id": "SDN-1B",
+      "level": "L5",
+      "title": "Plan and focus leaf",
+      "type": "acceptance_leaf",
+      "parent_id": "SDN-1",
+      "owner": "Codex",
+      "priority": "must",
+      "source_answer_ids": [
+        "ANS-NS-002"
+      ],
+      "assumption_ids": [],
+      "statement": "Today planning shows workload, timeboxing, matrix, and focus queue.",
+      "children": [],
+      "coverage_rationale": "Validates realistic day planning.",
+      "acceptance_criteria": [
+        "Plan view renders timeboxed sequence and matrix.",
+        "Focus view renders selected task."
+      ],
+      "validation_methods": [
+        "Unit test",
+        "Browser scenario"
+      ],
+      "evidence_targets": [
+        "tests/core.test.cjs",
+        "project-book/evidence/browser-wysiwyg-results.json"
+      ],
+      "dependencies": [
+        "SDN-1A"
+      ],
+      "risks": [],
+      "trace": {
+        "requirements": [
+          "REQ-006",
+          "REQ-007",
+          "REQ-008",
+          "REQ-009"
+        ],
+        "tests": [
+          "tests/core.test.cjs",
+          "tests/browser-wysiwyg.test.cjs"
+        ],
+        "control_graph_nodes": [
+          "CGN-NORTHSTAR-IMPLEMENT"
+        ],
+        "work_ledgers": [
+          "WLI-NORTHSTAR-IMPLEMENT"
+        ],
+        "refinery_gates": [
+          "GATE-NORTHSTAR-HARDENED"
+        ]
+      },
+      "scores": {
+        "intent_preserved": 4,
+        "coverage": 4,
+        "atomic_testable": 4,
+        "functional": 4,
+        "nfr_security_ops": 4,
+        "data_state_interface": 4,
+        "edge_abuse_failure": 4,
+        "dependencies_sequence": 4,
+        "contradictions": 4,
+        "owners_acceptance": 4,
+        "scenario_holdout_transfer": 4,
+        "traceability": 4,
+        "assumptions_waivers": 4,
+        "brownfield_regression": 4,
+        "fresh_reviewer_ready": 4
+      },
+      "reinterrogation_triggers": []
+    },
+    {
+      "node_id": "SDN-2",
+      "level": "L1",
+      "title": "Habit and shutdown loop",
+      "type": "capability",
+      "parent_id": "SDN-0",
+      "owner": "Codex",
+      "priority": "must",
+      "source_answer_ids": [
+        "ANS-NS-003"
+      ],
+      "assumption_ids": [],
+      "statement": "The app must help users build habits and learn from the day.",
+      "children": [
+        "SDN-2A",
+        "SDN-2B"
+      ],
+      "coverage_rationale": "Captures the habit and learning side of the product promise.",
+      "acceptance_criteria": [],
+      "validation_methods": [],
+      "evidence_targets": [],
+      "dependencies": [],
+      "risks": [
+        "RISK-NORTHSTAR-001"
+      ],
+      "trace": {
+        "requirements": [
+          "REQ-002",
+          "REQ-005",
+          "REQ-010"
+        ],
+        "tests": [
+          "tests/core.test.cjs",
+          "tests/browser-wysiwyg.test.cjs"
+        ],
+        "control_graph_nodes": [
+          "CGN-NORTHSTAR-IMPLEMENT"
+        ],
+        "work_ledgers": [
+          "WLI-NORTHSTAR-IMPLEMENT"
+        ],
+        "refinery_gates": [
+          "GATE-NORTHSTAR-HARDENED"
+        ]
+      },
+      "scores": {
+        "intent_preserved": 4,
+        "coverage": 4,
+        "atomic_testable": 4,
+        "functional": 4,
+        "nfr_security_ops": 4,
+        "data_state_interface": 4,
+        "edge_abuse_failure": 4,
+        "dependencies_sequence": 4,
+        "contradictions": 4,
+        "owners_acceptance": 4,
+        "scenario_holdout_transfer": 4,
+        "traceability": 4,
+        "assumptions_waivers": 4,
+        "brownfield_regression": 4,
+        "fresh_reviewer_ready": 4
+      },
+      "reinterrogation_triggers": [
+        "User requests coaching or clinical behavior change"
+      ]
+    },
+    {
+      "node_id": "SDN-2A",
+      "level": "L5",
+      "title": "Habit behavior-design leaf",
+      "type": "acceptance_leaf",
+      "parent_id": "SDN-2",
+      "owner": "Codex",
+      "priority": "must",
+      "source_answer_ids": [
+        "ANS-NS-003"
+      ],
+      "assumption_ids": [],
+      "statement": "Habit cards show cue, tiny action, MAP score, streak, and reversible check.",
+      "children": [],
+      "coverage_rationale": "Validates behavior-design intent.",
+      "acceptance_criteria": [
+        "Habit cards include cue, tiny action, streak, and MAP score."
+      ],
+      "validation_methods": [
+        "Unit test",
+        "Browser scenario"
+      ],
+      "evidence_targets": [
+        "tests/core.test.cjs",
+        "project-book/evidence/browser-wysiwyg-results.json"
+      ],
+      "dependencies": [],
+      "risks": [],
+      "trace": {
+        "requirements": [
+          "REQ-002",
+          "REQ-005"
+        ],
+        "tests": [
+          "tests/core.test.cjs",
+          "tests/browser-wysiwyg.test.cjs"
+        ],
+        "control_graph_nodes": [
+          "CGN-NORTHSTAR-IMPLEMENT"
+        ],
+        "work_ledgers": [
+          "WLI-NORTHSTAR-IMPLEMENT"
+        ],
+        "refinery_gates": [
+          "GATE-NORTHSTAR-HARDENED"
+        ]
+      },
+      "scores": {
+        "intent_preserved": 4,
+        "coverage": 4,
+        "atomic_testable": 4,
+        "functional": 4,
+        "nfr_security_ops": 4,
+        "data_state_interface": 4,
+        "edge_abuse_failure": 4,
+        "dependencies_sequence": 4,
+        "contradictions": 4,
+        "owners_acceptance": 4,
+        "scenario_holdout_transfer": 4,
+        "traceability": 4,
+        "assumptions_waivers": 4,
+        "brownfield_regression": 4,
+        "fresh_reviewer_ready": 4
+      },
+      "reinterrogation_triggers": []
+    },
+    {
+      "node_id": "SDN-2B",
+      "level": "L5",
+      "title": "Shutdown review leaf",
+      "type": "acceptance_leaf",
+      "parent_id": "SDN-2",
+      "owner": "Codex",
+      "priority": "should",
+      "source_answer_ids": [
+        "ANS-NS-003"
+      ],
+      "assumption_ids": [],
+      "statement": "User can save a daily shutdown note and see review history.",
+      "children": [],
+      "coverage_rationale": "Validates learning loop.",
+      "acceptance_criteria": [
+        "Saved note appears in review history."
+      ],
+      "validation_methods": [
+        "Browser scenario",
+        "Trace review"
+      ],
+      "evidence_targets": [
+        "tests/browser-wysiwyg.test.cjs"
+      ],
+      "dependencies": [],
+      "risks": [],
+      "trace": {
+        "requirements": [
+          "REQ-010"
+        ],
+        "tests": [
+          "tests/browser-wysiwyg.test.cjs"
+        ],
+        "control_graph_nodes": [
+          "CGN-NORTHSTAR-IMPLEMENT"
+        ],
+        "work_ledgers": [
+          "WLI-NORTHSTAR-IMPLEMENT"
+        ],
+        "refinery_gates": [
+          "GATE-NORTHSTAR-HARDENED"
+        ]
+      },
+      "scores": {
+        "intent_preserved": 4,
+        "coverage": 4,
+        "atomic_testable": 4,
+        "functional": 4,
+        "nfr_security_ops": 4,
+        "data_state_interface": 4,
+        "edge_abuse_failure": 4,
+        "dependencies_sequence": 4,
+        "contradictions": 4,
+        "owners_acceptance": 4,
+        "scenario_holdout_transfer": 4,
+        "traceability": 4,
+        "assumptions_waivers": 4,
+        "brownfield_regression": 4,
+        "fresh_reviewer_ready": 4
+      },
+      "reinterrogation_triggers": []
+    }
+  ],
+  "open_questions": [
+    "Which external integrations matter after the static slice?"
+  ],
+  "contradictions": [
+    {
+      "id": "CON-001",
+      "resolution": "Bounded local-first slice now; larger app by change request."
+    }
+  ],
+  "waivers": [
+    {
+      "topic": "level_skip",
+      "owner": "Codex",
+      "reason": "The demonstration compresses intermediate decomposition levels while preserving leaf-level acceptance tests and trace links.",
+      "expires_at": "2026-05-25",
+      "residual_risk": "A production program should expand L2-L4 journeys/features/rules in full.",
+      "revalidation_trigger": "Before production backlog or multi-team delivery."
+    }
+  ],
+  "approval": {
+    "required": true,
+    "approver": "Abhir",
+    "decision": "conditional_pass",
+    "at": "2026-04-25"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "RFG-PASS29-001",
+  "name": "Pass 29 patch-level refinery gate",
+  "status": "pass",
+  "verdict_rationale": "Pass 29 closes the physical evidence-file proof gap by requiring production handoff validation to include --evidence-file bundle inputs, matching file-like work ledger evidence to provided file basenames, and checking key handoff, outage drill, and runbook replay IDs in evidence contents. This is patch-level only.",
+  "next_action": "Run a full greenfield and brownfield production handoff simulation before claiming runtime readiness.",
+  "evidence": {
+    "test_reports": [
+      "DFMS hardening checks complete",
+      "production handoff pass fixture with evidence-file bundle files: pass",
+      "production handoff missing evidence-file bundle fixture: rejected",
+      "bad production ledger evidence-file mapping fixture: rejected",
+      "pass 29 merged records: pass"
+    ],
+    "rubric_scorecards": [
+      "29-ralph-loop-critic-review-and-fix-record.md"
+    ],
+    "trace_reports": [
+      "records/pass29 merged records",
+      "ATTR-PASS29-001",
+      "CG-PASS29-001",
+      "WL-PASS29-001",
+      "installed and workspace production validator hashes match"
+    ],
+    "certificates": [
+      "patch-level pass only"
+    ]
+  }
+}

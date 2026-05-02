@@ -1,0 +1,3377 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/kc5p32",
+    "id": "kc5p32",
+    "slide": 31,
+    "layoutId": "39df3ad4-e207-4cff-a7b3-0934322c7183",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "9c364795-fe59-472e-ba8a-a667cb58489e",
+    "masterLayoutName": "Master",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "39df3ad4-e207-4cff-a7b3-0934322c7183",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "9c364795-fe59-472e-ba8a-a667cb58489e",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "9c364795-fe59-472e-ba8a-a667cb58489e",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/o7qpg3ex",
+      "id": "1",
+      "name": "background",
+      "bbox": [
+        0,
+        0,
+        1920,
+        1080
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#09100F",
+      "lineColor": "#09100F",
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vmtwra5g",
+      "id": "2",
+      "name": "competition-eyebrow",
+      "bbox": [
+        88,
+        64,
+        1744,
+        22
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.5.2.1"
+      },
+      "geometry": "rect",
+      "text": "POSITIONING",
+      "textPreview": "POSITIONING",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "fontSize": 21,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "POSITIONING"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "POSITIONING",
+          "runs": [
+            {
+              "index": 1,
+              "text": "POSITIONING",
+              "fontSize": 21,
+              "color": "#9AF2C8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/61032lsz",
+      "id": "3",
+      "name": "competition-title",
+      "bbox": [
+        88,
+        98,
+        1188,
+        56
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.2.0"
+      },
+      "geometry": "rect",
+      "text": "DFMS bridges outsourcing firms and AI coding tools.",
+      "textPreview": "DFMS bridges outsourcing firms and AI coding tools.",
+      "resolvedFontSize": 55,
+      "resolvedTextStyle": {
+        "fontSize": 55,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "DFMS bridges outsourcing firms and AI coding tools."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "DFMS bridges outsourcing firms and AI coding tools.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "DFMS bridges outsourcing firms and AI coding tools.",
+              "fontSize": 55,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/d4vmtwra",
+      "id": "4",
+      "name": "competition-subtitle",
+      "bbox": [
+        88,
+        166,
+        1086,
+        26
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.5.1"
+      },
+      "geometry": "rect",
+      "text": "It borrows the trust rituals of delivery firms, then makes them machine-checkable and token-governed.",
+      "textPreview": "It borrows the trust rituals of delivery firms, then makes them machine-checkable and token-governed.",
+      "resolvedFontSize": 26,
+      "resolvedTextStyle": {
+        "fontSize": 26,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "It borrows the trust rituals of delivery firms, then makes them machine-checkable and token-governed."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "It borrows the trust rituals of delivery firms, then makes them machine-checkable and token-governed.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "It borrows the trust rituals of delivery firms, then makes them machine-checkable and token-governed.",
+              "fontSize": 26,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/oj2t83it",
+      "id": "5",
+      "name": "competition-h-a",
+      "bbox": [
+        88,
+        446,
+        534,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.5.2.0"
+      },
+      "geometry": "rect",
+      "text": "Outsourcing firms",
+      "textPreview": "Outsourcing firms",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Outsourcing firms"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Outsourcing firms",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Outsourcing firms",
+              "fontSize": 18,
+              "color": "#9AF2C8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vy90je9c",
+      "id": "6",
+      "name": "competition-h-b",
+      "bbox": [
+        650,
+        446,
+        534,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.4.2.1"
+      },
+      "geometry": "rect",
+      "text": "AI coding tools",
+      "textPreview": "AI coding tools",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "AI coding tools"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "AI coding tools",
+          "runs": [
+            {
+              "index": 1,
+              "text": "AI coding tools",
+              "fontSize": 18,
+              "color": "#9AF2C8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6dcbulwv",
+      "id": "7",
+      "name": "competition-h-c",
+      "bbox": [
+        1214,
+        446,
+        618,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.5.0"
+      },
+      "geometry": "rect",
+      "text": "DFMS product",
+      "textPreview": "DFMS product",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "DFMS product"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "DFMS product",
+          "runs": [
+            {
+              "index": 1,
+              "text": "DFMS product",
+              "fontSize": 18,
+              "color": "#9AF2C8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/d8v6psfi",
+      "id": "8",
+      "name": "competition-rule",
+      "bbox": [
+        88,
+        486,
+        1744,
+        2
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1"
+      },
+      "geometry": "rect",
+      "fillColor": "#29443B",
+      "lineColor": "#29443B",
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/onyd0z61",
+      "id": "9",
+      "name": "comp-a-people-heavy-status-rituals",
+      "bbox": [
+        88,
+        510,
+        534,
+        40
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.2.0"
+      },
+      "geometry": "rect",
+      "text": "People-heavy status rituals",
+      "textPreview": "People-heavy status rituals",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "People-heavy status rituals"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "People-heavy status rituals",
+          "runs": [
+            {
+              "index": 1,
+              "text": "People-heavy status rituals",
+              "fontSize": 22,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/epkzupwb",
+      "id": "10",
+      "name": "comp-b-people-heavy-status-rituals",
+      "bbox": [
+        650,
+        510,
+        534,
+        40
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.2.1"
+      },
+      "geometry": "rect",
+      "text": "Fast local task completion",
+      "textPreview": "Fast local task completion",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Fast local task completion"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Fast local task completion",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Fast local task completion",
+              "fontSize": 22,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7adsji5s",
+      "id": "11",
+      "name": "comp-mark-people-heavy-status-rituals",
+      "bbox": [
+        1212,
+        512,
+        8,
+        40
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.2.2.0"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#46D17E",
+      "lineColor": "#46D17E",
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wval87ed",
+      "id": "12",
+      "name": "comp-c-people-heavy-status-rituals",
+      "bbox": [
+        1236,
+        510,
+        596,
+        22
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.2.2.1"
+      },
+      "geometry": "rect",
+      "text": "Governed control graph with live evidence",
+      "textPreview": "Governed control graph with live evidence",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Governed control graph with live evidence"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Governed control graph with live evidence",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Governed control graph with live evidence",
+              "fontSize": 22,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/pg3ex0nu",
+      "id": "13",
+      "name": "comp-a-budget-managed-in-dollars",
+      "bbox": [
+        88,
+        572,
+        534,
+        40
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.3.0"
+      },
+      "geometry": "rect",
+      "text": "Budget managed in dollars",
+      "textPreview": "Budget managed in dollars",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Budget managed in dollars"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Budget managed in dollars",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Budget managed in dollars",
+              "fontSize": 22,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/e1w7mp0b",
+      "id": "14",
+      "name": "comp-b-budget-managed-in-dollars",
+      "bbox": [
+        650,
+        572,
+        534,
+        40
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.3.1"
+      },
+      "geometry": "rect",
+      "text": "Compute spend is hidden or ad hoc",
+      "textPreview": "Compute spend is hidden or ad hoc",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Compute spend is hidden or ad hoc"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Compute spend is hidden or ad hoc",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Compute spend is hidden or ad hoc",
+              "fontSize": 22,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7mp0bi9s",
+      "id": "15",
+      "name": "comp-mark-budget-managed-in-dollars",
+      "bbox": [
+        1212,
+        572,
+        8,
+        40
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.3.2.0"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#F2B84B",
+      "lineColor": "#F2B84B",
+      "lineWidth": 0
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/w7mp0bi9",
+      "id": "16",
+      "name": "comp-c-budget-managed-in-dollars",
+      "bbox": [
+        1236,
+        572,
+        596,
+        22
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.3.2.1"
+      },
+      "geometry": "rect",
+      "text": "Token SWAGs, approvals, and reapproval triggers",
+      "textPreview": "Token SWAGs, approvals, and reapproval triggers",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Token SWAGs, approvals, and reapproval triggers"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Token SWAGs, approvals, and reapproval triggers",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Token SWAGs, approvals, and reapproval triggers",
+              "fontSize": 22,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/psfil0rq",
+      "id": "17",
+      "name": "comp-a-artifacts-often-lag-reality",
+      "bbox": [
+        88,
+        634,
+        534,
+        40
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.4.0"
+      },
+      "geometry": "rect",
+      "text": "Artifacts often lag reality",
+      "textPreview": "Artifacts often lag reality",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Artifacts often lag reality"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Artifacts often lag reality",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Artifacts often lag reality",
+              "fontSize": 22,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ed8bat47",
+      "id": "18",
+      "name": "comp-b-artifacts-often-lag-reality",
+      "bbox": [
+        650,
+        634,
+        534,
+        40
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.4.1"
+      },
+      "geometry": "rect",
+      "text": "Artifacts often absent",
+      "textPreview": "Artifacts often absent",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Artifacts often absent"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Artifacts often absent",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Artifacts often absent",
+              "fontSize": 22,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7u54zido",
+      "id": "19",
+      "name": "comp-mark-artifacts-often-lag-reality",
+      "bbox": [
+        1212,
+        636,
+        8,
+        40
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.4.2.0"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#46D17E",
+      "lineColor": "#46D17E",
+      "lineWidth": 0
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vy90je9c",
+      "id": "20",
+      "name": "comp-c-artifacts-often-lag-reality",
+      "bbox": [
+        1236,
+        634,
+        596,
+        22
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.4.2.1"
+      },
+      "geometry": "rect",
+      "text": "Artifacts, trace links, tests, and handoffs evolve together",
+      "textPreview": "Artifacts, trace links, tests, and handoffs evolve together",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Artifacts, trace links, tests, and handoffs evolve together"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Artifacts, trace links, tests, and handoffs evolve together",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Artifacts, trace links, tests, and handoffs evolve together",
+              "fontSize": 22,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6dcbulwv",
+      "id": "21",
+      "name": "comp-a-quality-depends-on-delivery-team-maturity",
+      "bbox": [
+        88,
+        696,
+        534,
+        40
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.5.0"
+      },
+      "geometry": "rect",
+      "text": "Quality depends on delivery team maturity",
+      "textPreview": "Quality depends on delivery team maturity",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Quality depends on delivery team maturity"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Quality depends on delivery team maturity",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Quality depends on delivery team maturity",
+              "fontSize": 22,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/d4vmtwra",
+      "id": "22",
+      "name": "comp-b-quality-depends-on-delivery-team-maturity",
+      "bbox": [
+        650,
+        696,
+        534,
+        40
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.5.1"
+      },
+      "geometry": "rect",
+      "text": "Quality depends on prompt discipline",
+      "textPreview": "Quality depends on prompt discipline",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Quality depends on prompt discipline"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Quality depends on prompt discipline",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Quality depends on prompt discipline",
+              "fontSize": 22,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 23,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/oj2t83it",
+      "id": "23",
+      "name": "comp-mark-quality-depends-on-delivery-team-maturity",
+      "bbox": [
+        1212,
+        696,
+        8,
+        40
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.5.2.0"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#46D17E",
+      "lineColor": "#46D17E",
+      "lineWidth": 0
+    },
+    {
+      "order": 24,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vmtwra5g",
+      "id": "24",
+      "name": "comp-c-quality-depends-on-delivery-team-maturity",
+      "bbox": [
+        1236,
+        696,
+        596,
+        22
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.5.2.1"
+      },
+      "geometry": "rect",
+      "text": "Quality is rubric-scored, evidence-gated, and replayable",
+      "textPreview": "Quality is rubric-scored, evidence-gated, and replayable",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Quality is rubric-scored, evidence-gated, and replayable"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Quality is rubric-scored, evidence-gated, and replayable",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Quality is rubric-scored, evidence-gated, and replayable",
+              "fontSize": 22,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 25,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/61032lsz",
+      "id": "25",
+      "name": "competition-footer",
+      "bbox": [
+        88,
+        990,
+        268,
+        28
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.2.0"
+      },
+      "geometry": "rect",
+      "text": "DFMS pitch deck | software assurance dark factory",
+      "textPreview": "DFMS pitch deck | software assurance dark factory",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "DFMS pitch deck | software assurance dark factory"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "DFMS pitch deck | software assurance dark factory",
+          "runs": [
+            {
+              "index": 1,
+              "text": "DFMS pitch deck | software assurance dark factory",
+              "fontSize": 13,
+              "color": "#6E7C74"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 26,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/dsji5sne",
+      "id": "26",
+      "name": "competition-page",
+      "bbox": [
+        1792,
+        998,
+        40,
+        12
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.2.1"
+      },
+      "geometry": "rect",
+      "text": "31",
+      "textPreview": "31",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "31"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "31",
+          "runs": [
+            {
+              "index": 1,
+              "text": "31",
+              "fontSize": 13,
+              "color": "#6E7C74",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "composeRuns": [
+    {
+      "index": 1,
+      "frame": {
+        "left": 0,
+        "top": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "baseUnit": 8,
+      "root": {
+        "path": "0",
+        "kind": "layers",
+        "name": "competition-root",
+        "requestedSize": {
+          "width": {
+            "mode": "fill",
+            "value": 1
+          },
+          "height": {
+            "mode": "fill",
+            "value": 1
+          }
+        },
+        "intrinsicSize": {
+          "width": 0,
+          "height": 0
+        },
+        "frame": {
+          "left": 0,
+          "top": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "children": [
+          {
+            "path": "0.0",
+            "kind": "shape",
+            "name": "background",
+            "requestedSize": {
+              "width": {
+                "mode": "fill",
+                "value": 1
+              },
+              "height": {
+                "mode": "fill",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 0,
+              "height": 0
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "snappedFrame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/o7qpg3ex",
+              "id": "1",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.1",
+            "kind": "column",
+            "name": "competition-content",
+            "requestedSize": {
+              "width": {
+                "mode": "fill",
+                "value": 1
+              },
+              "height": {
+                "mode": "fill",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 176,
+              "height": 337
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "children": [
+              {
+                "path": "0.1.0",
+                "kind": "column",
+                "name": "competition-title-stack",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "hug"
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 1187.84,
+                  "height": 128
+                },
+                "frame": {
+                  "left": 88,
+                  "top": 64,
+                  "width": 1744,
+                  "height": 128
+                },
+                "children": [
+                  {
+                    "path": "0.1.0.0",
+                    "kind": "text",
+                    "name": "competition-eyebrow",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 21
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 64,
+                      "width": 1744,
+                      "height": 21
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 64,
+                      "width": 1744,
+                      "height": 22
+                    },
+                    "children": [],
+                    "text": "POSITIONING",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/vmtwra5g",
+                      "id": "2",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.0.1",
+                    "kind": "text",
+                    "name": "competition-title",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "wrap",
+                        "max": 1500
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 1187.84,
+                      "height": 55
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 98,
+                      "width": 1187.84,
+                      "height": 55
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 98,
+                      "width": 1188,
+                      "height": 56
+                    },
+                    "children": [],
+                    "text": "DFMS bridges outsourcing firms and AI coding tools.",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/61032lsz",
+                      "id": "3",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.0.2",
+                    "kind": "text",
+                    "name": "competition-subtitle",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "wrap",
+                        "max": 1330
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 1085.27,
+                      "height": 26
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 166,
+                      "width": 1085.27,
+                      "height": 26
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 166,
+                      "width": 1086,
+                      "height": 26
+                    },
+                    "children": [],
+                    "text": "It borrows the trust rituals of delivery firms, then makes them machine-checkable and token-governed.",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/d4vmtwra",
+                      "id": "4",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "gap": 13,
+                "effectiveGap": 13,
+                "justifyOffset": 0,
+                "align": "start",
+                "justify": "start",
+                "contentFrame": {
+                  "left": 88,
+                  "top": 64,
+                  "width": 1744,
+                  "height": 128
+                },
+                "items": [
+                  {
+                    "path": "0.1.0.0",
+                    "frame": {
+                      "left": 88,
+                      "top": 64,
+                      "width": 1744,
+                      "height": 21
+                    }
+                  },
+                  {
+                    "path": "0.1.0.1",
+                    "frame": {
+                      "left": 88,
+                      "top": 98,
+                      "width": 1187.84,
+                      "height": 55
+                    }
+                  },
+                  {
+                    "path": "0.1.0.2",
+                    "frame": {
+                      "left": 88,
+                      "top": 166,
+                      "width": 1085.27,
+                      "height": 26
+                    }
+                  }
+                ]
+              },
+              {
+                "path": "0.1.1",
+                "kind": "column",
+                "name": "competition-body",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "fill",
+                    "value": 1
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 0,
+                  "height": 290
+                },
+                "frame": {
+                  "left": 88,
+                  "top": 226,
+                  "width": 1744,
+                  "height": 730
+                },
+                "children": [
+                  {
+                    "path": "0.1.1.0",
+                    "kind": "grid",
+                    "name": "competition-header",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 56,
+                      "height": 18
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 446,
+                      "width": 1744,
+                      "height": 18
+                    },
+                    "children": [
+                      {
+                        "path": "0.1.1.0.0",
+                        "kind": "text",
+                        "name": "competition-h-a",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 0,
+                          "height": 18
+                        },
+                        "frame": {
+                          "left": 88,
+                          "top": 446,
+                          "width": 534.71,
+                          "height": 18
+                        },
+                        "snappedFrame": {
+                          "left": 88,
+                          "top": 446,
+                          "width": 534,
+                          "height": 18
+                        },
+                        "children": [],
+                        "text": "Outsourcing firms",
+                        "transform": "none",
+                        "element": {
+                          "aid": "sh/oj2t83it",
+                          "id": "5",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.1.1.0.1",
+                        "kind": "text",
+                        "name": "competition-h-b",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 0,
+                          "height": 18
+                        },
+                        "frame": {
+                          "left": 650.71,
+                          "top": 446,
+                          "width": 534.71,
+                          "height": 18
+                        },
+                        "snappedFrame": {
+                          "left": 650,
+                          "top": 446,
+                          "width": 534,
+                          "height": 18
+                        },
+                        "children": [],
+                        "text": "AI coding tools",
+                        "transform": "none",
+                        "element": {
+                          "aid": "sh/vy90je9c",
+                          "id": "6",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.1.1.0.2",
+                        "kind": "text",
+                        "name": "competition-h-c",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 0,
+                          "height": 18
+                        },
+                        "frame": {
+                          "left": 1213.42,
+                          "top": 446,
+                          "width": 618.58,
+                          "height": 18
+                        },
+                        "snappedFrame": {
+                          "left": 1214,
+                          "top": 446,
+                          "width": 618,
+                          "height": 18
+                        },
+                        "children": [],
+                        "text": "DFMS product",
+                        "transform": "none",
+                        "element": {
+                          "aid": "sh/6dcbulwv",
+                          "id": "7",
+                          "kind": "shape"
+                        }
+                      }
+                    ],
+                    "padding": {
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    },
+                    "columnGap": 28,
+                    "rowGap": 0,
+                    "alignItems": "stretch",
+                    "justifyItems": "stretch",
+                    "contentFrame": {
+                      "left": 88,
+                      "top": 446,
+                      "width": 1744,
+                      "height": 18
+                    },
+                    "columns": [
+                      {
+                        "mode": "fr",
+                        "value": 1.02
+                      },
+                      {
+                        "mode": "fr",
+                        "value": 1.02
+                      },
+                      {
+                        "mode": "fr",
+                        "value": 1.18
+                      }
+                    ],
+                    "autoRows": "auto",
+                    "resolvedRows": [
+                      "auto"
+                    ],
+                    "columnSizes": [
+                      534.71,
+                      534.71,
+                      618.58
+                    ],
+                    "rowSizes": [
+                      18
+                    ],
+                    "cells": [
+                      {
+                        "path": "0.1.1.0.0",
+                        "column": 0,
+                        "row": 0,
+                        "columnSpan": 1,
+                        "rowSpan": 1,
+                        "cellFrame": {
+                          "left": 88,
+                          "top": 446,
+                          "width": 534.71,
+                          "height": 18
+                        }
+                      },
+                      {
+                        "path": "0.1.1.0.1",
+                        "column": 1,
+                        "row": 0,
+                        "columnSpan": 1,
+                        "rowSpan": 1,
+                        "cellFrame": {
+                          "left": 650.71,
+                          "top": 446,
+                          "width": 534.71,
+                          "height": 18
+                        }
+                      },
+                      {
+                        "path": "0.1.1.0.2",
+                        "column": 2,
+                        "row": 0,
+                        "columnSpan": 1,
+                        "rowSpan": 1,
+                        "cellFrame": {
+                          "left": 1213.42,
+                          "top": 446,
+                          "width": 618.58,
+                          "height": 18
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "path": "0.1.1.1",
+                    "kind": "rule",
+                    "name": "competition-rule",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 2
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 2
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 486,
+                      "width": 1744,
+                      "height": 2
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 486,
+                      "width": 1744,
+                      "height": 2
+                    },
+                    "children": [],
+                    "weight": 2,
+                    "element": {
+                      "aid": "sh/d8v6psfi",
+                      "id": "8",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.1.2",
+                    "kind": "grid",
+                    "name": "comp-people-heavy-status-rituals",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 56,
+                      "height": 40
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 510,
+                      "width": 1744,
+                      "height": 40
+                    },
+                    "children": [
+                      {
+                        "path": "0.1.1.2.0",
+                        "kind": "text",
+                        "name": "comp-a-people-heavy-status-rituals",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 0,
+                          "height": 22
+                        },
+                        "frame": {
+                          "left": 88,
+                          "top": 510,
+                          "width": 534.71,
+                          "height": 40
+                        },
+                        "snappedFrame": {
+                          "left": 88,
+                          "top": 510,
+                          "width": 534,
+                          "height": 40
+                        },
+                        "children": [],
+                        "text": "People-heavy status rituals",
+                        "transform": "none",
+                        "element": {
+                          "aid": "sh/onyd0z61",
+                          "id": "9",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.1.1.2.1",
+                        "kind": "text",
+                        "name": "comp-b-people-heavy-status-rituals",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 0,
+                          "height": 22
+                        },
+                        "frame": {
+                          "left": 650.71,
+                          "top": 510,
+                          "width": 534.71,
+                          "height": 40
+                        },
+                        "snappedFrame": {
+                          "left": 650,
+                          "top": 510,
+                          "width": 534,
+                          "height": 40
+                        },
+                        "children": [],
+                        "text": "Fast local task completion",
+                        "transform": "none",
+                        "element": {
+                          "aid": "sh/epkzupwb",
+                          "id": "10",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.1.1.2.2",
+                        "kind": "row",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 22,
+                          "height": 40
+                        },
+                        "frame": {
+                          "left": 1213.42,
+                          "top": 510,
+                          "width": 618.58,
+                          "height": 40
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.2.2.0",
+                            "kind": "shape",
+                            "name": "comp-mark-people-heavy-status-rituals",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fixed",
+                                "value": 8
+                              },
+                              "height": {
+                                "mode": "fixed",
+                                "value": 40
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 8,
+                              "height": 40
+                            },
+                            "frame": {
+                              "left": 1213.42,
+                              "top": 510,
+                              "width": 8,
+                              "height": 40
+                            },
+                            "snappedFrame": {
+                              "left": 1212,
+                              "top": 512,
+                              "width": 8,
+                              "height": 40
+                            },
+                            "children": [],
+                            "geometry": "rect",
+                            "element": {
+                              "aid": "sh/7adsji5s",
+                              "id": "11",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.2.2.1",
+                            "kind": "text",
+                            "name": "comp-c-people-heavy-status-rituals",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 22
+                            },
+                            "frame": {
+                              "left": 1235.42,
+                              "top": 510,
+                              "width": 596.58,
+                              "height": 22
+                            },
+                            "snappedFrame": {
+                              "left": 1236,
+                              "top": 510,
+                              "width": 596,
+                              "height": 22
+                            },
+                            "children": [],
+                            "text": "Governed control graph with live evidence",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/wval87ed",
+                              "id": "12",
+                              "kind": "shape"
+                            }
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 14,
+                        "effectiveGap": 14,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 1213.42,
+                          "top": 510,
+                          "width": 618.58,
+                          "height": 40
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.2.2.0",
+                            "frame": {
+                              "left": 1213.42,
+                              "top": 510,
+                              "width": 8,
+                              "height": 40
+                            }
+                          },
+                          {
+                            "path": "0.1.1.2.2.1",
+                            "frame": {
+                              "left": 1235.42,
+                              "top": 510,
+                              "width": 596.58,
+                              "height": 22
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "padding": {
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    },
+                    "columnGap": 28,
+                    "rowGap": 0,
+                    "alignItems": "stretch",
+                    "justifyItems": "stretch",
+                    "contentFrame": {
+                      "left": 88,
+                      "top": 510,
+                      "width": 1744,
+                      "height": 40
+                    },
+                    "columns": [
+                      {
+                        "mode": "fr",
+                        "value": 1.02
+                      },
+                      {
+                        "mode": "fr",
+                        "value": 1.02
+                      },
+                      {
+                        "mode": "fr",
+                        "value": 1.18
+                      }
+                    ],
+                    "autoRows": "auto",
+                    "resolvedRows": [
+                      "auto"
+                    ],
+                    "columnSizes": [
+                      534.71,
+                      534.71,
+                      618.58
+                    ],
+                    "rowSizes": [
+                      40
+                    ],
+                    "cells": [
+                      {
+                        "path": "0.1.1.2.0",
+                        "column": 0,
+                        "row": 0,
+                        "columnSpan": 1,
+                        "rowSpan": 1,
+                        "cellFrame": {
+                          "left": 88,
+                          "top": 510,
+                          "width": 534.71,
+                          "height": 40
+                        }
+                      },
+                      {
+                        "path": "0.1.1.2.1",
+                        "column": 1,
+                        "row": 0,
+                        "columnSpan": 1,
+                        "rowSpan": 1,
+                        "cellFrame": {
+                          "left": 650.71,
+                          "top": 510,
+                          "width": 534.71,
+                          "height": 40
+                        }
+                      },
+                      {
+                        "path": "0.1.1.2.2",
+                        "column": 2,
+                        "row": 0,
+                        "columnSpan": 1,
+                        "rowSpan": 1,
+                        "cellFrame": {
+                          "left": 1213.42,
+                          "top": 510,
+                          "width": 618.58,
+                          "height": 40
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "path": "0.1.1.3",
+                    "kind": "grid",
+                    "name": "comp-budget-managed-in-dollars",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 56,
+                      "height": 40
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 572,
+                      "width": 1744,
+                      "height": 40
+                    },
+                    "children": [
+                      {
+                        "path": "0.1.1.3.0",
+                        "kind": "text",
+                        "name": "comp-a-budget-managed-in-dollars",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 0,
+                          "height": 22
+                        },
+                        "frame": {
+                          "left": 88,
+                          "top": 572,
+                          "width": 534.71,
+                          "height": 40
+                        },
+                        "snappedFrame": {
+                          "left": 88,
+                          "top": 572,
+                          "width": 534,
+                          "height": 40
+                        },
+                        "children": [],
+                        "text": "Budget managed in dollars",
+                        "transform": "none",
+                        "element": {
+                          "aid": "sh/pg3ex0nu",
+                          "id": "13",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.1.1.3.1",
+                        "kind": "text",
+                        "name": "comp-b-budget-managed-in-dollars",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 0,
+                          "height": 22
+                        },
+                        "frame": {
+                          "left": 650.71,
+                          "top": 572,
+                          "width": 534.71,
+                          "height": 40
+                        },
+                        "snappedFrame": {
+                          "left": 650,
+                          "top": 572,
+                          "width": 534,
+                          "height": 40
+                        },
+                        "children": [],
+                        "text": "Compute spend is hidden or ad hoc",
+                        "transform": "none",
+                        "element": {
+                          "aid": "sh/e1w7mp0b",
+                          "id": "14",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.1.1.3.2",
+                        "kind": "row",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 22,
+                          "height": 40
+                        },
+                        "frame": {
+                          "left": 1213.42,
+                          "top": 572,
+                          "width": 618.58,
+                          "height": 40
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.3.2.0",
+                            "kind": "shape",
+                            "name": "comp-mark-budget-managed-in-dollars",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fixed",
+                                "value": 8
+                              },
+                              "height": {
+                                "mode": "fixed",
+                                "value": 40
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 8,
+                              "height": 40
+                            },
+                            "frame": {
+                              "left": 1213.42,
+                              "top": 572,
+                              "width": 8,
+                              "height": 40
+                            },
+                            "snappedFrame": {
+                              "left": 1212,
+                              "top": 572,
+                              "width": 8,
+                              "height": 40
+                            },
+                            "children": [],
+                            "geometry": "rect",
+                            "element": {
+                              "aid": "sh/7mp0bi9s",
+                              "id": "15",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.3.2.1",
+                            "kind": "text",
+                            "name": "comp-c-budget-managed-in-dollars",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 22
+                            },
+                            "frame": {
+                              "left": 1235.42,
+                              "top": 572,
+                              "width": 596.58,
+                              "height": 22
+                            },
+                            "snappedFrame": {
+                              "left": 1236,
+                              "top": 572,
+                              "width": 596,
+                              "height": 22
+                            },
+                            "children": [],
+                            "text": "Token SWAGs, approvals, and reapproval triggers",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/w7mp0bi9",
+                              "id": "16",
+                              "kind": "shape"
+                            }
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 14,
+                        "effectiveGap": 14,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 1213.42,
+                          "top": 572,
+                          "width": 618.58,
+                          "height": 40
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.3.2.0",
+                            "frame": {
+                              "left": 1213.42,
+                              "top": 572,
+                              "width": 8,
+                              "height": 40
+                            }
+                          },
+                          {
+                            "path": "0.1.1.3.2.1",
+                            "frame": {
+                              "left": 1235.42,
+                              "top": 572,
+                              "width": 596.58,
+                              "height": 22
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "padding": {
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    },
+                    "columnGap": 28,
+                    "rowGap": 0,
+                    "alignItems": "stretch",
+                    "justifyItems": "stretch",
+                    "contentFrame": {
+                      "left": 88,
+                      "top": 572,
+                      "width": 1744,
+                      "height": 40
+                    },
+                    "columns": [
+                      {
+                        "mode": "fr",
+                        "value": 1.02
+                      },
+                      {
+                        "mode": "fr",
+                        "value": 1.02
+                      },
+                      {
+                        "mode": "fr",
+                        "value": 1.18
+                      }
+                    ],
+                    "autoRows": "auto",
+                    "resolvedRows": [
+                      "auto"
+                    ],
+                    "columnSizes": [
+                      534.71,
+                      534.71,
+                      618.58
+                    ],
+                    "rowSizes": [
+                      40
+                    ],
+                    "cells": [
+                      {
+                        "path": "0.1.1.3.0",
+                        "column": 0,
+                        "row": 0,
+                        "columnSpan": 1,
+                        "rowSpan": 1,
+                        "cellFrame": {
+                          "left": 88,
+                          "top": 572,
+                          "width": 534.71,
+                          "height": 40
+                        }
+                      },
+                      {
+                        "path": "0.1.1.3.1",
+                        "column": 1,
+                        "row": 0,
+                        "columnSpan": 1,
+                        "rowSpan": 1,
+                        "cellFrame": {
+                          "left": 650.71,
+                          "top": 572,
+                          "width": 534.71,
+                          "height": 40
+                        }
+                      },
+                      {
+                        "path": "0.1.1.3.2",
+                        "column": 2,
+                        "row": 0,
+                        "columnSpan": 1,
+                        "rowSpan": 1,
+                        "cellFrame": {
+                          "left": 1213.42,
+                          "top": 572,
+                          "width": 618.58,
+                          "height": 40
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "path": "0.1.1.4",
+                    "kind": "grid",
+                    "name": "comp-artifacts-often-lag-reality",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 56,
+                      "height": 40
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 634,
+                      "width": 1744,
+                      "height": 40
+                    },
+                    "children": [
+                      {
+                        "path": "0.1.1.4.0",
+                        "kind": "text",
+                        "name": "comp-a-artifacts-often-lag-reality",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 0,
+                          "height": 22
+                        },
+                        "frame": {
+                          "left": 88,
+                          "top": 634,
+                          "width": 534.71,
+                          "height": 40
+                        },
+                        "snappedFrame": {
+                          "left": 88,
+                          "top": 634,
+                          "width": 534,
+                          "height": 40
+                        },
+                        "children": [],
+                        "text": "Artifacts often lag reality",
+                        "transform": "none",
+                        "element": {
+                          "aid": "sh/psfil0rq",
+                          "id": "17",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.1.1.4.1",
+                        "kind": "text",
+                        "name": "comp-b-artifacts-often-lag-reality",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 0,
+                          "height": 22
+                        },
+                        "frame": {
+                          "left": 650.71,
+                          "top": 634,
+                          "width": 534.71,
+                          "height": 40
+                        },
+                        "snappedFrame": {
+                          "left": 650,
+                          "top": 634,
+                          "width": 534,
+                          "height": 40
+                        },
+                        "children": [],
+                        "text": "Artifacts often absent",
+                        "transform": "none",
+                        "element": {
+                          "aid": "sh/ed8bat47",
+                          "id": "18",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.1.1.4.2",
+                        "kind": "row",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 22,
+                          "height": 40
+                        },
+                        "frame": {
+                          "left": 1213.42,
+                          "top": 634,
+                          "width": 618.58,
+                          "height": 40
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.4.2.0",
+                            "kind": "shape",
+                            "name": "comp-mark-artifacts-often-lag-reality",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fixed",
+                                "value": 8
+                              },
+                              "height": {
+                                "mode": "fixed",
+                                "value": 40
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 8,
+                              "height": 40
+                            },
+                            "frame": {
+                              "left": 1213.42,
+                              "top": 634,
+                              "width": 8,
+                              "height": 40
+                            },
+                            "snappedFrame": {
+                              "left": 1212,
+                              "top": 636,
+                              "width": 8,
+                              "height": 40
+                            },
+                            "children": [],
+                            "geometry": "rect",
+                            "element": {
+                              "aid": "sh/7u54zido",
+                              "id": "19",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.4.2.1",
+                            "kind": "text",
+                            "name": "comp-c-artifacts-often-lag-reality",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 22
+                            },
+                            "frame": {
+                              "left": 1235.42,
+                              "top": 634,
+                              "width": 596.58,
+                              "height": 22
+                            },
+                            "snappedFrame": {
+                              "left": 1236,
+                              "top": 634,
+                              "width": 596,
+                              "height": 22
+                            },
+                            "children": [],
+                            "text": "Artifacts, trace links, tests, and handoffs evolve together",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/vy90je9c",
+                              "id": "20",
+                              "kind": "shape"
+                            }
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 14,
+                        "effectiveGap": 14,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 1213.42,
+                          "top": 634,
+                          "width": 618.58,
+                          "height": 40
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.4.2.0",
+                            "frame": {
+                              "left": 1213.42,
+                              "top": 634,
+                              "width": 8,
+                              "height": 40
+                            }
+                          },
+                          {
+                            "path": "0.1.1.4.2.1",
+                            "frame": {
+                              "left": 1235.42,
+                              "top": 634,
+                              "width": 596.58,
+                              "height": 22
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "padding": {
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    },
+                    "columnGap": 28,
+                    "rowGap": 0,
+                    "alignItems": "stretch",
+                    "justifyItems": "stretch",
+                    "contentFrame": {
+                      "left": 88,
+                      "top": 634,
+                      "width": 1744,
+                      "height": 40
+                    },
+                    "columns": [
+                      {
+                        "mode": "fr",
+                        "value": 1.02
+                      },
+                      {
+                        "mode": "fr",
+                        "value": 1.02
+                      },
+                      {
+                        "mode": "fr",
+                        "value": 1.18
+                      }
+                    ],
+                    "autoRows": "auto",
+                    "resolvedRows": [
+                      "auto"
+                    ],
+                    "columnSizes": [
+                      534.71,
+                      534.71,
+                      618.58
+                    ],
+                    "rowSizes": [
+                      40
+                    ],
+                    "cells": [
+                      {
+                        "path": "0.1.1.4.0",
+                        "column": 0,
+                        "row": 0,
+                        "columnSpan": 1,
+                        "rowSpan": 1,
+                        "cellFrame": {
+                          "left": 88,
+                          "top": 634,
+                          "width": 534.71,
+                          "height": 40
+                        }
+                      },
+                      {
+                        "path": "0.1.1.4.1",
+                        "column": 1,
+                        "row": 0,
+                        "columnSpan": 1,
+                        "rowSpan": 1,
+                        "cellFrame": {
+                          "left": 650.71,
+                          "top": 634,
+                          "width": 534.71,
+                          "height": 40
+                        }
+                      },
+                      {
+                        "path": "0.1.1.4.2",
+                        "column": 2,
+                        "row": 0,
+                        "columnSpan": 1,
+                        "rowSpan": 1,
+                        "cellFrame": {
+                          "left": 1213.42,
+                          "top": 634,
+                          "width": 618.58,
+                          "height": 40
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "path": "0.1.1.5",
+                    "kind": "grid",
+                    "name": "comp-quality-depends-on-delivery-team-maturity",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 56,
+                      "height": 40
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 696,
+                      "width": 1744,
+                      "height": 40
+                    },
+                    "children": [
+                      {
+                        "path": "0.1.1.5.0",
+                        "kind": "text",
+                        "name": "comp-a-quality-depends-on-delivery-team-maturity",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 0,
+                          "height": 22
+                        },
+                        "frame": {
+                          "left": 88,
+                          "top": 696,
+                          "width": 534.71,
+                          "height": 40
+                        },
+                        "snappedFrame": {
+                          "left": 88,
+                          "top": 696,
+                          "width": 534,
+                          "height": 40
+                        },
+                        "children": [],
+                        "text": "Quality depends on delivery team maturity",
+                        "transform": "none",
+                        "element": {
+                          "aid": "sh/6dcbulwv",
+                          "id": "21",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.1.1.5.1",
+                        "kind": "text",
+                        "name": "comp-b-quality-depends-on-delivery-team-maturity",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 0,
+                          "height": 22
+                        },
+                        "frame": {
+                          "left": 650.71,
+                          "top": 696,
+                          "width": 534.71,
+                          "height": 40
+                        },
+                        "snappedFrame": {
+                          "left": 650,
+                          "top": 696,
+                          "width": 534,
+                          "height": 40
+                        },
+                        "children": [],
+                        "text": "Quality depends on prompt discipline",
+                        "transform": "none",
+                        "element": {
+                          "aid": "sh/d4vmtwra",
+                          "id": "22",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.1.1.5.2",
+                        "kind": "row",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 22,
+                          "height": 40
+                        },
+                        "frame": {
+                          "left": 1213.42,
+                          "top": 696,
+                          "width": 618.58,
+                          "height": 40
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.5.2.0",
+                            "kind": "shape",
+                            "name": "comp-mark-quality-depends-on-delivery-team-maturity",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fixed",
+                                "value": 8
+                              },
+                              "height": {
+                                "mode": "fixed",
+                                "value": 40
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 8,
+                              "height": 40
+                            },
+                            "frame": {
+                              "left": 1213.42,
+                              "top": 696,
+                              "width": 8,
+                              "height": 40
+                            },
+                            "snappedFrame": {
+                              "left": 1212,
+                              "top": 696,
+                              "width": 8,
+                              "height": 40
+                            },
+                            "children": [],
+                            "geometry": "rect",
+                            "element": {
+                              "aid": "sh/oj2t83it",
+                              "id": "23",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.5.2.1",
+                            "kind": "text",
+                            "name": "comp-c-quality-depends-on-delivery-team-maturity",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 22
+                            },
+                            "frame": {
+                              "left": 1235.42,
+                              "top": 696,
+                              "width": 596.58,
+                              "height": 22
+                            },
+                            "snappedFrame": {
+                              "left": 1236,
+                              "top": 696,
+                              "width": 596,
+                              "height": 22
+                            },
+                            "children": [],
+                            "text": "Quality is rubric-scored, evidence-gated, and replayable",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/vmtwra5g",
+                              "id": "24",
+                              "kind": "shape"
+                            }
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 14,
+                        "effectiveGap": 14,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 1213.42,
+                          "top": 696,
+                          "width": 618.58,
+                          "height": 40
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.5.2.0",
+                            "frame": {
+                              "left": 1213.42,
+                              "top": 696,
+                              "width": 8,
+                              "height": 40
+                            }
+                          },
+                          {
+                            "path": "0.1.1.5.2.1",
+                            "frame": {
+                              "left": 1235.42,
+                              "top": 696,
+                              "width": 596.58,
+                              "height": 22
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "padding": {
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    },
+                    "columnGap": 28,
+                    "rowGap": 0,
+                    "alignItems": "stretch",
+                    "justifyItems": "stretch",
+                    "contentFrame": {
+                      "left": 88,
+                      "top": 696,
+                      "width": 1744,
+                      "height": 40
+                    },
+                    "columns": [
+                      {
+                        "mode": "fr",
+                        "value": 1.02
+                      },
+                      {
+                        "mode": "fr",
+                        "value": 1.02
+                      },
+                      {
+                        "mode": "fr",
+                        "value": 1.18
+                      }
+                    ],
+                    "autoRows": "auto",
+                    "resolvedRows": [
+                      "auto"
+                    ],
+                    "columnSizes": [
+                      534.71,
+                      534.71,
+                      618.58
+                    ],
+                    "rowSizes": [
+                      40
+                    ],
+                    "cells": [
+                      {
+                        "path": "0.1.1.5.0",
+                        "column": 0,
+                        "row": 0,
+                        "columnSpan": 1,
+                        "rowSpan": 1,
+                        "cellFrame": {
+                          "left": 88,
+                          "top": 696,
+                          "width": 534.71,
+                          "height": 40
+                        }
+                      },
+                      {
+                        "path": "0.1.1.5.1",
+                        "column": 1,
+                        "row": 0,
+                        "columnSpan": 1,
+                        "rowSpan": 1,
+                        "cellFrame": {
+                          "left": 650.71,
+                          "top": 696,
+                          "width": 534.71,
+                          "height": 40
+                        }
+                      },
+                      {
+                        "path": "0.1.1.5.2",
+                        "column": 2,
+                        "row": 0,
+                        "columnSpan": 1,
+                        "rowSpan": 1,
+                        "cellFrame": {
+                          "left": 1213.42,
+                          "top": 696,
+                          "width": 618.58,
+                          "height": 40
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "gap": 22,
+                "effectiveGap": 22,
+                "justifyOffset": 220,
+                "align": "start",
+                "justify": "center",
+                "contentFrame": {
+                  "left": 88,
+                  "top": 226,
+                  "width": 1744,
+                  "height": 730
+                },
+                "items": [
+                  {
+                    "path": "0.1.1.0",
+                    "frame": {
+                      "left": 88,
+                      "top": 446,
+                      "width": 1744,
+                      "height": 18
+                    }
+                  },
+                  {
+                    "path": "0.1.1.1",
+                    "frame": {
+                      "left": 88,
+                      "top": 486,
+                      "width": 1744,
+                      "height": 2
+                    }
+                  },
+                  {
+                    "path": "0.1.1.2",
+                    "frame": {
+                      "left": 88,
+                      "top": 510,
+                      "width": 1744,
+                      "height": 40
+                    }
+                  },
+                  {
+                    "path": "0.1.1.3",
+                    "frame": {
+                      "left": 88,
+                      "top": 572,
+                      "width": 1744,
+                      "height": 40
+                    }
+                  },
+                  {
+                    "path": "0.1.1.4",
+                    "frame": {
+                      "left": 88,
+                      "top": 634,
+                      "width": 1744,
+                      "height": 40
+                    }
+                  },
+                  {
+                    "path": "0.1.1.5",
+                    "frame": {
+                      "left": 88,
+                      "top": 696,
+                      "width": 1744,
+                      "height": 40
+                    }
+                  }
+                ]
+              },
+              {
+                "path": "0.1.2",
+                "kind": "row",
+                "name": "competition-footer-row",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "hug"
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 307.84,
+                  "height": 13
+                },
+                "frame": {
+                  "left": 88,
+                  "top": 990,
+                  "width": 1744,
+                  "height": 26
+                },
+                "children": [
+                  {
+                    "path": "0.1.2.0",
+                    "kind": "text",
+                    "name": "competition-footer",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "wrap",
+                        "max": 1200
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 267.84,
+                      "height": 13
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 990,
+                      "width": 267.84,
+                      "height": 28
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 990,
+                      "width": 268,
+                      "height": 28
+                    },
+                    "children": [],
+                    "text": "DFMS pitch deck | software assurance dark factory",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/61032lsz",
+                      "id": "25",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.2.1",
+                    "kind": "text",
+                    "name": "competition-page",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 40
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 40,
+                      "height": 13
+                    },
+                    "frame": {
+                      "left": 1792,
+                      "top": 998,
+                      "width": 40,
+                      "height": 12
+                    },
+                    "snappedFrame": {
+                      "left": 1792,
+                      "top": 998,
+                      "width": 40,
+                      "height": 12
+                    },
+                    "children": [],
+                    "text": "31",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/dsji5sne",
+                      "id": "26",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "gap": 0,
+                "effectiveGap": 1436.16,
+                "justifyOffset": 0,
+                "align": "center",
+                "justify": "between",
+                "contentFrame": {
+                  "left": 88,
+                  "top": 990,
+                  "width": 1744,
+                  "height": 26
+                },
+                "items": [
+                  {
+                    "path": "0.1.2.0",
+                    "frame": {
+                      "left": 88,
+                      "top": 990,
+                      "width": 267.84,
+                      "height": 28
+                    }
+                  },
+                  {
+                    "path": "0.1.2.1",
+                    "frame": {
+                      "left": 1792,
+                      "top": 998,
+                      "width": 40,
+                      "height": 12
+                    }
+                  }
+                ]
+              }
+            ],
+            "padding": {
+              "top": 64,
+              "right": 88,
+              "bottom": 64,
+              "left": 88
+            },
+            "gap": 34,
+            "effectiveGap": 34,
+            "justifyOffset": 0,
+            "align": "start",
+            "justify": "start",
+            "contentFrame": {
+              "left": 88,
+              "top": 64,
+              "width": 1744,
+              "height": 952
+            },
+            "items": [
+              {
+                "path": "0.1.0",
+                "frame": {
+                  "left": 88,
+                  "top": 64,
+                  "width": 1744,
+                  "height": 128
+                }
+              },
+              {
+                "path": "0.1.1",
+                "frame": {
+                  "left": 88,
+                  "top": 226,
+                  "width": 1744,
+                  "height": 730
+                }
+              },
+              {
+                "path": "0.1.2",
+                "frame": {
+                  "left": 88,
+                  "top": 990,
+                  "width": 1744,
+                  "height": 26
+                }
+              }
+            ]
+          }
+        ],
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignItems": "stretch",
+        "justifyItems": "stretch",
+        "contentFrame": {
+          "left": 0,
+          "top": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "items": [
+          {
+            "path": "0.0",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            }
+          },
+          {
+            "path": "0.1",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

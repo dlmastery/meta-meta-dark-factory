@@ -1,0 +1,35 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+    "strict_compliance": "Mandatory. Every claim must be project-specific, evidence-backed, trace-linked, reviewer-challenged, and free of unsupported invention.",
+    "missing_evidence_rule": "If evidence is missing, mark it as an assumption, risk, open question, or failure."
+  },
+  "id": "EVD-DEBATE-000",
+  "status": "draft",
+  "subject": "",
+  "control_graph_node": "",
+  "work_ledger_item": "",
+  "moderator": "",
+  "experts": [
+    {
+      "role": "",
+      "independent_proposal": "",
+      "assumptions": [],
+      "risks": [],
+      "evidence_needed": []
+    }
+  ],
+  "cross_critiques": [],
+  "alternatives": [],
+  "decision_vote": {
+    "verdict": "pending",
+    "votes": [],
+    "dissent": []
+  },
+  "selected_decision_record": "",
+  "verification_plan": "",
+  "refinery_gate": "",
+  "trace_evidence": [],
+  "residual_risks": [],
+  "reentry_triggers": []
+}

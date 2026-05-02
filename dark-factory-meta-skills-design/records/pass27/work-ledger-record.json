@@ -1,0 +1,39 @@
+{
+  "id": "WL-PASS27-001",
+  "title": "Ralph loop pass 27 production handoff bundle validation",
+  "current_state": "accepted",
+  "next_action": "Use bundle mode for every production handoff that references outage drill records.",
+  "revalidation_trigger": "Any future finding that handoff references, runbook replay evidence, release names, refinery gates, operators, or approvers can drift across production handoff and outage drill records.",
+  "owner": {
+    "accountable": "human-release-owner",
+    "responsible": "codex"
+  },
+  "acceptance_criteria": [
+    "Pass 27 findings documented",
+    "Production handoff validator requires --outage-drill bundle evidence",
+    "Validator rejects missing, extra, or mismatched outage drill records",
+    "Validator rejects runbook replay evidence that does not reference the drill ID",
+    "Hardening runner includes unbundled and mismatched bundle negative checks"
+  ],
+  "evidence_required": [
+    "pass27 critic/fix record",
+    "bundled production handoff pass fixture",
+    "unbundled production handoff rejection",
+    "bad production outage-drill bundle mismatch rejection",
+    "DFMS hardening runner output",
+    "pass27 merged-record validation",
+    "installed/workspace hash comparison"
+  ],
+  "evidence_provided": [
+    "27-ralph-loop-critic-review-and-fix-record.md",
+    "production-handoff-pass.json with --outage-drill outage-drill-pass.json",
+    "unbundled production handoff fixture: rejected",
+    "bad production outage-drill bundle mismatch fixture: rejected",
+    "DFMS hardening checks complete",
+    "ATTR-PASS27-001",
+    "CG-PASS27-001",
+    "RFG-PASS27-001",
+    "records/pass27 merged records",
+    "INSTALLED_WORKSPACE_HASHES_MATCH"
+  ]
+}

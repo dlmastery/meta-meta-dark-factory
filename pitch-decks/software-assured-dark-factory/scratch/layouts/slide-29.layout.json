@@ -1,0 +1,3803 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/lw3qar",
+    "id": "lw3qar",
+    "slide": 29,
+    "layoutId": "39df3ad4-e207-4cff-a7b3-0934322c7183",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "9c364795-fe59-472e-ba8a-a667cb58489e",
+    "masterLayoutName": "Master",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "39df3ad4-e207-4cff-a7b3-0934322c7183",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "9c364795-fe59-472e-ba8a-a667cb58489e",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "9c364795-fe59-472e-ba8a-a667cb58489e",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/szqtcj6t",
+      "id": "1",
+      "name": "background",
+      "bbox": [
+        0,
+        0,
+        1920,
+        1080
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#09100F",
+      "lineColor": "#09100F",
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3ex0nuxc",
+      "id": "2",
+      "name": "risk-controls-eyebrow",
+      "bbox": [
+        88,
+        64,
+        1744,
+        22
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.0.0"
+      },
+      "geometry": "rect",
+      "text": "RISK CONTROLS",
+      "textPreview": "RISK CONTROLS",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "fontSize": 21,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "RISK CONTROLS"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "RISK CONTROLS",
+          "runs": [
+            {
+              "index": 1,
+              "text": "RISK CONTROLS",
+              "fontSize": 21,
+              "color": "#9AF2C8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/at47y1kr",
+      "id": "3",
+      "name": "risk-controls-title",
+      "bbox": [
+        88,
+        98,
+        1256,
+        110
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.0.1"
+      },
+      "geometry": "rect",
+      "text": "The product wins trust by refusing to hide residual risk.",
+      "textPreview": "The product wins trust by refusing to hide residual risk.",
+      "resolvedFontSize": 55,
+      "resolvedTextStyle": {
+        "fontSize": 55,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "The product wins trust by refusing to hide residual risk."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "The product wins trust by refusing to hide residual risk.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "The product wins trust by refusing to hide residual risk.",
+              "fontSize": 55,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/l87ed8ba",
+      "id": "4",
+      "name": "risk-controls-subtitle",
+      "bbox": [
+        88,
+        222,
+        1148,
+        26
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.0.2"
+      },
+      "geometry": "rect",
+      "text": "Every serious delivery system has risk; DFMS makes risk explicit, owned, time-bounded, and tied to evidence.",
+      "textPreview": "Every serious delivery system has risk; DFMS makes risk explicit, owned, time-bounded, and tied to evidence.",
+      "resolvedFontSize": 26,
+      "resolvedTextStyle": {
+        "fontSize": 26,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Every serious delivery system has risk; DFMS makes risk explicit, owned, time-bounded, and tied to evidence."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Every serious delivery system has risk; DFMS makes risk explicit, owned, time-bounded, and tied to evidence.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Every serious delivery system has risk; DFMS makes risk explicit, owned, time-bounded, and tied to evidence.",
+              "fontSize": 26,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/sneloj2t",
+      "id": "5",
+      "name": "step-R1-spec-ambiguity",
+      "bbox": [
+        88,
+        281,
+        564,
+        327.5
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#111D1A",
+      "lineColor": "#29443B",
+      "lineWidth": 1
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/32lszqtc",
+      "id": "6",
+      "name": "step-num-R1",
+      "bbox": [
+        112,
+        302,
+        44,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.0.0"
+      },
+      "geometry": "rect",
+      "text": "R1",
+      "textPreview": "R1",
+      "resolvedFontSize": 23,
+      "resolvedTextStyle": {
+        "fontSize": 23,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "R1"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "R1",
+          "runs": [
+            {
+              "index": 1,
+              "text": "R1",
+              "fontSize": 23,
+              "color": "#F26464",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ahoza1gv",
+      "id": "7",
+      "name": "step-title-R1",
+      "bbox": [
+        174,
+        302,
+        454,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.0.1.0"
+      },
+      "geometry": "rect",
+      "text": "Spec ambiguity",
+      "textPreview": "Spec ambiguity",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Spec ambiguity"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Spec ambiguity",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Spec ambiguity",
+              "fontSize": 24,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/lwval87e",
+      "id": "8",
+      "name": "step-body-R1",
+      "bbox": [
+        174,
+        332,
+        454,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.0.1.1"
+      },
+      "geometry": "rect",
+      "text": "Contradiction scoring, re-interrogation, assumption approval.",
+      "textPreview": "Contradiction scoring, re-interrogation, assumption approval.",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Contradiction scoring, re-interrogation, assumption approval."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Contradiction scoring, re-interrogation, assumption approval.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Contradiction scoring, re-interrogation, assumption approval.",
+              "fontSize": 18,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wb2hwfyx",
+      "id": "9",
+      "name": "step-R2-overfitting",
+      "bbox": [
+        678,
+        281,
+        564,
+        327.5
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#111D1A",
+      "lineColor": "#29443B",
+      "lineWidth": 1
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2lszqtcj",
+      "id": "10",
+      "name": "step-num-R2",
+      "bbox": [
+        702,
+        302,
+        44,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.0.0"
+      },
+      "geometry": "rect",
+      "text": "R2",
+      "textPreview": "R2",
+      "resolvedFontSize": 23,
+      "resolvedTextStyle": {
+        "fontSize": 23,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "R2"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "R2",
+          "runs": [
+            {
+              "index": 1,
+              "text": "R2",
+              "fontSize": 23,
+              "color": "#F2B84B",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/v6psfil0",
+      "id": "11",
+      "name": "step-title-R2",
+      "bbox": [
+        764,
+        302,
+        454,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.0.1.0"
+      },
+      "geometry": "rect",
+      "text": "Overfitting",
+      "textPreview": "Overfitting",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Overfitting"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Overfitting",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Overfitting",
+              "fontSize": 24,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/knih4byh",
+      "id": "12",
+      "name": "step-body-R2",
+      "bbox": [
+        764,
+        332,
+        454,
+        36
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.0.1.1"
+      },
+      "geometry": "rect",
+      "text": "Holdout scenarios and transfer tests across greenfield/brownfield examples.",
+      "textPreview": "Holdout scenarios and transfer tests across greenfield/brownfield examples.",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Holdout scenarios and transfer tests across"
+          },
+          {
+            "index": 2,
+            "text": "greenfield/brownfield examples."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Holdout scenarios and transfer tests across greenfield/brownfield examples.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Holdout scenarios and transfer tests across greenfield/brownfield examples.",
+              "fontSize": 18,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/d8bat47y",
+      "id": "13",
+      "name": "step-R3-false-proof",
+      "bbox": [
+        1268,
+        281,
+        564,
+        327.5
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.2"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#111D1A",
+      "lineColor": "#29443B",
+      "lineWidth": 1
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/29gr2p8n",
+      "id": "14",
+      "name": "step-num-R3",
+      "bbox": [
+        1292,
+        302,
+        44,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.2.0.0"
+      },
+      "geometry": "rect",
+      "text": "R3",
+      "textPreview": "R3",
+      "resolvedFontSize": 23,
+      "resolvedTextStyle": {
+        "fontSize": 23,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "R3"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "R3",
+          "runs": [
+            {
+              "index": 1,
+              "text": "R3",
+              "fontSize": 23,
+              "color": "#2DD4BF",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vu9knih4",
+      "id": "15",
+      "name": "step-title-R3",
+      "bbox": [
+        1354,
+        302,
+        454,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.2.0.1.0"
+      },
+      "geometry": "rect",
+      "text": "False proof",
+      "textPreview": "False proof",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "False proof"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "False proof",
+          "runs": [
+            {
+              "index": 1,
+              "text": "False proof",
+              "fontSize": 24,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/kf6dcbul",
+      "id": "16",
+      "name": "step-body-R3",
+      "bbox": [
+        1354,
+        332,
+        454,
+        36
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.2.0.1.1"
+      },
+      "geometry": "rect",
+      "text": "Validators reject blank templates and missing instantiated evidence.",
+      "textPreview": "Validators reject blank templates and missing instantiated evidence.",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Validators reject blank templates and missing instantiated"
+          },
+          {
+            "index": 2,
+            "text": "evidence."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Validators reject blank templates and missing instantiated evidence.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Validators reject blank templates and missing instantiated evidence.",
+              "fontSize": 18,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/d0z61032",
+      "id": "17",
+      "name": "step-R4-budget-drift",
+      "bbox": [
+        88,
+        628.5,
+        564,
+        327.5
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.3"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#111D1A",
+      "lineColor": "#29443B",
+      "lineWidth": 1
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2x4nap4r",
+      "id": "18",
+      "name": "step-num-R4",
+      "bbox": [
+        112,
+        648,
+        44,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.3.0.0"
+      },
+      "geometry": "rect",
+      "text": "R4",
+      "textPreview": "R4",
+      "resolvedFontSize": 23,
+      "resolvedTextStyle": {
+        "fontSize": 23,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "R4"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "R4",
+          "runs": [
+            {
+              "index": 1,
+              "text": "R4",
+              "fontSize": 23,
+              "color": "#46D17E",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vixczed8",
+      "id": "19",
+      "name": "step-title-R4",
+      "bbox": [
+        174,
+        648,
+        454,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.3.0.1.0"
+      },
+      "geometry": "rect",
+      "text": "Budget drift",
+      "textPreview": "Budget drift",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Budget drift"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Budget drift",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Budget drift",
+              "fontSize": 24,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/neloj2t8",
+      "id": "20",
+      "name": "step-body-R4",
+      "bbox": [
+        174,
+        678,
+        454,
+        36
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.3.0.1.1"
+      },
+      "geometry": "rect",
+      "text": "Token SWAG reapproval rules and change-control impact fields.",
+      "textPreview": "Token SWAG reapproval rules and change-control impact fields.",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Token SWAG reapproval rules and change-control impact"
+          },
+          {
+            "index": 2,
+            "text": "fields."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Token SWAG reapproval rules and change-control impact fields.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Token SWAG reapproval rules and change-control impact fields.",
+              "fontSize": 18,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ytsvu9kn",
+      "id": "21",
+      "name": "step-R5-context-rot",
+      "bbox": [
+        678,
+        628.5,
+        564,
+        327.5
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.4"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#111D1A",
+      "lineColor": "#29443B",
+      "lineWidth": 1
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5kb6xkf6",
+      "id": "22",
+      "name": "step-num-R5",
+      "bbox": [
+        702,
+        648,
+        44,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.4.0.0"
+      },
+      "geometry": "rect",
+      "text": "R5",
+      "textPreview": "R5",
+      "resolvedFontSize": 23,
+      "resolvedTextStyle": {
+        "fontSize": 23,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "R5"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "R5",
+          "runs": [
+            {
+              "index": 1,
+              "text": "R5",
+              "fontSize": 23,
+              "color": "#F2B84B",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 23,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/czed8v6p",
+      "id": "23",
+      "name": "step-title-R5",
+      "bbox": [
+        764,
+        648,
+        454,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.4.0.1.0"
+      },
+      "geometry": "rect",
+      "text": "Context rot",
+      "textPreview": "Context rot",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Context rot"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Context rot",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Context rot",
+              "fontSize": 24,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 24,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nqxs72x4",
+      "id": "24",
+      "name": "step-body-R5",
+      "bbox": [
+        764,
+        678,
+        454,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.4.0.1.1"
+      },
+      "geometry": "rect",
+      "text": "Project book, predecessor recovery, and replay drills.",
+      "textPreview": "Project book, predecessor recovery, and replay drills.",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Project book, predecessor recovery, and replay drills."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Project book, predecessor recovery, and replay drills.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Project book, predecessor recovery, and replay drills.",
+              "fontSize": 18,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 25,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/u54zidon",
+      "id": "25",
+      "name": "step-R6-production-fear",
+      "bbox": [
+        1268,
+        628.5,
+        564,
+        327.5
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.5"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#111D1A",
+      "lineColor": "#29443B",
+      "lineWidth": 1
+    },
+    {
+      "order": 26,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5sneloj2",
+      "id": "26",
+      "name": "step-num-R6",
+      "bbox": [
+        1292,
+        648,
+        44,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.5.0.0"
+      },
+      "geometry": "rect",
+      "text": "R6",
+      "textPreview": "R6",
+      "resolvedFontSize": 23,
+      "resolvedTextStyle": {
+        "fontSize": 23,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "R6"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "R6",
+          "runs": [
+            {
+              "index": 1,
+              "text": "R6",
+              "fontSize": 23,
+              "color": "#F26464",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 27,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cbulwval",
+      "id": "27",
+      "name": "step-title-R6",
+      "bbox": [
+        1354,
+        648,
+        454,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.5.0.1.0"
+      },
+      "geometry": "rect",
+      "text": "Production fear",
+      "textPreview": "Production fear",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Production fear"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Production fear",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Production fear",
+              "fontSize": 24,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 28,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nuxc3ylc",
+      "id": "28",
+      "name": "step-body-R6",
+      "bbox": [
+        1354,
+        678,
+        454,
+        18
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.5.0.1.1"
+      },
+      "geometry": "rect",
+      "text": "Runbooks, outage drills, incident replay, and human signoff.",
+      "textPreview": "Runbooks, outage drills, incident replay, and human signoff.",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Runbooks, outage drills, incident replay, and human signoff."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Runbooks, outage drills, incident replay, and human signoff.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Runbooks, outage drills, incident replay, and human signoff.",
+              "fontSize": 18,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 29,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/y90je9cv",
+      "id": "29",
+      "name": "risk-controls-footer",
+      "bbox": [
+        88,
+        990,
+        268,
+        28
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.2.0"
+      },
+      "geometry": "rect",
+      "text": "DFMS pitch deck | software assurance dark factory",
+      "textPreview": "DFMS pitch deck | software assurance dark factory",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "DFMS pitch deck | software assurance dark factory"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "DFMS pitch deck | software assurance dark factory",
+          "runs": [
+            {
+              "index": 1,
+              "text": "DFMS pitch deck | software assurance dark factory",
+              "fontSize": 13,
+              "color": "#6E7C74"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 30,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/87ed8bat",
+      "id": "30",
+      "name": "risk-controls-page",
+      "bbox": [
+        1792,
+        998,
+        40,
+        12
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.2.1"
+      },
+      "geometry": "rect",
+      "text": "29",
+      "textPreview": "29",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "29"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "29",
+          "runs": [
+            {
+              "index": 1,
+              "text": "29",
+              "fontSize": 13,
+              "color": "#6E7C74",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "composeRuns": [
+    {
+      "index": 1,
+      "frame": {
+        "left": 0,
+        "top": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "baseUnit": 8,
+      "root": {
+        "path": "0",
+        "kind": "layers",
+        "name": "risk-controls-root",
+        "requestedSize": {
+          "width": {
+            "mode": "fill",
+            "value": 1
+          },
+          "height": {
+            "mode": "fill",
+            "value": 1
+          }
+        },
+        "intrinsicSize": {
+          "width": 0,
+          "height": 0
+        },
+        "frame": {
+          "left": 0,
+          "top": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "children": [
+          {
+            "path": "0.0",
+            "kind": "shape",
+            "name": "background",
+            "requestedSize": {
+              "width": {
+                "mode": "fill",
+                "value": 1
+              },
+              "height": {
+                "mode": "fill",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 0,
+              "height": 0
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "snappedFrame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/szqtcj6t",
+              "id": "1",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.1",
+            "kind": "column",
+            "name": "risk-controls-content",
+            "requestedSize": {
+              "width": {
+                "mode": "fill",
+                "value": 1
+              },
+              "height": {
+                "mode": "fill",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 176,
+              "height": 337
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "children": [
+              {
+                "path": "0.1.0",
+                "kind": "column",
+                "name": "risk-controls-title-stack",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "hug"
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 1255.44,
+                  "height": 128
+                },
+                "frame": {
+                  "left": 88,
+                  "top": 64,
+                  "width": 1744,
+                  "height": 183
+                },
+                "children": [
+                  {
+                    "path": "0.1.0.0",
+                    "kind": "text",
+                    "name": "risk-controls-eyebrow",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 21
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 64,
+                      "width": 1744,
+                      "height": 21
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 64,
+                      "width": 1744,
+                      "height": 22
+                    },
+                    "children": [],
+                    "text": "RISK CONTROLS",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/3ex0nuxc",
+                      "id": "2",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.0.1",
+                    "kind": "text",
+                    "name": "risk-controls-title",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "wrap",
+                        "max": 1500
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 1255.44,
+                      "height": 55
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 98,
+                      "width": 1255.44,
+                      "height": 110
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 98,
+                      "width": 1256,
+                      "height": 110
+                    },
+                    "children": [],
+                    "text": "The product wins trust by refusing to hide residual risk.",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/at47y1kr",
+                      "id": "3",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.0.2",
+                    "kind": "text",
+                    "name": "risk-controls-subtitle",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "wrap",
+                        "max": 1330
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 1147.67,
+                      "height": 26
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 221,
+                      "width": 1147.67,
+                      "height": 26
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 222,
+                      "width": 1148,
+                      "height": 26
+                    },
+                    "children": [],
+                    "text": "Every serious delivery system has risk; DFMS makes risk explicit, owned, time-bounded, and tied to evidence.",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/l87ed8ba",
+                      "id": "4",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "gap": 13,
+                "effectiveGap": 13,
+                "justifyOffset": 0,
+                "align": "start",
+                "justify": "start",
+                "contentFrame": {
+                  "left": 88,
+                  "top": 64,
+                  "width": 1744,
+                  "height": 183
+                },
+                "items": [
+                  {
+                    "path": "0.1.0.0",
+                    "frame": {
+                      "left": 88,
+                      "top": 64,
+                      "width": 1744,
+                      "height": 21
+                    }
+                  },
+                  {
+                    "path": "0.1.0.1",
+                    "frame": {
+                      "left": 88,
+                      "top": 98,
+                      "width": 1255.44,
+                      "height": 110
+                    }
+                  },
+                  {
+                    "path": "0.1.0.2",
+                    "frame": {
+                      "left": 88,
+                      "top": 221,
+                      "width": 1147.67,
+                      "height": 26
+                    }
+                  }
+                ]
+              },
+              {
+                "path": "0.1.1",
+                "kind": "grid",
+                "name": "risk-grid",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "fill",
+                    "value": 1
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 52,
+                  "height": 196
+                },
+                "frame": {
+                  "left": 88,
+                  "top": 281,
+                  "width": 1744,
+                  "height": 675
+                },
+                "children": [
+                  {
+                    "path": "0.1.1.0",
+                    "kind": "panel",
+                    "name": "step-R1-spec-ambiguity",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 48,
+                      "height": 88
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 281,
+                      "width": 564,
+                      "height": 327.5
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 281,
+                      "width": 564,
+                      "height": 327.5
+                    },
+                    "children": [
+                      {
+                        "path": "0.1.1.0.0",
+                        "kind": "row",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 62,
+                          "height": 48
+                        },
+                        "frame": {
+                          "left": 112,
+                          "top": 301,
+                          "width": 516,
+                          "height": 48
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.0.0.0",
+                            "kind": "text",
+                            "name": "step-num-R1",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fixed",
+                                "value": 44
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 44,
+                              "height": 23
+                            },
+                            "frame": {
+                              "left": 112,
+                              "top": 301,
+                              "width": 44,
+                              "height": 23
+                            },
+                            "snappedFrame": {
+                              "left": 112,
+                              "top": 302,
+                              "width": 44,
+                              "height": 24
+                            },
+                            "children": [],
+                            "text": "R1",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/32lszqtc",
+                              "id": "6",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.0.0.1",
+                            "kind": "column",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 48
+                            },
+                            "frame": {
+                              "left": 174,
+                              "top": 301,
+                              "width": 454,
+                              "height": 48
+                            },
+                            "children": [
+                              {
+                                "path": "0.1.1.0.0.1.0",
+                                "kind": "text",
+                                "name": "step-title-R1",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 24
+                                },
+                                "frame": {
+                                  "left": 174,
+                                  "top": 301,
+                                  "width": 454,
+                                  "height": 24
+                                },
+                                "snappedFrame": {
+                                  "left": 174,
+                                  "top": 302,
+                                  "width": 454,
+                                  "height": 24
+                                },
+                                "children": [],
+                                "text": "Spec ambiguity",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/ahoza1gv",
+                                  "id": "7",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.1.1.0.0.1.1",
+                                "kind": "text",
+                                "name": "step-body-R1",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 18
+                                },
+                                "frame": {
+                                  "left": 174,
+                                  "top": 331,
+                                  "width": 454,
+                                  "height": 18
+                                },
+                                "snappedFrame": {
+                                  "left": 174,
+                                  "top": 332,
+                                  "width": 454,
+                                  "height": 18
+                                },
+                                "children": [],
+                                "text": "Contradiction scoring, re-interrogation, assumption approval.",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/lwval87e",
+                                  "id": "8",
+                                  "kind": "shape"
+                                }
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 6,
+                            "effectiveGap": 6,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 174,
+                              "top": 301,
+                              "width": 454,
+                              "height": 48
+                            },
+                            "items": [
+                              {
+                                "path": "0.1.1.0.0.1.0",
+                                "frame": {
+                                  "left": 174,
+                                  "top": 301,
+                                  "width": 454,
+                                  "height": 24
+                                }
+                              },
+                              {
+                                "path": "0.1.1.0.0.1.1",
+                                "frame": {
+                                  "left": 174,
+                                  "top": 331,
+                                  "width": 454,
+                                  "height": 18
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 18,
+                        "effectiveGap": 18,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 112,
+                          "top": 301,
+                          "width": 516,
+                          "height": 48
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.0.0.0",
+                            "frame": {
+                              "left": 112,
+                              "top": 301,
+                              "width": 44,
+                              "height": 23
+                            }
+                          },
+                          {
+                            "path": "0.1.1.0.0.1",
+                            "frame": {
+                              "left": 174,
+                              "top": 301,
+                              "width": 454,
+                              "height": 48
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "padding": {
+                      "top": 20,
+                      "right": 24,
+                      "bottom": 20,
+                      "left": 24
+                    },
+                    "align": "start",
+                    "justify": "start",
+                    "contentFrame": {
+                      "left": 112,
+                      "top": 301,
+                      "width": 516,
+                      "height": 287.5
+                    },
+                    "element": {
+                      "aid": "sh/sneloj2t",
+                      "id": "5",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.1.1",
+                    "kind": "panel",
+                    "name": "step-R2-overfitting",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 48,
+                      "height": 88
+                    },
+                    "frame": {
+                      "left": 678,
+                      "top": 281,
+                      "width": 564,
+                      "height": 327.5
+                    },
+                    "snappedFrame": {
+                      "left": 678,
+                      "top": 281,
+                      "width": 564,
+                      "height": 327.5
+                    },
+                    "children": [
+                      {
+                        "path": "0.1.1.1.0",
+                        "kind": "row",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 62,
+                          "height": 48
+                        },
+                        "frame": {
+                          "left": 702,
+                          "top": 301,
+                          "width": 516,
+                          "height": 66
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.1.0.0",
+                            "kind": "text",
+                            "name": "step-num-R2",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fixed",
+                                "value": 44
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 44,
+                              "height": 23
+                            },
+                            "frame": {
+                              "left": 702,
+                              "top": 301,
+                              "width": 44,
+                              "height": 23
+                            },
+                            "snappedFrame": {
+                              "left": 702,
+                              "top": 302,
+                              "width": 44,
+                              "height": 24
+                            },
+                            "children": [],
+                            "text": "R2",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/2lszqtcj",
+                              "id": "10",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.1.0.1",
+                            "kind": "column",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 48
+                            },
+                            "frame": {
+                              "left": 764,
+                              "top": 301,
+                              "width": 454,
+                              "height": 66
+                            },
+                            "children": [
+                              {
+                                "path": "0.1.1.1.0.1.0",
+                                "kind": "text",
+                                "name": "step-title-R2",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 24
+                                },
+                                "frame": {
+                                  "left": 764,
+                                  "top": 301,
+                                  "width": 454,
+                                  "height": 24
+                                },
+                                "snappedFrame": {
+                                  "left": 764,
+                                  "top": 302,
+                                  "width": 454,
+                                  "height": 24
+                                },
+                                "children": [],
+                                "text": "Overfitting",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/v6psfil0",
+                                  "id": "11",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.1.1.1.0.1.1",
+                                "kind": "text",
+                                "name": "step-body-R2",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 18
+                                },
+                                "frame": {
+                                  "left": 764,
+                                  "top": 331,
+                                  "width": 454,
+                                  "height": 36
+                                },
+                                "snappedFrame": {
+                                  "left": 764,
+                                  "top": 332,
+                                  "width": 454,
+                                  "height": 36
+                                },
+                                "children": [],
+                                "text": "Holdout scenarios and transfer tests across greenfield/brownfield examples.",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/knih4byh",
+                                  "id": "12",
+                                  "kind": "shape"
+                                }
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 6,
+                            "effectiveGap": 6,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 764,
+                              "top": 301,
+                              "width": 454,
+                              "height": 66
+                            },
+                            "items": [
+                              {
+                                "path": "0.1.1.1.0.1.0",
+                                "frame": {
+                                  "left": 764,
+                                  "top": 301,
+                                  "width": 454,
+                                  "height": 24
+                                }
+                              },
+                              {
+                                "path": "0.1.1.1.0.1.1",
+                                "frame": {
+                                  "left": 764,
+                                  "top": 331,
+                                  "width": 454,
+                                  "height": 36
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 18,
+                        "effectiveGap": 18,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 702,
+                          "top": 301,
+                          "width": 516,
+                          "height": 66
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.1.0.0",
+                            "frame": {
+                              "left": 702,
+                              "top": 301,
+                              "width": 44,
+                              "height": 23
+                            }
+                          },
+                          {
+                            "path": "0.1.1.1.0.1",
+                            "frame": {
+                              "left": 764,
+                              "top": 301,
+                              "width": 454,
+                              "height": 66
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "padding": {
+                      "top": 20,
+                      "right": 24,
+                      "bottom": 20,
+                      "left": 24
+                    },
+                    "align": "start",
+                    "justify": "start",
+                    "contentFrame": {
+                      "left": 702,
+                      "top": 301,
+                      "width": 516,
+                      "height": 287.5
+                    },
+                    "element": {
+                      "aid": "sh/wb2hwfyx",
+                      "id": "9",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.1.2",
+                    "kind": "panel",
+                    "name": "step-R3-false-proof",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 48,
+                      "height": 88
+                    },
+                    "frame": {
+                      "left": 1268,
+                      "top": 281,
+                      "width": 564,
+                      "height": 327.5
+                    },
+                    "snappedFrame": {
+                      "left": 1268,
+                      "top": 281,
+                      "width": 564,
+                      "height": 327.5
+                    },
+                    "children": [
+                      {
+                        "path": "0.1.1.2.0",
+                        "kind": "row",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 62,
+                          "height": 48
+                        },
+                        "frame": {
+                          "left": 1292,
+                          "top": 301,
+                          "width": 516,
+                          "height": 66
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.2.0.0",
+                            "kind": "text",
+                            "name": "step-num-R3",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fixed",
+                                "value": 44
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 44,
+                              "height": 23
+                            },
+                            "frame": {
+                              "left": 1292,
+                              "top": 301,
+                              "width": 44,
+                              "height": 23
+                            },
+                            "snappedFrame": {
+                              "left": 1292,
+                              "top": 302,
+                              "width": 44,
+                              "height": 24
+                            },
+                            "children": [],
+                            "text": "R3",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/29gr2p8n",
+                              "id": "14",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.2.0.1",
+                            "kind": "column",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 48
+                            },
+                            "frame": {
+                              "left": 1354,
+                              "top": 301,
+                              "width": 454,
+                              "height": 66
+                            },
+                            "children": [
+                              {
+                                "path": "0.1.1.2.0.1.0",
+                                "kind": "text",
+                                "name": "step-title-R3",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 24
+                                },
+                                "frame": {
+                                  "left": 1354,
+                                  "top": 301,
+                                  "width": 454,
+                                  "height": 24
+                                },
+                                "snappedFrame": {
+                                  "left": 1354,
+                                  "top": 302,
+                                  "width": 454,
+                                  "height": 24
+                                },
+                                "children": [],
+                                "text": "False proof",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/vu9knih4",
+                                  "id": "15",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.1.1.2.0.1.1",
+                                "kind": "text",
+                                "name": "step-body-R3",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 18
+                                },
+                                "frame": {
+                                  "left": 1354,
+                                  "top": 331,
+                                  "width": 454,
+                                  "height": 36
+                                },
+                                "snappedFrame": {
+                                  "left": 1354,
+                                  "top": 332,
+                                  "width": 454,
+                                  "height": 36
+                                },
+                                "children": [],
+                                "text": "Validators reject blank templates and missing instantiated evidence.",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/kf6dcbul",
+                                  "id": "16",
+                                  "kind": "shape"
+                                }
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 6,
+                            "effectiveGap": 6,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 1354,
+                              "top": 301,
+                              "width": 454,
+                              "height": 66
+                            },
+                            "items": [
+                              {
+                                "path": "0.1.1.2.0.1.0",
+                                "frame": {
+                                  "left": 1354,
+                                  "top": 301,
+                                  "width": 454,
+                                  "height": 24
+                                }
+                              },
+                              {
+                                "path": "0.1.1.2.0.1.1",
+                                "frame": {
+                                  "left": 1354,
+                                  "top": 331,
+                                  "width": 454,
+                                  "height": 36
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 18,
+                        "effectiveGap": 18,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 1292,
+                          "top": 301,
+                          "width": 516,
+                          "height": 66
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.2.0.0",
+                            "frame": {
+                              "left": 1292,
+                              "top": 301,
+                              "width": 44,
+                              "height": 23
+                            }
+                          },
+                          {
+                            "path": "0.1.1.2.0.1",
+                            "frame": {
+                              "left": 1354,
+                              "top": 301,
+                              "width": 454,
+                              "height": 66
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "padding": {
+                      "top": 20,
+                      "right": 24,
+                      "bottom": 20,
+                      "left": 24
+                    },
+                    "align": "start",
+                    "justify": "start",
+                    "contentFrame": {
+                      "left": 1292,
+                      "top": 301,
+                      "width": 516,
+                      "height": 287.5
+                    },
+                    "element": {
+                      "aid": "sh/d8bat47y",
+                      "id": "13",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.1.3",
+                    "kind": "panel",
+                    "name": "step-R4-budget-drift",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 48,
+                      "height": 88
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 628.5,
+                      "width": 564,
+                      "height": 327.5
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 628.5,
+                      "width": 564,
+                      "height": 327.5
+                    },
+                    "children": [
+                      {
+                        "path": "0.1.1.3.0",
+                        "kind": "row",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 62,
+                          "height": 48
+                        },
+                        "frame": {
+                          "left": 112,
+                          "top": 648.5,
+                          "width": 516,
+                          "height": 66
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.3.0.0",
+                            "kind": "text",
+                            "name": "step-num-R4",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fixed",
+                                "value": 44
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 44,
+                              "height": 23
+                            },
+                            "frame": {
+                              "left": 112,
+                              "top": 648.5,
+                              "width": 44,
+                              "height": 23
+                            },
+                            "snappedFrame": {
+                              "left": 112,
+                              "top": 648,
+                              "width": 44,
+                              "height": 24
+                            },
+                            "children": [],
+                            "text": "R4",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/2x4nap4r",
+                              "id": "18",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.3.0.1",
+                            "kind": "column",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 48
+                            },
+                            "frame": {
+                              "left": 174,
+                              "top": 648.5,
+                              "width": 454,
+                              "height": 66
+                            },
+                            "children": [
+                              {
+                                "path": "0.1.1.3.0.1.0",
+                                "kind": "text",
+                                "name": "step-title-R4",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 24
+                                },
+                                "frame": {
+                                  "left": 174,
+                                  "top": 648.5,
+                                  "width": 454,
+                                  "height": 24
+                                },
+                                "snappedFrame": {
+                                  "left": 174,
+                                  "top": 648,
+                                  "width": 454,
+                                  "height": 24
+                                },
+                                "children": [],
+                                "text": "Budget drift",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/vixczed8",
+                                  "id": "19",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.1.1.3.0.1.1",
+                                "kind": "text",
+                                "name": "step-body-R4",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 18
+                                },
+                                "frame": {
+                                  "left": 174,
+                                  "top": 678.5,
+                                  "width": 454,
+                                  "height": 36
+                                },
+                                "snappedFrame": {
+                                  "left": 174,
+                                  "top": 678,
+                                  "width": 454,
+                                  "height": 36
+                                },
+                                "children": [],
+                                "text": "Token SWAG reapproval rules and change-control impact fields.",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/neloj2t8",
+                                  "id": "20",
+                                  "kind": "shape"
+                                }
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 6,
+                            "effectiveGap": 6,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 174,
+                              "top": 648.5,
+                              "width": 454,
+                              "height": 66
+                            },
+                            "items": [
+                              {
+                                "path": "0.1.1.3.0.1.0",
+                                "frame": {
+                                  "left": 174,
+                                  "top": 648.5,
+                                  "width": 454,
+                                  "height": 24
+                                }
+                              },
+                              {
+                                "path": "0.1.1.3.0.1.1",
+                                "frame": {
+                                  "left": 174,
+                                  "top": 678.5,
+                                  "width": 454,
+                                  "height": 36
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 18,
+                        "effectiveGap": 18,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 112,
+                          "top": 648.5,
+                          "width": 516,
+                          "height": 66
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.3.0.0",
+                            "frame": {
+                              "left": 112,
+                              "top": 648.5,
+                              "width": 44,
+                              "height": 23
+                            }
+                          },
+                          {
+                            "path": "0.1.1.3.0.1",
+                            "frame": {
+                              "left": 174,
+                              "top": 648.5,
+                              "width": 454,
+                              "height": 66
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "padding": {
+                      "top": 20,
+                      "right": 24,
+                      "bottom": 20,
+                      "left": 24
+                    },
+                    "align": "start",
+                    "justify": "start",
+                    "contentFrame": {
+                      "left": 112,
+                      "top": 648.5,
+                      "width": 516,
+                      "height": 287.5
+                    },
+                    "element": {
+                      "aid": "sh/d0z61032",
+                      "id": "17",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.1.4",
+                    "kind": "panel",
+                    "name": "step-R5-context-rot",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 48,
+                      "height": 88
+                    },
+                    "frame": {
+                      "left": 678,
+                      "top": 628.5,
+                      "width": 564,
+                      "height": 327.5
+                    },
+                    "snappedFrame": {
+                      "left": 678,
+                      "top": 628.5,
+                      "width": 564,
+                      "height": 327.5
+                    },
+                    "children": [
+                      {
+                        "path": "0.1.1.4.0",
+                        "kind": "row",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 62,
+                          "height": 48
+                        },
+                        "frame": {
+                          "left": 702,
+                          "top": 648.5,
+                          "width": 516,
+                          "height": 48
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.4.0.0",
+                            "kind": "text",
+                            "name": "step-num-R5",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fixed",
+                                "value": 44
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 44,
+                              "height": 23
+                            },
+                            "frame": {
+                              "left": 702,
+                              "top": 648.5,
+                              "width": 44,
+                              "height": 23
+                            },
+                            "snappedFrame": {
+                              "left": 702,
+                              "top": 648,
+                              "width": 44,
+                              "height": 24
+                            },
+                            "children": [],
+                            "text": "R5",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/5kb6xkf6",
+                              "id": "22",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.4.0.1",
+                            "kind": "column",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 48
+                            },
+                            "frame": {
+                              "left": 764,
+                              "top": 648.5,
+                              "width": 454,
+                              "height": 48
+                            },
+                            "children": [
+                              {
+                                "path": "0.1.1.4.0.1.0",
+                                "kind": "text",
+                                "name": "step-title-R5",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 24
+                                },
+                                "frame": {
+                                  "left": 764,
+                                  "top": 648.5,
+                                  "width": 454,
+                                  "height": 24
+                                },
+                                "snappedFrame": {
+                                  "left": 764,
+                                  "top": 648,
+                                  "width": 454,
+                                  "height": 24
+                                },
+                                "children": [],
+                                "text": "Context rot",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/czed8v6p",
+                                  "id": "23",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.1.1.4.0.1.1",
+                                "kind": "text",
+                                "name": "step-body-R5",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 18
+                                },
+                                "frame": {
+                                  "left": 764,
+                                  "top": 678.5,
+                                  "width": 454,
+                                  "height": 18
+                                },
+                                "snappedFrame": {
+                                  "left": 764,
+                                  "top": 678,
+                                  "width": 454,
+                                  "height": 18
+                                },
+                                "children": [],
+                                "text": "Project book, predecessor recovery, and replay drills.",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/nqxs72x4",
+                                  "id": "24",
+                                  "kind": "shape"
+                                }
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 6,
+                            "effectiveGap": 6,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 764,
+                              "top": 648.5,
+                              "width": 454,
+                              "height": 48
+                            },
+                            "items": [
+                              {
+                                "path": "0.1.1.4.0.1.0",
+                                "frame": {
+                                  "left": 764,
+                                  "top": 648.5,
+                                  "width": 454,
+                                  "height": 24
+                                }
+                              },
+                              {
+                                "path": "0.1.1.4.0.1.1",
+                                "frame": {
+                                  "left": 764,
+                                  "top": 678.5,
+                                  "width": 454,
+                                  "height": 18
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 18,
+                        "effectiveGap": 18,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 702,
+                          "top": 648.5,
+                          "width": 516,
+                          "height": 48
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.4.0.0",
+                            "frame": {
+                              "left": 702,
+                              "top": 648.5,
+                              "width": 44,
+                              "height": 23
+                            }
+                          },
+                          {
+                            "path": "0.1.1.4.0.1",
+                            "frame": {
+                              "left": 764,
+                              "top": 648.5,
+                              "width": 454,
+                              "height": 48
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "padding": {
+                      "top": 20,
+                      "right": 24,
+                      "bottom": 20,
+                      "left": 24
+                    },
+                    "align": "start",
+                    "justify": "start",
+                    "contentFrame": {
+                      "left": 702,
+                      "top": 648.5,
+                      "width": 516,
+                      "height": 287.5
+                    },
+                    "element": {
+                      "aid": "sh/ytsvu9kn",
+                      "id": "21",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.1.5",
+                    "kind": "panel",
+                    "name": "step-R6-production-fear",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 48,
+                      "height": 88
+                    },
+                    "frame": {
+                      "left": 1268,
+                      "top": 628.5,
+                      "width": 564,
+                      "height": 327.5
+                    },
+                    "snappedFrame": {
+                      "left": 1268,
+                      "top": 628.5,
+                      "width": 564,
+                      "height": 327.5
+                    },
+                    "children": [
+                      {
+                        "path": "0.1.1.5.0",
+                        "kind": "row",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 62,
+                          "height": 48
+                        },
+                        "frame": {
+                          "left": 1292,
+                          "top": 648.5,
+                          "width": 516,
+                          "height": 48
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.5.0.0",
+                            "kind": "text",
+                            "name": "step-num-R6",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fixed",
+                                "value": 44
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 44,
+                              "height": 23
+                            },
+                            "frame": {
+                              "left": 1292,
+                              "top": 648.5,
+                              "width": 44,
+                              "height": 23
+                            },
+                            "snappedFrame": {
+                              "left": 1292,
+                              "top": 648,
+                              "width": 44,
+                              "height": 24
+                            },
+                            "children": [],
+                            "text": "R6",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/5sneloj2",
+                              "id": "26",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.5.0.1",
+                            "kind": "column",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 48
+                            },
+                            "frame": {
+                              "left": 1354,
+                              "top": 648.5,
+                              "width": 454,
+                              "height": 48
+                            },
+                            "children": [
+                              {
+                                "path": "0.1.1.5.0.1.0",
+                                "kind": "text",
+                                "name": "step-title-R6",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 24
+                                },
+                                "frame": {
+                                  "left": 1354,
+                                  "top": 648.5,
+                                  "width": 454,
+                                  "height": 24
+                                },
+                                "snappedFrame": {
+                                  "left": 1354,
+                                  "top": 648,
+                                  "width": 454,
+                                  "height": 24
+                                },
+                                "children": [],
+                                "text": "Production fear",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/cbulwval",
+                                  "id": "27",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.1.1.5.0.1.1",
+                                "kind": "text",
+                                "name": "step-body-R6",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 18
+                                },
+                                "frame": {
+                                  "left": 1354,
+                                  "top": 678.5,
+                                  "width": 454,
+                                  "height": 18
+                                },
+                                "snappedFrame": {
+                                  "left": 1354,
+                                  "top": 678,
+                                  "width": 454,
+                                  "height": 18
+                                },
+                                "children": [],
+                                "text": "Runbooks, outage drills, incident replay, and human signoff.",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/nuxc3ylc",
+                                  "id": "28",
+                                  "kind": "shape"
+                                }
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 6,
+                            "effectiveGap": 6,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 1354,
+                              "top": 648.5,
+                              "width": 454,
+                              "height": 48
+                            },
+                            "items": [
+                              {
+                                "path": "0.1.1.5.0.1.0",
+                                "frame": {
+                                  "left": 1354,
+                                  "top": 648.5,
+                                  "width": 454,
+                                  "height": 24
+                                }
+                              },
+                              {
+                                "path": "0.1.1.5.0.1.1",
+                                "frame": {
+                                  "left": 1354,
+                                  "top": 678.5,
+                                  "width": 454,
+                                  "height": 18
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 18,
+                        "effectiveGap": 18,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 1292,
+                          "top": 648.5,
+                          "width": 516,
+                          "height": 48
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.5.0.0",
+                            "frame": {
+                              "left": 1292,
+                              "top": 648.5,
+                              "width": 44,
+                              "height": 23
+                            }
+                          },
+                          {
+                            "path": "0.1.1.5.0.1",
+                            "frame": {
+                              "left": 1354,
+                              "top": 648.5,
+                              "width": 454,
+                              "height": 48
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "padding": {
+                      "top": 20,
+                      "right": 24,
+                      "bottom": 20,
+                      "left": 24
+                    },
+                    "align": "start",
+                    "justify": "start",
+                    "contentFrame": {
+                      "left": 1292,
+                      "top": 648.5,
+                      "width": 516,
+                      "height": 287.5
+                    },
+                    "element": {
+                      "aid": "sh/u54zidon",
+                      "id": "25",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "columnGap": 26,
+                "rowGap": 20,
+                "alignItems": "stretch",
+                "justifyItems": "stretch",
+                "contentFrame": {
+                  "left": 88,
+                  "top": 281,
+                  "width": 1744,
+                  "height": 675
+                },
+                "columns": [
+                  {
+                    "mode": "fr",
+                    "value": 1
+                  },
+                  {
+                    "mode": "fr",
+                    "value": 1
+                  },
+                  {
+                    "mode": "fr",
+                    "value": 1
+                  }
+                ],
+                "autoRows": "auto",
+                "resolvedRows": [
+                  "auto",
+                  "auto"
+                ],
+                "columnSizes": [
+                  564,
+                  564,
+                  564
+                ],
+                "rowSizes": [
+                  327.5,
+                  327.5
+                ],
+                "cells": [
+                  {
+                    "path": "0.1.1.0",
+                    "column": 0,
+                    "row": 0,
+                    "columnSpan": 1,
+                    "rowSpan": 1,
+                    "cellFrame": {
+                      "left": 88,
+                      "top": 281,
+                      "width": 564,
+                      "height": 327.5
+                    }
+                  },
+                  {
+                    "path": "0.1.1.1",
+                    "column": 1,
+                    "row": 0,
+                    "columnSpan": 1,
+                    "rowSpan": 1,
+                    "cellFrame": {
+                      "left": 678,
+                      "top": 281,
+                      "width": 564,
+                      "height": 327.5
+                    }
+                  },
+                  {
+                    "path": "0.1.1.2",
+                    "column": 2,
+                    "row": 0,
+                    "columnSpan": 1,
+                    "rowSpan": 1,
+                    "cellFrame": {
+                      "left": 1268,
+                      "top": 281,
+                      "width": 564,
+                      "height": 327.5
+                    }
+                  },
+                  {
+                    "path": "0.1.1.3",
+                    "column": 0,
+                    "row": 1,
+                    "columnSpan": 1,
+                    "rowSpan": 1,
+                    "cellFrame": {
+                      "left": 88,
+                      "top": 628.5,
+                      "width": 564,
+                      "height": 327.5
+                    }
+                  },
+                  {
+                    "path": "0.1.1.4",
+                    "column": 1,
+                    "row": 1,
+                    "columnSpan": 1,
+                    "rowSpan": 1,
+                    "cellFrame": {
+                      "left": 678,
+                      "top": 628.5,
+                      "width": 564,
+                      "height": 327.5
+                    }
+                  },
+                  {
+                    "path": "0.1.1.5",
+                    "column": 2,
+                    "row": 1,
+                    "columnSpan": 1,
+                    "rowSpan": 1,
+                    "cellFrame": {
+                      "left": 1268,
+                      "top": 628.5,
+                      "width": 564,
+                      "height": 327.5
+                    }
+                  }
+                ]
+              },
+              {
+                "path": "0.1.2",
+                "kind": "row",
+                "name": "risk-controls-footer-row",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "hug"
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 307.84,
+                  "height": 13
+                },
+                "frame": {
+                  "left": 88,
+                  "top": 990,
+                  "width": 1744,
+                  "height": 26
+                },
+                "children": [
+                  {
+                    "path": "0.1.2.0",
+                    "kind": "text",
+                    "name": "risk-controls-footer",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "wrap",
+                        "max": 1200
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 267.84,
+                      "height": 13
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 990,
+                      "width": 267.84,
+                      "height": 28
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 990,
+                      "width": 268,
+                      "height": 28
+                    },
+                    "children": [],
+                    "text": "DFMS pitch deck | software assurance dark factory",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/y90je9cv",
+                      "id": "29",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.2.1",
+                    "kind": "text",
+                    "name": "risk-controls-page",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 40
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 40,
+                      "height": 13
+                    },
+                    "frame": {
+                      "left": 1792,
+                      "top": 998,
+                      "width": 40,
+                      "height": 12
+                    },
+                    "snappedFrame": {
+                      "left": 1792,
+                      "top": 998,
+                      "width": 40,
+                      "height": 12
+                    },
+                    "children": [],
+                    "text": "29",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/87ed8bat",
+                      "id": "30",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "gap": 0,
+                "effectiveGap": 1436.16,
+                "justifyOffset": 0,
+                "align": "center",
+                "justify": "between",
+                "contentFrame": {
+                  "left": 88,
+                  "top": 990,
+                  "width": 1744,
+                  "height": 26
+                },
+                "items": [
+                  {
+                    "path": "0.1.2.0",
+                    "frame": {
+                      "left": 88,
+                      "top": 990,
+                      "width": 267.84,
+                      "height": 28
+                    }
+                  },
+                  {
+                    "path": "0.1.2.1",
+                    "frame": {
+                      "left": 1792,
+                      "top": 998,
+                      "width": 40,
+                      "height": 12
+                    }
+                  }
+                ]
+              }
+            ],
+            "padding": {
+              "top": 64,
+              "right": 88,
+              "bottom": 64,
+              "left": 88
+            },
+            "gap": 34,
+            "effectiveGap": 34,
+            "justifyOffset": 0,
+            "align": "start",
+            "justify": "start",
+            "contentFrame": {
+              "left": 88,
+              "top": 64,
+              "width": 1744,
+              "height": 952
+            },
+            "items": [
+              {
+                "path": "0.1.0",
+                "frame": {
+                  "left": 88,
+                  "top": 64,
+                  "width": 1744,
+                  "height": 183
+                }
+              },
+              {
+                "path": "0.1.1",
+                "frame": {
+                  "left": 88,
+                  "top": 281,
+                  "width": 1744,
+                  "height": 675
+                }
+              },
+              {
+                "path": "0.1.2",
+                "frame": {
+                  "left": 88,
+                  "top": 990,
+                  "width": 1744,
+                  "height": 26
+                }
+              }
+            ]
+          }
+        ],
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignItems": "stretch",
+        "justifyItems": "stretch",
+        "contentFrame": {
+          "left": 0,
+          "top": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "items": [
+          {
+            "path": "0.0",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            }
+          },
+          {
+            "path": "0.1",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

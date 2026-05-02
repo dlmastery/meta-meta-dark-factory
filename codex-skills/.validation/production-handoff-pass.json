@@ -1,0 +1,66 @@
+{
+  "id": "REL-HND-PASS26-001",
+  "release": "DFMS production/SRE handoff validator hardening pass 26",
+  "owner": "human-release-owner",
+  "deploy_steps": [
+    "Install the updated df-production-sre-handoff skill bundle",
+    "Run the DFMS hardening validation suite"
+  ],
+  "post_deploy_checks": [
+    "Confirm production handoff pass fixture validates",
+    "Confirm outage drill pass fixture validates",
+    "Confirm template and low-readiness negative fixtures reject"
+  ],
+  "rollback_steps": [
+    "Reopen WL-PASS26-001",
+    "Restore the prior production handoff skill bundle from the project book snapshot",
+    "Rerun the hardening suite before re-acceptance"
+  ],
+  "dashboards": [
+    "DFMS hardening runner output",
+    "Installed/workspace hash comparison"
+  ],
+  "alerts": [
+    "Production handoff validator failure",
+    "Outage drill validator failure",
+    "Installed/workspace production handoff drift"
+  ],
+  "known_risks": [
+    "Patch-level validator proof does not replace a full greenfield and brownfield production simulation",
+    "Runtime dashboard UI remains future work"
+  ],
+  "incident_path": [
+    "Human release owner triages failed production handoff validation",
+    "Codex reopens the pass 26 control graph fix node",
+    "Quality refinery reruns the hardening suite after repair"
+  ],
+  "support_path": [
+    "Use this handoff record as the first support index",
+    "Use OPS-DRILL-PASS26-001 for runbook replay expectations",
+    "Escalate unresolved validator defects to the human release owner"
+  ],
+  "maintenance_notes": [
+    "Keep installed and workspace production handoff validators in sync",
+    "Add new production/SRE negative fixtures whenever a bypass is found"
+  ],
+  "training_needed": [
+    "Operator reviews the outage drill scenario and rollback path",
+    "Operator confirms how to distinguish a template from live evidence"
+  ],
+  "outage_drill_records": [
+    "OPS-DRILL-PASS26-001"
+  ],
+  "runbook_replay_evidence": [
+    "RUNBOOK-REPLAY-PASS26-001: OPS-DRILL-PASS26-001 operator followed validation failure, diagnosis, rollback, and revalidation steps"
+  ],
+  "operator_signoffs": [
+    {
+      "operator": "human-operator",
+      "approver": "human-release-owner",
+      "decision": "approved",
+      "at": "2026-04-25T12:00:00-07:00"
+    }
+  ],
+  "readiness_score": 98,
+  "refinery_gate": "RFG-PASS26-001"
+}

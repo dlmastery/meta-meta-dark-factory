@@ -1,0 +1,4 @@
+interface:
+  display_name: "DF Quality Refinery"
+  short_description: "Run expert rubrics and gates"
+  default_prompt: "Use $df-quality-refinery to triple-review an artifact or code change with expert rubrics."

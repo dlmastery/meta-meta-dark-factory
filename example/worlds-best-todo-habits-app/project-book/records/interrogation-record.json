@@ -1,0 +1,249 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+    "strict_compliance": "Mandatory. Every claim must be project-specific, evidence-backed, trace-linked, reviewer-challenged, and free of unsupported invention.",
+    "missing_evidence_rule": "If evidence is missing, mark it as an assumption, risk, open question, or failure."
+  },
+  "id": "ITR-NORTHSTAR-20260425-001",
+  "status": "accepted",
+  "threshold_percent": 96,
+  "source": {
+    "kind": "user_message",
+    "reference": "User requested a subdirectory and a world's best todo list and habits app following the dark factory."
+  },
+  "rounds": [
+    {
+      "round": "context",
+      "questions": [
+        "What is the purpose of this product run?"
+      ],
+      "answers": [
+        "ANS-NS-001"
+      ]
+    },
+    {
+      "round": "outcome",
+      "questions": [
+        "What must the app prove?"
+      ],
+      "answers": [
+        "ANS-NS-002",
+        "ANS-NS-003"
+      ]
+    },
+    {
+      "round": "constraint",
+      "questions": [
+        "What boundaries keep this iteration shippable?"
+      ],
+      "answers": [
+        "ANS-NS-004"
+      ]
+    },
+    {
+      "round": "scenario",
+      "questions": [
+        "Which user journeys must be testable?"
+      ],
+      "answers": [
+        "ANS-NS-002",
+        "ANS-NS-003"
+      ]
+    },
+    {
+      "round": "operations",
+      "questions": [
+        "How should the demonstrator be run and handed off?"
+      ],
+      "answers": [
+        "ANS-NS-004"
+      ]
+    },
+    {
+      "round": "contradiction",
+      "questions": [
+        "How is world-best ambition reconciled with bounded delivery?"
+      ],
+      "answers": [
+        "ANS-NS-004"
+      ]
+    },
+    {
+      "round": "approval",
+      "questions": [
+        "Is this iteration approved?"
+      ],
+      "answers": [
+        "ANS-NS-001"
+      ]
+    }
+  ],
+  "answers": [
+    {
+      "answer_id": "ANS-NS-001",
+      "source_reference": "Conversation request on 2026-04-25",
+      "summary": "Create a clear product demonstrator that proves the dark-factory meta-skill can deliver a real app plus evidence.",
+      "confidence": "high",
+      "owner": "Abhir",
+      "links": {
+        "requirements": [
+          "REQ-001",
+          "REQ-006",
+          "NFR-005"
+        ],
+        "scenarios": [
+          "SCN-001",
+          "SCN-004"
+        ],
+        "risks": [
+          "RISK-NORTHSTAR-001"
+        ],
+        "artifacts": [
+          "project-book/00-factory-run-summary.md"
+        ],
+        "work_ledger_items": [
+          "WLI-NORTHSTAR-IMPLEMENT"
+        ],
+        "spec_decomposition_nodes": [
+          "SDN-0"
+        ]
+      },
+      "revalidation_trigger": "User changes the product from local demonstrator to hosted production service."
+    },
+    {
+      "answer_id": "ANS-NS-002",
+      "source_reference": "Research synthesis plus user request",
+      "summary": "The app must provide fast task capture, today planning, workload guard, priority matrix, and focus flow.",
+      "confidence": "high",
+      "owner": "Codex",
+      "links": {
+        "requirements": [
+          "REQ-001",
+          "REQ-003",
+          "REQ-006",
+          "REQ-007",
+          "REQ-008",
+          "REQ-009"
+        ],
+        "scenarios": [
+          "SCN-001",
+          "SCN-003",
+          "SCN-004",
+          "SCN-005"
+        ],
+        "risks": [
+          "RISK-NORTHSTAR-001"
+        ],
+        "artifacts": [
+          "project-book/02-prd.md"
+        ],
+        "work_ledger_items": [
+          "WLI-NORTHSTAR-IMPLEMENT"
+        ],
+        "spec_decomposition_nodes": [
+          "SDN-1",
+          "SDN-1A",
+          "SDN-1B"
+        ]
+      },
+      "revalidation_trigger": "A different productivity archetype becomes the target."
+    },
+    {
+      "answer_id": "ANS-NS-003",
+      "source_reference": "Behavior-design research synthesis",
+      "summary": "Habits must use cue, tiny action, prompt, ability, feedback, and reversible completion rather than streak pressure alone.",
+      "confidence": "high",
+      "owner": "Codex",
+      "links": {
+        "requirements": [
+          "REQ-002",
+          "REQ-005",
+          "REQ-010"
+        ],
+        "scenarios": [
+          "SCN-002",
+          "SCN-006"
+        ],
+        "risks": [
+          "RISK-NORTHSTAR-001"
+        ],
+        "artifacts": [
+          "project-book/01-research-competitive-benchmark.md"
+        ],
+        "work_ledger_items": [
+          "WLI-NORTHSTAR-IMPLEMENT"
+        ],
+        "spec_decomposition_nodes": [
+          "SDN-2",
+          "SDN-2A",
+          "SDN-2B"
+        ]
+      },
+      "revalidation_trigger": "User requests a clinical, therapeutic, or coaching product rather than a personal productivity app."
+    },
+    {
+      "answer_id": "ANS-NS-004",
+      "source_reference": "Dark-factory governance constraints",
+      "summary": "The app slice must remain static/local-first unless a change request approves backend, sync, auth, notifications, or hosting.",
+      "confidence": "high",
+      "owner": "Codex",
+      "links": {
+        "requirements": [
+          "NFR-001",
+          "NFR-004",
+          "NFR-005",
+          "NFR-006"
+        ],
+        "scenarios": [
+          "TRANSFER-001"
+        ],
+        "risks": [
+          "RISK-NORTHSTAR-001"
+        ],
+        "artifacts": [
+          "project-book/03-architecture.md",
+          "project-book/07-handoff-and-runbook.md"
+        ],
+        "work_ledger_items": [
+          "WLI-NORTHSTAR-IMPLEMENT"
+        ],
+        "spec_decomposition_nodes": [
+          "SDN-0"
+        ]
+      },
+      "revalidation_trigger": "Scope expands to production hosting, account data, or integrations."
+    }
+  ],
+  "scores": {
+    "goal_clarity": 4,
+    "scope": 4,
+    "functional_completeness": 4,
+    "nonfunctional_completeness": 4,
+    "security_privacy_compliance": 4,
+    "operations_handoff": 4,
+    "scenario_readiness": 4,
+    "contradiction_resolution": 4,
+    "owner_approval": 4,
+    "traceability_readiness": 4
+  },
+  "contradictions": [
+    {
+      "id": "CON-001",
+      "issue": "World-best ambition could exceed a single iteration.",
+      "resolution": "Deliver a world-class bounded slice and record future work as change-controlled."
+    }
+  ],
+  "assumptions": [
+    "Single-user local-first browser app is acceptable for this demonstrator."
+  ],
+  "deferred_questions": [
+    "Which calendar provider should sync in a production version?",
+    "Which mobile platform should be first if native packaging is requested?"
+  ],
+  "approval": {
+    "required": true,
+    "approver": "Abhir",
+    "decision": "conditional_pass",
+    "at": "2026-04-25"
+  }
+}

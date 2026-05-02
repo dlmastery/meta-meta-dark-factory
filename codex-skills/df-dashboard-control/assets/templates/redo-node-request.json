@@ -1,0 +1,21 @@
+{
+  "zero_slop_policy": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+  "template_marker": "TEMPLATE_ONLY_NOT_EVIDENCE",
+  "request_id": "REDO-REQ-<project>-<yyyymmdd>-001",
+  "project": "<project name>",
+  "requested_by": "<human or agent>",
+  "selected_node_id": "<node id>",
+  "selected_node_path": "<path>",
+  "reason": "<why this node must be redone>",
+  "change_type": "<correction|scope_change|standard_update|review_finding|defect|new_requirement|evidence_stale>",
+  "force_boundary": false,
+  "human_approval_required": true,
+  "token_swag": {
+    "low": "<rough token estimate>",
+    "mid": "<rough token estimate>",
+    "high": "<rough token estimate>",
+    "reapproval_trigger": "<condition>"
+  },
+  "required_reviewers": [],
+  "created_at": "<ISO-8601 timestamp>"
+}

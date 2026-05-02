@@ -1,0 +1,93 @@
+{
+  "record_id": "ATTR-PASS21B-001",
+  "created_on": "2026-04-24",
+  "source_signals": [
+    "User requested another Ralph loop pass 21 critic review",
+    "Pass 21 hardened waivers, thresholds, and exact answer-node reciprocity",
+    "Original transcript requires each node to carry what, why, how, where, when, who, how good, expert roles, rubrics, debate, feedback, and evidence"
+  ],
+  "attractor_state": "stable",
+  "goal": "Close remaining meta-meta control-plane bypasses where merged records could pass without required attractor outputs, per-node governance contracts, or cross-record linkage.",
+  "layer_map": {
+    "product_specific": [
+      "No product-specific rule is introduced; this is a reusable DFMS control-plane hardening pass."
+    ],
+    "factory_reusable": [
+      "Every future governed run benefits from stricter attractor records, node contracts, expert panels, rubrics, feedback loops, and merged-object linkage."
+    ],
+    "meta_meta_governance": [
+      "The meta-attractor validator now guards the control plane itself."
+    ]
+  },
+  "control_plane_links": {
+    "control_graph": "CG-PASS21B-001",
+    "work_ledger": "WL-PASS21B-001",
+    "refinery_gate": "RFG-PASS21B-001"
+  },
+  "selected_mode": "skill-system-revision",
+  "selected_skills": [
+    {
+      "skill": "df-meta-attractor",
+      "reason": "harden meta-meta run records and merged control-plane validation",
+      "load_now": true
+    },
+    {
+      "skill": "dark-factory-orchestrator",
+      "reason": "confirm governed node-contract expectations match orchestration rules",
+      "load_now": true
+    },
+    {
+      "skill": "df-swarm-coordination",
+      "reason": "ensure node expert panels and debate expectations are first-class",
+      "load_now": true
+    },
+    {
+      "skill": "df-quality-refinery",
+      "reason": "record critic findings, fixes, and proof",
+      "load_now": true
+    }
+  ],
+  "gates": [
+    "attractor records must include layer map, node contract, expert debate, human decisions, assumptions, risks, anti-overfit checks, and verdict",
+    "control graph nodes must include full node contracts, at least 3 expert roles, rubrics, feedback loop, gates, owner, and evidence",
+    "merged control-plane record IDs must be referenced by another merged record",
+    "full DFMS hardening runner passes after fixes",
+    "pass 21B merged records validate"
+  ],
+  "node_contract": {
+    "what": "Run the second pass 21 critic loop and harden the meta-meta control plane.",
+    "why": "The transcript asks for human-level SDLC node governance, not merely present files.",
+    "how": "Patch validators and templates, update pass records, add negative regression checks, and validate results.",
+    "where": "df-meta-attractor installed skill, workspace bundle, and design records.",
+    "when": "Before claiming pass 21B patch-level acceptance.",
+    "who": "Codex as responsible fixer; human owner as loop driver.",
+    "how_good": "Positive records pass and missing required outputs, missing node contracts, and orphan merged IDs are rejected."
+  },
+  "expert_debate": {
+    "system_theorist": "A control plane must prove the records belong to one governed run, not just exist side by side.",
+    "requirements_governance_architect": "Required meta-meta outputs and per-node node contracts must be enforced because the transcript made them central.",
+    "verification_safety_critic": "Negative fixtures must remove required fields and orphan record IDs to prove the validator catches bypasses.",
+    "synthesis": "The pass hardens meta-attractor validation and records residual semantic limits."
+  },
+  "human_decisions": [
+    "Human owner requested another pass 21 critic loop and asked to fix any new findings."
+  ],
+  "assumptions": [
+    "Pass 21B remains a patch-level skill-system hardening pass, not a full application simulation."
+  ],
+  "risks": [
+    "Structured validators still cannot prove the truth of prose claims or the quality of real domain choices."
+  ],
+  "evidence_commitments": [
+    "merged records missing attractor required outputs are rejected",
+    "merged records missing node contract are rejected",
+    "merged records with orphan control-plane ID are rejected",
+    "installed and workspace meta-attractor validators match"
+  ],
+  "anti_overfit_checks": [
+    "Rules are generic to governed DFMS records.",
+    "No todo or benchmark-app-specific assumptions are introduced."
+  ],
+  "verdict": "pass",
+  "next_safe_action": "Use the stricter merged-record validator for every future governed run before handing work to the orchestrator."
+}

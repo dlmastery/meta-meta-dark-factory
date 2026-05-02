@@ -1,0 +1,135 @@
+{
+  "id": "CG-PASS28-001",
+  "name": "Pass 28 production handoff control-plane bundle validation",
+  "goal": "Ensure production handoff bundles prove their control graph, work ledger, and refinery gate references against actual records.",
+  "risks": [
+    "Outage drill control_graph_node could name a node that does not exist",
+    "Outage drill work_ledger_item could point to an unrelated ledger",
+    "Production handoff refinery_gate could point to a gate file that is missing or not passing"
+  ],
+  "links": {
+    "attractor": "ATTR-PASS28-001",
+    "work_ledger": "WL-PASS28-001",
+    "refinery_gate": "RFG-PASS28-001"
+  },
+  "nodes": [
+    {
+      "id": "NODE-PASS28-CRITIC",
+      "label": "Pass 28 control-plane bundle critic review",
+      "owner": "codex",
+      "node_contract": {
+        "what": "Review whether production handoff bundles prove control-plane references against actual files.",
+        "why": "The original transcript requires governed handoff evidence, not ID-shaped strings.",
+        "how": "Inspect pass 27 validator, fixtures, pass 26 records, and runner coverage for control-plane file checks.",
+        "where": "df-production-sre-handoff validator and DFMS hardening runner.",
+        "when": "Before pass 28 fixes are accepted.",
+        "who": "Codex using governance, SRE, and verification expert lenses.",
+        "how_good": "Every finding becomes executable validation or an explicit residual risk."
+      },
+      "expert_panel": [
+        "requirements-governance-architect",
+        "sre-release-lead",
+        "verification-safety-critic"
+      ],
+      "rubrics": [
+        "control-plane proof",
+        "operational traceability",
+        "negative fixture coverage"
+      ],
+      "feedback_loop": "Any unproven governance edge becomes validator logic and a hardening-runner fixture.",
+      "gates": [
+        "control-plane bypass documented",
+        "validator patch scoped",
+        "runner regression added"
+      ],
+      "evidence_outputs": [
+        "28-ralph-loop-critic-review-and-fix-record.md"
+      ]
+    },
+    {
+      "id": "NODE-PASS28-FIX",
+      "label": "Control-plane bundle validator implementation",
+      "owner": "codex",
+      "node_contract": {
+        "what": "Require production handoffs to validate against actual control graph, work ledger, and refinery gate files.",
+        "why": "Operational records must be linked to the same governance objects that accepted them.",
+        "how": "Add --control-graph, --work-ledger, and --refinery-gate arguments, compare IDs and node presence, and add regression checks.",
+        "where": "Installed and workspace df-production-sre-handoff validators plus runner.",
+        "when": "After critic review and before verification closure.",
+        "who": "Codex as implementer.",
+        "how_good": "Complete control-plane bundle passes; missing or mismatched control-plane evidence fails."
+      },
+      "expert_panel": [
+        "release-engineer",
+        "traceability-reviewer",
+        "test-automation-reviewer"
+      ],
+      "rubrics": [
+        "CLI bundle enforcement",
+        "governance record consistency",
+        "regression protection"
+      ],
+      "feedback_loop": "Rerun the full hardening suite after every control-plane bundle change.",
+      "gates": [
+        "installed validator compiles",
+        "workspace validator compiles",
+        "missing and mismatched control-plane fixtures reject"
+      ],
+      "evidence_outputs": [
+        "validate_production_handoff.py",
+        "run_pre17_hardening_checks.ps1"
+      ]
+    },
+    {
+      "id": "NODE-PASS28-VERIFY",
+      "label": "Pass 28 verification sweep",
+      "owner": "codex",
+      "node_contract": {
+        "what": "Verify final pass 28 state.",
+        "why": "Control-plane bundle hardening only counts if the full suite and merged records pass.",
+        "how": "Run hardening suite, merged-record validation, hash sync, JSON, ASCII, and artifact ID checks.",
+        "where": "Workspace validation suite and pass 28 records.",
+        "when": "After all fixes and records are written.",
+        "who": "Codex as verification runner.",
+        "how_good": "All checks pass and residual risks remain explicit."
+      },
+      "expert_panel": [
+        "verification-lead",
+        "governance-auditor",
+        "production-readiness-reviewer"
+      ],
+      "rubrics": [
+        "positive-path preservation",
+        "negative-path rejection",
+        "control-plane evidence completeness"
+      ],
+      "feedback_loop": "Any failed check reopens the fix node.",
+      "gates": [
+        "hardening runner passes",
+        "pass 28 merged records validate",
+        "installed/workspace production validator hashes match"
+      ],
+      "evidence_outputs": [
+        "DFMS hardening checks complete",
+        "records/pass28 merged records"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "ATTR-PASS28-001",
+      "to": "NODE-PASS28-CRITIC",
+      "type": "governs"
+    },
+    {
+      "from": "NODE-PASS28-CRITIC",
+      "to": "NODE-PASS28-FIX",
+      "type": "requires"
+    },
+    {
+      "from": "NODE-PASS28-FIX",
+      "to": "NODE-PASS28-VERIFY",
+      "type": "must_validate"
+    }
+  ]
+}

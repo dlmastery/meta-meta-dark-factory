@@ -1,0 +1,4 @@
+interface:
+  display_name: "DF Context Memory"
+  short_description: "Prevent context rot in long work"
+  default_prompt: "Use $df-context-memory to create compact context packs and handoff records for a large project."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "DF Swarm Coordination"
+  short_description: "Coordinate experts and debates"
+  default_prompt: "Use $df-swarm-coordination to assign expert roles, run debate rounds, and synthesize a decision."

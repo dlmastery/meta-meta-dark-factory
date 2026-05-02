@@ -1,0 +1,29 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+  },
+  "template_only": false,
+  "instantiation_id": "DFI-NORTHSTAR-20260425-001",
+  "run_id": "DFRUN-NORTHSTAR-20260425-001",
+  "generated_meta_skill_contract": "project-book/records/generated-meta-skill-contract.json",
+  "instantiated_records": {
+    "tasks_md": "project-book/records/TASKS.md",
+    "tpm_flow_ledger": "project-book/records/tpm-flow-ledger.json",
+    "pert_plan": "project-book/records/factory-pert-plan.json",
+    "knowledge_graph": "project-book/records/knowledge-graph.json",
+    "sdlc_stage_coverage_matrix": "project-book/records/sdlc-stage-coverage-matrix.json",
+    "execution_kernel_report": "project-book/evidence/execution-kernel-report.json",
+    "artifact_bom_tailoring": "project-book/00-factory-run-summary.md",
+    "quality_refinery_gate": "project-book/evidence/quality-refinery-gate.yaml",
+    "traceability_matrix": "project-book/05-traceability-matrix.md",
+    "standards_conformance_audit": "project-book/records/standards-conformance-audit-record.json",
+    "meta_meta_charter_compliance_matrix": "project-book/records/meta-meta-charter-compliance-matrix.json",
+    "artifact_bom_audit": "project-book/records/artifact-bom-audit-record.json",
+    "audit_quality_certificate": "project-book/evidence/audit-quality-certificate.json",
+    "certification_readiness_record": "project-book/12-certification-readiness-hardening-record.md",
+    "certification_readiness_certificate": "project-book/evidence/certification-readiness-certificate.json",
+    "ux_qa_certification_record": "project-book/13-ralph-ux-reliability-qa-certification-record.md",
+    "ux_qa_certificate": "project-book/evidence/qa-certification-certificate.json"
+  },
+  "legal_next_action": "Run is closed after accepted UX reliability and internal QA certification slice; open a new bead or change request for future expansion or external certification."
+}

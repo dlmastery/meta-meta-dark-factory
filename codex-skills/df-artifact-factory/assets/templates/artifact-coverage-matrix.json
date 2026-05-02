@@ -1,0 +1,40 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+  },
+  "template_only": true,
+  "artifact_generation_mode": "full_saturation",
+  "catalog_source": "references/artifact-catalog.md",
+  "human_approval": {
+    "owner": "<required for tailored_with_waivers or not_applicable>",
+    "decision": "<full_saturation | tailored_with_waivers>",
+    "approved_at": "<ISO-8601 timestamp or approval record>",
+    "scope": "<approved scope boundary>",
+    "revalidation_trigger": "<when this approval expires or must be revisited>"
+  },
+  "closure_rule": "In full_saturation, every catalog ID must be standalone with evidence, or not_applicable with explicit human-approved justification evidence. Missing, partial, combined, silently deferred, or unapproved waived entries block closure.",
+  "entries": [
+    {
+      "id": "GOV-001",
+      "artifact": "Project Charter",
+      "status": "standalone",
+      "evidence": [
+        "project-book/governance/GOV-001-project-charter.md",
+        "project-book/evidence/GOV-001-quality-gate.json"
+      ],
+      "waiver": null,
+      "gap": "No gap when the standalone artifact and gate evidence exist.",
+      "next_action": "Maintain trace links, review status, and freshness."
+    }
+  ],
+  "counts": {
+    "catalog_total": 1,
+    "standalone": 1,
+    "combined": 0,
+    "partial": 0,
+    "not_applicable": 0,
+    "deferred": 0,
+    "missing": 0,
+    "waived": 0
+  }
+}

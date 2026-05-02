@@ -1,0 +1,41 @@
+{
+  "id": "WL-PASS31-001",
+  "title": "Pass 31 outsourcing engagement and token budget governance",
+  "current_state": "accepted",
+  "next_action": "Require engagement governance validation before future material governed DFMS work.",
+  "revalidation_trigger": "Any future finding that token spend, iteration work, scope change, acceptance criteria, or change requests can proceed without client approval.",
+  "owner": {
+    "accountable": "client-product-owner",
+    "responsible": "codex"
+  },
+  "acceptance_criteria": [
+    "Client/dark-factory engagement model documented",
+    "Token budget SWAG validator added",
+    "Iteration and change-control approvals enforced",
+    "Meta, orchestrator, governance, handoff, and feedback skills updated",
+    "Hardening runner includes positive and negative engagement governance checks"
+  ],
+  "evidence_required": [
+    "pass31 fix record",
+    "engagement governance pass fixture",
+    "template rejection",
+    "missing token approval rejection",
+    "incomplete change-control rejection",
+    "DFMS hardening runner output",
+    "pass31 merged-record validation",
+    "installed/workspace hash comparison"
+  ],
+  "evidence_provided": [
+    "31-outsourcing-engagement-governance-fix-record.md",
+    "engagement-governance-pass.json",
+    "engagement governance template fixture: rejected",
+    "bad engagement missing token budget approval fixture: rejected",
+    "bad engagement incomplete change-control fixture: rejected",
+    "DFMS hardening checks complete",
+    "ATTR-PASS31-001",
+    "CG-PASS31-001",
+    "RFG-PASS31-001",
+    "records/pass31 merged records",
+    "INSTALLED_WORKSPACE_HASHES_MATCH"
+  ]
+}

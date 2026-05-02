@@ -1,0 +1,137 @@
+{
+  "id": "CG-PASS31-001",
+  "name": "Pass 31 outsourcing engagement governance",
+  "goal": "Make client checkpoints, token budgets, iterations, and change approvals first-class DFMS controls.",
+  "risks": [
+    "Agent swarm could spend material tokens without client approval",
+    "Scope could drift without change-control impact analysis",
+    "Iterations could proceed without client checkpoints or acceptance gates"
+  ],
+  "links": {
+    "attractor": "ATTR-PASS31-001",
+    "work_ledger": "WL-PASS31-001",
+    "refinery_gate": "RFG-PASS31-001"
+  },
+  "nodes": [
+    {
+      "id": "NODE-PASS31-CRITIC",
+      "label": "Engagement governance critic review",
+      "owner": "codex",
+      "node_contract": {
+        "what": "Review whether DFMS captures the outsourcing-style client/vendor control loop.",
+        "why": "The human owner wants a dark factory that replaces outsourcing while improving confidence, checkpoints, and budget transparency.",
+        "how": "Inspect meta, orchestration, governance, handoff, feedback, design, and validation surfaces.",
+        "where": "Installed skills, workspace skills, design docs, and validation runner.",
+        "when": "Before engagement-governance fixes are accepted.",
+        "who": "Codex using system, governance, and verification expert lenses.",
+        "how_good": "Every gap becomes executable validation or explicit residual risk."
+      },
+      "expert_panel": [
+        "outsourcing-engagement-architect",
+        "requirements-governance-architect",
+        "verification-safety-critic"
+      ],
+      "rubrics": [
+        "client checkpoint completeness",
+        "token budget approval integrity",
+        "change-control enforcement"
+      ],
+      "feedback_loop": "Any unapproved scope, budget, or iteration path becomes validator logic and a runner fixture.",
+      "gates": [
+        "engagement gap documented",
+        "validator patch scoped",
+        "runner regression added"
+      ],
+      "evidence_outputs": [
+        "31-outsourcing-engagement-governance-fix-record.md"
+      ]
+    },
+    {
+      "id": "NODE-PASS31-FIX",
+      "label": "Engagement governance implementation",
+      "owner": "codex",
+      "node_contract": {
+        "what": "Add engagement governance records and validation.",
+        "why": "Material work needs approved client checkpoints, rough token budget, iteration plan, and change-control policy.",
+        "how": "Add template, validator, fixture, skill instruction updates, design updates, manifest entries, and hardening checks.",
+        "where": "df-governance-mayor and related meta/orchestration/handoff/feedback skills.",
+        "when": "After critic review and before verification closure.",
+        "who": "Codex as implementer.",
+        "how_good": "Complete engagement fixture passes; template, unapproved budget, and incomplete change-control fail."
+      },
+      "expert_panel": [
+        "delivery-manager",
+        "token-budget-governor",
+        "change-control-reviewer"
+      ],
+      "rubrics": [
+        "budget SWAG quality",
+        "iteration approval coverage",
+        "change request impact coverage"
+      ],
+      "feedback_loop": "Rerun the full hardening suite after every governance validator change.",
+      "gates": [
+        "installed validator compiles",
+        "workspace validator compiles",
+        "engagement fixtures pass and reject as expected"
+      ],
+      "evidence_outputs": [
+        "validate_engagement_governance.py",
+        "engagement-governance-record.json",
+        "engagement-governance-pass.json",
+        "run_pre17_hardening_checks.ps1"
+      ]
+    },
+    {
+      "id": "NODE-PASS31-VERIFY",
+      "label": "Pass 31 verification sweep",
+      "owner": "codex",
+      "node_contract": {
+        "what": "Verify final pass 31 state.",
+        "why": "Engagement-governance hardening only counts if the full suite and merged records pass.",
+        "how": "Run hardening suite, merged-record validation, hash sync, JSON, ASCII, and artifact ID checks.",
+        "where": "Workspace validation suite and pass 31 records.",
+        "when": "After all fixes and records are written.",
+        "who": "Codex as verification runner.",
+        "how_good": "All checks pass and residual risks remain explicit."
+      },
+      "expert_panel": [
+        "verification-lead",
+        "governance-auditor",
+        "client-delivery-reviewer"
+      ],
+      "rubrics": [
+        "positive-path preservation",
+        "negative-path rejection",
+        "engagement evidence completeness"
+      ],
+      "feedback_loop": "Any failed check reopens the fix node.",
+      "gates": [
+        "hardening runner passes",
+        "pass 31 merged records validate",
+        "installed/workspace governance hashes match"
+      ],
+      "evidence_outputs": [
+        "DFMS hardening checks complete",
+        "records/pass31 merged records"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "ATTR-PASS31-001",
+      "to": "NODE-PASS31-CRITIC",
+      "type": "governs"
+    },
+    {
+      "from": "NODE-PASS31-CRITIC",
+      "to": "NODE-PASS31-FIX",
+      "type": "requires"
+    },
+    {
+      "from": "NODE-PASS31-FIX",
+      "to": "NODE-PASS31-VERIFY",
+      "type": "must_validate"
+    }
+  ]
+}

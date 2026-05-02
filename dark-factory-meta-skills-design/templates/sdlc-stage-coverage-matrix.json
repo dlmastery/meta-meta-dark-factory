@@ -1,0 +1,120 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+    "strict_compliance": "Mandatory. Every claim must be project-specific, evidence-backed, trace-linked, reviewer-challenged, and free of unsupported invention.",
+    "missing_evidence_rule": "If evidence is missing, mark it as an assumption, risk, open question, or failure."
+  },
+  "template_only": true,
+  "matrix_id": "SDLC-COVERAGE-000",
+  "run_id": "",
+  "project_type_flags": {
+    "artifact_only": false,
+    "planning_phase_only": false,
+    "skill_system_revision": false,
+    "code_producing": false,
+    "ui_surface": false,
+    "api_surface": false,
+    "data_surface": false,
+    "production_surface": false,
+    "brownfield": false,
+    "scenario_driven": false
+  },
+  "required_stage_ids": [
+    "meta_attractor",
+    "engagement_governance",
+    "intake_interrogation",
+    "recursive_spec_decomposition",
+    "feasibility_risk",
+    "inception_charter",
+    "architecture_design",
+    "planning_pert",
+    "construction_implementation",
+    "verification_validation",
+    "security_abuse_testing",
+    "ui_wysiwyg_browser_testing",
+    "performance_reliability",
+    "release_transition",
+    "operations_sre",
+    "maintenance_brownfield",
+    "retrospective_learning"
+  ],
+  "stages": [
+    {
+      "stage_id": "meta_attractor",
+      "status": "planned | accepted | deferred | waived | not_applicable",
+      "required": true,
+      "owner": "",
+      "entry_evidence": [],
+      "exit_evidence": [],
+      "artifacts": [],
+      "tests": [],
+      "gate": "",
+      "waiver": null
+    }
+  ],
+  "testing_coverage": {
+    "unit": {
+      "required": false,
+      "evidence": [],
+      "waiver": null
+    },
+    "integration": {
+      "required": false,
+      "evidence": [],
+      "waiver": null
+    },
+    "contract_api": {
+      "required": false,
+      "evidence": [],
+      "waiver": null
+    },
+    "scenario_bdd": {
+      "required": false,
+      "evidence": [],
+      "waiver": null
+    },
+    "holdout_transfer": {
+      "required": false,
+      "evidence": [],
+      "waiver": null
+    },
+    "security_abuse": {
+      "required": false,
+      "evidence": [],
+      "waiver": null
+    },
+    "performance_reliability": {
+      "required": false,
+      "evidence": [],
+      "waiver": null
+    },
+    "accessibility_ux": {
+      "required": false,
+      "evidence": [],
+      "waiver": null
+    },
+    "browser_wysiwyg_playwright": {
+      "required": false,
+      "evidence": [],
+      "waiver": null
+    },
+    "visual_regression": {
+      "required": false,
+      "evidence": [],
+      "waiver": null
+    },
+    "production_drill": {
+      "required": false,
+      "evidence": [],
+      "waiver": null
+    }
+  },
+  "no_docs_only_gate": {
+    "product_completion_claimed": false,
+    "implementation_evidence": [],
+    "test_execution_evidence": [],
+    "pass_allowed": false,
+    "rationale": ""
+  },
+  "template_marker": true
+}

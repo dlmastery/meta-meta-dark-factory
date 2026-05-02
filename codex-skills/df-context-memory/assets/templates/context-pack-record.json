@@ -1,0 +1,38 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+    "strict_compliance": "Mandatory. Every claim must be project-specific, evidence-backed, trace-linked, reviewer-challenged, and free of unsupported invention.",
+    "missing_evidence_rule": "If evidence is missing, mark it as an assumption, risk, open question, or failure."
+  },
+  "id": "CTX-000",
+  "status": "draft",
+  "current_objective": "",
+  "links": {
+    "attractor_record": "",
+    "control_graph_node": "",
+    "work_ledger_item": "",
+    "requirements": [],
+    "artifacts": [],
+    "decisions": [],
+    "evidence": [],
+    "handoffs": []
+  },
+  "current_state": "",
+  "predecessor_context": {
+    "previous_owner": "",
+    "decisions_recovered": [],
+    "rejected_alternatives": [],
+    "drift_found": [],
+    "confidence": "high|medium|low"
+  },
+  "verification_state": "",
+  "open_risks": [],
+  "human_communication_state": "",
+  "next_action": "",
+  "owner": "",
+  "fresh_session_replay": {
+    "required": true,
+    "status": "pending",
+    "evidence": ""
+  }
+}

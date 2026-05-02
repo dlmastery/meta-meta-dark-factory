@@ -1,0 +1,33 @@
+{
+  "id": "WL-PASS22-001",
+  "title": "Ralph loop pass 22 quality-refinery hardening",
+  "current_state": "accepted",
+  "next_action": "Use hardened rubric and refinery validators before future quality certificates or pass gates.",
+  "revalidation_trigger": "Any future finding that quality-refinery can pass with a lowered threshold, unresolved failed point, failed core check, or missing evidence.",
+  "owner": {
+    "accountable": "codex",
+    "responsible": "codex"
+  },
+  "acceptance_criteria": [
+    "Pass 22 findings documented",
+    "Rubric threshold lowering requires a complete waiver",
+    "Rubric failed points require fix or resolution evidence",
+    "Pass refinery gates reject failed core checks and missing evidence",
+    "Hardening runner includes positive and negative quality-refinery checks"
+  ],
+  "evidence_required": [
+    "pass22 critic/fix record",
+    "DFMS hardening runner output",
+    "pass22 merged-record validation",
+    "installed/workspace hash comparison"
+  ],
+  "evidence_provided": [
+    "22-ralph-loop-critic-review-and-fix-record.md",
+    "DFMS hardening checks complete",
+    "ATTR-PASS22-001",
+    "CG-PASS22-001",
+    "RFG-PASS22-001",
+    "records/pass22 merged records",
+    "INSTALLED_WORKSPACE_HASHES_MATCH"
+  ]
+}

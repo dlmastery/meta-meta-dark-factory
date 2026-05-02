@@ -1,0 +1,45 @@
+zero_slop_policy:
+  statement: "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+  strict_compliance: "Mandatory. Every claim must be project-specific, evidence-backed, trace-linked, reviewer-challenged, and free of unsupported invention."
+  missing_evidence_rule: "If evidence is missing, mark it as an assumption, risk, open question, or failure."
+
+id: RFG-000
+name: ""
+status: pending | pass | conditional_pass | fail | escalated
+scope:
+  work_items: []
+  artifacts: []
+  code_changes: []
+  release_items: []
+required_checks:
+  build: not_applicable | pass | fail
+  automated_tests: not_applicable | pass | fail
+  static_analysis: not_applicable | pass | fail
+  security: not_applicable | pass | fail
+  accessibility: not_applicable | pass | fail
+  performance_reliability: not_applicable | pass | fail
+  holdout_scenarios: not_applicable | pass | fail
+  transfer_tests: not_applicable | pass | fail
+  traceability: not_applicable | pass | fail
+  expert_rubrics: not_applicable | pass | fail
+  handoff_replay: not_applicable | pass | fail
+thresholds:
+  governance_percent: 98
+  expert_minimum_percent: 96
+  mandatory_traceability_percent: 100
+  critical_security_findings_allowed: 0
+evidence:
+  test_reports: []
+  rubric_scorecards: []
+  trace_reports: []
+  review_comments: []
+  certificates: []
+failed_checks: []
+required_fixes: []
+residual_risks: []
+human_decision:
+  required: false
+  approver: ""
+  decision: pending
+verdict_rationale: ""
+next_action: ""

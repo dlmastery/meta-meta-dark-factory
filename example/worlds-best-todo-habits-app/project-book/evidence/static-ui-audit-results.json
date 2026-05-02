@@ -1,0 +1,59 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+  },
+  "record_id": "STATIC-UI-AUDIT-NORTHSTAR-20260425-001",
+  "status": "pass",
+  "checks": {
+    "requiredHtml": [
+      "<main",
+      "<aside",
+      "id=\"quick-add-form\"",
+      "id=\"task-list\"",
+      "id=\"habit-board\"",
+      "id=\"habit-insight\"",
+      "id=\"matrix\"",
+      "id=\"plan-audit\"",
+      "id=\"focus-queue\"",
+      "id=\"review-note\"",
+      "aria-label",
+      "aria-live",
+      "aria-pressed",
+      "visually-hidden",
+      "skip-link"
+    ],
+    "requiredCss": [
+      "@media (max-width: 1040px)",
+      "@media (max-width: 720px)",
+      "--md-sys-color-primary",
+      "--md-sys-color-primary-container",
+      "--md-sys-color-surface-container",
+      "--md-sys-shape-corner-full",
+      "--md-sys-typescale-body-medium-size",
+      "--md-sys-motion-duration-short",
+      "grid-template-columns",
+      "overflow-wrap: anywhere",
+      "letter-spacing: 0",
+      "transition:",
+      ":focus"
+    ],
+    "requiredJs": [
+      "function parseQuickAdd",
+      "function calculateStats",
+      "function planAudit",
+      "function habitFrictionInsights",
+      "function habitStreak",
+      "function normalizeState",
+      "function escapeHtml",
+      "localStorage",
+      "addEventListener"
+    ],
+    "noExternalHttpResources": true,
+    "noNetworkCalls": true,
+    "noNegativeLetterSpacing": true,
+    "materialSystemTokensPresent": true,
+    "materialTouchTargetsPresent": true,
+    "materialStateMotionPresent": true
+  },
+  "failures": []
+}

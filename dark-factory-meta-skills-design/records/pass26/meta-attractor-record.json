@@ -1,0 +1,95 @@
+{
+  "record_id": "ATTR-PASS26-001",
+  "created_on": "2026-04-25",
+  "source_signals": [
+    "User requested Ralph loop pass 26 super-duper expert critic review",
+    "Original transcript requires humans to maintain production safely after agents build",
+    "Pass 25 still left production/SRE handoff proof outside executable validation"
+  ],
+  "attractor_state": "stable",
+  "goal": "Close the production/SRE handoff evidence gap by requiring live, validated handoff and outage drill records before operator readiness can be trusted.",
+  "layer_map": {
+    "product_specific": [
+      "No todo-list-specific behavior is introduced; the pass 26 checks apply to any future governed release."
+    ],
+    "factory_reusable": [
+      "Production handoff records, outage drill records, runbook replay evidence, rollback paths, observability, incident paths, support paths, and operator signoff must be machine-checked."
+    ],
+    "meta_meta_governance": [
+      "Pass 26 is governed by the meta-attractor, control graph, work ledger, refinery gate, and hardening runner."
+    ]
+  },
+  "control_plane_links": {
+    "control_graph": "CG-PASS26-001",
+    "work_ledger": "WL-PASS26-001",
+    "refinery_gate": "RFG-PASS26-001"
+  },
+  "selected_mode": "skill-system-revision",
+  "selected_skills": [
+    {
+      "skill": "df-meta-attractor",
+      "reason": "govern this as a meta-meta hardening pass",
+      "load_now": true
+    },
+    {
+      "skill": "df-production-sre-handoff",
+      "reason": "harden production handoff, outage drill, runbook replay, and operator readiness evidence",
+      "load_now": true
+    },
+    {
+      "skill": "df-quality-refinery",
+      "reason": "make production handoff evidence part of the repeated verification sweep",
+      "load_now": true
+    },
+    {
+      "skill": "df-human-agent-handoff",
+      "reason": "ensure humans can take production ownership with explicit signoff",
+      "load_now": true
+    }
+  ],
+  "gates": [
+    "production handoff records reject templates and blank drafts",
+    "production handoff records require deploy, verify, rollback, observability, alert, incident, support, maintenance, training, outage drill, runbook replay, operator signoff, and readiness score evidence",
+    "outage drill records require live scenario, runbook, diagnosis, mitigation, communication, readiness score, operator signoff, and refinery linkage",
+    "hardening runner includes production/SRE positive and negative fixtures",
+    "pass 26 merged records validate"
+  ],
+  "node_contract": {
+    "what": "Run pass 26 critic review and harden production/SRE handoff evidence.",
+    "why": "The original requirements explicitly need humans to safely maintain and operate the outputs after agent work.",
+    "how": "Add a production handoff validator, positive fixtures, template and low-readiness negative fixtures, manifest resources, runner wiring, and project-book evidence.",
+    "where": "df-production-sre-handoff installed skill, workspace bundle, validation fixtures, and design records.",
+    "when": "Before future release handoffs or operator readiness records are trusted.",
+    "who": "Codex as responsible fixer; human owner as Ralph-loop driver and accountable production approver.",
+    "how_good": "Templates, unsigned drills, missing rollback paths, and low readiness reject while complete pass fixtures accept."
+  },
+  "expert_debate": {
+    "system_theorist": "A factory that hands production to humans without executable readiness evidence is incomplete at the final control boundary.",
+    "requirements_governance_architect": "The handoff must bind release ownership, rollback, observability, incident path, support path, runbook replay, and signoff to the same ledger and gate model as other artifacts.",
+    "verification_safety_critic": "Templates and low-readiness drills must fail automatically; otherwise the proof is decorative.",
+    "synthesis": "Install a focused validator and add positive and negative fixtures to the regular hardening runner."
+  },
+  "human_decisions": [
+    "Human owner requested pass 26 and asked to fix any new findings."
+  ],
+  "assumptions": [
+    "Pass 26 is a patch-level production/SRE handoff hardening pass, not a full production game-day simulation."
+  ],
+  "risks": [
+    "Validator proves structure and linkage, not real operator performance in a live system.",
+    "A full production simulation and runtime dashboard remain future work."
+  ],
+  "evidence_commitments": [
+    "production handoff pass fixture is accepted",
+    "outage drill pass fixture is accepted",
+    "production handoff and outage drill templates are rejected",
+    "low-readiness production handoff and unsigned/low-readiness outage drill fixtures are rejected",
+    "installed and workspace production handoff files remain in sync"
+  ],
+  "anti_overfit_checks": [
+    "No rule references the todo-list simulation project.",
+    "Production/SRE gates apply to any governed release or operational handoff."
+  ],
+  "verdict": "pass",
+  "next_safe_action": "Use the production/SRE handoff validator before accepting future release readiness or operator readiness evidence."
+}

@@ -1,0 +1,136 @@
+{
+  "id": "CG-PASS25-001",
+  "name": "Pass 25 structured evidence hardening",
+  "goal": "Ensure certificate bundle validation and refinery pass-gate validation require structured evidence fields rather than prose mentions.",
+  "risks": [
+    "Required certificate, panel, or artifact IDs could appear only in prose",
+    "A pass refinery gate could have no scoped work",
+    "A pass refinery gate could omit verdict rationale or next action"
+  ],
+  "links": {
+    "attractor": "ATTR-PASS25-001",
+    "work_ledger": "WL-PASS25-001",
+    "refinery_gate": "RFG-PASS25-001"
+  },
+  "nodes": [
+    {
+      "id": "NODE-PASS25-CRITIC",
+      "label": "Pass 25 structured evidence critic review",
+      "owner": "codex",
+      "node_contract": {
+        "what": "Review certificate and refinery gate evidence placement.",
+        "why": "Traceable evidence must live in structured acceptance fields.",
+        "how": "Inspect validators and runner cases for prose-only evidence bypasses.",
+        "where": "validate_quality_certificate.py, validate_refinery_gate.py, refinery-gate-pass.yaml, quality-certificate-pass.json.",
+        "when": "Before pass 25 fixes are accepted.",
+        "who": "Codex using quality, governance, and verification expert lenses.",
+        "how_good": "Findings are reproducible and covered by negative fixtures."
+      },
+      "expert_panel": [
+        "quality-refinery-reviewer",
+        "requirements-governance-architect",
+        "verification-safety-critic"
+      ],
+      "rubrics": [
+        "structured evidence placement",
+        "pass-gate scope integrity",
+        "certificate bundle traceability"
+      ],
+      "feedback_loop": "Any new bypass becomes validator logic and a hardening-runner negative fixture.",
+      "gates": [
+        "bypass reproduced or reasoned from validator",
+        "validator patched",
+        "runner proves rejection"
+      ],
+      "evidence_outputs": [
+        "25-ralph-loop-critic-review-and-fix-record.md"
+      ]
+    },
+    {
+      "id": "NODE-PASS25-FIX",
+      "label": "Structured evidence validator implementation",
+      "owner": "codex",
+      "node_contract": {
+        "what": "Require exact structured evidence list membership and scoped pass gates.",
+        "why": "Acceptance proof must be machine-checkable and future-reviewer-ready.",
+        "how": "Add YAML list extraction helpers, update certificate/gate validators, sync workspace, and add negative fixtures.",
+        "where": "df-quality-refinery installed skill and workspace bundle.",
+        "when": "After critic review and before evidence closure.",
+        "who": "Codex as implementer.",
+        "how_good": "Positive fixtures pass and prose-only evidence plus empty-scope pass gates fail."
+      },
+      "expert_panel": [
+        "quality-lead",
+        "traceability-lead",
+        "validation-engineer"
+      ],
+      "rubrics": [
+        "structured field enforcement",
+        "scope completeness",
+        "regression coverage"
+      ],
+      "feedback_loop": "Rerun the full hardening suite after every validator change.",
+      "gates": [
+        "installed validators compile",
+        "workspace validators compile",
+        "new negative fixtures reject"
+      ],
+      "evidence_outputs": [
+        "validate_refinery_gate.py",
+        "validate_quality_certificate.py",
+        "run_pre17_hardening_checks.ps1"
+      ]
+    },
+    {
+      "id": "NODE-PASS25-VERIFY",
+      "label": "Pass 25 verification sweep",
+      "owner": "codex",
+      "node_contract": {
+        "what": "Verify final pass 25 state.",
+        "why": "The structured-evidence hardening only counts if the full suite and merged records pass.",
+        "how": "Run hardening suite, merged-record validation, hash sync, JSON, ASCII, and artifact ID checks.",
+        "where": "Workspace validation suite and pass 25 records.",
+        "when": "After all fixes and records are written.",
+        "who": "Codex as verification runner.",
+        "how_good": "All checks pass and residual risks remain explicit."
+      },
+      "expert_panel": [
+        "verification-lead",
+        "governance-auditor",
+        "release-readiness-reviewer"
+      ],
+      "rubrics": [
+        "positive-path preservation",
+        "negative-path rejection",
+        "evidence completeness"
+      ],
+      "feedback_loop": "Any failed check reopens the fix node.",
+      "gates": [
+        "hardening runner passes",
+        "pass 25 merged records validate",
+        "hash sync succeeds"
+      ],
+      "evidence_outputs": [
+        "DFMS hardening checks complete",
+        "records/pass25 merged records"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "ATTR-PASS25-001",
+      "to": "NODE-PASS25-CRITIC",
+      "type": "governs"
+    },
+    {
+      "from": "NODE-PASS25-CRITIC",
+      "to": "NODE-PASS25-FIX",
+      "type": "requires"
+    },
+    {
+      "from": "NODE-PASS25-FIX",
+      "to": "NODE-PASS25-VERIFY",
+      "type": "must_validate"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "DF Methodology Blender"
+  short_description: "Blend RUP MDA DDD TDD workflows"
+  default_prompt: "Use $df-methodology-blender to combine RUP, MDA, DDD, TDD, BDD, Agile, and SRE practices."

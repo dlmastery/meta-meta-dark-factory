@@ -1,0 +1,960 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+  },
+  "template_only": false,
+  "record_id": "KG-NORTHSTAR-20260425-001",
+  "title": "Northstar Daily Knowledge Graph",
+  "project": "Northstar Daily",
+  "nodes": [
+    {
+      "id": "INTENT-NORTHSTAR-001",
+      "type": "intent",
+      "title": "Create a rigorous todo and habits app as a dark-factory demonstrator",
+      "status": "accepted",
+      "owner": "Abhir"
+    },
+    {
+      "id": "REQ-NORTHSTAR-001",
+      "type": "requirement",
+      "title": "Fast task and habit capture with planning, focus, and review",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "RISK-NORTHSTAR-001",
+      "type": "risk",
+      "title": "Unbounded world-best claim creates scope drift",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "DEC-NORTHSTAR-001",
+      "type": "decision",
+      "title": "Use static local-first browser architecture for first slice",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "CGN-NORTHSTAR-IMPLEMENT",
+      "type": "control_graph_node",
+      "title": "Implement governed product slice",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "WLI-NORTHSTAR-IMPLEMENT",
+      "type": "work_ledger_item",
+      "title": "Northstar implementation and evidence package",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "TB-20260425-101",
+      "type": "task_bead",
+      "title": "Build governed Northstar Daily product slice",
+      "status": "accepted",
+      "owner": "Codex",
+      "control_graph_node": "CGN-NORTHSTAR-IMPLEMENT",
+      "work_ledger_item": "WLI-NORTHSTAR-IMPLEMENT",
+      "evidence_provided": [
+        "project-book/evidence/validation-summary.json"
+      ],
+      "gate": "GATE-NORTHSTAR-HARDENED",
+      "next_bead": "TB-20260426-102",
+      "closure_rationale": "First demonstrator slice completed and fed iteration 2 hardening."
+    },
+    {
+      "id": "TB-20260426-102",
+      "type": "task_bead",
+      "title": "Harden Northstar Daily with plan audit and habit friction insight",
+      "status": "accepted",
+      "owner": "Codex",
+      "control_graph_node": "CGN-NORTHSTAR-HARDENING",
+      "work_ledger_item": "WLI-NORTHSTAR-HARDENING",
+      "evidence_provided": [
+        "project-book/evidence/browser-wysiwyg-results.json",
+        "project-book/09-iteration-2-hardening-record.md"
+      ],
+      "gate": "GATE-NORTHSTAR-HARDENING-PASS",
+      "next_bead": "TB-20260426-103",
+      "closure_rationale": "Second demonstrator slice completed and fed RALPH-20 E2E completeness."
+    },
+    {
+      "id": "TB-20260426-103",
+      "type": "task_bead",
+      "title": "Run twenty RALPH loops for E2E completeness",
+      "status": "accepted",
+      "owner": "Codex",
+      "control_graph_node": "CGN-NORTHSTAR-RALPH20",
+      "work_ledger_item": "WLI-NORTHSTAR-RALPH20",
+      "evidence_provided": [
+        "project-book/10-ralph-20-e2e-completeness-record.md",
+        "project-book/evidence/browser-wysiwyg-results.json"
+      ],
+      "gate": "GATE-NORTHSTAR-RALPH20-PASS",
+      "next_bead": "TB-20260426-104",
+      "closure_rationale": "Twenty-loop E2E completeness pass complete, then the user opened standards and meta-meta audit continuation."
+    },
+    {
+      "id": "TB-20260426-104",
+      "type": "task_bead",
+      "title": "Audit Northstar Daily against standards and meta-meta skill charters",
+      "status": "accepted",
+      "owner": "Codex",
+      "control_graph_node": "CGN-NORTHSTAR-STANDARDS-AUDIT",
+      "work_ledger_item": "WLI-NORTHSTAR-STANDARDS-AUDIT",
+      "evidence_provided": [
+        "project-book/11-standards-meta-meta-charter-audit.md",
+        "project-book/evidence/audit-quality-certificate.json"
+      ],
+      "gate": "GATE-NORTHSTAR-STANDARDS-AUDIT-PASS",
+      "next_bead": "TB-20260426-105",
+      "closure_rationale": "Standards and meta-meta charter audit completed, then certification-readiness hardening was opened."
+    },
+    {
+      "id": "TB-20260426-105",
+      "type": "task_bead",
+      "title": "Close feasible certification-readiness gaps",
+      "status": "accepted",
+      "owner": "Codex",
+      "control_graph_node": "CGN-NORTHSTAR-CERTIFICATION-READY",
+      "work_ledger_item": "WLI-NORTHSTAR-CERTIFICATION-READY",
+      "evidence_provided": [
+        "project-book/12-certification-readiness-hardening-record.md",
+        "project-book/evidence/accessibility-certification-results.json",
+        "project-book/evidence/certification-readiness-certificate.json"
+      ],
+      "gate": "GATE-NORTHSTAR-CERTIFICATION-READY-PASS",
+      "next_bead": "TB-20260426-106",
+      "closure_rationale": "Internal certification-readiness hardening completed, then UX/reliability QA certification RALPH loops were opened."
+    },
+    {
+      "id": "TB-20260426-106",
+      "type": "task_bead",
+      "title": "Run UX reliability and QA certification RALPH loops",
+      "status": "accepted",
+      "owner": "Codex",
+      "control_graph_node": "CGN-NORTHSTAR-UXQA",
+      "work_ledger_item": "WLI-NORTHSTAR-UXQA",
+      "evidence_provided": [
+        "project-book/13-ralph-ux-reliability-qa-certification-record.md",
+        "project-book/evidence/qa-certification-certificate.json",
+        "project-book/evidence/browser-wysiwyg-results.json",
+        "project-book/evidence/accessibility-certification-results.json"
+      ],
+      "gate": "GATE-NORTHSTAR-UXQA-PASS",
+      "next_bead": "TB-20260426-107",
+      "closure_rationale": "UX reliability and internal QA certification RALPH pass completed, then the user opened Material UI standards conformance."
+    },
+    {
+      "id": "TB-20260426-107",
+      "type": "task_bead",
+      "title": "Apply Google Material 3 / Material 3 Expressive-aligned UI standards",
+      "status": "accepted",
+      "owner": "Codex",
+      "control_graph_node": "CGN-NORTHSTAR-MATERIAL-UI",
+      "work_ledger_item": "WLI-NORTHSTAR-MATERIAL-UI",
+      "evidence_provided": [
+        "project-book/14-material-ui-standards-conformance-record.md",
+        "project-book/evidence/material-ui-conformance-certificate.json",
+        "project-book/evidence/browser-wysiwyg-results.json",
+        "project-book/evidence/accessibility-certification-results.json"
+      ],
+      "gate": "GATE-NORTHSTAR-MATERIAL-UI-PASS",
+      "next_bead": "TB-20260426-108",
+      "closure_rationale": "Material UI standards conformance pass completed, then the user opened the human review and onboarding portal bead."
+    },
+    {
+      "id": "TB-20260426-108",
+      "type": "task_bead",
+      "title": "Create human review and onboarding portal",
+      "status": "accepted",
+      "owner": "Codex",
+      "control_graph_node": "CGN-NORTHSTAR-HUMAN-PORTAL",
+      "work_ledger_item": "WLI-NORTHSTAR-HUMAN-PORTAL",
+      "evidence_provided": [
+        "project-book/15-human-review-onboarding-portal-record.md",
+        "project-book/portal/index.html",
+        "project-book/portal/portal-data.json",
+        "project-book/portal/diagrams.md",
+        "project-book/evidence/human-review-portal-certificate.json",
+        "project-book/evidence/human-review-portal-validation.json"
+      ],
+      "gate": "GATE-NORTHSTAR-HUMAN-PORTAL-PASS",
+      "next_bead": "RUN-CLOSED",
+      "closure_rationale": "Human review and onboarding portal pass completed and closed."
+    },
+    {
+      "id": "ART-NORTHSTAR-APP",
+      "type": "artifact",
+      "title": "Working Northstar Daily static app",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "ART-NORTHSTAR-BOOK",
+      "type": "artifact",
+      "title": "Northstar project book and process records",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "ART-NORTHSTAR-STANDARDS-AUDIT",
+      "type": "artifact",
+      "title": "Standards and meta-meta charter audit package",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "ART-NORTHSTAR-CERTIFICATION-READY",
+      "type": "artifact",
+      "title": "Certification-readiness hardening package",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "ART-NORTHSTAR-UXQA",
+      "type": "artifact",
+      "title": "UX reliability and QA certification package",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "ART-NORTHSTAR-MATERIAL-UI",
+      "type": "artifact",
+      "title": "Material UI standards conformance package",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "ART-NORTHSTAR-HUMAN-PORTAL",
+      "type": "artifact",
+      "title": "Human review and onboarding portal package",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "EVD-NORTHSTAR-TESTS",
+      "type": "evidence",
+      "title": "Core, scenario, browser, and validator evidence",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "EVD-NORTHSTAR-STANDARDS-AUDIT",
+      "type": "evidence",
+      "title": "Standards, meta-meta, artifact BOM, panel, findings, and certificate evidence",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "EVD-NORTHSTAR-CERTIFICATION-READY",
+      "type": "evidence",
+      "title": "Accessibility and certification-readiness evidence",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "EVD-NORTHSTAR-UXQA",
+      "type": "evidence",
+      "title": "UX, brand, accessibility, reliability, WYSIWYG, and QA certificate evidence",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "EVD-NORTHSTAR-MATERIAL-UI",
+      "type": "evidence",
+      "title": "Material token, accessibility, WYSIWYG, review, gate, and certificate evidence",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "EVD-NORTHSTAR-HUMAN-PORTAL",
+      "type": "evidence",
+      "title": "Portal dashboard, machine index, diagram atlas, validation, panel, gate, and certificate evidence",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "CERT-NORTHSTAR-001",
+      "type": "certificate",
+      "title": "Northstar bounded slice quality certificate",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "CERT-NORTHSTAR-STANDARDS-AUDIT",
+      "type": "certificate",
+      "title": "Northstar standards and meta-meta audit certificate",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "CERT-NORTHSTAR-CERTIFICATION-READY",
+      "type": "certificate",
+      "title": "Northstar internal DFMS certification-readiness certificate",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "CERT-NORTHSTAR-UXQA",
+      "type": "certificate",
+      "title": "Northstar internal DFMS UX QA certification certificate",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "CERT-NORTHSTAR-MATERIAL-UI",
+      "type": "certificate",
+      "title": "Northstar internal DFMS Material UI conformance certificate",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "CERT-NORTHSTAR-HUMAN-PORTAL",
+      "type": "certificate",
+      "title": "Northstar internal DFMS human review portal readiness certificate",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "REVIEW-NORTHSTAR-001",
+      "type": "review",
+      "title": "Expert review and RALPH record",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "REVIEW-NORTHSTAR-STANDARDS-AUDIT",
+      "type": "review",
+      "title": "Standards and meta-meta audit panel review",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "REVIEW-NORTHSTAR-CERTIFICATION-READY",
+      "type": "review",
+      "title": "Certification-readiness expert panel review",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "REVIEW-NORTHSTAR-UXQA",
+      "type": "review",
+      "title": "UX reliability and QA certification panel review",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "REVIEW-NORTHSTAR-MATERIAL-UI",
+      "type": "review",
+      "title": "Material UI standards conformance panel review",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "REVIEW-NORTHSTAR-HUMAN-PORTAL",
+      "type": "review",
+      "title": "Human review and onboarding portal panel review",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "GATE-NORTHSTAR-HARDENED",
+      "type": "gate",
+      "title": "Validators, tests, traceability, and Hawkeye conformance pass",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "CGN-NORTHSTAR-HARDENING",
+      "type": "control_graph_node",
+      "title": "Iteration 2 hardening control node",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "WLI-NORTHSTAR-HARDENING",
+      "type": "work_ledger_item",
+      "title": "Plan audit and habit insight hardening",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "GATE-NORTHSTAR-HARDENING-PASS",
+      "type": "gate",
+      "title": "Iteration 2 tests and WYSIWYG evidence pass",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "CGN-NORTHSTAR-RALPH20",
+      "type": "control_graph_node",
+      "title": "RALPH-20 E2E completeness control node",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "WLI-NORTHSTAR-RALPH20",
+      "type": "work_ledger_item",
+      "title": "Twenty-loop E2E completeness work item",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "GATE-NORTHSTAR-RALPH20-PASS",
+      "type": "gate",
+      "title": "RALPH-20 E2E completeness evidence pass",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "CGN-NORTHSTAR-STANDARDS-AUDIT",
+      "type": "control_graph_node",
+      "title": "Standards and meta-meta charter audit control node",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "WLI-NORTHSTAR-STANDARDS-AUDIT",
+      "type": "work_ledger_item",
+      "title": "Standards and meta-meta charter audit work item",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "GATE-NORTHSTAR-STANDARDS-AUDIT-PASS",
+      "type": "gate",
+      "title": "Standards and meta-meta charter audit pass",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "CGN-NORTHSTAR-CERTIFICATION-READY",
+      "type": "control_graph_node",
+      "title": "Internal certification-readiness hardening control node",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "WLI-NORTHSTAR-CERTIFICATION-READY",
+      "type": "work_ledger_item",
+      "title": "Certification-readiness hardening work item",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "GATE-NORTHSTAR-CERTIFICATION-READY-PASS",
+      "type": "gate",
+      "title": "Internal DFMS certification-readiness pass",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "CGN-NORTHSTAR-UXQA",
+      "type": "control_graph_node",
+      "title": "UX reliability and QA certification control node",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "WLI-NORTHSTAR-UXQA",
+      "type": "work_ledger_item",
+      "title": "UX reliability and QA certification work item",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "GATE-NORTHSTAR-UXQA-PASS",
+      "type": "gate",
+      "title": "UX reliability and internal QA certification pass",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "CGN-NORTHSTAR-MATERIAL-UI",
+      "type": "control_graph_node",
+      "title": "Material UI standards conformance control node",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "WLI-NORTHSTAR-MATERIAL-UI",
+      "type": "work_ledger_item",
+      "title": "Material UI standards conformance work item",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "GATE-NORTHSTAR-MATERIAL-UI-PASS",
+      "type": "gate",
+      "title": "Material UI standards conformance pass",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "CGN-NORTHSTAR-HUMAN-PORTAL",
+      "type": "control_graph_node",
+      "title": "Human review and onboarding portal control node",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "WLI-NORTHSTAR-HUMAN-PORTAL",
+      "type": "work_ledger_item",
+      "title": "Human review and onboarding portal work item",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "GATE-NORTHSTAR-HUMAN-PORTAL-PASS",
+      "type": "gate",
+      "title": "Human review and onboarding portal pass",
+      "status": "accepted",
+      "owner": "Codex"
+    },
+    {
+      "id": "RUN-CLOSED",
+      "type": "decision",
+      "title": "Run closed until new bead or change request",
+      "status": "accepted",
+      "owner": "Codex"
+    }
+  ],
+  "edges": [
+    {
+      "id": "EDGE-001",
+      "type": "derives_from",
+      "source": "REQ-NORTHSTAR-001",
+      "target": "INTENT-NORTHSTAR-001"
+    },
+    {
+      "id": "EDGE-002",
+      "type": "decomposes_to",
+      "source": "INTENT-NORTHSTAR-001",
+      "target": "REQ-NORTHSTAR-001"
+    },
+    {
+      "id": "EDGE-003",
+      "type": "satisfies",
+      "source": "ART-NORTHSTAR-APP",
+      "target": "REQ-NORTHSTAR-001"
+    },
+    {
+      "id": "EDGE-004",
+      "type": "verifies",
+      "source": "EVD-NORTHSTAR-TESTS",
+      "target": "REQ-NORTHSTAR-001"
+    },
+    {
+      "id": "EDGE-005",
+      "type": "tracked_by",
+      "source": "TB-20260425-101",
+      "target": "WLI-NORTHSTAR-IMPLEMENT"
+    },
+    {
+      "id": "EDGE-006",
+      "type": "gated_by",
+      "source": "TB-20260425-101",
+      "target": "GATE-NORTHSTAR-HARDENED"
+    },
+    {
+      "id": "EDGE-007",
+      "type": "reviewed_by",
+      "source": "ART-NORTHSTAR-APP",
+      "target": "REVIEW-NORTHSTAR-001"
+    },
+    {
+      "id": "EDGE-008",
+      "type": "evidenced_by",
+      "source": "ART-NORTHSTAR-APP",
+      "target": "EVD-NORTHSTAR-TESTS"
+    },
+    {
+      "id": "EDGE-009",
+      "type": "certified_by",
+      "source": "ART-NORTHSTAR-APP",
+      "target": "CERT-NORTHSTAR-001"
+    },
+    {
+      "id": "EDGE-010",
+      "type": "next_bead",
+      "source": "TB-20260425-101",
+      "target": "TB-20260426-102"
+    },
+    {
+      "id": "EDGE-011",
+      "type": "tracked_by",
+      "source": "CGN-NORTHSTAR-IMPLEMENT",
+      "target": "TB-20260425-101"
+    },
+    {
+      "id": "EDGE-012",
+      "type": "evidenced_by",
+      "source": "ART-NORTHSTAR-BOOK",
+      "target": "EVD-NORTHSTAR-TESTS"
+    },
+    {
+      "id": "EDGE-013",
+      "type": "gated_by",
+      "source": "RISK-NORTHSTAR-001",
+      "target": "GATE-NORTHSTAR-HARDENED"
+    },
+    {
+      "id": "EDGE-014",
+      "type": "tracked_by",
+      "source": "TB-20260426-102",
+      "target": "WLI-NORTHSTAR-HARDENING"
+    },
+    {
+      "id": "EDGE-015",
+      "type": "gated_by",
+      "source": "TB-20260426-102",
+      "target": "GATE-NORTHSTAR-HARDENING-PASS"
+    },
+    {
+      "id": "EDGE-016",
+      "type": "evidenced_by",
+      "source": "ART-NORTHSTAR-APP",
+      "target": "TB-20260426-102"
+    },
+    {
+      "id": "EDGE-017",
+      "type": "reviewed_by",
+      "source": "TB-20260426-102",
+      "target": "REVIEW-NORTHSTAR-001"
+    },
+    {
+      "id": "EDGE-018",
+      "type": "next_bead",
+      "source": "TB-20260426-102",
+      "target": "TB-20260426-103"
+    },
+    {
+      "id": "EDGE-019",
+      "type": "tracked_by",
+      "source": "CGN-NORTHSTAR-HARDENING",
+      "target": "TB-20260426-102"
+    },
+    {
+      "id": "EDGE-020",
+      "type": "tracked_by",
+      "source": "TB-20260426-103",
+      "target": "WLI-NORTHSTAR-RALPH20"
+    },
+    {
+      "id": "EDGE-021",
+      "type": "gated_by",
+      "source": "TB-20260426-103",
+      "target": "GATE-NORTHSTAR-RALPH20-PASS"
+    },
+    {
+      "id": "EDGE-022",
+      "type": "evidenced_by",
+      "source": "ART-NORTHSTAR-APP",
+      "target": "TB-20260426-103"
+    },
+    {
+      "id": "EDGE-023",
+      "type": "reviewed_by",
+      "source": "TB-20260426-103",
+      "target": "REVIEW-NORTHSTAR-001"
+    },
+    {
+      "id": "EDGE-024",
+      "type": "next_bead",
+      "source": "TB-20260426-103",
+      "target": "TB-20260426-104"
+    },
+    {
+      "id": "EDGE-025",
+      "type": "tracked_by",
+      "source": "CGN-NORTHSTAR-RALPH20",
+      "target": "TB-20260426-103"
+    },
+    {
+      "id": "EDGE-026",
+      "type": "tracked_by",
+      "source": "TB-20260426-104",
+      "target": "WLI-NORTHSTAR-STANDARDS-AUDIT"
+    },
+    {
+      "id": "EDGE-027",
+      "type": "gated_by",
+      "source": "TB-20260426-104",
+      "target": "GATE-NORTHSTAR-STANDARDS-AUDIT-PASS"
+    },
+    {
+      "id": "EDGE-028",
+      "type": "evidenced_by",
+      "source": "ART-NORTHSTAR-STANDARDS-AUDIT",
+      "target": "EVD-NORTHSTAR-STANDARDS-AUDIT"
+    },
+    {
+      "id": "EDGE-029",
+      "type": "reviewed_by",
+      "source": "ART-NORTHSTAR-STANDARDS-AUDIT",
+      "target": "REVIEW-NORTHSTAR-STANDARDS-AUDIT"
+    },
+    {
+      "id": "EDGE-030",
+      "type": "certified_by",
+      "source": "ART-NORTHSTAR-STANDARDS-AUDIT",
+      "target": "CERT-NORTHSTAR-STANDARDS-AUDIT"
+    },
+    {
+      "id": "EDGE-031",
+      "type": "next_bead",
+      "source": "TB-20260426-104",
+      "target": "TB-20260426-105"
+    },
+    {
+      "id": "EDGE-032",
+      "type": "tracked_by",
+      "source": "CGN-NORTHSTAR-STANDARDS-AUDIT",
+      "target": "TB-20260426-104"
+    },
+    {
+      "id": "EDGE-033",
+      "type": "evidenced_by",
+      "source": "ART-NORTHSTAR-BOOK",
+      "target": "EVD-NORTHSTAR-STANDARDS-AUDIT"
+    },
+    {
+      "id": "EDGE-034",
+      "type": "certified_by",
+      "source": "TB-20260426-104",
+      "target": "CERT-NORTHSTAR-STANDARDS-AUDIT"
+    },
+    {
+      "id": "EDGE-035",
+      "type": "tracked_by",
+      "source": "TB-20260426-105",
+      "target": "WLI-NORTHSTAR-CERTIFICATION-READY"
+    },
+    {
+      "id": "EDGE-036",
+      "type": "gated_by",
+      "source": "TB-20260426-105",
+      "target": "GATE-NORTHSTAR-CERTIFICATION-READY-PASS"
+    },
+    {
+      "id": "EDGE-037",
+      "type": "evidenced_by",
+      "source": "ART-NORTHSTAR-CERTIFICATION-READY",
+      "target": "EVD-NORTHSTAR-CERTIFICATION-READY"
+    },
+    {
+      "id": "EDGE-038",
+      "type": "reviewed_by",
+      "source": "ART-NORTHSTAR-CERTIFICATION-READY",
+      "target": "REVIEW-NORTHSTAR-CERTIFICATION-READY"
+    },
+    {
+      "id": "EDGE-039",
+      "type": "certified_by",
+      "source": "ART-NORTHSTAR-CERTIFICATION-READY",
+      "target": "CERT-NORTHSTAR-CERTIFICATION-READY"
+    },
+    {
+      "id": "EDGE-040",
+      "type": "next_bead",
+      "source": "TB-20260426-105",
+      "target": "TB-20260426-106"
+    },
+    {
+      "id": "EDGE-041",
+      "type": "tracked_by",
+      "source": "CGN-NORTHSTAR-CERTIFICATION-READY",
+      "target": "TB-20260426-105"
+    },
+    {
+      "id": "EDGE-042",
+      "type": "certified_by",
+      "source": "TB-20260426-105",
+      "target": "CERT-NORTHSTAR-CERTIFICATION-READY"
+    },
+    {
+      "id": "EDGE-043",
+      "type": "verifies",
+      "source": "EVD-NORTHSTAR-CERTIFICATION-READY",
+      "target": "REQ-NORTHSTAR-001"
+    },
+    {
+      "id": "EDGE-044",
+      "type": "tracked_by",
+      "source": "TB-20260426-106",
+      "target": "WLI-NORTHSTAR-UXQA"
+    },
+    {
+      "id": "EDGE-045",
+      "type": "gated_by",
+      "source": "TB-20260426-106",
+      "target": "GATE-NORTHSTAR-UXQA-PASS"
+    },
+    {
+      "id": "EDGE-046",
+      "type": "evidenced_by",
+      "source": "ART-NORTHSTAR-UXQA",
+      "target": "EVD-NORTHSTAR-UXQA"
+    },
+    {
+      "id": "EDGE-047",
+      "type": "reviewed_by",
+      "source": "ART-NORTHSTAR-UXQA",
+      "target": "REVIEW-NORTHSTAR-UXQA"
+    },
+    {
+      "id": "EDGE-048",
+      "type": "certified_by",
+      "source": "ART-NORTHSTAR-UXQA",
+      "target": "CERT-NORTHSTAR-UXQA"
+    },
+    {
+      "id": "EDGE-049",
+      "type": "next_bead",
+      "source": "TB-20260426-106",
+      "target": "TB-20260426-107"
+    },
+    {
+      "id": "EDGE-050",
+      "type": "tracked_by",
+      "source": "CGN-NORTHSTAR-UXQA",
+      "target": "TB-20260426-106"
+    },
+    {
+      "id": "EDGE-051",
+      "type": "certified_by",
+      "source": "TB-20260426-106",
+      "target": "CERT-NORTHSTAR-UXQA"
+    },
+    {
+      "id": "EDGE-052",
+      "type": "verifies",
+      "source": "EVD-NORTHSTAR-UXQA",
+      "target": "REQ-NORTHSTAR-001"
+    },
+    {
+      "id": "EDGE-053",
+      "type": "tracked_by",
+      "source": "TB-20260426-107",
+      "target": "WLI-NORTHSTAR-MATERIAL-UI"
+    },
+    {
+      "id": "EDGE-054",
+      "type": "gated_by",
+      "source": "TB-20260426-107",
+      "target": "GATE-NORTHSTAR-MATERIAL-UI-PASS"
+    },
+    {
+      "id": "EDGE-055",
+      "type": "evidenced_by",
+      "source": "ART-NORTHSTAR-MATERIAL-UI",
+      "target": "EVD-NORTHSTAR-MATERIAL-UI"
+    },
+    {
+      "id": "EDGE-056",
+      "type": "reviewed_by",
+      "source": "ART-NORTHSTAR-MATERIAL-UI",
+      "target": "REVIEW-NORTHSTAR-MATERIAL-UI"
+    },
+    {
+      "id": "EDGE-057",
+      "type": "certified_by",
+      "source": "ART-NORTHSTAR-MATERIAL-UI",
+      "target": "CERT-NORTHSTAR-MATERIAL-UI"
+    },
+    {
+      "id": "EDGE-058",
+      "type": "next_bead",
+      "source": "TB-20260426-107",
+      "target": "TB-20260426-108"
+    },
+    {
+      "id": "EDGE-059",
+      "type": "tracked_by",
+      "source": "CGN-NORTHSTAR-MATERIAL-UI",
+      "target": "TB-20260426-107"
+    },
+    {
+      "id": "EDGE-060",
+      "type": "certified_by",
+      "source": "TB-20260426-107",
+      "target": "CERT-NORTHSTAR-MATERIAL-UI"
+    },
+    {
+      "id": "EDGE-061",
+      "type": "verifies",
+      "source": "EVD-NORTHSTAR-MATERIAL-UI",
+      "target": "REQ-NORTHSTAR-001"
+    },
+    {
+      "id": "EDGE-062",
+      "type": "evidenced_by",
+      "source": "ART-NORTHSTAR-APP",
+      "target": "EVD-NORTHSTAR-MATERIAL-UI"
+    },
+    {
+      "id": "EDGE-063",
+      "type": "tracked_by",
+      "source": "TB-20260426-108",
+      "target": "WLI-NORTHSTAR-HUMAN-PORTAL"
+    },
+    {
+      "id": "EDGE-064",
+      "type": "gated_by",
+      "source": "TB-20260426-108",
+      "target": "GATE-NORTHSTAR-HUMAN-PORTAL-PASS"
+    },
+    {
+      "id": "EDGE-065",
+      "type": "evidenced_by",
+      "source": "ART-NORTHSTAR-HUMAN-PORTAL",
+      "target": "EVD-NORTHSTAR-HUMAN-PORTAL"
+    },
+    {
+      "id": "EDGE-066",
+      "type": "reviewed_by",
+      "source": "ART-NORTHSTAR-HUMAN-PORTAL",
+      "target": "REVIEW-NORTHSTAR-HUMAN-PORTAL"
+    },
+    {
+      "id": "EDGE-067",
+      "type": "certified_by",
+      "source": "ART-NORTHSTAR-HUMAN-PORTAL",
+      "target": "CERT-NORTHSTAR-HUMAN-PORTAL"
+    },
+    {
+      "id": "EDGE-068",
+      "type": "next_bead",
+      "source": "TB-20260426-108",
+      "target": "RUN-CLOSED"
+    },
+    {
+      "id": "EDGE-069",
+      "type": "tracked_by",
+      "source": "CGN-NORTHSTAR-HUMAN-PORTAL",
+      "target": "TB-20260426-108"
+    },
+    {
+      "id": "EDGE-070",
+      "type": "certified_by",
+      "source": "TB-20260426-108",
+      "target": "CERT-NORTHSTAR-HUMAN-PORTAL"
+    },
+    {
+      "id": "EDGE-071",
+      "type": "verifies",
+      "source": "EVD-NORTHSTAR-HUMAN-PORTAL",
+      "target": "REQ-NORTHSTAR-001"
+    },
+    {
+      "id": "EDGE-072",
+      "type": "evidenced_by",
+      "source": "ART-NORTHSTAR-BOOK",
+      "target": "EVD-NORTHSTAR-HUMAN-PORTAL"
+    }
+  ],
+  "waivers": []
+}

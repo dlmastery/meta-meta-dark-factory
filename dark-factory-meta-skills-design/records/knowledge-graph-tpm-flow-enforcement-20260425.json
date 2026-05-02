@@ -1,0 +1,363 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+    "strict_compliance": "Mandatory. Every claim must be project-specific, evidence-backed, trace-linked, reviewer-challenged, and free of unsupported invention.",
+    "missing_evidence_rule": "If evidence is missing, mark it as an assumption, risk, open question, or failure."
+  },
+  "template_only": false,
+  "record_id": "KG-TPM-FLOW-20260425",
+  "title": "TPM Flow And AI Jury Enforcement Knowledge Graph",
+  "project": {
+    "name": "Software-Assured Standardized Dark Factory Meta-Meta Skill System",
+    "run_id": "RUN-DFMS-TPM-FLOW-20260425",
+    "attractor_state": "stable",
+    "control_graph_id": "CG-DFMS-TPM-FLOW",
+    "work_ledger_id": "WL-DFMS-TPM-FLOW",
+    "tasks_md_path": "dark-factory-meta-skills-design/TASKS.md",
+    "project_book_root": "dark-factory-meta-skills-design"
+  },
+  "governance": {
+    "standards_basis": [
+      "ISO/IEC/IEEE 12207:2017",
+      "ISO/IEC/IEEE 15289:2019",
+      "SWEBOK",
+      "RUP",
+      "MDA",
+      "DDD",
+      "TDD/BDD",
+      "SRE"
+    ],
+    "token_budget_policy": {
+      "required_for_material_work": true,
+      "current_swag_band": "low for focused TPM flow enforcement update",
+      "approval_state": "user_requested_quality_first_update",
+      "reapproval_triggers": [
+        "full runtime enforcement engine",
+        "visual PERT UI",
+        "multi-agent automated judge execution"
+      ]
+    },
+    "change_control_policy": {
+      "required_for_scope_or_budget_change": true,
+      "open_change_requests": []
+    }
+  },
+  "nodes": [
+    {
+      "id": "INTENT-TPM-FLOW-001",
+      "type": "intent",
+      "title": "Strict workflow enforcement",
+      "status": "accepted",
+      "owner": "client",
+      "summary": "User requested strict ledger taskflow, PERT-style dependency control, and AI judge/jury assurance so agents do not skip steps."
+    },
+    {
+      "id": "REQ-TPM-FLOW-001",
+      "type": "requirement",
+      "title": "TPM flow ledger enforcement",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "Every governed step must have state, owner, dependencies, evidence, gate, judge/jury verdict, and next step."
+    },
+    {
+      "id": "RISK-TPM-FLOW-001",
+      "type": "risk",
+      "title": "AI agent skips workflow steps",
+      "status": "mitigated",
+      "owner": "Codex",
+      "summary": "Agent may rush, forget context, fake done, or choose work from chat memory instead of the ledger."
+    },
+    {
+      "id": "DEC-TPM-FLOW-001",
+      "type": "decision",
+      "title": "Use AI judge/jury for routine transition approval",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "AI judge/jury can approve routine execution inside approved scope; humans remain boundary approvers."
+    },
+    {
+      "id": "CG-NODE-TPM-FLOW-001",
+      "type": "control_graph_node",
+      "title": "TPM flow enforcement node",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "Control graph node for adding TPM ledger, PERT, and AI judge/jury enforcement."
+    },
+    {
+      "id": "WL-TPM-FLOW-001",
+      "type": "work_ledger_item",
+      "title": "TPM flow enforcement work item",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "Work ledger item for the focused TPM flow enforcement update."
+    },
+    {
+      "id": "TB-20260425-005",
+      "type": "task_bead",
+      "title": "Add strict TPM flow and AI jury enforcement",
+      "status": "accepted",
+      "state": "accepted",
+      "owner": "Codex",
+      "summary": "Created design, templates, validator, instantiated TPM records, and live skill hooks.",
+      "control_graph_node": "CG-NODE-TPM-FLOW-001",
+      "work_ledger_item": "WL-TPM-FLOW-001",
+      "evidence_provided": [
+        "EVD-TPM-FLOW-001"
+      ],
+      "gate": "GATE-TPM-FLOW-001",
+      "next_bead": "RUN-CLOSED"
+    },
+    {
+      "id": "TB-20260425-009",
+      "type": "task_bead",
+      "title": "Add Hawkeye conformance auditor",
+      "status": "accepted",
+      "state": "accepted",
+      "owner": "Codex",
+      "summary": "Added Hawkeye Conformance Auditor template, validator, audit record, execution-kernel hook, and live skill gates.",
+      "control_graph_node": "CG-NODE-HAWKEYE-001",
+      "work_ledger_item": "WL-HAWKEYE-001",
+      "evidence_provided": [
+        "EVD-HAWKEYE-001"
+      ],
+      "gate": "GATE-HAWKEYE-001",
+      "next_bead": "RUN-CLOSED"
+    },
+    {
+      "id": "ART-TPM-FLOW-001",
+      "type": "artifact",
+      "title": "Legendary TPM flow ledger and AI jury enforcement design",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "Design record and templates for TPM flow, PERT, and AI judge/jury enforcement."
+    },
+    {
+      "id": "ART-TEMPLATE-TPM-FLOW-001",
+      "type": "artifact_template",
+      "title": "TPM flow enforcement template set",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "Reusable TPM flow, PERT, and AI judge/jury templates. These are not proof by themselves."
+    },
+    {
+      "id": "RUBRIC-TPM-FLOW-001",
+      "type": "rubric",
+      "title": "TPM workflow enforcement rubric",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "Focused rubric covering dependency order, next-step discipline, judge/jury transition proof, evidence, and anti-skip controls."
+    },
+    {
+      "id": "REVIEW-TPM-FLOW-001",
+      "type": "review_record",
+      "title": "AI judge/jury workflow review",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "Review record for the TPM flow enforcement update."
+    },
+    {
+      "id": "RALPH-TPM-FLOW-001",
+      "type": "ralph_loop",
+      "title": "Workflow skipping RALPH hardening loop",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "Focused hardening loop for workflow-skipping, context-rot, fake-completion, and reward-hacking risk."
+    },
+    {
+      "id": "EVD-TPM-FLOW-001",
+      "type": "evidence",
+      "title": "TPM flow enforcement evidence",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "Design, templates, validator, instantiated flow records, and skill hooks exist and validate structurally."
+    },
+    {
+      "id": "ART-HAWKEYE-001",
+      "type": "artifact",
+      "title": "Hawkeye conformance auditor package",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "Design, template, validator, instantiated audit record, execution-kernel hook, and live skill gates for Hawkeye conformance."
+    },
+    {
+      "id": "EVD-HAWKEYE-001",
+      "type": "evidence",
+      "title": "Hawkeye conformance validation evidence",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "Hawkeye audit record validates, template is rejected as proof, and execution kernel includes Hawkeye audit."
+    },
+    {
+      "id": "CERT-HAWKEYE-001",
+      "type": "certificate",
+      "title": "Focused Hawkeye conformance certificate",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "Focused certificate for the Hawkeye conformance auditor addition."
+    },
+    {
+      "id": "CERT-TPM-FLOW-001",
+      "type": "certificate",
+      "title": "Focused TPM flow enforcement certificate",
+      "status": "accepted",
+      "owner": "Codex",
+      "summary": "Focused certificate that the TPM flow, PERT, and AI judge/jury enforcement layer was added. Future full runs still require artifact-specific semantic review."
+    }
+  ],
+  "edges": [
+    {
+      "id": "EDGE-TPM-FLOW-001",
+      "type": "derives_from",
+      "source": "REQ-TPM-FLOW-001",
+      "target": "INTENT-TPM-FLOW-001",
+      "rationale": "The enforcement requirement derives from the user's strict workflow concern."
+    },
+    {
+      "id": "EDGE-TPM-FLOW-002",
+      "type": "decomposes_to",
+      "source": "REQ-TPM-FLOW-001",
+      "target": "TB-20260425-005",
+      "rationale": "The requirement decomposes into the implementation bead."
+    },
+    {
+      "id": "EDGE-TPM-FLOW-003",
+      "type": "satisfies",
+      "source": "ART-TPM-FLOW-001",
+      "target": "REQ-TPM-FLOW-001",
+      "rationale": "The design and templates satisfy the flow-enforcement requirement."
+    },
+    {
+      "id": "EDGE-TPM-FLOW-004",
+      "type": "verifies",
+      "source": "EVD-TPM-FLOW-001",
+      "target": "ART-TPM-FLOW-001",
+      "rationale": "Validation and file evidence verify the artifact exists."
+    },
+    {
+      "id": "EDGE-TPM-FLOW-005",
+      "type": "tracked_by",
+      "source": "REQ-TPM-FLOW-001",
+      "target": "WL-TPM-FLOW-001",
+      "rationale": "The work item tracks the enforcement requirement."
+    },
+    {
+      "id": "EDGE-TPM-FLOW-006",
+      "type": "gated_by",
+      "source": "TB-20260425-005",
+      "target": "CERT-TPM-FLOW-001",
+      "rationale": "The accepted bead is gated by the focused certificate."
+    },
+    {
+      "id": "EDGE-TPM-FLOW-007",
+      "type": "reviewed_by",
+      "source": "ART-TPM-FLOW-001",
+      "target": "DEC-TPM-FLOW-001",
+      "rationale": "The decision records the judge/jury governance review outcome."
+    },
+    {
+      "id": "EDGE-TPM-FLOW-008",
+      "type": "evidenced_by",
+      "source": "TB-20260425-005",
+      "target": "EVD-TPM-FLOW-001",
+      "rationale": "The bead is backed by enforcement evidence."
+    },
+    {
+      "id": "EDGE-TPM-FLOW-009",
+      "type": "certified_by",
+      "source": "ART-TPM-FLOW-001",
+      "target": "CERT-TPM-FLOW-001",
+      "rationale": "The focused certificate covers the design artifact."
+    },
+    {
+      "id": "EDGE-TPM-FLOW-010",
+      "type": "next_bead",
+      "source": "TB-20260425-005",
+      "target": "CERT-TPM-FLOW-001",
+      "rationale": "The bead closes into the focused certificate for this pass."
+    },
+    {
+      "id": "EDGE-TPM-FLOW-011",
+      "type": "mitigates",
+      "source": "DEC-TPM-FLOW-001",
+      "target": "RISK-TPM-FLOW-001",
+      "rationale": "AI judge/jury and TPM flow controls mitigate step-skipping risk."
+    },
+    {
+      "id": "EDGE-TPM-FLOW-012",
+      "type": "evidenced_by",
+      "source": "ART-TPM-FLOW-001",
+      "target": "EVD-TPM-FLOW-001",
+      "rationale": "The accepted artifact is backed by explicit evidence."
+    },
+    {
+      "id": "EDGE-TPM-FLOW-013",
+      "type": "reviewed_by",
+      "source": "ART-TPM-FLOW-001",
+      "target": "REVIEW-TPM-FLOW-001",
+      "rationale": "The accepted artifact links to its focused judge/jury review."
+    },
+    {
+      "id": "EDGE-TPM-FLOW-014",
+      "type": "satisfies",
+      "source": "ART-TEMPLATE-TPM-FLOW-001",
+      "target": "REQ-TPM-FLOW-001",
+      "rationale": "The reusable template set supports future instantiation of the requirement."
+    },
+    {
+      "id": "EDGE-TPM-FLOW-015",
+      "type": "verifies",
+      "source": "RUBRIC-TPM-FLOW-001",
+      "target": "ART-TPM-FLOW-001",
+      "rationale": "The focused rubric verifies the workflow-control quality concerns."
+    },
+    {
+      "id": "EDGE-TPM-FLOW-016",
+      "type": "reviewed_by",
+      "source": "RALPH-TPM-FLOW-001",
+      "target": "REVIEW-TPM-FLOW-001",
+      "rationale": "The focused RALPH loop is reviewed by the judge/jury review."
+    },
+    {
+      "id": "EDGE-HAWKEYE-001",
+      "type": "evidenced_by",
+      "source": "TB-20260425-009",
+      "target": "EVD-HAWKEYE-001",
+      "rationale": "The Hawkeye bead is backed by validation evidence."
+    },
+    {
+      "id": "EDGE-HAWKEYE-002",
+      "type": "satisfies",
+      "source": "ART-HAWKEYE-001",
+      "target": "REQ-TPM-FLOW-001",
+      "rationale": "Hawkeye strengthens the strict workflow enforcement requirement."
+    },
+    {
+      "id": "EDGE-HAWKEYE-003",
+      "type": "evidenced_by",
+      "source": "ART-HAWKEYE-001",
+      "target": "EVD-HAWKEYE-001",
+      "rationale": "The accepted Hawkeye artifact is backed by evidence."
+    },
+    {
+      "id": "EDGE-HAWKEYE-004",
+      "type": "certified_by",
+      "source": "ART-HAWKEYE-001",
+      "target": "CERT-HAWKEYE-001",
+      "rationale": "The focused Hawkeye certificate covers the conformance auditor addition."
+    },
+    {
+      "id": "EDGE-HAWKEYE-005",
+      "type": "gated_by",
+      "source": "TB-20260425-009",
+      "target": "CERT-HAWKEYE-001",
+      "rationale": "The Hawkeye task bead is gated by focused certificate."
+    }
+  ],
+  "waivers": [],
+  "quality_gate": {
+    "status": "passed",
+    "validator": "scripts/validate_knowledge_graph.py",
+    "last_run": "2026-04-25",
+    "findings": []
+  }
+}

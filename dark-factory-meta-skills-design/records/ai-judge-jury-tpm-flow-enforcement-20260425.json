@@ -1,0 +1,107 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+    "strict_compliance": "Mandatory. Every claim must be project-specific, evidence-backed, trace-linked, reviewer-challenged, and free of unsupported invention.",
+    "missing_evidence_rule": "If evidence is missing, mark it as an assumption, risk, open question, or failure."
+  },
+  "template_only": false,
+  "record_id": "JURY-TPM-FLOW-20260425",
+  "run_id": "RUN-DFMS-TPM-FLOW-20260425",
+  "step_id": "STEP-TPM-FLOW-001",
+  "bead_id": "TB-20260425-005",
+  "transition": {
+    "from_state": "jury_review",
+    "to_state": "accepted",
+    "requested_by": "Codex",
+    "requested_at": "2026-04-25",
+    "rationale": "Accept focused TPM flow, PERT, and AI judge/jury enforcement layer after structural validation."
+  },
+  "roles": {
+    "tpm_judge": {
+      "persona_contract": "Elite technical program manager accountable for dependency order, state discipline, current/next step clarity, risk surfacing, and checkpoint integrity.",
+      "decision_rights": [
+        "reject skipped dependencies",
+        "reject missing next step",
+        "reject stale or ownerless work"
+      ],
+      "vote": "pass",
+      "findings": []
+    },
+    "evidence_clerk": {
+      "persona_contract": "Audit-grade evidence controller accountable for rejecting unsupported claims, template-as-proof, placeholders, stale validations, and unlinked outputs.",
+      "decision_rights": [
+        "reject missing evidence",
+        "reject template-as-proof",
+        "reject placeholder proof"
+      ],
+      "vote": "pass",
+      "findings": []
+    },
+    "standards_juror": {
+      "persona_contract": "Standards and lifecycle juror accountable for mapping workflow controls to SDLC, governance, traceability, verification, and stage-gate discipline.",
+      "vote": "pass",
+      "findings": []
+    },
+    "domain_artifact_juror": {
+      "persona_contract": "DFMS artifact-system juror accountable for checking that the new controls fit the meta-meta skill hierarchy and do not overfit to one example project.",
+      "vote": "pass",
+      "findings": []
+    },
+    "verification_juror": {
+      "persona_contract": "Verification juror accountable for checking structural validators, dependency checks, accepted-state proof, and negative template rejection.",
+      "vote": "pass",
+      "findings": []
+    },
+    "adversarial_prosecutor": {
+      "persona_contract": "Adversarial workflow prosecutor accountable for proving skipped steps, fake completion, hallucinated proof, reward hacking, context rot, or weak next-action control.",
+      "attack_mandate": [
+        "prove skipped steps",
+        "prove fake completion",
+        "prove hallucinated or unsupported claims",
+        "prove reward hacking"
+      ],
+      "stand_down": true,
+      "attacks": [
+        {
+          "attack": "Could this remain prose-only?",
+          "result": "Mitigated by JSON templates, instantiated records, validator, and live skill hooks."
+        },
+        {
+          "attack": "Could an agent skip to acceptance?",
+          "result": "Mitigated by PERT predecessor checks, judge/jury record requirement, evidence requirement, and next-step discipline."
+        }
+      ]
+    },
+    "jury_foreperson": {
+      "persona_contract": "Jury foreperson accountable for preserving dissent, synthesizing votes, and ensuring any failed attack creates rework before pass.",
+      "synthesis": "Focused TPM flow enforcement is acceptable as a structural layer. It does not replace future full semantic review or runtime graph UI.",
+      "verdict": "pass",
+      "dissent": [],
+      "required_patch_beads": []
+    }
+  },
+  "evidence_reviewed": [
+    "dark-factory-meta-skills-design/42-legendary-tpm-flow-ledger-and-ai-jury-enforcement.md",
+    "dark-factory-meta-skills-design/templates/tpm-flow-ledger.json",
+    "dark-factory-meta-skills-design/templates/factory-pert-plan.json",
+    "dark-factory-meta-skills-design/templates/ai-judge-jury-record.json",
+    "dark-factory-meta-skills-design/scripts/validate_tpm_flow.py"
+  ],
+  "dependency_check": {
+    "predecessors_accepted_or_waived": true,
+    "pert_next_step_valid": true,
+    "current_bead_matches": true
+  },
+  "verdict": {
+    "outcome": "pass",
+    "conditions": [
+      "Future governed runs must keep TPM flow ledger, PERT plan, TASKS.md, and knowledge graph in sync."
+    ],
+    "residual_risks": [
+      "Structural validation does not replace artifact-specific expert semantic review."
+    ],
+    "next_step_id": "RUN-CLOSED",
+    "next_bead_id": "RUN-CLOSED"
+  },
+  "template_marker": false
+}

@@ -1,0 +1,145 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+    "strict_compliance": "Mandatory. Every claim must be project-specific, evidence-backed, trace-linked, reviewer-challenged, and free of unsupported invention.",
+    "missing_evidence_rule": "If evidence is missing, mark it as an assumption, risk, open question, or failure."
+  },
+  "template_only": true,
+  "record_id": "KG-000",
+  "title": "",
+  "project": {
+    "name": "",
+    "run_id": "",
+    "attractor_state": "forming",
+    "control_graph_id": "",
+    "work_ledger_id": "",
+    "tasks_md_path": "",
+    "project_book_root": ""
+  },
+  "governance": {
+    "standards_basis": [
+      "ISO/IEC/IEEE 12207:2017",
+      "ISO/IEC/IEEE 15289:2019",
+      "SWEBOK",
+      "RUP",
+      "MDA",
+      "DDD",
+      "TDD/BDD",
+      "SRE",
+      "OWASP SAMM/SSDF where applicable"
+    ],
+    "token_budget_policy": {
+      "required_for_material_work": true,
+      "current_swag_band": "",
+      "approval_state": "pending",
+      "reapproval_triggers": []
+    },
+    "change_control_policy": {
+      "required_for_scope_or_budget_change": true,
+      "open_change_requests": []
+    }
+  },
+  "node_type_registry": [
+    "intent",
+    "interrogation_answer",
+    "requirement",
+    "nfr",
+    "assumption",
+    "risk",
+    "decision",
+    "control_graph_node",
+    "work_ledger_item",
+    "task_bead",
+    "artifact",
+    "artifact_template",
+    "rubric",
+    "expert_role",
+    "review_record",
+    "ralph_loop",
+    "evidence",
+    "test",
+    "code_change",
+    "handoff",
+    "certificate",
+    "memory_pack",
+    "lesson"
+  ],
+  "edge_type_registry": [
+    "derives_from",
+    "decomposes_to",
+    "answers",
+    "satisfies",
+    "implements",
+    "verifies",
+    "mitigates",
+    "raises",
+    "decides",
+    "supersedes",
+    "depends_on",
+    "blocks",
+    "tracked_by",
+    "gated_by",
+    "reviewed_by",
+    "attacked_by",
+    "requires_patch",
+    "patched_by",
+    "hardened_by",
+    "evidenced_by",
+    "certified_by",
+    "waived_by",
+    "hands_off_to",
+    "resumes_from",
+    "learns_from",
+    "next_bead"
+  ],
+  "nodes": [
+    {
+      "id": "INTENT-001",
+      "type": "intent",
+      "title": "Example human steering intent",
+      "status": "draft",
+      "owner": "client",
+      "summary": "Replace this with a real user intent, transcript excerpt, or approved engagement statement.",
+      "source": {
+        "kind": "example",
+        "reference": "Replace with real source reference"
+      },
+      "required_for_acceptance": false,
+      "template_marker": true
+    },
+    {
+      "id": "TB-00000000-001",
+      "type": "task_bead",
+      "title": "Example task bead",
+      "status": "queued",
+      "owner": "dark-factory-delivery-owner",
+      "summary": "Replace with the smallest governed next action.",
+      "state": "queued",
+      "control_graph_node": "CG-NODE-001",
+      "work_ledger_item": "WL-001",
+      "evidence_required": [],
+      "evidence_provided": [],
+      "gate": "",
+      "next_bead": "",
+      "template_marker": true
+    }
+  ],
+  "edges": [
+    {
+      "id": "EDGE-001",
+      "type": "decomposes_to",
+      "source": "INTENT-001",
+      "target": "TB-00000000-001",
+      "rationale": "Example only. Replace with a real decomposition edge.",
+      "evidence": [],
+      "template_marker": true
+    }
+  ],
+  "waivers": [],
+  "quality_gate": {
+    "status": "not_evaluated",
+    "validator": "scripts/validate_knowledge_graph.py",
+    "last_run": "",
+    "findings": []
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+  },
+  "template_only": false,
+  "panel_id": "PANEL-NORTHSTAR-CERT-READY-20260426-001",
+  "bead_id": "TB-20260426-105",
+  "roles": [
+    {
+      "role": "Accessibility Certification Lead",
+      "persona_contract": "Principal accessibility reviewer accountable for rejecting unlabeled controls, insufficient contrast, broken skip links, keyboard traps, and touch targets below practical minimums.",
+      "rejects": "Certification readiness when accessible names, contrast, keyboard path, ARIA state, or target sizing are unproven.",
+      "vote": "pass"
+    },
+    {
+      "role": "Standards Certification Readiness Lead",
+      "persona_contract": "Governance auditor accountable for separating internal readiness from external accredited certification and ensuring the certificate does not overclaim.",
+      "rejects": "Any wording that implies external certification without an external certifying body.",
+      "vote": "pass"
+    },
+    {
+      "role": "Verification Automation Lead",
+      "persona_contract": "Test architect accountable for converting certification risks into executable checks with structured evidence.",
+      "rejects": "Prose-only certification closure or non-repeatable manual confidence.",
+      "vote": "pass"
+    },
+    {
+      "role": "Hawkeye Conformance Auditor",
+      "persona_contract": "Independent process auditor with veto authority over skipped beads, stale evidence, missing trace links, and illegal next actions.",
+      "rejects": "Certification pass without task, TPM, PERT, KG, Hawkeye, jury, and kernel alignment.",
+      "vote": "pass"
+    },
+    {
+      "role": "Adversarial Anti-Slop Prosecutor",
+      "persona_contract": "Red-team critic accountable for attacking fake certification, checkbox accessibility, and hidden residual risk.",
+      "rejects": "Reward-hacked audit language and unverified certification claims.",
+      "vote": "stand_down"
+    }
+  ],
+  "panel_result": "pass",
+  "evidence_reviewed": [
+    "project-book/12-certification-readiness-hardening-record.md",
+    "tests/accessibility-certification-audit.cjs",
+    "project-book/evidence/accessibility-certification-results.json",
+    "project-book/evidence/certification-readiness-certificate.json"
+  ]
+}

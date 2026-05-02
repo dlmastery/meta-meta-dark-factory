@@ -1,0 +1,36 @@
+{
+  "id": "CERT-VALIDATION-001",
+  "artifact": "ART-VALIDATION-001",
+  "status": "pass",
+  "reviewers": [
+    "requirements-governance-architect",
+    "verification-safety-critic",
+    "delivery-operations-lead"
+  ],
+  "scores": {
+    "requirements-governance-architect": 100,
+    "verification-safety-critic": 100,
+    "delivery-operations-lead": 100
+  },
+  "threshold_percent": 96,
+  "panel_score_record": "EVD-RUBRIC-PANEL-VALIDATION",
+  "independent_review_evidence": [
+    "independent reviews recorded for all reviewers"
+  ],
+  "cross_critique_evidence": [
+    "cross critique completed and synthesized"
+  ],
+  "failed_point_fix_evidence": [
+    "no failed rubric points in this positive validation fixture"
+  ],
+  "refinery_gate": "RFG-VALIDATION-001",
+  "evidence": [
+    "refinery-gate-pass.yaml",
+    "score-pass.json",
+    "DFMS hardening checks complete"
+  ],
+  "residual_risks": [
+    "Fixture proves certificate structure, not semantic truth."
+  ],
+  "waivers": []
+}

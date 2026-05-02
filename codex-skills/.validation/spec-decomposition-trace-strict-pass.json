@@ -1,0 +1,117 @@
+[
+  {
+    "id": "ITR-VALIDATION-001",
+    "type": "evidence"
+  },
+  {
+    "id": "NODE-SPEC-001",
+    "type": "evidence"
+  },
+  {
+    "id": "NODE-SPEC-002",
+    "type": "evidence"
+  },
+  {
+    "id": "WL-SPEC-001",
+    "status": "accepted",
+    "next_action": "Use recursive spec decomposition before artifact expansion.",
+    "links": {
+      "requirements": ["REQ-SPEC-001", "REQ-SPEC-002"],
+      "artifacts": ["SDR-VALIDATION-001"],
+      "tests": ["TST-SPEC-001", "TST-SPEC-002"],
+      "control_graph_nodes": ["NODE-SPEC-001", "NODE-SPEC-002"],
+      "gated_by": ["RFG-SPEC-001"]
+    }
+  },
+  {
+    "id": "RFG-SPEC-001",
+    "status": "pass",
+    "evidence": {
+      "test_reports": ["TST-SPEC-001", "TST-SPEC-002"],
+      "rubric_scorecards": ["EVD-SPEC-RUBRIC-001"],
+      "trace_reports": ["EVD-SPEC-TRACE-001"],
+      "certificates": ["CERT-SPEC-001"]
+    }
+  },
+  {
+    "id": "REQ-SPEC-001",
+    "source": "ITR-VALIDATION-001",
+    "statement": "Branch interviews capture answer IDs, contradictions, and approval before requirement freeze.",
+    "owner": "requirements-lead",
+    "status": "accepted",
+    "links": {
+      "verifies": ["TST-SPEC-001"],
+      "routes_to": ["NODE-SPEC-001"],
+      "tracked_by": ["WL-SPEC-001"],
+      "gated_by": ["RFG-SPEC-001"]
+    }
+  },
+  {
+    "id": "REQ-SPEC-002",
+    "source": "ITR-VALIDATION-001",
+    "statement": "Recursive decomposition leaves are atomic, testable, and trace complete.",
+    "owner": "verification-lead",
+    "status": "accepted",
+    "links": {
+      "verifies": ["TST-SPEC-002"],
+      "routes_to": ["NODE-SPEC-002"],
+      "tracked_by": ["WL-SPEC-001"],
+      "gated_by": ["RFG-SPEC-001"]
+    }
+  },
+  {
+    "id": "SDR-VALIDATION-001",
+    "status": "accepted",
+    "standard_basis": [
+      "ISO/IEC/IEEE 29148",
+      "ISO/IEC/IEEE 15289",
+      "RUP use-case decomposition",
+      "Agile story slicing",
+      "DDD domain decomposition"
+    ],
+    "reviewers": [
+      "requirements-decomposition-lead",
+      "product-owner",
+      "verification-lead"
+    ],
+    "evidence": [
+      "EVD-SPEC-RUBRIC-001",
+      "EVD-SPEC-TRACE-001"
+    ],
+    "residual_risks": [],
+    "links": {
+      "derives_from": ["ITR-VALIDATION-001"],
+      "satisfies": ["REQ-SPEC-001", "REQ-SPEC-002"],
+      "verified_by": ["TST-SPEC-001", "TST-SPEC-002"],
+      "routes_to": ["NODE-SPEC-001"],
+      "tracked_by": ["WL-SPEC-001"],
+      "gated_by": ["RFG-SPEC-001"]
+    }
+  },
+  {
+    "id": "TST-SPEC-001",
+    "type": "evidence",
+    "links": {
+      "verifies": ["REQ-SPEC-001", "SDR-VALIDATION-001"]
+    }
+  },
+  {
+    "id": "TST-SPEC-002",
+    "type": "evidence",
+    "links": {
+      "verifies": ["REQ-SPEC-002", "SDR-VALIDATION-001"]
+    }
+  },
+  {
+    "id": "EVD-SPEC-RUBRIC-001",
+    "type": "evidence"
+  },
+  {
+    "id": "EVD-SPEC-TRACE-001",
+    "type": "evidence"
+  },
+  {
+    "id": "CERT-SPEC-001",
+    "type": "evidence"
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+  },
+  "template_only": false,
+  "kernel_status": "closed",
+  "current_step_id": "RUN-CLOSED",
+  "current_bead_id": "RUN-CLOSED",
+  "legal_next_action": "stop; open a new bead or change request before continuing",
+  "legal_next_step_id": "",
+  "legal_next_bead_id": "",
+  "blocked_reasons": [],
+  "consistency": {
+    "tasks_active_beads": [],
+    "tasks_accepted_beads": [
+      "TB-20260425-001",
+      "TB-20260425-002",
+      "TB-20260425-003",
+      "TB-20260425-004",
+      "TB-20260425-005",
+      "TB-20260425-006",
+      "TB-20260425-007",
+      "TB-20260425-008",
+      "TB-20260425-009"
+    ],
+    "ledger_steps": [
+      "STEP-TPM-FLOW-001"
+    ],
+    "knowledge_graph_task_beads": [
+      "TB-20260425-005",
+      "TB-20260425-009"
+    ],
+    "sdlc_coverage_matrix": "SDLC-COVERAGE-DFMS-META-SKILL-20260425",
+    "hawkeye_audit": "HAWKEYE-DFMS-20260425"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "WL-PASS21B-001",
+  "title": "Ralph loop pass 21B meta-meta control-plane hardening",
+  "current_state": "accepted",
+  "next_action": "Require the stricter merged-record validator before future governed DFMS runs claim a stable control plane.",
+  "revalidation_trigger": "Any future finding that merged records can pass without required attractor outputs, node contracts, or cross-record references.",
+  "owner": {
+    "accountable": "codex",
+    "responsible": "codex"
+  },
+  "acceptance_criteria": [
+    "Pass 21B findings documented",
+    "Meta-attractor required outputs enforced",
+    "Control graph node contract, expert panel, rubric, feedback, and gate fields enforced",
+    "Merged control-plane record IDs cross-reference each other",
+    "Validation runner includes negative rejection cases"
+  ],
+  "evidence_required": [
+    "pass21B critic/fix record",
+    "DFMS hardening runner output",
+    "merged control-plane validation",
+    "installed/workspace hash comparison"
+  ],
+  "evidence_provided": [
+    "21B-ralph-loop-critic-review-and-fix-record.md",
+    "DFMS hardening checks complete",
+    "ATTR-PASS21B-001",
+    "CG-PASS21B-001",
+    "RFG-PASS21B-001",
+    "records/pass21b merged records",
+    "INSTALLED_WORKSPACE_HASHES_MATCH"
+  ]
+}

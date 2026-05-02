@@ -1,0 +1,215 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+  },
+  "template_only": false,
+  "matrix_id": "SDLC-NORTHSTAR-20260425-001",
+  "run_id": "DFRUN-NORTHSTAR-20260425-001",
+  "project_type_flags": {
+    "artifact_only": false,
+    "planning_phase_only": false,
+    "skill_system_revision": false,
+    "code_producing": true,
+    "ui_surface": true,
+    "api_surface": false,
+    "data_surface": true,
+    "production_surface": false,
+    "brownfield": false,
+    "scenario_driven": true
+  },
+  "stages": [
+    {
+      "stage_id": "meta_attractor",
+      "required": true,
+      "status": "accepted",
+      "owner": "Codex",
+      "exit_evidence": "project-book/records/product-tailoring-profile.json",
+      "gate": "Generated meta-skill contract validates"
+    },
+    {
+      "stage_id": "engagement_governance",
+      "required": true,
+      "status": "accepted",
+      "owner": "Codex",
+      "exit_evidence": "project-book/records/engagement-governance-record.json",
+      "gate": "Scope, token SWAG, owner, and change triggers recorded"
+    },
+    {
+      "stage_id": "intake_interrogation",
+      "required": true,
+      "status": "accepted",
+      "owner": "Codex",
+      "exit_evidence": "project-book/records/interrogation-record.json",
+      "gate": "Interrogation package validated"
+    },
+    {
+      "stage_id": "recursive_spec_decomposition",
+      "required": true,
+      "status": "accepted",
+      "owner": "Codex",
+      "exit_evidence": "project-book/records/spec-decomposition-record.json",
+      "gate": "Spec decomposition validator passes"
+    },
+    {
+      "stage_id": "feasibility_risk",
+      "required": true,
+      "status": "accepted",
+      "owner": "Codex",
+      "exit_evidence": "project-book/02-prd.md#risks",
+      "gate": "Risks and non-scope explicit"
+    },
+    {
+      "stage_id": "inception_charter",
+      "required": true,
+      "status": "accepted",
+      "owner": "Codex",
+      "exit_evidence": "project-book/00-factory-run-summary.md",
+      "gate": "Run identity, scope, approvals, and token SWAG recorded"
+    },
+    {
+      "stage_id": "architecture_design",
+      "required": true,
+      "status": "accepted",
+      "owner": "Codex",
+      "exit_evidence": "project-book/03-architecture.md",
+      "gate": "Architecture and domain model documented"
+    },
+    {
+      "stage_id": "planning_pert",
+      "required": true,
+      "status": "accepted",
+      "owner": "Codex",
+      "exit_evidence": "project-book/records/factory-pert-plan.json",
+      "gate": "PERT and TPM validators pass"
+    },
+    {
+      "stage_id": "construction_implementation",
+      "required": true,
+      "status": "accepted",
+      "owner": "Codex",
+      "exit_evidence": "app/index.html, app/styles.css, app/app.js",
+      "gate": "Working static app files exist"
+    },
+    {
+      "stage_id": "verification_validation",
+      "required": true,
+      "status": "accepted",
+      "owner": "Codex",
+      "exit_evidence": "tests/core.test.cjs and tests/browser-wysiwyg.test.cjs",
+      "gate": "Unit and scenario-browser checks pass"
+    },
+    {
+      "stage_id": "security_abuse_testing",
+      "required": true,
+      "status": "accepted",
+      "owner": "Codex",
+      "exit_evidence": "project-book/03-architecture.md#security-and-privacy",
+      "gate": "No network calls, no third-party scripts, escaped dynamic HTML"
+    },
+    {
+      "stage_id": "ui_wysiwyg_browser_testing",
+      "required": true,
+      "status": "accepted",
+      "owner": "Codex",
+      "exit_evidence": "project-book/evidence/browser-wysiwyg-results.json",
+      "gate": "Desktop and mobile Playwright checks pass"
+    },
+    {
+      "stage_id": "material_design_system_conformance",
+      "required": true,
+      "status": "accepted",
+      "owner": "Codex",
+      "exit_evidence": "project-book/14-material-ui-standards-conformance-record.md",
+      "gate": "Material token, accessibility, browser, and review evidence pass"
+    },
+    {
+      "stage_id": "human_review_onboarding_portal",
+      "required": true,
+      "status": "accepted",
+      "owner": "Codex",
+      "exit_evidence": "project-book/portal/index.html and project-book/portal/portal-data.json",
+      "gate": "All top-level Markdown, records, root evidence, screenshots, Mermaid sources, and role paths are indexed and validated"
+    },
+    {
+      "stage_id": "performance_reliability",
+      "required": true,
+      "status": "accepted",
+      "owner": "Codex",
+      "exit_evidence": "Static app with no remote dependency and core test pass",
+      "gate": "No build step or external runtime service required"
+    },
+    {
+      "stage_id": "release_transition",
+      "required": false,
+      "status": "not_applicable",
+      "owner": "Codex",
+      "rationale": "No production release in this first local-static slice."
+    },
+    {
+      "stage_id": "operations_sre",
+      "required": false,
+      "status": "not_applicable",
+      "owner": "Codex",
+      "rationale": "No hosted service exists; runbook records local operation."
+    },
+    {
+      "stage_id": "maintenance_brownfield",
+      "required": false,
+      "status": "not_applicable",
+      "owner": "Codex",
+      "rationale": "Greenfield app with no pre-existing codebase."
+    },
+    {
+      "stage_id": "retrospective_learning",
+      "required": true,
+      "status": "accepted",
+      "owner": "Codex",
+      "exit_evidence": "project-book/06-expert-review-and-ralph.md",
+      "gate": "Findings and residual risks recorded"
+    }
+  ],
+  "testing_coverage": {
+    "unit": {
+      "required": true,
+      "evidence": "tests/core.test.cjs"
+    },
+    "integration": {
+      "required": true,
+      "evidence": "tests/browser-wysiwyg.test.cjs exercises integrated UI and state flow"
+    },
+    "scenario_bdd": {
+      "required": true,
+      "evidence": "project-book/evidence/scenario-test-results.json"
+    },
+    "browser_wysiwyg_playwright": {
+      "required": true,
+      "evidence": "project-book/evidence/browser-wysiwyg-results.json"
+    },
+    "accessibility_ux": {
+      "required": true,
+      "evidence": "Semantic landmarks, labels, skip link, focus states, and no overflow browser check"
+    },
+    "accessibility_certification_readiness": {
+      "required": true,
+      "evidence": "project-book/evidence/accessibility-certification-results.json"
+    },
+    "material_design_system_conformance": {
+      "required": true,
+      "evidence": "project-book/14-material-ui-standards-conformance-record.md and project-book/evidence/material-ui-conformance-certificate.json"
+    },
+    "human_review_onboarding_portal": {
+      "required": true,
+      "evidence": "project-book/evidence/human-review-portal-validation.json and project-book/evidence/human-review-portal-certificate.json"
+    },
+    "holdout_transfer": {
+      "required": true,
+      "evidence": "project-book/evidence/scenario-test-results.json"
+    }
+  },
+  "no_docs_only_gate": {
+    "product_completion_claimed": true,
+    "implementation_evidence": "app/index.html, app/styles.css, app/app.js",
+    "test_execution_evidence": "tests/core.test.cjs and tests/browser-wysiwyg.test.cjs",
+    "pass_allowed": true
+  }
+}

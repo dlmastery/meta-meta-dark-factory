@@ -1,0 +1,28 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+  },
+  "record_id": "WYSIWYG-NORTHSTAR-20260425-001",
+  "tool": "Playwright",
+  "viewports": [
+    "1440x950",
+    "390x844"
+  ],
+  "checks": [
+    "app visible",
+    "task cards visible",
+    "quick add interaction",
+    "habit board visible",
+    "priority matrix visible",
+    "focus ring visible",
+    "no console errors",
+    "no detected horizontal overflow in critical elements"
+  ],
+  "output": "project-book/evidence/browser-wysiwyg-results.json",
+  "screenshots": [
+    "project-book/evidence/wysiwyg-desktop.png",
+    "project-book/evidence/wysiwyg-mobile.png"
+  ],
+  "status": "passed",
+  "result_evidence": "project-book/evidence/browser-wysiwyg-results.json"
+}

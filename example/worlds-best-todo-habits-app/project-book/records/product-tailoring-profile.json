@@ -1,0 +1,75 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+  },
+  "template_only": false,
+  "profile_id": "PTP-NORTHSTAR-20260425-001",
+  "run_id": "DFRUN-NORTHSTAR-20260425-001",
+  "product_name": "Northstar Daily",
+  "product_archetype": "single-user local-first productivity and habit planning browser app",
+  "lifecycle_mode": "greenfield_code_product",
+  "surface_flags": {
+    "code_producing": true,
+    "ui_surface": true,
+    "api_surface": false,
+    "data_surface": true,
+    "production_surface": false,
+    "brownfield": false,
+    "scenario_driven": true
+  },
+  "mandatory_artifact_ids": [
+    "BRD-001",
+    "PRD-001",
+    "SRS-001",
+    "HLD-001",
+    "VNV-001",
+    "TRACE-001",
+    "EVD-HAWKEYE-001"
+  ],
+  "mandatory_testing_classes": [
+    "unit",
+    "integration",
+    "scenario_bdd",
+    "browser_wysiwyg_playwright",
+    "accessibility_ux",
+    "accessibility_certification_readiness",
+    "state_recovery_reliability",
+    "ux_brand_quality",
+    "holdout_transfer"
+  ],
+  "human_boundary_triggers": [
+    "cloud sync",
+    "auth",
+    "calendar writeback",
+    "notifications",
+    "production hosting",
+    "privacy-sensitive data",
+    "token budget exceedance"
+  ],
+  "methodology_blend": {
+    "ISO_12207_15289": {
+      "included": true,
+      "tailoring": "Lifecycle stages, artifacts, reviews, traceability, and handoff records."
+    },
+    "RUP": {
+      "included": true,
+      "tailoring": "Inception, elaboration, construction, and transition compressed into a demonstrator slice."
+    },
+    "MDA": {
+      "included": true,
+      "tailoring": "CIM/requirements, PIM/domain model, and PSM/static browser implementation."
+    },
+    "DDD": {
+      "included": true,
+      "tailoring": "Task, habit, review, and profile model boundaries."
+    },
+    "TDD_BDD": {
+      "included": true,
+      "tailoring": "Core unit tests and scenario/browser tests."
+    },
+    "SRE": {
+      "included": true,
+      "tailoring": "Static runbook, local-only operations, and future production gates."
+    }
+  }
+}

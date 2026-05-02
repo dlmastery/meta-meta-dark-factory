@@ -1,0 +1,3882 @@
+{
+  "zero_slop_policy": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+  "dashboard_id": "DASH-dfms-ui-console-run-20260428",
+  "project": "DFMS UI Console Run",
+  "generated_at": "2026-04-29T04:10:07+00:00",
+  "source_root": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\example\\worlds-best-todo-habits-app\\project-book",
+  "nodes": [
+    {
+      "id": "NODE-00-FACTORY-RUN-SUMMARY-MD",
+      "kind": "artifact",
+      "title": "Northstar Daily Factory Run Summary",
+      "path": "00-factory-run-summary.md",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-01-RESEARCH-COMPETITIVE-BENCHMARK-MD",
+      "kind": "artifact",
+      "title": "Research And Competitive Benchmark",
+      "path": "01-research-competitive-benchmark.md",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-02-PRD-MD",
+      "kind": "artifact",
+      "title": "Product Requirements Document",
+      "path": "02-prd.md",
+      "stage": "requirements",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-03-ARCHITECTURE-MD",
+      "kind": "artifact",
+      "title": "Architecture And Design",
+      "path": "03-architecture.md",
+      "stage": "design",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-04-TEST-STRATEGY-MD",
+      "kind": "test",
+      "title": "Verification And Test Strategy",
+      "path": "04-test-strategy.md",
+      "stage": "verification",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-05-TRACEABILITY-MATRIX-MD",
+      "kind": "trace",
+      "title": "Traceability Matrix",
+      "path": "05-traceability-matrix.md",
+      "stage": "evidence",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-06-EXPERT-REVIEW-AND-RALPH-MD",
+      "kind": "artifact",
+      "title": "Expert Review And RALPH Record",
+      "path": "06-expert-review-and-ralph.md",
+      "stage": "project-book",
+      "status": "blocked",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-07-HANDOFF-AND-RUNBOOK-MD",
+      "kind": "artifact",
+      "title": "Handoff And Runbook",
+      "path": "07-handoff-and-runbook.md",
+      "stage": "operations",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-08-HAWKEYE-BLOCKER-AND-CHANGE-RECORD-MD",
+      "kind": "artifact",
+      "title": "Hawkeye Blocker And Change Record",
+      "path": "08-hawkeye-blocker-and-change-record.md",
+      "stage": "project-book",
+      "status": "blocked",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-09-ITERATION-2-HARDENING-RECORD-MD",
+      "kind": "artifact",
+      "title": "Iteration 2 Hardening Record",
+      "path": "09-iteration-2-hardening-record.md",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-10-RALPH-20-E2E-COMPLETENESS-RECORD-MD",
+      "kind": "artifact",
+      "title": "RALPH 20 E2E Completeness Record",
+      "path": "10-ralph-20-e2e-completeness-record.md",
+      "stage": "project-book",
+      "status": "blocked",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-11-STANDARDS-META-META-CHARTER-AUDIT-MD",
+      "kind": "artifact",
+      "title": "Standards And Meta-Meta Charter Audit",
+      "path": "11-standards-meta-meta-charter-audit.md",
+      "stage": "project-book",
+      "status": "blocked",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-12-CERTIFICATION-READINESS-HARDENING-RECORD-MD",
+      "kind": "artifact",
+      "title": "Certification Readiness Hardening Record",
+      "path": "12-certification-readiness-hardening-record.md",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-13-RALPH-UX-RELIABILITY-QA-CERTIFICATION-RECORD-MD",
+      "kind": "test",
+      "title": "RALPH UX Reliability And QA Certification Record",
+      "path": "13-ralph-ux-reliability-qa-certification-record.md",
+      "stage": "verification",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-14-MATERIAL-UI-STANDARDS-CONFORMANCE-RECORD-MD",
+      "kind": "artifact",
+      "title": "Material UI Standards Conformance Record",
+      "path": "14-material-ui-standards-conformance-record.md",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-15-HUMAN-REVIEW-ONBOARDING-PORTAL-RECORD-MD",
+      "kind": "artifact",
+      "title": "Human Review And Onboarding Portal Record",
+      "path": "15-human-review-onboarding-portal-record.md",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-16-DASHBOARD-CONTROL-REDO-RECORD-MD",
+      "kind": "task",
+      "title": "Dashboard Control And Redo Closure Record",
+      "path": "16-dashboard-control-redo-record.md",
+      "stage": "governance",
+      "status": "conditional",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-ACCESSIBILITY-CERTIFICATION-OUTPUT-TXT",
+      "kind": "evidence",
+      "title": "Accessibility Certification Output",
+      "path": "evidence/accessibility-certification-output.txt",
+      "stage": "verification",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-ACCESSIBILITY-CERTIFICATION-RESULTS-JSON",
+      "kind": "evidence",
+      "title": "Accessibility Certification Results",
+      "path": "evidence/accessibility-certification-results.json",
+      "stage": "verification",
+      "status": "accepted",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-AUDIT-FINDINGS-REGISTER-JSON",
+      "kind": "evidence",
+      "title": "Audit Findings Register",
+      "path": "evidence/audit-findings-register.json",
+      "stage": "evidence",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-AUDIT-PANEL-RECORD-JSON",
+      "kind": "evidence",
+      "title": "Audit Panel Record",
+      "path": "evidence/audit-panel-record.json",
+      "stage": "evidence",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-AUDIT-QUALITY-CERTIFICATE-JSON",
+      "kind": "certificate",
+      "title": "Audit Quality Certificate",
+      "path": "evidence/audit-quality-certificate.json",
+      "stage": "evidence",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-BROWSER-WYSIWYG-BLOCKER-JSON",
+      "kind": "evidence",
+      "title": "Browser Wysiwyg Blocker",
+      "path": "evidence/browser-wysiwyg-blocker.json",
+      "stage": "evidence",
+      "status": "blocked",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-BROWSER-WYSIWYG-OUTPUT-TXT",
+      "kind": "evidence",
+      "title": "Browser Wysiwyg Output",
+      "path": "evidence/browser-wysiwyg-output.txt",
+      "stage": "verification",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-BROWSER-WYSIWYG-RESULTS-JSON",
+      "kind": "evidence",
+      "title": "Browser Wysiwyg Results",
+      "path": "evidence/browser-wysiwyg-results.json",
+      "stage": "verification",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-CERTIFICATION-READINESS-CERTIFICATE-JSON",
+      "kind": "certificate",
+      "title": "Certification Readiness Certificate",
+      "path": "evidence/certification-readiness-certificate.json",
+      "stage": "evidence",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-CERTIFICATION-READINESS-PANEL-RECORD-JSON",
+      "kind": "evidence",
+      "title": "Certification Readiness Panel Record",
+      "path": "evidence/certification-readiness-panel-record.json",
+      "stage": "evidence",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-CORE-TEST-OUTPUT-TXT",
+      "kind": "evidence",
+      "title": "Core Test Output",
+      "path": "evidence/core-test-output.txt",
+      "stage": "verification",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-DASHBOARD-CONTROL-RECORD-JSON",
+      "kind": "evidence",
+      "title": "Dashboard Control Record",
+      "path": "evidence/dashboard-control-record.json",
+      "stage": "evidence",
+      "status": "conditional",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-EXECUTION-KERNEL-REPORT-JSON",
+      "kind": "evidence",
+      "title": "Execution Kernel Report",
+      "path": "evidence/execution-kernel-report.json",
+      "stage": "evidence",
+      "status": "blocked",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-HUMAN-REVIEW-PORTAL-CERTIFICATE-JSON",
+      "kind": "certificate",
+      "title": "Human Review Portal Certificate",
+      "path": "evidence/human-review-portal-certificate.json",
+      "stage": "evidence",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-HUMAN-REVIEW-PORTAL-META-VALIDATOR-OUTPUT-TXT",
+      "kind": "evidence",
+      "title": "Human Review Portal Meta Validator Output",
+      "path": "evidence/human-review-portal-meta-validator-output.txt",
+      "stage": "verification",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-HUMAN-REVIEW-PORTAL-PANEL-RECORD-JSON",
+      "kind": "evidence",
+      "title": "Human Review Portal Panel Record",
+      "path": "evidence/human-review-portal-panel-record.json",
+      "stage": "evidence",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-HUMAN-REVIEW-PORTAL-SCREENSHOT-PNG",
+      "kind": "evidence",
+      "title": "Human Review Portal Screenshot",
+      "path": "evidence/human-review-portal-screenshot.png",
+      "stage": "verification",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-HUMAN-REVIEW-PORTAL-VALIDATION-OUTPUT-TXT",
+      "kind": "evidence",
+      "title": "Human Review Portal Validation Output",
+      "path": "evidence/human-review-portal-validation-output.txt",
+      "stage": "verification",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-HUMAN-REVIEW-PORTAL-VALIDATION-JSON",
+      "kind": "evidence",
+      "title": "Human Review Portal Validation",
+      "path": "evidence/human-review-portal-validation.json",
+      "stage": "evidence",
+      "status": "accepted",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-IMPLEMENTATION-EXECUTION-RECORD-JSON",
+      "kind": "evidence",
+      "title": "Implementation Execution Record",
+      "path": "evidence/implementation-execution-record.json",
+      "stage": "evidence",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-MATERIAL-GOVERNANCE-VALIDATION-OUTPUT-TXT",
+      "kind": "evidence",
+      "title": "Material Governance Validation Output",
+      "path": "evidence/material-governance-validation-output.txt",
+      "stage": "verification",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-MATERIAL-UI-CONFORMANCE-CERTIFICATE-JSON",
+      "kind": "certificate",
+      "title": "Material Ui Conformance Certificate",
+      "path": "evidence/material-ui-conformance-certificate.json",
+      "stage": "evidence",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-MATERIAL-UI-PANEL-RECORD-JSON",
+      "kind": "evidence",
+      "title": "Material Ui Panel Record",
+      "path": "evidence/material-ui-panel-record.json",
+      "stage": "evidence",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-QA-CERTIFICATION-CERTIFICATE-JSON",
+      "kind": "certificate",
+      "title": "Qa Certification Certificate",
+      "path": "evidence/qa-certification-certificate.json",
+      "stage": "evidence",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-QA-CERTIFICATION-PANEL-RECORD-JSON",
+      "kind": "evidence",
+      "title": "Qa Certification Panel Record",
+      "path": "evidence/qa-certification-panel-record.json",
+      "stage": "evidence",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-QUALITY-REFINERY-GATE-CERTIFICATION-READINESS-YAML",
+      "kind": "gate",
+      "title": "Quality Refinery Gate Certification Readiness",
+      "path": "evidence/quality-refinery-gate-certification-readiness.yaml",
+      "stage": "evidence",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-QUALITY-REFINERY-GATE-HUMAN-REVIEW-PORTAL-YAML",
+      "kind": "gate",
+      "title": "Quality Refinery Gate Human Review Portal",
+      "path": "evidence/quality-refinery-gate-human-review-portal.yaml",
+      "stage": "evidence",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-QUALITY-REFINERY-GATE-MATERIAL-UI-YAML",
+      "kind": "gate",
+      "title": "Quality Refinery Gate Material Ui",
+      "path": "evidence/quality-refinery-gate-material-ui.yaml",
+      "stage": "evidence",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-QUALITY-REFINERY-GATE-STANDARDS-AUDIT-YAML",
+      "kind": "gate",
+      "title": "Quality Refinery Gate Standards Audit",
+      "path": "evidence/quality-refinery-gate-standards-audit.yaml",
+      "stage": "evidence",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-QUALITY-REFINERY-GATE-UX-QA-CERTIFICATION-YAML",
+      "kind": "gate",
+      "title": "Quality Refinery Gate Ux Qa Certification",
+      "path": "evidence/quality-refinery-gate-ux-qa-certification.yaml",
+      "stage": "evidence",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-QUALITY-REFINERY-GATE-YAML",
+      "kind": "gate",
+      "title": "Quality Refinery Gate",
+      "path": "evidence/quality-refinery-gate.yaml",
+      "stage": "evidence",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-REDO-IMPACT-PRD-JSON",
+      "kind": "evidence",
+      "title": "Redo Impact Prd",
+      "path": "evidence/redo-impact-prd.json",
+      "stage": "evidence",
+      "status": "conditional",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-REDO-IMPACT-UI-02-PRD-MD-JSON",
+      "kind": "evidence",
+      "title": "Redo Impact Ui 02 Prd Md",
+      "path": "evidence/redo-impact-ui-02-prd-md.json",
+      "stage": "evidence",
+      "status": "conditional",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-REDO-NODE-REQUEST-PRD-JSON",
+      "kind": "evidence",
+      "title": "Redo Node Request Prd",
+      "path": "evidence/redo-node-request-prd.json",
+      "stage": "evidence",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-SCENARIO-TEST-RESULTS-JSON",
+      "kind": "evidence",
+      "title": "Scenario Test Results",
+      "path": "evidence/scenario-test-results.json",
+      "stage": "verification",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-STATIC-UI-AUDIT-OUTPUT-TXT",
+      "kind": "evidence",
+      "title": "Static Ui Audit Output",
+      "path": "evidence/static-ui-audit-output.txt",
+      "stage": "verification",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-STATIC-UI-AUDIT-RESULTS-JSON",
+      "kind": "evidence",
+      "title": "Static Ui Audit Results",
+      "path": "evidence/static-ui-audit-results.json",
+      "stage": "verification",
+      "status": "accepted",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-VALIDATION-SUMMARY-JSON",
+      "kind": "evidence",
+      "title": "Validation Summary",
+      "path": "evidence/validation-summary.json",
+      "stage": "evidence",
+      "status": "accepted",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-WYSIWYG-BROWSER-TEST-RECORD-JSON",
+      "kind": "evidence",
+      "title": "Wysiwyg Browser Test Record",
+      "path": "evidence/wysiwyg-browser-test-record.json",
+      "stage": "verification",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-WYSIWYG-DESKTOP-PNG",
+      "kind": "evidence",
+      "title": "Wysiwyg Desktop",
+      "path": "evidence/wysiwyg-desktop.png",
+      "stage": "evidence",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-WYSIWYG-MOBILE-PNG",
+      "kind": "evidence",
+      "title": "Wysiwyg Mobile",
+      "path": "evidence/wysiwyg-mobile.png",
+      "stage": "evidence",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-PORTAL-DASHBOARD-CONTROL-INDEX-JSON",
+      "kind": "portal",
+      "title": "Dashboard Control Index",
+      "path": "portal/dashboard-control-index.json",
+      "stage": "portal",
+      "status": "blocked",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-PORTAL-DASHBOARD-CONTROL-HTML",
+      "kind": "portal",
+      "title": "Dashboard Control",
+      "path": "portal/dashboard-control.html",
+      "stage": "portal",
+      "status": "conditional",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-PORTAL-DIAGRAMS-MD",
+      "kind": "portal",
+      "title": "Mermaid Diagram Atlas",
+      "path": "portal/diagrams.md",
+      "stage": "portal",
+      "status": "blocked",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-PORTAL-INDEX-HTML",
+      "kind": "portal",
+      "title": "Index",
+      "path": "portal/index.html",
+      "stage": "portal",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "kind": "portal",
+      "title": "Portal Data",
+      "path": "portal/portal-data.json",
+      "stage": "portal",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-PORTAL-PORTAL-CSS",
+      "kind": "portal",
+      "title": "Portal",
+      "path": "portal/portal.css",
+      "stage": "portal",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-PORTAL-README-MD",
+      "kind": "portal",
+      "title": "Northstar Daily Human Review Portal",
+      "path": "portal/README.md",
+      "stage": "portal",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-RECORDS-AI-JUDGE-JURY-RECORD-CERTIFICATION-READINESS-JSON",
+      "kind": "artifact",
+      "title": "Ai Judge Jury Record Certification Readiness",
+      "path": "records/ai-judge-jury-record-certification-readiness.json",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-RECORDS-AI-JUDGE-JURY-RECORD-HUMAN-REVIEW-PORTAL-JSON",
+      "kind": "artifact",
+      "title": "Ai Judge Jury Record Human Review Portal",
+      "path": "records/ai-judge-jury-record-human-review-portal.json",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-RECORDS-AI-JUDGE-JURY-RECORD-ITERATION-2-JSON",
+      "kind": "artifact",
+      "title": "Ai Judge Jury Record Iteration 2",
+      "path": "records/ai-judge-jury-record-iteration-2.json",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-RECORDS-AI-JUDGE-JURY-RECORD-MATERIAL-UI-JSON",
+      "kind": "artifact",
+      "title": "Ai Judge Jury Record Material Ui",
+      "path": "records/ai-judge-jury-record-material-ui.json",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-RECORDS-AI-JUDGE-JURY-RECORD-RALPH-20-JSON",
+      "kind": "artifact",
+      "title": "Ai Judge Jury Record Ralph 20",
+      "path": "records/ai-judge-jury-record-ralph-20.json",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-RECORDS-AI-JUDGE-JURY-RECORD-STANDARDS-AUDIT-JSON",
+      "kind": "artifact",
+      "title": "Ai Judge Jury Record Standards Audit",
+      "path": "records/ai-judge-jury-record-standards-audit.json",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-RECORDS-AI-JUDGE-JURY-RECORD-UX-QA-CERTIFICATION-JSON",
+      "kind": "test",
+      "title": "Ai Judge Jury Record Ux Qa Certification",
+      "path": "records/ai-judge-jury-record-ux-qa-certification.json",
+      "stage": "verification",
+      "status": "blocked",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-RECORDS-AI-JUDGE-JURY-RECORD-JSON",
+      "kind": "artifact",
+      "title": "Ai Judge Jury Record",
+      "path": "records/ai-judge-jury-record.json",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-RECORDS-ARTIFACT-BOM-AUDIT-RECORD-JSON",
+      "kind": "artifact",
+      "title": "Artifact Bom Audit Record",
+      "path": "records/artifact-bom-audit-record.json",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-RECORDS-DARK-FACTORY-INSTANTIATION-RECORD-JSON",
+      "kind": "artifact",
+      "title": "Dark Factory Instantiation Record",
+      "path": "records/dark-factory-instantiation-record.json",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-RECORDS-ENGAGEMENT-GOVERNANCE-RECORD-JSON",
+      "kind": "artifact",
+      "title": "Engagement Governance Record",
+      "path": "records/engagement-governance-record.json",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-RECORDS-FACTORY-PERT-PLAN-JSON",
+      "kind": "artifact",
+      "title": "Factory Pert Plan",
+      "path": "records/factory-pert-plan.json",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-RECORDS-GENERATED-META-SKILL-CONTRACT-JSON",
+      "kind": "artifact",
+      "title": "Generated Meta Skill Contract",
+      "path": "records/generated-meta-skill-contract.json",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-RECORDS-HAWKEYE-CONFORMANCE-AUDIT-RECORD-JSON",
+      "kind": "artifact",
+      "title": "Hawkeye Conformance Audit Record",
+      "path": "records/hawkeye-conformance-audit-record.json",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-RECORDS-HUMAN-REVIEW-PORTAL-RECORD-JSON",
+      "kind": "artifact",
+      "title": "Human Review Portal Record",
+      "path": "records/human-review-portal-record.json",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-RECORDS-INTERROGATION-RECORD-JSON",
+      "kind": "artifact",
+      "title": "Interrogation Record",
+      "path": "records/interrogation-record.json",
+      "stage": "project-book",
+      "status": "blocked",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-RECORDS-KNOWLEDGE-GRAPH-JSON",
+      "kind": "artifact",
+      "title": "Knowledge Graph",
+      "path": "records/knowledge-graph.json",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-RECORDS-META-META-CHARTER-COMPLIANCE-MATRIX-JSON",
+      "kind": "artifact",
+      "title": "Meta Meta Charter Compliance Matrix",
+      "path": "records/meta-meta-charter-compliance-matrix.json",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-RECORDS-PRODUCT-TAILORING-PROFILE-JSON",
+      "kind": "artifact",
+      "title": "Product Tailoring Profile",
+      "path": "records/product-tailoring-profile.json",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-RECORDS-SDLC-STAGE-COVERAGE-MATRIX-JSON",
+      "kind": "artifact",
+      "title": "Sdlc Stage Coverage Matrix",
+      "path": "records/sdlc-stage-coverage-matrix.json",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-RECORDS-SPEC-DECOMPOSITION-RECORD-JSON",
+      "kind": "artifact",
+      "title": "Spec Decomposition Record",
+      "path": "records/spec-decomposition-record.json",
+      "stage": "project-book",
+      "status": "blocked",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-RECORDS-STANDARDS-CONFORMANCE-AUDIT-RECORD-JSON",
+      "kind": "artifact",
+      "title": "Standards Conformance Audit Record",
+      "path": "records/standards-conformance-audit-record.json",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-RECORDS-TASK-BEAD-TB-20260425-101-JSON",
+      "kind": "task",
+      "title": "Task Bead Tb 20260425 101",
+      "path": "records/task-bead-TB-20260425-101.json",
+      "stage": "governance",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-RECORDS-TASK-BEAD-TB-20260425-201-JSON",
+      "kind": "task",
+      "title": "Task Bead Tb 20260425 201",
+      "path": "records/task-bead-TB-20260425-201.json",
+      "stage": "governance",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-RECORDS-TASK-BEAD-TB-20260426-102-JSON",
+      "kind": "task",
+      "title": "Task Bead Tb 20260426 102",
+      "path": "records/task-bead-TB-20260426-102.json",
+      "stage": "governance",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-RECORDS-TASK-BEAD-TB-20260426-103-JSON",
+      "kind": "task",
+      "title": "Task Bead Tb 20260426 103",
+      "path": "records/task-bead-TB-20260426-103.json",
+      "stage": "governance",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-RECORDS-TASK-BEAD-TB-20260426-104-JSON",
+      "kind": "task",
+      "title": "Task Bead Tb 20260426 104",
+      "path": "records/task-bead-TB-20260426-104.json",
+      "stage": "governance",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-RECORDS-TASK-BEAD-TB-20260426-105-JSON",
+      "kind": "task",
+      "title": "Task Bead Tb 20260426 105",
+      "path": "records/task-bead-TB-20260426-105.json",
+      "stage": "governance",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-RECORDS-TASK-BEAD-TB-20260426-106-JSON",
+      "kind": "task",
+      "title": "Task Bead Tb 20260426 106",
+      "path": "records/task-bead-TB-20260426-106.json",
+      "stage": "governance",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-RECORDS-TASK-BEAD-TB-20260426-107-JSON",
+      "kind": "task",
+      "title": "Task Bead Tb 20260426 107",
+      "path": "records/task-bead-TB-20260426-107.json",
+      "stage": "governance",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-RECORDS-TASK-BEAD-TB-20260426-108-JSON",
+      "kind": "task",
+      "title": "Task Bead Tb 20260426 108",
+      "path": "records/task-bead-TB-20260426-108.json",
+      "stage": "governance",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-RECORDS-TASKS-MD",
+      "kind": "task",
+      "title": "Northstar Daily Task Bead Ledger",
+      "path": "records/TASKS.md",
+      "stage": "governance",
+      "status": "blocked",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-RECORDS-TPM-FLOW-LEDGER-JSON",
+      "kind": "task",
+      "title": "Tpm Flow Ledger",
+      "path": "records/tpm-flow-ledger.json",
+      "stage": "governance",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    }
+  ],
+  "edges": [
+    {
+      "source": "REQ-NORTHSTAR-001",
+      "target": "INTENT-NORTHSTAR-001",
+      "type": "derives_from",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "INTENT-NORTHSTAR-001",
+      "target": "REQ-NORTHSTAR-001",
+      "type": "decomposes_to",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "ART-NORTHSTAR-APP",
+      "target": "REQ-NORTHSTAR-001",
+      "type": "satisfies",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "EVD-NORTHSTAR-TESTS",
+      "target": "REQ-NORTHSTAR-001",
+      "type": "verifies",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "TB-20260425-101",
+      "target": "WLI-NORTHSTAR-IMPLEMENT",
+      "type": "tracked_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "TB-20260425-101",
+      "target": "GATE-NORTHSTAR-HARDENED",
+      "type": "gated_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "ART-NORTHSTAR-APP",
+      "target": "REVIEW-NORTHSTAR-001",
+      "type": "reviewed_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "ART-NORTHSTAR-APP",
+      "target": "EVD-NORTHSTAR-TESTS",
+      "type": "evidenced_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "ART-NORTHSTAR-APP",
+      "target": "CERT-NORTHSTAR-001",
+      "type": "certified_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "TB-20260425-101",
+      "target": "TB-20260426-102",
+      "type": "next_bead",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "CGN-NORTHSTAR-IMPLEMENT",
+      "target": "TB-20260425-101",
+      "type": "tracked_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "ART-NORTHSTAR-BOOK",
+      "target": "EVD-NORTHSTAR-TESTS",
+      "type": "evidenced_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "RISK-NORTHSTAR-001",
+      "target": "GATE-NORTHSTAR-HARDENED",
+      "type": "gated_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "TB-20260426-102",
+      "target": "WLI-NORTHSTAR-HARDENING",
+      "type": "tracked_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "TB-20260426-102",
+      "target": "GATE-NORTHSTAR-HARDENING-PASS",
+      "type": "gated_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "ART-NORTHSTAR-APP",
+      "target": "TB-20260426-102",
+      "type": "evidenced_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "TB-20260426-102",
+      "target": "REVIEW-NORTHSTAR-001",
+      "type": "reviewed_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "TB-20260426-102",
+      "target": "TB-20260426-103",
+      "type": "next_bead",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "CGN-NORTHSTAR-HARDENING",
+      "target": "TB-20260426-102",
+      "type": "tracked_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "TB-20260426-103",
+      "target": "WLI-NORTHSTAR-RALPH20",
+      "type": "tracked_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "TB-20260426-103",
+      "target": "GATE-NORTHSTAR-RALPH20-PASS",
+      "type": "gated_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "ART-NORTHSTAR-APP",
+      "target": "TB-20260426-103",
+      "type": "evidenced_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "TB-20260426-103",
+      "target": "REVIEW-NORTHSTAR-001",
+      "type": "reviewed_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "TB-20260426-103",
+      "target": "TB-20260426-104",
+      "type": "next_bead",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "CGN-NORTHSTAR-RALPH20",
+      "target": "TB-20260426-103",
+      "type": "tracked_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "TB-20260426-104",
+      "target": "WLI-NORTHSTAR-STANDARDS-AUDIT",
+      "type": "tracked_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "TB-20260426-104",
+      "target": "GATE-NORTHSTAR-STANDARDS-AUDIT-PASS",
+      "type": "gated_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "ART-NORTHSTAR-STANDARDS-AUDIT",
+      "target": "EVD-NORTHSTAR-STANDARDS-AUDIT",
+      "type": "evidenced_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "ART-NORTHSTAR-STANDARDS-AUDIT",
+      "target": "REVIEW-NORTHSTAR-STANDARDS-AUDIT",
+      "type": "reviewed_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "ART-NORTHSTAR-STANDARDS-AUDIT",
+      "target": "CERT-NORTHSTAR-STANDARDS-AUDIT",
+      "type": "certified_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "TB-20260426-104",
+      "target": "TB-20260426-105",
+      "type": "next_bead",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "CGN-NORTHSTAR-STANDARDS-AUDIT",
+      "target": "TB-20260426-104",
+      "type": "tracked_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "ART-NORTHSTAR-BOOK",
+      "target": "EVD-NORTHSTAR-STANDARDS-AUDIT",
+      "type": "evidenced_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "TB-20260426-104",
+      "target": "CERT-NORTHSTAR-STANDARDS-AUDIT",
+      "type": "certified_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "TB-20260426-105",
+      "target": "WLI-NORTHSTAR-CERTIFICATION-READY",
+      "type": "tracked_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "TB-20260426-105",
+      "target": "GATE-NORTHSTAR-CERTIFICATION-READY-PASS",
+      "type": "gated_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "ART-NORTHSTAR-CERTIFICATION-READY",
+      "target": "EVD-NORTHSTAR-CERTIFICATION-READY",
+      "type": "evidenced_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "ART-NORTHSTAR-CERTIFICATION-READY",
+      "target": "REVIEW-NORTHSTAR-CERTIFICATION-READY",
+      "type": "reviewed_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "ART-NORTHSTAR-CERTIFICATION-READY",
+      "target": "CERT-NORTHSTAR-CERTIFICATION-READY",
+      "type": "certified_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "TB-20260426-105",
+      "target": "TB-20260426-106",
+      "type": "next_bead",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "CGN-NORTHSTAR-CERTIFICATION-READY",
+      "target": "TB-20260426-105",
+      "type": "tracked_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "TB-20260426-105",
+      "target": "CERT-NORTHSTAR-CERTIFICATION-READY",
+      "type": "certified_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "EVD-NORTHSTAR-CERTIFICATION-READY",
+      "target": "REQ-NORTHSTAR-001",
+      "type": "verifies",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "TB-20260426-106",
+      "target": "WLI-NORTHSTAR-UXQA",
+      "type": "tracked_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "TB-20260426-106",
+      "target": "GATE-NORTHSTAR-UXQA-PASS",
+      "type": "gated_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "ART-NORTHSTAR-UXQA",
+      "target": "EVD-NORTHSTAR-UXQA",
+      "type": "evidenced_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "ART-NORTHSTAR-UXQA",
+      "target": "REVIEW-NORTHSTAR-UXQA",
+      "type": "reviewed_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "ART-NORTHSTAR-UXQA",
+      "target": "CERT-NORTHSTAR-UXQA",
+      "type": "certified_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "TB-20260426-106",
+      "target": "TB-20260426-107",
+      "type": "next_bead",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "CGN-NORTHSTAR-UXQA",
+      "target": "TB-20260426-106",
+      "type": "tracked_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "TB-20260426-106",
+      "target": "CERT-NORTHSTAR-UXQA",
+      "type": "certified_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "EVD-NORTHSTAR-UXQA",
+      "target": "REQ-NORTHSTAR-001",
+      "type": "verifies",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "TB-20260426-107",
+      "target": "WLI-NORTHSTAR-MATERIAL-UI",
+      "type": "tracked_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "TB-20260426-107",
+      "target": "GATE-NORTHSTAR-MATERIAL-UI-PASS",
+      "type": "gated_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "ART-NORTHSTAR-MATERIAL-UI",
+      "target": "EVD-NORTHSTAR-MATERIAL-UI",
+      "type": "evidenced_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "ART-NORTHSTAR-MATERIAL-UI",
+      "target": "REVIEW-NORTHSTAR-MATERIAL-UI",
+      "type": "reviewed_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "ART-NORTHSTAR-MATERIAL-UI",
+      "target": "CERT-NORTHSTAR-MATERIAL-UI",
+      "type": "certified_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "TB-20260426-107",
+      "target": "TB-20260426-108",
+      "type": "next_bead",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "CGN-NORTHSTAR-MATERIAL-UI",
+      "target": "TB-20260426-107",
+      "type": "tracked_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "TB-20260426-107",
+      "target": "CERT-NORTHSTAR-MATERIAL-UI",
+      "type": "certified_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "EVD-NORTHSTAR-MATERIAL-UI",
+      "target": "REQ-NORTHSTAR-001",
+      "type": "verifies",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "ART-NORTHSTAR-APP",
+      "target": "EVD-NORTHSTAR-MATERIAL-UI",
+      "type": "evidenced_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "TB-20260426-108",
+      "target": "WLI-NORTHSTAR-HUMAN-PORTAL",
+      "type": "tracked_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "TB-20260426-108",
+      "target": "GATE-NORTHSTAR-HUMAN-PORTAL-PASS",
+      "type": "gated_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "ART-NORTHSTAR-HUMAN-PORTAL",
+      "target": "EVD-NORTHSTAR-HUMAN-PORTAL",
+      "type": "evidenced_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "ART-NORTHSTAR-HUMAN-PORTAL",
+      "target": "REVIEW-NORTHSTAR-HUMAN-PORTAL",
+      "type": "reviewed_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "ART-NORTHSTAR-HUMAN-PORTAL",
+      "target": "CERT-NORTHSTAR-HUMAN-PORTAL",
+      "type": "certified_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "TB-20260426-108",
+      "target": "RUN-CLOSED",
+      "type": "next_bead",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "CGN-NORTHSTAR-HUMAN-PORTAL",
+      "target": "TB-20260426-108",
+      "type": "tracked_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "TB-20260426-108",
+      "target": "CERT-NORTHSTAR-HUMAN-PORTAL",
+      "type": "certified_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "EVD-NORTHSTAR-HUMAN-PORTAL",
+      "target": "REQ-NORTHSTAR-001",
+      "type": "verifies",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "ART-NORTHSTAR-BOOK",
+      "target": "EVD-NORTHSTAR-HUMAN-PORTAL",
+      "type": "evidenced_by",
+      "evidence": "records/knowledge-graph.json",
+      "authority": "explicit",
+      "reason": "explicit graph edge"
+    },
+    {
+      "source": "NODE-02-PRD-MD",
+      "target": "NODE-PORTAL-INDEX-HTML",
+      "type": "inferred_reference",
+      "evidence": "02-prd.md",
+      "authority": "inferred",
+      "reason": "text reference `index.html`"
+    },
+    {
+      "source": "NODE-05-TRACEABILITY-MATRIX-MD",
+      "target": "NODE-EVIDENCE-BROWSER-WYSIWYG-RESULTS-JSON",
+      "type": "inferred_reference",
+      "evidence": "05-traceability-matrix.md",
+      "authority": "inferred",
+      "reason": "text reference `browser-wysiwyg-results.json`"
+    },
+    {
+      "source": "NODE-05-TRACEABILITY-MATRIX-MD",
+      "target": "NODE-RECORDS-PRODUCT-TAILORING-PROFILE-JSON",
+      "type": "inferred_reference",
+      "evidence": "05-traceability-matrix.md",
+      "authority": "inferred",
+      "reason": "text reference `product-tailoring-profile.json`"
+    },
+    {
+      "source": "NODE-05-TRACEABILITY-MATRIX-MD",
+      "target": "NODE-RECORDS-GENERATED-META-SKILL-CONTRACT-JSON",
+      "type": "inferred_reference",
+      "evidence": "05-traceability-matrix.md",
+      "authority": "inferred",
+      "reason": "text reference `generated-meta-skill-contract.json`"
+    },
+    {
+      "source": "NODE-05-TRACEABILITY-MATRIX-MD",
+      "target": "NODE-RECORDS-DARK-FACTORY-INSTANTIATION-RECORD-JSON",
+      "type": "inferred_reference",
+      "evidence": "05-traceability-matrix.md",
+      "authority": "inferred",
+      "reason": "text reference `dark-factory-instantiation-record.json`"
+    },
+    {
+      "source": "NODE-05-TRACEABILITY-MATRIX-MD",
+      "target": "NODE-RECORDS-META-META-CHARTER-COMPLIANCE-MATRIX-JSON",
+      "type": "inferred_reference",
+      "evidence": "05-traceability-matrix.md",
+      "authority": "inferred",
+      "reason": "text reference `meta-meta-charter-compliance-matrix.json`"
+    },
+    {
+      "source": "NODE-05-TRACEABILITY-MATRIX-MD",
+      "target": "NODE-RECORDS-TASKS-MD",
+      "type": "inferred_reference",
+      "evidence": "05-traceability-matrix.md",
+      "authority": "inferred",
+      "reason": "text reference `TASKS.md`"
+    },
+    {
+      "source": "NODE-05-TRACEABILITY-MATRIX-MD",
+      "target": "NODE-RECORDS-TPM-FLOW-LEDGER-JSON",
+      "type": "inferred_reference",
+      "evidence": "05-traceability-matrix.md",
+      "authority": "inferred",
+      "reason": "text reference `tpm-flow-ledger.json`"
+    },
+    {
+      "source": "NODE-05-TRACEABILITY-MATRIX-MD",
+      "target": "NODE-RECORDS-FACTORY-PERT-PLAN-JSON",
+      "type": "inferred_reference",
+      "evidence": "05-traceability-matrix.md",
+      "authority": "inferred",
+      "reason": "text reference `factory-pert-plan.json`"
+    },
+    {
+      "source": "NODE-05-TRACEABILITY-MATRIX-MD",
+      "target": "NODE-RECORDS-KNOWLEDGE-GRAPH-JSON",
+      "type": "inferred_reference",
+      "evidence": "05-traceability-matrix.md",
+      "authority": "inferred",
+      "reason": "text reference `knowledge-graph.json`"
+    },
+    {
+      "source": "NODE-05-TRACEABILITY-MATRIX-MD",
+      "target": "NODE-RECORDS-HAWKEYE-CONFORMANCE-AUDIT-RECORD-JSON",
+      "type": "inferred_reference",
+      "evidence": "05-traceability-matrix.md",
+      "authority": "inferred",
+      "reason": "text reference `hawkeye-conformance-audit-record.json`"
+    },
+    {
+      "source": "NODE-05-TRACEABILITY-MATRIX-MD",
+      "target": "NODE-RECORDS-STANDARDS-CONFORMANCE-AUDIT-RECORD-JSON",
+      "type": "inferred_reference",
+      "evidence": "05-traceability-matrix.md",
+      "authority": "inferred",
+      "reason": "text reference `standards-conformance-audit-record.json`"
+    },
+    {
+      "source": "NODE-05-TRACEABILITY-MATRIX-MD",
+      "target": "NODE-RECORDS-ARTIFACT-BOM-AUDIT-RECORD-JSON",
+      "type": "inferred_reference",
+      "evidence": "05-traceability-matrix.md",
+      "authority": "inferred",
+      "reason": "text reference `artifact-bom-audit-record.json`"
+    },
+    {
+      "source": "NODE-05-TRACEABILITY-MATRIX-MD",
+      "target": "NODE-EVIDENCE-AUDIT-QUALITY-CERTIFICATE-JSON",
+      "type": "inferred_reference",
+      "evidence": "05-traceability-matrix.md",
+      "authority": "inferred",
+      "reason": "text reference `audit-quality-certificate.json`"
+    },
+    {
+      "source": "NODE-05-TRACEABILITY-MATRIX-MD",
+      "target": "NODE-12-CERTIFICATION-READINESS-HARDENING-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "05-traceability-matrix.md",
+      "authority": "inferred",
+      "reason": "text reference `12-certification-readiness-hardening-record.md`"
+    },
+    {
+      "source": "NODE-05-TRACEABILITY-MATRIX-MD",
+      "target": "NODE-EVIDENCE-CERTIFICATION-READINESS-CERTIFICATE-JSON",
+      "type": "inferred_reference",
+      "evidence": "05-traceability-matrix.md",
+      "authority": "inferred",
+      "reason": "text reference `certification-readiness-certificate.json`"
+    },
+    {
+      "source": "NODE-05-TRACEABILITY-MATRIX-MD",
+      "target": "NODE-EVIDENCE-ACCESSIBILITY-CERTIFICATION-RESULTS-JSON",
+      "type": "inferred_reference",
+      "evidence": "05-traceability-matrix.md",
+      "authority": "inferred",
+      "reason": "text reference `accessibility-certification-results.json`"
+    },
+    {
+      "source": "NODE-05-TRACEABILITY-MATRIX-MD",
+      "target": "NODE-13-RALPH-UX-RELIABILITY-QA-CERTIFICATION-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "05-traceability-matrix.md",
+      "authority": "inferred",
+      "reason": "text reference `13-ralph-ux-reliability-qa-certification-record.md`"
+    },
+    {
+      "source": "NODE-05-TRACEABILITY-MATRIX-MD",
+      "target": "NODE-EVIDENCE-QA-CERTIFICATION-CERTIFICATE-JSON",
+      "type": "inferred_reference",
+      "evidence": "05-traceability-matrix.md",
+      "authority": "inferred",
+      "reason": "text reference `qa-certification-certificate.json`"
+    },
+    {
+      "source": "NODE-05-TRACEABILITY-MATRIX-MD",
+      "target": "NODE-14-MATERIAL-UI-STANDARDS-CONFORMANCE-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "05-traceability-matrix.md",
+      "authority": "inferred",
+      "reason": "text reference `14-material-ui-standards-conformance-record.md`"
+    },
+    {
+      "source": "NODE-05-TRACEABILITY-MATRIX-MD",
+      "target": "NODE-EVIDENCE-MATERIAL-UI-CONFORMANCE-CERTIFICATE-JSON",
+      "type": "inferred_reference",
+      "evidence": "05-traceability-matrix.md",
+      "authority": "inferred",
+      "reason": "text reference `material-ui-conformance-certificate.json`"
+    },
+    {
+      "source": "NODE-05-TRACEABILITY-MATRIX-MD",
+      "target": "NODE-15-HUMAN-REVIEW-ONBOARDING-PORTAL-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "05-traceability-matrix.md",
+      "authority": "inferred",
+      "reason": "text reference `15-human-review-onboarding-portal-record.md`"
+    },
+    {
+      "source": "NODE-05-TRACEABILITY-MATRIX-MD",
+      "target": "NODE-PORTAL-INDEX-HTML",
+      "type": "inferred_reference",
+      "evidence": "05-traceability-matrix.md",
+      "authority": "inferred",
+      "reason": "text reference `portal/index.html`"
+    },
+    {
+      "source": "NODE-05-TRACEABILITY-MATRIX-MD",
+      "target": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "type": "inferred_reference",
+      "evidence": "05-traceability-matrix.md",
+      "authority": "inferred",
+      "reason": "text reference `portal/portal-data.json`"
+    },
+    {
+      "source": "NODE-05-TRACEABILITY-MATRIX-MD",
+      "target": "NODE-PORTAL-DIAGRAMS-MD",
+      "type": "inferred_reference",
+      "evidence": "05-traceability-matrix.md",
+      "authority": "inferred",
+      "reason": "text reference `portal/diagrams.md`"
+    },
+    {
+      "source": "NODE-05-TRACEABILITY-MATRIX-MD",
+      "target": "NODE-EVIDENCE-HUMAN-REVIEW-PORTAL-VALIDATION-JSON",
+      "type": "inferred_reference",
+      "evidence": "05-traceability-matrix.md",
+      "authority": "inferred",
+      "reason": "text reference `human-review-portal-validation.json`"
+    },
+    {
+      "source": "NODE-11-STANDARDS-META-META-CHARTER-AUDIT-MD",
+      "target": "NODE-RECORDS-SDLC-STAGE-COVERAGE-MATRIX-JSON",
+      "type": "inferred_reference",
+      "evidence": "11-standards-meta-meta-charter-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `sdlc-stage-coverage-matrix.json`"
+    },
+    {
+      "source": "NODE-11-STANDARDS-META-META-CHARTER-AUDIT-MD",
+      "target": "NODE-RECORDS-HAWKEYE-CONFORMANCE-AUDIT-RECORD-JSON",
+      "type": "inferred_reference",
+      "evidence": "11-standards-meta-meta-charter-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `hawkeye-conformance-audit-record.json`"
+    },
+    {
+      "source": "NODE-11-STANDARDS-META-META-CHARTER-AUDIT-MD",
+      "target": "NODE-RECORDS-TASKS-MD",
+      "type": "inferred_reference",
+      "evidence": "11-standards-meta-meta-charter-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `TASKS.md`"
+    },
+    {
+      "source": "NODE-11-STANDARDS-META-META-CHARTER-AUDIT-MD",
+      "target": "NODE-RECORDS-TPM-FLOW-LEDGER-JSON",
+      "type": "inferred_reference",
+      "evidence": "11-standards-meta-meta-charter-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `tpm-flow-ledger.json`"
+    },
+    {
+      "source": "NODE-11-STANDARDS-META-META-CHARTER-AUDIT-MD",
+      "target": "NODE-RECORDS-ENGAGEMENT-GOVERNANCE-RECORD-JSON",
+      "type": "inferred_reference",
+      "evidence": "11-standards-meta-meta-charter-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `engagement-governance-record.json`"
+    },
+    {
+      "source": "NODE-11-STANDARDS-META-META-CHARTER-AUDIT-MD",
+      "target": "NODE-03-ARCHITECTURE-MD",
+      "type": "inferred_reference",
+      "evidence": "11-standards-meta-meta-charter-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `03-architecture.md`"
+    },
+    {
+      "source": "NODE-11-STANDARDS-META-META-CHARTER-AUDIT-MD",
+      "target": "NODE-EVIDENCE-BROWSER-WYSIWYG-RESULTS-JSON",
+      "type": "inferred_reference",
+      "evidence": "11-standards-meta-meta-charter-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `browser-wysiwyg-results.json`"
+    },
+    {
+      "source": "NODE-11-STANDARDS-META-META-CHARTER-AUDIT-MD",
+      "target": "NODE-04-TEST-STRATEGY-MD",
+      "type": "inferred_reference",
+      "evidence": "11-standards-meta-meta-charter-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `04-test-strategy.md`"
+    },
+    {
+      "source": "NODE-11-STANDARDS-META-META-CHARTER-AUDIT-MD",
+      "target": "NODE-EVIDENCE-QUALITY-REFINERY-GATE-YAML",
+      "type": "inferred_reference",
+      "evidence": "11-standards-meta-meta-charter-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `quality-refinery-gate.yaml`"
+    },
+    {
+      "source": "NODE-11-STANDARDS-META-META-CHARTER-AUDIT-MD",
+      "target": "NODE-RECORDS-PRODUCT-TAILORING-PROFILE-JSON",
+      "type": "inferred_reference",
+      "evidence": "11-standards-meta-meta-charter-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `product-tailoring-profile.json`"
+    },
+    {
+      "source": "NODE-11-STANDARDS-META-META-CHARTER-AUDIT-MD",
+      "target": "NODE-02-PRD-MD",
+      "type": "inferred_reference",
+      "evidence": "11-standards-meta-meta-charter-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `02-prd.md`"
+    },
+    {
+      "source": "NODE-11-STANDARDS-META-META-CHARTER-AUDIT-MD",
+      "target": "NODE-RECORDS-FACTORY-PERT-PLAN-JSON",
+      "type": "inferred_reference",
+      "evidence": "11-standards-meta-meta-charter-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `factory-pert-plan.json`"
+    },
+    {
+      "source": "NODE-11-STANDARDS-META-META-CHARTER-AUDIT-MD",
+      "target": "NODE-10-RALPH-20-E2E-COMPLETENESS-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "11-standards-meta-meta-charter-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `10-ralph-20-e2e-completeness-record.md`"
+    },
+    {
+      "source": "NODE-11-STANDARDS-META-META-CHARTER-AUDIT-MD",
+      "target": "NODE-00-FACTORY-RUN-SUMMARY-MD",
+      "type": "inferred_reference",
+      "evidence": "11-standards-meta-meta-charter-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `00-factory-run-summary.md`"
+    },
+    {
+      "source": "NODE-11-STANDARDS-META-META-CHARTER-AUDIT-MD",
+      "target": "NODE-07-HANDOFF-AND-RUNBOOK-MD",
+      "type": "inferred_reference",
+      "evidence": "11-standards-meta-meta-charter-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `07-handoff-and-runbook.md`"
+    },
+    {
+      "source": "NODE-11-STANDARDS-META-META-CHARTER-AUDIT-MD",
+      "target": "NODE-EVIDENCE-CORE-TEST-OUTPUT-TXT",
+      "type": "inferred_reference",
+      "evidence": "11-standards-meta-meta-charter-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `core-test-output.txt`"
+    },
+    {
+      "source": "NODE-11-STANDARDS-META-META-CHARTER-AUDIT-MD",
+      "target": "NODE-EVIDENCE-SCENARIO-TEST-RESULTS-JSON",
+      "type": "inferred_reference",
+      "evidence": "11-standards-meta-meta-charter-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `scenario-test-results.json`"
+    },
+    {
+      "source": "NODE-11-STANDARDS-META-META-CHARTER-AUDIT-MD",
+      "target": "NODE-RECORDS-GENERATED-META-SKILL-CONTRACT-JSON",
+      "type": "inferred_reference",
+      "evidence": "11-standards-meta-meta-charter-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `generated-meta-skill-contract.json`"
+    },
+    {
+      "source": "NODE-11-STANDARDS-META-META-CHARTER-AUDIT-MD",
+      "target": "NODE-RECORDS-DARK-FACTORY-INSTANTIATION-RECORD-JSON",
+      "type": "inferred_reference",
+      "evidence": "11-standards-meta-meta-charter-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `dark-factory-instantiation-record.json`"
+    },
+    {
+      "source": "NODE-11-STANDARDS-META-META-CHARTER-AUDIT-MD",
+      "target": "NODE-RECORDS-KNOWLEDGE-GRAPH-JSON",
+      "type": "inferred_reference",
+      "evidence": "11-standards-meta-meta-charter-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `knowledge-graph.json`"
+    },
+    {
+      "source": "NODE-11-STANDARDS-META-META-CHARTER-AUDIT-MD",
+      "target": "NODE-RECORDS-AI-JUDGE-JURY-RECORD-STANDARDS-AUDIT-JSON",
+      "type": "inferred_reference",
+      "evidence": "11-standards-meta-meta-charter-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `ai-judge-jury-record-standards-audit.json`"
+    },
+    {
+      "source": "NODE-11-STANDARDS-META-META-CHARTER-AUDIT-MD",
+      "target": "NODE-EVIDENCE-EXECUTION-KERNEL-REPORT-JSON",
+      "type": "inferred_reference",
+      "evidence": "11-standards-meta-meta-charter-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `execution-kernel-report.json`"
+    },
+    {
+      "source": "NODE-11-STANDARDS-META-META-CHARTER-AUDIT-MD",
+      "target": "NODE-01-RESEARCH-COMPETITIVE-BENCHMARK-MD",
+      "type": "inferred_reference",
+      "evidence": "11-standards-meta-meta-charter-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `01-research-competitive-benchmark.md`"
+    },
+    {
+      "source": "NODE-11-STANDARDS-META-META-CHARTER-AUDIT-MD",
+      "target": "NODE-RECORDS-INTERROGATION-RECORD-JSON",
+      "type": "inferred_reference",
+      "evidence": "11-standards-meta-meta-charter-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `interrogation-record.json`"
+    },
+    {
+      "source": "NODE-11-STANDARDS-META-META-CHARTER-AUDIT-MD",
+      "target": "NODE-RECORDS-SPEC-DECOMPOSITION-RECORD-JSON",
+      "type": "inferred_reference",
+      "evidence": "11-standards-meta-meta-charter-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `spec-decomposition-record.json`"
+    },
+    {
+      "source": "NODE-11-STANDARDS-META-META-CHARTER-AUDIT-MD",
+      "target": "NODE-05-TRACEABILITY-MATRIX-MD",
+      "type": "inferred_reference",
+      "evidence": "11-standards-meta-meta-charter-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `05-traceability-matrix.md`"
+    },
+    {
+      "source": "NODE-11-STANDARDS-META-META-CHARTER-AUDIT-MD",
+      "target": "NODE-06-EXPERT-REVIEW-AND-RALPH-MD",
+      "type": "inferred_reference",
+      "evidence": "11-standards-meta-meta-charter-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `06-expert-review-and-ralph.md`"
+    },
+    {
+      "source": "NODE-11-STANDARDS-META-META-CHARTER-AUDIT-MD",
+      "target": "NODE-09-ITERATION-2-HARDENING-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "11-standards-meta-meta-charter-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `09-iteration-2-hardening-record.md`"
+    },
+    {
+      "source": "NODE-11-STANDARDS-META-META-CHARTER-AUDIT-MD",
+      "target": "NODE-08-HAWKEYE-BLOCKER-AND-CHANGE-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "11-standards-meta-meta-charter-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `08-hawkeye-blocker-and-change-record.md`"
+    },
+    {
+      "source": "NODE-13-RALPH-UX-RELIABILITY-QA-CERTIFICATION-RECORD-MD",
+      "target": "NODE-EVIDENCE-WYSIWYG-MOBILE-PNG",
+      "type": "inferred_reference",
+      "evidence": "13-ralph-ux-reliability-qa-certification-record.md",
+      "authority": "inferred",
+      "reason": "text reference `wysiwyg-mobile.png`"
+    },
+    {
+      "source": "NODE-13-RALPH-UX-RELIABILITY-QA-CERTIFICATION-RECORD-MD",
+      "target": "NODE-EVIDENCE-ACCESSIBILITY-CERTIFICATION-RESULTS-JSON",
+      "type": "inferred_reference",
+      "evidence": "13-ralph-ux-reliability-qa-certification-record.md",
+      "authority": "inferred",
+      "reason": "text reference `accessibility-certification-results.json`"
+    },
+    {
+      "source": "NODE-13-RALPH-UX-RELIABILITY-QA-CERTIFICATION-RECORD-MD",
+      "target": "NODE-EVIDENCE-QA-CERTIFICATION-CERTIFICATE-JSON",
+      "type": "inferred_reference",
+      "evidence": "13-ralph-ux-reliability-qa-certification-record.md",
+      "authority": "inferred",
+      "reason": "text reference `qa-certification-certificate.json`"
+    },
+    {
+      "source": "NODE-15-HUMAN-REVIEW-ONBOARDING-PORTAL-RECORD-MD",
+      "target": "NODE-RECORDS-TASKS-MD",
+      "type": "inferred_reference",
+      "evidence": "15-human-review-onboarding-portal-record.md",
+      "authority": "inferred",
+      "reason": "text reference `records/TASKS.md`"
+    },
+    {
+      "source": "NODE-16-DASHBOARD-CONTROL-REDO-RECORD-MD",
+      "target": "NODE-PORTAL-DASHBOARD-CONTROL-INDEX-JSON",
+      "type": "inferred_reference",
+      "evidence": "16-dashboard-control-redo-record.md",
+      "authority": "inferred",
+      "reason": "text reference `portal/dashboard-control-index.json`"
+    },
+    {
+      "source": "NODE-16-DASHBOARD-CONTROL-REDO-RECORD-MD",
+      "target": "NODE-PORTAL-DASHBOARD-CONTROL-HTML",
+      "type": "inferred_reference",
+      "evidence": "16-dashboard-control-redo-record.md",
+      "authority": "inferred",
+      "reason": "text reference `portal/dashboard-control.html`"
+    },
+    {
+      "source": "NODE-16-DASHBOARD-CONTROL-REDO-RECORD-MD",
+      "target": "NODE-EVIDENCE-REDO-NODE-REQUEST-PRD-JSON",
+      "type": "inferred_reference",
+      "evidence": "16-dashboard-control-redo-record.md",
+      "authority": "inferred",
+      "reason": "text reference `evidence/redo-node-request-prd.json`"
+    },
+    {
+      "source": "NODE-16-DASHBOARD-CONTROL-REDO-RECORD-MD",
+      "target": "NODE-EVIDENCE-REDO-IMPACT-PRD-JSON",
+      "type": "inferred_reference",
+      "evidence": "16-dashboard-control-redo-record.md",
+      "authority": "inferred",
+      "reason": "text reference `evidence/redo-impact-prd.json`"
+    },
+    {
+      "source": "NODE-16-DASHBOARD-CONTROL-REDO-RECORD-MD",
+      "target": "NODE-EVIDENCE-DASHBOARD-CONTROL-RECORD-JSON",
+      "type": "inferred_reference",
+      "evidence": "16-dashboard-control-redo-record.md",
+      "authority": "inferred",
+      "reason": "text reference `evidence/dashboard-control-record.json`"
+    },
+    {
+      "source": "NODE-16-DASHBOARD-CONTROL-REDO-RECORD-MD",
+      "target": "NODE-02-PRD-MD",
+      "type": "inferred_reference",
+      "evidence": "16-dashboard-control-redo-record.md",
+      "authority": "inferred",
+      "reason": "text reference `02-prd.md`"
+    },
+    {
+      "source": "NODE-EVIDENCE-BROWSER-WYSIWYG-RESULTS-JSON",
+      "target": "NODE-EVIDENCE-WYSIWYG-DESKTOP-PNG",
+      "type": "inferred_reference",
+      "evidence": "evidence/browser-wysiwyg-results.json",
+      "authority": "inferred",
+      "reason": "text reference `wysiwyg-desktop.png`"
+    },
+    {
+      "source": "NODE-EVIDENCE-BROWSER-WYSIWYG-RESULTS-JSON",
+      "target": "NODE-EVIDENCE-WYSIWYG-MOBILE-PNG",
+      "type": "inferred_reference",
+      "evidence": "evidence/browser-wysiwyg-results.json",
+      "authority": "inferred",
+      "reason": "text reference `wysiwyg-mobile.png`"
+    },
+    {
+      "source": "NODE-EVIDENCE-DASHBOARD-CONTROL-RECORD-JSON",
+      "target": "NODE-PORTAL-DASHBOARD-CONTROL-INDEX-JSON",
+      "type": "inferred_reference",
+      "evidence": "evidence/dashboard-control-record.json",
+      "authority": "inferred",
+      "reason": "text reference `portal/dashboard-control-index.json`"
+    },
+    {
+      "source": "NODE-EVIDENCE-DASHBOARD-CONTROL-RECORD-JSON",
+      "target": "NODE-PORTAL-DASHBOARD-CONTROL-HTML",
+      "type": "inferred_reference",
+      "evidence": "evidence/dashboard-control-record.json",
+      "authority": "inferred",
+      "reason": "text reference `portal/dashboard-control.html`"
+    },
+    {
+      "source": "NODE-EVIDENCE-DASHBOARD-CONTROL-RECORD-JSON",
+      "target": "NODE-EVIDENCE-REDO-NODE-REQUEST-PRD-JSON",
+      "type": "inferred_reference",
+      "evidence": "evidence/dashboard-control-record.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/redo-node-request-prd.json`"
+    },
+    {
+      "source": "NODE-EVIDENCE-DASHBOARD-CONTROL-RECORD-JSON",
+      "target": "NODE-EVIDENCE-REDO-IMPACT-PRD-JSON",
+      "type": "inferred_reference",
+      "evidence": "evidence/dashboard-control-record.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/redo-impact-prd.json`"
+    },
+    {
+      "source": "NODE-EVIDENCE-DASHBOARD-CONTROL-RECORD-JSON",
+      "target": "NODE-02-PRD-MD",
+      "type": "inferred_reference",
+      "evidence": "evidence/dashboard-control-record.json",
+      "authority": "inferred",
+      "reason": "text reference `02-prd.md`"
+    },
+    {
+      "source": "NODE-EVIDENCE-REDO-NODE-REQUEST-PRD-JSON",
+      "target": "NODE-02-PRD-MD",
+      "type": "inferred_reference",
+      "evidence": "evidence/redo-node-request-prd.json",
+      "authority": "inferred",
+      "reason": "text reference `02-prd.md`"
+    },
+    {
+      "source": "NODE-EVIDENCE-SCENARIO-TEST-RESULTS-JSON",
+      "target": "NODE-EVIDENCE-BROWSER-WYSIWYG-RESULTS-JSON",
+      "type": "inferred_reference",
+      "evidence": "evidence/scenario-test-results.json",
+      "authority": "inferred",
+      "reason": "text reference `browser-wysiwyg-results.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-00-FACTORY-RUN-SUMMARY-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../00-factory-run-summary.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-02-PRD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../02-prd.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-EVIDENCE-MATERIAL-UI-CONFORMANCE-CERTIFICATE-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../evidence/material-ui-conformance-certificate.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-RECORDS-TASKS-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../records/TASKS.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-RECORDS-TPM-FLOW-LEDGER-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../records/tpm-flow-ledger.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-RECORDS-FACTORY-PERT-PLAN-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../records/factory-pert-plan.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-03-ARCHITECTURE-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../03-architecture.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-04-TEST-STRATEGY-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../04-test-strategy.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-RECORDS-HAWKEYE-CONFORMANCE-AUDIT-RECORD-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../records/hawkeye-conformance-audit-record.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-EVIDENCE-VALIDATION-SUMMARY-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../evidence/validation-summary.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-07-HANDOFF-AND-RUNBOOK-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../07-handoff-and-runbook.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-05-TRACEABILITY-MATRIX-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../05-traceability-matrix.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `portal-data.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-01-RESEARCH-COMPETITIVE-BENCHMARK-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../01-research-competitive-benchmark.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-06-EXPERT-REVIEW-AND-RALPH-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../06-expert-review-and-ralph.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-08-HAWKEYE-BLOCKER-AND-CHANGE-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../08-hawkeye-blocker-and-change-record.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-09-ITERATION-2-HARDENING-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../09-iteration-2-hardening-record.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-10-RALPH-20-E2E-COMPLETENESS-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../10-ralph-20-e2e-completeness-record.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-11-STANDARDS-META-META-CHARTER-AUDIT-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../11-standards-meta-meta-charter-audit.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-12-CERTIFICATION-READINESS-HARDENING-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../12-certification-readiness-hardening-record.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-13-RALPH-UX-RELIABILITY-QA-CERTIFICATION-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../13-ralph-ux-reliability-qa-certification-record.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-14-MATERIAL-UI-STANDARDS-CONFORMANCE-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../14-material-ui-standards-conformance-record.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-15-HUMAN-REVIEW-ONBOARDING-PORTAL-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../15-human-review-onboarding-portal-record.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-16-DASHBOARD-CONTROL-REDO-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../16-dashboard-control-redo-record.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-RECORDS-KNOWLEDGE-GRAPH-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../records/knowledge-graph.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-RECORDS-SDLC-STAGE-COVERAGE-MATRIX-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../records/sdlc-stage-coverage-matrix.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-RECORDS-ENGAGEMENT-GOVERNANCE-RECORD-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../records/engagement-governance-record.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-RECORDS-HUMAN-REVIEW-PORTAL-RECORD-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../records/human-review-portal-record.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-RECORDS-PRODUCT-TAILORING-PROFILE-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../records/product-tailoring-profile.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-RECORDS-GENERATED-META-SKILL-CONTRACT-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../records/generated-meta-skill-contract.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-RECORDS-DARK-FACTORY-INSTANTIATION-RECORD-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../records/dark-factory-instantiation-record.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-RECORDS-INTERROGATION-RECORD-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../records/interrogation-record.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-RECORDS-SPEC-DECOMPOSITION-RECORD-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../records/spec-decomposition-record.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-RECORDS-STANDARDS-CONFORMANCE-AUDIT-RECORD-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../records/standards-conformance-audit-record.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-RECORDS-ARTIFACT-BOM-AUDIT-RECORD-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../records/artifact-bom-audit-record.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-RECORDS-META-META-CHARTER-COMPLIANCE-MATRIX-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../records/meta-meta-charter-compliance-matrix.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-RECORDS-TASK-BEAD-TB-20260425-101-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../records/task-bead-TB-20260425-101.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-RECORDS-TASK-BEAD-TB-20260426-102-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../records/task-bead-TB-20260426-102.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-RECORDS-TASK-BEAD-TB-20260426-103-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../records/task-bead-TB-20260426-103.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-RECORDS-TASK-BEAD-TB-20260426-104-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../records/task-bead-TB-20260426-104.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-RECORDS-TASK-BEAD-TB-20260426-105-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../records/task-bead-TB-20260426-105.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-RECORDS-TASK-BEAD-TB-20260426-106-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../records/task-bead-TB-20260426-106.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-RECORDS-TASK-BEAD-TB-20260426-107-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../records/task-bead-TB-20260426-107.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-RECORDS-TASK-BEAD-TB-20260426-108-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../records/task-bead-TB-20260426-108.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-RECORDS-AI-JUDGE-JURY-RECORD-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../records/ai-judge-jury-record.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-RECORDS-AI-JUDGE-JURY-RECORD-ITERATION-2-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../records/ai-judge-jury-record-iteration-2.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-RECORDS-AI-JUDGE-JURY-RECORD-RALPH-20-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../records/ai-judge-jury-record-ralph-20.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-RECORDS-AI-JUDGE-JURY-RECORD-STANDARDS-AUDIT-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../records/ai-judge-jury-record-standards-audit.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-RECORDS-AI-JUDGE-JURY-RECORD-CERTIFICATION-READINESS-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../records/ai-judge-jury-record-certification-readiness.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-RECORDS-AI-JUDGE-JURY-RECORD-UX-QA-CERTIFICATION-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../records/ai-judge-jury-record-ux-qa-certification.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-RECORDS-AI-JUDGE-JURY-RECORD-MATERIAL-UI-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../records/ai-judge-jury-record-material-ui.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-RECORDS-AI-JUDGE-JURY-RECORD-HUMAN-REVIEW-PORTAL-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../records/ai-judge-jury-record-human-review-portal.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-EVIDENCE-CORE-TEST-OUTPUT-TXT",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../evidence/core-test-output.txt`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-EVIDENCE-STATIC-UI-AUDIT-OUTPUT-TXT",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../evidence/static-ui-audit-output.txt`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-EVIDENCE-STATIC-UI-AUDIT-RESULTS-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../evidence/static-ui-audit-results.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-EVIDENCE-BROWSER-WYSIWYG-OUTPUT-TXT",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../evidence/browser-wysiwyg-output.txt`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-EVIDENCE-BROWSER-WYSIWYG-RESULTS-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../evidence/browser-wysiwyg-results.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-EVIDENCE-ACCESSIBILITY-CERTIFICATION-OUTPUT-TXT",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../evidence/accessibility-certification-output.txt`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-EVIDENCE-ACCESSIBILITY-CERTIFICATION-RESULTS-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../evidence/accessibility-certification-results.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-EVIDENCE-SCENARIO-TEST-RESULTS-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../evidence/scenario-test-results.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-EVIDENCE-IMPLEMENTATION-EXECUTION-RECORD-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../evidence/implementation-execution-record.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-EVIDENCE-EXECUTION-KERNEL-REPORT-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../evidence/execution-kernel-report.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-EVIDENCE-MATERIAL-GOVERNANCE-VALIDATION-OUTPUT-TXT",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../evidence/material-governance-validation-output.txt`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-EVIDENCE-HUMAN-REVIEW-PORTAL-VALIDATION-OUTPUT-TXT",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../evidence/human-review-portal-validation-output.txt`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-EVIDENCE-HUMAN-REVIEW-PORTAL-META-VALIDATOR-OUTPUT-TXT",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../evidence/human-review-portal-meta-validator-output.txt`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-EVIDENCE-HUMAN-REVIEW-PORTAL-VALIDATION-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../evidence/human-review-portal-validation.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-EVIDENCE-HUMAN-REVIEW-PORTAL-SCREENSHOT-PNG",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../evidence/human-review-portal-screenshot.png`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-EVIDENCE-QUALITY-REFINERY-GATE-YAML",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../evidence/quality-refinery-gate.yaml`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-EVIDENCE-QUALITY-REFINERY-GATE-STANDARDS-AUDIT-YAML",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../evidence/quality-refinery-gate-standards-audit.yaml`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-EVIDENCE-QUALITY-REFINERY-GATE-CERTIFICATION-READINESS-YAML",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../evidence/quality-refinery-gate-certification-readiness.yaml`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-EVIDENCE-QUALITY-REFINERY-GATE-UX-QA-CERTIFICATION-YAML",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../evidence/quality-refinery-gate-ux-qa-certification.yaml`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-EVIDENCE-QUALITY-REFINERY-GATE-MATERIAL-UI-YAML",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../evidence/quality-refinery-gate-material-ui.yaml`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-EVIDENCE-QUALITY-REFINERY-GATE-HUMAN-REVIEW-PORTAL-YAML",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../evidence/quality-refinery-gate-human-review-portal.yaml`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-EVIDENCE-AUDIT-QUALITY-CERTIFICATE-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../evidence/audit-quality-certificate.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-EVIDENCE-CERTIFICATION-READINESS-CERTIFICATE-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../evidence/certification-readiness-certificate.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-EVIDENCE-QA-CERTIFICATION-CERTIFICATE-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../evidence/qa-certification-certificate.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-EVIDENCE-HUMAN-REVIEW-PORTAL-CERTIFICATE-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../evidence/human-review-portal-certificate.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-EVIDENCE-WYSIWYG-DESKTOP-PNG",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../evidence/wysiwyg-desktop.png`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-EVIDENCE-WYSIWYG-MOBILE-PNG",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../evidence/wysiwyg-mobile.png`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-PORTAL-DIAGRAMS-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `diagrams.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-00-FACTORY-RUN-SUMMARY-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `00-factory-run-summary.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-02-PRD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `02-prd.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-MATERIAL-UI-CONFORMANCE-CERTIFICATE-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/material-ui-conformance-certificate.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-HUMAN-REVIEW-PORTAL-CERTIFICATE-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/human-review-portal-certificate.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-RECORDS-TASKS-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `records/TASKS.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-RECORDS-TPM-FLOW-LEDGER-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `records/tpm-flow-ledger.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-RECORDS-FACTORY-PERT-PLAN-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `records/factory-pert-plan.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-RECORDS-HAWKEYE-CONFORMANCE-AUDIT-RECORD-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `records/hawkeye-conformance-audit-record.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-03-ARCHITECTURE-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `03-architecture.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-04-TEST-STRATEGY-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `04-test-strategy.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-05-TRACEABILITY-MATRIX-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `05-traceability-matrix.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-VALIDATION-SUMMARY-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/validation-summary.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-HUMAN-REVIEW-PORTAL-VALIDATION-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/human-review-portal-validation.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-07-HANDOFF-AND-RUNBOOK-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `07-handoff-and-runbook.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-RECORDS-KNOWLEDGE-GRAPH-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `records/knowledge-graph.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-RECORDS-HUMAN-REVIEW-PORTAL-RECORD-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `records/human-review-portal-record.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-PORTAL-DIAGRAMS-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `portal/diagrams.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-PORTAL-README-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `portal/README.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-PORTAL-INDEX-HTML",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `portal/index.html`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-RECORDS-SDLC-STAGE-COVERAGE-MATRIX-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `records/sdlc-stage-coverage-matrix.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-01-RESEARCH-COMPETITIVE-BENCHMARK-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `01-research-competitive-benchmark.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-06-EXPERT-REVIEW-AND-RALPH-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `06-expert-review-and-ralph.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-10-RALPH-20-E2E-COMPLETENESS-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `10-ralph-20-e2e-completeness-record.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-11-STANDARDS-META-META-CHARTER-AUDIT-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `11-standards-meta-meta-charter-audit.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-12-CERTIFICATION-READINESS-HARDENING-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `12-certification-readiness-hardening-record.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-13-RALPH-UX-RELIABILITY-QA-CERTIFICATION-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `13-ralph-ux-reliability-qa-certification-record.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-14-MATERIAL-UI-STANDARDS-CONFORMANCE-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `14-material-ui-standards-conformance-record.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-15-HUMAN-REVIEW-ONBOARDING-PORTAL-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `15-human-review-onboarding-portal-record.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-16-DASHBOARD-CONTROL-REDO-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `16-dashboard-control-redo-record.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-EXECUTION-KERNEL-REPORT-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/execution-kernel-report.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-08-HAWKEYE-BLOCKER-AND-CHANGE-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `08-hawkeye-blocker-and-change-record.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-09-ITERATION-2-HARDENING-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `09-iteration-2-hardening-record.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-RECORDS-AI-JUDGE-JURY-RECORD-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `records/ai-judge-jury-record.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-RECORDS-AI-JUDGE-JURY-RECORD-CERTIFICATION-READINESS-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `records/ai-judge-jury-record-certification-readiness.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-RECORDS-AI-JUDGE-JURY-RECORD-HUMAN-REVIEW-PORTAL-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `records/ai-judge-jury-record-human-review-portal.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-RECORDS-AI-JUDGE-JURY-RECORD-ITERATION-2-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `records/ai-judge-jury-record-iteration-2.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-RECORDS-AI-JUDGE-JURY-RECORD-MATERIAL-UI-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `records/ai-judge-jury-record-material-ui.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-RECORDS-AI-JUDGE-JURY-RECORD-RALPH-20-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `records/ai-judge-jury-record-ralph-20.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-RECORDS-AI-JUDGE-JURY-RECORD-STANDARDS-AUDIT-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `records/ai-judge-jury-record-standards-audit.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-RECORDS-AI-JUDGE-JURY-RECORD-UX-QA-CERTIFICATION-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `records/ai-judge-jury-record-ux-qa-certification.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-RECORDS-ARTIFACT-BOM-AUDIT-RECORD-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `records/artifact-bom-audit-record.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-RECORDS-DARK-FACTORY-INSTANTIATION-RECORD-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `records/dark-factory-instantiation-record.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-RECORDS-ENGAGEMENT-GOVERNANCE-RECORD-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `records/engagement-governance-record.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-RECORDS-GENERATED-META-SKILL-CONTRACT-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `records/generated-meta-skill-contract.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-RECORDS-INTERROGATION-RECORD-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `records/interrogation-record.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-RECORDS-META-META-CHARTER-COMPLIANCE-MATRIX-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `records/meta-meta-charter-compliance-matrix.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-RECORDS-PRODUCT-TAILORING-PROFILE-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `records/product-tailoring-profile.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-RECORDS-SPEC-DECOMPOSITION-RECORD-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `records/spec-decomposition-record.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-RECORDS-STANDARDS-CONFORMANCE-AUDIT-RECORD-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `records/standards-conformance-audit-record.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-RECORDS-TASK-BEAD-TB-20260425-101-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `records/task-bead-TB-20260425-101.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-RECORDS-TASK-BEAD-TB-20260425-201-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `records/task-bead-TB-20260425-201.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-RECORDS-TASK-BEAD-TB-20260426-102-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `records/task-bead-TB-20260426-102.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-RECORDS-TASK-BEAD-TB-20260426-103-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `records/task-bead-TB-20260426-103.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-RECORDS-TASK-BEAD-TB-20260426-104-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `records/task-bead-TB-20260426-104.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-RECORDS-TASK-BEAD-TB-20260426-105-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `records/task-bead-TB-20260426-105.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-RECORDS-TASK-BEAD-TB-20260426-106-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `records/task-bead-TB-20260426-106.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-RECORDS-TASK-BEAD-TB-20260426-107-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `records/task-bead-TB-20260426-107.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-RECORDS-TASK-BEAD-TB-20260426-108-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `records/task-bead-TB-20260426-108.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-ACCESSIBILITY-CERTIFICATION-OUTPUT-TXT",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/accessibility-certification-output.txt`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-ACCESSIBILITY-CERTIFICATION-RESULTS-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/accessibility-certification-results.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-AUDIT-FINDINGS-REGISTER-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/audit-findings-register.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-AUDIT-PANEL-RECORD-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/audit-panel-record.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-AUDIT-QUALITY-CERTIFICATE-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/audit-quality-certificate.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-BROWSER-WYSIWYG-BLOCKER-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/browser-wysiwyg-blocker.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-BROWSER-WYSIWYG-OUTPUT-TXT",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/browser-wysiwyg-output.txt`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-BROWSER-WYSIWYG-RESULTS-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/browser-wysiwyg-results.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-CERTIFICATION-READINESS-CERTIFICATE-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/certification-readiness-certificate.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-CERTIFICATION-READINESS-PANEL-RECORD-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/certification-readiness-panel-record.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-CORE-TEST-OUTPUT-TXT",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/core-test-output.txt`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-DASHBOARD-CONTROL-RECORD-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/dashboard-control-record.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-HUMAN-REVIEW-PORTAL-PANEL-RECORD-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/human-review-portal-panel-record.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-HUMAN-REVIEW-PORTAL-META-VALIDATOR-OUTPUT-TXT",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/human-review-portal-meta-validator-output.txt`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-HUMAN-REVIEW-PORTAL-SCREENSHOT-PNG",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/human-review-portal-screenshot.png`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-HUMAN-REVIEW-PORTAL-VALIDATION-OUTPUT-TXT",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/human-review-portal-validation-output.txt`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-IMPLEMENTATION-EXECUTION-RECORD-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/implementation-execution-record.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-MATERIAL-GOVERNANCE-VALIDATION-OUTPUT-TXT",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/material-governance-validation-output.txt`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-MATERIAL-UI-PANEL-RECORD-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/material-ui-panel-record.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-QA-CERTIFICATION-CERTIFICATE-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/qa-certification-certificate.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-QA-CERTIFICATION-PANEL-RECORD-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/qa-certification-panel-record.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-QUALITY-REFINERY-GATE-CERTIFICATION-READINESS-YAML",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/quality-refinery-gate-certification-readiness.yaml`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-QUALITY-REFINERY-GATE-HUMAN-REVIEW-PORTAL-YAML",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/quality-refinery-gate-human-review-portal.yaml`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-QUALITY-REFINERY-GATE-MATERIAL-UI-YAML",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/quality-refinery-gate-material-ui.yaml`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-QUALITY-REFINERY-GATE-STANDARDS-AUDIT-YAML",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/quality-refinery-gate-standards-audit.yaml`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-QUALITY-REFINERY-GATE-UX-QA-CERTIFICATION-YAML",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/quality-refinery-gate-ux-qa-certification.yaml`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-QUALITY-REFINERY-GATE-YAML",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/quality-refinery-gate.yaml`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-REDO-IMPACT-PRD-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/redo-impact-prd.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-REDO-IMPACT-UI-02-PRD-MD-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/redo-impact-ui-02-prd-md.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-REDO-NODE-REQUEST-PRD-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/redo-node-request-prd.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-SCENARIO-TEST-RESULTS-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/scenario-test-results.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-STATIC-UI-AUDIT-OUTPUT-TXT",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/static-ui-audit-output.txt`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-STATIC-UI-AUDIT-RESULTS-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/static-ui-audit-results.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-WYSIWYG-BROWSER-TEST-RECORD-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/wysiwyg-browser-test-record.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-WYSIWYG-DESKTOP-PNG",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/wysiwyg-desktop.png`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-WYSIWYG-MOBILE-PNG",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/wysiwyg-mobile.png`"
+    },
+    {
+      "source": "NODE-PORTAL-README-MD",
+      "target": "NODE-PORTAL-INDEX-HTML",
+      "type": "inferred_reference",
+      "evidence": "portal/README.md",
+      "authority": "inferred",
+      "reason": "text reference `index.html`"
+    },
+    {
+      "source": "NODE-PORTAL-README-MD",
+      "target": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/README.md",
+      "authority": "inferred",
+      "reason": "text reference `portal-data.json`"
+    },
+    {
+      "source": "NODE-PORTAL-README-MD",
+      "target": "NODE-PORTAL-DIAGRAMS-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/README.md",
+      "authority": "inferred",
+      "reason": "text reference `diagrams.md`"
+    },
+    {
+      "source": "NODE-RECORDS-HAWKEYE-CONFORMANCE-AUDIT-RECORD-JSON",
+      "target": "NODE-EVIDENCE-QUALITY-REFINERY-GATE-YAML",
+      "type": "inferred_reference",
+      "evidence": "records/hawkeye-conformance-audit-record.json",
+      "authority": "inferred",
+      "reason": "text reference `quality-refinery-gate.yaml`"
+    }
+  ],
+  "validators": [],
+  "open_questions": [],
+  "residual_risks": [
+    "Text-scanned inferred edges must be converted to explicit trace/knowledge-graph edges before certification."
+  ]
+}

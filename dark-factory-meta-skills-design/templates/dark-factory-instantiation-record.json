@@ -1,0 +1,27 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+    "strict_compliance": "Mandatory. Every claim must be project-specific, evidence-backed, trace-linked, reviewer-challenged, and free of unsupported invention.",
+    "missing_evidence_rule": "If evidence is missing, mark it as an assumption, risk, open question, or failure."
+  },
+  "template_only": true,
+  "instantiation_id": "DF-INSTANTIATION-000",
+  "run_id": "",
+  "generated_meta_skill_contract": "",
+  "product_tailoring_profile": "",
+  "instantiated_records": {
+    "tasks_md": "",
+    "tpm_flow_ledger": "",
+    "pert_plan": "",
+    "knowledge_graph": "",
+    "sdlc_stage_coverage_matrix": "",
+    "execution_kernel_report": "",
+    "artifact_bom_tailoring": "",
+    "quality_refinery_gate": "",
+    "traceability_matrix": ""
+  },
+  "current_state": "planned | active | blocked | accepted | closed",
+  "legal_next_action": "",
+  "missing_or_waived_controls": [],
+  "template_marker": true
+}

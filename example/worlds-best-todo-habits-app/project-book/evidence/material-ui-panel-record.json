@@ -1,0 +1,89 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+  },
+  "template_only": false,
+  "panel_id": "PANEL-NORTHSTAR-MATERIAL-UI-20260426-001",
+  "bead_id": "TB-20260426-107",
+  "review_target": "Material 3 / Material 3 Expressive UI standards conformance for Northstar Daily",
+  "roles": [
+    {
+      "role": "Google Material Systems Lead",
+      "persona_contract": "Elite design-systems reviewer accountable for Material token discipline, role-based color, typescale, shape scale, state layers, and component-level consistency.",
+      "decision_rights": "Rejects cosmetic Material claims that lack system tokens, accessible on-color roles, reusable shape roles, and touch/action behavior.",
+      "evidence_required": [
+        "Material system tokens in CSS",
+        "role-based color usage",
+        "shape and motion tokens",
+        "static audit enforcement"
+      ],
+      "vote": "pass"
+    },
+    {
+      "role": "Product UX And Interaction Director",
+      "persona_contract": "Principal daily-product UX leader accountable for scanability, repeated-use efficiency, glanceable workflow state, mobile ergonomics, and action clarity.",
+      "decision_rights": "Rejects styling that looks modern but slows capture, planning, focus, habit review, or shutdown workflows.",
+      "evidence_required": [
+        "desktop screenshot",
+        "mobile screenshot",
+        "browser E2E proof",
+        "primary action and navigation clarity"
+      ],
+      "vote": "pass"
+    },
+    {
+      "role": "Accessibility And Browser Verification Lead",
+      "persona_contract": "Senior verification lead accountable for keyboard reachability, focus behavior, state exposure, contrast, target sizing, and viewport evidence.",
+      "decision_rights": "Rejects visual-only conformance, untested token contrast, hidden keyboard traps, and screenshots without executable browser checks.",
+      "evidence_required": [
+        "accessibility certification audit",
+        "Material contrast pairs",
+        "keyboard sequence evidence",
+        "browser WYSIWYG evidence"
+      ],
+      "vote": "pass"
+    },
+    {
+      "role": "Hawkeye Conformance Auditor",
+      "persona_contract": "Independent conformance auditor with veto authority over skipped bead discipline, stale evidence, missing trace links, and unsupported standards claims.",
+      "decision_rights": "Rejects any Material pass that is not backed by task bead, TPM, PERT, KG, refinery gate, certificate, and validation evidence.",
+      "evidence_required": [
+        "task bead",
+        "quality gate",
+        "certificate",
+        "trace and validation updates"
+      ],
+      "vote": "pass"
+    },
+    {
+      "role": "Adversarial Anti-Slop Prosecutor",
+      "persona_contract": "Red-team critic accountable for attacking token theater, fake standards language, inaccessible colors, mobile damage, and overclaimed Google conformance.",
+      "decision_rights": "Blocks pass until every standards claim is bounded and test-backed.",
+      "evidence_required": [
+        "official-source mapping",
+        "bounded conformance language",
+        "passing tests",
+        "residual risk statement"
+      ],
+      "vote": "stand_down"
+    }
+  ],
+  "ralph_loops_completed": 5,
+  "panel_result": "pass",
+  "evidence_reviewed": [
+    "app/styles.css",
+    "tests/static-ui-audit.cjs",
+    "tests/accessibility-certification-audit.cjs",
+    "project-book/14-material-ui-standards-conformance-record.md",
+    "project-book/evidence/static-ui-audit-results.json",
+    "project-book/evidence/accessibility-certification-results.json",
+    "project-book/evidence/browser-wysiwyg-results.json",
+    "project-book/evidence/wysiwyg-desktop.png",
+    "project-book/evidence/wysiwyg-mobile.png"
+  ],
+  "residual_risks": [
+    "No external Google certification is claimed.",
+    "No remote Material package or font is loaded because the demonstrator remains local-first.",
+    "Dynamic color is represented by role tokens and a chosen palette, not runtime wallpaper extraction."
+  ]
+}

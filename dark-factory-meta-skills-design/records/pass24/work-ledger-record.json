@@ -1,0 +1,33 @@
+{
+  "id": "WL-PASS24-001",
+  "title": "Ralph loop pass 24 certificate bundle hardening",
+  "current_state": "accepted",
+  "next_action": "Use certificate bundle validation for all future pass certificates.",
+  "revalidation_trigger": "Any future finding that certificates can pass without matching panel score and refinery gate evidence files.",
+  "owner": {
+    "accountable": "codex",
+    "responsible": "codex"
+  },
+  "acceptance_criteria": [
+    "Pass 24 findings documented",
+    "Pass certificates require bundled panel and refinery evidence",
+    "Panel ID, artifact, reviewers, and scores are compared to certificate fields",
+    "Refinery gate ID, status, artifact, panel, and certificate mentions are compared to certificate fields",
+    "Hardening runner includes positive and negative bundle checks"
+  ],
+  "evidence_required": [
+    "pass24 critic/fix record",
+    "DFMS hardening runner output",
+    "pass24 merged-record validation",
+    "installed/workspace hash comparison"
+  ],
+  "evidence_provided": [
+    "24-ralph-loop-critic-review-and-fix-record.md",
+    "DFMS hardening checks complete",
+    "ATTR-PASS24-001",
+    "CG-PASS24-001",
+    "RFG-PASS24-001",
+    "records/pass24 merged records",
+    "INSTALLED_WORKSPACE_HASHES_MATCH"
+  ]
+}

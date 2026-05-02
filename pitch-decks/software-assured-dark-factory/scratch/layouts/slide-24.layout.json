@@ -1,0 +1,2740 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/9k6s46",
+    "id": "9k6s46",
+    "slide": 24,
+    "layoutId": "39df3ad4-e207-4cff-a7b3-0934322c7183",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "9c364795-fe59-472e-ba8a-a667cb58489e",
+    "masterLayoutName": "Master",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "39df3ad4-e207-4cff-a7b3-0934322c7183",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "9c364795-fe59-472e-ba8a-a667cb58489e",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "9c364795-fe59-472e-ba8a-a667cb58489e",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/58z25kb6",
+      "id": "1",
+      "name": "background",
+      "bbox": [
+        0,
+        0,
+        1920,
+        1080
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#09100F",
+      "lineColor": "#09100F",
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/yhgn29gr",
+      "id": "2",
+      "name": "standards-eyebrow",
+      "bbox": [
+        88,
+        64,
+        1744,
+        22
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.0.0"
+      },
+      "geometry": "rect",
+      "text": "STANDARDIZATION",
+      "textPreview": "STANDARDIZATION",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "fontSize": 21,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "STANDARDIZATION"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "STANDARDIZATION",
+          "runs": [
+            {
+              "index": 1,
+              "text": "STANDARDIZATION",
+              "fontSize": 21,
+              "color": "#9AF2C8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/n29gr2p8",
+      "id": "3",
+      "name": "standards-title",
+      "bbox": [
+        88,
+        98,
+        1352,
+        110
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.0.1"
+      },
+      "geometry": "rect",
+      "text": "Standards become operating controls, not appendix claims.",
+      "textPreview": "Standards become operating controls, not appendix claims.",
+      "resolvedFontSize": 55,
+      "resolvedTextStyle": {
+        "fontSize": 55,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Standards become operating controls, not appendix claims."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Standards become operating controls, not appendix claims.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Standards become operating controls, not appendix claims.",
+              "fontSize": 55,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gbq1oryt",
+      "id": "4",
+      "name": "standards-subtitle",
+      "bbox": [
+        88,
+        222,
+        1008,
+        52
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.0.2"
+      },
+      "geometry": "rect",
+      "text": "DFMS maps lifecycle, artifacts, security, assurance, and operations into explicit nodes and gates.",
+      "textPreview": "DFMS maps lifecycle, artifacts, security, assurance, and operations into explicit nodes and gates.",
+      "resolvedFontSize": 26,
+      "resolvedTextStyle": {
+        "fontSize": 26,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "DFMS maps lifecycle, artifacts, security, assurance, and operations into explicit nodes and gates."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "DFMS maps lifecycle, artifacts, security, assurance, and operations into explicit nodes and gates.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "DFMS maps lifecycle, artifacts, security, assurance, and operations into explicit nodes and gates.",
+              "fontSize": 26,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5wjudg7a",
+      "id": "5",
+      "name": "dot-iso-iec-ieee-12207",
+      "bbox": [
+        88,
+        448,
+        13,
+        56
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.0.0"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#2DD4BF",
+      "lineColor": "#2DD4BF",
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/y90je9cv",
+      "id": "6",
+      "name": "statement-title-iso-iec-ieee-12207",
+      "bbox": [
+        124,
+        446,
+        854,
+        30
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.0.1.0"
+      },
+      "geometry": "rect",
+      "text": "ISO/IEC/IEEE 12207",
+      "textPreview": "ISO/IEC/IEEE 12207",
+      "resolvedFontSize": 29,
+      "resolvedTextStyle": {
+        "fontSize": 29,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "ISO/IEC/IEEE 12207"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "ISO/IEC/IEEE 12207",
+          "runs": [
+            {
+              "index": 1,
+              "text": "ISO/IEC/IEEE 12207",
+              "fontSize": 29,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nuxc3ylc",
+      "id": "7",
+      "name": "statement-body-iso-iec-ieee-12207",
+      "bbox": [
+        124,
+        480,
+        430,
+        44
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.0.1.1"
+      },
+      "geometry": "rect",
+      "text": "Lifecycle process coverage and phase outcomes.",
+      "textPreview": "Lifecycle process coverage and phase outcomes.",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Lifecycle process coverage and phase outcomes."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Lifecycle process coverage and phase outcomes.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Lifecycle process coverage and phase outcomes.",
+              "fontSize": 22,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cbulwval",
+      "id": "8",
+      "name": "dot-iso-iec-ieee-15289",
+      "bbox": [
+        88,
+        544,
+        13,
+        56
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.2.1"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#46D17E",
+      "lineColor": "#46D17E",
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5sneloj2",
+      "id": "9",
+      "name": "statement-title-iso-iec-ieee-15289",
+      "bbox": [
+        124,
+        544,
+        854,
+        30
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.1.1.0"
+      },
+      "geometry": "rect",
+      "text": "ISO/IEC/IEEE 15289",
+      "textPreview": "ISO/IEC/IEEE 15289",
+      "resolvedFontSize": 29,
+      "resolvedTextStyle": {
+        "fontSize": 29,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "ISO/IEC/IEEE 15289"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "ISO/IEC/IEEE 15289",
+          "runs": [
+            {
+              "index": 1,
+              "text": "ISO/IEC/IEEE 15289",
+              "fontSize": 29,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/tcj6tova",
+      "id": "10",
+      "name": "statement-body-iso-iec-ieee-15289",
+      "bbox": [
+        124,
+        578,
+        404,
+        44
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.1.1.1"
+      },
+      "geometry": "rect",
+      "text": "Information-item discipline for SDLC artifacts.",
+      "textPreview": "Information-item discipline for SDLC artifacts.",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Information-item discipline for SDLC"
+          },
+          {
+            "index": 2,
+            "text": "artifacts."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Information-item discipline for SDLC artifacts.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Information-item discipline for SDLC artifacts.",
+              "fontSize": 22,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0rqd4vmt",
+      "id": "11",
+      "name": "dot-nist-ssdf-owasp-samm",
+      "bbox": [
+        88,
+        644,
+        13,
+        56
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.2.0"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#F2B84B",
+      "lineColor": "#F2B84B",
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/b6xkf6dc",
+      "id": "12",
+      "name": "statement-title-nist-ssdf-owasp-samm",
+      "bbox": [
+        124,
+        642,
+        854,
+        30
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.2.1.0"
+      },
+      "geometry": "rect",
+      "text": "NIST SSDF + OWASP SAMM",
+      "textPreview": "NIST SSDF + OWASP SAMM",
+      "resolvedFontSize": 29,
+      "resolvedTextStyle": {
+        "fontSize": 29,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "NIST SSDF + OWASP SAMM"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "NIST SSDF + OWASP SAMM",
+          "runs": [
+            {
+              "index": 1,
+              "text": "NIST SSDF + OWASP SAMM",
+              "fontSize": 29,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/il0rqd4v",
+      "id": "13",
+      "name": "statement-body-nist-ssdf-owasp-samm",
+      "bbox": [
+        124,
+        676,
+        480,
+        44
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.2.1.1"
+      },
+      "geometry": "rect",
+      "text": "Secure development and assurance maturity controls.",
+      "textPreview": "Secure development and assurance maturity controls.",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Secure development and assurance maturity"
+          },
+          {
+            "index": 2,
+            "text": "controls."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Secure development and assurance maturity controls.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Secure development and assurance maturity controls.",
+              "fontSize": 22,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/t47y1kre",
+      "id": "14",
+      "name": "dot-omg-mda-uml-ddd",
+      "bbox": [
+        88,
+        740,
+        13,
+        56
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.3.0"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#F26464",
+      "lineColor": "#F26464",
+      "lineWidth": 0
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0je9cvix",
+      "id": "15",
+      "name": "statement-title-omg-mda-uml-ddd",
+      "bbox": [
+        124,
+        740,
+        854,
+        30
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.3.1.0"
+      },
+      "geometry": "rect",
+      "text": "OMG MDA + UML + DDD",
+      "textPreview": "OMG MDA + UML + DDD",
+      "resolvedFontSize": 29,
+      "resolvedTextStyle": {
+        "fontSize": 29,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "OMG MDA + UML + DDD"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "OMG MDA + UML + DDD",
+          "runs": [
+            {
+              "index": 1,
+              "text": "OMG MDA + UML + DDD",
+              "fontSize": 29,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/byhgn29g",
+      "id": "16",
+      "name": "statement-body-omg-mda-uml-ddd",
+      "bbox": [
+        124,
+        774,
+        530,
+        44
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.3.1.1"
+      },
+      "geometry": "rect",
+      "text": "Modeling, bounded contexts, and transformation evidence.",
+      "textPreview": "Modeling, bounded contexts, and transformation evidence.",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Modeling, bounded contexts, and transformation evidence."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Modeling, bounded contexts, and transformation evidence.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Modeling, bounded contexts, and transformation evidence.",
+              "fontSize": 22,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/idonyd0z",
+      "id": "17",
+      "name": "standards-big",
+      "bbox": [
+        1028,
+        510,
+        476,
+        174
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.0"
+      },
+      "geometry": "rect",
+      "text": "The pitch is not compliance theater.",
+      "textPreview": "The pitch is not compliance theater.",
+      "resolvedFontSize": 58,
+      "resolvedTextStyle": {
+        "fontSize": 58,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "The pitch is not"
+          },
+          {
+            "index": 2,
+            "text": "compliance"
+          },
+          {
+            "index": 3,
+            "text": "theater."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "The pitch is not compliance theater.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "The pitch is not compliance theater.",
+              "fontSize": 58,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/p0bi9s36",
+      "id": "18",
+      "name": "standards-body",
+      "bbox": [
+        1028,
+        710,
+        568,
+        44
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.1"
+      },
+      "geometry": "rect",
+      "text": "Each selected standard changes what the factory must produce, review, trace, and verify before a gate closes.",
+      "textPreview": "Each selected standard changes what the factory must produce, review, trace, and verify before a gate closes.",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Each selected standard changes what the factory must"
+          },
+          {
+            "index": 2,
+            "text": "produce, review, trace, and verify before a gate closes."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Each selected standard changes what the factory must produce, review, trace, and verify before a gate closes.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Each selected standard changes what the factory must produce, review, trace, and verify before a gate closes.",
+              "fontSize": 22,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0fepkzup",
+      "id": "19",
+      "name": "standards-footer",
+      "bbox": [
+        88,
+        990,
+        404,
+        28
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.2.0"
+      },
+      "geometry": "rect",
+      "text": "Standards baseline from DFMS design docs; exact tailoring is project-specific.",
+      "textPreview": "Standards baseline from DFMS design docs; exact tailoring is project-specific.",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Standards baseline from DFMS design docs; exact tailoring is"
+          },
+          {
+            "index": 2,
+            "text": "project-specific."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Standards baseline from DFMS design docs; exact tailoring is project-specific.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Standards baseline from DFMS design docs; exact tailoring is project-specific.",
+              "fontSize": 13,
+              "color": "#6E7C74"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cbulwval",
+      "id": "20",
+      "name": "standards-page",
+      "bbox": [
+        1792,
+        998,
+        40,
+        12
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.2.1"
+      },
+      "geometry": "rect",
+      "text": "24",
+      "textPreview": "24",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "24"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "24",
+          "runs": [
+            {
+              "index": 1,
+              "text": "24",
+              "fontSize": 13,
+              "color": "#6E7C74",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "composeRuns": [
+    {
+      "index": 1,
+      "frame": {
+        "left": 0,
+        "top": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "baseUnit": 8,
+      "root": {
+        "path": "0",
+        "kind": "layers",
+        "name": "standards-root",
+        "requestedSize": {
+          "width": {
+            "mode": "fill",
+            "value": 1
+          },
+          "height": {
+            "mode": "fill",
+            "value": 1
+          }
+        },
+        "intrinsicSize": {
+          "width": 0,
+          "height": 0
+        },
+        "frame": {
+          "left": 0,
+          "top": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "children": [
+          {
+            "path": "0.0",
+            "kind": "shape",
+            "name": "background",
+            "requestedSize": {
+              "width": {
+                "mode": "fill",
+                "value": 1
+              },
+              "height": {
+                "mode": "fill",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 0,
+              "height": 0
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "snappedFrame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/58z25kb6",
+              "id": "1",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.1",
+            "kind": "column",
+            "name": "standards-content",
+            "requestedSize": {
+              "width": {
+                "mode": "fill",
+                "value": 1
+              },
+              "height": {
+                "mode": "fill",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 176,
+              "height": 337
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "children": [
+              {
+                "path": "0.1.0",
+                "kind": "column",
+                "name": "standards-title-stack",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "hug"
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 1351.05,
+                  "height": 128
+                },
+                "frame": {
+                  "left": 88,
+                  "top": 64,
+                  "width": 1744,
+                  "height": 209
+                },
+                "children": [
+                  {
+                    "path": "0.1.0.0",
+                    "kind": "text",
+                    "name": "standards-eyebrow",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 21
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 64,
+                      "width": 1744,
+                      "height": 21
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 64,
+                      "width": 1744,
+                      "height": 22
+                    },
+                    "children": [],
+                    "text": "STANDARDIZATION",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/yhgn29gr",
+                      "id": "2",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.0.1",
+                    "kind": "text",
+                    "name": "standards-title",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "wrap",
+                        "max": 1500
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 1351.05,
+                      "height": 55
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 98,
+                      "width": 1351.05,
+                      "height": 110
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 98,
+                      "width": 1352,
+                      "height": 110
+                    },
+                    "children": [],
+                    "text": "Standards become operating controls, not appendix claims.",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/n29gr2p8",
+                      "id": "3",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.0.2",
+                    "kind": "text",
+                    "name": "standards-subtitle",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "wrap",
+                        "max": 1330
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 1007.74,
+                      "height": 26
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 221,
+                      "width": 1007.74,
+                      "height": 52
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 222,
+                      "width": 1008,
+                      "height": 52
+                    },
+                    "children": [],
+                    "text": "DFMS maps lifecycle, artifacts, security, assurance, and operations into explicit nodes and gates.",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/gbq1oryt",
+                      "id": "4",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "gap": 13,
+                "effectiveGap": 13,
+                "justifyOffset": 0,
+                "align": "start",
+                "justify": "start",
+                "contentFrame": {
+                  "left": 88,
+                  "top": 64,
+                  "width": 1744,
+                  "height": 209
+                },
+                "items": [
+                  {
+                    "path": "0.1.0.0",
+                    "frame": {
+                      "left": 88,
+                      "top": 64,
+                      "width": 1744,
+                      "height": 21
+                    }
+                  },
+                  {
+                    "path": "0.1.0.1",
+                    "frame": {
+                      "left": 88,
+                      "top": 98,
+                      "width": 1351.05,
+                      "height": 110
+                    }
+                  },
+                  {
+                    "path": "0.1.0.2",
+                    "frame": {
+                      "left": 88,
+                      "top": 221,
+                      "width": 1007.74,
+                      "height": 52
+                    }
+                  }
+                ]
+              },
+              {
+                "path": "0.1.1",
+                "kind": "grid",
+                "name": "standards-grid",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "fill",
+                    "value": 1
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 52,
+                  "height": 284
+                },
+                "frame": {
+                  "left": 88,
+                  "top": 307,
+                  "width": 1744,
+                  "height": 649
+                },
+                "children": [
+                  {
+                    "path": "0.1.1.0",
+                    "kind": "column",
+                    "name": "standards-list",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 284
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 446,
+                      "width": 888.3,
+                      "height": 372
+                    },
+                    "children": [
+                      {
+                        "path": "0.1.1.0.0",
+                        "kind": "row",
+                        "name": "statement-iso-iec-ieee-12207",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 35,
+                          "height": 56
+                        },
+                        "frame": {
+                          "left": 88,
+                          "top": 446,
+                          "width": 888.3,
+                          "height": 78
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.0.0.0",
+                            "kind": "shape",
+                            "name": "dot-iso-iec-ieee-12207",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fixed",
+                                "value": 13
+                              },
+                              "height": {
+                                "mode": "fixed",
+                                "value": 56
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 13,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 88,
+                              "top": 446,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "snappedFrame": {
+                              "left": 88,
+                              "top": 448,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "children": [],
+                            "geometry": "rect",
+                            "element": {
+                              "aid": "sh/5wjudg7a",
+                              "id": "5",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.0.0.1",
+                            "kind": "column",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 429.16,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 123,
+                              "top": 446,
+                              "width": 853.3,
+                              "height": 78
+                            },
+                            "children": [
+                              {
+                                "path": "0.1.1.0.0.1.0",
+                                "kind": "text",
+                                "name": "statement-title-iso-iec-ieee-12207",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 29
+                                },
+                                "frame": {
+                                  "left": 123,
+                                  "top": 446,
+                                  "width": 853.3,
+                                  "height": 29
+                                },
+                                "snappedFrame": {
+                                  "left": 124,
+                                  "top": 446,
+                                  "width": 854,
+                                  "height": 30
+                                },
+                                "children": [],
+                                "text": "ISO/IEC/IEEE 12207",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/y90je9cv",
+                                  "id": "6",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.1.1.0.0.1.1",
+                                "kind": "text",
+                                "name": "statement-body-iso-iec-ieee-12207",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "wrap",
+                                    "max": 1030
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 429.16,
+                                  "height": 22
+                                },
+                                "frame": {
+                                  "left": 123,
+                                  "top": 480,
+                                  "width": 429.16,
+                                  "height": 44
+                                },
+                                "snappedFrame": {
+                                  "left": 124,
+                                  "top": 480,
+                                  "width": 430,
+                                  "height": 44
+                                },
+                                "children": [],
+                                "text": "Lifecycle process coverage and phase outcomes.",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/nuxc3ylc",
+                                  "id": "7",
+                                  "kind": "shape"
+                                }
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 5,
+                            "effectiveGap": 5,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 123,
+                              "top": 446,
+                              "width": 853.3,
+                              "height": 78
+                            },
+                            "items": [
+                              {
+                                "path": "0.1.1.0.0.1.0",
+                                "frame": {
+                                  "left": 123,
+                                  "top": 446,
+                                  "width": 853.3,
+                                  "height": 29
+                                }
+                              },
+                              {
+                                "path": "0.1.1.0.0.1.1",
+                                "frame": {
+                                  "left": 123,
+                                  "top": 480,
+                                  "width": 429.16,
+                                  "height": 44
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 22,
+                        "effectiveGap": 22,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 88,
+                          "top": 446,
+                          "width": 888.3,
+                          "height": 78
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.0.0.0",
+                            "frame": {
+                              "left": 88,
+                              "top": 446,
+                              "width": 13,
+                              "height": 56
+                            }
+                          },
+                          {
+                            "path": "0.1.1.0.0.1",
+                            "frame": {
+                              "left": 123,
+                              "top": 446,
+                              "width": 853.3,
+                              "height": 78
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "path": "0.1.1.0.1",
+                        "kind": "row",
+                        "name": "statement-iso-iec-ieee-15289",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 35,
+                          "height": 56
+                        },
+                        "frame": {
+                          "left": 88,
+                          "top": 544,
+                          "width": 888.3,
+                          "height": 78
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.0.1.0",
+                            "kind": "shape",
+                            "name": "dot-iso-iec-ieee-15289",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fixed",
+                                "value": 13
+                              },
+                              "height": {
+                                "mode": "fixed",
+                                "value": 56
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 13,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 88,
+                              "top": 544,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "snappedFrame": {
+                              "left": 88,
+                              "top": 544,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "children": [],
+                            "geometry": "rect",
+                            "element": {
+                              "aid": "sh/cbulwval",
+                              "id": "8",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.0.1.1",
+                            "kind": "column",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 404.85,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 123,
+                              "top": 544,
+                              "width": 853.3,
+                              "height": 78
+                            },
+                            "children": [
+                              {
+                                "path": "0.1.1.0.1.1.0",
+                                "kind": "text",
+                                "name": "statement-title-iso-iec-ieee-15289",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 29
+                                },
+                                "frame": {
+                                  "left": 123,
+                                  "top": 544,
+                                  "width": 853.3,
+                                  "height": 29
+                                },
+                                "snappedFrame": {
+                                  "left": 124,
+                                  "top": 544,
+                                  "width": 854,
+                                  "height": 30
+                                },
+                                "children": [],
+                                "text": "ISO/IEC/IEEE 15289",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/5sneloj2",
+                                  "id": "9",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.1.1.0.1.1.1",
+                                "kind": "text",
+                                "name": "statement-body-iso-iec-ieee-15289",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "wrap",
+                                    "max": 1030
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 404.85,
+                                  "height": 22
+                                },
+                                "frame": {
+                                  "left": 123,
+                                  "top": 578,
+                                  "width": 404.85,
+                                  "height": 44
+                                },
+                                "snappedFrame": {
+                                  "left": 124,
+                                  "top": 578,
+                                  "width": 404,
+                                  "height": 44
+                                },
+                                "children": [],
+                                "text": "Information-item discipline for SDLC artifacts.",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/tcj6tova",
+                                  "id": "10",
+                                  "kind": "shape"
+                                }
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 5,
+                            "effectiveGap": 5,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 123,
+                              "top": 544,
+                              "width": 853.3,
+                              "height": 78
+                            },
+                            "items": [
+                              {
+                                "path": "0.1.1.0.1.1.0",
+                                "frame": {
+                                  "left": 123,
+                                  "top": 544,
+                                  "width": 853.3,
+                                  "height": 29
+                                }
+                              },
+                              {
+                                "path": "0.1.1.0.1.1.1",
+                                "frame": {
+                                  "left": 123,
+                                  "top": 578,
+                                  "width": 404.85,
+                                  "height": 44
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 22,
+                        "effectiveGap": 22,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 88,
+                          "top": 544,
+                          "width": 888.3,
+                          "height": 78
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.0.1.0",
+                            "frame": {
+                              "left": 88,
+                              "top": 544,
+                              "width": 13,
+                              "height": 56
+                            }
+                          },
+                          {
+                            "path": "0.1.1.0.1.1",
+                            "frame": {
+                              "left": 123,
+                              "top": 544,
+                              "width": 853.3,
+                              "height": 78
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "path": "0.1.1.0.2",
+                        "kind": "row",
+                        "name": "statement-nist-ssdf-owasp-samm",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 35,
+                          "height": 56
+                        },
+                        "frame": {
+                          "left": 88,
+                          "top": 642,
+                          "width": 888.3,
+                          "height": 78
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.0.2.0",
+                            "kind": "shape",
+                            "name": "dot-nist-ssdf-owasp-samm",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fixed",
+                                "value": 13
+                              },
+                              "height": {
+                                "mode": "fixed",
+                                "value": 56
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 13,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 88,
+                              "top": 642,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "snappedFrame": {
+                              "left": 88,
+                              "top": 644,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "children": [],
+                            "geometry": "rect",
+                            "element": {
+                              "aid": "sh/0rqd4vmt",
+                              "id": "11",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.0.2.1",
+                            "kind": "column",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 480.56,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 123,
+                              "top": 642,
+                              "width": 853.3,
+                              "height": 78
+                            },
+                            "children": [
+                              {
+                                "path": "0.1.1.0.2.1.0",
+                                "kind": "text",
+                                "name": "statement-title-nist-ssdf-owasp-samm",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 29
+                                },
+                                "frame": {
+                                  "left": 123,
+                                  "top": 642,
+                                  "width": 853.3,
+                                  "height": 29
+                                },
+                                "snappedFrame": {
+                                  "left": 124,
+                                  "top": 642,
+                                  "width": 854,
+                                  "height": 30
+                                },
+                                "children": [],
+                                "text": "NIST SSDF + OWASP SAMM",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/b6xkf6dc",
+                                  "id": "12",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.1.1.0.2.1.1",
+                                "kind": "text",
+                                "name": "statement-body-nist-ssdf-owasp-samm",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "wrap",
+                                    "max": 1030
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 480.56,
+                                  "height": 22
+                                },
+                                "frame": {
+                                  "left": 123,
+                                  "top": 676,
+                                  "width": 480.56,
+                                  "height": 44
+                                },
+                                "snappedFrame": {
+                                  "left": 124,
+                                  "top": 676,
+                                  "width": 480,
+                                  "height": 44
+                                },
+                                "children": [],
+                                "text": "Secure development and assurance maturity controls.",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/il0rqd4v",
+                                  "id": "13",
+                                  "kind": "shape"
+                                }
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 5,
+                            "effectiveGap": 5,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 123,
+                              "top": 642,
+                              "width": 853.3,
+                              "height": 78
+                            },
+                            "items": [
+                              {
+                                "path": "0.1.1.0.2.1.0",
+                                "frame": {
+                                  "left": 123,
+                                  "top": 642,
+                                  "width": 853.3,
+                                  "height": 29
+                                }
+                              },
+                              {
+                                "path": "0.1.1.0.2.1.1",
+                                "frame": {
+                                  "left": 123,
+                                  "top": 676,
+                                  "width": 480.56,
+                                  "height": 44
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 22,
+                        "effectiveGap": 22,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 88,
+                          "top": 642,
+                          "width": 888.3,
+                          "height": 78
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.0.2.0",
+                            "frame": {
+                              "left": 88,
+                              "top": 642,
+                              "width": 13,
+                              "height": 56
+                            }
+                          },
+                          {
+                            "path": "0.1.1.0.2.1",
+                            "frame": {
+                              "left": 123,
+                              "top": 642,
+                              "width": 853.3,
+                              "height": 78
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "path": "0.1.1.0.3",
+                        "kind": "row",
+                        "name": "statement-omg-mda-uml-ddd",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 35,
+                          "height": 56
+                        },
+                        "frame": {
+                          "left": 88,
+                          "top": 740,
+                          "width": 888.3,
+                          "height": 78
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.0.3.0",
+                            "kind": "shape",
+                            "name": "dot-omg-mda-uml-ddd",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fixed",
+                                "value": 13
+                              },
+                              "height": {
+                                "mode": "fixed",
+                                "value": 56
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 13,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 88,
+                              "top": 740,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "snappedFrame": {
+                              "left": 88,
+                              "top": 740,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "children": [],
+                            "geometry": "rect",
+                            "element": {
+                              "aid": "sh/t47y1kre",
+                              "id": "14",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.0.3.1",
+                            "kind": "column",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 529.96,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 123,
+                              "top": 740,
+                              "width": 853.3,
+                              "height": 78
+                            },
+                            "children": [
+                              {
+                                "path": "0.1.1.0.3.1.0",
+                                "kind": "text",
+                                "name": "statement-title-omg-mda-uml-ddd",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 29
+                                },
+                                "frame": {
+                                  "left": 123,
+                                  "top": 740,
+                                  "width": 853.3,
+                                  "height": 29
+                                },
+                                "snappedFrame": {
+                                  "left": 124,
+                                  "top": 740,
+                                  "width": 854,
+                                  "height": 30
+                                },
+                                "children": [],
+                                "text": "OMG MDA + UML + DDD",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/0je9cvix",
+                                  "id": "15",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.1.1.0.3.1.1",
+                                "kind": "text",
+                                "name": "statement-body-omg-mda-uml-ddd",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "wrap",
+                                    "max": 1030
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 529.96,
+                                  "height": 22
+                                },
+                                "frame": {
+                                  "left": 123,
+                                  "top": 774,
+                                  "width": 529.96,
+                                  "height": 44
+                                },
+                                "snappedFrame": {
+                                  "left": 124,
+                                  "top": 774,
+                                  "width": 530,
+                                  "height": 44
+                                },
+                                "children": [],
+                                "text": "Modeling, bounded contexts, and transformation evidence.",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/byhgn29g",
+                                  "id": "16",
+                                  "kind": "shape"
+                                }
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 5,
+                            "effectiveGap": 5,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 123,
+                              "top": 740,
+                              "width": 853.3,
+                              "height": 78
+                            },
+                            "items": [
+                              {
+                                "path": "0.1.1.0.3.1.0",
+                                "frame": {
+                                  "left": 123,
+                                  "top": 740,
+                                  "width": 853.3,
+                                  "height": 29
+                                }
+                              },
+                              {
+                                "path": "0.1.1.0.3.1.1",
+                                "frame": {
+                                  "left": 123,
+                                  "top": 774,
+                                  "width": 529.96,
+                                  "height": 44
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 22,
+                        "effectiveGap": 22,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 88,
+                          "top": 740,
+                          "width": 888.3,
+                          "height": 78
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.0.3.0",
+                            "frame": {
+                              "left": 88,
+                              "top": 740,
+                              "width": 13,
+                              "height": 56
+                            }
+                          },
+                          {
+                            "path": "0.1.1.0.3.1",
+                            "frame": {
+                              "left": 123,
+                              "top": 740,
+                              "width": 853.3,
+                              "height": 78
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "padding": {
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    },
+                    "gap": 20,
+                    "effectiveGap": 20,
+                    "justifyOffset": 0,
+                    "align": "start",
+                    "justify": "start",
+                    "contentFrame": {
+                      "left": 88,
+                      "top": 446,
+                      "width": 888.3,
+                      "height": 372
+                    },
+                    "items": [
+                      {
+                        "path": "0.1.1.0.0",
+                        "frame": {
+                          "left": 88,
+                          "top": 446,
+                          "width": 888.3,
+                          "height": 78
+                        }
+                      },
+                      {
+                        "path": "0.1.1.0.1",
+                        "frame": {
+                          "left": 88,
+                          "top": 544,
+                          "width": 888.3,
+                          "height": 78
+                        }
+                      },
+                      {
+                        "path": "0.1.1.0.2",
+                        "frame": {
+                          "left": 88,
+                          "top": 642,
+                          "width": 888.3,
+                          "height": 78
+                        }
+                      },
+                      {
+                        "path": "0.1.1.0.3",
+                        "frame": {
+                          "left": 88,
+                          "top": 740,
+                          "width": 888.3,
+                          "height": 78
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "path": "0.1.1.1",
+                    "kind": "column",
+                    "name": "standards-claim",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 568.96,
+                      "height": 186
+                    },
+                    "frame": {
+                      "left": 1028.3,
+                      "top": 510,
+                      "width": 803.7,
+                      "height": 244
+                    },
+                    "children": [
+                      {
+                        "path": "0.1.1.1.0",
+                        "kind": "text",
+                        "name": "standards-big",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "wrap",
+                            "max": 620
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 476.42,
+                          "height": 116
+                        },
+                        "frame": {
+                          "left": 1028.3,
+                          "top": 510,
+                          "width": 476.42,
+                          "height": 174
+                        },
+                        "snappedFrame": {
+                          "left": 1028,
+                          "top": 510,
+                          "width": 476,
+                          "height": 174
+                        },
+                        "children": [],
+                        "text": "The pitch is not compliance theater.",
+                        "transform": "none",
+                        "element": {
+                          "aid": "sh/idonyd0z",
+                          "id": "17",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.1.1.1.1",
+                        "kind": "text",
+                        "name": "standards-body",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "wrap",
+                            "max": 610
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 568.96,
+                          "height": 44
+                        },
+                        "frame": {
+                          "left": 1028.3,
+                          "top": 710,
+                          "width": 568.96,
+                          "height": 44
+                        },
+                        "snappedFrame": {
+                          "left": 1028,
+                          "top": 710,
+                          "width": 568,
+                          "height": 44
+                        },
+                        "children": [],
+                        "text": "Each selected standard changes what the factory must produce, review, trace, and verify before a gate closes.",
+                        "transform": "none",
+                        "element": {
+                          "aid": "sh/p0bi9s36",
+                          "id": "18",
+                          "kind": "shape"
+                        }
+                      }
+                    ],
+                    "padding": {
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    },
+                    "gap": 26,
+                    "effectiveGap": 26,
+                    "justifyOffset": 0,
+                    "align": "start",
+                    "justify": "start",
+                    "contentFrame": {
+                      "left": 1028.3,
+                      "top": 510,
+                      "width": 803.7,
+                      "height": 244
+                    },
+                    "items": [
+                      {
+                        "path": "0.1.1.1.0",
+                        "frame": {
+                          "left": 1028.3,
+                          "top": 510,
+                          "width": 476.42,
+                          "height": 174
+                        }
+                      },
+                      {
+                        "path": "0.1.1.1.1",
+                        "frame": {
+                          "left": 1028.3,
+                          "top": 710,
+                          "width": 568.96,
+                          "height": 44
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "columnGap": 52,
+                "rowGap": 0,
+                "alignItems": "center",
+                "justifyItems": "stretch",
+                "contentFrame": {
+                  "left": 88,
+                  "top": 307,
+                  "width": 1744,
+                  "height": 649
+                },
+                "columns": [
+                  {
+                    "mode": "fr",
+                    "value": 1.05
+                  },
+                  {
+                    "mode": "fr",
+                    "value": 0.95
+                  }
+                ],
+                "autoRows": "auto",
+                "resolvedRows": [
+                  "auto"
+                ],
+                "columnSizes": [
+                  888.3,
+                  803.7
+                ],
+                "rowSizes": [
+                  649
+                ],
+                "cells": [
+                  {
+                    "path": "0.1.1.0",
+                    "column": 0,
+                    "row": 0,
+                    "columnSpan": 1,
+                    "rowSpan": 1,
+                    "cellFrame": {
+                      "left": 88,
+                      "top": 307,
+                      "width": 888.3,
+                      "height": 649
+                    }
+                  },
+                  {
+                    "path": "0.1.1.1",
+                    "column": 1,
+                    "row": 0,
+                    "columnSpan": 1,
+                    "rowSpan": 1,
+                    "cellFrame": {
+                      "left": 1028.3,
+                      "top": 307,
+                      "width": 803.7,
+                      "height": 649
+                    }
+                  }
+                ]
+              },
+              {
+                "path": "0.1.2",
+                "kind": "row",
+                "name": "standards-footer-row",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "hug"
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 444.58,
+                  "height": 13
+                },
+                "frame": {
+                  "left": 88,
+                  "top": 990,
+                  "width": 1744,
+                  "height": 26
+                },
+                "children": [
+                  {
+                    "path": "0.1.2.0",
+                    "kind": "text",
+                    "name": "standards-footer",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "wrap",
+                        "max": 1200
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 404.58,
+                      "height": 13
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 990,
+                      "width": 404.58,
+                      "height": 28
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 990,
+                      "width": 404,
+                      "height": 28
+                    },
+                    "children": [],
+                    "text": "Standards baseline from DFMS design docs; exact tailoring is project-specific.",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/0fepkzup",
+                      "id": "19",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.2.1",
+                    "kind": "text",
+                    "name": "standards-page",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 40
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 40,
+                      "height": 13
+                    },
+                    "frame": {
+                      "left": 1792,
+                      "top": 998,
+                      "width": 40,
+                      "height": 12
+                    },
+                    "snappedFrame": {
+                      "left": 1792,
+                      "top": 998,
+                      "width": 40,
+                      "height": 12
+                    },
+                    "children": [],
+                    "text": "24",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/cbulwval",
+                      "id": "20",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "gap": 0,
+                "effectiveGap": 1299.42,
+                "justifyOffset": 0,
+                "align": "center",
+                "justify": "between",
+                "contentFrame": {
+                  "left": 88,
+                  "top": 990,
+                  "width": 1744,
+                  "height": 26
+                },
+                "items": [
+                  {
+                    "path": "0.1.2.0",
+                    "frame": {
+                      "left": 88,
+                      "top": 990,
+                      "width": 404.58,
+                      "height": 28
+                    }
+                  },
+                  {
+                    "path": "0.1.2.1",
+                    "frame": {
+                      "left": 1792,
+                      "top": 998,
+                      "width": 40,
+                      "height": 12
+                    }
+                  }
+                ]
+              }
+            ],
+            "padding": {
+              "top": 64,
+              "right": 88,
+              "bottom": 64,
+              "left": 88
+            },
+            "gap": 34,
+            "effectiveGap": 34,
+            "justifyOffset": 0,
+            "align": "start",
+            "justify": "start",
+            "contentFrame": {
+              "left": 88,
+              "top": 64,
+              "width": 1744,
+              "height": 952
+            },
+            "items": [
+              {
+                "path": "0.1.0",
+                "frame": {
+                  "left": 88,
+                  "top": 64,
+                  "width": 1744,
+                  "height": 209
+                }
+              },
+              {
+                "path": "0.1.1",
+                "frame": {
+                  "left": 88,
+                  "top": 307,
+                  "width": 1744,
+                  "height": 649
+                }
+              },
+              {
+                "path": "0.1.2",
+                "frame": {
+                  "left": 88,
+                  "top": 990,
+                  "width": 1744,
+                  "height": 26
+                }
+              }
+            ]
+          }
+        ],
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignItems": "stretch",
+        "justifyItems": "stretch",
+        "contentFrame": {
+          "left": 0,
+          "top": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "items": [
+          {
+            "path": "0.0",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            }
+          },
+          {
+            "path": "0.1",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

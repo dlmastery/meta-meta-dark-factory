@@ -1,0 +1,55 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+  },
+  "template_only": false,
+  "certificate_id": "CERT-NORTHSTAR-HUMAN-PORTAL-20260426-001",
+  "run_id": "DFRUN-NORTHSTAR-20260425-001",
+  "bead_id": "TB-20260426-108",
+  "scope": "Internal DFMS human review and onboarding portal readiness for the bounded Northstar Daily project book and related meta-skill diagram sources.",
+  "verdict": "pass",
+  "issued_by": "Human Review Portal Panel and Hawkeye Conformance Auditor",
+  "issued_at": "2026-04-26T12:55:00-07:00",
+  "certification_boundary": {
+    "internal_dfms_portal_readiness": true,
+    "hosted_enterprise_documentation_portal": false,
+    "external_audit_portal_certification": false,
+    "production_readiness": false
+  },
+  "passed_gates": [
+    "static portal dashboard",
+    "machine-readable portal index",
+    "role-based onboarding paths",
+    "all top-level Markdown docs indexed",
+    "all records indexed",
+    "root evidence artifacts indexed",
+    "Mermaid diagram atlas indexed",
+    "screenshots and visual evidence indexed",
+    "next safe action visible",
+    "portal validation passed",
+    "meta-meta skill rules updated"
+  ],
+  "evidence": [
+    "project-book/15-human-review-onboarding-portal-record.md",
+    "project-book/portal/index.html",
+    "project-book/portal/portal-data.json",
+    "project-book/portal/diagrams.md",
+    "project-book/records/human-review-portal-record.json",
+    "project-book/evidence/human-review-portal-panel-record.json",
+    "project-book/evidence/quality-refinery-gate-human-review-portal.yaml",
+    "project-book/evidence/human-review-portal-meta-validator-output.txt",
+    "project-book/evidence/human-review-portal-screenshot.png",
+    "project-book/evidence/human-review-portal-validation-output.txt",
+    "project-book/evidence/human-review-portal-validation.json"
+  ],
+  "revalidation_triggers": [
+    "new top-level project-book Markdown document",
+    "new structured record",
+    "new root evidence artifact",
+    "new Mermaid diagram",
+    "new certificate or quality gate",
+    "new role-based reviewer path",
+    "hosted portal or search feature",
+    "human feedback that the dashboard is confusing or incomplete"
+  ]
+}

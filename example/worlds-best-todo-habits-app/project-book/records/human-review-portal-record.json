@@ -1,0 +1,147 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+  },
+  "template_only": false,
+  "record_id": "HRP-NORTHSTAR-20260426-001",
+  "run_id": "DFRUN-NORTHSTAR-20260425-001",
+  "bead_id": "TB-20260426-108",
+  "portal_title": "Northstar Daily Human Review And Onboarding Portal",
+  "portal_type": "static_documentation_dashboard",
+  "portal_paths": {
+    "human_dashboard": "project-book/portal/index.html",
+    "machine_index": "project-book/portal/portal-data.json",
+    "diagram_atlas": "project-book/portal/diagrams.md",
+    "readme": "project-book/portal/README.md"
+  },
+  "required_sections": [
+    "zero_slop_policy",
+    "executive_brief",
+    "role_based_onboarding_paths",
+    "current_state_and_next_action",
+    "sdlc_stage_dashboard",
+    "artifact_bom",
+    "markdown_documentation_index",
+    "structured_records_index",
+    "evidence_and_test_index",
+    "mermaid_diagram_atlas",
+    "traceability_map",
+    "decision_and_risk_register_links",
+    "review_panel_and_certificate_links",
+    "handoff_and_runbook_links",
+    "open_questions_and_change_control",
+    "fresh_reviewer_start_here"
+  ],
+  "role_onboarding_paths": [
+    {
+      "role": "Client Executive",
+      "first_documents": [
+        "project-book/00-factory-run-summary.md",
+        "project-book/02-prd.md",
+        "project-book/evidence/human-review-portal-certificate.json"
+      ],
+      "decision_focus": [
+        "scope boundary",
+        "confidence",
+        "next safe action"
+      ],
+      "expected_review_time_minutes": 20
+    },
+    {
+      "role": "Technical Program Manager",
+      "first_documents": [
+        "project-book/records/TASKS.md",
+        "project-book/records/tpm-flow-ledger.json",
+        "project-book/records/factory-pert-plan.json"
+      ],
+      "decision_focus": [
+        "bead status",
+        "dependency order",
+        "change control"
+      ],
+      "expected_review_time_minutes": 35
+    },
+    {
+      "role": "Architect Or Engineer",
+      "first_documents": [
+        "project-book/03-architecture.md",
+        "app/app.js",
+        "tests/core.test.cjs"
+      ],
+      "decision_focus": [
+        "architecture",
+        "implementation",
+        "testability"
+      ],
+      "expected_review_time_minutes": 45
+    },
+    {
+      "role": "QA Or Auditor",
+      "first_documents": [
+        "project-book/04-test-strategy.md",
+        "project-book/records/hawkeye-conformance-audit-record.json",
+        "project-book/evidence/validation-summary.json"
+      ],
+      "decision_focus": [
+        "evidence",
+        "certificates",
+        "residual risks"
+      ],
+      "expected_review_time_minutes": 45
+    },
+    {
+      "role": "Incoming Agent Or Human Maintainer",
+      "first_documents": [
+        "project-book/07-handoff-and-runbook.md",
+        "project-book/records/knowledge-graph.json",
+        "project-book/portal/portal-data.json"
+      ],
+      "decision_focus": [
+        "resume safety",
+        "traceability",
+        "next legal action"
+      ],
+      "expected_review_time_minutes": 30
+    }
+  ],
+  "coverage_requirements": {
+    "all_top_level_markdown_indexed": true,
+    "all_project_records_indexed": true,
+    "all_root_evidence_files_indexed": true,
+    "all_mermaid_diagrams_indexed": true,
+    "screenshots_or_visual_evidence_indexed_when_ui_surface": true,
+    "stage_gate_status_visible": true,
+    "next_safe_action_visible": true,
+    "machine_readable_index_present": true,
+    "validation_evidence_present": true
+  },
+  "review_panel": [
+    "Documentation Information Architect",
+    "Client Onboarding Lead",
+    "TPM Governance Auditor",
+    "Traceability And Evidence Auditor",
+    "Adversarial Anti-Slop Prosecutor"
+  ],
+  "quality_gate": {
+    "gate_id": "GATE-NORTHSTAR-HUMAN-PORTAL-PASS",
+    "minimum_reviewer_result": "pass",
+    "minimum_ralph_loops": 5,
+    "no_unindexed_required_artifacts": true,
+    "no_broken_required_links": true,
+    "no_placeholder_sections": true
+  },
+  "validation": {
+    "validator": "tests/portal-index-audit.cjs and df-meta-attractor/scripts/validate_human_review_portal.py",
+    "status": "pass",
+    "evidence": [
+      "project-book/evidence/human-review-portal-meta-validator-output.txt",
+      "project-book/evidence/human-review-portal-validation-output.txt",
+      "project-book/evidence/human-review-portal-validation.json"
+    ]
+  },
+  "residual_risks": [
+    "Hosted enterprise portal remains future scope.",
+    "Markdown rendering remains delegated to the local browser or editor.",
+    "Browser runtime profile directories are excluded from review-artifact coverage."
+  ]
+}

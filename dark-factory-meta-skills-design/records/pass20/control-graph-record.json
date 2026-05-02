@@ -1,0 +1,55 @@
+{
+  "id": "CG-PASS20-001",
+  "name": "Pass 20 recursive validation bypass closure",
+  "goal": "Close remaining ways to bypass recursive decomposition, intake package validation, and tree integrity checks.",
+  "risks": [
+    "A package validator could pass while the decomposition validator would fail",
+    "A decomposition could skip required levels silently",
+    "A decomposition could include nodes unreachable from root or missing reciprocal parent-child links"
+  ],
+  "nodes": [
+    {
+      "id": "NODE-PASS20-CRITIC",
+      "label": "Pass 20 critic review",
+      "owner": "codex",
+      "evidence_outputs": [
+        "20-ralph-loop-critic-review-and-fix-record.md"
+      ]
+    },
+    {
+      "id": "NODE-PASS20-FIX",
+      "label": "Validator hardening",
+      "owner": "codex",
+      "evidence_outputs": [
+        "validate_spec_decomposition.py",
+        "validate_intake_package.py"
+      ]
+    },
+    {
+      "id": "NODE-PASS20-VERIFY",
+      "label": "Negative fixture validation",
+      "owner": "codex",
+      "evidence_outputs": [
+        "negative skipped-level decomposition fixture: rejected",
+        "negative disconnected decomposition fixture: rejected"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "ATTR-PASS20-001",
+      "to": "NODE-PASS20-CRITIC",
+      "type": "governs"
+    },
+    {
+      "from": "NODE-PASS20-CRITIC",
+      "to": "NODE-PASS20-FIX",
+      "type": "requires"
+    },
+    {
+      "from": "NODE-PASS20-FIX",
+      "to": "NODE-PASS20-VERIFY",
+      "type": "must_validate"
+    }
+  ]
+}

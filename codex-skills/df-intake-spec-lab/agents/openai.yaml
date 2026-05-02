@@ -1,0 +1,4 @@
+interface:
+  display_name: "DF Intake Spec Lab"
+  short_description: "Turn intent into specs and scenarios"
+  default_prompt: "Use $df-intake-spec-lab to turn a raw project idea into requirements and acceptance scenarios."

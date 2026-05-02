@@ -1,0 +1,22 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+    "strict_compliance": "Mandatory. Every claim must be project-specific, evidence-backed, trace-linked, reviewer-challenged, and free of unsupported invention.",
+    "missing_evidence_rule": "If evidence is missing, mark it as an assumption, risk, open question, or failure."
+  },
+  "id": "HND-001",
+  "direction": "agent-to-human|human-to-agent|human-takeover|agent-takeover",
+  "current_node": "",
+  "objective": "",
+  "completed": [],
+  "not_completed": [],
+  "decisions": [],
+  "files_touched": [],
+  "artifacts_touched": [],
+  "verification_run": [],
+  "verification_needed": [],
+  "open_questions": [],
+  "risks": [],
+  "next_owner": "",
+  "next_action": ""
+}

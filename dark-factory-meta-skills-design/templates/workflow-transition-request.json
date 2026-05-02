@@ -1,0 +1,39 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+    "strict_compliance": "Mandatory. Every claim must be project-specific, evidence-backed, trace-linked, reviewer-challenged, and free of unsupported invention.",
+    "missing_evidence_rule": "If evidence is missing, mark it as an assumption, risk, open question, or failure."
+  },
+  "template_only": true,
+  "request_id": "TRANSITION-000",
+  "run_id": "",
+  "step_id": "",
+  "bead_id": "",
+  "requested_by": "",
+  "from_state": "",
+  "to_state": "",
+  "reason": "",
+  "predecessor_evidence": [],
+  "output_evidence": [],
+  "validator_evidence": [],
+  "judge_jury_record": "",
+  "token_impact": {
+    "inside_approved_swag": false,
+    "reapproval_required": false,
+    "reason": ""
+  },
+  "boundary_human_trigger_check": {
+    "scope_change": false,
+    "acceptance_criteria_change": false,
+    "production_action": false,
+    "legal_safety_privacy_security_or_contractual_risk": false,
+    "irreversible_business_risk": false,
+    "standards_waiver": false,
+    "threshold_reduction": false,
+    "unresolved_p0_p1_risk": false
+  },
+  "next_step_id": "",
+  "next_bead_id": "",
+  "expected_kernel_result": "pass | blocked | closed | change_control_required | human_boundary_required",
+  "template_marker": true
+}

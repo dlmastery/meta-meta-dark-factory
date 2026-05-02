@@ -1,0 +1,135 @@
+{
+  "id": "CG-PASS29-001",
+  "name": "Pass 29 physical evidence-file bundle validation",
+  "goal": "Ensure production handoff ledger evidence names resolve to actual files in the handoff bundle.",
+  "risks": [
+    "Work ledger evidence could name files that were not provided",
+    "Evidence files could omit the production handoff or outage drill IDs they are supposed to prove",
+    "Runbook replay evidence could remain an unmaterialized string"
+  ],
+  "links": {
+    "attractor": "ATTR-PASS29-001",
+    "work_ledger": "WL-PASS29-001",
+    "refinery_gate": "RFG-PASS29-001"
+  },
+  "nodes": [
+    {
+      "id": "NODE-PASS29-CRITIC",
+      "label": "Pass 29 physical evidence critic review",
+      "owner": "codex",
+      "node_contract": {
+        "what": "Review whether production handoff bundle evidence proves physical artifact files.",
+        "why": "The original transcript asks for process evidence and handoff docs, not just file names.",
+        "how": "Inspect validator, ledger records, fixtures, and hardening runner for evidence-file checks.",
+        "where": "df-production-sre-handoff validator and DFMS hardening runner.",
+        "when": "Before pass 29 fixes are accepted.",
+        "who": "Codex using traceability, governance, and verification expert lenses.",
+        "how_good": "Every new evidence-file bypass becomes executable validation or an explicit residual risk."
+      },
+      "expert_panel": [
+        "traceability-evidence-reviewer",
+        "requirements-governance-architect",
+        "verification-safety-critic"
+      ],
+      "rubrics": [
+        "physical evidence presence",
+        "ledger evidence integrity",
+        "negative fixture coverage"
+      ],
+      "feedback_loop": "Any unproven evidence-file reference becomes validator logic and a runner fixture.",
+      "gates": [
+        "evidence-file bypass documented",
+        "validator patch scoped",
+        "runner regression added"
+      ],
+      "evidence_outputs": [
+        "29-ralph-loop-critic-review-and-fix-record.md"
+      ]
+    },
+    {
+      "id": "NODE-PASS29-FIX",
+      "label": "Evidence-file bundle validator implementation",
+      "owner": "codex",
+      "node_contract": {
+        "what": "Require production handoffs to validate against actual evidence files named by the ledger.",
+        "why": "File-like ledger evidence must resolve to physical files in the project book or validation bundle.",
+        "how": "Add --evidence-file arguments, compare ledger evidence basenames, check key ID mentions, and add regression checks.",
+        "where": "Installed and workspace df-production-sre-handoff validators plus runner.",
+        "when": "After critic review and before verification closure.",
+        "who": "Codex as implementer.",
+        "how_good": "Complete evidence bundle passes; missing or drifted evidence files fail."
+      },
+      "expert_panel": [
+        "artifact-governance-reviewer",
+        "traceability-reviewer",
+        "test-automation-reviewer"
+      ],
+      "rubrics": [
+        "evidence-file CLI enforcement",
+        "ledger-to-file consistency",
+        "regression protection"
+      ],
+      "feedback_loop": "Rerun the full hardening suite after every evidence-file validation change.",
+      "gates": [
+        "installed validator compiles",
+        "workspace validator compiles",
+        "missing and drifted evidence-file fixtures reject"
+      ],
+      "evidence_outputs": [
+        "validate_production_handoff.py",
+        "run_pre17_hardening_checks.ps1"
+      ]
+    },
+    {
+      "id": "NODE-PASS29-VERIFY",
+      "label": "Pass 29 verification sweep",
+      "owner": "codex",
+      "node_contract": {
+        "what": "Verify final pass 29 state.",
+        "why": "Physical evidence-file hardening only counts if the full suite and merged records pass.",
+        "how": "Run hardening suite, merged-record validation, hash sync, JSON, ASCII, and artifact ID checks.",
+        "where": "Workspace validation suite and pass 29 records.",
+        "when": "After all fixes and records are written.",
+        "who": "Codex as verification runner.",
+        "how_good": "All checks pass and residual risks remain explicit."
+      },
+      "expert_panel": [
+        "verification-lead",
+        "governance-auditor",
+        "production-readiness-reviewer"
+      ],
+      "rubrics": [
+        "positive-path preservation",
+        "negative-path rejection",
+        "physical evidence completeness"
+      ],
+      "feedback_loop": "Any failed check reopens the fix node.",
+      "gates": [
+        "hardening runner passes",
+        "pass 29 merged records validate",
+        "installed/workspace production validator hashes match"
+      ],
+      "evidence_outputs": [
+        "DFMS hardening checks complete",
+        "records/pass29 merged records"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "ATTR-PASS29-001",
+      "to": "NODE-PASS29-CRITIC",
+      "type": "governs"
+    },
+    {
+      "from": "NODE-PASS29-CRITIC",
+      "to": "NODE-PASS29-FIX",
+      "type": "requires"
+    },
+    {
+      "from": "NODE-PASS29-FIX",
+      "to": "NODE-PASS29-VERIFY",
+      "type": "must_validate"
+    }
+  ]
+}

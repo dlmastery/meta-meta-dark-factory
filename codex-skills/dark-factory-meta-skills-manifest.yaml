@@ -1,0 +1,97 @@
+version: 0.8
+generated_on: "2026-04-26"
+package: dark-factory-meta-skills
+status: workspace-draft
+skills:
+  - df-meta-attractor
+  - dark-factory-orchestrator
+  - df-intake-spec-lab
+  - df-governance-mayor
+  - df-artifact-factory
+  - df-quality-refinery
+  - df-traceability-evidence
+  - df-dashboard-control
+  - df-brownfield-recon
+  - df-human-agent-handoff
+  - df-context-memory
+  - df-methodology-blender
+  - df-swarm-coordination
+  - df-production-sre-handoff
+  - df-feedback-learning
+default_thresholds:
+  governance_compliance: 98
+  selected_expert_minimum: 96
+  traceability_completeness: 100
+  unresolved_critical_security_findings: 0
+  unresolved_high_security_findings: 0
+notes:
+  - "Draft bundle is staged in the workspace, not installed globally."
+  - "df-meta-attractor is the governed entry gate before dark-factory-orchestrator."
+  - "Install into the Codex skills directory after validation and user approval."
+required_control_plane_resources:
+  df-meta-attractor:
+    - "assets/templates/meta-attractor-record.json"
+    - "assets/templates/control-graph-record.yaml"
+    - "assets/templates/work-ledger-record.yaml"
+    - "assets/templates/refinery-gate-record.yaml"
+    - "assets/templates/human-review-portal-record.json"
+    - "assets/templates/documentation-portal-index.json"
+    - "scripts/validate_merged_records.py"
+    - "scripts/validate_human_review_portal.py"
+  df-quality-refinery:
+    - "assets/templates/rubric-score-record.json"
+    - "assets/templates/quality-certificate.json"
+    - "scripts/score_rubric_matrix.py"
+    - "scripts/validate_refinery_gate.py"
+    - "scripts/validate_quality_certificate.py"
+  df-artifact-factory:
+    - "assets/templates/artifact-coverage-matrix.json"
+    - "scripts/validate_artifact_catalog_ids.py"
+    - "scripts/validate_artifact_coverage_matrix.py"
+  df-governance-mayor:
+    - "assets/templates/engagement-governance-record.json"
+    - "scripts/validate_engagement_governance.py"
+  df-intake-spec-lab:
+    - "references/spec-decomposition-protocol.md"
+    - "assets/templates/spec-decomposition-record.json"
+    - "scripts/validate_spec_decomposition.py"
+    - "scripts/validate_intake_package.py"
+  df-traceability-evidence:
+    - "scripts/validate_trace_links.py"
+    - "references/trace-schema.md"
+  df-dashboard-control:
+    - "assets/templates/artifact-dashboard-index.json"
+    - "assets/templates/dashboard-control-record.json"
+    - "assets/templates/redo-node-request.json"
+    - "assets/templates/redo-impact-report.json"
+    - "scripts/df_dashboard_control.py"
+  df-methodology-blender:
+    - "assets/templates/methodology-blend-record.json"
+  df-swarm-coordination:
+    - "assets/templates/expert-debate-record.json"
+  df-production-sre-handoff:
+    - "assets/templates/outage-drill-record.json"
+    - "assets/templates/production-handoff-record.json"
+    - "scripts/validate_production_handoff.py"
+validation_fixtures:
+  - ".validation/trace-pass.json"
+  - ".validation/score-pass.json"
+  - ".validation/refinery-gate-pass.yaml"
+  - ".validation/quality-certificate-pass.json"
+  - ".validation/pre17-greenfield-trace.json"
+  - ".validation/pre17-brownfield-trace.json"
+  - ".validation/pre17-negative-missing-governed-links.json"
+  - ".validation/physical-evidence-trace-pass.json"
+  - ".validation/physical-evidence-trace-report.md"
+  - ".validation/engagement-governance-pass.json"
+  - ".validation/spec-decomposition-pass.json"
+  - ".validation/spec-decomposition-negative.json"
+  - ".validation/spec-decomposition-negative-skipped-levels.json"
+  - ".validation/spec-decomposition-negative-disconnected.json"
+  - ".validation/spec-decomposition-trace-strict-pass.json"
+  - ".validation/intake-interrogation-pass.json"
+  - ".validation/intake-interrogation-negative.json"
+  - ".validation/production-handoff-pass.json"
+  - ".validation/outage-drill-pass.json"
+  - ".validation/run_dfms_hardening_checks.ps1"
+  - ".validation/run_pre17_hardening_checks.ps1"

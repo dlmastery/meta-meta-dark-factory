@@ -1,0 +1,218 @@
+[
+  {
+    "record_id": "ATTR-PRE17-BF",
+    "goal": "Brownfield maintenance pre-review simulation."
+  },
+  {
+    "id": "CG-PRE17-BF",
+    "nodes": [
+      {
+        "id": "NODE-PRE17-BF-RECON",
+        "owner": "codex"
+      },
+      {
+        "id": "NODE-PRE17-BF-OPS",
+        "owner": "human-operator"
+      }
+    ],
+    "edges": [
+      {
+        "from": "ATTR-PRE17-BF",
+        "to": "NODE-PRE17-BF-RECON"
+      },
+      {
+        "from": "NODE-PRE17-BF-RECON",
+        "to": "NODE-PRE17-BF-OPS"
+      }
+    ]
+  },
+  {
+    "id": "NODE-PRE17-BF-RECON",
+    "type": "evidence"
+  },
+  {
+    "id": "NODE-PRE17-BF-OPS",
+    "type": "evidence"
+  },
+  {
+    "id": "WL-PRE17-BF",
+    "status": "accepted",
+    "next_action": "Use outage drill and handoff evidence before claiming production readiness.",
+    "links": {
+      "requirements": [
+        "REQ-PRE17-BF-001"
+      ],
+      "artifacts": [
+        "ART-PRE17-BF-IMPACT",
+        "OPS-DRILL-PRE17-BF-001",
+        "HND-PRE17-BF-001"
+      ],
+      "control_graph_nodes": [
+        "NODE-PRE17-BF-RECON",
+        "NODE-PRE17-BF-OPS"
+      ],
+      "gated_by": [
+        "RFG-PRE17-BF"
+      ]
+    }
+  },
+  {
+    "id": "RFG-PRE17-BF",
+    "status": "pass",
+    "evidence": {
+      "test_reports": [
+        "TST-PRE17-BF-001"
+      ],
+      "rubric_scorecards": [
+        "EVD-RUBRIC-PRE17-BF"
+      ],
+      "trace_reports": [
+        "EVD-TRACE-PRE17-BF"
+      ],
+      "certificates": [
+        "CERT-PRE17-BF"
+      ]
+    }
+  },
+  {
+    "id": "REQ-PRE17-BF-001",
+    "type": "maintenance",
+    "source": "existing-code",
+    "statement": "A brownfield change must preserve existing behavior, include recon evidence, and prove operator readiness through an outage drill.",
+    "owner": "human-owner",
+    "status": "accepted",
+    "links": {
+      "verifies": [
+        "TST-PRE17-BF-001"
+      ],
+      "routes_to": [
+        "NODE-PRE17-BF-RECON"
+      ],
+      "tracked_by": [
+        "WL-PRE17-BF"
+      ],
+      "gated_by": [
+        "RFG-PRE17-BF"
+      ]
+    }
+  },
+  {
+    "id": "ART-PRE17-BF-IMPACT",
+    "name": "Brownfield Impact Analysis",
+    "standard_basis": [
+      "ISO/IEC/IEEE 12207:2017",
+      "SSDF"
+    ],
+    "reviewers": [
+      "brownfield-architect",
+      "security-reviewer",
+      "regression-test-lead"
+    ],
+    "evidence": [
+      "EVD-RUBRIC-PRE17-BF",
+      "EVD-TRACE-PRE17-BF"
+    ],
+    "residual_risks": [],
+    "links": {
+      "derives_from": [
+        "REQ-PRE17-BF-001"
+      ],
+      "verified_by": [
+        "TST-PRE17-BF-001"
+      ],
+      "routes_to": [
+        "NODE-PRE17-BF-RECON"
+      ],
+      "tracked_by": [
+        "WL-PRE17-BF"
+      ],
+      "gated_by": [
+        "RFG-PRE17-BF"
+      ]
+    }
+  },
+  {
+    "id": "OPS-DRILL-PRE17-BF-001",
+    "name": "Operator Outage Drill",
+    "standard_basis": [
+      "SRE incident response",
+      "DFMS production handoff"
+    ],
+    "reviewers": [
+      "sre-lead",
+      "release-manager",
+      "human-operator"
+    ],
+    "evidence": [
+      "EVD-RUBRIC-PRE17-BF"
+    ],
+    "residual_risks": [],
+    "links": {
+      "derives_from": [
+        "REQ-PRE17-BF-001"
+      ],
+      "routes_to": [
+        "NODE-PRE17-BF-OPS"
+      ],
+      "tracked_by": [
+        "WL-PRE17-BF"
+      ],
+      "gated_by": [
+        "RFG-PRE17-BF"
+      ]
+    }
+  },
+  {
+    "id": "HND-PRE17-BF-001",
+    "name": "Human Operator Handoff",
+    "standard_basis": [
+      "DFMS human-agent handoff"
+    ],
+    "reviewers": [
+      "human-owner",
+      "sre-lead",
+      "quality-lead"
+    ],
+    "evidence": [
+      "OPS-DRILL-PRE17-BF-001"
+    ],
+    "residual_risks": [],
+    "links": {
+      "derives_from": [
+        "OPS-DRILL-PRE17-BF-001"
+      ],
+      "routes_to": [
+        "NODE-PRE17-BF-OPS"
+      ],
+      "tracked_by": [
+        "WL-PRE17-BF"
+      ],
+      "gated_by": [
+        "RFG-PRE17-BF"
+      ]
+    }
+  },
+  {
+    "id": "TST-PRE17-BF-001",
+    "type": "evidence",
+    "links": {
+      "verifies": [
+        "REQ-PRE17-BF-001",
+        "ART-PRE17-BF-IMPACT",
+        "OPS-DRILL-PRE17-BF-001"
+      ]
+    }
+  },
+  {
+    "id": "EVD-RUBRIC-PRE17-BF",
+    "type": "evidence"
+  },
+  {
+    "id": "EVD-TRACE-PRE17-BF",
+    "type": "evidence"
+  },
+  {
+    "id": "CERT-PRE17-BF",
+    "type": "evidence"
+  }
+]

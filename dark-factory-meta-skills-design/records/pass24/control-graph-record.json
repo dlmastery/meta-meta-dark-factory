@@ -1,0 +1,135 @@
+{
+  "id": "CG-PASS24-001",
+  "name": "Pass 24 certificate bundle hardening",
+  "goal": "Ensure quality certificates validate against actual referenced panel score and refinery gate evidence files.",
+  "risks": [
+    "A pass certificate could be validated without bundled evidence",
+    "A certificate could reference a panel ID that does not match the panel file",
+    "A certificate could reference a refinery gate ID that does not match the gate file"
+  ],
+  "links": {
+    "attractor": "ATTR-PASS24-001",
+    "work_ledger": "WL-PASS24-001",
+    "refinery_gate": "RFG-PASS24-001"
+  },
+  "nodes": [
+    {
+      "id": "NODE-PASS24-CRITIC",
+      "label": "Pass 24 certificate bundle critic review",
+      "owner": "codex",
+      "node_contract": {
+        "what": "Review certificate cross-file evidence enforcement.",
+        "why": "Stage certificates must be tied to actual panel and gate evidence, not merely matching strings.",
+        "how": "Inspect validator behavior, reproduce bypasses, and define bundle-mode checks.",
+        "where": "validate_quality_certificate.py, score-pass.json, refinery-gate-pass.yaml, quality-certificate-pass.json.",
+        "when": "Before pass 24 fixes are accepted.",
+        "who": "Codex using quality, governance, and verification expert lenses.",
+        "how_good": "Every finding is covered by executable positive and negative checks."
+      },
+      "expert_panel": [
+        "quality-refinery-reviewer",
+        "requirements-governance-architect",
+        "verification-safety-critic"
+      ],
+      "rubrics": [
+        "cross-file evidence integrity",
+        "certificate reviewer-score consistency",
+        "refinery gate linkage"
+      ],
+      "feedback_loop": "Any new certificate bypass becomes validator logic and a hardening-runner negative fixture.",
+      "gates": [
+        "bypass reproduced",
+        "validator patched",
+        "runner proves rejection"
+      ],
+      "evidence_outputs": [
+        "24-ralph-loop-critic-review-and-fix-record.md"
+      ]
+    },
+    {
+      "id": "NODE-PASS24-FIX",
+      "label": "Certificate bundle validator implementation",
+      "owner": "codex",
+      "node_contract": {
+        "what": "Extend quality certificate validation to compare referenced evidence files.",
+        "why": "Acceptance certificates must bind to actual expert-panel and refinery-gate evidence.",
+        "how": "Add bundle-mode arguments, compare panel/gate IDs and contents, require bundle mode for pass certificates, and sync workspace files.",
+        "where": "df-quality-refinery installed skill and workspace bundle.",
+        "when": "After critic review and before evidence closure.",
+        "who": "Codex as implementer.",
+        "how_good": "Bundled certificate passes while unbundled, panel-mismatch, and gate-mismatch certificates fail."
+      },
+      "expert_panel": [
+        "quality-lead",
+        "traceability-lead",
+        "validation-engineer"
+      ],
+      "rubrics": [
+        "cross-file matching",
+        "bundle-mode enforcement",
+        "regression coverage"
+      ],
+      "feedback_loop": "Rerun the full hardening suite after every validator change.",
+      "gates": [
+        "installed validator compiles",
+        "workspace validator compiles",
+        "positive and negative bundle fixtures behave as expected"
+      ],
+      "evidence_outputs": [
+        "validate_quality_certificate.py",
+        "run_pre17_hardening_checks.ps1"
+      ]
+    },
+    {
+      "id": "NODE-PASS24-VERIFY",
+      "label": "Pass 24 verification sweep",
+      "owner": "codex",
+      "node_contract": {
+        "what": "Verify final pass 24 state.",
+        "why": "The bundle hardening only counts if the full suite and merged records pass.",
+        "how": "Run hardening suite, merged-record validation, hash sync, JSON, ASCII, and artifact ID checks.",
+        "where": "Workspace validation suite and pass 24 records.",
+        "when": "After all fixes and records are written.",
+        "who": "Codex as verification runner.",
+        "how_good": "All checks pass and residual risks remain explicit."
+      },
+      "expert_panel": [
+        "verification-lead",
+        "governance-auditor",
+        "release-readiness-reviewer"
+      ],
+      "rubrics": [
+        "positive-path preservation",
+        "negative-path rejection",
+        "evidence completeness"
+      ],
+      "feedback_loop": "Any failed check reopens the fix node.",
+      "gates": [
+        "hardening runner passes",
+        "pass 24 merged records validate",
+        "hash sync succeeds"
+      ],
+      "evidence_outputs": [
+        "DFMS hardening checks complete",
+        "records/pass24 merged records"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "ATTR-PASS24-001",
+      "to": "NODE-PASS24-CRITIC",
+      "type": "governs"
+    },
+    {
+      "from": "NODE-PASS24-CRITIC",
+      "to": "NODE-PASS24-FIX",
+      "type": "requires"
+    },
+    {
+      "from": "NODE-PASS24-FIX",
+      "to": "NODE-PASS24-VERIFY",
+      "type": "must_validate"
+    }
+  ]
+}

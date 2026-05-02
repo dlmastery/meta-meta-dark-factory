@@ -1,0 +1,28 @@
+{
+  "id": "RFG-PASS25-001",
+  "name": "Pass 25 patch-level refinery gate",
+  "status": "pass",
+  "verdict_rationale": "Pass 25 closes structured evidence placement bypasses by requiring certificate, panel, and artifact IDs in the correct refinery gate lists and by rejecting pass gates with empty scope or blank verdict fields. This is patch-level only.",
+  "next_action": "Run a full greenfield and brownfield project-book simulation before claiming runtime readiness.",
+  "evidence": {
+    "test_reports": [
+      "DFMS hardening checks complete",
+      "bad certificate gate structured-evidence fixture: rejected",
+      "bad refinery empty-scope fixture: rejected",
+      "quality certificate bundle pass fixture: pass"
+    ],
+    "rubric_scorecards": [
+      "25-ralph-loop-critic-review-and-fix-record.md"
+    ],
+    "trace_reports": [
+      "records/pass25 merged records",
+      "ATTR-PASS25-001",
+      "CG-PASS25-001",
+      "WL-PASS25-001",
+      "installed and workspace validator hashes match"
+    ],
+    "certificates": [
+      "patch-level pass only"
+    ]
+  }
+}

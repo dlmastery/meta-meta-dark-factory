@@ -1,0 +1,38 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+    "strict_compliance": "Mandatory. Every claim must be project-specific, evidence-backed, trace-linked, reviewer-challenged, and free of unsupported invention.",
+    "missing_evidence_rule": "If evidence is missing, mark it as an assumption, risk, open question, or failure."
+  },
+  "template_only": false,
+  "instantiation_id": "DF-INSTANTIATION-DFMS-20260425",
+  "run_id": "RUN-DFMS-META-META-COMPILER-20260425",
+  "generated_meta_skill_contract": "records/generated-meta-skill-contract-dfms-20260425.json",
+  "product_tailoring_profile": "records/product-tailoring-profile-dfms-meta-skill-20260425.json",
+  "instantiated_records": {
+    "tasks_md": "TASKS.md",
+    "tpm_flow_ledger": "records/tpm-flow-ledger-dfms-tpm-flow-20260425.json",
+    "pert_plan": "records/factory-pert-plan-dfms-tpm-flow-20260425.json",
+    "knowledge_graph": "records/knowledge-graph-tpm-flow-enforcement-20260425.json",
+    "sdlc_stage_coverage_matrix": "records/sdlc-stage-coverage-dfms-meta-skill-20260425.json",
+    "execution_kernel_report": "records/next-action-report-with-sdlc-coverage-20260425.json",
+    "artifact_bom_tailoring": "artifact-bom/artifact-bom-with-15-rubrics.json",
+    "quality_refinery_gate": "df-quality-refinery required for generated project acceptance",
+    "traceability_matrix": "df-traceability-evidence required for generated project acceptance"
+  },
+  "current_state": "closed",
+  "legal_next_action": "open a new product-tailored bead or change request before running a generated product factory",
+  "missing_or_waived_controls": [
+    {
+      "control": "real product implementation evidence",
+      "state": "not_applicable_to_this_meta-skill-compiler revision",
+      "revalidation_trigger": "any generated product factory run with code_producing true"
+    },
+    {
+      "control": "real UI browser evidence",
+      "state": "not_applicable_to_this meta-skill-compiler revision",
+      "revalidation_trigger": "any generated product factory run with ui_surface true"
+    }
+  ],
+  "template_marker": false
+}

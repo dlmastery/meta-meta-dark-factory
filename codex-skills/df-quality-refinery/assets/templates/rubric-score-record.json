@@ -1,0 +1,41 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+    "strict_compliance": "Mandatory. Every claim must be project-specific, evidence-backed, trace-linked, reviewer-challenged, and free of unsupported invention.",
+    "missing_evidence_rule": "If evidence is missing, mark it as an assumption, risk, open question, or failure."
+  },
+  "id": "EVD-RUBRIC-PANEL-001",
+  "artifact": "",
+  "rubric_version": "2026-04-24",
+  "threshold_percent": 96,
+  "reviewers": [
+    {
+      "reviewer_role": "",
+      "independent_review_at": "",
+      "checks": [
+        {
+          "id": "CHK-01",
+          "name": "",
+          "score": 0,
+          "rationale": "",
+          "fix_or_risk": "",
+          "fix_evidence": ""
+        }
+      ]
+    }
+  ],
+  "cross_critique": {
+    "at": "",
+    "summary": "",
+    "dissent": []
+  },
+  "synthesis": {
+    "verdict": "pending",
+    "failed_points_resolved": false,
+    "evidence": [],
+    "residual_risk": []
+  },
+  "reviewer_percents": {},
+  "percent": null,
+  "verdict": "pending"
+}

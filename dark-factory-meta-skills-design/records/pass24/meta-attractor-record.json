@@ -1,0 +1,96 @@
+{
+  "record_id": "ATTR-PASS24-001",
+  "created_on": "2026-04-25",
+  "source_signals": [
+    "User requested Ralph loop pass 24 critic review",
+    "Pass 23 added quality certificate validation but left cross-file certificate verification as residual risk",
+    "Original transcript requires certificates to be evidence-backed, traceable, and checked repeatedly rather than accepted as self-asserted strings"
+  ],
+  "attractor_state": "stable",
+  "goal": "Close cross-file quality-certificate bypasses so pass certificates must validate against the actual panel score record and refinery gate files.",
+  "layer_map": {
+    "product_specific": [
+      "No product-specific rule is introduced; this hardens the reusable quality certificate gate."
+    ],
+    "factory_reusable": [
+      "Every future pass certificate must be validated against actual panel and refinery evidence files."
+    ],
+    "meta_meta_governance": [
+      "Pass 24 is governed by Attractor, control graph, work ledger, refinery gate, and hardening-runner evidence."
+    ]
+  },
+  "control_plane_links": {
+    "control_graph": "CG-PASS24-001",
+    "work_ledger": "WL-PASS24-001",
+    "refinery_gate": "RFG-PASS24-001"
+  },
+  "selected_mode": "skill-system-revision",
+  "selected_skills": [
+    {
+      "skill": "df-meta-attractor",
+      "reason": "govern this as a meta-meta hardening pass",
+      "load_now": true
+    },
+    {
+      "skill": "df-quality-refinery",
+      "reason": "harden certificate-to-evidence validation",
+      "load_now": true
+    },
+    {
+      "skill": "df-traceability-evidence",
+      "reason": "ensure certificate references are checked against actual evidence files",
+      "load_now": true
+    },
+    {
+      "skill": "dark-factory-orchestrator",
+      "reason": "keep certificate bundle validation in governed acceptance flow",
+      "load_now": true
+    }
+  ],
+  "gates": [
+    "pass certificates require bundle validation with --panel-score-record and --refinery-gate",
+    "certificate panel_score_record must match the referenced panel file id",
+    "certificate artifact, reviewers, and scores must match the referenced panel file",
+    "certificate refinery_gate must match the referenced refinery gate file id",
+    "referenced refinery gate must be valid and mention the certificate, panel score record, and artifact",
+    "pass 24 merged records validate"
+  ],
+  "node_contract": {
+    "what": "Run pass 24 critic review and harden cross-file quality certificate validation.",
+    "why": "A self-contained certificate is not enough; it must prove the referenced expert panel and refinery gate are the actual matching evidence.",
+    "how": "Extend the certificate validator with bundle mode, require bundle mode for pass certificates, add mismatch negative fixtures, and validate the suite.",
+    "where": "df-quality-refinery installed skill, workspace bundle, validation fixtures, and design records.",
+    "when": "Before future DFMS certificates are treated as acceptance proof.",
+    "who": "Codex as responsible fixer; human owner as Ralph-loop driver.",
+    "how_good": "Bundled certificate passes; unbundled pass, panel mismatch, and gate mismatch certificates reject."
+  },
+  "expert_debate": {
+    "system_theorist": "Certificates are closure attractors; they must bind to external evidence or they become self-referential assertions.",
+    "requirements_governance_architect": "Reviewer, score, artifact, panel, and gate identities must line up across files before acceptance.",
+    "verification_safety_critic": "Pass certificates must fail unless actual panel and gate validators pass and the referenced IDs match.",
+    "synthesis": "Make bundle mode mandatory for pass certificates and preserve full semantic validation as a residual project-simulation risk."
+  },
+  "human_decisions": [
+    "Human owner requested pass 24 and asked to fix new findings."
+  ],
+  "assumptions": [
+    "Pass 24 is a patch-level certificate-evidence hardening pass, not a full greenfield or brownfield simulation."
+  ],
+  "risks": [
+    "Bundle validation proves referenced evidence consistency, not real-world artifact correctness."
+  ],
+  "evidence_commitments": [
+    "quality certificate bundle pass fixture is accepted",
+    "bad certificate unbundled pass fixture is rejected",
+    "bad certificate panel-file mismatch fixture is rejected",
+    "bad certificate gate-file mismatch fixture is rejected",
+    "existing certificate negative fixtures still reject",
+    "installed and workspace quality certificate validator files remain in sync"
+  ],
+  "anti_overfit_checks": [
+    "No todo-app-specific rule is introduced.",
+    "Certificate bundle rules apply to all governed pass certificates."
+  ],
+  "verdict": "pass",
+  "next_safe_action": "Use validate_quality_certificate.py with --panel-score-record and --refinery-gate for every future pass certificate."
+}

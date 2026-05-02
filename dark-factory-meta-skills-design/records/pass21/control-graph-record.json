@@ -1,0 +1,138 @@
+{
+  "id": "CG-PASS21-001",
+  "name": "Pass 21 waiver and reciprocal trace hardening",
+  "goal": "Close remaining escape hatches in waiver completeness, threshold lowering, and answer-to-decomposition reciprocity.",
+  "risks": [
+    "A weak waiver could hide missing governed evidence",
+    "A record could lower its own pass threshold and still claim acceptance",
+    "A decomposition node could cite an answer without that answer linking back to the same node"
+  ],
+  "links": {
+    "attractor": "ATTR-PASS21-001",
+    "work_ledger": "WL-PASS21-001",
+    "refinery_gate": "RFG-PASS21-001"
+  },
+  "nodes": [
+    {
+      "id": "NODE-PASS21-CRITIC",
+      "label": "Pass 21 expert critic review",
+      "owner": "codex",
+      "node_contract": {
+        "what": "Review pass 20 and pass 21 controls against original transcript requirements.",
+        "why": "Find remaining ways DFMS could claim rigor without enforceable proof.",
+        "how": "Use governance, decomposition, and verification expert lenses.",
+        "where": "Installed skills, workspace bundle, validation fixtures, and design records.",
+        "when": "Before accepting pass 21.",
+        "who": "Codex with governance, requirements, and verification perspectives.",
+        "how_good": "Findings are concrete, fixable, and tied to validation evidence."
+      },
+      "expert_panel": [
+        "requirements-governance-architect",
+        "traceability-and-evidence-critic",
+        "verification-and-safety-critic"
+      ],
+      "rubrics": [
+        "governance waiver completeness",
+        "recursive intake traceability",
+        "negative-evidence adequacy"
+      ],
+      "feedback_loop": "Each finding must either be fixed in validators or recorded as residual risk.",
+      "gates": [
+        "findings are severity-ranked",
+        "fixes are traceable to files"
+      ],
+      "evidence_outputs": [
+        "21-ralph-loop-critic-review-and-fix-record.md"
+      ]
+    },
+    {
+      "id": "NODE-PASS21-FIX",
+      "label": "Waiver, threshold, and reciprocal-link validator hardening",
+      "owner": "codex",
+      "node_contract": {
+        "what": "Patch validators to reject weak waivers, self-lowered thresholds, and one-way answer links.",
+        "why": "Governed factory records must not be able to weaken their own proof obligations.",
+        "how": "Edit installed scripts, sync workspace scripts, and update fixtures.",
+        "where": "df-intake-spec-lab and df-traceability-evidence validators.",
+        "when": "Before validation and evidence closure.",
+        "who": "Codex as responsible implementer.",
+        "how_good": "New negative cases fail and existing positive cases continue passing."
+      },
+      "expert_panel": [
+        "requirements-decomposition-lead",
+        "governance-auditor",
+        "validation-engineer"
+      ],
+      "rubrics": [
+        "complete waiver rule",
+        "threshold integrity rule",
+        "exact reciprocal trace rule"
+      ],
+      "feedback_loop": "Rerun the hardening suite after every validator change.",
+      "gates": [
+        "installed validators compile",
+        "workspace validators compile",
+        "negative fixtures reject"
+      ],
+      "evidence_outputs": [
+        "validate_spec_decomposition.py",
+        "validate_intake_package.py",
+        "validate_trace_links.py"
+      ]
+    },
+    {
+      "id": "NODE-PASS21-VERIFY",
+      "label": "Negative fixture and hardening runner validation",
+      "owner": "codex",
+      "node_contract": {
+        "what": "Verify the final pass 21 state with positive and negative evidence.",
+        "why": "The pass is only credible if the hardening suite proves both acceptance and rejection paths.",
+        "how": "Run the DFMS hardening runner, merged-record validator, hash sync, JSON, ASCII, and ID checks.",
+        "where": "codex-skills validation fixtures and dark-factory-meta-skills-design records.",
+        "when": "After fixes and before final response.",
+        "who": "Codex as verification runner.",
+        "how_good": "All checks pass and residual risks remain explicit."
+      },
+      "expert_panel": [
+        "verification-lead",
+        "traceability-lead",
+        "quality-refinery-reviewer"
+      ],
+      "rubrics": [
+        "positive-path preservation",
+        "negative-path rejection",
+        "evidence completeness"
+      ],
+      "feedback_loop": "Any failed verification reopens the fix node.",
+      "gates": [
+        "full hardening suite passes",
+        "merged records validate",
+        "hashes match"
+      ],
+      "evidence_outputs": [
+        "low-threshold decomposition fixture: rejected",
+        "incomplete waiver decomposition fixture: rejected",
+        "low-threshold intake fixture: rejected",
+        "incomplete intake waiver fixture: rejected",
+        "DFMS hardening checks complete"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "ATTR-PASS21-001",
+      "to": "NODE-PASS21-CRITIC",
+      "type": "governs"
+    },
+    {
+      "from": "NODE-PASS21-CRITIC",
+      "to": "NODE-PASS21-FIX",
+      "type": "requires"
+    },
+    {
+      "from": "NODE-PASS21-FIX",
+      "to": "NODE-PASS21-VERIFY",
+      "type": "must_validate"
+    }
+  ]
+}

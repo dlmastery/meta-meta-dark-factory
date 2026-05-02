@@ -1,0 +1,42 @@
+{
+  "id": "WL-PASS30-001",
+  "title": "Ralph loop pass 30 generalized physical evidence-file validation",
+  "current_state": "accepted",
+  "next_action": "Use evidence-file bundle validation for strict trace validation whenever records cite physical files.",
+  "revalidation_trigger": "Any future finding that non-production artifact, ledger, gate, certificate, handoff, or evidence records can cite file-like evidence without supplied files or citing-record ID mentions.",
+  "owner": {
+    "accountable": "human-project-book-owner",
+    "responsible": "codex"
+  },
+  "acceptance_criteria": [
+    "Pass 30 findings documented",
+    "Traceability validator accepts --evidence-file bundle inputs",
+    "File-like evidence references require supplied file basenames",
+    "Evidence files must mention the citing record ID",
+    "Hardening runner includes missing-file, bad-content, and bad-file-mapping negative checks"
+  ],
+  "evidence_required": [
+    "pass30 critic/fix record",
+    "physical evidence trace pass fixture",
+    "missing physical evidence rejection",
+    "bad evidence content rejection",
+    "bad file mapping rejection",
+    "DFMS hardening runner output",
+    "pass30 merged-record validation",
+    "installed/workspace hash comparison"
+  ],
+  "evidence_provided": [
+    "30-ralph-loop-critic-review-and-fix-record.md",
+    "physical-evidence-trace-pass.json",
+    "physical-evidence-trace-report.md",
+    "physical evidence trace missing-file fixture: rejected",
+    "physical evidence trace bad-content fixture: rejected",
+    "physical evidence trace bad-file-mapping fixture: rejected",
+    "DFMS hardening checks complete",
+    "ATTR-PASS30-001",
+    "CG-PASS30-001",
+    "RFG-PASS30-001",
+    "records/pass30 merged records",
+    "INSTALLED_WORKSPACE_HASHES_MATCH"
+  ]
+}

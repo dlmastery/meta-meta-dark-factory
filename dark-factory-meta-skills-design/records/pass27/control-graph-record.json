@@ -1,0 +1,135 @@
+{
+  "id": "CG-PASS27-001",
+  "name": "Pass 27 production handoff bundle validation",
+  "goal": "Ensure production handoff evidence proves the actual outage drill records it references.",
+  "risks": [
+    "A production handoff could reference an outage drill ID without providing the drill file",
+    "A provided drill could belong to a different release or refinery gate",
+    "Runbook replay evidence could be unrelated to the referenced outage drill"
+  ],
+  "links": {
+    "attractor": "ATTR-PASS27-001",
+    "work_ledger": "WL-PASS27-001",
+    "refinery_gate": "RFG-PASS27-001"
+  },
+  "nodes": [
+    {
+      "id": "NODE-PASS27-CRITIC",
+      "label": "Pass 27 bundle evidence critic review",
+      "owner": "codex",
+      "node_contract": {
+        "what": "Review whether pass 26 production handoff evidence can be spoofed by unverified drill references.",
+        "why": "Original requirements demand evidence, not decorative cross-references.",
+        "how": "Inspect production handoff validator, fixtures, and runner for cross-file bundle checks.",
+        "where": "df-production-sre-handoff validator and validation fixtures.",
+        "when": "Before pass 27 fixes are accepted.",
+        "who": "Codex using SRE, traceability, and verification expert lenses.",
+        "how_good": "Every finding becomes executable validation or an explicit residual risk."
+      },
+      "expert_panel": [
+        "sre-release-lead",
+        "traceability-governance-architect",
+        "verification-safety-critic"
+      ],
+      "rubrics": [
+        "bundle evidence integrity",
+        "cross-file trace consistency",
+        "negative fixture coverage"
+      ],
+      "feedback_loop": "Any broken cross-record proof becomes validator logic and a hardening-runner fixture.",
+      "gates": [
+        "bundle bypass documented",
+        "validator patch scoped",
+        "runner regression added"
+      ],
+      "evidence_outputs": [
+        "27-ralph-loop-critic-review-and-fix-record.md"
+      ]
+    },
+    {
+      "id": "NODE-PASS27-FIX",
+      "label": "Production handoff bundle validator implementation",
+      "owner": "codex",
+      "node_contract": {
+        "what": "Require production handoffs to validate against actual referenced outage drill records.",
+        "why": "Referenced operational records must match release, gate, operator, approver, and replay evidence.",
+        "how": "Add --outage-drill parsing, cross-file ID/release/gate/operator/replay checks, and negative fixtures.",
+        "where": "Installed and workspace df-production-sre-handoff validators plus runner.",
+        "when": "After critic review and before verification closure.",
+        "who": "Codex as implementer.",
+        "how_good": "Bundled handoff passes; unbundled and mismatched bundles fail."
+      },
+      "expert_panel": [
+        "release-engineer",
+        "operations-trace-reviewer",
+        "test-automation-reviewer"
+      ],
+      "rubrics": [
+        "CLI bundle enforcement",
+        "record consistency checks",
+        "regression protection"
+      ],
+      "feedback_loop": "Rerun the full hardening suite after every bundle-validation change.",
+      "gates": [
+        "installed validator compiles",
+        "workspace validator compiles",
+        "new negative fixtures reject"
+      ],
+      "evidence_outputs": [
+        "validate_production_handoff.py",
+        "run_pre17_hardening_checks.ps1"
+      ]
+    },
+    {
+      "id": "NODE-PASS27-VERIFY",
+      "label": "Pass 27 verification sweep",
+      "owner": "codex",
+      "node_contract": {
+        "what": "Verify final pass 27 state.",
+        "why": "Bundle-validation hardening only counts if the full suite and merged records pass.",
+        "how": "Run hardening suite, merged-record validation, hash sync, JSON, ASCII, and artifact ID checks.",
+        "where": "Workspace validation suite and pass 27 records.",
+        "when": "After all fixes and records are written.",
+        "who": "Codex as verification runner.",
+        "how_good": "All checks pass and residual risks remain explicit."
+      },
+      "expert_panel": [
+        "verification-lead",
+        "governance-auditor",
+        "production-readiness-reviewer"
+      ],
+      "rubrics": [
+        "positive-path preservation",
+        "negative-path rejection",
+        "bundle evidence completeness"
+      ],
+      "feedback_loop": "Any failed check reopens the fix node.",
+      "gates": [
+        "hardening runner passes",
+        "pass 27 merged records validate",
+        "installed/workspace production validator hashes match"
+      ],
+      "evidence_outputs": [
+        "DFMS hardening checks complete",
+        "records/pass27 merged records"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "ATTR-PASS27-001",
+      "to": "NODE-PASS27-CRITIC",
+      "type": "governs"
+    },
+    {
+      "from": "NODE-PASS27-CRITIC",
+      "to": "NODE-PASS27-FIX",
+      "type": "requires"
+    },
+    {
+      "from": "NODE-PASS27-FIX",
+      "to": "NODE-PASS27-VERIFY",
+      "type": "must_validate"
+    }
+  ]
+}

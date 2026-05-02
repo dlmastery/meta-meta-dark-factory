@@ -1,0 +1,414 @@
+{
+  "id": "SDR-VALIDATION-001",
+  "status": "accepted",
+  "source_interrogation": "ITR-VALIDATION-001",
+  "version": "1.0",
+  "standard_basis": [
+    "ISO/IEC/IEEE 29148",
+    "ISO/IEC/IEEE 15289",
+    "RUP use-case decomposition",
+    "Agile story slicing",
+    "DDD domain decomposition"
+  ],
+  "reviewers": [
+    "requirements-decomposition-lead",
+    "product-owner",
+    "verification-lead"
+  ],
+  "evidence": [
+    "EVD-SPEC-001",
+    "EVD-SPEC-002",
+    "EVD-SPEC-003",
+    "EVD-SPEC-004"
+  ],
+  "residual_risks": [],
+  "links": {
+    "derives_from": ["ITR-VALIDATION-001"],
+    "routes_to": ["NODE-SPEC-001"],
+    "tracked_by": ["WL-SPEC-001"],
+    "gated_by": ["RFG-SPEC-001"]
+  },
+  "threshold_percent": 96,
+  "nodes": [
+    {
+      "node_id": "SDN-ROOT",
+      "level": "L0",
+      "title": "Spec development protocol",
+      "type": "vision",
+      "parent_id": null,
+      "owner": "requirements-lead",
+      "priority": "must",
+      "source_answer_ids": ["ANS-ROOT-001"],
+      "assumption_ids": [],
+      "statement": "The factory must turn raw intent into a recursively decomposed, validated, traceable spec.",
+      "children": ["SDN-CAP-INTERVIEW", "SDN-CAP-VALIDATE"],
+      "coverage_rationale": "The two capabilities cover elicitation and proof of completeness.",
+      "acceptance_criteria": [],
+      "validation_methods": [],
+      "evidence_targets": [],
+      "dependencies": [],
+      "risks": [],
+      "trace": {
+        "requirements": ["REQ-SPEC-001"],
+        "tests": ["TST-SPEC-001"],
+        "control_graph_nodes": ["NODE-SPEC-001"],
+        "work_ledgers": ["WL-SPEC-001"],
+        "refinery_gates": ["RFG-SPEC-001"]
+      },
+      "waivers": [
+        {
+          "topic": "level_skip",
+          "owner": "requirements-decomposition-lead",
+          "reason": "Validation fixture compresses L2-L4 while the separate skipped-level negative fixture proves silent skips are rejected.",
+          "revalidation_trigger": "Use full L0-L5 expansion in real governed project records unless this waiver is renewed.",
+          "residual_risk": "Compact fixture may not demonstrate every intermediate level."
+        }
+      ],
+      "scores": {
+        "intent_preserved": 4,
+        "coverage": 4,
+        "atomic_testable": 4,
+        "functional": 4,
+        "nfr_security_ops": 4,
+        "data_state_interface": 4,
+        "edge_abuse_failure": 4,
+        "dependencies_sequence": 4,
+        "contradictions": 4,
+        "owners_acceptance": 4,
+        "scenario_holdout_transfer": 4,
+        "traceability": 4,
+        "assumptions_waivers": 4,
+        "brownfield_regression": 4,
+        "fresh_reviewer_ready": 4
+      },
+      "reinterrogation_triggers": []
+    },
+    {
+      "node_id": "SDN-CAP-INTERVIEW",
+      "level": "L1",
+      "title": "Interview each branch",
+      "type": "capability",
+      "parent_id": "SDN-ROOT",
+      "owner": "requirements-lead",
+      "priority": "must",
+      "source_answer_ids": ["ANS-INT-001"],
+      "assumption_ids": [],
+      "statement": "Each branch must be interviewed for intent, behavior, data, NFRs, dependencies, exceptions, contradictions, and approval.",
+      "children": ["SDN-LEAF-ANSWERS", "SDN-LEAF-CONTRADICTIONS"],
+      "coverage_rationale": "Captures both answer acquisition and contradiction handling.",
+      "acceptance_criteria": [],
+      "validation_methods": [],
+      "evidence_targets": [],
+      "dependencies": [],
+      "risks": [],
+      "trace": {
+        "requirements": ["REQ-SPEC-001"],
+        "tests": ["TST-SPEC-001"],
+        "control_graph_nodes": ["NODE-SPEC-001"],
+        "work_ledgers": ["WL-SPEC-001"],
+        "refinery_gates": ["RFG-SPEC-001"]
+      },
+      "waivers": [
+        {
+          "topic": "level_skip",
+          "owner": "requirements-decomposition-lead",
+          "reason": "Validation fixture compresses L2-L4 while the separate skipped-level negative fixture proves silent skips are rejected.",
+          "revalidation_trigger": "Use full L0-L5 expansion in real governed project records unless this waiver is renewed.",
+          "residual_risk": "Compact fixture may not demonstrate every intermediate level."
+        }
+      ],
+      "scores": {
+        "intent_preserved": 4,
+        "coverage": 4,
+        "atomic_testable": 4,
+        "functional": 4,
+        "nfr_security_ops": 4,
+        "data_state_interface": 4,
+        "edge_abuse_failure": 4,
+        "dependencies_sequence": 4,
+        "contradictions": 4,
+        "owners_acceptance": 4,
+        "scenario_holdout_transfer": 4,
+        "traceability": 4,
+        "assumptions_waivers": 4,
+        "brownfield_regression": 4,
+        "fresh_reviewer_ready": 4
+      },
+      "reinterrogation_triggers": ["Any branch lacks answer IDs or approval source."]
+    },
+    {
+      "node_id": "SDN-CAP-VALIDATE",
+      "level": "L1",
+      "title": "Validate decomposition completeness",
+      "type": "capability",
+      "parent_id": "SDN-ROOT",
+      "owner": "verification-lead",
+      "priority": "must",
+      "source_answer_ids": ["ANS-VAL-001"],
+      "assumption_ids": [],
+      "statement": "Each branch must pass completeness, atomicity, traceability, and validation-readiness checks before artifact expansion.",
+      "children": ["SDN-LEAF-ATOMIC", "SDN-LEAF-TRACE"],
+      "coverage_rationale": "Covers leaf quality and proof links.",
+      "acceptance_criteria": [],
+      "validation_methods": [],
+      "evidence_targets": [],
+      "dependencies": [],
+      "risks": [],
+      "trace": {
+        "requirements": ["REQ-SPEC-002"],
+        "tests": ["TST-SPEC-002"],
+        "control_graph_nodes": ["NODE-SPEC-002"],
+        "work_ledgers": ["WL-SPEC-001"],
+        "refinery_gates": ["RFG-SPEC-001"]
+      },
+      "waivers": [
+        {
+          "topic": "level_skip",
+          "owner": "requirements-decomposition-lead",
+          "reason": "Validation fixture compresses L2-L4 while the separate skipped-level negative fixture proves silent skips are rejected.",
+          "revalidation_trigger": "Use full L0-L5 expansion in real governed project records unless this waiver is renewed.",
+          "residual_risk": "Compact fixture may not demonstrate every intermediate level."
+        }
+      ],
+      "scores": {
+        "intent_preserved": 4,
+        "coverage": 4,
+        "atomic_testable": 4,
+        "functional": 4,
+        "nfr_security_ops": 4,
+        "data_state_interface": 4,
+        "edge_abuse_failure": 4,
+        "dependencies_sequence": 4,
+        "contradictions": 4,
+        "owners_acceptance": 4,
+        "scenario_holdout_transfer": 4,
+        "traceability": 4,
+        "assumptions_waivers": 4,
+        "brownfield_regression": 4,
+        "fresh_reviewer_ready": 4
+      },
+      "reinterrogation_triggers": ["Any leaf has no validation method or trace target."]
+    },
+    {
+      "node_id": "SDN-LEAF-ANSWERS",
+      "level": "L5",
+      "title": "Answer capture",
+      "type": "acceptance_leaf",
+      "parent_id": "SDN-CAP-INTERVIEW",
+      "owner": "requirements-lead",
+      "priority": "must",
+      "source_answer_ids": ["ANS-INT-001"],
+      "assumption_ids": [],
+      "statement": "Every material branch answer is captured with stable answer ID, owner, confidence, affected nodes, and revalidation trigger.",
+      "children": [],
+      "coverage_rationale": "",
+      "acceptance_criteria": ["Given a branch interview, each answer has an ANS ID and links to one or more nodes."],
+      "validation_methods": ["record-inspection", "trace-validation"],
+      "evidence_targets": ["EVD-SPEC-001"],
+      "dependencies": [],
+      "risks": [],
+      "trace": {
+        "requirements": ["REQ-SPEC-001"],
+        "tests": ["TST-SPEC-001"],
+        "control_graph_nodes": ["NODE-SPEC-001"],
+        "work_ledgers": ["WL-SPEC-001"],
+        "refinery_gates": ["RFG-SPEC-001"]
+      },
+      "waivers": [
+        {
+          "topic": "level_skip",
+          "owner": "requirements-decomposition-lead",
+          "reason": "Validation fixture compresses L2-L4 while the separate skipped-level negative fixture proves silent skips are rejected.",
+          "revalidation_trigger": "Use full L0-L5 expansion in real governed project records unless this waiver is renewed.",
+          "residual_risk": "Compact fixture may not demonstrate every intermediate level."
+        }
+      ],
+      "scores": {
+        "intent_preserved": 4,
+        "coverage": 4,
+        "atomic_testable": 4,
+        "functional": 4,
+        "nfr_security_ops": 4,
+        "data_state_interface": 4,
+        "edge_abuse_failure": 4,
+        "dependencies_sequence": 4,
+        "contradictions": 4,
+        "owners_acceptance": 4,
+        "scenario_holdout_transfer": 4,
+        "traceability": 4,
+        "assumptions_waivers": 4,
+        "brownfield_regression": 4,
+        "fresh_reviewer_ready": 4
+      },
+      "reinterrogation_triggers": []
+    },
+    {
+      "node_id": "SDN-LEAF-CONTRADICTIONS",
+      "level": "L5",
+      "title": "Contradiction handling",
+      "type": "acceptance_leaf",
+      "parent_id": "SDN-CAP-INTERVIEW",
+      "owner": "requirements-lead",
+      "priority": "must",
+      "source_answer_ids": ["ANS-INT-002"],
+      "assumption_ids": [],
+      "statement": "Conflicting branch answers are resolved, deferred with owner, or escalated before requirement freeze.",
+      "children": [],
+      "coverage_rationale": "",
+      "acceptance_criteria": ["Given conflicting answers, the record contains resolution, deferral, or escalation evidence."],
+      "validation_methods": ["contradiction-review"],
+      "evidence_targets": ["EVD-SPEC-002"],
+      "dependencies": [],
+      "risks": [],
+      "trace": {
+        "requirements": ["REQ-SPEC-001"],
+        "tests": ["TST-SPEC-001"],
+        "control_graph_nodes": ["NODE-SPEC-001"],
+        "work_ledgers": ["WL-SPEC-001"],
+        "refinery_gates": ["RFG-SPEC-001"]
+      },
+      "waivers": [
+        {
+          "topic": "level_skip",
+          "owner": "requirements-decomposition-lead",
+          "reason": "Validation fixture compresses L2-L4 while the separate skipped-level negative fixture proves silent skips are rejected.",
+          "revalidation_trigger": "Use full L0-L5 expansion in real governed project records unless this waiver is renewed.",
+          "residual_risk": "Compact fixture may not demonstrate every intermediate level."
+        }
+      ],
+      "scores": {
+        "intent_preserved": 4,
+        "coverage": 4,
+        "atomic_testable": 4,
+        "functional": 4,
+        "nfr_security_ops": 4,
+        "data_state_interface": 4,
+        "edge_abuse_failure": 4,
+        "dependencies_sequence": 4,
+        "contradictions": 4,
+        "owners_acceptance": 4,
+        "scenario_holdout_transfer": 4,
+        "traceability": 4,
+        "assumptions_waivers": 4,
+        "brownfield_regression": 4,
+        "fresh_reviewer_ready": 4
+      },
+      "reinterrogation_triggers": []
+    },
+    {
+      "node_id": "SDN-LEAF-ATOMIC",
+      "level": "L5",
+      "title": "Atomic leaves",
+      "type": "acceptance_leaf",
+      "parent_id": "SDN-CAP-VALIDATE",
+      "owner": "verification-lead",
+      "priority": "must",
+      "source_answer_ids": ["ANS-VAL-001"],
+      "assumption_ids": [],
+      "statement": "Each leaf contains one actor, behavior, condition, and validation path.",
+      "children": [],
+      "coverage_rationale": "",
+      "acceptance_criteria": ["Each leaf can be verified by one focused test, review, holdout, or drill."],
+      "validation_methods": ["atomicity-review"],
+      "evidence_targets": ["EVD-SPEC-003"],
+      "dependencies": [],
+      "risks": [],
+      "trace": {
+        "requirements": ["REQ-SPEC-002"],
+        "tests": ["TST-SPEC-002"],
+        "control_graph_nodes": ["NODE-SPEC-002"],
+        "work_ledgers": ["WL-SPEC-001"],
+        "refinery_gates": ["RFG-SPEC-001"]
+      },
+      "waivers": [
+        {
+          "topic": "level_skip",
+          "owner": "requirements-decomposition-lead",
+          "reason": "Validation fixture compresses L2-L4 while the separate skipped-level negative fixture proves silent skips are rejected.",
+          "revalidation_trigger": "Use full L0-L5 expansion in real governed project records unless this waiver is renewed.",
+          "residual_risk": "Compact fixture may not demonstrate every intermediate level."
+        }
+      ],
+      "scores": {
+        "intent_preserved": 4,
+        "coverage": 4,
+        "atomic_testable": 4,
+        "functional": 4,
+        "nfr_security_ops": 4,
+        "data_state_interface": 4,
+        "edge_abuse_failure": 4,
+        "dependencies_sequence": 4,
+        "contradictions": 4,
+        "owners_acceptance": 4,
+        "scenario_holdout_transfer": 4,
+        "traceability": 4,
+        "assumptions_waivers": 4,
+        "brownfield_regression": 4,
+        "fresh_reviewer_ready": 4
+      },
+      "reinterrogation_triggers": []
+    },
+    {
+      "node_id": "SDN-LEAF-TRACE",
+      "level": "L5",
+      "title": "Leaf trace closure",
+      "type": "acceptance_leaf",
+      "parent_id": "SDN-CAP-VALIDATE",
+      "owner": "verification-lead",
+      "priority": "must",
+      "source_answer_ids": ["ANS-VAL-002"],
+      "assumption_ids": [],
+      "statement": "Every leaf traces to requirement, test, control graph node, work ledger item, and refinery gate.",
+      "children": [],
+      "coverage_rationale": "",
+      "acceptance_criteria": ["Strict trace validation passes for all accepted leaves."],
+      "validation_methods": ["strict-trace-validation"],
+      "evidence_targets": ["EVD-SPEC-004"],
+      "dependencies": [],
+      "risks": [],
+      "trace": {
+        "requirements": ["REQ-SPEC-002"],
+        "tests": ["TST-SPEC-002"],
+        "control_graph_nodes": ["NODE-SPEC-002"],
+        "work_ledgers": ["WL-SPEC-001"],
+        "refinery_gates": ["RFG-SPEC-001"]
+      },
+      "waivers": [
+        {
+          "topic": "level_skip",
+          "owner": "requirements-decomposition-lead",
+          "reason": "Validation fixture compresses L2-L4 while the separate skipped-level negative fixture proves silent skips are rejected.",
+          "revalidation_trigger": "Use full L0-L5 expansion in real governed project records unless this waiver is renewed.",
+          "residual_risk": "Compact fixture may not demonstrate every intermediate level."
+        }
+      ],
+      "scores": {
+        "intent_preserved": 4,
+        "coverage": 4,
+        "atomic_testable": 4,
+        "functional": 4,
+        "nfr_security_ops": 4,
+        "data_state_interface": 4,
+        "edge_abuse_failure": 4,
+        "dependencies_sequence": 4,
+        "contradictions": 4,
+        "owners_acceptance": 4,
+        "scenario_holdout_transfer": 4,
+        "traceability": 4,
+        "assumptions_waivers": 4,
+        "brownfield_regression": 4,
+        "fresh_reviewer_ready": 4
+      },
+      "reinterrogation_triggers": []
+    }
+  ],
+  "open_questions": [],
+  "contradictions": [],
+  "waivers": [],
+  "approval": {
+    "required": true,
+    "approver": "human-owner",
+    "decision": "approved",
+    "at": "2026-04-24T13:00:00-07:00"
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+  },
+  "template_only": false,
+  "record_id": "A11Y-CERT-AUDIT-NORTHSTAR-20260426-001",
+  "status": "pass",
+  "checks": {
+    "duplicateIds": true,
+    "ariaLabelledbyReferencesResolve": true,
+    "formControlsNamed": true,
+    "buttonNamesPresent": true,
+    "contrastResults": [
+      {
+        "name": "ink on panel",
+        "foreground": "#1f1f1f",
+        "background": "#ffffff",
+        "ratio": 16.48,
+        "minimum": 4.5
+      },
+      {
+        "name": "muted on panel",
+        "foreground": "#444746",
+        "background": "#ffffff",
+        "ratio": 9.39,
+        "minimum": 4.5
+      },
+      {
+        "name": "blue on panel",
+        "foreground": "#0b57d0",
+        "background": "#ffffff",
+        "ratio": 6.39,
+        "minimum": 4.5
+      },
+      {
+        "name": "green on panel",
+        "foreground": "#006b5f",
+        "background": "#ffffff",
+        "ratio": 6.43,
+        "minimum": 4.5
+      },
+      {
+        "name": "coral on panel",
+        "foreground": "#b3261e",
+        "background": "#ffffff",
+        "ratio": 6.54,
+        "minimum": 4.5
+      },
+      {
+        "name": "gold on panel",
+        "foreground": "#8c5000",
+        "background": "#ffffff",
+        "ratio": 6.44,
+        "minimum": 4.5
+      },
+      {
+        "name": "violet on panel",
+        "foreground": "#6750a4",
+        "background": "#ffffff",
+        "ratio": 6.44,
+        "minimum": 4.5
+      },
+      {
+        "name": "white on blue",
+        "foreground": "#ffffff",
+        "background": "#0b57d0",
+        "ratio": 6.39,
+        "minimum": 4.5
+      },
+      {
+        "name": "white on side panel",
+        "foreground": "#ffffff",
+        "background": "#19232f",
+        "ratio": 15.88,
+        "minimum": 4.5
+      },
+      {
+        "name": "brand dark on green",
+        "foreground": "#102017",
+        "background": "#7fb685",
+        "ratio": 7.2,
+        "minimum": 4.5
+      },
+      {
+        "name": "material on primary",
+        "foreground": "#ffffff",
+        "background": "#0b57d0",
+        "ratio": 6.39,
+        "minimum": 4.5
+      },
+      {
+        "name": "material on primary container",
+        "foreground": "#041e49",
+        "background": "#d3e3fd",
+        "ratio": 12.57,
+        "minimum": 4.5
+      },
+      {
+        "name": "material on secondary",
+        "foreground": "#ffffff",
+        "background": "#006b5f",
+        "ratio": 6.43,
+        "minimum": 4.5
+      },
+      {
+        "name": "material on secondary container",
+        "foreground": "#00201c",
+        "background": "#cce8e0",
+        "ratio": 13.23,
+        "minimum": 4.5
+      },
+      {
+        "name": "material on tertiary",
+        "foreground": "#ffffff",
+        "background": "#8c5000",
+        "ratio": 6.44,
+        "minimum": 4.5
+      },
+      {
+        "name": "material on error",
+        "foreground": "#ffffff",
+        "background": "#b3261e",
+        "ratio": 6.54,
+        "minimum": 4.5
+      },
+      {
+        "name": "material on surface",
+        "foreground": "#1f1f1f",
+        "background": "#ffffff",
+        "ratio": 16.48,
+        "minimum": 4.5
+      },
+      {
+        "name": "material on surface variant",
+        "foreground": "#444746",
+        "background": "#ffffff",
+        "ratio": 9.39,
+        "minimum": 4.5
+      }
+    ],
+    "skipLinkWorks": true,
+    "keyboardReachability": {
+      "focusSequence": [
+        "quick-add-input",
+        "Add",
+        "Today",
+        "Upcoming",
+        "Inbox",
+        "Mark done Choose the one outcome that makes today a win",
+        "Focus",
+        "Mark done Draft the weekly investor update",
+        "Focus",
+        "Check",
+        "Check",
+        "Check",
+        "BODY",
+        "Skip to main content",
+        "Today",
+        "Plan",
+        "Habits",
+        "Focus"
+      ],
+      "reachesPrimaryNav": true,
+      "reachesQuickAddInput": true,
+      "reachesAddButton": true
+    },
+    "ariaPressedUpdates": true,
+    "touchTargetMinimum": true,
+    "stateButtonsExposePressedState": true
+  },
+  "failures": []
+}

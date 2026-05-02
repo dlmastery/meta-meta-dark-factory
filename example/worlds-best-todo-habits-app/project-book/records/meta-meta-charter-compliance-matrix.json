@@ -1,0 +1,93 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+  },
+  "template_only": false,
+  "matrix_id": "MMCM-NORTHSTAR-20260426-001",
+  "run_id": "DFRUN-NORTHSTAR-20260425-001",
+  "bead_id": "TB-20260426-104",
+  "charters_audited": [
+    "dark-factory-meta-skills-design/45-meta-meta-product-tailored-skill-compiler.md",
+    "dark-factory-meta-skills-design/46-hawkeye-conformance-auditor.md",
+    "C:/Users/abhir/.codex/skills/df-meta-attractor/SKILL.md",
+    "C:/Users/abhir/.codex/skills/dark-factory-orchestrator/SKILL.md",
+    "C:/Users/abhir/.codex/skills/df-governance-mayor/SKILL.md",
+    "C:/Users/abhir/.codex/skills/df-quality-refinery/SKILL.md",
+    "C:/Users/abhir/.codex/skills/df-traceability-evidence/SKILL.md"
+  ],
+  "checks": [
+    {
+      "id": "MM-001",
+      "requirement": "Raw intent must be separated from the example app so the factory does not overfit to todo/habits.",
+      "evidence": "project-book/records/product-tailoring-profile.json",
+      "decision": "pass"
+    },
+    {
+      "id": "MM-002",
+      "requirement": "Meta-meta compiler must produce a product-tailored generated meta-skill contract.",
+      "evidence": "project-book/records/generated-meta-skill-contract.json",
+      "decision": "pass"
+    },
+    {
+      "id": "MM-003",
+      "requirement": "Generated meta-skill must name surfaces, lifecycle mode, artifacts, tests, runtime gates, refusal rules, and human boundaries.",
+      "evidence": "project-book/records/generated-meta-skill-contract.json",
+      "decision": "pass"
+    },
+    {
+      "id": "MM-004",
+      "requirement": "Dark-factory instantiation must create TASKS, TPM flow, PERT, knowledge graph, SDLC matrix, Hawkeye, and execution kernel records.",
+      "evidence": "project-book/records/dark-factory-instantiation-record.json",
+      "decision": "pass"
+    },
+    {
+      "id": "MM-005",
+      "requirement": "Code-producing work must not pass as documents only.",
+      "evidence": "app/index.html, app/styles.css, app/app.js, tests/core.test.cjs, tests/browser-wysiwyg.test.cjs",
+      "decision": "pass"
+    },
+    {
+      "id": "MM-006",
+      "requirement": "UI work must have browser/WYSIWYG evidence.",
+      "evidence": "project-book/evidence/browser-wysiwyg-results.json, project-book/evidence/wysiwyg-desktop.png, project-book/evidence/wysiwyg-mobile.png",
+      "decision": "pass"
+    },
+    {
+      "id": "MM-007",
+      "requirement": "Scenario-driven work must have scenario, holdout, and transfer evidence.",
+      "evidence": "project-book/evidence/scenario-test-results.json",
+      "decision": "pass"
+    },
+    {
+      "id": "MM-008",
+      "requirement": "Production gates are required only when production_surface is true; N/A decisions need rationale.",
+      "evidence": "project-book/records/sdlc-stage-coverage-matrix.json",
+      "decision": "pass"
+    },
+    {
+      "id": "MM-009",
+      "requirement": "No material continuation after closure may occur without a new bead or change request.",
+      "evidence": "project-book/records/TASKS.md and TB-20260426-104",
+      "decision": "pass"
+    },
+    {
+      "id": "MM-010",
+      "requirement": "Execution kernel must compute closed state after accepted work.",
+      "evidence": "project-book/evidence/execution-kernel-report.json",
+      "decision": "pass"
+    },
+    {
+      "id": "MM-011",
+      "requirement": "Hawkeye must audit every stage/process and hold veto power.",
+      "evidence": "project-book/records/hawkeye-conformance-audit-record.json",
+      "decision": "pass"
+    },
+    {
+      "id": "MM-012",
+      "requirement": "Claims must not use templates as proof.",
+      "evidence": "All controlling records set template_only false and validators reject template-only records.",
+      "decision": "pass"
+    }
+  ],
+  "overall_decision": "pass"
+}

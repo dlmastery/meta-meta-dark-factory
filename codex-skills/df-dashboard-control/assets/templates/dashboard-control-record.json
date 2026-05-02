@@ -1,0 +1,19 @@
+{
+  "zero_slop_policy": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+  "template_marker": "TEMPLATE_ONLY_NOT_EVIDENCE",
+  "record_id": "DASH-CTRL-<project>-<yyyymmdd>",
+  "project": "<project name>",
+  "dashboard_index": "<artifact-dashboard-index.json>",
+  "dashboard_html": "<dashboard.html>",
+  "project_book_root": "<path>",
+  "artifact_count": 0,
+  "edge_count": 0,
+  "explicit_edge_count": 0,
+  "inferred_edge_count": 0,
+  "last_refresh": "<ISO-8601 timestamp>",
+  "owner": "<owner>",
+  "next_action": "<next safe action>",
+  "quality_gate": "<gate id>",
+  "hawkeye_state": "<pass|blocked|not_run>",
+  "notes": []
+}

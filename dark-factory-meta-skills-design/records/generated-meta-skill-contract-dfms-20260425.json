@@ -1,0 +1,134 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+    "strict_compliance": "Mandatory. Every claim must be project-specific, evidence-backed, trace-linked, reviewer-challenged, and free of unsupported invention.",
+    "missing_evidence_rule": "If evidence is missing, mark it as an assumption, risk, open question, or failure."
+  },
+  "template_only": false,
+  "contract_id": "GENERATED-META-SKILL-DFMS-20260425",
+  "run_id": "RUN-DFMS-META-META-COMPILER-20260425",
+  "generated_skill": {
+    "name": "product-tailored-dark-factory-meta-skill",
+    "purpose": "Generate and run a product-specific dark-factory workflow with tailored SDLC stages, artifacts, tests, ledgers, graph, gates, and judge/jury controls.",
+    "trigger_conditions": [
+      "new product request",
+      "brownfield product change",
+      "artifact-to-implementation transition",
+      "project asks for rigorous SDLC/dark-factory execution"
+    ],
+    "refusal_rules": [
+      "refuse generic process without product tailoring",
+      "refuse product completion without required implementation/test evidence",
+      "refuse UI completion without browser/WYSIWYG evidence",
+      "refuse scenario-driven completion without scenario/holdout/transfer evidence",
+      "refuse production completion without release/rollback/observability/runbook/drill evidence",
+      "refuse any transition not allowed by TASKS.md, TPM flow, PERT, KG, execution kernel, and judge/jury gate"
+    ],
+    "product_tailoring_profile": "PRODUCT-TAILORING-DFMS-META-SKILL-20260425",
+    "required_child_skills": [
+      "df-meta-attractor",
+      "dark-factory-orchestrator",
+      "df-governance-mayor",
+      "df-intake-spec-lab",
+      "df-methodology-blender",
+      "df-artifact-factory",
+      "df-quality-refinery",
+      "df-traceability-evidence",
+      "df-context-memory",
+      "df-swarm-coordination",
+      "df-production-sre-handoff",
+      "df-feedback-learning"
+    ]
+  },
+  "compile_time_outputs": {
+    "product_tailoring_profile": "records/product-tailoring-profile-dfms-meta-skill-20260425.json",
+    "methodology_blend_record": "df-methodology-blender output required per generated project",
+    "sdlc_stage_coverage_matrix": "records/sdlc-stage-coverage-dfms-meta-skill-20260425.json",
+    "artifact_bom_tailoring": "artifact-bom/artifact-bom-with-15-rubrics.json plus product tailoring subset",
+    "testing_strategy": "templates/scenario-test-matrix.json plus product surface gates",
+    "tasks_md": "TASKS.md",
+    "tpm_flow_ledger": "records/tpm-flow-ledger-dfms-tpm-flow-20260425.json",
+    "pert_plan": "records/factory-pert-plan-dfms-tpm-flow-20260425.json",
+    "knowledge_graph": "records/knowledge-graph-tpm-flow-enforcement-20260425.json",
+    "execution_kernel_report": "records/next-action-report-with-sdlc-coverage-20260425.json",
+    "ai_judge_jury_policy": "records/ai-judge-jury-tpm-flow-enforcement-20260425.json"
+  },
+  "runtime_gates": {
+    "tasks_md_validator": true,
+    "tpm_flow_validator": true,
+    "knowledge_graph_validator": true,
+    "sdlc_stage_coverage_validator": true,
+    "execution_kernel": true,
+    "quality_refinery": true,
+    "traceability": true
+  },
+  "surface_gate_mapping": {
+    "code_producing": {
+      "required": true,
+      "gates": [
+        "implementation execution record",
+        "code change evidence",
+        "build evidence",
+        "test execution evidence",
+        "review evidence"
+      ]
+    },
+    "ui_surface": {
+      "required": false,
+      "gates": [
+        "browser/Playwright/WYSIWYG evidence required when UI surface is true"
+      ]
+    },
+    "api_surface": {
+      "required": false,
+      "gates": [
+        "contract/API tests required when API surface is true"
+      ]
+    },
+    "data_surface": {
+      "required": false,
+      "gates": [
+        "schema, migration, validation, privacy, and rollback gates required when data surface is true"
+      ]
+    },
+    "production_surface": {
+      "required": false,
+      "gates": [
+        "rollback, observability, runbook, incident path, and outage drill required when production surface is true"
+      ]
+    },
+    "scenario_driven": {
+      "required": true,
+      "gates": [
+        "scenario test matrix",
+        "negative and edge cases",
+        "holdout evidence",
+        "transfer evidence"
+      ]
+    },
+    "brownfield": {
+      "required": true,
+      "gates": [
+        "brownfield recon",
+        "impact analysis",
+        "regression evidence",
+        "handoff replay"
+      ]
+    }
+  },
+  "expert_panel": {
+    "meta_meta_compiler_critic": "Elite systems/compiler critic responsible for ensuring meta-meta output compiles into a real generated meta-skill rather than prose.",
+    "product_sdlc_tailoring_critic": "Elite SDLC tailoring critic responsible for product-specific lifecycle, artifact, methodology, and risk fit.",
+    "testing_and_release_assurance_critic": "Elite verification/release critic responsible for code, scenario, browser, performance, release, and production evidence gates.",
+    "adversarial_generic_process_critic": "Adversarial critic responsible for attacking generic process, document-only completion, skipped stages, and fake proof."
+  },
+  "acceptance": {
+    "compile_time_pass": true,
+    "runtime_instantiation_pass": true,
+    "residual_risks": [
+      "Future real product runs must instantiate their own product profile, stage matrix, artifacts, code evidence, tests, browser evidence, and production evidence."
+    ],
+    "certificate": "CERT-META-META-COMPILER-20260425"
+  },
+  "template_marker": false
+}

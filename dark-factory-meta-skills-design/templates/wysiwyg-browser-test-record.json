@@ -1,0 +1,92 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+    "strict_compliance": "Mandatory. Every claim must be project-specific, evidence-backed, trace-linked, reviewer-challenged, and free of unsupported invention.",
+    "missing_evidence_rule": "If evidence is missing, mark it as an assumption, risk, open question, or failure."
+  },
+  "template_only": true,
+  "browser_test_record_id": "BROWSER-WYSIWYG-000",
+  "run_id": "",
+  "ui_surface": "",
+  "tool": "Playwright | browser-use | Cypress | manual-browser-procedure | other",
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900,
+      "status": "planned | passed | failed | waived",
+      "screenshots": [],
+      "findings": []
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "status": "planned | passed | failed | waived",
+      "screenshots": [],
+      "findings": []
+    }
+  ],
+  "interaction_checks": {
+    "click": {
+      "required": false,
+      "evidence": []
+    },
+    "type": {
+      "required": false,
+      "evidence": []
+    },
+    "drag_drop": {
+      "required": false,
+      "evidence": []
+    },
+    "keyboard_focus": {
+      "required": false,
+      "evidence": []
+    },
+    "navigation": {
+      "required": false,
+      "evidence": []
+    },
+    "submit_or_save": {
+      "required": false,
+      "evidence": []
+    }
+  },
+  "visual_checks": {
+    "non_overlap": {
+      "required": true,
+      "evidence": []
+    },
+    "text_fit": {
+      "required": true,
+      "evidence": []
+    },
+    "responsive_layout": {
+      "required": true,
+      "evidence": []
+    },
+    "nonblank_canvas_or_media": {
+      "required": false,
+      "evidence": []
+    },
+    "console_errors": {
+      "required": true,
+      "evidence": []
+    },
+    "network_errors": {
+      "required": false,
+      "evidence": []
+    },
+    "accessibility": {
+      "required": false,
+      "evidence": []
+    },
+    "visual_regression": {
+      "required": false,
+      "evidence": []
+    }
+  },
+  "status": "planned | passed | failed | deferred | waived",
+  "template_marker": true
+}

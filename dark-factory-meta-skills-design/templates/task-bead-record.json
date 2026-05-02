@@ -1,0 +1,89 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+    "strict_compliance": "Mandatory. Every claim must be project-specific, evidence-backed, trace-linked, reviewer-challenged, and free of unsupported invention.",
+    "missing_evidence_rule": "If evidence is missing, mark it as an assumption, risk, open question, or failure."
+  },
+  "template_only": true,
+  "bead_id": "TB-00000000-001",
+  "title": "",
+  "state": "queued",
+  "objective": "",
+  "scope_boundary": "",
+  "owners": {
+    "accountable": "",
+    "active": "",
+    "reviewers": []
+  },
+  "source": {
+    "intent_ids": [],
+    "requirement_ids": [],
+    "interrogation_answer_ids": [],
+    "decision_ids": [],
+    "risk_ids": []
+  },
+  "graph_links": {
+    "knowledge_graph_node": "",
+    "control_graph_node": "",
+    "work_ledger_item": "",
+    "trace_records": [],
+    "parent_bead": "",
+    "child_beads": [],
+    "previous_bead": "",
+    "next_bead": ""
+  },
+  "inputs": [],
+  "outputs": [],
+  "token_budget": {
+    "swag_low": "",
+    "swag_mid": "",
+    "swag_high": "",
+    "approval_state": "pending",
+    "approval_reference": "",
+    "reapproval_triggers": []
+  },
+  "dependencies": [],
+  "blockers": [],
+  "acceptance_gate": {
+    "gate_id": "",
+    "rubrics": [],
+    "validators": [],
+    "human_approvals": [],
+    "exit_criteria": []
+  },
+  "evidence": {
+    "required": [],
+    "provided": [],
+    "missing": []
+  },
+  "artifact_specialization": {
+    "artifact_bom_id": "",
+    "template_path": "",
+    "example_path": "",
+    "rubric_path": "",
+    "primary_critic_roles": [],
+    "adversarial_critic_roles": [],
+    "minimum_ralph_loops": 5,
+    "ralph_loop_records": [],
+    "refinery_gate": "",
+    "certificate": ""
+  },
+  "change_control": {
+    "is_change_request": false,
+    "change_request_id": "",
+    "approval_required": false,
+    "approval_state": "not_required"
+  },
+  "residual_risk": [],
+  "reentry_trigger": "",
+  "history": [
+    {
+      "at": "",
+      "actor": "",
+      "from_state": "",
+      "to_state": "",
+      "reason": "",
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+  },
+  "template_only": false,
+  "record_id": "AJJ-NORTHSTAR-20260425-001",
+  "step_id": "STEP-NORTHSTAR-001",
+  "transition": "accepted_to_closed",
+  "roles": {
+    "tpm_judge": {
+      "persona_contract": "Legendary TPM judge accountable for dependency order, bead state, next action legality, checkpoint evidence, and closure discipline.",
+      "vote": "pass",
+      "rationale": "Single accepted step has no unmet predecessors and has closure path to RUN-CLOSED."
+    },
+    "evidence_clerk": {
+      "persona_contract": "Evidence clerk accountable for rejecting template-as-proof, stale files, missing test outputs, and unsupported claims.",
+      "vote": "pass",
+      "rationale": "Implementation, project book, tests, and conformance records are linked."
+    },
+    "standards_juror": {
+      "persona_contract": "Standards juror accountable for ISO-style lifecycle artifacts, traceability, stage tailoring, and waivers.",
+      "vote": "pass",
+      "rationale": "Lifecycle stages are represented in SDLC coverage and stage audits."
+    },
+    "domain_artifact_juror": {
+      "persona_contract": "Productivity-app domain juror accountable for practical capture, planning, habit, focus, and review workflows.",
+      "vote": "pass",
+      "rationale": "Research-backed requirements are implemented in the static app slice."
+    },
+    "verification_juror": {
+      "persona_contract": "Verification juror accountable for unit, scenario, browser, responsive, and residual-risk evidence.",
+      "vote": "pass",
+      "rationale": "Core and browser test scripts exist and are part of the required exit evidence."
+    },
+    "adversarial_prosecutor": {
+      "persona_contract": "Adversarial prosecutor accountable for attacking fake completion, skipped steps, generic claims, and reward hacking.",
+      "stand_down": true,
+      "rationale": "The slice includes app code, tests, research trace, project book, validators, and Hawkeye audit."
+    },
+    "jury_foreperson": {
+      "persona_contract": "Foreperson accountable for preserving dissent, final verdict, next action, and residual-risk disclosure.",
+      "verdict": "pass",
+      "rationale": "No P0/P1 workflow finding remains for this bounded slice."
+    }
+  },
+  "evidence_reviewed": [
+    "project-book/00-factory-run-summary.md",
+    "project-book/02-prd.md",
+    "app/app.js",
+    "tests/core.test.cjs",
+    "tests/browser-wysiwyg.test.cjs",
+    "project-book/records/sdlc-stage-coverage-matrix.json",
+    "project-book/records/hawkeye-conformance-audit-record.json"
+  ],
+  "dependency_check": {
+    "predecessors_accepted_or_waived": true,
+    "pert_next_step_valid": true,
+    "current_bead_matches": true
+  },
+  "verdict": {
+    "outcome": "pass",
+    "next_action": "RUN-CLOSED unless a new change request is opened"
+  }
+}

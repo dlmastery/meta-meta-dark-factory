@@ -1,0 +1,2715 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/elb4q6",
+    "id": "elb4q6",
+    "slide": 35,
+    "layoutId": "39df3ad4-e207-4cff-a7b3-0934322c7183",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "9c364795-fe59-472e-ba8a-a667cb58489e",
+    "masterLayoutName": "Master",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "39df3ad4-e207-4cff-a7b3-0934322c7183",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "9c364795-fe59-472e-ba8a-a667cb58489e",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "9c364795-fe59-472e-ba8a-a667cb58489e",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/itgfmlkj",
+      "id": "1",
+      "name": "background",
+      "bbox": [
+        0,
+        0,
+        1920,
+        1080
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#09100F",
+      "lineColor": "#09100F",
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/pkzupwb2",
+      "id": "2",
+      "name": "ask-eyebrow",
+      "bbox": [
+        88,
+        64,
+        1744,
+        22
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.0.0"
+      },
+      "geometry": "rect",
+      "text": "PILOT ASK",
+      "textPreview": "PILOT ASK",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "fontSize": 21,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "PILOT ASK"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "PILOT ASK",
+          "runs": [
+            {
+              "index": 1,
+              "text": "PILOT ASK",
+              "fontSize": 21,
+              "color": "#9AF2C8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0z61032l",
+      "id": "3",
+      "name": "ask-title",
+      "bbox": [
+        88,
+        98,
+        1318,
+        88
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.0.1"
+      },
+      "geometry": "rect",
+      "text": "Prove the product on one greenfield project and one brownfield change.",
+      "textPreview": "Prove the product on one greenfield project and one brownfield change.",
+      "resolvedFontSize": 44,
+      "resolvedTextStyle": {
+        "fontSize": 44,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Prove the product on one greenfield project and one brownfield"
+          },
+          {
+            "index": 2,
+            "text": "change."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Prove the product on one greenfield project and one brownfield change.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Prove the product on one greenfield project and one brownfield change.",
+              "fontSize": 44,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/72x4nap4",
+      "id": "4",
+      "name": "ask-subtitle",
+      "bbox": [
+        88,
+        200,
+        1282,
+        52
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.0.2"
+      },
+      "geometry": "rect",
+      "text": "The pilot should test confidence transfer: can the client trust the factory's evidence enough to approve the next iteration?",
+      "textPreview": "The pilot should test confidence transfer: can the client trust the factory's evidence enough to approve the next iteration?",
+      "resolvedFontSize": 26,
+      "resolvedTextStyle": {
+        "fontSize": 26,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "The pilot should test confidence transfer: can the client trust the factory's evidence enough to approve the next iteration?"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "The pilot should test confidence transfer: can the client trust the factory's evidence enough to approve the next iteration?",
+          "runs": [
+            {
+              "index": 1,
+              "text": "The pilot should test confidence transfer: can the client trust the factory's evidence enough to approve the next iteration?",
+              "fontSize": 26,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ih4byhgn",
+      "id": "5",
+      "name": "dot-greenfield-pilot",
+      "bbox": [
+        88,
+        512,
+        13,
+        56
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.0.0"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#2DD4BF",
+      "lineColor": "#2DD4BF",
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/p8nqxs72",
+      "id": "6",
+      "name": "statement-title-greenfield-pilot",
+      "bbox": [
+        124,
+        512,
+        824,
+        30
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.0.1.0"
+      },
+      "geometry": "rect",
+      "text": "Greenfield pilot",
+      "textPreview": "Greenfield pilot",
+      "resolvedFontSize": 29,
+      "resolvedTextStyle": {
+        "fontSize": 29,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Greenfield pilot"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Greenfield pilot",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Greenfield pilot",
+              "fontSize": 29,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0nuxc3yl",
+      "id": "7",
+      "name": "statement-body-greenfield-pilot",
+      "bbox": [
+        124,
+        546,
+        702,
+        22
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.0.1.1"
+      },
+      "geometry": "rect",
+      "text": "Run from interrogation to PRD, architecture, build plan, evidence, and handoff.",
+      "textPreview": "Run from interrogation to PRD, architecture, build plan, evidence, and handoff.",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Run from interrogation to PRD, architecture, build plan, evidence, and handoff."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Run from interrogation to PRD, architecture, build plan, evidence, and handoff.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Run from interrogation to PRD, architecture, build plan, evidence, and handoff.",
+              "fontSize": 22,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7y1kre1w",
+      "id": "8",
+      "name": "dot-brownfield-pilot",
+      "bbox": [
+        88,
+        592,
+        13,
+        56
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.1.0"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#46D17E",
+      "lineColor": "#46D17E",
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ed8v6psf",
+      "id": "9",
+      "name": "statement-title-brownfield-pilot",
+      "bbox": [
+        124,
+        592,
+        824,
+        30
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.1.1.0"
+      },
+      "geometry": "rect",
+      "text": "Brownfield pilot",
+      "textPreview": "Brownfield pilot",
+      "resolvedFontSize": 29,
+      "resolvedTextStyle": {
+        "fontSize": 29,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Brownfield pilot"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Brownfield pilot",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Brownfield pilot",
+              "fontSize": 29,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8v6psfil",
+      "id": "10",
+      "name": "statement-body-brownfield-pilot",
+      "bbox": [
+        124,
+        626,
+        746,
+        22
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.1.1.1"
+      },
+      "geometry": "rect",
+      "text": "Run recon, impact analysis, change request, regression proof, and updated artifacts.",
+      "textPreview": "Run recon, impact analysis, change request, regression proof, and updated artifacts.",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Run recon, impact analysis, change request, regression proof, and updated"
+          },
+          {
+            "index": 2,
+            "text": "artifacts."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Run recon, impact analysis, change request, regression proof, and updated artifacts.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Run recon, impact analysis, change request, regression proof, and updated artifacts.",
+              "fontSize": 22,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/xczed8v6",
+      "id": "11",
+      "name": "dot-success-gate",
+      "bbox": [
+        88,
+        672,
+        13,
+        56
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.2.0"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#F2B84B",
+      "lineColor": "#F2B84B",
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qpg3ex0n",
+      "id": "12",
+      "name": "statement-title-success-gate",
+      "bbox": [
+        124,
+        672,
+        824,
+        30
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.2.1.0"
+      },
+      "geometry": "rect",
+      "text": "Success gate",
+      "textPreview": "Success gate",
+      "resolvedFontSize": 29,
+      "resolvedTextStyle": {
+        "fontSize": 29,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Success gate"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Success gate",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Success gate",
+              "fontSize": 29,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fa9w3m94",
+      "id": "13",
+      "name": "statement-body-success-gate",
+      "bbox": [
+        124,
+        706,
+        692,
+        22
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.2.1.1"
+      },
+      "geometry": "rect",
+      "text": "Client can approve or reject the next iteration using evidence, not trust alone.",
+      "textPreview": "Client can approve or reject the next iteration using evidence, not trust alone.",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Client can approve or reject the next iteration using evidence, not trust alone."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Client can approve or reject the next iteration using evidence, not trust alone.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Client can approve or reject the next iteration using evidence, not trust alone.",
+              "fontSize": 22,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8jqh0fep",
+      "id": "14",
+      "name": "ask-token-record",
+      "bbox": [
+        1005.86,
+        482,
+        826.14,
+        276
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#162520",
+      "lineColor": "#29443B",
+      "lineWidth": 1
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/x4nap4r6",
+      "id": "15",
+      "name": "ask-token-title",
+      "bbox": [
+        1040,
+        514,
+        758,
+        34
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.0.0"
+      },
+      "geometry": "rect",
+      "text": "Pilot budget contract",
+      "textPreview": "Pilot budget contract",
+      "resolvedFontSize": 34,
+      "resolvedTextStyle": {
+        "fontSize": 34,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Pilot budget contract"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Pilot budget contract",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Pilot budget contract",
+              "fontSize": 34,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qd4vmtwr",
+      "id": "16",
+      "name": "ask-token-1",
+      "bbox": [
+        1040,
+        568,
+        758,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.0.1"
+      },
+      "geometry": "rect",
+      "text": "Rough token SWAG: low / mid / high",
+      "textPreview": "Rough token SWAG: low / mid / high",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Rough token SWAG: low / mid / high"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Rough token SWAG: low / mid / high",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Rough token SWAG: low / mid / high",
+              "fontSize": 24,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fyxobm58",
+      "id": "17",
+      "name": "ask-token-2",
+      "bbox": [
+        1040,
+        612,
+        758,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.0.2"
+      },
+      "geometry": "rect",
+      "text": "Approved iteration objective and acceptance criteria",
+      "textPreview": "Approved iteration objective and acceptance criteria",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Approved iteration objective and acceptance criteria"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Approved iteration objective and acceptance criteria",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Approved iteration objective and acceptance criteria",
+              "fontSize": 24,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/87ed8bat",
+      "id": "18",
+      "name": "ask-token-3",
+      "bbox": [
+        1040,
+        656,
+        758,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.0.3"
+      },
+      "geometry": "rect",
+      "text": "Change-control trigger for scope, tokens, schedule, quality, or risk",
+      "textPreview": "Change-control trigger for scope, tokens, schedule, quality, or risk",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Change-control trigger for scope, tokens, schedule, quality, or risk"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Change-control trigger for scope, tokens, schedule, quality, or risk",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Change-control trigger for scope, tokens, schedule, quality, or risk",
+              "fontSize": 24,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/xs72x4na",
+      "id": "19",
+      "name": "ask-token-4",
+      "bbox": [
+        1040,
+        700,
+        758,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.0.4"
+      },
+      "geometry": "rect",
+      "text": "Output: project book, evidence ledger, quality certificate, handoff package",
+      "textPreview": "Output: project book, evidence ledger, quality certificate, handoff package",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Output: project book, evidence ledger, quality certificate, handoff package"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Output: project book, evidence ledger, quality certificate, handoff package",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Output: project book, evidence ledger, quality certificate, handoff package",
+              "fontSize": 24,
+              "color": "#9AF2C8"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/lwval87e",
+      "id": "20",
+      "name": "ask-footer",
+      "bbox": [
+        88,
+        990,
+        268,
+        28
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.2.0"
+      },
+      "geometry": "rect",
+      "text": "DFMS pitch deck | software assurance dark factory",
+      "textPreview": "DFMS pitch deck | software assurance dark factory",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "DFMS pitch deck | software assurance dark factory"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "DFMS pitch deck | software assurance dark factory",
+          "runs": [
+            {
+              "index": 1,
+              "text": "DFMS pitch deck | software assurance dark factory",
+              "fontSize": 13,
+              "color": "#6E7C74"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wb2hwfyx",
+      "id": "21",
+      "name": "ask-page",
+      "bbox": [
+        1792,
+        998,
+        40,
+        12
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.2.1"
+      },
+      "geometry": "rect",
+      "text": "35",
+      "textPreview": "35",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "35"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "35",
+          "runs": [
+            {
+              "index": 1,
+              "text": "35",
+              "fontSize": 13,
+              "color": "#6E7C74",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "composeRuns": [
+    {
+      "index": 1,
+      "frame": {
+        "left": 0,
+        "top": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "baseUnit": 8,
+      "root": {
+        "path": "0",
+        "kind": "layers",
+        "name": "ask-root",
+        "requestedSize": {
+          "width": {
+            "mode": "fill",
+            "value": 1
+          },
+          "height": {
+            "mode": "fill",
+            "value": 1
+          }
+        },
+        "intrinsicSize": {
+          "width": 0,
+          "height": 0
+        },
+        "frame": {
+          "left": 0,
+          "top": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "children": [
+          {
+            "path": "0.0",
+            "kind": "shape",
+            "name": "background",
+            "requestedSize": {
+              "width": {
+                "mode": "fill",
+                "value": 1
+              },
+              "height": {
+                "mode": "fill",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 0,
+              "height": 0
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "snappedFrame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/itgfmlkj",
+              "id": "1",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.1",
+            "kind": "column",
+            "name": "ask-content",
+            "requestedSize": {
+              "width": {
+                "mode": "fill",
+                "value": 1
+              },
+              "height": {
+                "mode": "fill",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 176,
+              "height": 326
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "children": [
+              {
+                "path": "0.1.0",
+                "kind": "column",
+                "name": "ask-title-stack",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "hug"
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 1318.53,
+                  "height": 117
+                },
+                "frame": {
+                  "left": 88,
+                  "top": 64,
+                  "width": 1744,
+                  "height": 187
+                },
+                "children": [
+                  {
+                    "path": "0.1.0.0",
+                    "kind": "text",
+                    "name": "ask-eyebrow",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 21
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 64,
+                      "width": 1744,
+                      "height": 21
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 64,
+                      "width": 1744,
+                      "height": 22
+                    },
+                    "children": [],
+                    "text": "PILOT ASK",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/pkzupwb2",
+                      "id": "2",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.0.1",
+                    "kind": "text",
+                    "name": "ask-title",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "wrap",
+                        "max": 1500
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 1318.53,
+                      "height": 44
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 98,
+                      "width": 1318.53,
+                      "height": 88
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 98,
+                      "width": 1318,
+                      "height": 88
+                    },
+                    "children": [],
+                    "text": "Prove the product on one greenfield project and one brownfield change.",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/0z61032l",
+                      "id": "3",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.0.2",
+                    "kind": "text",
+                    "name": "ask-subtitle",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "wrap",
+                        "max": 1330
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 1281.62,
+                      "height": 26
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 199,
+                      "width": 1281.62,
+                      "height": 52
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 200,
+                      "width": 1282,
+                      "height": 52
+                    },
+                    "children": [],
+                    "text": "The pilot should test confidence transfer: can the client trust the factory's evidence enough to approve the next iteration?",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/72x4nap4",
+                      "id": "4",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "gap": 13,
+                "effectiveGap": 13,
+                "justifyOffset": 0,
+                "align": "start",
+                "justify": "start",
+                "contentFrame": {
+                  "left": 88,
+                  "top": 64,
+                  "width": 1744,
+                  "height": 187
+                },
+                "items": [
+                  {
+                    "path": "0.1.0.0",
+                    "frame": {
+                      "left": 88,
+                      "top": 64,
+                      "width": 1744,
+                      "height": 21
+                    }
+                  },
+                  {
+                    "path": "0.1.0.1",
+                    "frame": {
+                      "left": 88,
+                      "top": 98,
+                      "width": 1318.53,
+                      "height": 88
+                    }
+                  },
+                  {
+                    "path": "0.1.0.2",
+                    "frame": {
+                      "left": 88,
+                      "top": 199,
+                      "width": 1281.62,
+                      "height": 52
+                    }
+                  }
+                ]
+              },
+              {
+                "path": "0.1.1",
+                "kind": "grid",
+                "name": "ask-grid",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "fill",
+                    "value": 1
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 58,
+                  "height": 274
+                },
+                "frame": {
+                  "left": 88,
+                  "top": 285,
+                  "width": 1744,
+                  "height": 671
+                },
+                "children": [
+                  {
+                    "path": "0.1.1.0",
+                    "kind": "column",
+                    "name": "ask-left",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 216
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 512,
+                      "width": 859.86,
+                      "height": 216
+                    },
+                    "children": [
+                      {
+                        "path": "0.1.1.0.0",
+                        "kind": "row",
+                        "name": "statement-greenfield-pilot",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 35,
+                          "height": 56
+                        },
+                        "frame": {
+                          "left": 88,
+                          "top": 512,
+                          "width": 859.86,
+                          "height": 56
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.0.0.0",
+                            "kind": "shape",
+                            "name": "dot-greenfield-pilot",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fixed",
+                                "value": 13
+                              },
+                              "height": {
+                                "mode": "fixed",
+                                "value": 56
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 13,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 88,
+                              "top": 512,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "snappedFrame": {
+                              "left": 88,
+                              "top": 512,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "children": [],
+                            "geometry": "rect",
+                            "element": {
+                              "aid": "sh/ih4byhgn",
+                              "id": "5",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.0.0.1",
+                            "kind": "column",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 701.18,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 123,
+                              "top": 512,
+                              "width": 824.86,
+                              "height": 56
+                            },
+                            "children": [
+                              {
+                                "path": "0.1.1.0.0.1.0",
+                                "kind": "text",
+                                "name": "statement-title-greenfield-pilot",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 29
+                                },
+                                "frame": {
+                                  "left": 123,
+                                  "top": 512,
+                                  "width": 824.86,
+                                  "height": 29
+                                },
+                                "snappedFrame": {
+                                  "left": 124,
+                                  "top": 512,
+                                  "width": 824,
+                                  "height": 30
+                                },
+                                "children": [],
+                                "text": "Greenfield pilot",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/p8nqxs72",
+                                  "id": "6",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.1.1.0.0.1.1",
+                                "kind": "text",
+                                "name": "statement-body-greenfield-pilot",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "wrap",
+                                    "max": 1030
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 701.18,
+                                  "height": 22
+                                },
+                                "frame": {
+                                  "left": 123,
+                                  "top": 546,
+                                  "width": 701.18,
+                                  "height": 22
+                                },
+                                "snappedFrame": {
+                                  "left": 124,
+                                  "top": 546,
+                                  "width": 702,
+                                  "height": 22
+                                },
+                                "children": [],
+                                "text": "Run from interrogation to PRD, architecture, build plan, evidence, and handoff.",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/0nuxc3yl",
+                                  "id": "7",
+                                  "kind": "shape"
+                                }
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 5,
+                            "effectiveGap": 5,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 123,
+                              "top": 512,
+                              "width": 824.86,
+                              "height": 56
+                            },
+                            "items": [
+                              {
+                                "path": "0.1.1.0.0.1.0",
+                                "frame": {
+                                  "left": 123,
+                                  "top": 512,
+                                  "width": 824.86,
+                                  "height": 29
+                                }
+                              },
+                              {
+                                "path": "0.1.1.0.0.1.1",
+                                "frame": {
+                                  "left": 123,
+                                  "top": 546,
+                                  "width": 701.18,
+                                  "height": 22
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 22,
+                        "effectiveGap": 22,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 88,
+                          "top": 512,
+                          "width": 859.86,
+                          "height": 56
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.0.0.0",
+                            "frame": {
+                              "left": 88,
+                              "top": 512,
+                              "width": 13,
+                              "height": 56
+                            }
+                          },
+                          {
+                            "path": "0.1.1.0.0.1",
+                            "frame": {
+                              "left": 123,
+                              "top": 512,
+                              "width": 824.86,
+                              "height": 56
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "path": "0.1.1.0.1",
+                        "kind": "row",
+                        "name": "statement-brownfield-pilot",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 35,
+                          "height": 56
+                        },
+                        "frame": {
+                          "left": 88,
+                          "top": 592,
+                          "width": 859.86,
+                          "height": 56
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.0.1.0",
+                            "kind": "shape",
+                            "name": "dot-brownfield-pilot",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fixed",
+                                "value": 13
+                              },
+                              "height": {
+                                "mode": "fixed",
+                                "value": 56
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 13,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 88,
+                              "top": 592,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "snappedFrame": {
+                              "left": 88,
+                              "top": 592,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "children": [],
+                            "geometry": "rect",
+                            "element": {
+                              "aid": "sh/7y1kre1w",
+                              "id": "8",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.0.1.1",
+                            "kind": "column",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 746.87,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 123,
+                              "top": 592,
+                              "width": 824.86,
+                              "height": 56
+                            },
+                            "children": [
+                              {
+                                "path": "0.1.1.0.1.1.0",
+                                "kind": "text",
+                                "name": "statement-title-brownfield-pilot",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 29
+                                },
+                                "frame": {
+                                  "left": 123,
+                                  "top": 592,
+                                  "width": 824.86,
+                                  "height": 29
+                                },
+                                "snappedFrame": {
+                                  "left": 124,
+                                  "top": 592,
+                                  "width": 824,
+                                  "height": 30
+                                },
+                                "children": [],
+                                "text": "Brownfield pilot",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/ed8v6psf",
+                                  "id": "9",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.1.1.0.1.1.1",
+                                "kind": "text",
+                                "name": "statement-body-brownfield-pilot",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "wrap",
+                                    "max": 1030
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 746.87,
+                                  "height": 22
+                                },
+                                "frame": {
+                                  "left": 123,
+                                  "top": 626,
+                                  "width": 746.87,
+                                  "height": 22
+                                },
+                                "snappedFrame": {
+                                  "left": 124,
+                                  "top": 626,
+                                  "width": 746,
+                                  "height": 22
+                                },
+                                "children": [],
+                                "text": "Run recon, impact analysis, change request, regression proof, and updated artifacts.",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/8v6psfil",
+                                  "id": "10",
+                                  "kind": "shape"
+                                }
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 5,
+                            "effectiveGap": 5,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 123,
+                              "top": 592,
+                              "width": 824.86,
+                              "height": 56
+                            },
+                            "items": [
+                              {
+                                "path": "0.1.1.0.1.1.0",
+                                "frame": {
+                                  "left": 123,
+                                  "top": 592,
+                                  "width": 824.86,
+                                  "height": 29
+                                }
+                              },
+                              {
+                                "path": "0.1.1.0.1.1.1",
+                                "frame": {
+                                  "left": 123,
+                                  "top": 626,
+                                  "width": 746.87,
+                                  "height": 22
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 22,
+                        "effectiveGap": 22,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 88,
+                          "top": 592,
+                          "width": 859.86,
+                          "height": 56
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.0.1.0",
+                            "frame": {
+                              "left": 88,
+                              "top": 592,
+                              "width": 13,
+                              "height": 56
+                            }
+                          },
+                          {
+                            "path": "0.1.1.0.1.1",
+                            "frame": {
+                              "left": 123,
+                              "top": 592,
+                              "width": 824.86,
+                              "height": 56
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "path": "0.1.1.0.2",
+                        "kind": "row",
+                        "name": "statement-success-gate",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 35,
+                          "height": 56
+                        },
+                        "frame": {
+                          "left": 88,
+                          "top": 672,
+                          "width": 859.86,
+                          "height": 56
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.0.2.0",
+                            "kind": "shape",
+                            "name": "dot-success-gate",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fixed",
+                                "value": 13
+                              },
+                              "height": {
+                                "mode": "fixed",
+                                "value": 56
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 13,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 88,
+                              "top": 672,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "snappedFrame": {
+                              "left": 88,
+                              "top": 672,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "children": [],
+                            "geometry": "rect",
+                            "element": {
+                              "aid": "sh/xczed8v6",
+                              "id": "11",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.0.2.1",
+                            "kind": "column",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 691.91,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 123,
+                              "top": 672,
+                              "width": 824.86,
+                              "height": 56
+                            },
+                            "children": [
+                              {
+                                "path": "0.1.1.0.2.1.0",
+                                "kind": "text",
+                                "name": "statement-title-success-gate",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 29
+                                },
+                                "frame": {
+                                  "left": 123,
+                                  "top": 672,
+                                  "width": 824.86,
+                                  "height": 29
+                                },
+                                "snappedFrame": {
+                                  "left": 124,
+                                  "top": 672,
+                                  "width": 824,
+                                  "height": 30
+                                },
+                                "children": [],
+                                "text": "Success gate",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/qpg3ex0n",
+                                  "id": "12",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.1.1.0.2.1.1",
+                                "kind": "text",
+                                "name": "statement-body-success-gate",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "wrap",
+                                    "max": 1030
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 691.91,
+                                  "height": 22
+                                },
+                                "frame": {
+                                  "left": 123,
+                                  "top": 706,
+                                  "width": 691.91,
+                                  "height": 22
+                                },
+                                "snappedFrame": {
+                                  "left": 124,
+                                  "top": 706,
+                                  "width": 692,
+                                  "height": 22
+                                },
+                                "children": [],
+                                "text": "Client can approve or reject the next iteration using evidence, not trust alone.",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/fa9w3m94",
+                                  "id": "13",
+                                  "kind": "shape"
+                                }
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 5,
+                            "effectiveGap": 5,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 123,
+                              "top": 672,
+                              "width": 824.86,
+                              "height": 56
+                            },
+                            "items": [
+                              {
+                                "path": "0.1.1.0.2.1.0",
+                                "frame": {
+                                  "left": 123,
+                                  "top": 672,
+                                  "width": 824.86,
+                                  "height": 29
+                                }
+                              },
+                              {
+                                "path": "0.1.1.0.2.1.1",
+                                "frame": {
+                                  "left": 123,
+                                  "top": 706,
+                                  "width": 691.91,
+                                  "height": 22
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 22,
+                        "effectiveGap": 22,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 88,
+                          "top": 672,
+                          "width": 859.86,
+                          "height": 56
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.0.2.0",
+                            "frame": {
+                              "left": 88,
+                              "top": 672,
+                              "width": 13,
+                              "height": 56
+                            }
+                          },
+                          {
+                            "path": "0.1.1.0.2.1",
+                            "frame": {
+                              "left": 123,
+                              "top": 672,
+                              "width": 824.86,
+                              "height": 56
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "padding": {
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    },
+                    "gap": 24,
+                    "effectiveGap": 24,
+                    "justifyOffset": 0,
+                    "align": "start",
+                    "justify": "start",
+                    "contentFrame": {
+                      "left": 88,
+                      "top": 512,
+                      "width": 859.86,
+                      "height": 216
+                    },
+                    "items": [
+                      {
+                        "path": "0.1.1.0.0",
+                        "frame": {
+                          "left": 88,
+                          "top": 512,
+                          "width": 859.86,
+                          "height": 56
+                        }
+                      },
+                      {
+                        "path": "0.1.1.0.1",
+                        "frame": {
+                          "left": 88,
+                          "top": 592,
+                          "width": 859.86,
+                          "height": 56
+                        }
+                      },
+                      {
+                        "path": "0.1.1.0.2",
+                        "frame": {
+                          "left": 88,
+                          "top": 672,
+                          "width": 859.86,
+                          "height": 56
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "path": "0.1.1.1",
+                    "kind": "panel",
+                    "name": "ask-token-record",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 68,
+                      "height": 274
+                    },
+                    "frame": {
+                      "left": 1005.86,
+                      "top": 482,
+                      "width": 826.14,
+                      "height": 276
+                    },
+                    "snappedFrame": {
+                      "left": 1005.86,
+                      "top": 482,
+                      "width": 826.14,
+                      "height": 276
+                    },
+                    "children": [
+                      {
+                        "path": "0.1.1.1.0",
+                        "kind": "column",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 0,
+                          "height": 210
+                        },
+                        "frame": {
+                          "left": 1039.86,
+                          "top": 514,
+                          "width": 758.14,
+                          "height": 210
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.1.0.0",
+                            "kind": "text",
+                            "name": "ask-token-title",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 34
+                            },
+                            "frame": {
+                              "left": 1039.86,
+                              "top": 514,
+                              "width": 758.14,
+                              "height": 34
+                            },
+                            "snappedFrame": {
+                              "left": 1040,
+                              "top": 514,
+                              "width": 758,
+                              "height": 34
+                            },
+                            "children": [],
+                            "text": "Pilot budget contract",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/x4nap4r6",
+                              "id": "15",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.1.0.1",
+                            "kind": "text",
+                            "name": "ask-token-1",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 24
+                            },
+                            "frame": {
+                              "left": 1039.86,
+                              "top": 568,
+                              "width": 758.14,
+                              "height": 24
+                            },
+                            "snappedFrame": {
+                              "left": 1040,
+                              "top": 568,
+                              "width": 758,
+                              "height": 24
+                            },
+                            "children": [],
+                            "text": "Rough token SWAG: low / mid / high",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/qd4vmtwr",
+                              "id": "16",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.1.0.2",
+                            "kind": "text",
+                            "name": "ask-token-2",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 24
+                            },
+                            "frame": {
+                              "left": 1039.86,
+                              "top": 612,
+                              "width": 758.14,
+                              "height": 24
+                            },
+                            "snappedFrame": {
+                              "left": 1040,
+                              "top": 612,
+                              "width": 758,
+                              "height": 24
+                            },
+                            "children": [],
+                            "text": "Approved iteration objective and acceptance criteria",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/fyxobm58",
+                              "id": "17",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.1.0.3",
+                            "kind": "text",
+                            "name": "ask-token-3",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 24
+                            },
+                            "frame": {
+                              "left": 1039.86,
+                              "top": 656,
+                              "width": 758.14,
+                              "height": 24
+                            },
+                            "snappedFrame": {
+                              "left": 1040,
+                              "top": 656,
+                              "width": 758,
+                              "height": 24
+                            },
+                            "children": [],
+                            "text": "Change-control trigger for scope, tokens, schedule, quality, or risk",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/87ed8bat",
+                              "id": "18",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.1.0.4",
+                            "kind": "text",
+                            "name": "ask-token-4",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 24
+                            },
+                            "frame": {
+                              "left": 1039.86,
+                              "top": 700,
+                              "width": 758.14,
+                              "height": 24
+                            },
+                            "snappedFrame": {
+                              "left": 1040,
+                              "top": 700,
+                              "width": 758,
+                              "height": 24
+                            },
+                            "children": [],
+                            "text": "Output: project book, evidence ledger, quality certificate, handoff package",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/xs72x4na",
+                              "id": "19",
+                              "kind": "shape"
+                            }
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 20,
+                        "effectiveGap": 20,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 1039.86,
+                          "top": 514,
+                          "width": 758.14,
+                          "height": 210
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.1.0.0",
+                            "frame": {
+                              "left": 1039.86,
+                              "top": 514,
+                              "width": 758.14,
+                              "height": 34
+                            }
+                          },
+                          {
+                            "path": "0.1.1.1.0.1",
+                            "frame": {
+                              "left": 1039.86,
+                              "top": 568,
+                              "width": 758.14,
+                              "height": 24
+                            }
+                          },
+                          {
+                            "path": "0.1.1.1.0.2",
+                            "frame": {
+                              "left": 1039.86,
+                              "top": 612,
+                              "width": 758.14,
+                              "height": 24
+                            }
+                          },
+                          {
+                            "path": "0.1.1.1.0.3",
+                            "frame": {
+                              "left": 1039.86,
+                              "top": 656,
+                              "width": 758.14,
+                              "height": 24
+                            }
+                          },
+                          {
+                            "path": "0.1.1.1.0.4",
+                            "frame": {
+                              "left": 1039.86,
+                              "top": 700,
+                              "width": 758.14,
+                              "height": 24
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "padding": {
+                      "top": 32,
+                      "right": 34,
+                      "bottom": 32,
+                      "left": 34
+                    },
+                    "align": "start",
+                    "justify": "start",
+                    "contentFrame": {
+                      "left": 1039.86,
+                      "top": 514,
+                      "width": 758.14,
+                      "height": 212
+                    },
+                    "element": {
+                      "aid": "sh/8jqh0fep",
+                      "id": "14",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "columnGap": 58,
+                "rowGap": 0,
+                "alignItems": "center",
+                "justifyItems": "stretch",
+                "contentFrame": {
+                  "left": 88,
+                  "top": 285,
+                  "width": 1744,
+                  "height": 671
+                },
+                "columns": [
+                  {
+                    "mode": "fr",
+                    "value": 1.02
+                  },
+                  {
+                    "mode": "fr",
+                    "value": 0.98
+                  }
+                ],
+                "autoRows": "auto",
+                "resolvedRows": [
+                  "auto"
+                ],
+                "columnSizes": [
+                  859.86,
+                  826.14
+                ],
+                "rowSizes": [
+                  671
+                ],
+                "cells": [
+                  {
+                    "path": "0.1.1.0",
+                    "column": 0,
+                    "row": 0,
+                    "columnSpan": 1,
+                    "rowSpan": 1,
+                    "cellFrame": {
+                      "left": 88,
+                      "top": 285,
+                      "width": 859.86,
+                      "height": 671
+                    }
+                  },
+                  {
+                    "path": "0.1.1.1",
+                    "column": 1,
+                    "row": 0,
+                    "columnSpan": 1,
+                    "rowSpan": 1,
+                    "cellFrame": {
+                      "left": 1005.86,
+                      "top": 285,
+                      "width": 826.14,
+                      "height": 671
+                    }
+                  }
+                ]
+              },
+              {
+                "path": "0.1.2",
+                "kind": "row",
+                "name": "ask-footer-row",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "hug"
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 307.84,
+                  "height": 13
+                },
+                "frame": {
+                  "left": 88,
+                  "top": 990,
+                  "width": 1744,
+                  "height": 26
+                },
+                "children": [
+                  {
+                    "path": "0.1.2.0",
+                    "kind": "text",
+                    "name": "ask-footer",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "wrap",
+                        "max": 1200
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 267.84,
+                      "height": 13
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 990,
+                      "width": 267.84,
+                      "height": 28
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 990,
+                      "width": 268,
+                      "height": 28
+                    },
+                    "children": [],
+                    "text": "DFMS pitch deck | software assurance dark factory",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/lwval87e",
+                      "id": "20",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.2.1",
+                    "kind": "text",
+                    "name": "ask-page",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 40
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 40,
+                      "height": 13
+                    },
+                    "frame": {
+                      "left": 1792,
+                      "top": 998,
+                      "width": 40,
+                      "height": 12
+                    },
+                    "snappedFrame": {
+                      "left": 1792,
+                      "top": 998,
+                      "width": 40,
+                      "height": 12
+                    },
+                    "children": [],
+                    "text": "35",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/wb2hwfyx",
+                      "id": "21",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "gap": 0,
+                "effectiveGap": 1436.16,
+                "justifyOffset": 0,
+                "align": "center",
+                "justify": "between",
+                "contentFrame": {
+                  "left": 88,
+                  "top": 990,
+                  "width": 1744,
+                  "height": 26
+                },
+                "items": [
+                  {
+                    "path": "0.1.2.0",
+                    "frame": {
+                      "left": 88,
+                      "top": 990,
+                      "width": 267.84,
+                      "height": 28
+                    }
+                  },
+                  {
+                    "path": "0.1.2.1",
+                    "frame": {
+                      "left": 1792,
+                      "top": 998,
+                      "width": 40,
+                      "height": 12
+                    }
+                  }
+                ]
+              }
+            ],
+            "padding": {
+              "top": 64,
+              "right": 88,
+              "bottom": 64,
+              "left": 88
+            },
+            "gap": 34,
+            "effectiveGap": 34,
+            "justifyOffset": 0,
+            "align": "start",
+            "justify": "start",
+            "contentFrame": {
+              "left": 88,
+              "top": 64,
+              "width": 1744,
+              "height": 952
+            },
+            "items": [
+              {
+                "path": "0.1.0",
+                "frame": {
+                  "left": 88,
+                  "top": 64,
+                  "width": 1744,
+                  "height": 187
+                }
+              },
+              {
+                "path": "0.1.1",
+                "frame": {
+                  "left": 88,
+                  "top": 285,
+                  "width": 1744,
+                  "height": 671
+                }
+              },
+              {
+                "path": "0.1.2",
+                "frame": {
+                  "left": 88,
+                  "top": 990,
+                  "width": 1744,
+                  "height": 26
+                }
+              }
+            ]
+          }
+        ],
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignItems": "stretch",
+        "justifyItems": "stretch",
+        "contentFrame": {
+          "left": 0,
+          "top": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "items": [
+          {
+            "path": "0.0",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            }
+          },
+          {
+            "path": "0.1",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

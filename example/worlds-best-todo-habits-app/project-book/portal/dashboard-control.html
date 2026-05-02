@@ -1,0 +1,512 @@
+<!doctype html><html><head><meta charset='utf-8'>
+<title>DFMS Dashboard Control</title>
+<style>body{font-family:Segoe UI,Arial,sans-serif;margin:24px;color:#202124;background:#f8fafc}h1{font-size:28px}h2{margin-top:28px}.meta{display:flex;gap:12px;flex-wrap:wrap}.chip{background:#fff;border:1px solid #d0d7de;border-radius:8px;padding:8px 10px}.node{background:#fff;border:1px solid #d0d7de;border-radius:8px;padding:10px;margin:8px 0}.path{color:#5f6368;font-family:Consolas,monospace;font-size:12px}.status{font-weight:600}.id{font-family:Consolas,monospace;font-size:12px;color:#0b57d0}</style>
+</head><body>
+<h1>DFMS Dashboard Control: DFMS UI Console Run</h1>
+<div class='meta'>
+<div class='chip'>Nodes: 98</div>
+<div class='chip'>Edges: 324</div>
+<div class='chip'>Explicit edges: 72</div>
+<div class='chip'>Inferred edges: 252</div>
+<div class='chip'>Generated: 2026-04-29T04:10:07+00:00</div>
+</div>
+<p>Select a node ID and run the redo closure command from the skill script to produce a change-impact report. Inferred edges are review hints, not certification proof.</p>
+<h2>Design</h2>
+<div class='node'>
+<div><span class='id'>NODE-03-ARCHITECTURE-MD</span> <strong>Architecture And Design</strong></div>
+<div class='path'>03-architecture.md</div>
+<div>Status: <span class='status'>draft</span> Kind: artifact</div>
+</div>
+<h2>Evidence</h2>
+<div class='node'>
+<div><span class='id'>NODE-05-TRACEABILITY-MATRIX-MD</span> <strong>Traceability Matrix</strong></div>
+<div class='path'>05-traceability-matrix.md</div>
+<div>Status: <span class='status'>draft</span> Kind: trace</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-AUDIT-FINDINGS-REGISTER-JSON</span> <strong>Audit Findings Register</strong></div>
+<div class='path'>evidence/audit-findings-register.json</div>
+<div>Status: <span class='status'>draft</span> Kind: evidence</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-AUDIT-PANEL-RECORD-JSON</span> <strong>Audit Panel Record</strong></div>
+<div class='path'>evidence/audit-panel-record.json</div>
+<div>Status: <span class='status'>draft</span> Kind: evidence</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-AUDIT-QUALITY-CERTIFICATE-JSON</span> <strong>Audit Quality Certificate</strong></div>
+<div class='path'>evidence/audit-quality-certificate.json</div>
+<div>Status: <span class='status'>draft</span> Kind: certificate</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-BROWSER-WYSIWYG-BLOCKER-JSON</span> <strong>Browser Wysiwyg Blocker</strong></div>
+<div class='path'>evidence/browser-wysiwyg-blocker.json</div>
+<div>Status: <span class='status'>blocked</span> Kind: evidence</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-CERTIFICATION-READINESS-CERTIFICATE-JSON</span> <strong>Certification Readiness Certificate</strong></div>
+<div class='path'>evidence/certification-readiness-certificate.json</div>
+<div>Status: <span class='status'>draft</span> Kind: certificate</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-CERTIFICATION-READINESS-PANEL-RECORD-JSON</span> <strong>Certification Readiness Panel Record</strong></div>
+<div class='path'>evidence/certification-readiness-panel-record.json</div>
+<div>Status: <span class='status'>draft</span> Kind: evidence</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-DASHBOARD-CONTROL-RECORD-JSON</span> <strong>Dashboard Control Record</strong></div>
+<div class='path'>evidence/dashboard-control-record.json</div>
+<div>Status: <span class='status'>conditional</span> Kind: evidence</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-EXECUTION-KERNEL-REPORT-JSON</span> <strong>Execution Kernel Report</strong></div>
+<div class='path'>evidence/execution-kernel-report.json</div>
+<div>Status: <span class='status'>blocked</span> Kind: evidence</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-HUMAN-REVIEW-PORTAL-CERTIFICATE-JSON</span> <strong>Human Review Portal Certificate</strong></div>
+<div class='path'>evidence/human-review-portal-certificate.json</div>
+<div>Status: <span class='status'>draft</span> Kind: certificate</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-HUMAN-REVIEW-PORTAL-PANEL-RECORD-JSON</span> <strong>Human Review Portal Panel Record</strong></div>
+<div class='path'>evidence/human-review-portal-panel-record.json</div>
+<div>Status: <span class='status'>draft</span> Kind: evidence</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-HUMAN-REVIEW-PORTAL-VALIDATION-JSON</span> <strong>Human Review Portal Validation</strong></div>
+<div class='path'>evidence/human-review-portal-validation.json</div>
+<div>Status: <span class='status'>accepted</span> Kind: evidence</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-IMPLEMENTATION-EXECUTION-RECORD-JSON</span> <strong>Implementation Execution Record</strong></div>
+<div class='path'>evidence/implementation-execution-record.json</div>
+<div>Status: <span class='status'>draft</span> Kind: evidence</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-MATERIAL-UI-CONFORMANCE-CERTIFICATE-JSON</span> <strong>Material Ui Conformance Certificate</strong></div>
+<div class='path'>evidence/material-ui-conformance-certificate.json</div>
+<div>Status: <span class='status'>draft</span> Kind: certificate</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-MATERIAL-UI-PANEL-RECORD-JSON</span> <strong>Material Ui Panel Record</strong></div>
+<div class='path'>evidence/material-ui-panel-record.json</div>
+<div>Status: <span class='status'>draft</span> Kind: evidence</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-QA-CERTIFICATION-CERTIFICATE-JSON</span> <strong>Qa Certification Certificate</strong></div>
+<div class='path'>evidence/qa-certification-certificate.json</div>
+<div>Status: <span class='status'>draft</span> Kind: certificate</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-QA-CERTIFICATION-PANEL-RECORD-JSON</span> <strong>Qa Certification Panel Record</strong></div>
+<div class='path'>evidence/qa-certification-panel-record.json</div>
+<div>Status: <span class='status'>draft</span> Kind: evidence</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-QUALITY-REFINERY-GATE-CERTIFICATION-READINESS-YAML</span> <strong>Quality Refinery Gate Certification Readiness</strong></div>
+<div class='path'>evidence/quality-refinery-gate-certification-readiness.yaml</div>
+<div>Status: <span class='status'>draft</span> Kind: gate</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-QUALITY-REFINERY-GATE-HUMAN-REVIEW-PORTAL-YAML</span> <strong>Quality Refinery Gate Human Review Portal</strong></div>
+<div class='path'>evidence/quality-refinery-gate-human-review-portal.yaml</div>
+<div>Status: <span class='status'>draft</span> Kind: gate</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-QUALITY-REFINERY-GATE-MATERIAL-UI-YAML</span> <strong>Quality Refinery Gate Material Ui</strong></div>
+<div class='path'>evidence/quality-refinery-gate-material-ui.yaml</div>
+<div>Status: <span class='status'>draft</span> Kind: gate</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-QUALITY-REFINERY-GATE-STANDARDS-AUDIT-YAML</span> <strong>Quality Refinery Gate Standards Audit</strong></div>
+<div class='path'>evidence/quality-refinery-gate-standards-audit.yaml</div>
+<div>Status: <span class='status'>draft</span> Kind: gate</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-QUALITY-REFINERY-GATE-UX-QA-CERTIFICATION-YAML</span> <strong>Quality Refinery Gate Ux Qa Certification</strong></div>
+<div class='path'>evidence/quality-refinery-gate-ux-qa-certification.yaml</div>
+<div>Status: <span class='status'>draft</span> Kind: gate</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-QUALITY-REFINERY-GATE-YAML</span> <strong>Quality Refinery Gate</strong></div>
+<div class='path'>evidence/quality-refinery-gate.yaml</div>
+<div>Status: <span class='status'>draft</span> Kind: gate</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-REDO-IMPACT-PRD-JSON</span> <strong>Redo Impact Prd</strong></div>
+<div class='path'>evidence/redo-impact-prd.json</div>
+<div>Status: <span class='status'>conditional</span> Kind: evidence</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-REDO-IMPACT-UI-02-PRD-MD-JSON</span> <strong>Redo Impact Ui 02 Prd Md</strong></div>
+<div class='path'>evidence/redo-impact-ui-02-prd-md.json</div>
+<div>Status: <span class='status'>conditional</span> Kind: evidence</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-REDO-NODE-REQUEST-PRD-JSON</span> <strong>Redo Node Request Prd</strong></div>
+<div class='path'>evidence/redo-node-request-prd.json</div>
+<div>Status: <span class='status'>draft</span> Kind: evidence</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-VALIDATION-SUMMARY-JSON</span> <strong>Validation Summary</strong></div>
+<div class='path'>evidence/validation-summary.json</div>
+<div>Status: <span class='status'>accepted</span> Kind: evidence</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-WYSIWYG-DESKTOP-PNG</span> <strong>Wysiwyg Desktop</strong></div>
+<div class='path'>evidence/wysiwyg-desktop.png</div>
+<div>Status: <span class='status'>draft</span> Kind: evidence</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-WYSIWYG-MOBILE-PNG</span> <strong>Wysiwyg Mobile</strong></div>
+<div class='path'>evidence/wysiwyg-mobile.png</div>
+<div>Status: <span class='status'>draft</span> Kind: evidence</div>
+</div>
+<h2>Governance</h2>
+<div class='node'>
+<div><span class='id'>NODE-16-DASHBOARD-CONTROL-REDO-RECORD-MD</span> <strong>Dashboard Control And Redo Closure Record</strong></div>
+<div class='path'>16-dashboard-control-redo-record.md</div>
+<div>Status: <span class='status'>conditional</span> Kind: task</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-RECORDS-TASKS-MD</span> <strong>Northstar Daily Task Bead Ledger</strong></div>
+<div class='path'>records/TASKS.md</div>
+<div>Status: <span class='status'>blocked</span> Kind: task</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-RECORDS-TASK-BEAD-TB-20260425-101-JSON</span> <strong>Task Bead Tb 20260425 101</strong></div>
+<div class='path'>records/task-bead-TB-20260425-101.json</div>
+<div>Status: <span class='status'>draft</span> Kind: task</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-RECORDS-TASK-BEAD-TB-20260425-201-JSON</span> <strong>Task Bead Tb 20260425 201</strong></div>
+<div class='path'>records/task-bead-TB-20260425-201.json</div>
+<div>Status: <span class='status'>draft</span> Kind: task</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-RECORDS-TASK-BEAD-TB-20260426-102-JSON</span> <strong>Task Bead Tb 20260426 102</strong></div>
+<div class='path'>records/task-bead-TB-20260426-102.json</div>
+<div>Status: <span class='status'>draft</span> Kind: task</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-RECORDS-TASK-BEAD-TB-20260426-103-JSON</span> <strong>Task Bead Tb 20260426 103</strong></div>
+<div class='path'>records/task-bead-TB-20260426-103.json</div>
+<div>Status: <span class='status'>draft</span> Kind: task</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-RECORDS-TASK-BEAD-TB-20260426-104-JSON</span> <strong>Task Bead Tb 20260426 104</strong></div>
+<div class='path'>records/task-bead-TB-20260426-104.json</div>
+<div>Status: <span class='status'>draft</span> Kind: task</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-RECORDS-TASK-BEAD-TB-20260426-105-JSON</span> <strong>Task Bead Tb 20260426 105</strong></div>
+<div class='path'>records/task-bead-TB-20260426-105.json</div>
+<div>Status: <span class='status'>draft</span> Kind: task</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-RECORDS-TASK-BEAD-TB-20260426-106-JSON</span> <strong>Task Bead Tb 20260426 106</strong></div>
+<div class='path'>records/task-bead-TB-20260426-106.json</div>
+<div>Status: <span class='status'>draft</span> Kind: task</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-RECORDS-TASK-BEAD-TB-20260426-107-JSON</span> <strong>Task Bead Tb 20260426 107</strong></div>
+<div class='path'>records/task-bead-TB-20260426-107.json</div>
+<div>Status: <span class='status'>draft</span> Kind: task</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-RECORDS-TASK-BEAD-TB-20260426-108-JSON</span> <strong>Task Bead Tb 20260426 108</strong></div>
+<div class='path'>records/task-bead-TB-20260426-108.json</div>
+<div>Status: <span class='status'>draft</span> Kind: task</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-RECORDS-TPM-FLOW-LEDGER-JSON</span> <strong>Tpm Flow Ledger</strong></div>
+<div class='path'>records/tpm-flow-ledger.json</div>
+<div>Status: <span class='status'>draft</span> Kind: task</div>
+</div>
+<h2>Operations</h2>
+<div class='node'>
+<div><span class='id'>NODE-07-HANDOFF-AND-RUNBOOK-MD</span> <strong>Handoff And Runbook</strong></div>
+<div class='path'>07-handoff-and-runbook.md</div>
+<div>Status: <span class='status'>draft</span> Kind: artifact</div>
+</div>
+<h2>Portal</h2>
+<div class='node'>
+<div><span class='id'>NODE-PORTAL-README-MD</span> <strong>Northstar Daily Human Review Portal</strong></div>
+<div class='path'>portal/README.md</div>
+<div>Status: <span class='status'>draft</span> Kind: portal</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-PORTAL-DASHBOARD-CONTROL-INDEX-JSON</span> <strong>Dashboard Control Index</strong></div>
+<div class='path'>portal/dashboard-control-index.json</div>
+<div>Status: <span class='status'>blocked</span> Kind: portal</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-PORTAL-DASHBOARD-CONTROL-HTML</span> <strong>Dashboard Control</strong></div>
+<div class='path'>portal/dashboard-control.html</div>
+<div>Status: <span class='status'>conditional</span> Kind: portal</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-PORTAL-DIAGRAMS-MD</span> <strong>Mermaid Diagram Atlas</strong></div>
+<div class='path'>portal/diagrams.md</div>
+<div>Status: <span class='status'>blocked</span> Kind: portal</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-PORTAL-INDEX-HTML</span> <strong>Index</strong></div>
+<div class='path'>portal/index.html</div>
+<div>Status: <span class='status'>draft</span> Kind: portal</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-PORTAL-PORTAL-DATA-JSON</span> <strong>Portal Data</strong></div>
+<div class='path'>portal/portal-data.json</div>
+<div>Status: <span class='status'>draft</span> Kind: portal</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-PORTAL-PORTAL-CSS</span> <strong>Portal</strong></div>
+<div class='path'>portal/portal.css</div>
+<div>Status: <span class='status'>draft</span> Kind: portal</div>
+</div>
+<h2>Project-Book</h2>
+<div class='node'>
+<div><span class='id'>NODE-00-FACTORY-RUN-SUMMARY-MD</span> <strong>Northstar Daily Factory Run Summary</strong></div>
+<div class='path'>00-factory-run-summary.md</div>
+<div>Status: <span class='status'>draft</span> Kind: artifact</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-01-RESEARCH-COMPETITIVE-BENCHMARK-MD</span> <strong>Research And Competitive Benchmark</strong></div>
+<div class='path'>01-research-competitive-benchmark.md</div>
+<div>Status: <span class='status'>draft</span> Kind: artifact</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-06-EXPERT-REVIEW-AND-RALPH-MD</span> <strong>Expert Review And RALPH Record</strong></div>
+<div class='path'>06-expert-review-and-ralph.md</div>
+<div>Status: <span class='status'>blocked</span> Kind: artifact</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-08-HAWKEYE-BLOCKER-AND-CHANGE-RECORD-MD</span> <strong>Hawkeye Blocker And Change Record</strong></div>
+<div class='path'>08-hawkeye-blocker-and-change-record.md</div>
+<div>Status: <span class='status'>blocked</span> Kind: artifact</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-09-ITERATION-2-HARDENING-RECORD-MD</span> <strong>Iteration 2 Hardening Record</strong></div>
+<div class='path'>09-iteration-2-hardening-record.md</div>
+<div>Status: <span class='status'>draft</span> Kind: artifact</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-10-RALPH-20-E2E-COMPLETENESS-RECORD-MD</span> <strong>RALPH 20 E2E Completeness Record</strong></div>
+<div class='path'>10-ralph-20-e2e-completeness-record.md</div>
+<div>Status: <span class='status'>blocked</span> Kind: artifact</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-11-STANDARDS-META-META-CHARTER-AUDIT-MD</span> <strong>Standards And Meta-Meta Charter Audit</strong></div>
+<div class='path'>11-standards-meta-meta-charter-audit.md</div>
+<div>Status: <span class='status'>blocked</span> Kind: artifact</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-12-CERTIFICATION-READINESS-HARDENING-RECORD-MD</span> <strong>Certification Readiness Hardening Record</strong></div>
+<div class='path'>12-certification-readiness-hardening-record.md</div>
+<div>Status: <span class='status'>draft</span> Kind: artifact</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-14-MATERIAL-UI-STANDARDS-CONFORMANCE-RECORD-MD</span> <strong>Material UI Standards Conformance Record</strong></div>
+<div class='path'>14-material-ui-standards-conformance-record.md</div>
+<div>Status: <span class='status'>draft</span> Kind: artifact</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-15-HUMAN-REVIEW-ONBOARDING-PORTAL-RECORD-MD</span> <strong>Human Review And Onboarding Portal Record</strong></div>
+<div class='path'>15-human-review-onboarding-portal-record.md</div>
+<div>Status: <span class='status'>draft</span> Kind: artifact</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-RECORDS-AI-JUDGE-JURY-RECORD-CERTIFICATION-READINESS-JSON</span> <strong>Ai Judge Jury Record Certification Readiness</strong></div>
+<div class='path'>records/ai-judge-jury-record-certification-readiness.json</div>
+<div>Status: <span class='status'>draft</span> Kind: artifact</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-RECORDS-AI-JUDGE-JURY-RECORD-HUMAN-REVIEW-PORTAL-JSON</span> <strong>Ai Judge Jury Record Human Review Portal</strong></div>
+<div class='path'>records/ai-judge-jury-record-human-review-portal.json</div>
+<div>Status: <span class='status'>draft</span> Kind: artifact</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-RECORDS-AI-JUDGE-JURY-RECORD-ITERATION-2-JSON</span> <strong>Ai Judge Jury Record Iteration 2</strong></div>
+<div class='path'>records/ai-judge-jury-record-iteration-2.json</div>
+<div>Status: <span class='status'>draft</span> Kind: artifact</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-RECORDS-AI-JUDGE-JURY-RECORD-MATERIAL-UI-JSON</span> <strong>Ai Judge Jury Record Material Ui</strong></div>
+<div class='path'>records/ai-judge-jury-record-material-ui.json</div>
+<div>Status: <span class='status'>draft</span> Kind: artifact</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-RECORDS-AI-JUDGE-JURY-RECORD-RALPH-20-JSON</span> <strong>Ai Judge Jury Record Ralph 20</strong></div>
+<div class='path'>records/ai-judge-jury-record-ralph-20.json</div>
+<div>Status: <span class='status'>draft</span> Kind: artifact</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-RECORDS-AI-JUDGE-JURY-RECORD-STANDARDS-AUDIT-JSON</span> <strong>Ai Judge Jury Record Standards Audit</strong></div>
+<div class='path'>records/ai-judge-jury-record-standards-audit.json</div>
+<div>Status: <span class='status'>draft</span> Kind: artifact</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-RECORDS-AI-JUDGE-JURY-RECORD-JSON</span> <strong>Ai Judge Jury Record</strong></div>
+<div class='path'>records/ai-judge-jury-record.json</div>
+<div>Status: <span class='status'>draft</span> Kind: artifact</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-RECORDS-ARTIFACT-BOM-AUDIT-RECORD-JSON</span> <strong>Artifact Bom Audit Record</strong></div>
+<div class='path'>records/artifact-bom-audit-record.json</div>
+<div>Status: <span class='status'>draft</span> Kind: artifact</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-RECORDS-DARK-FACTORY-INSTANTIATION-RECORD-JSON</span> <strong>Dark Factory Instantiation Record</strong></div>
+<div class='path'>records/dark-factory-instantiation-record.json</div>
+<div>Status: <span class='status'>draft</span> Kind: artifact</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-RECORDS-ENGAGEMENT-GOVERNANCE-RECORD-JSON</span> <strong>Engagement Governance Record</strong></div>
+<div class='path'>records/engagement-governance-record.json</div>
+<div>Status: <span class='status'>draft</span> Kind: artifact</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-RECORDS-FACTORY-PERT-PLAN-JSON</span> <strong>Factory Pert Plan</strong></div>
+<div class='path'>records/factory-pert-plan.json</div>
+<div>Status: <span class='status'>draft</span> Kind: artifact</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-RECORDS-GENERATED-META-SKILL-CONTRACT-JSON</span> <strong>Generated Meta Skill Contract</strong></div>
+<div class='path'>records/generated-meta-skill-contract.json</div>
+<div>Status: <span class='status'>draft</span> Kind: artifact</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-RECORDS-HAWKEYE-CONFORMANCE-AUDIT-RECORD-JSON</span> <strong>Hawkeye Conformance Audit Record</strong></div>
+<div class='path'>records/hawkeye-conformance-audit-record.json</div>
+<div>Status: <span class='status'>draft</span> Kind: artifact</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-RECORDS-HUMAN-REVIEW-PORTAL-RECORD-JSON</span> <strong>Human Review Portal Record</strong></div>
+<div class='path'>records/human-review-portal-record.json</div>
+<div>Status: <span class='status'>draft</span> Kind: artifact</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-RECORDS-INTERROGATION-RECORD-JSON</span> <strong>Interrogation Record</strong></div>
+<div class='path'>records/interrogation-record.json</div>
+<div>Status: <span class='status'>blocked</span> Kind: artifact</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-RECORDS-KNOWLEDGE-GRAPH-JSON</span> <strong>Knowledge Graph</strong></div>
+<div class='path'>records/knowledge-graph.json</div>
+<div>Status: <span class='status'>draft</span> Kind: artifact</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-RECORDS-META-META-CHARTER-COMPLIANCE-MATRIX-JSON</span> <strong>Meta Meta Charter Compliance Matrix</strong></div>
+<div class='path'>records/meta-meta-charter-compliance-matrix.json</div>
+<div>Status: <span class='status'>draft</span> Kind: artifact</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-RECORDS-PRODUCT-TAILORING-PROFILE-JSON</span> <strong>Product Tailoring Profile</strong></div>
+<div class='path'>records/product-tailoring-profile.json</div>
+<div>Status: <span class='status'>draft</span> Kind: artifact</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-RECORDS-SDLC-STAGE-COVERAGE-MATRIX-JSON</span> <strong>Sdlc Stage Coverage Matrix</strong></div>
+<div class='path'>records/sdlc-stage-coverage-matrix.json</div>
+<div>Status: <span class='status'>draft</span> Kind: artifact</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-RECORDS-SPEC-DECOMPOSITION-RECORD-JSON</span> <strong>Spec Decomposition Record</strong></div>
+<div class='path'>records/spec-decomposition-record.json</div>
+<div>Status: <span class='status'>blocked</span> Kind: artifact</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-RECORDS-STANDARDS-CONFORMANCE-AUDIT-RECORD-JSON</span> <strong>Standards Conformance Audit Record</strong></div>
+<div class='path'>records/standards-conformance-audit-record.json</div>
+<div>Status: <span class='status'>draft</span> Kind: artifact</div>
+</div>
+<h2>Requirements</h2>
+<div class='node'>
+<div><span class='id'>NODE-02-PRD-MD</span> <strong>Product Requirements Document</strong></div>
+<div class='path'>02-prd.md</div>
+<div>Status: <span class='status'>draft</span> Kind: artifact</div>
+</div>
+<h2>Verification</h2>
+<div class='node'>
+<div><span class='id'>NODE-04-TEST-STRATEGY-MD</span> <strong>Verification And Test Strategy</strong></div>
+<div class='path'>04-test-strategy.md</div>
+<div>Status: <span class='status'>draft</span> Kind: test</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-13-RALPH-UX-RELIABILITY-QA-CERTIFICATION-RECORD-MD</span> <strong>RALPH UX Reliability And QA Certification Record</strong></div>
+<div class='path'>13-ralph-ux-reliability-qa-certification-record.md</div>
+<div>Status: <span class='status'>draft</span> Kind: test</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-ACCESSIBILITY-CERTIFICATION-OUTPUT-TXT</span> <strong>Accessibility Certification Output</strong></div>
+<div class='path'>evidence/accessibility-certification-output.txt</div>
+<div>Status: <span class='status'>draft</span> Kind: evidence</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-ACCESSIBILITY-CERTIFICATION-RESULTS-JSON</span> <strong>Accessibility Certification Results</strong></div>
+<div class='path'>evidence/accessibility-certification-results.json</div>
+<div>Status: <span class='status'>accepted</span> Kind: evidence</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-BROWSER-WYSIWYG-OUTPUT-TXT</span> <strong>Browser Wysiwyg Output</strong></div>
+<div class='path'>evidence/browser-wysiwyg-output.txt</div>
+<div>Status: <span class='status'>draft</span> Kind: evidence</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-BROWSER-WYSIWYG-RESULTS-JSON</span> <strong>Browser Wysiwyg Results</strong></div>
+<div class='path'>evidence/browser-wysiwyg-results.json</div>
+<div>Status: <span class='status'>draft</span> Kind: evidence</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-CORE-TEST-OUTPUT-TXT</span> <strong>Core Test Output</strong></div>
+<div class='path'>evidence/core-test-output.txt</div>
+<div>Status: <span class='status'>draft</span> Kind: evidence</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-HUMAN-REVIEW-PORTAL-META-VALIDATOR-OUTPUT-TXT</span> <strong>Human Review Portal Meta Validator Output</strong></div>
+<div class='path'>evidence/human-review-portal-meta-validator-output.txt</div>
+<div>Status: <span class='status'>draft</span> Kind: evidence</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-HUMAN-REVIEW-PORTAL-SCREENSHOT-PNG</span> <strong>Human Review Portal Screenshot</strong></div>
+<div class='path'>evidence/human-review-portal-screenshot.png</div>
+<div>Status: <span class='status'>draft</span> Kind: evidence</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-HUMAN-REVIEW-PORTAL-VALIDATION-OUTPUT-TXT</span> <strong>Human Review Portal Validation Output</strong></div>
+<div class='path'>evidence/human-review-portal-validation-output.txt</div>
+<div>Status: <span class='status'>draft</span> Kind: evidence</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-MATERIAL-GOVERNANCE-VALIDATION-OUTPUT-TXT</span> <strong>Material Governance Validation Output</strong></div>
+<div class='path'>evidence/material-governance-validation-output.txt</div>
+<div>Status: <span class='status'>draft</span> Kind: evidence</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-SCENARIO-TEST-RESULTS-JSON</span> <strong>Scenario Test Results</strong></div>
+<div class='path'>evidence/scenario-test-results.json</div>
+<div>Status: <span class='status'>draft</span> Kind: evidence</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-STATIC-UI-AUDIT-OUTPUT-TXT</span> <strong>Static Ui Audit Output</strong></div>
+<div class='path'>evidence/static-ui-audit-output.txt</div>
+<div>Status: <span class='status'>draft</span> Kind: evidence</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-STATIC-UI-AUDIT-RESULTS-JSON</span> <strong>Static Ui Audit Results</strong></div>
+<div class='path'>evidence/static-ui-audit-results.json</div>
+<div>Status: <span class='status'>accepted</span> Kind: evidence</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-EVIDENCE-WYSIWYG-BROWSER-TEST-RECORD-JSON</span> <strong>Wysiwyg Browser Test Record</strong></div>
+<div class='path'>evidence/wysiwyg-browser-test-record.json</div>
+<div>Status: <span class='status'>draft</span> Kind: evidence</div>
+</div>
+<div class='node'>
+<div><span class='id'>NODE-RECORDS-AI-JUDGE-JURY-RECORD-UX-QA-CERTIFICATION-JSON</span> <strong>Ai Judge Jury Record Ux Qa Certification</strong></div>
+<div class='path'>records/ai-judge-jury-record-ux-qa-certification.json</div>
+<div>Status: <span class='status'>blocked</span> Kind: test</div>
+</div>
+</body></html>

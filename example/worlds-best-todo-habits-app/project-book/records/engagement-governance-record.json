@@ -1,0 +1,38 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+  },
+  "record_id": "EGR-NORTHSTAR-20260425-001",
+  "client_owner": "Abhir",
+  "dark_factory_delivery_owner": "Codex",
+  "scope_baseline": "Greenfield static browser product slice with dark-factory project book and verification evidence.",
+  "token_swag": {
+    "low": 60000,
+    "mid": 100000,
+    "high": 140000,
+    "confidence": "medium",
+    "exclusions": [
+      "backend sync",
+      "native mobile",
+      "production hosting",
+      "paid integrations",
+      "full WCAG audit"
+    ]
+  },
+  "iteration_approval": {
+    "decision": "approved",
+    "source": "User request to create subdirectory and build app following dark factory",
+    "date": "2026-04-25"
+  },
+  "change_control": {
+    "requires_reapproval_for": [
+      "new backend",
+      "account or auth",
+      "calendar writeback",
+      "notifications",
+      "production deploy",
+      "regulated or sensitive data",
+      "token band exceedance"
+    ]
+  }
+}

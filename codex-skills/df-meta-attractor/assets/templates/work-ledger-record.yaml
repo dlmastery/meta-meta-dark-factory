@@ -1,0 +1,38 @@
+zero_slop_policy:
+  statement: "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+  strict_compliance: "Mandatory. Every claim must be project-specific, evidence-backed, trace-linked, reviewer-challenged, and free of unsupported invention."
+  missing_evidence_rule: "If evidence is missing, mark it as an assumption, risk, open question, or failure."
+
+id: WL-000
+title: ""
+type: requirement | artifact | task | risk | decision | test | handoff | evidence | escalation | retrospective
+status: proposed | ready | assigned | blocked | reviewing | accepted | rework | deferred | retired
+source:
+  kind: user_message | transcript | artifact | code | test | review | incident | standard
+  reference: ""
+owner:
+  accountable: ""
+  responsible: ""
+priority: must | should | could
+links:
+  control_graph_nodes: []
+  requirements: []
+  artifacts: []
+  decisions: []
+  tests: []
+  risks: []
+  evidence: []
+  handoffs: []
+  gated_by: []
+current_state: ""
+next_action: ""
+blockers: []
+acceptance_criteria: []
+evidence_required: []
+evidence_provided: []
+residual_risk: []
+revalidation_trigger: ""
+history:
+  - at: ""
+    actor: ""
+    event: ""

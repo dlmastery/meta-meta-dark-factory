@@ -1,0 +1,34 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+  },
+  "template_only": false,
+  "certificate_id": "CERT-NORTHSTAR-STANDARDS-AUDIT-20260426-001",
+  "run_id": "DFRUN-NORTHSTAR-20260425-001",
+  "bead_id": "TB-20260426-104",
+  "scope": "Internal standards and meta-meta charter conformance for the bounded Northstar Daily static demonstrator slice.",
+  "verdict": "pass",
+  "issued_by": "Hawkeye Conformance Auditor and Audit Panel",
+  "issued_at": "2026-04-26T10:15:00-07:00",
+  "evidence": [
+    "project-book/11-standards-meta-meta-charter-audit.md",
+    "project-book/records/standards-conformance-audit-record.json",
+    "project-book/records/meta-meta-charter-compliance-matrix.json",
+    "project-book/records/artifact-bom-audit-record.json",
+    "project-book/evidence/audit-panel-record.json",
+    "project-book/evidence/audit-findings-register.json",
+    "project-book/evidence/execution-kernel-report.json"
+  ],
+  "limitations": [
+    "Internal conformance audit only; not external accredited certification.",
+    "Production, backend, sync, auth, mobile packaging, and regulated-data scope are not included.",
+    "External assistive-technology lab certification is not included."
+  ],
+  "revalidation_triggers": [
+    "new product surface",
+    "backend, sync, auth, mobile, hosting, or production scope",
+    "regulated data or contractual compliance claim",
+    "token budget or acceptance threshold change",
+    "new material requirement or risk"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+  },
+  "template_only": false,
+  "panel_id": "PANEL-NORTHSTAR-HUMAN-PORTAL-20260426-001",
+  "bead_id": "TB-20260426-108",
+  "review_target": "Human review and onboarding portal for Northstar Daily dark-factory project book",
+  "roles": [
+    {
+      "role": "Documentation Information Architect",
+      "persona_contract": "Principal documentation architect accountable for information scent, role-based navigation, artifact completeness, and a non-linear review path for large project books.",
+      "decision_rights": "Rejects dashboards that are decorative, incomplete, hard to scan, or not aligned to how executives, TPMs, engineers, auditors, and maintainers actually review.",
+      "vote": "pass"
+    },
+    {
+      "role": "Client Onboarding Lead",
+      "persona_contract": "Enterprise onboarding leader accountable for client confidence, outsourcing-style review checkpoints, decision visibility, and readable evidence trails.",
+      "decision_rights": "Rejects portals that hide status, scope boundaries, residual risks, or next approvals.",
+      "vote": "pass"
+    },
+    {
+      "role": "TPM Governance Auditor",
+      "persona_contract": "Legendary TPM auditor accountable for TASKS, TPM flow, PERT, Hawkeye, SDLC, and judge/jury alignment.",
+      "decision_rights": "Rejects any portal whose dashboard drifts from the authoritative ledgers or closure state.",
+      "vote": "pass"
+    },
+    {
+      "role": "Traceability And Evidence Auditor",
+      "persona_contract": "Evidence auditor accountable for all required Markdown, records, evidence, screenshots, diagrams, certificates, and gates being discoverable and validated.",
+      "decision_rights": "Rejects unindexed artifacts, missing diagram sources, stale evidence, or template-only portal records.",
+      "vote": "pass"
+    },
+    {
+      "role": "Adversarial Anti-Slop Prosecutor",
+      "persona_contract": "Red-team critic accountable for attacking dashboard vanity, fake completeness, broken links, unindexed files, and human onboarding theater.",
+      "decision_rights": "Blocks pass until validation proves coverage and the portal clearly states boundaries.",
+      "vote": "stand_down"
+    }
+  ],
+  "ralph_loops_completed": 5,
+  "panel_result": "pass",
+  "evidence_reviewed": [
+    "project-book/15-human-review-onboarding-portal-record.md",
+    "project-book/portal/index.html",
+    "project-book/portal/portal-data.json",
+    "project-book/portal/diagrams.md",
+    "project-book/records/human-review-portal-record.json",
+    "tests/portal-index-audit.cjs"
+  ],
+  "residual_risks": [
+    "The portal is static and local-first.",
+    "Hosted comments, access control, and full-text search remain future scope.",
+    "Browser runtime profile folders are excluded from review coverage."
+  ]
+}

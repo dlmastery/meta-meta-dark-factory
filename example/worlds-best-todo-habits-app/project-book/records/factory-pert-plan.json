@@ -1,0 +1,150 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+  },
+  "template_only": false,
+  "plan_id": "PERT-NORTHSTAR-20260425-001",
+  "run_id": "DFRUN-NORTHSTAR-20260425-001",
+  "current_step_id": "RUN-CLOSED",
+  "critical_path": [
+    "STEP-NORTHSTAR-001",
+    "STEP-NORTHSTAR-002",
+    "STEP-NORTHSTAR-003",
+    "STEP-NORTHSTAR-004",
+    "STEP-NORTHSTAR-005",
+    "STEP-NORTHSTAR-006",
+    "STEP-NORTHSTAR-007",
+    "STEP-NORTHSTAR-008"
+  ],
+  "nodes": [
+    {
+      "step_id": "STEP-NORTHSTAR-001",
+      "title": "Governed product slice",
+      "duration_swag_tokens": {
+        "low": 60000,
+        "mid": 100000,
+        "high": 140000
+      },
+      "predecessors": [],
+      "successors": [
+        "STEP-NORTHSTAR-002"
+      ],
+      "ready_state": "accepted"
+    },
+    {
+      "step_id": "STEP-NORTHSTAR-002",
+      "title": "Iteration 2 product hardening",
+      "duration_swag_tokens": {
+        "low": 12000,
+        "mid": 22000,
+        "high": 35000
+      },
+      "predecessors": [
+        "STEP-NORTHSTAR-001"
+      ],
+      "successors": [
+        "STEP-NORTHSTAR-003"
+      ],
+      "ready_state": "accepted"
+    },
+    {
+      "step_id": "STEP-NORTHSTAR-003",
+      "title": "RALPH-20 E2E completeness",
+      "duration_swag_tokens": {
+        "low": 30000,
+        "mid": 55000,
+        "high": 90000
+      },
+      "predecessors": [
+        "STEP-NORTHSTAR-002"
+      ],
+      "successors": [
+        "STEP-NORTHSTAR-004"
+      ],
+      "ready_state": "accepted"
+    },
+    {
+      "step_id": "STEP-NORTHSTAR-004",
+      "title": "Standards and meta-meta charter audit",
+      "duration_swag_tokens": {
+        "low": 18000,
+        "mid": 32000,
+        "high": 55000
+      },
+      "predecessors": [
+        "STEP-NORTHSTAR-003"
+      ],
+      "successors": [
+        "STEP-NORTHSTAR-005"
+      ],
+      "ready_state": "accepted"
+    },
+    {
+      "step_id": "STEP-NORTHSTAR-005",
+      "title": "Internal certification-readiness hardening",
+      "duration_swag_tokens": {
+        "low": 10000,
+        "mid": 20000,
+        "high": 35000
+      },
+      "predecessors": [
+        "STEP-NORTHSTAR-004"
+      ],
+      "successors": [
+        "STEP-NORTHSTAR-006"
+      ],
+      "ready_state": "accepted"
+    },
+    {
+      "step_id": "STEP-NORTHSTAR-006",
+      "title": "UX reliability and QA certification RALPH",
+      "duration_swag_tokens": {
+        "low": 18000,
+        "mid": 32000,
+        "high": 60000
+      },
+      "predecessors": [
+        "STEP-NORTHSTAR-005"
+      ],
+      "successors": [
+        "STEP-NORTHSTAR-007"
+      ],
+      "ready_state": "accepted"
+    },
+    {
+      "step_id": "STEP-NORTHSTAR-007",
+      "title": "Material UI standards conformance",
+      "duration_swag_tokens": {
+        "low": 6000,
+        "mid": 12000,
+        "high": 22000
+      },
+      "predecessors": [
+        "STEP-NORTHSTAR-006"
+      ],
+      "successors": [
+        "STEP-NORTHSTAR-008"
+      ],
+      "ready_state": "accepted"
+    },
+    {
+      "step_id": "STEP-NORTHSTAR-008",
+      "title": "Human review and onboarding portal",
+      "duration_swag_tokens": {
+        "low": 7000,
+        "mid": 14000,
+        "high": 26000
+      },
+      "predecessors": [
+        "STEP-NORTHSTAR-007"
+      ],
+      "successors": [
+        "RUN-CLOSED"
+      ],
+      "ready_state": "accepted"
+    }
+  ],
+  "ready_candidates": [],
+  "blockers": [],
+  "closure": "Run closed after accepted human review and onboarding portal slice."
+}

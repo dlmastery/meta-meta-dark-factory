@@ -1,0 +1,83 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+    "strict_compliance": "Mandatory. Every claim must be project-specific, evidence-backed, trace-linked, reviewer-challenged, and free of unsupported invention.",
+    "missing_evidence_rule": "If evidence is missing, mark it as an assumption, risk, open question, or failure."
+  },
+  "id": "SDR-000",
+  "status": "draft",
+  "source_interrogation": "ITR-000",
+  "version": "0.1",
+  "standard_basis": [
+    "ISO/IEC/IEEE 29148",
+    "ISO/IEC/IEEE 15289",
+    "RUP use-case decomposition",
+    "Agile story slicing",
+    "DDD domain decomposition"
+  ],
+  "reviewers": [],
+  "evidence": [],
+  "residual_risks": [],
+  "links": {
+    "derives_from": [],
+    "routes_to": [],
+    "tracked_by": [],
+    "gated_by": []
+  },
+  "threshold_percent": 96,
+  "nodes": [
+    {
+      "node_id": "SDN-000",
+      "level": "L0",
+      "title": "",
+      "type": "vision|capability|journey|feature|rule|acceptance_leaf",
+      "parent_id": null,
+      "owner": "",
+      "priority": "must|should|could",
+      "source_answer_ids": [],
+      "assumption_ids": [],
+      "statement": "",
+      "children": [],
+      "coverage_rationale": "",
+      "acceptance_criteria": [],
+      "validation_methods": [],
+      "evidence_targets": [],
+      "dependencies": [],
+      "risks": [],
+      "trace": {
+        "requirements": [],
+        "tests": [],
+        "control_graph_nodes": [],
+        "work_ledgers": [],
+        "refinery_gates": []
+      },
+      "scores": {
+        "intent_preserved": 0,
+        "coverage": 0,
+        "atomic_testable": 0,
+        "functional": 0,
+        "nfr_security_ops": 0,
+        "data_state_interface": 0,
+        "edge_abuse_failure": 0,
+        "dependencies_sequence": 0,
+        "contradictions": 0,
+        "owners_acceptance": 0,
+        "scenario_holdout_transfer": 0,
+        "traceability": 0,
+        "assumptions_waivers": 0,
+        "brownfield_regression": 0,
+        "fresh_reviewer_ready": 0
+      },
+      "reinterrogation_triggers": []
+    }
+  ],
+  "open_questions": [],
+  "contradictions": [],
+  "waivers": [],
+  "approval": {
+    "required": true,
+    "approver": "",
+    "decision": "pending",
+    "at": ""
+  }
+}

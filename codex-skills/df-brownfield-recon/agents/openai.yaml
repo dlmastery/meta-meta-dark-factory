@@ -1,0 +1,4 @@
+interface:
+  display_name: "DF Brownfield Recon"
+  short_description: "Map existing systems before change"
+  default_prompt: "Use $df-brownfield-recon to inspect an existing repo and produce a change impact analysis."

@@ -1,0 +1,20 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+    "strict_compliance": "Mandatory. Every claim must be project-specific, evidence-backed, trace-linked, reviewer-challenged, and free of unsupported invention.",
+    "missing_evidence_rule": "If evidence is missing, mark it as an assumption, risk, open question, or failure."
+  },
+  "id": "CERT-001",
+  "artifact": "",
+  "gate": "",
+  "status": "pending",
+  "thresholds": {
+    "governance": 98,
+    "selected_expert_minimum": 96,
+    "traceability": 100
+  },
+  "results": {},
+  "evidence": [],
+  "residual_risks": [],
+  "human_acceptance_required": false
+}

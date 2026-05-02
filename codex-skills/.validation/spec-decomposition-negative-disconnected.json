@@ -1,0 +1,106 @@
+{
+  "id": "SDR-NEGATIVE-DISCONNECTED-001",
+  "status": "accepted",
+  "source_interrogation": "ITR-NEGATIVE-DISCONNECTED-001",
+  "version": "1.0",
+  "standard_basis": ["ISO/IEC/IEEE 29148"],
+  "reviewers": ["requirements-decomposition-lead", "product-owner", "verification-lead"],
+  "evidence": ["EVD-NEGATIVE-DISCONNECTED"],
+  "residual_risks": [],
+  "links": {
+    "derives_from": ["ITR-NEGATIVE-DISCONNECTED-001"],
+    "routes_to": ["NODE-NEGATIVE-DISCONNECTED"],
+    "tracked_by": ["WL-NEGATIVE-DISCONNECTED"],
+    "gated_by": ["RFG-NEGATIVE-DISCONNECTED"]
+  },
+  "threshold_percent": 96,
+  "nodes": [
+    {
+      "node_id": "SDN-DISCONNECTED-ROOT",
+      "level": "L0",
+      "title": "Root",
+      "type": "vision",
+      "parent_id": null,
+      "owner": "requirements-lead",
+      "priority": "must",
+      "source_answer_ids": ["ANS-DISCONNECTED-ROOT"],
+      "assumption_ids": [],
+      "statement": "Root goal.",
+      "children": [],
+      "coverage_rationale": "Invalid missing children.",
+      "trace": {
+        "requirements": ["REQ-DISCONNECTED"],
+        "tests": ["TST-DISCONNECTED"],
+        "control_graph_nodes": ["NODE-NEGATIVE-DISCONNECTED"],
+        "work_ledgers": ["WL-NEGATIVE-DISCONNECTED"],
+        "refinery_gates": ["RFG-NEGATIVE-DISCONNECTED"]
+      },
+      "scores": {
+        "intent_preserved": 4,
+        "coverage": 4,
+        "atomic_testable": 4,
+        "functional": 4,
+        "nfr_security_ops": 4,
+        "data_state_interface": 4,
+        "edge_abuse_failure": 4,
+        "dependencies_sequence": 4,
+        "contradictions": 4,
+        "owners_acceptance": 4,
+        "scenario_holdout_transfer": 4,
+        "traceability": 4,
+        "assumptions_waivers": 4,
+        "brownfield_regression": 4,
+        "fresh_reviewer_ready": 4
+      },
+      "reinterrogation_triggers": []
+    },
+    {
+      "node_id": "SDN-DISCONNECTED-ORPHAN",
+      "level": "L1",
+      "title": "Orphan",
+      "type": "capability",
+      "parent_id": "SDN-DISCONNECTED-ROOT",
+      "owner": "requirements-lead",
+      "priority": "must",
+      "source_answer_ids": ["ANS-DISCONNECTED-ORPHAN"],
+      "assumption_ids": [],
+      "statement": "This node claims a parent but the parent does not list it.",
+      "children": [],
+      "coverage_rationale": "Invalid disconnected node.",
+      "trace": {
+        "requirements": ["REQ-DISCONNECTED"],
+        "tests": ["TST-DISCONNECTED"],
+        "control_graph_nodes": ["NODE-NEGATIVE-DISCONNECTED"],
+        "work_ledgers": ["WL-NEGATIVE-DISCONNECTED"],
+        "refinery_gates": ["RFG-NEGATIVE-DISCONNECTED"]
+      },
+      "scores": {
+        "intent_preserved": 4,
+        "coverage": 4,
+        "atomic_testable": 4,
+        "functional": 4,
+        "nfr_security_ops": 4,
+        "data_state_interface": 4,
+        "edge_abuse_failure": 4,
+        "dependencies_sequence": 4,
+        "contradictions": 4,
+        "owners_acceptance": 4,
+        "scenario_holdout_transfer": 4,
+        "traceability": 4,
+        "assumptions_waivers": 4,
+        "brownfield_regression": 4,
+        "fresh_reviewer_ready": 4
+      },
+      "reinterrogation_triggers": []
+    }
+  ],
+  "open_questions": [],
+  "contradictions": [],
+  "waivers": [],
+  "approval": {
+    "required": true,
+    "approver": "human-owner",
+    "decision": "approved",
+    "at": "2026-04-24T15:00:00-07:00"
+  }
+}

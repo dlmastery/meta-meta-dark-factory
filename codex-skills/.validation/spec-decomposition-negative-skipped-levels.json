@@ -1,0 +1,111 @@
+{
+  "id": "SDR-NEGATIVE-SKIP-001",
+  "status": "accepted",
+  "source_interrogation": "ITR-NEGATIVE-SKIP-001",
+  "version": "1.0",
+  "standard_basis": ["ISO/IEC/IEEE 29148"],
+  "reviewers": ["requirements-decomposition-lead", "product-owner", "verification-lead"],
+  "evidence": ["EVD-NEGATIVE-SKIP"],
+  "residual_risks": [],
+  "links": {
+    "derives_from": ["ITR-NEGATIVE-SKIP-001"],
+    "routes_to": ["NODE-NEGATIVE-SKIP"],
+    "tracked_by": ["WL-NEGATIVE-SKIP"],
+    "gated_by": ["RFG-NEGATIVE-SKIP"]
+  },
+  "threshold_percent": 96,
+  "nodes": [
+    {
+      "node_id": "SDN-SKIP-ROOT",
+      "level": "L0",
+      "title": "Root",
+      "type": "vision",
+      "parent_id": null,
+      "owner": "requirements-lead",
+      "priority": "must",
+      "source_answer_ids": ["ANS-SKIP-ROOT"],
+      "assumption_ids": [],
+      "statement": "Root goal.",
+      "children": ["SDN-SKIP-LEAF"],
+      "coverage_rationale": "Invalidly skips levels.",
+      "trace": {
+        "requirements": ["REQ-SKIP"],
+        "tests": ["TST-SKIP"],
+        "control_graph_nodes": ["NODE-NEGATIVE-SKIP"],
+        "work_ledgers": ["WL-NEGATIVE-SKIP"],
+        "refinery_gates": ["RFG-NEGATIVE-SKIP"]
+      },
+      "scores": {
+        "intent_preserved": 4,
+        "coverage": 4,
+        "atomic_testable": 4,
+        "functional": 4,
+        "nfr_security_ops": 4,
+        "data_state_interface": 4,
+        "edge_abuse_failure": 4,
+        "dependencies_sequence": 4,
+        "contradictions": 4,
+        "owners_acceptance": 4,
+        "scenario_holdout_transfer": 4,
+        "traceability": 4,
+        "assumptions_waivers": 4,
+        "brownfield_regression": 4,
+        "fresh_reviewer_ready": 4
+      },
+      "reinterrogation_triggers": []
+    },
+    {
+      "node_id": "SDN-SKIP-LEAF",
+      "level": "L5",
+      "title": "Skipped leaf",
+      "type": "acceptance_leaf",
+      "parent_id": "SDN-SKIP-ROOT",
+      "owner": "requirements-lead",
+      "priority": "must",
+      "source_answer_ids": ["ANS-SKIP-LEAF"],
+      "assumption_ids": [],
+      "statement": "This leaf skips L1-L4 without waiver.",
+      "children": [],
+      "coverage_rationale": "",
+      "acceptance_criteria": ["The validator must reject this record."],
+      "validation_methods": ["negative-test"],
+      "evidence_targets": ["EVD-NEGATIVE-SKIP"],
+      "dependencies": [],
+      "risks": [],
+      "trace": {
+        "requirements": ["REQ-SKIP"],
+        "tests": ["TST-SKIP"],
+        "control_graph_nodes": ["NODE-NEGATIVE-SKIP"],
+        "work_ledgers": ["WL-NEGATIVE-SKIP"],
+        "refinery_gates": ["RFG-NEGATIVE-SKIP"]
+      },
+      "scores": {
+        "intent_preserved": 4,
+        "coverage": 4,
+        "atomic_testable": 4,
+        "functional": 4,
+        "nfr_security_ops": 4,
+        "data_state_interface": 4,
+        "edge_abuse_failure": 4,
+        "dependencies_sequence": 4,
+        "contradictions": 4,
+        "owners_acceptance": 4,
+        "scenario_holdout_transfer": 4,
+        "traceability": 4,
+        "assumptions_waivers": 4,
+        "brownfield_regression": 4,
+        "fresh_reviewer_ready": 4
+      },
+      "reinterrogation_triggers": []
+    }
+  ],
+  "open_questions": [],
+  "contradictions": [],
+  "waivers": [],
+  "approval": {
+    "required": true,
+    "approver": "human-owner",
+    "decision": "approved",
+    "at": "2026-04-24T15:00:00-07:00"
+  }
+}

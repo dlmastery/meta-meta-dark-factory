@@ -1,0 +1,28 @@
+{
+  "id": "WL-PASS20-001",
+  "title": "Ralph loop pass 20 recursive validation bypass closure",
+  "current_state": "accepted",
+  "next_action": "Use stricter intake and decomposition validators in the next full project simulation.",
+  "revalidation_trigger": "Any future finding that a decomposition package can pass without actual tree integrity, answer proof, or trace proof.",
+  "owner": {
+    "accountable": "codex",
+    "responsible": "codex"
+  },
+  "acceptance_criteria": [
+    "Pass 20 findings documented",
+    "Intake package validator invokes decomposition validation",
+    "Skipped levels rejected unless explicitly waived",
+    "Disconnected nodes rejected",
+    "Validation runner proves positive and negative paths"
+  ],
+  "evidence_required": [
+    "pass20 critic/fix record",
+    "DFMS hardening runner output",
+    "bundle hash comparison"
+  ],
+  "evidence_provided": [
+    "20-ralph-loop-critic-review-and-fix-record.md",
+    "DFMS hardening checks complete",
+    "INSTALLED_WORKSPACE_HASHES_MATCH"
+  ]
+}

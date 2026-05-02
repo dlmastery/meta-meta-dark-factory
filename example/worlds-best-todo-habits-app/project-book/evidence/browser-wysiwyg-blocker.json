@@ -1,0 +1,11 @@
+{
+  "status": "blocked",
+  "reason": "Browser executable launch failed in this environment.",
+  "error": "browserType.launch: spawn EPERM",
+  "attemptedBrowsers": [
+    "bundled Playwright Chromium",
+    "Google Chrome",
+    "Microsoft Edge"
+  ],
+  "nextAction": "Run this same script in an environment that permits launching a local browser executable."
+}

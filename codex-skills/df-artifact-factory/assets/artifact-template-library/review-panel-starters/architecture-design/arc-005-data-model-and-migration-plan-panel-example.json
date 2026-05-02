@@ -1,0 +1,232 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+    "strict_compliance": "Mandatory. Every claim must be project-specific, evidence-backed, trace-linked, reviewer-challenged, and free of unsupported invention.",
+    "missing_evidence_rule": "If evidence is missing, mark it as an assumption, risk, open question, or failure."
+  },
+  "id": "EXAMPLE-ONLY-ARC-005-PANEL",
+  "artifact_id": "ARC-005",
+  "artifact_name": "Data Model and Migration Plan",
+  "artifact_path": "example only - project-book/arc-005-data-model-and-migration-plan.md",
+  "control_graph_node": "example only - CG-CQ-001",
+  "work_ledger_item": "example only - WL-CQ-ARC-005-001",
+  "panel_source": "references/artifact-critic-panel-matrix.md",
+  "panel_selection_rationale": "example only - selected from artifact-specific critic matrix",
+  "coverage_model": {
+    "content_authority": true,
+    "governance_and_trace": true,
+    "verification_and_handoff": true
+  },
+  "critics": [
+    {
+      "critic_seat_id": "ARC-005-C1 Data Architecture Critic",
+      "base_persona": "example only - choose the matching elite persona from df-swarm-coordination/references/role-roster.md",
+      "persona_summary": "example only - specialist critic for Data Model and Migration Plan",
+      "seniority_bar": "example only - senior industry reviewer with authority to reject weak evidence",
+      "artifact_specific_mandate": "example only - validates entities, relationships, ownership, lifecycle, and data quality.",
+      "decision_rights": [
+        "example only - pass",
+        "revise",
+        "fail",
+        "split",
+        "escalate"
+      ],
+      "primary_lens": "example only - entities",
+      "non_negotiables": [
+        "example only - no unsupported claims",
+        "example only - no missing owner or trace",
+        "example only - no pass without concrete evidence"
+      ],
+      "signature_questions": [
+        "example only - does this artifact prove entities?",
+        "example only - what evidence would change the critic's vote?",
+        "example only - can a future human resume from this record?"
+      ],
+      "red_flags": [
+        "example only - generic language",
+        "example only - template text treated as proof",
+        "example only - missing failed-point fix evidence"
+      ],
+      "artifact_checks": [
+        "example only - verify entities with owner, trace, and evidence",
+        "example only - verify relationships with owner, trace, and evidence",
+        "example only - verify migration steps with owner, trace, and evidence",
+        "example only - verify privacy handling with owner, trace, and evidence",
+        "example only - verify reconciliation checks with owner, trace, and evidence"
+      ],
+      "adversarial_challenge": "example only - challenge another critic's assumption before synthesis",
+      "evidence_required_for_pass": [
+        "example only - artifact-specific evidence bundle",
+        "example only - rubric score record",
+        "example only - refinery gate"
+      ],
+      "independent_review_required": true,
+      "handoff_note": "example only - replace with real reviewer handoff note"
+    },
+    {
+      "critic_seat_id": "ARC-005-C2 Security and Privacy Critic",
+      "base_persona": "example only - choose the matching elite persona from df-swarm-coordination/references/role-roster.md",
+      "persona_summary": "example only - specialist critic for Data Model and Migration Plan",
+      "seniority_bar": "example only - senior industry reviewer with authority to reject weak evidence",
+      "artifact_specific_mandate": "example only - validates classification, retention, access, masking, and compliance.",
+      "decision_rights": [
+        "example only - pass",
+        "revise",
+        "fail",
+        "split",
+        "escalate"
+      ],
+      "primary_lens": "example only - relationships",
+      "non_negotiables": [
+        "example only - no unsupported claims",
+        "example only - no missing owner or trace",
+        "example only - no pass without concrete evidence"
+      ],
+      "signature_questions": [
+        "example only - does this artifact prove entities?",
+        "example only - what evidence would change the critic's vote?",
+        "example only - can a future human resume from this record?"
+      ],
+      "red_flags": [
+        "example only - generic language",
+        "example only - template text treated as proof",
+        "example only - missing failed-point fix evidence"
+      ],
+      "artifact_checks": [
+        "example only - verify entities with owner, trace, and evidence",
+        "example only - verify relationships with owner, trace, and evidence",
+        "example only - verify migration steps with owner, trace, and evidence",
+        "example only - verify privacy handling with owner, trace, and evidence",
+        "example only - verify reconciliation checks with owner, trace, and evidence"
+      ],
+      "adversarial_challenge": "example only - challenge another critic's assumption before synthesis",
+      "evidence_required_for_pass": [
+        "example only - artifact-specific evidence bundle",
+        "example only - rubric score record",
+        "example only - refinery gate"
+      ],
+      "independent_review_required": true,
+      "handoff_note": "example only - replace with real reviewer handoff note"
+    },
+    {
+      "critic_seat_id": "ARC-005-C3 Migration Reliability Critic",
+      "base_persona": "example only - choose the matching elite persona from df-swarm-coordination/references/role-roster.md",
+      "persona_summary": "example only - specialist critic for Data Model and Migration Plan",
+      "seniority_bar": "example only - senior industry reviewer with authority to reject weak evidence",
+      "artifact_specific_mandate": "example only - validates backfill, validation queries, rollback, performance, and operational window.",
+      "decision_rights": [
+        "example only - pass",
+        "revise",
+        "fail",
+        "split",
+        "escalate"
+      ],
+      "primary_lens": "example only - migration steps",
+      "non_negotiables": [
+        "example only - no unsupported claims",
+        "example only - no missing owner or trace",
+        "example only - no pass without concrete evidence"
+      ],
+      "signature_questions": [
+        "example only - does this artifact prove entities?",
+        "example only - what evidence would change the critic's vote?",
+        "example only - can a future human resume from this record?"
+      ],
+      "red_flags": [
+        "example only - generic language",
+        "example only - template text treated as proof",
+        "example only - missing failed-point fix evidence"
+      ],
+      "artifact_checks": [
+        "example only - verify entities with owner, trace, and evidence",
+        "example only - verify relationships with owner, trace, and evidence",
+        "example only - verify migration steps with owner, trace, and evidence",
+        "example only - verify privacy handling with owner, trace, and evidence",
+        "example only - verify reconciliation checks with owner, trace, and evidence"
+      ],
+      "adversarial_challenge": "example only - challenge another critic's assumption before synthesis",
+      "evidence_required_for_pass": [
+        "example only - artifact-specific evidence bundle",
+        "example only - rubric score record",
+        "example only - refinery gate"
+      ],
+      "independent_review_required": true,
+      "handoff_note": "example only - replace with real reviewer handoff note"
+    }
+  ],
+  "adversarial_critics": [
+    {
+      "critic_id": "ANTI-SLOP-RED-TEAM",
+      "base_persona": "example only - anti-slop red team critic",
+      "persona_summary": "example only - attacks generic filler, unsupported claims, template residue, false certainty, and evidence mismatch",
+      "seniority_bar": "example only - elite assurance reviewer with authority to block slop",
+      "attack_mandate": "example only - beat the artifact until every claim has evidence",
+      "non_negotiables": [
+        "example only - no generic filler",
+        "example only - no template residue",
+        "example only - no unsupported quality claims"
+      ],
+      "attack_questions": [
+        "example only - what claim is not proven?",
+        "example only - what text could apply to any project?",
+        "example only - what evidence is fake or stale?"
+      ],
+      "red_flags": [
+        "example only - vague confidence",
+        "example only - example data as proof",
+        "example only - missing trace"
+      ],
+      "evidence_required_to_stand_down": [
+        "example only - fixed artifact",
+        "example only - trace evidence",
+        "example only - re-review evidence"
+      ],
+      "independent_review_required": true,
+      "handoff_note": "example only - replace with real adversarial critic handoff"
+    },
+    {
+      "critic_id": "FAILURE-MODE-REALITY-CRITIC",
+      "base_persona": "example only - failure-mode reality critic",
+      "persona_summary": "example only - attacks real-world failure modes, edge cases, operations, support, adoption, and maintainability",
+      "seniority_bar": "example only - elite production and delivery reviewer with authority to block fragile artifacts",
+      "attack_mandate": "example only - find embarrassing counterexamples and operational breakdowns",
+      "non_negotiables": [
+        "example only - no happy-path-only artifact",
+        "example only - no unowned operational risk",
+        "example only - no handoff that requires the original author"
+      ],
+      "attack_questions": [
+        "example only - how does this fail in production?",
+        "example only - what would support or operations not understand?",
+        "example only - what edge case breaks the claim?"
+      ],
+      "red_flags": [
+        "example only - missing edge cases",
+        "example only - missing operator path",
+        "example only - untested failure mode"
+      ],
+      "evidence_required_to_stand_down": [
+        "example only - failure-mode coverage",
+        "example only - handoff proof",
+        "example only - rerun evidence"
+      ],
+      "independent_review_required": true,
+      "handoff_note": "example only - replace with real failure-mode critic handoff"
+    }
+  ],
+  "minimum_adversarial_critics": 2,
+  "minimum_ralph_loops": 5,
+  "ralph_loop_record": "example only - reviews/arc-005-ralph-loop.json",
+  "specialist_expansion": {
+    "needed": false,
+    "reason": "example only - add specialists if real project risk requires it",
+    "added_critics": []
+  },
+  "cross_critique_required": true,
+  "rubric_score_record": "example only - reviews/arc-005-rubric.json",
+  "refinery_gate": "example only - gates/arc-005-gate.yaml",
+  "trace_evidence": [
+    "example only - trace/arc-005-trace.json"
+  ],
+  "status": "example-only"
+}

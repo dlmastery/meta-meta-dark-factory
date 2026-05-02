@@ -1,0 +1,33 @@
+{
+  "id": "WL-PASS23-001",
+  "title": "Ralph loop pass 23 quality-certificate hardening",
+  "current_state": "accepted",
+  "next_action": "Use validate_quality_certificate.py before future DFMS quality certificates are accepted.",
+  "revalidation_trigger": "Any future finding that certificates can pass with template fields, weak scores, mismatched reviewers, missing refinery gate, or missing evidence.",
+  "owner": {
+    "accountable": "codex",
+    "responsible": "codex"
+  },
+  "acceptance_criteria": [
+    "Pass 23 findings documented",
+    "Quality certificate validator added",
+    "Certificate template updated",
+    "Hardening runner compiles and executes certificate validator",
+    "Positive and negative certificate fixtures behave as expected"
+  ],
+  "evidence_required": [
+    "pass23 critic/fix record",
+    "DFMS hardening runner output",
+    "pass23 merged-record validation",
+    "installed/workspace hash comparison"
+  ],
+  "evidence_provided": [
+    "23-ralph-loop-critic-review-and-fix-record.md",
+    "DFMS hardening checks complete",
+    "ATTR-PASS23-001",
+    "CG-PASS23-001",
+    "RFG-PASS23-001",
+    "records/pass23 merged records",
+    "INSTALLED_WORKSPACE_HASHES_MATCH"
+  ]
+}

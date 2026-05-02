@@ -1,0 +1,51 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+    "strict_compliance": "Mandatory. Every claim must be project-specific, evidence-backed, trace-linked, reviewer-challenged, and free of unsupported invention.",
+    "missing_evidence_rule": "If evidence is missing, mark it as an assumption, risk, open question, or failure."
+  },
+  "id": "MBR-000",
+  "status": "draft",
+  "source": "",
+  "standards_tailoring": [],
+  "included_methods": [
+    {
+      "method": "RUP|MDA|DDD|TDD|BDD|SRE|Agile|SSDF|OWASP_SAMM|company_playbook",
+      "why_included": "",
+      "control_graph_nodes": [],
+      "work_ledger_items": [],
+      "required_artifacts": [],
+      "reviewers": [],
+      "refinery_gates": [],
+      "mandatory_evidence": []
+    }
+  ],
+  "mda_transformations": [
+    {
+      "from": "CIM",
+      "to": "PIM",
+      "mapping_rule": "",
+      "exceptions": [],
+      "verification_evidence": []
+    }
+  ],
+  "ddd_checks": {
+    "ubiquitous_language": "",
+    "bounded_contexts": [],
+    "aggregates": [],
+    "anti_corruption_layers": []
+  },
+  "tdd_bdd_evidence": {
+    "red_green_refactor_records": [],
+    "acceptance_scenarios": [],
+    "holdout_scenarios": []
+  },
+  "conflicts": [],
+  "decisions": [],
+  "trace": {
+    "requirements": [],
+    "artifacts": [],
+    "tests": [],
+    "refinery_gates": []
+  }
+}

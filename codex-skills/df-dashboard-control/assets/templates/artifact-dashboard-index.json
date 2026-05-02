@@ -1,0 +1,36 @@
+{
+  "zero_slop_policy": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+  "template_marker": "TEMPLATE_ONLY_NOT_EVIDENCE",
+  "dashboard_id": "DASH-<project>-<yyyymmdd>",
+  "project": "<project name>",
+  "generated_at": "<ISO-8601 timestamp>",
+  "source_root": "<project book root>",
+  "nodes": [
+    {
+      "id": "NODE-001",
+      "kind": "artifact|evidence|gate|certificate|task|decision|risk|requirement|test|portal|code|diagram",
+      "title": "<human title>",
+      "path": "<relative path or URI>",
+      "stage": "<intake|requirements|design|implementation|verification|release|operations|evidence|portal>",
+      "status": "<planned|draft|accepted|conditional|blocked|stale|retired>",
+      "owner": "<human or agent owner>",
+      "gate": "<gate id>",
+      "certificate": "<certificate id>",
+      "redo_boundary": false,
+      "tags": []
+    }
+  ],
+  "edges": [
+    {
+      "source": "NODE-001",
+      "target": "NODE-002",
+      "type": "depends_on|satisfies|verifies|documents|generated_from|reviewed_by|certified_by|reopens|inferred_reference",
+      "evidence": "<path or explanation>",
+      "authority": "explicit|inferred",
+      "reason": "<why the edge exists>"
+    }
+  ],
+  "validators": [],
+  "open_questions": [],
+  "residual_risks": []
+}

@@ -1,0 +1,137 @@
+{
+  "id": "CG-PASS22-001",
+  "name": "Pass 22 quality-refinery hardening",
+  "goal": "Ensure expert rubric and refinery gate validators cannot bless weakened thresholds, unresolved failed points, or failed pass gates.",
+  "risks": [
+    "A caller could lower the rubric threshold and pass a weak panel",
+    "A low rubric check could be marked as risk without fix evidence",
+    "A refinery gate could say pass while core checks failed or evidence was empty"
+  ],
+  "links": {
+    "attractor": "ATTR-PASS22-001",
+    "work_ledger": "WL-PASS22-001",
+    "refinery_gate": "RFG-PASS22-001"
+  },
+  "nodes": [
+    {
+      "id": "NODE-PASS22-CRITIC",
+      "label": "Pass 22 quality-gate critic review",
+      "owner": "codex",
+      "node_contract": {
+        "what": "Review quality-refinery validators against transcript proof requirements.",
+        "why": "Expert rubrics and refinery gates are the acceptance boundary for every serious artifact.",
+        "how": "Prove low-threshold and bad-pass bypasses with temporary fixtures.",
+        "where": "score_rubric_matrix.py, validate_refinery_gate.py, templates, and hardening runner.",
+        "when": "Before pass 22 fixes are accepted.",
+        "who": "Codex using governance, quality, and verification expert lenses.",
+        "how_good": "Each finding is reproducible and tied to a regression check."
+      },
+      "expert_panel": [
+        "quality-refinery-reviewer",
+        "requirements-governance-architect",
+        "verification-safety-critic"
+      ],
+      "rubrics": [
+        "threshold integrity",
+        "failed-point fix evidence",
+        "pass-gate evidence completeness"
+      ],
+      "feedback_loop": "Any accepted finding becomes a validator patch and hardening-runner negative case.",
+      "gates": [
+        "bypasses reproduced",
+        "findings severity-ranked",
+        "fixes mapped to files"
+      ],
+      "evidence_outputs": [
+        "22-ralph-loop-critic-review-and-fix-record.md"
+      ]
+    },
+    {
+      "id": "NODE-PASS22-FIX",
+      "label": "Quality-refinery validator hardening",
+      "owner": "codex",
+      "node_contract": {
+        "what": "Patch rubric and refinery validators plus live skill guidance.",
+        "why": "Future quality certificates must not be based on weakened gates.",
+        "how": "Edit installed scripts/templates, sync workspace copies, and add positive and negative fixtures.",
+        "where": "df-quality-refinery skill and codex-skills validation suite.",
+        "when": "After critic review and before final validation.",
+        "who": "Codex as implementer.",
+        "how_good": "Positive fixtures pass and the new negative fixtures fail."
+      },
+      "expert_panel": [
+        "quality-lead",
+        "governance-auditor",
+        "validation-engineer"
+      ],
+      "rubrics": [
+        "validator enforceability",
+        "template inheritance",
+        "regression coverage"
+      ],
+      "feedback_loop": "Rerun the full hardening suite after every change.",
+      "gates": [
+        "installed validators compile",
+        "workspace validators compile",
+        "new negative fixtures reject"
+      ],
+      "evidence_outputs": [
+        "score_rubric_matrix.py",
+        "validate_refinery_gate.py",
+        "refinery-gate-pass.yaml",
+        "run_pre17_hardening_checks.ps1"
+      ]
+    },
+    {
+      "id": "NODE-PASS22-VERIFY",
+      "label": "Pass 22 verification sweep",
+      "owner": "codex",
+      "node_contract": {
+        "what": "Verify final pass 22 state.",
+        "why": "The fix only counts if the executable suite proves the new gates.",
+        "how": "Run the DFMS hardening suite, merged-record validation, hash sync, JSON, ASCII, and artifact ID checks.",
+        "where": "Workspace validation suite and pass 22 records.",
+        "when": "After all patches and records are written.",
+        "who": "Codex as verification runner.",
+        "how_good": "All checks pass and residual risks remain explicit."
+      },
+      "expert_panel": [
+        "verification-lead",
+        "traceability-lead",
+        "release-readiness-reviewer"
+      ],
+      "rubrics": [
+        "positive-path preservation",
+        "negative-path rejection",
+        "evidence completeness"
+      ],
+      "feedback_loop": "Any failed check reopens the fix node.",
+      "gates": [
+        "hardening runner passes",
+        "pass 22 merged records validate",
+        "hash sync succeeds"
+      ],
+      "evidence_outputs": [
+        "DFMS hardening checks complete",
+        "records/pass22 merged records"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "ATTR-PASS22-001",
+      "to": "NODE-PASS22-CRITIC",
+      "type": "governs"
+    },
+    {
+      "from": "NODE-PASS22-CRITIC",
+      "to": "NODE-PASS22-FIX",
+      "type": "requires"
+    },
+    {
+      "from": "NODE-PASS22-FIX",
+      "to": "NODE-PASS22-VERIFY",
+      "type": "must_validate"
+    }
+  ]
+}

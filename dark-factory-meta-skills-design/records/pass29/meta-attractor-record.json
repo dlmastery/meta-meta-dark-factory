@@ -1,0 +1,96 @@
+{
+  "record_id": "ATTR-PASS29-001",
+  "created_on": "2026-04-25",
+  "source_signals": [
+    "User requested Ralph loop pass 29 super critic review",
+    "Pass 28 closed production handoff control-plane bundle validation",
+    "Pass 28 residual risk noted that ledger evidence items could still be names without physical files"
+  ],
+  "attractor_state": "stable",
+  "goal": "Close the physical evidence-file proof gap so production handoff ledger evidence cannot remain file-shaped prose.",
+  "layer_map": {
+    "product_specific": [
+      "No product-specific behavior is introduced; this hardens reusable evidence packaging."
+    ],
+    "factory_reusable": [
+      "Production handoff bundles must include the actual artifact/report files named by ledger evidence."
+    ],
+    "meta_meta_governance": [
+      "Pass 29 is governed by Attractor, control graph, work ledger, refinery gate, and hardening-runner evidence."
+    ]
+  },
+  "control_plane_links": {
+    "control_graph": "CG-PASS29-001",
+    "work_ledger": "WL-PASS29-001",
+    "refinery_gate": "RFG-PASS29-001"
+  },
+  "selected_mode": "skill-system-revision",
+  "selected_skills": [
+    {
+      "skill": "df-meta-attractor",
+      "reason": "govern this as a meta-meta hardening pass",
+      "load_now": true
+    },
+    {
+      "skill": "df-production-sre-handoff",
+      "reason": "harden physical evidence-file validation for production handoff bundles",
+      "load_now": true
+    },
+    {
+      "skill": "df-traceability-evidence",
+      "reason": "turn ledger evidence names into provided artifact files",
+      "load_now": true
+    },
+    {
+      "skill": "df-quality-refinery",
+      "reason": "add regression checks for missing evidence files and ledger evidence-file drift",
+      "load_now": true
+    }
+  ],
+  "gates": [
+    "production handoff validation requires --evidence-file bundle evidence",
+    "file-like work ledger evidence_provided entries must match provided evidence file basenames",
+    "evidence-file bundle must mention production handoff id",
+    "evidence-file bundle must mention each outage drill id",
+    "evidence-file bundle must mention runbook replay id",
+    "pass 29 merged records validate"
+  ],
+  "node_contract": {
+    "what": "Run pass 29 critic review and harden physical evidence-file bundle validation.",
+    "why": "A ledger entry naming a file is not proof unless the actual file is included in the evidence bundle.",
+    "how": "Add --evidence-file arguments, compare ledger file-like evidence entries to provided file basenames, require handoff/drill/replay IDs in evidence file contents, and add regression checks.",
+    "where": "df-production-sre-handoff installed skill, workspace bundle, validation runner, and project-book records.",
+    "when": "Before future production handoff bundles are accepted as evidence-backed handoffs.",
+    "who": "Codex as responsible fixer; human owner as Ralph-loop driver and accountable release approver.",
+    "how_good": "Complete evidence-file bundle passes while missing files or ledger-file drift rejects."
+  },
+  "expert_debate": {
+    "system_theorist": "The bundle now connects records, but the artifact evidence layer still needs closure so the ledger does not become a naming illusion.",
+    "requirements_governance_architect": "Evidence provided by a work ledger must resolve to actual artifact files or durable IDs with explicit residual risk.",
+    "verification_safety_critic": "File-like evidence strings are bypassable unless the validator sees those files and checks their contents.",
+    "synthesis": "Require evidence-file bundle inputs and reject ledgers that name files not provided."
+  },
+  "human_decisions": [
+    "Human owner requested pass 29 and asked to fix any new findings."
+  ],
+  "assumptions": [
+    "Pass 29 is a patch-level physical evidence-file hardening pass, not a full artifact-management system."
+  ],
+  "risks": [
+    "Evidence-file validation proves presence and key ID mentions, not full semantic correctness of every document.",
+    "Full greenfield and brownfield simulations remain future work."
+  ],
+  "evidence_commitments": [
+    "production handoff pass fixture validates with evidence-file bundle inputs",
+    "production handoff missing evidence-file bundle fixture is rejected",
+    "bad production ledger evidence-file mapping fixture is rejected",
+    "existing production, certificate, rubric, trace, intake, decomposition, and merged-control checks still pass or reject as expected",
+    "installed and workspace production validators remain in sync"
+  ],
+  "anti_overfit_checks": [
+    "No todo-app-specific rule is introduced.",
+    "Evidence-file bundle validation applies to any governed production handoff."
+  ],
+  "verdict": "pass",
+  "next_safe_action": "Validate future production handoffs with outage drill, control graph, work ledger, refinery gate, and evidence-file bundle inputs."
+}

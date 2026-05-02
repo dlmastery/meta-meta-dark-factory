@@ -1,0 +1,12 @@
+{
+  "name": "dark-factory-control-console",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local DFMS control console for meta-meta-first skill invocation, interrogation, progress gates, and dashboard redo closure.",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node tests/control-console.test.cjs",
+    "test:browser": "node tests/browser-console.test.cjs"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,31 @@
+{
+  "id": "RFG-PASS26-001",
+  "name": "Pass 26 patch-level refinery gate",
+  "status": "pass",
+  "verdict_rationale": "Pass 26 closes the production/SRE handoff evidence gap by requiring live production handoff and outage drill records with rollback, observability, incident, support, maintenance, training, runbook replay, operator signoff, readiness score, and refinery linkage. This is patch-level only.",
+  "next_action": "Run a full greenfield and brownfield production handoff simulation before claiming runtime readiness.",
+  "evidence": {
+    "test_reports": [
+      "DFMS hardening checks complete",
+      "production handoff pass fixture: pass",
+      "outage drill pass fixture: pass",
+      "production handoff template fixture: rejected",
+      "outage drill template fixture: rejected",
+      "bad production handoff low-readiness fixture: rejected",
+      "bad outage drill unsigned/low-readiness fixture: rejected"
+    ],
+    "rubric_scorecards": [
+      "26-ralph-loop-critic-review-and-fix-record.md"
+    ],
+    "trace_reports": [
+      "records/pass26 merged records",
+      "ATTR-PASS26-001",
+      "CG-PASS26-001",
+      "WL-PASS26-001",
+      "installed and workspace production handoff hashes match"
+    ],
+    "certificates": [
+      "patch-level pass only"
+    ]
+  }
+}

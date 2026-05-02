@@ -1,0 +1,78 @@
+{
+  "id": "SDR-NEGATIVE-001",
+  "status": "accepted",
+  "source_interrogation": "ITR-NEGATIVE-001",
+  "version": "1.0",
+  "threshold_percent": 96,
+  "nodes": [
+    {
+      "node_id": "SDN-BAD-ROOT",
+      "level": "L0",
+      "title": "Too vague",
+      "type": "vision",
+      "parent_id": null,
+      "owner": "requirements-lead",
+      "priority": "must",
+      "source_answer_ids": ["ANS-BAD-001"],
+      "statement": "Build the thing well.",
+      "children": ["SDN-BAD-LEAF"],
+      "coverage_rationale": "",
+      "scores": {
+        "intent_preserved": 4,
+        "coverage": 1,
+        "atomic_testable": 1,
+        "functional": 1,
+        "nfr_security_ops": 0,
+        "data_state_interface": 0,
+        "edge_abuse_failure": 0,
+        "dependencies_sequence": 0,
+        "contradictions": 1,
+        "owners_acceptance": 1,
+        "scenario_holdout_transfer": 0,
+        "traceability": 0,
+        "assumptions_waivers": 0,
+        "brownfield_regression": 0,
+        "fresh_reviewer_ready": 0
+      }
+    },
+    {
+      "node_id": "SDN-BAD-LEAF",
+      "level": "L5",
+      "title": "Do everything",
+      "type": "acceptance_leaf",
+      "parent_id": "SDN-BAD-ROOT",
+      "owner": "",
+      "priority": "must",
+      "source_answer_ids": [],
+      "statement": "Do everything users need.",
+      "children": [],
+      "acceptance_criteria": [],
+      "validation_methods": [],
+      "evidence_targets": [],
+      "trace": {},
+      "scores": {
+        "intent_preserved": 4,
+        "coverage": 1,
+        "atomic_testable": 0,
+        "functional": 1,
+        "nfr_security_ops": 0,
+        "data_state_interface": 0,
+        "edge_abuse_failure": 0,
+        "dependencies_sequence": 0,
+        "contradictions": 1,
+        "owners_acceptance": 0,
+        "scenario_holdout_transfer": 0,
+        "traceability": 0,
+        "assumptions_waivers": 0,
+        "brownfield_regression": 0,
+        "fresh_reviewer_ready": 0
+      }
+    }
+  ],
+  "approval": {
+    "required": true,
+    "approver": "",
+    "decision": "pending",
+    "at": ""
+  }
+}

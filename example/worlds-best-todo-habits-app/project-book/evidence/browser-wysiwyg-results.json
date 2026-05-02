@@ -1,0 +1,22 @@
+[
+  {
+    "viewport": {
+      "name": "desktop",
+      "width": 1440,
+      "height": 950
+    },
+    "consoleErrors": [],
+    "overlapRisk": [],
+    "screenshotPath": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\example\\worlds-best-todo-habits-app\\project-book\\evidence\\wysiwyg-desktop.png"
+  },
+  {
+    "viewport": {
+      "name": "mobile",
+      "width": 390,
+      "height": 844
+    },
+    "consoleErrors": [],
+    "overlapRisk": [],
+    "screenshotPath": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\example\\worlds-best-todo-habits-app\\project-book\\evidence\\wysiwyg-mobile.png"
+  }
+]

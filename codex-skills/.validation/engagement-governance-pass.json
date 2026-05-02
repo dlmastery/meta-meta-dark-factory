@@ -1,0 +1,214 @@
+{
+  "id": "ENG-GOV-VALIDATION-001",
+  "status": "approved",
+  "engagement_model": "client_dark_factory_outsourcing",
+  "client_owner": "client-product-owner",
+  "dark_factory_delivery_owner": "dark-factory-delivery-lead",
+  "scope_baseline": {
+    "in_scope": [
+      "Create a standards-based DFMS governed run",
+      "Produce client checkpoints, token budget approvals, and change-control evidence"
+    ],
+    "out_of_scope": [
+      "Claiming literal zero defects",
+      "Executing unapproved scope changes"
+    ],
+    "assumptions": [
+      "Token estimates are rough SWAGs until decomposition and recon complete",
+      "Client approvals are required for budget expansion and scope rebaseline"
+    ],
+    "acceptance_definition": "Client accepts an iteration only after trace, review, refinery, and checkpoint evidence pass."
+  },
+  "standards_baseline": [
+    "ISO/IEC/IEEE 12207:2017",
+    "ISO/IEC/IEEE 15289:2019",
+    "DFMS governance gates"
+  ],
+  "token_budget": {
+    "currency": "tokens",
+    "estimate_class": "rough_swag",
+    "swag": {
+      "low": 120000,
+      "mid": 220000,
+      "high": 360000
+    },
+    "confidence": "medium",
+    "assumptions": [
+      "Scope remains within the approved iteration plan",
+      "No new brownfield repo recon is added after baseline"
+    ],
+    "exclusions": [
+      "Major scope expansions",
+      "External unavailable systems",
+      "Human approval wait time"
+    ],
+    "approval": {
+      "approver": "client-product-owner",
+      "decision": "approved",
+      "at": "2026-04-25T15:00:00-07:00"
+    },
+    "reapproval_rules": {
+      "token_delta_percent": 15,
+      "scope_change_requires_approval": true,
+      "iteration_overrun_requires_approval": true
+    }
+  },
+  "client_checkpoints": [
+    {
+      "type": "kickoff",
+      "purpose": "Confirm engagement model, owners, communication cadence, and initial constraints.",
+      "cadence_or_trigger": "Before governed factory work starts",
+      "owner": "client-product-owner",
+      "approval_required": true,
+      "approval": {
+        "approver": "client-product-owner",
+        "decision": "approved",
+        "at": "2026-04-25T15:01:00-07:00"
+      },
+      "reapproval_trigger": "Owner or delivery model changes"
+    },
+    {
+      "type": "scope_baseline",
+      "purpose": "Approve in-scope work, out-of-scope exclusions, and acceptance definition.",
+      "cadence_or_trigger": "After interrogation and recursive decomposition",
+      "owner": "client-product-owner",
+      "approval_required": true,
+      "approval": {
+        "approver": "client-product-owner",
+        "decision": "approved",
+        "at": "2026-04-25T15:02:00-07:00"
+      },
+      "reapproval_trigger": "Any new requirement, changed acceptance criterion, or standards expansion"
+    },
+    {
+      "type": "token_budget",
+      "purpose": "Approve rough token SWAG and reapproval thresholds.",
+      "cadence_or_trigger": "Before each material iteration",
+      "owner": "client-product-owner",
+      "approval_required": true,
+      "approval": {
+        "approver": "client-product-owner",
+        "decision": "approved",
+        "at": "2026-04-25T15:03:00-07:00"
+      },
+      "reapproval_trigger": "Token forecast increases by more than 15 percent"
+    },
+    {
+      "type": "iteration_plan",
+      "purpose": "Approve iteration objectives, token bands, and checkpoint exits.",
+      "cadence_or_trigger": "At every iteration boundary",
+      "owner": "client-product-owner",
+      "approval_required": true,
+      "approval": {
+        "approver": "client-product-owner",
+        "decision": "approved",
+        "at": "2026-04-25T15:04:00-07:00"
+      },
+      "reapproval_trigger": "Iteration objective, token SWAG, or exit gate changes"
+    },
+    {
+      "type": "change_control",
+      "purpose": "Approve impact analysis for any scope, token, schedule, quality, or risk change.",
+      "cadence_or_trigger": "On every material change request",
+      "owner": "client-product-owner",
+      "approval_required": true,
+      "approval": {
+        "approver": "client-product-owner",
+        "decision": "approved",
+        "at": "2026-04-25T15:05:00-07:00"
+      },
+      "reapproval_trigger": "Any change request is opened"
+    },
+    {
+      "type": "acceptance",
+      "purpose": "Approve delivered iteration artifacts and residual risks.",
+      "cadence_or_trigger": "At iteration exit and release exit",
+      "owner": "client-product-owner",
+      "approval_required": true,
+      "approval": {
+        "approver": "client-product-owner",
+        "decision": "pending",
+        "at": "2026-04-25T15:06:00-07:00"
+      },
+      "reapproval_trigger": "Any failed refinery gate or reopened risk"
+    },
+    {
+      "type": "retrospective",
+      "purpose": "Approve lessons learned and process updates after each iteration.",
+      "cadence_or_trigger": "After every iteration or failed gate",
+      "owner": "client-product-owner",
+      "approval_required": true,
+      "approval": {
+        "approver": "client-product-owner",
+        "decision": "pending",
+        "at": "2026-04-25T15:07:00-07:00"
+      },
+      "reapproval_trigger": "Any lesson changes standards, templates, or token policy"
+    }
+  ],
+  "iterations": [
+    {
+      "id": "ITER-VALIDATION-001",
+      "objective": "Harden engagement governance and token-budget approval gates.",
+      "token_swag": {
+        "low": 30000,
+        "mid": 60000,
+        "high": 90000
+      },
+      "client_checkpoint": "iteration_plan",
+      "control_graph_node": "NODE-VALIDATION-ENGAGEMENT",
+      "work_ledger_item": "WL-VALIDATION-ENGAGEMENT",
+      "refinery_gate": "RFG-VALIDATION-ENGAGEMENT",
+      "approval": {
+        "approver": "client-product-owner",
+        "decision": "approved",
+        "at": "2026-04-25T15:08:00-07:00"
+      }
+    }
+  ],
+  "change_control": {
+    "approval_required": true,
+    "required_impact_fields": [
+      "scope",
+      "tokens",
+      "schedule",
+      "quality",
+      "risk"
+    ],
+    "rebaseline_trigger": "Any material requirement, artifact, code, or process change after scope baseline",
+    "approval": {
+      "approver": "client-product-owner",
+      "decision": "approved",
+      "at": "2026-04-25T15:09:00-07:00"
+    },
+    "change_requests": [
+      {
+        "id": "CR-VALIDATION-001",
+        "description": "Add token-budget approval gates to DFMS governance.",
+        "token_delta": {
+          "low": 10000,
+          "mid": 20000,
+          "high": 40000
+        },
+        "impact_analysis": {
+          "scope": "Adds engagement governance validation",
+          "tokens": "Consumes additional validation and documentation tokens",
+          "schedule": "Adds a governance gate before material iterations",
+          "quality": "Improves client confidence and auditability",
+          "risk": "Reduces unapproved budget and scope drift"
+        },
+        "approval": {
+          "approver": "client-product-owner",
+          "decision": "approved",
+          "at": "2026-04-25T15:10:00-07:00"
+        }
+      }
+    ]
+  },
+  "trace": {
+    "attractor_record": "ATTR-VALIDATION-ENGAGEMENT",
+    "control_graph": "CG-VALIDATION-ENGAGEMENT",
+    "work_ledger": "WL-VALIDATION-ENGAGEMENT",
+    "refinery_gate": "RFG-VALIDATION-ENGAGEMENT"
+  }
+}

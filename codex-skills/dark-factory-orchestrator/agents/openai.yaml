@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dark Factory Orchestrator"
+  short_description: "Run governed dark-factory workflows"
+  default_prompt: "Use $dark-factory-orchestrator to plan and govern a standards-based software factory run."

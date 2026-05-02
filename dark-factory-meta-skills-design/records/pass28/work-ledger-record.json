@@ -1,0 +1,39 @@
+{
+  "id": "WL-PASS28-001",
+  "title": "Ralph loop pass 28 production handoff control-plane bundle validation",
+  "current_state": "accepted",
+  "next_action": "Use control-plane bundle validation for every governed production handoff.",
+  "revalidation_trigger": "Any future finding that production handoff control graph, work ledger, or refinery gate references can pass without actual matching records.",
+  "owner": {
+    "accountable": "human-release-owner",
+    "responsible": "codex"
+  },
+  "acceptance_criteria": [
+    "Pass 28 findings documented",
+    "Production handoff validator requires control graph, work ledger, and refinery gate bundle files",
+    "Validator checks outage drill node membership in control graph",
+    "Validator checks outage drill work ledger and refinery gate against bundle files",
+    "Hardening runner includes missing and mismatched control-plane bundle negative checks"
+  ],
+  "evidence_required": [
+    "pass28 critic/fix record",
+    "control-plane bundled production handoff pass fixture",
+    "missing control-plane bundle rejection",
+    "bad control-plane bundle mismatch rejection",
+    "DFMS hardening runner output",
+    "pass28 merged-record validation",
+    "installed/workspace hash comparison"
+  ],
+  "evidence_provided": [
+    "28-ralph-loop-critic-review-and-fix-record.md",
+    "production-handoff-pass.json with outage drill and control-plane bundle files",
+    "production handoff missing control-plane bundle fixture: rejected",
+    "bad production control-plane bundle mismatch fixture: rejected",
+    "DFMS hardening checks complete",
+    "ATTR-PASS28-001",
+    "CG-PASS28-001",
+    "RFG-PASS28-001",
+    "records/pass28 merged records",
+    "INSTALLED_WORKSPACE_HASHES_MATCH"
+  ]
+}

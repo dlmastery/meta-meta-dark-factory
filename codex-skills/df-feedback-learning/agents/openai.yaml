@@ -1,0 +1,4 @@
+interface:
+  display_name: "DF Feedback Learning"
+  short_description: "Convert feedback into factory improvements"
+  default_prompt: "Use $df-feedback-learning to turn reviews, incidents, and retrospectives into updated factory knowledge."

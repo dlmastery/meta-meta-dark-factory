@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dark Factory Project Control Portal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <div class="eyebrow">DFMS Agentic Command Center</div>
+      <h1>Meta-Meta First Dark Factory Workflow</h1>
+    </div>
+    <div class="status-strip" aria-label="Run status">
+      <span class="status-chip accent" id="swarmStatus">Swarm: standing by</span>
+      <span class="status-chip" id="skillCount">Skills: --</span>
+      <span class="status-chip" id="graphCount">Graph: --</span>
+      <span class="status-chip strong" id="runState">No run</span>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="rail" aria-label="Factory navigation">
+      <div class="rail-title">Projects</div>
+      <label class="rail-control">
+        <span>Open project</span>
+        <select id="projectSelect"></select>
+      </label>
+      <button id="refreshProject" class="button secondary wide">Refresh Project</button>
+      <div id="projectList" class="project-list"></div>
+
+      <div class="rail-title flow-title">Strict Flow</div>
+      <ol id="stageList" class="stage-list"></ol>
+    </aside>
+
+    <section class="workspace">
+      <section class="command-deck" aria-labelledby="deck-title">
+        <div class="deck-primary">
+          <div class="deck-kicker">Agentic AI Delivery Cockpit</div>
+          <h2 id="deck-title">Dark Factory Command Deck</h2>
+          <p id="deckProjectName">No project selected</p>
+          <div class="deck-metrics" aria-label="Current factory state">
+            <div class="deck-metric">
+              <span>Active agent</span>
+              <strong id="activeAgent">Meta-attractor</strong>
+            </div>
+            <div class="deck-metric">
+              <span>Evidence pulse</span>
+              <strong id="evidencePulse">--</strong>
+            </div>
+            <div class="deck-metric">
+              <span>Human handoff</span>
+              <strong id="handoffState">Not ready</strong>
+            </div>
+          </div>
+        </div>
+        <div class="deck-action-panel">
+          <div class="next-action-label">Next Legal Action</div>
+          <div id="legalNextAction" class="next-action">Start or select a project.</div>
+          <div class="mini-ledger">
+            <span id="budgetPosture">Token SWAG: --</span>
+            <span id="changePosture">Change control: --</span>
+            <span id="validationPosture">Validation: --</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="band agentic-grid" aria-labelledby="swarm-title">
+        <div>
+          <div class="section-head tight">
+            <div>
+              <h2 id="swarm-title">Agent Swarm</h2>
+              <p>Meta-meta control, generated meta-skill routing, specialist execution, and human review.</p>
+            </div>
+          </div>
+          <div id="agentSwarm" class="agent-grid-list"></div>
+        </div>
+        <div>
+          <div class="section-head tight">
+            <div>
+              <h2>Critical Path</h2>
+              <p>Stage order, gate posture, and no-skip execution state.</p>
+            </div>
+          </div>
+          <div id="flowMap" class="flow-map"></div>
+        </div>
+      </section>
+
+      <section class="band compact" aria-labelledby="start-title">
+        <div class="section-head">
+          <div>
+            <h2 id="start-title">Start A Governed Project</h2>
+            <p>Create a per-project factory run. The meta-meta attractor generates the project-specific meta-skill before child skills execute.</p>
+          </div>
+          <button id="createRun" class="button primary">Start Project</button>
+        </div>
+        <div class="form-grid">
+          <label>
+            <span>Project name</span>
+            <input id="projectName" value="New governed product">
+          </label>
+          <label>
+            <span>Project type</span>
+            <select id="projectType">
+              <option value="greenfield">Greenfield</option>
+              <option value="brownfield">Brownfield</option>
+              <option value="artifact-only">Artifact only</option>
+              <option value="meta-skill-system">Meta-skill system</option>
+            </select>
+          </label>
+          <label>
+            <span>Token SWAG band</span>
+            <select id="tokenBand">
+              <option value="medium">Medium</option>
+              <option value="low">Low</option>
+              <option value="high">High</option>
+              <option value="xhigh">Extra high</option>
+            </select>
+          </label>
+          <label class="span-2">
+            <span>Reapproval trigger</span>
+            <input id="reapprovalTrigger" value="Any scope, production, security, privacy, budget, or artifact expansion beyond this iteration.">
+          </label>
+          <label class="span-3">
+            <span>Raw intent</span>
+            <textarea id="intent" rows="4">Build a serious governed software project through dark-factory skills with standards artifacts, expert grilling, implementation, testing, dashboard review, and redo closure.</textarea>
+          </label>
+        </div>
+      </section>
+
+      <section class="band" aria-labelledby="portal-title">
+        <div class="section-head">
+          <div>
+            <h2 id="portal-title">Human Project Portal</h2>
+            <p>Return here to inspect records, check validation, approve handoff, or resteer the design through change control.</p>
+          </div>
+          <div class="scorebox">
+            <span id="portalScore">--</span>
+            <small>stage pass</small>
+          </div>
+        </div>
+        <div class="portal-grid">
+          <div class="metric"><strong id="portalStatus">--</strong><span>status</span></div>
+          <div class="metric"><strong id="portalValidation">--</strong><span>validation</span></div>
+          <div class="metric"><strong id="portalChanges">--</strong><span>open changes</span></div>
+          <div class="metric"><strong id="portalRecordsCount">--</strong><span>records</span></div>
+        </div>
+        <div class="portal-columns">
+          <div>
+            <h3>Next Legal Actions</h3>
+            <div id="nextActions" class="stack-list"></div>
+          </div>
+          <div>
+            <h3>Change Requests</h3>
+            <div id="changeRequestList" class="stack-list"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band" aria-labelledby="change-title">
+        <div class="section-head">
+          <div>
+            <h2 id="change-title">Resteer Or Change Design</h2>
+            <p>A human change creates a governed change request, computes redo impact when a node is selected, reopens downstream stages, and records handoff communication.</p>
+          </div>
+          <button id="openChangeRequest" class="button primary">Open Change Request</button>
+        </div>
+        <div class="form-grid">
+          <label>
+            <span>Change title</span>
+            <input id="changeTitle" value="Resteer design">
+          </label>
+          <label>
+            <span>Impact area</span>
+            <select id="changeImpact">
+              <option value="requirements">Requirements / PRD</option>
+              <option value="design">Design / Architecture</option>
+              <option value="workflow">Workflow / Skills</option>
+              <option value="quality">Quality / Review</option>
+              <option value="implementation">Implementation / Testing</option>
+              <option value="production">Production / SRE</option>
+              <option value="budget">Budget / Approval</option>
+            </select>
+          </label>
+          <label>
+            <span>Reopen from stage</span>
+            <select id="changeTargetStage"></select>
+          </label>
+          <label>
+            <span>Selected artifact/node</span>
+            <input id="changeNode" value="02-prd.md">
+          </label>
+          <label>
+            <span>Token delta</span>
+            <select id="changeTokenDelta">
+              <option value="medium">Medium</option>
+              <option value="low">Low</option>
+              <option value="high">High</option>
+              <option value="xhigh">Extra high</option>
+            </select>
+          </label>
+          <label>
+            <span>Approval owner</span>
+            <input id="changeApprovalOwner" value="human-owner">
+          </label>
+          <label class="span-3">
+            <span>Requested change</span>
+            <textarea id="changeRequested" rows="3">Change the design direction, reopen affected gates, and require downstream trace, review, test, and handoff updates.</textarea>
+          </label>
+          <label class="span-3">
+            <span>Reason</span>
+            <textarea id="changeReason" rows="2">Human owner wants to resteer the project after reviewing the portal.</textarea>
+          </label>
+        </div>
+        <div id="changeResult" class="result"></div>
+      </section>
+
+      <section class="band" aria-labelledby="grill-title">
+        <div class="section-head">
+          <div>
+            <h2 id="grill-title">Customer Grill</h2>
+            <p>Answer capture, contradiction scoring, and re-interrogation blockers.</p>
+          </div>
+          <div class="scorebox">
+            <span id="completionScore">0%</span>
+            <small>complete</small>
+          </div>
+        </div>
+        <div id="questionList" class="question-list"></div>
+        <div id="contradictions" class="alerts" aria-live="polite"></div>
+      </section>
+
+      <section class="band split" aria-labelledby="progress-title">
+        <div>
+          <div class="section-head tight">
+            <div>
+              <h2 id="progress-title">Invocation Progress</h2>
+              <p>Invoke only the active or reopened stage. Locked child work stays locked.</p>
+            </div>
+          </div>
+          <div class="actions">
+            <button id="invokeStage" class="button secondary">Invoke Current Stage</button>
+            <button id="advanceStage" class="button primary">Advance Gate</button>
+          </div>
+          <div id="auditLog" class="timeline"></div>
+        </div>
+        <div>
+          <div class="section-head tight">
+            <div>
+              <h2>Skill Stack</h2>
+              <p>Loaded from the local `codex-skills` directory.</p>
+            </div>
+          </div>
+          <div id="skillStack" class="skill-stack"></div>
+        </div>
+      </section>
+
+      <section class="band split" aria-labelledby="factory-title">
+        <div>
+          <div class="section-head tight">
+            <div>
+              <h2 id="factory-title">Factory Execution</h2>
+              <p>Execute the generated meta-skill hierarchy into concrete run records and starter artifacts.</p>
+            </div>
+          </div>
+          <div class="actions">
+            <button id="executePipeline" class="button primary">Execute Ready Pipeline</button>
+            <button id="runRalphAudit" class="button secondary">Run 20x RALPH Audit</button>
+          </div>
+          <div class="graph-grid">
+            <div class="metric"><strong id="collectionScore">--</strong><span>collection</span></div>
+            <div class="metric"><strong id="recordCount">--</strong><span>records</span></div>
+            <div class="metric"><strong id="currentStage">--</strong><span>current stage</span></div>
+          </div>
+          <div id="executionRecords" class="record-list"></div>
+          <div id="auditResult" class="result"></div>
+        </div>
+        <div>
+          <div class="section-head tight">
+            <div>
+              <h2>Generated Meta Skill</h2>
+              <p>Tailored by the meta-meta attractor before child skills execute.</p>
+            </div>
+          </div>
+          <pre id="generatedMetaSkill" class="packet small">{}</pre>
+        </div>
+      </section>
+
+      <section class="band split" aria-labelledby="dashboard-title">
+        <div>
+          <div class="section-head tight">
+            <div>
+              <h2 id="dashboard-title">Artifact Graph</h2>
+              <p>Dashboard-control index and selected-node redo closure.</p>
+            </div>
+          </div>
+          <div class="graph-grid">
+            <div class="metric"><strong id="nodeCount">--</strong><span>nodes</span></div>
+            <div class="metric"><strong id="edgeCount">--</strong><span>edges</span></div>
+            <div class="metric"><strong id="stageCount">--</strong><span>stages</span></div>
+          </div>
+          <label>
+            <span>Node or path fragment to redo</span>
+            <input id="redoNode" value="02-prd.md">
+          </label>
+          <button id="redoClosure" class="button secondary wide">Compute Redo Closure</button>
+          <div id="redoResult" class="result"></div>
+        </div>
+        <div>
+          <div class="section-head tight">
+            <div>
+              <h2>Records And Project Book</h2>
+              <p>Human-readable docs and machine records for the selected project.</p>
+            </div>
+          </div>
+          <div id="portalRecords" class="record-list tall"></div>
+        </div>
+      </section>
+
+      <section class="band" aria-labelledby="packet-title">
+        <div class="section-head tight">
+          <div>
+            <h2 id="packet-title">Invocation Packet</h2>
+            <p>The packet a Codex run should consume before executing skills.</p>
+          </div>
+        </div>
+        <pre id="packetView" class="packet">{}</pre>
+      </section>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

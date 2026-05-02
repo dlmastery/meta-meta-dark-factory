@@ -1,0 +1,25 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+    "strict_compliance": "Mandatory. Every claim must be project-specific, evidence-backed, trace-linked, reviewer-challenged, and free of unsupported invention.",
+    "missing_evidence_rule": "If evidence is missing, mark it as an assumption, risk, open question, or failure."
+  },
+  "id": "REL-HND-001",
+  "release": "",
+  "owner": "",
+  "deploy_steps": [],
+  "post_deploy_checks": [],
+  "rollback_steps": [],
+  "dashboards": [],
+  "alerts": [],
+  "known_risks": [],
+  "incident_path": [],
+  "support_path": [],
+  "maintenance_notes": [],
+  "training_needed": [],
+  "outage_drill_records": [],
+  "runbook_replay_evidence": [],
+  "operator_signoffs": [],
+  "readiness_score": null,
+  "refinery_gate": ""
+}

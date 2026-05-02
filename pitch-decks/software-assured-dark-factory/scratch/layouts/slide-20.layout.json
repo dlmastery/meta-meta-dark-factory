@@ -1,0 +1,2919 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/yu5r12",
+    "id": "yu5r12",
+    "slide": 20,
+    "layoutId": "39df3ad4-e207-4cff-a7b3-0934322c7183",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "9c364795-fe59-472e-ba8a-a667cb58489e",
+    "masterLayoutName": "Master",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "39df3ad4-e207-4cff-a7b3-0934322c7183",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "9c364795-fe59-472e-ba8a-a667cb58489e",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "9c364795-fe59-472e-ba8a-a667cb58489e",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/47y1kre1",
+      "id": "1",
+      "name": "background",
+      "bbox": [
+        0,
+        0,
+        1920,
+        1080
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#09100F",
+      "lineColor": "#09100F",
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/bm58z25k",
+      "id": "2",
+      "name": "assurance-skill-mesh-eyebrow",
+      "bbox": [
+        88,
+        64,
+        1744,
+        22
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.0.0"
+      },
+      "geometry": "rect",
+      "text": "SKILL QUALITY",
+      "textPreview": "SKILL QUALITY",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "fontSize": 21,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "SKILL QUALITY"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "SKILL QUALITY",
+          "runs": [
+            {
+              "index": 1,
+              "text": "SKILL QUALITY",
+              "fontSize": 21,
+              "color": "#9AF2C8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/m1cfa9w3",
+      "id": "3",
+      "name": "assurance-skill-mesh-title",
+      "bbox": [
+        88,
+        98,
+        1040,
+        110
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.0.1"
+      },
+      "geometry": "rect",
+      "text": "Call it a Comprehensive Assurance Skill Mesh.",
+      "textPreview": "Call it a Comprehensive Assurance Skill Mesh.",
+      "resolvedFontSize": 55,
+      "resolvedTextStyle": {
+        "fontSize": 55,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Call it a Comprehensive Assurance Skill Mesh."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Call it a Comprehensive Assurance Skill Mesh.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Call it a Comprehensive Assurance Skill Mesh.",
+              "fontSize": 55,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/tgfmlkjm",
+      "id": "4",
+      "name": "assurance-skill-mesh-subtitle",
+      "bbox": [
+        88,
+        222,
+        1110,
+        26
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.0.2"
+      },
+      "geometry": "rect",
+      "text": "The language should be ambitious, but every claim is earned by evidence gates, not marketing adjectives.",
+      "textPreview": "The language should be ambitious, but every claim is earned by evidence gates, not marketing adjectives.",
+      "resolvedFontSize": 26,
+      "resolvedTextStyle": {
+        "fontSize": 26,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "The language should be ambitious, but every claim is earned by evidence gates, not marketing adjectives."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "The language should be ambitious, but every claim is earned by evidence gates, not marketing adjectives.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "The language should be ambitious, but every claim is earned by evidence gates, not marketing adjectives.",
+              "fontSize": 26,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4vmtwra5",
+      "id": "5",
+      "name": "metric-value-standards-mapped-and-expert-reviewed",
+      "bbox": [
+        88,
+        418,
+        758,
+        70
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.0.0"
+      },
+      "geometry": "rect",
+      "text": "industry-grade",
+      "textPreview": "industry-grade",
+      "resolvedFontSize": 70,
+      "resolvedTextStyle": {
+        "fontSize": 70,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "industry-grade"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "industry-grade",
+          "runs": [
+            {
+              "index": 1,
+              "text": "industry-grade",
+              "fontSize": 70,
+              "color": "#2DD4BF",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/bat47y1k",
+      "id": "6",
+      "name": "metric-label-standards-mapped-and-expert-reviewed",
+      "bbox": [
+        88,
+        494,
+        196,
+        42
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.0.1"
+      },
+      "geometry": "rect",
+      "text": "standards-mapped and expert-reviewed",
+      "textPreview": "standards-mapped and expert-reviewed",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "fontSize": 21,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "standards-mapped"
+          },
+          {
+            "index": 2,
+            "text": "and expert-reviewed"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "standards-mapped and expert-reviewed",
+          "runs": [
+            {
+              "index": 1,
+              "text": "standards-mapped and expert-reviewed",
+              "fontSize": 21,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/mp0bi9s3",
+      "id": "7",
+      "name": "metric-value-full-task-tree-coverage-to-testable-leaves",
+      "bbox": [
+        88,
+        558,
+        758,
+        70
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.1.0"
+      },
+      "geometry": "rect",
+      "text": "comprehensive",
+      "textPreview": "comprehensive",
+      "resolvedFontSize": 70,
+      "resolvedTextStyle": {
+        "fontSize": 70,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "comprehensive"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "comprehensive",
+          "runs": [
+            {
+              "index": 1,
+              "text": "comprehensive",
+              "fontSize": 70,
+              "color": "#46D17E",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/t83itgfm",
+      "id": "8",
+      "name": "metric-label-full-task-tree-coverage-to-testable-leaves",
+      "bbox": [
+        88,
+        636,
+        284,
+        42
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.1.1"
+      },
+      "geometry": "rect",
+      "text": "full task-tree coverage to testable leaves",
+      "textPreview": "full task-tree coverage to testable leaves",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "fontSize": 21,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "full task-tree coverage to"
+          },
+          {
+            "index": 2,
+            "text": "testable leaves"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "full task-tree coverage to testable leaves",
+          "runs": [
+            {
+              "index": 1,
+              "text": "full task-tree coverage to testable leaves",
+              "fontSize": 21,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4nap4r65",
+      "id": "9",
+      "name": "metric-value-validator-backed-evidence-and-certificates",
+      "bbox": [
+        88,
+        700,
+        758,
+        70
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.2.0"
+      },
+      "geometry": "rect",
+      "text": "assured",
+      "textPreview": "assured",
+      "resolvedFontSize": 70,
+      "resolvedTextStyle": {
+        "fontSize": 70,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "assured"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "assured",
+          "runs": [
+            {
+              "index": 1,
+              "text": "assured",
+              "fontSize": 70,
+              "color": "#F2B84B",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/u9knih4b",
+      "id": "10",
+      "name": "metric-label-validator-backed-evidence-and-certificates",
+      "bbox": [
+        88,
+        776,
+        260,
+        42
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.0.2.1"
+      },
+      "geometry": "rect",
+      "text": "validator-backed evidence and certificates",
+      "textPreview": "validator-backed evidence and certificates",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "fontSize": 21,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "validator-backed evidence and"
+          },
+          {
+            "index": 2,
+            "text": "certificates"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "validator-backed evidence and certificates",
+          "runs": [
+            {
+              "index": 1,
+              "text": "validator-backed evidence and certificates",
+              "fontSize": 21,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/judg7ads",
+      "id": "11",
+      "name": "dot-full-coverage-is-a-gate-state",
+      "bbox": [
+        904,
+        512,
+        13,
+        56
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.0.0"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#2DD4BF",
+      "lineColor": "#2DD4BF",
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cfa9w3m9",
+      "id": "12",
+      "name": "statement-title-full-coverage-is-a-gate-state",
+      "bbox": [
+        940,
+        512,
+        892,
+        30
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.0.1.0"
+      },
+      "geometry": "rect",
+      "text": "Full coverage is a gate state",
+      "textPreview": "Full coverage is a gate state",
+      "resolvedFontSize": 29,
+      "resolvedTextStyle": {
+        "fontSize": 29,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Full coverage is a gate state"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Full coverage is a gate state",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Full coverage is a gate state",
+              "fontSize": 29,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1032lszq",
+      "id": "13",
+      "name": "statement-body-full-coverage-is-a-gate-state",
+      "bbox": [
+        940,
+        546,
+        932,
+        22
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.0.1.1"
+      },
+      "geometry": "rect",
+      "text": "Inputs, outputs, artifacts, decisions, risks, tests, handoff, and learning are all covered or explicitly waived.",
+      "textPreview": "Inputs, outputs, artifacts, decisions, risks, tests, handoff, and learning are all covered or explicitly waived.",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Inputs, outputs, artifacts, decisions, risks, tests, handoff, and learning are all covered or explicitly"
+          },
+          {
+            "index": 2,
+            "text": "waived."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Inputs, outputs, artifacts, decisions, risks, tests, handoff, and learning are all covered or explicitly waived.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Inputs, outputs, artifacts, decisions, risks, tests, handoff, and learning are all covered or explicitly waived.",
+              "fontSize": 22,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/u18jqh0f",
+      "id": "14",
+      "name": "dot-industry-grade-is-evidence-backed",
+      "bbox": [
+        904,
+        592,
+        13,
+        56
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.1.0"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#46D17E",
+      "lineColor": "#46D17E",
+      "lineWidth": 0
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/jm1cfa9w",
+      "id": "15",
+      "name": "statement-title-industry-grade-is-evidence-backed",
+      "bbox": [
+        940,
+        590,
+        892,
+        30
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.1.1.0"
+      },
+      "geometry": "rect",
+      "text": "Industry-grade is evidence-backed",
+      "textPreview": "Industry-grade is evidence-backed",
+      "resolvedFontSize": 29,
+      "resolvedTextStyle": {
+        "fontSize": 29,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Industry-grade is evidence-backed"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Industry-grade is evidence-backed",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Industry-grade is evidence-backed",
+              "fontSize": 29,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/c7u54zid",
+      "id": "16",
+      "name": "statement-body-industry-grade-is-evidence-backed",
+      "bbox": [
+        940,
+        624,
+        894,
+        22
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.1.1.1"
+      },
+      "geometry": "rect",
+      "text": "Each skill has module contracts, standards basis, 3-expert review, 15-point rubrics, and trace closure.",
+      "textPreview": "Each skill has module contracts, standards basis, 3-expert review, 15-point rubrics, and trace closure.",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Each skill has module contracts, standards basis, 3-expert review, 15-point rubrics, and trace"
+          },
+          {
+            "index": 2,
+            "text": "closure."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Each skill has module contracts, standards basis, 3-expert review, 15-point rubrics, and trace closure.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Each skill has module contracts, standards basis, 3-expert review, 15-point rubrics, and trace closure.",
+              "fontSize": 22,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1orytsvu",
+      "id": "17",
+      "name": "dot-industry-leader-validated-is-reserved",
+      "bbox": [
+        904,
+        668,
+        13,
+        56
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.2.0"
+      },
+      "geometry": "roundRect",
+      "fillColor": "#F2B84B",
+      "lineColor": "#F2B84B",
+      "lineWidth": 0
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/upwb2hwf",
+      "id": "18",
+      "name": "statement-title-industry-leader-validated-is-reserved",
+      "bbox": [
+        940,
+        668,
+        892,
+        30
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.2.1.0"
+      },
+      "geometry": "rect",
+      "text": "Industry-leader-validated is reserved",
+      "textPreview": "Industry-leader-validated is reserved",
+      "resolvedFontSize": 29,
+      "resolvedTextStyle": {
+        "fontSize": 29,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Industry-leader-validated is reserved"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Industry-leader-validated is reserved",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Industry-leader-validated is reserved",
+              "fontSize": 29,
+              "color": "#F7FAF8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nap4r65w",
+      "id": "19",
+      "name": "statement-body-industry-leader-validated-is-reserved",
+      "bbox": [
+        940,
+        702,
+        716,
+        22
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1.1.2.1.1"
+      },
+      "geometry": "rect",
+      "text": "Use that label only after actual named external reviewers sign off with evidence.",
+      "textPreview": "Use that label only after actual named external reviewers sign off with evidence.",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Use that label only after actual named external reviewers sign off with evidence."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Use that label only after actual named external reviewers sign off with evidence.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Use that label only after actual named external reviewers sign off with evidence.",
+              "fontSize": 22,
+              "color": "#A9B8AE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/f6dcbulw",
+      "id": "20",
+      "name": "assurance-skill-mesh-footer",
+      "bbox": [
+        88,
+        990,
+        268,
+        28
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.2.0"
+      },
+      "geometry": "rect",
+      "text": "DFMS pitch deck | software assurance dark factory",
+      "textPreview": "DFMS pitch deck | software assurance dark factory",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "DFMS pitch deck | software assurance dark factory"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "DFMS pitch deck | software assurance dark factory",
+          "runs": [
+            {
+              "index": 1,
+              "text": "DFMS pitch deck | software assurance dark factory",
+              "fontSize": 13,
+              "color": "#6E7C74"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/mlkjm1cf",
+      "id": "21",
+      "name": "assurance-skill-mesh-page",
+      "bbox": [
+        1792,
+        998,
+        40,
+        12
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.2.1"
+      },
+      "geometry": "rect",
+      "text": "20",
+      "textPreview": "20",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "20"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "20",
+          "runs": [
+            {
+              "index": 1,
+              "text": "20",
+              "fontSize": 13,
+              "color": "#6E7C74",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "composeRuns": [
+    {
+      "index": 1,
+      "frame": {
+        "left": 0,
+        "top": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "baseUnit": 8,
+      "root": {
+        "path": "0",
+        "kind": "layers",
+        "name": "assurance-skill-mesh-root",
+        "requestedSize": {
+          "width": {
+            "mode": "fill",
+            "value": 1
+          },
+          "height": {
+            "mode": "fill",
+            "value": 1
+          }
+        },
+        "intrinsicSize": {
+          "width": 0,
+          "height": 0
+        },
+        "frame": {
+          "left": 0,
+          "top": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "children": [
+          {
+            "path": "0.0",
+            "kind": "shape",
+            "name": "background",
+            "requestedSize": {
+              "width": {
+                "mode": "fill",
+                "value": 1
+              },
+              "height": {
+                "mode": "fill",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 0,
+              "height": 0
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "snappedFrame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "children": [],
+            "geometry": "rect",
+            "element": {
+              "aid": "sh/47y1kre1",
+              "id": "1",
+              "kind": "shape"
+            }
+          },
+          {
+            "path": "0.1",
+            "kind": "column",
+            "name": "assurance-skill-mesh-content",
+            "requestedSize": {
+              "width": {
+                "mode": "fill",
+                "value": 1
+              },
+              "height": {
+                "mode": "fill",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 176,
+              "height": 337
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "children": [
+              {
+                "path": "0.1.0",
+                "kind": "column",
+                "name": "assurance-skill-mesh-title-stack",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "hug"
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 1109.36,
+                  "height": 128
+                },
+                "frame": {
+                  "left": 88,
+                  "top": 64,
+                  "width": 1744,
+                  "height": 183
+                },
+                "children": [
+                  {
+                    "path": "0.1.0.0",
+                    "kind": "text",
+                    "name": "assurance-skill-mesh-eyebrow",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 21
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 64,
+                      "width": 1744,
+                      "height": 21
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 64,
+                      "width": 1744,
+                      "height": 22
+                    },
+                    "children": [],
+                    "text": "SKILL QUALITY",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/bm58z25k",
+                      "id": "2",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.0.1",
+                    "kind": "text",
+                    "name": "assurance-skill-mesh-title",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "wrap",
+                        "max": 1500
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 1039.76,
+                      "height": 55
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 98,
+                      "width": 1039.76,
+                      "height": 110
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 98,
+                      "width": 1040,
+                      "height": 110
+                    },
+                    "children": [],
+                    "text": "Call it a Comprehensive Assurance Skill Mesh.",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/m1cfa9w3",
+                      "id": "3",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.0.2",
+                    "kind": "text",
+                    "name": "assurance-skill-mesh-subtitle",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "wrap",
+                        "max": 1330
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 1109.36,
+                      "height": 26
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 221,
+                      "width": 1109.36,
+                      "height": 26
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 222,
+                      "width": 1110,
+                      "height": 26
+                    },
+                    "children": [],
+                    "text": "The language should be ambitious, but every claim is earned by evidence gates, not marketing adjectives.",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/tgfmlkjm",
+                      "id": "4",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "gap": 13,
+                "effectiveGap": 13,
+                "justifyOffset": 0,
+                "align": "start",
+                "justify": "start",
+                "contentFrame": {
+                  "left": 88,
+                  "top": 64,
+                  "width": 1744,
+                  "height": 183
+                },
+                "items": [
+                  {
+                    "path": "0.1.0.0",
+                    "frame": {
+                      "left": 88,
+                      "top": 64,
+                      "width": 1744,
+                      "height": 21
+                    }
+                  },
+                  {
+                    "path": "0.1.0.1",
+                    "frame": {
+                      "left": 88,
+                      "top": 98,
+                      "width": 1039.76,
+                      "height": 110
+                    }
+                  },
+                  {
+                    "path": "0.1.0.2",
+                    "frame": {
+                      "left": 88,
+                      "top": 221,
+                      "width": 1109.36,
+                      "height": 26
+                    }
+                  }
+                ]
+              },
+              {
+                "path": "0.1.1",
+                "kind": "grid",
+                "name": "assurance-skill-mesh-grid",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "fill",
+                    "value": 1
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 58,
+                  "height": 620
+                },
+                "frame": {
+                  "left": 88,
+                  "top": 281,
+                  "width": 1744,
+                  "height": 675
+                },
+                "children": [
+                  {
+                    "path": "0.1.1.0",
+                    "kind": "column",
+                    "name": "skill-mesh-left",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 620
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 401
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 308,
+                      "width": 758.7,
+                      "height": 620
+                    },
+                    "children": [
+                      {
+                        "path": "0.1.1.0.0",
+                        "kind": "column",
+                        "name": "metric-standards-mapped-and-expert-reviewed",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 196.93,
+                          "height": 119
+                        },
+                        "frame": {
+                          "left": 88,
+                          "top": 417.5,
+                          "width": 758.7,
+                          "height": 119
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.0.0.0",
+                            "kind": "text",
+                            "name": "metric-value-standards-mapped-and-expert-reviewed",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 70
+                            },
+                            "frame": {
+                              "left": 88,
+                              "top": 417.5,
+                              "width": 758.7,
+                              "height": 70
+                            },
+                            "snappedFrame": {
+                              "left": 88,
+                              "top": 418,
+                              "width": 758,
+                              "height": 70
+                            },
+                            "children": [],
+                            "text": "industry-grade",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/4vmtwra5",
+                              "id": "5",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.0.0.1",
+                            "kind": "text",
+                            "name": "metric-label-standards-mapped-and-expert-reviewed",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "wrap",
+                                "max": 320
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 196.93,
+                              "height": 42
+                            },
+                            "frame": {
+                              "left": 88,
+                              "top": 494.5,
+                              "width": 196.93,
+                              "height": 42
+                            },
+                            "snappedFrame": {
+                              "left": 88,
+                              "top": 494,
+                              "width": 196,
+                              "height": 42
+                            },
+                            "children": [],
+                            "text": "standards-mapped and expert-reviewed",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/bat47y1k",
+                              "id": "6",
+                              "kind": "shape"
+                            }
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 7,
+                        "effectiveGap": 7,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 88,
+                          "top": 417.5,
+                          "width": 758.7,
+                          "height": 119
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.0.0.0",
+                            "frame": {
+                              "left": 88,
+                              "top": 417.5,
+                              "width": 758.7,
+                              "height": 70
+                            }
+                          },
+                          {
+                            "path": "0.1.1.0.0.1",
+                            "frame": {
+                              "left": 88,
+                              "top": 494.5,
+                              "width": 196.93,
+                              "height": 42
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "path": "0.1.1.0.1",
+                        "kind": "column",
+                        "name": "metric-full-task-tree-coverage-to-testable-leaves",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 284.11,
+                          "height": 119
+                        },
+                        "frame": {
+                          "left": 88,
+                          "top": 558.5,
+                          "width": 758.7,
+                          "height": 119
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.0.1.0",
+                            "kind": "text",
+                            "name": "metric-value-full-task-tree-coverage-to-testable-leaves",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 70
+                            },
+                            "frame": {
+                              "left": 88,
+                              "top": 558.5,
+                              "width": 758.7,
+                              "height": 70
+                            },
+                            "snappedFrame": {
+                              "left": 88,
+                              "top": 558,
+                              "width": 758,
+                              "height": 70
+                            },
+                            "children": [],
+                            "text": "comprehensive",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/mp0bi9s3",
+                              "id": "7",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.0.1.1",
+                            "kind": "text",
+                            "name": "metric-label-full-task-tree-coverage-to-testable-leaves",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "wrap",
+                                "max": 320
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 284.11,
+                              "height": 42
+                            },
+                            "frame": {
+                              "left": 88,
+                              "top": 635.5,
+                              "width": 284.11,
+                              "height": 42
+                            },
+                            "snappedFrame": {
+                              "left": 88,
+                              "top": 636,
+                              "width": 284,
+                              "height": 42
+                            },
+                            "children": [],
+                            "text": "full task-tree coverage to testable leaves",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/t83itgfm",
+                              "id": "8",
+                              "kind": "shape"
+                            }
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 7,
+                        "effectiveGap": 7,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 88,
+                          "top": 558.5,
+                          "width": 758.7,
+                          "height": 119
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.0.1.0",
+                            "frame": {
+                              "left": 88,
+                              "top": 558.5,
+                              "width": 758.7,
+                              "height": 70
+                            }
+                          },
+                          {
+                            "path": "0.1.1.0.1.1",
+                            "frame": {
+                              "left": 88,
+                              "top": 635.5,
+                              "width": 284.11,
+                              "height": 42
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "path": "0.1.1.0.2",
+                        "kind": "column",
+                        "name": "metric-validator-backed-evidence-and-certificates",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 259.26,
+                          "height": 119
+                        },
+                        "frame": {
+                          "left": 88,
+                          "top": 699.5,
+                          "width": 758.7,
+                          "height": 119
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.0.2.0",
+                            "kind": "text",
+                            "name": "metric-value-validator-backed-evidence-and-certificates",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 70
+                            },
+                            "frame": {
+                              "left": 88,
+                              "top": 699.5,
+                              "width": 758.7,
+                              "height": 70
+                            },
+                            "snappedFrame": {
+                              "left": 88,
+                              "top": 700,
+                              "width": 758,
+                              "height": 70
+                            },
+                            "children": [],
+                            "text": "assured",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/4nap4r65",
+                              "id": "9",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.0.2.1",
+                            "kind": "text",
+                            "name": "metric-label-validator-backed-evidence-and-certificates",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "wrap",
+                                "max": 320
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 259.26,
+                              "height": 42
+                            },
+                            "frame": {
+                              "left": 88,
+                              "top": 776.5,
+                              "width": 259.26,
+                              "height": 42
+                            },
+                            "snappedFrame": {
+                              "left": 88,
+                              "top": 776,
+                              "width": 260,
+                              "height": 42
+                            },
+                            "children": [],
+                            "text": "validator-backed evidence and certificates",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/u9knih4b",
+                              "id": "10",
+                              "kind": "shape"
+                            }
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 7,
+                        "effectiveGap": 7,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 88,
+                          "top": 699.5,
+                          "width": 758.7,
+                          "height": 119
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.0.2.0",
+                            "frame": {
+                              "left": 88,
+                              "top": 699.5,
+                              "width": 758.7,
+                              "height": 70
+                            }
+                          },
+                          {
+                            "path": "0.1.1.0.2.1",
+                            "frame": {
+                              "left": 88,
+                              "top": 776.5,
+                              "width": 259.26,
+                              "height": 42
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "padding": {
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    },
+                    "gap": 22,
+                    "effectiveGap": 22,
+                    "justifyOffset": 109.5,
+                    "align": "start",
+                    "justify": "center",
+                    "contentFrame": {
+                      "left": 88,
+                      "top": 308,
+                      "width": 758.7,
+                      "height": 620
+                    },
+                    "items": [
+                      {
+                        "path": "0.1.1.0.0",
+                        "frame": {
+                          "left": 88,
+                          "top": 417.5,
+                          "width": 758.7,
+                          "height": 119
+                        }
+                      },
+                      {
+                        "path": "0.1.1.0.1",
+                        "frame": {
+                          "left": 88,
+                          "top": 558.5,
+                          "width": 758.7,
+                          "height": 119
+                        }
+                      },
+                      {
+                        "path": "0.1.1.0.2",
+                        "frame": {
+                          "left": 88,
+                          "top": 699.5,
+                          "width": 758.7,
+                          "height": 119
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "path": "0.1.1.1",
+                    "kind": "column",
+                    "name": "skill-mesh-right",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 212
+                    },
+                    "frame": {
+                      "left": 904.7,
+                      "top": 512,
+                      "width": 927.3,
+                      "height": 212
+                    },
+                    "children": [
+                      {
+                        "path": "0.1.1.1.0",
+                        "kind": "row",
+                        "name": "statement-full-coverage-is-a-gate-state",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 35,
+                          "height": 56
+                        },
+                        "frame": {
+                          "left": 904.7,
+                          "top": 512,
+                          "width": 927.3,
+                          "height": 56
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.1.0.0",
+                            "kind": "shape",
+                            "name": "dot-full-coverage-is-a-gate-state",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fixed",
+                                "value": 13
+                              },
+                              "height": {
+                                "mode": "fixed",
+                                "value": 56
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 13,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 904.7,
+                              "top": 512,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "snappedFrame": {
+                              "left": 904,
+                              "top": 512,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "children": [],
+                            "geometry": "rect",
+                            "element": {
+                              "aid": "sh/judg7ads",
+                              "id": "11",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.1.0.1",
+                            "kind": "column",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 932.79,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 939.7,
+                              "top": 512,
+                              "width": 892.3,
+                              "height": 56
+                            },
+                            "children": [
+                              {
+                                "path": "0.1.1.1.0.1.0",
+                                "kind": "text",
+                                "name": "statement-title-full-coverage-is-a-gate-state",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 29
+                                },
+                                "frame": {
+                                  "left": 939.7,
+                                  "top": 512,
+                                  "width": 892.3,
+                                  "height": 29
+                                },
+                                "snappedFrame": {
+                                  "left": 940,
+                                  "top": 512,
+                                  "width": 892,
+                                  "height": 30
+                                },
+                                "children": [],
+                                "text": "Full coverage is a gate state",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/cfa9w3m9",
+                                  "id": "12",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.1.1.1.0.1.1",
+                                "kind": "text",
+                                "name": "statement-body-full-coverage-is-a-gate-state",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "wrap",
+                                    "max": 1030
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 932.79,
+                                  "height": 22
+                                },
+                                "frame": {
+                                  "left": 939.7,
+                                  "top": 546,
+                                  "width": 932.79,
+                                  "height": 22
+                                },
+                                "snappedFrame": {
+                                  "left": 940,
+                                  "top": 546,
+                                  "width": 932,
+                                  "height": 22
+                                },
+                                "children": [],
+                                "text": "Inputs, outputs, artifacts, decisions, risks, tests, handoff, and learning are all covered or explicitly waived.",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/1032lszq",
+                                  "id": "13",
+                                  "kind": "shape"
+                                }
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 5,
+                            "effectiveGap": 5,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 939.7,
+                              "top": 512,
+                              "width": 892.3,
+                              "height": 56
+                            },
+                            "items": [
+                              {
+                                "path": "0.1.1.1.0.1.0",
+                                "frame": {
+                                  "left": 939.7,
+                                  "top": 512,
+                                  "width": 892.3,
+                                  "height": 29
+                                }
+                              },
+                              {
+                                "path": "0.1.1.1.0.1.1",
+                                "frame": {
+                                  "left": 939.7,
+                                  "top": 546,
+                                  "width": 932.79,
+                                  "height": 22
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 22,
+                        "effectiveGap": 22,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 904.7,
+                          "top": 512,
+                          "width": 927.3,
+                          "height": 56
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.1.0.0",
+                            "frame": {
+                              "left": 904.7,
+                              "top": 512,
+                              "width": 13,
+                              "height": 56
+                            }
+                          },
+                          {
+                            "path": "0.1.1.1.0.1",
+                            "frame": {
+                              "left": 939.7,
+                              "top": 512,
+                              "width": 892.3,
+                              "height": 56
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "path": "0.1.1.1.1",
+                        "kind": "row",
+                        "name": "statement-industry-grade-is-evidence-backed",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 35,
+                          "height": 56
+                        },
+                        "frame": {
+                          "left": 904.7,
+                          "top": 590,
+                          "width": 927.3,
+                          "height": 56
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.1.1.0",
+                            "kind": "shape",
+                            "name": "dot-industry-grade-is-evidence-backed",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fixed",
+                                "value": 13
+                              },
+                              "height": {
+                                "mode": "fixed",
+                                "value": 56
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 13,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 904.7,
+                              "top": 590,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "snappedFrame": {
+                              "left": 904,
+                              "top": 592,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "children": [],
+                            "geometry": "rect",
+                            "element": {
+                              "aid": "sh/u18jqh0f",
+                              "id": "14",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.1.1.1",
+                            "kind": "column",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 894.99,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 939.7,
+                              "top": 590,
+                              "width": 892.3,
+                              "height": 56
+                            },
+                            "children": [
+                              {
+                                "path": "0.1.1.1.1.1.0",
+                                "kind": "text",
+                                "name": "statement-title-industry-grade-is-evidence-backed",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 29
+                                },
+                                "frame": {
+                                  "left": 939.7,
+                                  "top": 590,
+                                  "width": 892.3,
+                                  "height": 29
+                                },
+                                "snappedFrame": {
+                                  "left": 940,
+                                  "top": 590,
+                                  "width": 892,
+                                  "height": 30
+                                },
+                                "children": [],
+                                "text": "Industry-grade is evidence-backed",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/jm1cfa9w",
+                                  "id": "15",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.1.1.1.1.1.1",
+                                "kind": "text",
+                                "name": "statement-body-industry-grade-is-evidence-backed",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "wrap",
+                                    "max": 1030
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 894.99,
+                                  "height": 22
+                                },
+                                "frame": {
+                                  "left": 939.7,
+                                  "top": 624,
+                                  "width": 894.99,
+                                  "height": 22
+                                },
+                                "snappedFrame": {
+                                  "left": 940,
+                                  "top": 624,
+                                  "width": 894,
+                                  "height": 22
+                                },
+                                "children": [],
+                                "text": "Each skill has module contracts, standards basis, 3-expert review, 15-point rubrics, and trace closure.",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/c7u54zid",
+                                  "id": "16",
+                                  "kind": "shape"
+                                }
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 5,
+                            "effectiveGap": 5,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 939.7,
+                              "top": 590,
+                              "width": 892.3,
+                              "height": 56
+                            },
+                            "items": [
+                              {
+                                "path": "0.1.1.1.1.1.0",
+                                "frame": {
+                                  "left": 939.7,
+                                  "top": 590,
+                                  "width": 892.3,
+                                  "height": 29
+                                }
+                              },
+                              {
+                                "path": "0.1.1.1.1.1.1",
+                                "frame": {
+                                  "left": 939.7,
+                                  "top": 624,
+                                  "width": 894.99,
+                                  "height": 22
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 22,
+                        "effectiveGap": 22,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 904.7,
+                          "top": 590,
+                          "width": 927.3,
+                          "height": 56
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.1.1.0",
+                            "frame": {
+                              "left": 904.7,
+                              "top": 590,
+                              "width": 13,
+                              "height": 56
+                            }
+                          },
+                          {
+                            "path": "0.1.1.1.1.1",
+                            "frame": {
+                              "left": 939.7,
+                              "top": 590,
+                              "width": 892.3,
+                              "height": 56
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "path": "0.1.1.1.2",
+                        "kind": "row",
+                        "name": "statement-industry-leader-validated-is-reserved",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 35,
+                          "height": 56
+                        },
+                        "frame": {
+                          "left": 904.7,
+                          "top": 668,
+                          "width": 927.3,
+                          "height": 56
+                        },
+                        "children": [
+                          {
+                            "path": "0.1.1.1.2.0",
+                            "kind": "shape",
+                            "name": "dot-industry-leader-validated-is-reserved",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fixed",
+                                "value": 13
+                              },
+                              "height": {
+                                "mode": "fixed",
+                                "value": 56
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 13,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 904.7,
+                              "top": 668,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "snappedFrame": {
+                              "left": 904,
+                              "top": 668,
+                              "width": 13,
+                              "height": 56
+                            },
+                            "children": [],
+                            "geometry": "rect",
+                            "element": {
+                              "aid": "sh/1orytsvu",
+                              "id": "17",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.1.1.1.2.1",
+                            "kind": "column",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 715.03,
+                              "height": 56
+                            },
+                            "frame": {
+                              "left": 939.7,
+                              "top": 668,
+                              "width": 892.3,
+                              "height": 56
+                            },
+                            "children": [
+                              {
+                                "path": "0.1.1.1.2.1.0",
+                                "kind": "text",
+                                "name": "statement-title-industry-leader-validated-is-reserved",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 29
+                                },
+                                "frame": {
+                                  "left": 939.7,
+                                  "top": 668,
+                                  "width": 892.3,
+                                  "height": 29
+                                },
+                                "snappedFrame": {
+                                  "left": 940,
+                                  "top": 668,
+                                  "width": 892,
+                                  "height": 30
+                                },
+                                "children": [],
+                                "text": "Industry-leader-validated is reserved",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/upwb2hwf",
+                                  "id": "18",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.1.1.1.2.1.1",
+                                "kind": "text",
+                                "name": "statement-body-industry-leader-validated-is-reserved",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "wrap",
+                                    "max": 1030
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 715.03,
+                                  "height": 22
+                                },
+                                "frame": {
+                                  "left": 939.7,
+                                  "top": 702,
+                                  "width": 715.03,
+                                  "height": 22
+                                },
+                                "snappedFrame": {
+                                  "left": 940,
+                                  "top": 702,
+                                  "width": 716,
+                                  "height": 22
+                                },
+                                "children": [],
+                                "text": "Use that label only after actual named external reviewers sign off with evidence.",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/nap4r65w",
+                                  "id": "19",
+                                  "kind": "shape"
+                                }
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 5,
+                            "effectiveGap": 5,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 939.7,
+                              "top": 668,
+                              "width": 892.3,
+                              "height": 56
+                            },
+                            "items": [
+                              {
+                                "path": "0.1.1.1.2.1.0",
+                                "frame": {
+                                  "left": 939.7,
+                                  "top": 668,
+                                  "width": 892.3,
+                                  "height": 29
+                                }
+                              },
+                              {
+                                "path": "0.1.1.1.2.1.1",
+                                "frame": {
+                                  "left": 939.7,
+                                  "top": 702,
+                                  "width": 715.03,
+                                  "height": 22
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 22,
+                        "effectiveGap": 22,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 904.7,
+                          "top": 668,
+                          "width": 927.3,
+                          "height": 56
+                        },
+                        "items": [
+                          {
+                            "path": "0.1.1.1.2.0",
+                            "frame": {
+                              "left": 904.7,
+                              "top": 668,
+                              "width": 13,
+                              "height": 56
+                            }
+                          },
+                          {
+                            "path": "0.1.1.1.2.1",
+                            "frame": {
+                              "left": 939.7,
+                              "top": 668,
+                              "width": 892.3,
+                              "height": 56
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "padding": {
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    },
+                    "gap": 22,
+                    "effectiveGap": 22,
+                    "justifyOffset": 0,
+                    "align": "start",
+                    "justify": "start",
+                    "contentFrame": {
+                      "left": 904.7,
+                      "top": 512,
+                      "width": 927.3,
+                      "height": 212
+                    },
+                    "items": [
+                      {
+                        "path": "0.1.1.1.0",
+                        "frame": {
+                          "left": 904.7,
+                          "top": 512,
+                          "width": 927.3,
+                          "height": 56
+                        }
+                      },
+                      {
+                        "path": "0.1.1.1.1",
+                        "frame": {
+                          "left": 904.7,
+                          "top": 590,
+                          "width": 927.3,
+                          "height": 56
+                        }
+                      },
+                      {
+                        "path": "0.1.1.1.2",
+                        "frame": {
+                          "left": 904.7,
+                          "top": 668,
+                          "width": 927.3,
+                          "height": 56
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "columnGap": 58,
+                "rowGap": 0,
+                "alignItems": "center",
+                "justifyItems": "stretch",
+                "contentFrame": {
+                  "left": 88,
+                  "top": 281,
+                  "width": 1744,
+                  "height": 675
+                },
+                "columns": [
+                  {
+                    "mode": "fr",
+                    "value": 0.9
+                  },
+                  {
+                    "mode": "fr",
+                    "value": 1.1
+                  }
+                ],
+                "autoRows": "auto",
+                "resolvedRows": [
+                  "auto"
+                ],
+                "columnSizes": [
+                  758.7,
+                  927.3
+                ],
+                "rowSizes": [
+                  675
+                ],
+                "cells": [
+                  {
+                    "path": "0.1.1.0",
+                    "column": 0,
+                    "row": 0,
+                    "columnSpan": 1,
+                    "rowSpan": 1,
+                    "cellFrame": {
+                      "left": 88,
+                      "top": 281,
+                      "width": 758.7,
+                      "height": 675
+                    }
+                  },
+                  {
+                    "path": "0.1.1.1",
+                    "column": 1,
+                    "row": 0,
+                    "columnSpan": 1,
+                    "rowSpan": 1,
+                    "cellFrame": {
+                      "left": 904.7,
+                      "top": 281,
+                      "width": 927.3,
+                      "height": 675
+                    }
+                  }
+                ]
+              },
+              {
+                "path": "0.1.2",
+                "kind": "row",
+                "name": "assurance-skill-mesh-footer-row",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "hug"
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 307.84,
+                  "height": 13
+                },
+                "frame": {
+                  "left": 88,
+                  "top": 990,
+                  "width": 1744,
+                  "height": 26
+                },
+                "children": [
+                  {
+                    "path": "0.1.2.0",
+                    "kind": "text",
+                    "name": "assurance-skill-mesh-footer",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "wrap",
+                        "max": 1200
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 267.84,
+                      "height": 13
+                    },
+                    "frame": {
+                      "left": 88,
+                      "top": 990,
+                      "width": 267.84,
+                      "height": 28
+                    },
+                    "snappedFrame": {
+                      "left": 88,
+                      "top": 990,
+                      "width": 268,
+                      "height": 28
+                    },
+                    "children": [],
+                    "text": "DFMS pitch deck | software assurance dark factory",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/f6dcbulw",
+                      "id": "20",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.1.2.1",
+                    "kind": "text",
+                    "name": "assurance-skill-mesh-page",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 40
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 40,
+                      "height": 13
+                    },
+                    "frame": {
+                      "left": 1792,
+                      "top": 998,
+                      "width": 40,
+                      "height": 12
+                    },
+                    "snappedFrame": {
+                      "left": 1792,
+                      "top": 998,
+                      "width": 40,
+                      "height": 12
+                    },
+                    "children": [],
+                    "text": "20",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/mlkjm1cf",
+                      "id": "21",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "gap": 0,
+                "effectiveGap": 1436.16,
+                "justifyOffset": 0,
+                "align": "center",
+                "justify": "between",
+                "contentFrame": {
+                  "left": 88,
+                  "top": 990,
+                  "width": 1744,
+                  "height": 26
+                },
+                "items": [
+                  {
+                    "path": "0.1.2.0",
+                    "frame": {
+                      "left": 88,
+                      "top": 990,
+                      "width": 267.84,
+                      "height": 28
+                    }
+                  },
+                  {
+                    "path": "0.1.2.1",
+                    "frame": {
+                      "left": 1792,
+                      "top": 998,
+                      "width": 40,
+                      "height": 12
+                    }
+                  }
+                ]
+              }
+            ],
+            "padding": {
+              "top": 64,
+              "right": 88,
+              "bottom": 64,
+              "left": 88
+            },
+            "gap": 34,
+            "effectiveGap": 34,
+            "justifyOffset": 0,
+            "align": "start",
+            "justify": "start",
+            "contentFrame": {
+              "left": 88,
+              "top": 64,
+              "width": 1744,
+              "height": 952
+            },
+            "items": [
+              {
+                "path": "0.1.0",
+                "frame": {
+                  "left": 88,
+                  "top": 64,
+                  "width": 1744,
+                  "height": 183
+                }
+              },
+              {
+                "path": "0.1.1",
+                "frame": {
+                  "left": 88,
+                  "top": 281,
+                  "width": 1744,
+                  "height": 675
+                }
+              },
+              {
+                "path": "0.1.2",
+                "frame": {
+                  "left": 88,
+                  "top": 990,
+                  "width": 1744,
+                  "height": 26
+                }
+              }
+            ]
+          }
+        ],
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignItems": "stretch",
+        "justifyItems": "stretch",
+        "contentFrame": {
+          "left": 0,
+          "top": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "items": [
+          {
+            "path": "0.0",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            }
+          },
+          {
+            "path": "0.1",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

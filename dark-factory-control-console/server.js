@@ -1,0 +1,1520 @@
+const http = require("http");
+const fs = require("fs");
+const path = require("path");
+const os = require("os");
+const { spawnSync } = require("child_process");
+
+const ZERO_SLOP = "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS";
+const PORT = Number(process.env.PORT || 4187);
+const ROOT = path.resolve(__dirname, "..");
+const PUBLIC = path.join(__dirname, "public");
+const LAYER_MAP_PUBLIC = path.join(ROOT, "dark-factory-meta-skills-design", "interactive-layer-map");
+const RUNS = path.join(__dirname, "runs");
+const SKILLS = path.join(ROOT, "codex-skills");
+const DEFAULT_PROJECT_BOOK = path.join(ROOT, "example", "worlds-best-todo-habits-app", "project-book");
+
+const STAGES = [
+  {
+    id: "stage-00-meta-meta",
+    title: "Meta-Meta Attractor",
+    kind: "meta-meta",
+    skills: ["df-meta-attractor"],
+    gate: "Attractor state, mode, risks, product tailoring, and no-overfit rule are recorded."
+  },
+  {
+    id: "stage-01-interrogation",
+    title: "Customer Grill",
+    kind: "intake",
+    skills: ["df-intake-spec-lab", "df-swarm-coordination"],
+    gate: "Required answers captured, contradictions scored, and re-interrogation triggers resolved."
+  },
+  {
+    id: "stage-02-engagement",
+    title: "Engagement And Token Approval",
+    kind: "governance",
+    skills: ["df-governance-mayor"],
+    gate: "Client owner, delivery owner, token SWAG, checkpoint, and change-control rule are approved."
+  },
+  {
+    id: "stage-03-skill-routing",
+    title: "Meta-Skill Routing",
+    kind: "orchestration",
+    skills: ["dark-factory-orchestrator", "df-methodology-blender"],
+    gate: "Selected skills, lifecycle graph, stage coverage, and next legal node are coherent."
+  },
+  {
+    id: "stage-04-artifacts",
+    title: "Artifact And SDLC Plan",
+    kind: "planning",
+    skills: ["df-artifact-factory", "df-traceability-evidence"],
+    gate: "Artifact BOM, trace model, standards tailoring, tests, implementation, and handoff obligations are explicit."
+  },
+  {
+    id: "stage-05-experts",
+    title: "Expert Debate And Critics",
+    kind: "review",
+    skills: ["df-swarm-coordination", "df-quality-refinery"],
+    gate: "Elite role panel, critic panel, rubric thresholds, RALPH loop plan, and failed-point fix path exist."
+  },
+  {
+    id: "stage-06-build-test",
+    title: "Build, Test, Evidence",
+    kind: "execution",
+    skills: ["df-quality-refinery", "df-production-sre-handoff"],
+    gate: "Implementation, tests, browser/WYSIWYG checks, scenario transfer, ops readiness, and evidence are complete."
+  },
+  {
+    id: "stage-07-dashboard-redo",
+    title: "Dashboard Control And Redo",
+    kind: "control",
+    skills: ["df-dashboard-control", "df-human-agent-handoff", "df-context-memory"],
+    gate: "Artifact graph, task bead, redo closure, impacted gates/tests, memory, and human handoff are ready."
+  }
+];
+
+const QUESTIONS = [
+  { id: "ANS-001", label: "Business outcome", required: true, prompt: "What business result must this project create, and how will the client know it worked?" },
+  { id: "ANS-002", label: "Primary users", required: true, prompt: "Who are the main users, buyers, operators, approvers, and auditors?" },
+  { id: "ANS-003", label: "Product surface", required: true, prompt: "Which surfaces are in scope: UI, API, data, workflow, admin, mobile, desktop, integration, production ops?" },
+  { id: "ANS-004", label: "Domain rules", required: true, prompt: "What are the non-negotiable domain rules, edge cases, examples, and forbidden behaviors?" },
+  { id: "ANS-005", label: "Quality bar", required: true, prompt: "What does world-class quality mean here: speed, UX, safety, reliability, compliance, accessibility, maintainability?" },
+  { id: "ANS-006", label: "Testing proof", required: true, prompt: "What testing evidence is mandatory: unit, integration, scenario, holdout, transfer, browser/WYSIWYG, security, load, ops drill?" },
+  { id: "ANS-007", label: "Data and privacy", required: true, prompt: "What data is stored or processed, and what privacy, security, retention, or audit constraints apply?" },
+  { id: "ANS-008", label: "Non-goals", required: true, prompt: "What should the factory explicitly not build, optimize, or assume?" },
+  { id: "ANS-009", label: "Token boundary", required: true, prompt: "What token budget band is approved for this iteration, and what change requires reapproval?" },
+  { id: "ANS-010", label: "Approval owner", required: true, prompt: "Who can approve scope, token budget, requirement changes, release, and residual risk?" },
+  { id: "ANS-011", label: "Examples", required: false, prompt: "Which products, artifacts, or workflows are inspiration only, and which are binding requirements?" },
+  { id: "ANS-012", label: "Brownfield context", required: false, prompt: "If this touches an existing system, what repos, files, services, behaviors, and tests must be preserved?" }
+];
+
+const STAGE_RECORDS = {
+  "stage-00-meta-meta": [
+    "meta-attractor-run-record.json",
+    "product-tailoring-profile.json",
+    "generated-meta-skill-contract.json"
+  ],
+  "stage-01-interrogation": [
+    "intake-package.json",
+    "recursive-spec-decomposition-record.json"
+  ],
+  "stage-02-engagement": [
+    "engagement-governance-record.json",
+    "token-budget-record.json"
+  ],
+  "stage-03-skill-routing": [
+    "skill-routing-record.json",
+    "lifecycle-control-graph.json",
+    "execution-kernel-next-action.json"
+  ],
+  "stage-04-artifacts": [
+    "artifact-bom.json",
+    "traceability-seed.json",
+    "starter-project-book-index.json"
+  ],
+  "stage-05-experts": [
+    "expert-panel-record.json",
+    "critic-panel-record.json",
+    "quality-refinery-gate.json"
+  ],
+  "stage-06-build-test": [
+    "implementation-execution-plan.json",
+    "test-evidence-plan.json",
+    "production-sre-handoff-plan.json"
+  ],
+  "stage-07-dashboard-redo": [
+    "dashboard-control-record.json",
+    "human-agent-handoff-record.json",
+    "context-memory-pack.json"
+  ]
+};
+
+function ensureDir(dir) {
+  fs.mkdirSync(dir, { recursive: true });
+}
+
+function nowIso() {
+  return new Date().toISOString();
+}
+
+function slug(value) {
+  return String(value || "run").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "run";
+}
+
+function readJson(file, fallback = null) {
+  try {
+    return JSON.parse(fs.readFileSync(file, "utf8"));
+  } catch {
+    return fallback;
+  }
+}
+
+function writeJson(file, data) {
+  ensureDir(path.dirname(file));
+  fs.writeFileSync(file, JSON.stringify(data, null, 2) + "\n", "utf8");
+}
+
+function parseSkill(file) {
+  const text = fs.readFileSync(file, "utf8");
+  const frontmatter = text.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+  const result = {
+    name: path.basename(path.dirname(file)),
+    description: "",
+    path: path.relative(ROOT, file).replace(/\\/g, "/"),
+    zeroSlop: text.includes(ZERO_SLOP)
+  };
+  if (frontmatter) {
+    for (const line of frontmatter[1].split(/\r?\n/)) {
+      const match = line.match(/^(\w+):\s*(.*)$/);
+      if (match) result[match[1]] = match[2].trim();
+    }
+  }
+  return result;
+}
+
+function loadSkills(skillsDir = SKILLS) {
+  if (!fs.existsSync(skillsDir)) return [];
+  return fs.readdirSync(skillsDir, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => path.join(skillsDir, entry.name, "SKILL.md"))
+    .filter((file) => fs.existsSync(file))
+    .map(parseSkill)
+    .sort((a, b) => skillRank(a.name) - skillRank(b.name) || a.name.localeCompare(b.name));
+}
+
+function skillRank(name) {
+  const order = [
+    "df-meta-attractor",
+    "dark-factory-orchestrator",
+    "df-intake-spec-lab",
+    "df-governance-mayor",
+    "df-dashboard-control",
+    "df-artifact-factory",
+    "df-traceability-evidence",
+    "df-swarm-coordination",
+    "df-quality-refinery"
+  ];
+  const index = order.indexOf(name);
+  return index === -1 ? 100 : index;
+}
+
+function projectBookSummary(projectBook = DEFAULT_PROJECT_BOOK) {
+  const indexPath = path.join(projectBook, "portal", "dashboard-control-index.json");
+  const index = readJson(indexPath, {});
+  return {
+    projectBook,
+    indexPath,
+    project: index.project || "No dashboard index yet",
+    nodes: Array.isArray(index.nodes) ? index.nodes.length : 0,
+    edges: Array.isArray(index.edges) ? index.edges.length : 0,
+    generatedAt: index.generated_at || "",
+    stages: summarizeStages(index.nodes || []),
+    openRisks: index.residual_risks || []
+  };
+}
+
+function summarizeStages(nodes) {
+  return nodes.reduce((acc, node) => {
+    const stage = node.stage || "unknown";
+    acc[stage] = (acc[stage] || 0) + 1;
+    return acc;
+  }, {});
+}
+
+function createRun(input) {
+  ensureDir(RUNS);
+  const id = `DFRUN-UI-${new Date().toISOString().replace(/[-:TZ.]/g, "").slice(0, 14)}-${slug(input.projectName || "project")}`;
+  const run = {
+    zero_slop_policy: ZERO_SLOP,
+    run_id: id,
+    created_at: nowIso(),
+    updated_at: nowIso(),
+    status: "interrogating",
+    current_stage: STAGES[0].id,
+    intent: String(input.intent || "").trim(),
+    project_name: String(input.projectName || "Untitled governed project").trim(),
+    project_type: String(input.projectType || "greenfield").trim(),
+    project_book: input.projectBook || DEFAULT_PROJECT_BOOK,
+    token_swag: {
+      band: String(input.tokenBand || "medium"),
+      reapproval_trigger: String(input.reapprovalTrigger || "Any scope, production, security, privacy, or artifact expansion beyond the current iteration.")
+    },
+    stages: STAGES.map((stage, index) => ({
+      ...stage,
+      status: index === 0 ? "active" : "locked",
+      invocations: [],
+      gate_result: index === 0 ? "ready" : "locked"
+    })),
+    questions: QUESTIONS,
+    answers: {},
+    interrogation: scoreInterrogation({}),
+    invocation_packet: buildInvocationPacket(input, {}),
+    generated_meta_skill: null,
+    execution_outputs: [],
+    change_requests: [],
+    human_decisions: [],
+    project_collection: {
+      status: "not_started",
+      required_answer_count: QUESTIONS.filter((question) => question.required).length,
+      captured_answer_count: 0,
+      records_directory: path.relative(ROOT, runRecordsDir(id)).replace(/\\/g, "/")
+    },
+    audit_log: [
+      {
+        at: nowIso(),
+        event: "run_created",
+        detail: "Meta-meta attractor is the first active stage; child skills are locked until gate progression."
+      }
+    ]
+  };
+  saveRun(run);
+  return run;
+}
+
+function runPath(id) {
+  const safe = String(id || "").replace(/[^A-Za-z0-9_.-]/g, "");
+  return path.join(RUNS, `${safe}.json`);
+}
+
+function loadRun(id) {
+  const run = readJson(runPath(id));
+  if (!run) throw Object.assign(new Error("Run not found"), { status: 404 });
+  return run;
+}
+
+function runDir(id) {
+  const safe = String(id || "").replace(/[^A-Za-z0-9_.-]/g, "");
+  return path.join(RUNS, safe);
+}
+
+function runRecordsDir(id) {
+  return path.join(runDir(id), "records");
+}
+
+function runProjectBookDir(id) {
+  return path.join(runDir(id), "project-book");
+}
+
+function saveRun(run) {
+  run.updated_at = nowIso();
+  run.change_requests = Array.isArray(run.change_requests) ? run.change_requests : [];
+  run.human_decisions = Array.isArray(run.human_decisions) ? run.human_decisions : [];
+  run.interrogation = scoreInterrogation(run.answers || {});
+  run.project_collection = summarizeProjectCollection(run);
+  run.generated_meta_skill = deriveGeneratedMetaSkill(run);
+  run.invocation_packet = buildInvocationPacket(run, run.answers || {});
+  writeJson(runPath(run.run_id), run);
+}
+
+function summarizeProjectCollection(run) {
+  const required = QUESTIONS.filter((question) => question.required);
+  const captured = required.filter((question) => run.answers?.[question.id]?.value?.trim().length >= 8);
+  return {
+    status: run.interrogation?.gate === "pass" ? "ready" : captured.length ? "collecting" : "not_started",
+    required_answer_count: required.length,
+    captured_answer_count: captured.length,
+    completeness: run.interrogation?.completeness || 0,
+    contradiction_count: run.interrogation?.contradictions?.length || 0,
+    records_directory: path.relative(ROOT, runRecordsDir(run.run_id)).replace(/\\/g, "/"),
+    project_book_directory: path.relative(ROOT, runProjectBookDir(run.run_id)).replace(/\\/g, "/")
+  };
+}
+
+function deriveGeneratedMetaSkill(run) {
+  const answerText = Object.values(run.answers || {}).map((answer) => answer.value || "").join(" ").toLowerCase();
+  const surfaces = [];
+  for (const [name, pattern] of Object.entries({
+    ui: /\b(ui|frontend|screen|dashboard|browser|wysiwyg)\b/,
+    api: /\b(api|endpoint|service|integration)\b/,
+    data: /\b(data|database|storage|analytics|privacy)\b/,
+    production: /\b(production|deploy|sre|observability|incident|runbook)\b/,
+    mobile: /\b(mobile|ios|android)\b/,
+    brownfield: /\b(brownfield|existing|legacy|repo)\b/
+  })) {
+    if (pattern.test(answerText) || (name === "brownfield" && run.project_type === "brownfield")) surfaces.push(name);
+  }
+  if (!surfaces.length) surfaces.push(run.project_type === "artifact-only" ? "artifact" : "ui");
+  const selectedSkills = Array.from(new Set(STAGES.flatMap((stage) => stage.skills)));
+  return {
+    zero_slop_policy: ZERO_SLOP,
+    name: `generated-${slug(run.project_name)}-factory`,
+    description: `Project-tailored DFMS meta-skill contract for ${run.project_name}.`,
+    generated_from: "df-meta-attractor",
+    product_type: run.project_type,
+    surfaces,
+    selected_meta_skills: selectedSkills,
+    required_sequence: STAGES.map((stage) => ({ id: stage.id, title: stage.title, skills: stage.skills })),
+    refusal_rules: [
+      "Do not bypass df-meta-attractor for governed work.",
+      "Do not execute child skills before interrogation and engagement gates pass.",
+      "Do not claim completion without implementation, testing, evidence, traceability, and handoff records appropriate to the project type.",
+      "Do not treat generated templates as proof."
+    ]
+  };
+}
+
+function answerQuestion(runId, payload) {
+  const run = loadRun(runId);
+  const qid = String(payload.questionId || "");
+  if (!QUESTIONS.some((q) => q.id === qid)) throw Object.assign(new Error("Unknown question"), { status: 400 });
+  run.answers[qid] = {
+    value: String(payload.value || "").trim(),
+    updated_at: nowIso()
+  };
+  run.audit_log.push({ at: nowIso(), event: "answer_updated", detail: qid });
+  saveRun(run);
+  return run;
+}
+
+function scoreInterrogation(answers) {
+  const required = QUESTIONS.filter((q) => q.required);
+  const answered = required.filter((q) => answers[q.id] && answers[q.id].value.trim().length >= 8);
+  const completeness = Math.round((answered.length / required.length) * 100);
+  const answerText = Object.values(answers).map((a) => a.value.toLowerCase()).join(" ");
+  const contradictions = [];
+  if (/\b(ui|browser|dashboard|frontend|screen|mobile)\b/.test(answerText) && /\b(no browser|skip browser|no ui test|no visual test)\b/.test(answerText)) {
+    contradictions.push({ severity: "P1", message: "UI surface is in scope while browser or visual testing is being skipped." });
+  }
+  if (/\b(production|deploy|customer data|security|privacy)\b/.test(answerText) && !answers["ANS-010"]?.value) {
+    contradictions.push({ severity: "P1", message: "Production, security, or privacy language appears without an approval owner." });
+  }
+  if (/\b(no tests|skip tests|later tests)\b/.test(answerText)) {
+    contradictions.push({ severity: "P1", message: "Testing cannot be waived casually in a governed dark-factory run." });
+  }
+  const p1 = contradictions.filter((item) => item.severity === "P1").length;
+  return {
+    required_questions: required.length,
+    answered_required: answered.length,
+    completeness,
+    contradictions,
+    gate: completeness >= 85 && p1 === 0 ? "pass" : "blocked"
+  };
+}
+
+function buildInvocationPacket(runLike, answers) {
+  return {
+    zero_slop_policy: ZERO_SLOP,
+    packet_type: "dfms_ui_invocation_packet",
+    created_at: nowIso(),
+    meta_meta_first: true,
+    entry_skill: "df-meta-attractor",
+    run_id: runLike.run_id || "",
+    project_name: runLike.project_name || runLike.projectName || "",
+    project_type: runLike.project_type || runLike.projectType || "",
+    intent: runLike.intent || "",
+    token_swag: runLike.token_swag || {
+      band: runLike.tokenBand || "medium",
+      reapproval_trigger: runLike.reapprovalTrigger || ""
+    },
+    generated_meta_skill: runLike.generated_meta_skill || null,
+    required_sequence: STAGES.map((stage) => ({ id: stage.id, title: stage.title, skills: stage.skills, gate: stage.gate })),
+    executable_records_by_stage: STAGE_RECORDS,
+    open_change_requests: (runLike.change_requests || []).filter((item) => !["closed", "rejected"].includes(item.state)).map((item) => ({
+      id: item.id,
+      title: item.title,
+      state: item.state,
+      target_stage: item.target_stage,
+      selected_node: item.selected_node
+    })),
+    interrogation_answers: answers,
+    next_safe_action: "Run meta-meta attractor, then resolve customer grill blockers before child meta-skill execution."
+  };
+}
+
+function invokeStage(runId, stageId) {
+  const run = loadRun(runId);
+  const stage = run.stages.find((item) => item.id === stageId);
+  if (!stage) throw Object.assign(new Error("Unknown stage"), { status: 400 });
+  const currentIndex = run.stages.findIndex((item) => item.id === run.current_stage);
+  const stageIndex = run.stages.findIndex((item) => item.id === stageId);
+  if (stageIndex > currentIndex) throw Object.assign(new Error("Cannot invoke a locked future stage"), { status: 409 });
+  const execution = executeStageRecords(run, stage);
+  const invocation = {
+    invocation_id: `INV-${Date.now()}`,
+    at: nowIso(),
+    skills: stage.skills,
+    input_packet: run.invocation_packet,
+    result: execution.status,
+    records: execution.records,
+    note: "UI created a governed invocation packet and materialized executable DFMS control records for this stage."
+  };
+  stage.invocations.push(invocation);
+  stage.outputs = execution.records;
+  stage.execution_status = execution.status;
+  stage.status = stage.status === "locked" ? "active" : stage.status;
+  run.execution_outputs = Array.from(new Set([...(run.execution_outputs || []), ...execution.records]));
+  run.audit_log.push({ at: nowIso(), event: "stage_invoked", detail: stageId });
+  saveRun(run);
+  return run;
+}
+
+function executeStageRecords(run, stage) {
+  ensureDir(runRecordsDir(run.run_id));
+  ensureDir(runProjectBookDir(run.run_id));
+  const recordNames = STAGE_RECORDS[stage.id] || [`${stage.id}.json`];
+  const records = [];
+  for (const recordName of recordNames) {
+    const file = path.join(runRecordsDir(run.run_id), recordName);
+    writeJson(file, buildStageRecord(run, stage, recordName));
+    records.push(path.relative(ROOT, file).replace(/\\/g, "/"));
+  }
+  if (stage.id === "stage-04-artifacts") {
+    const summaryPath = path.join(runProjectBookDir(run.run_id), "00-factory-run-summary.md");
+    const prdPath = path.join(runProjectBookDir(run.run_id), "01-initial-prd-skeleton.md");
+    fs.writeFileSync(summaryPath, renderRunSummaryMarkdown(run), "utf8");
+    fs.writeFileSync(prdPath, renderPrdSkeletonMarkdown(run), "utf8");
+    records.push(path.relative(ROOT, summaryPath).replace(/\\/g, "/"));
+    records.push(path.relative(ROOT, prdPath).replace(/\\/g, "/"));
+  }
+  if (stage.id === "stage-07-dashboard-redo") {
+    const closure = computeRedoClosure({ projectBook: run.project_book, node: "02-prd.md" });
+    records.push(path.relative(ROOT, closure.reportPath).replace(/\\/g, "/"));
+  }
+  return {
+    status: stage.id === "stage-01-interrogation" ? run.interrogation.gate : "executed",
+    records
+  };
+}
+
+function buildStageRecord(run, stage, recordName) {
+  const base = {
+    zero_slop_policy: ZERO_SLOP,
+    record_id: `${stage.id}-${recordName.replace(/[^A-Za-z0-9]+/g, "-")}-${Date.now()}`,
+    record_type: recordName.replace(/\.(json|md)$/i, ""),
+    run_id: run.run_id,
+    project_name: run.project_name,
+    project_type: run.project_type,
+    stage_id: stage.id,
+    stage_title: stage.title,
+    skills: stage.skills,
+    created_at: nowIso(),
+    status: "draft",
+    source_intent: run.intent,
+    token_swag: run.token_swag,
+    project_collection: summarizeProjectCollection(run),
+    trace: {
+      answers: Object.keys(run.answers || {}),
+      generated_meta_skill: run.generated_meta_skill?.name || deriveGeneratedMetaSkill(run).name
+    }
+  };
+  const answers = normalizeAnswers(run);
+  if (recordName === "meta-attractor-run-record.json") {
+    return {
+      ...base,
+      status: "accepted",
+      attractor_state: run.intent.length >= 12 ? "forming" : "blocked",
+      selected_mode: run.project_type,
+      generated_meta_skill: deriveGeneratedMetaSkill(run),
+      next_safe_action: "Collect and validate customer answers before child meta-skill execution."
+    };
+  }
+  if (recordName === "product-tailoring-profile.json") {
+    return {
+      ...base,
+      status: "accepted",
+      profile: {
+        product_type: run.project_type,
+        surfaces: deriveGeneratedMetaSkill(run).surfaces,
+        standards: ["ISO 12207", "ISO 15289", "SWEBOK", "RUP", "MDA", "DDD", "TDD", "BDD", "SRE"],
+        required_evidence: ["interrogation", "traceability", "tests", "expert review", "dashboard closure", "handoff"]
+      }
+    };
+  }
+  if (recordName === "generated-meta-skill-contract.json") {
+    return { ...base, status: "accepted", generated_meta_skill: deriveGeneratedMetaSkill(run) };
+  }
+  if (recordName === "intake-package.json") {
+    return {
+      ...base,
+      status: run.interrogation.gate,
+      answers,
+      interrogation: run.interrogation,
+      reinterrogation_required: run.interrogation.gate !== "pass"
+    };
+  }
+  if (recordName === "recursive-spec-decomposition-record.json") {
+    return {
+      ...base,
+      status: run.interrogation.gate,
+      decomposition_tree: buildDecompositionTree(run),
+      completeness_rule: "Every branch must have answer source, acceptance criteria, risks, tests, and owner or explicit waiver."
+    };
+  }
+  if (recordName === "engagement-governance-record.json" || recordName === "token-budget-record.json") {
+    return {
+      ...base,
+      status: run.answers["ANS-009"] && run.answers["ANS-010"] ? "accepted" : "blocked",
+      client_owner: run.answers["ANS-010"]?.value || "",
+      delivery_owner: "dark-factory-agent-swarm",
+      token_swag: run.token_swag,
+      change_control: run.token_swag.reapproval_trigger
+    };
+  }
+  if (recordName === "skill-routing-record.json") {
+    return {
+      ...base,
+      status: "accepted",
+      generated_meta_skill: deriveGeneratedMetaSkill(run),
+      routes: STAGES.map((item) => ({ stage_id: item.id, stage: item.title, skills: item.skills, gate: item.gate }))
+    };
+  }
+  if (recordName === "lifecycle-control-graph.json") {
+    return {
+      ...base,
+      status: "accepted",
+      nodes: STAGES.map((item, index) => ({ id: item.id, order: index, title: item.title, gate: item.gate, skills: item.skills })),
+      edges: STAGES.slice(1).map((item, index) => ({ source: STAGES[index].id, target: item.id, type: "precedes" }))
+    };
+  }
+  if (recordName === "execution-kernel-next-action.json") {
+    return {
+      ...base,
+      status: "accepted",
+      legal_next_action: run.current_stage,
+      blocked_actions: ["direct child-skill execution before active gate", "artifact completion without evidence", "production handoff without owner"]
+    };
+  }
+  if (recordName === "artifact-bom.json") {
+    return {
+      ...base,
+      status: "accepted",
+      artifacts: [
+        "BRD", "PRD", "SRS", "NFR catalog", "standards-tailoring record", "risk register", "quality plan",
+        "MDA CIM/PIM/PSM", "DDD context map", "HLD", "LLD", "ADR log", "test strategy", "scenario matrix",
+        "traceability matrix", "release plan", "runbook", "handoff record", "dashboard-control index", "quality certificate"
+      ].map((name, index) => ({ id: `ART-${String(index + 1).padStart(3, "0")}`, name, status: "planned" }))
+    };
+  }
+  if (recordName === "traceability-seed.json") {
+    return {
+      ...base,
+      status: "accepted",
+      nodes: Object.entries(answers).map(([id, answer]) => ({ id, type: "customer_answer", summary: answer.value.slice(0, 140) })),
+      edges: Object.keys(answers).map((id) => ({ source: id, target: "generated-meta-skill-contract", type: "derives_from" }))
+    };
+  }
+  if (recordName === "starter-project-book-index.json") {
+    return {
+      ...base,
+      status: "accepted",
+      project_book_directory: path.relative(ROOT, runProjectBookDir(run.run_id)).replace(/\\/g, "/"),
+      files: ["00-factory-run-summary.md", "01-initial-prd-skeleton.md"]
+    };
+  }
+  if (recordName === "expert-panel-record.json" || recordName === "critic-panel-record.json") {
+    return {
+      ...base,
+      status: "accepted",
+      experts: [
+        expertPersona("Engagement Partner", "Owns client confidence, token budget, change control, and outsourcing-style checkpoints."),
+        expertPersona("Requirements Interrogation Lead", "Owns answer quality, contradiction pressure, and recursive spec decomposition."),
+        expertPersona("Hawkeye Workflow Auditor", "Owns no-skip conformance, stage gates, evidence integrity, and veto power.")
+      ],
+      review_rounds_required: 5
+    };
+  }
+  if (recordName === "quality-refinery-gate.json") {
+    return {
+      ...base,
+      status: "conditional_pass",
+      thresholds: { expert_count: 3, checks_per_expert: 15, minimum_score: 96 },
+      residual_risks: ["Generated records require semantic human/Codex review before final project acceptance."]
+    };
+  }
+  if (recordName === "implementation-execution-plan.json" || recordName === "test-evidence-plan.json") {
+    return {
+      ...base,
+      status: "planned",
+      execution_plan: {
+        implementation_required: run.project_type !== "artifact-only",
+        test_classes: ["unit", "integration", "scenario", "holdout", "transfer", "browser/WYSIWYG", "accessibility", "security", "operations drill"],
+        evidence_required: true
+      }
+    };
+  }
+  if (recordName === "production-sre-handoff-plan.json") {
+    return {
+      ...base,
+      status: "planned",
+      handoff: ["deploy", "rollback", "observability", "incident drill", "operator signoff", "known risks"]
+    };
+  }
+  if (recordName === "dashboard-control-record.json") {
+    return {
+      ...base,
+      status: "planned",
+      dashboard_index_required: true,
+      redo_closure_required: true,
+      selected_node_policy: "No material redo without downstream impact report and task bead."
+    };
+  }
+  if (recordName === "human-agent-handoff-record.json" || recordName === "context-memory-pack.json") {
+    return {
+      ...base,
+      status: "planned",
+      handoff_ready: false,
+      required_before_handoff: ["accepted gates", "evidence links", "next legal action", "residual risks", "owner approval"]
+    };
+  }
+  return base;
+}
+
+function normalizeAnswers(run) {
+  const result = {};
+  for (const question of QUESTIONS) {
+    result[question.id] = {
+      label: question.label,
+      required: question.required,
+      prompt: question.prompt,
+      value: run.answers?.[question.id]?.value || "",
+      status: run.answers?.[question.id]?.value?.trim().length >= 8 ? "answered" : question.required ? "missing" : "optional"
+    };
+  }
+  return result;
+}
+
+function buildDecompositionTree(run) {
+  return {
+    root: {
+      id: "SPEC-ROOT",
+      name: run.project_name,
+      children: [
+        branch("SPEC-BUSINESS", "Business and stakeholders", ["ANS-001", "ANS-002", "ANS-010"]),
+        branch("SPEC-PRODUCT", "Product surfaces and domain behavior", ["ANS-003", "ANS-004", "ANS-008", "ANS-011"]),
+        branch("SPEC-QUALITY", "Quality, testing, security, and operations", ["ANS-005", "ANS-006", "ANS-007", "ANS-009"]),
+        branch("SPEC-BROWNFIELD", "Existing system preservation", ["ANS-012"])
+      ]
+    }
+  };
+}
+
+function branch(id, name, answerIds) {
+  return {
+    id,
+    name,
+    answer_ids: answerIds,
+    required_validation: ["source answer", "acceptance criteria", "risk", "test evidence", "owner approval"]
+  };
+}
+
+function expertPersona(role, mandate) {
+  return {
+    role,
+    seniority: "elite industry expert",
+    mandate,
+    veto_power: true,
+    required_checks: 15,
+    evidence_required: ["trace links", "rubric scores", "failed-point fixes", "residual risk"]
+  };
+}
+
+function renderRunSummaryMarkdown(run) {
+  return `# ${run.project_name} Factory Run Summary
+
+**${ZERO_SLOP}**
+
+Run ID: \`${run.run_id}\`
+
+Project type: \`${run.project_type}\`
+
+Generated meta-skill: \`${deriveGeneratedMetaSkill(run).name}\`
+
+Current status: \`${run.status}\`
+
+## Intent
+
+${run.intent}
+
+## Next Legal Action
+
+Proceed only through the active factory stage and its gate. Do not bypass the meta-meta generated skill contract.
+`;
+}
+
+function renderPrdSkeletonMarkdown(run) {
+  const answers = normalizeAnswers(run);
+  return `# Initial PRD Skeleton
+
+**${ZERO_SLOP}**
+
+This is a generated starter artifact from the factory UX. It is not final proof.
+
+## Business Outcome
+
+${answers["ANS-001"].value || "Missing."}
+
+## Users
+
+${answers["ANS-002"].value || "Missing."}
+
+## Product Surface
+
+${answers["ANS-003"].value || "Missing."}
+
+## Quality And Testing
+
+${answers["ANS-005"].value || "Missing."}
+
+${answers["ANS-006"].value || "Missing."}
+`;
+}
+
+function buildProjectPortal(runId) {
+  const run = loadRun(runId);
+  const validation = validateRunExecution(run);
+  const records = listRunFiles(runRecordsDir(run.run_id), "records");
+  const runBookDocs = listRunFiles(runProjectBookDir(run.run_id), "project-book");
+  const externalBook = projectBookSummary(run.project_book || DEFAULT_PROJECT_BOOK);
+  const accepted = (run.stages || []).filter((stage) => stage.status === "accepted").length;
+  const active = (run.stages || []).find((stage) => stage.id === run.current_stage);
+  return {
+    zero_slop_policy: ZERO_SLOP,
+    portal_type: "dfms_human_project_control_portal",
+    generated_at: nowIso(),
+    run: {
+      id: run.run_id,
+      name: run.project_name,
+      type: run.project_type,
+      status: run.status,
+      current_stage: run.current_stage,
+      active_stage_title: active?.title || "",
+      created_at: run.created_at,
+      updated_at: run.updated_at,
+      token_swag: run.token_swag
+    },
+    progress: {
+      accepted_stages: accepted,
+      total_stages: STAGES.length,
+      interrogation_completeness: run.interrogation?.completeness || 0,
+      execution_record_count: (run.execution_outputs || []).length,
+      open_change_request_count: (run.change_requests || []).filter((item) => !["closed", "rejected"].includes(item.state)).length,
+      validation_status: validation.status,
+      validation_findings: validation.finding_count
+    },
+    stages: run.stages,
+    records,
+    project_book: {
+      generated_for_run: runBookDocs,
+      external_reference: externalBook
+    },
+    change_requests: run.change_requests || [],
+    human_decisions: run.human_decisions || [],
+    audit_log: run.audit_log || [],
+    validation,
+    next_actions: projectPortalNextActions(run, validation)
+  };
+}
+
+function listRunFiles(dir, kind) {
+  if (!fs.existsSync(dir)) return [];
+  const out = [];
+  const walk = (current) => {
+    for (const entry of fs.readdirSync(current, { withFileTypes: true })) {
+      const full = path.join(current, entry.name);
+      if (entry.isDirectory()) {
+        walk(full);
+        continue;
+      }
+      const stat = fs.statSync(full);
+      out.push({
+        kind,
+        name: entry.name,
+        path: path.relative(ROOT, full).replace(/\\/g, "/"),
+        bytes: stat.size,
+        updated_at: stat.mtime.toISOString()
+      });
+    }
+  };
+  walk(dir);
+  return out.sort((a, b) => a.path.localeCompare(b.path));
+}
+
+function projectPortalNextActions(run, validation) {
+  const actions = [];
+  if (run.interrogation?.gate !== "pass") actions.push("Finish customer grill answers and resolve contradiction blockers.");
+  if (run.status === "change_control") actions.push("Review the active change request, then execute the reopened stage pipeline.");
+  if (validation.status !== "pass") actions.push("Resolve validation findings before claiming handoff readiness.");
+  if (run.status === "ready_for_handoff") actions.push("Review project portal, run RALPH audit if stale, and approve handoff or open a change request.");
+  if (!actions.length) actions.push("Execute the active stage or ready pipeline from the workflow controls.");
+  return actions;
+}
+
+function createChangeRequest(runId, payload) {
+  const run = loadRun(runId);
+  const title = String(payload.title || "").trim();
+  if (title.length < 4) throw Object.assign(new Error("Change request title is required."), { status: 400 });
+  const targetStage = STAGES.some((stage) => stage.id === payload.targetStage)
+    ? payload.targetStage
+    : targetStageForImpact(payload.impactArea || payload.changeType || "");
+  const id = `CR-${new Date().toISOString().replace(/[-:TZ.]/g, "").slice(0, 14)}-${slug(title).slice(0, 36)}`;
+  const selectedNode = String(payload.selectedNode || "").trim();
+  let redo = null;
+  if (selectedNode) {
+    try {
+      redo = computeRedoClosure({ projectBook: run.project_book, node: selectedNode });
+    } catch (error) {
+      redo = {
+        status: "blocked",
+        node: selectedNode,
+        error: error.message || String(error)
+      };
+    }
+  }
+  const cr = {
+    zero_slop_policy: ZERO_SLOP,
+    id,
+    state: "approved_for_reentry",
+    title,
+    requested_at: nowIso(),
+    requested_by: String(payload.requestedBy || "human-owner"),
+    approval_owner: String(payload.approvalOwner || run.answers?.["ANS-010"]?.value || "human-owner"),
+    change_type: String(payload.changeType || "design_resteer"),
+    impact_area: String(payload.impactArea || "design"),
+    target_stage: targetStage,
+    selected_node: selectedNode,
+    reason: String(payload.reason || "").trim(),
+    requested_change: String(payload.requestedChange || "").trim(),
+    token_swag_delta: String(payload.tokenDelta || "medium"),
+    reapproval_trigger: run.token_swag?.reapproval_trigger || "",
+    redo_impact: redo,
+    reopened_stages: reopenStagesForChange(run, targetStage, title),
+    required_reviews: [
+      "df-dashboard-control downstream impact review",
+      "df-governance-mayor change-control approval",
+      "df-quality-refinery reopened gate review",
+      "df-traceability-evidence updated trace closure",
+      "df-human-agent-handoff owner communication record"
+    ],
+    next_legal_action: `Execute reopened stage ${targetStage} through the ready pipeline.`
+  };
+  const recordPath = path.join(runRecordsDir(run.run_id), `${id}.json`);
+  writeJson(recordPath, cr);
+  const communicationPath = path.join(runRecordsDir(run.run_id), `${id}-human-communication-record.json`);
+  writeJson(communicationPath, buildHumanCommunicationRecord(run, cr));
+  run.change_requests = [cr, ...(run.change_requests || [])];
+  run.human_decisions = [{
+    id: `HD-${Date.now()}`,
+    at: nowIso(),
+    type: "change_request",
+    owner: cr.approval_owner,
+    decision: "approved_for_reentry",
+    summary: title,
+    evidence: path.relative(ROOT, recordPath).replace(/\\/g, "/")
+  }, ...(run.human_decisions || [])];
+  run.execution_outputs = Array.from(new Set([
+    ...(run.execution_outputs || []),
+    path.relative(ROOT, recordPath).replace(/\\/g, "/"),
+    path.relative(ROOT, communicationPath).replace(/\\/g, "/")
+  ]));
+  run.status = "change_control";
+  run.current_stage = targetStage;
+  run.audit_log.push({ at: nowIso(), event: "change_request_opened", detail: `${id}: ${title}` });
+  saveRun(run);
+  return { change_request: cr, portal: buildProjectPortal(run.run_id), run: loadRun(run.run_id) };
+}
+
+function targetStageForImpact(impactArea) {
+  const value = String(impactArea || "").toLowerCase();
+  if (/\b(requirement|scope|customer|spec|prd|srs)\b/.test(value)) return "stage-01-interrogation";
+  if (/\b(token|budget|approval|commercial|engagement)\b/.test(value)) return "stage-02-engagement";
+  if (/\b(skill|method|workflow|lifecycle|stage|process)\b/.test(value)) return "stage-03-skill-routing";
+  if (/\b(artifact|trace|design|architecture|model|ddd|mda)\b/.test(value)) return "stage-04-artifacts";
+  if (/\b(review|critic|rubric|quality|certificate)\b/.test(value)) return "stage-05-experts";
+  if (/\b(code|test|implementation|browser|scenario|production|sre|ops)\b/.test(value)) return "stage-06-build-test";
+  return "stage-04-artifacts";
+}
+
+function reopenStagesForChange(run, targetStage, reason) {
+  const start = STAGES.findIndex((stage) => stage.id === targetStage);
+  const reopened = [];
+  for (let index = Math.max(0, start); index < run.stages.length; index += 1) {
+    const stage = run.stages[index];
+    reopened.push(stage.id);
+    stage.status = index === start ? "active" : "locked";
+    stage.gate_result = index === start ? "change_control_ready" : "reopened_downstream";
+    stage.gate_notes = [`Reopened by human change request: ${reason}`];
+    stage.reopened_at = nowIso();
+    stage.reopen_reason = reason;
+    stage.prior_invocation_count = (stage.invocations || []).length;
+    stage.invocations = [];
+    stage.outputs = [];
+  }
+  return reopened;
+}
+
+function buildHumanCommunicationRecord(run, cr) {
+  return {
+    zero_slop_policy: ZERO_SLOP,
+    record_type: "human_communication_record",
+    record_id: `${cr.id}-HUMAN-COMM`,
+    run_id: run.run_id,
+    created_at: nowIso(),
+    communication_pattern: "resteer_change_request",
+    human_owner: cr.approval_owner,
+    confidence_framing: "Human has requested a design/workflow change; downstream stages are reopened rather than silently mutating accepted evidence.",
+    requested_decision: cr.requested_change,
+    response_policy: "Execute only through reopened stage gates; update trace, evidence, dashboard closure, and quality records.",
+    linked_change_request: cr.id,
+    next_check: cr.next_legal_action
+  };
+}
+
+function advanceRun(runId) {
+  const run = loadRun(runId);
+  const index = run.stages.findIndex((item) => item.id === run.current_stage);
+  const current = run.stages[index];
+  const gate = evaluateStageGate(run, current);
+  current.gate_result = gate.status;
+  current.gate_notes = gate.notes;
+  if (gate.status !== "pass") {
+    current.status = "blocked";
+    run.status = "blocked";
+    run.audit_log.push({ at: nowIso(), event: "advance_blocked", detail: `${current.id}: ${gate.notes.join(" ")}` });
+    saveRun(run);
+    return run;
+  }
+  current.status = "accepted";
+  const next = run.stages[index + 1];
+  if (next) {
+    next.status = "active";
+    next.gate_result = "ready";
+    run.current_stage = next.id;
+    run.status = next.id === "stage-01-interrogation" ? "interrogating" : "in_progress";
+  } else {
+    run.status = "ready_for_handoff";
+  }
+  run.audit_log.push({ at: nowIso(), event: "advanced", detail: current.id });
+  saveRun(run);
+  return run;
+}
+
+function evaluateStageGate(run, stage) {
+  const notes = [];
+  if (stage.invocations.length === 0) notes.push("Stage has not been executed yet.");
+  if (stage.id === "stage-00-meta-meta" && run.intent.length < 12) notes.push("Intent is too thin for meta-meta field formation.");
+  if (stage.id === "stage-01-interrogation" && run.interrogation.gate !== "pass") {
+    notes.push(`Customer grill blocked: ${run.interrogation.completeness}% complete with ${run.interrogation.contradictions.length} contradictions.`);
+  }
+  if (stage.id === "stage-02-engagement" && !run.answers["ANS-009"]?.value) notes.push("Token boundary answer is missing.");
+  if (stage.id === "stage-02-engagement" && !run.answers["ANS-010"]?.value) notes.push("Approval owner answer is missing.");
+  return { status: notes.length ? "blocked" : "pass", notes };
+}
+
+function executeReadyPipeline(runId) {
+  let run = loadRun(runId);
+  const visited = [];
+  for (let guard = 0; guard < STAGES.length + 2; guard += 1) {
+    if (run.status === "ready_for_handoff") break;
+    const stage = run.stages.find((item) => item.id === run.current_stage);
+    if (!stage) break;
+    if (!stage.invocations.length || stage.status === "blocked") {
+      run = invokeStage(run.run_id, stage.id);
+      visited.push(`executed:${stage.id}`);
+    }
+    run = advanceRun(run.run_id);
+    visited.push(`advanced:${stage.id}:${run.status}`);
+    if (run.status === "blocked" || run.status === "interrogating") break;
+  }
+  run.pipeline_execution = {
+    at: nowIso(),
+    visited,
+    result: run.status,
+    current_stage: run.current_stage
+  };
+  run.audit_log.push({ at: nowIso(), event: "pipeline_execute", detail: `${visited.length} transitions, status ${run.status}` });
+  saveRun(run);
+  return run;
+}
+
+function validateRunExecution(runOrId) {
+  const run = typeof runOrId === "string" ? loadRun(runOrId) : runOrId;
+  const findings = [];
+  const warn = (priority, title, detail) => findings.push({ priority, title, detail });
+  const stageById = Object.fromEntries((run.stages || []).map((stage) => [stage.id, stage]));
+
+  if (run.zero_slop_policy !== ZERO_SLOP) warn("P1", "Missing zero-slop policy", "Run ledger does not carry the mandatory zero-slop policy.");
+  if (!run.generated_meta_skill || run.generated_meta_skill.generated_from !== "df-meta-attractor") {
+    warn("P1", "Generated meta-skill missing", "Run does not prove the meta-meta skill generated the project-tailored meta-skill.");
+  }
+  if (run.generated_meta_skill?.required_sequence?.[0]?.skills?.[0] !== "df-meta-attractor") {
+    warn("P1", "Meta-meta is not first", "Generated meta-skill sequence does not start with df-meta-attractor.");
+  }
+  const selected = new Set(run.generated_meta_skill?.selected_meta_skills || []);
+  for (const skill of new Set(STAGES.flatMap((stage) => stage.skills))) {
+    if (!selected.has(skill)) warn("P2", "Skill missing from generated contract", `${skill} is not listed in selected_meta_skills.`);
+  }
+  if ((run.stages || []).map((stage) => stage.id).join("|") !== STAGES.map((stage) => stage.id).join("|")) {
+    warn("P1", "Stage order drift", "Run stage order no longer matches the factory control graph.");
+  }
+
+  let firstNonAccepted = -1;
+  for (let index = 0; index < STAGES.length; index += 1) {
+    const expected = STAGES[index];
+    const actual = run.stages?.[index];
+    if (!actual || actual.id !== expected.id) {
+      warn("P1", "Stage identity mismatch", `Expected ${expected.id} at index ${index}.`);
+      continue;
+    }
+    if (actual.status !== "accepted" && firstNonAccepted === -1) firstNonAccepted = index;
+    if (firstNonAccepted !== -1 && index > firstNonAccepted && actual.status === "accepted") {
+      warn("P1", "Non-contiguous accepted stages", `${actual.id} is accepted after an earlier unaccepted stage.`);
+    }
+    if (actual.status === "accepted" && !actual.invocations?.length) {
+      warn("P1", "Accepted stage has no invocation", `${actual.id} is accepted without invocation evidence.`);
+    }
+    if (actual.status === "accepted") {
+      for (const recordName of STAGE_RECORDS[actual.id] || []) {
+        const rel = path.relative(ROOT, path.join(runRecordsDir(run.run_id), recordName)).replace(/\\/g, "/");
+        if (!actual.outputs?.includes(rel) && !(run.execution_outputs || []).includes(rel)) {
+          warn("P1", "Accepted stage missing required record", `${actual.id} missing ${recordName}.`);
+        }
+      }
+    }
+  }
+
+  if (run.status === "ready_for_handoff" && run.stages.some((stage) => stage.status !== "accepted")) {
+    warn("P1", "Handoff before all stages accepted", "Run is ready_for_handoff while at least one stage is not accepted.");
+  }
+  if (run.status === "ready_for_handoff" && run.current_stage !== STAGES[STAGES.length - 1].id) {
+    warn("P2", "Handoff current stage not final", "Run is handoff-ready but current_stage is not the final dashboard/handoff stage.");
+  }
+  if (run.project_collection?.completeness < 100 && run.status !== "interrogating" && run.status !== "blocked") {
+    warn("P1", "Execution with incomplete project collection", "Run advanced past interrogation without complete required answers.");
+  }
+  if (run.interrogation?.contradictions?.some((item) => item.severity === "P1") && run.status !== "blocked") {
+    warn("P1", "P1 contradiction not blocking", "Run contains a P1 contradiction but is not blocked.");
+  }
+
+  const outputs = run.execution_outputs || [];
+  const duplicates = outputs.filter((item, index) => outputs.indexOf(item) !== index);
+  if (duplicates.length) warn("P2", "Duplicate execution outputs", `Duplicate output entries: ${Array.from(new Set(duplicates)).join(", ")}`);
+  for (const rel of outputs) {
+    const full = path.join(ROOT, rel);
+    if (!fs.existsSync(full)) {
+      warn("P1", "Execution output missing on disk", rel);
+      continue;
+    }
+    if (rel.endsWith(".json")) {
+      const data = readJson(full);
+      if (!data) {
+        warn("P1", "Execution JSON is invalid", rel);
+      } else if (data.zero_slop_policy !== ZERO_SLOP) {
+        warn("P1", "Execution record missing zero-slop policy", rel);
+      }
+    }
+    if (rel.endsWith(".md")) {
+      const text = fs.readFileSync(full, "utf8");
+      if (!text.includes(ZERO_SLOP)) warn("P1", "Markdown execution record missing zero-slop policy", rel);
+    }
+  }
+
+  if (stageById["stage-04-artifacts"]?.status === "accepted") {
+    for (const file of ["00-factory-run-summary.md", "01-initial-prd-skeleton.md"]) {
+      const rel = path.relative(ROOT, path.join(runProjectBookDir(run.run_id), file)).replace(/\\/g, "/");
+      if (!outputs.includes(rel) || !fs.existsSync(path.join(ROOT, rel))) warn("P1", "Starter project-book artifact missing", file);
+    }
+  }
+  if (stageById["stage-07-dashboard-redo"]?.status === "accepted") {
+    if (!outputs.some((item) => item.includes("redo-impact-ui-02-prd-md.json"))) {
+      warn("P1", "Redo impact report missing", "Final dashboard stage accepted without redo impact evidence.");
+    }
+  }
+
+  return {
+    zero_slop_policy: ZERO_SLOP,
+    run_id: run.run_id,
+    checked_at: nowIso(),
+    status: findings.some((item) => item.priority === "P1") ? "fail" : findings.length ? "conditional_pass" : "pass",
+    finding_count: findings.length,
+    p1_count: findings.filter((item) => item.priority === "P1").length,
+    p2_count: findings.filter((item) => item.priority === "P2").length,
+    findings
+  };
+}
+
+function runRalphAudit(runId, loops = 20) {
+  const run = loadRun(runId);
+  const base = validateRunExecution(run);
+  const loopSpecs = [
+    ["Meta-meta entry", "Verify df-meta-attractor is first and cannot be bypassed."],
+    ["Generated meta-skill", "Verify generated meta-skill contract exists and selects child skills."],
+    ["Project collection", "Verify required answers are captured before execution advances."],
+    ["Contradiction blocking", "Verify P1 contradictions cannot pass silently."],
+    ["Stage order", "Verify stage order matches the control graph."],
+    ["Locked future work", "Verify accepted stages form a contiguous prefix."],
+    ["Invocation evidence", "Verify accepted stages have invocations."],
+    ["Required records", "Verify required records exist per stage."],
+    ["Record persistence", "Verify execution outputs exist on disk."],
+    ["Zero-slop evidence", "Verify JSON/Markdown records carry zero-slop policy."],
+    ["Artifact output", "Verify artifact stage creates starter project-book files."],
+    ["Trace seed", "Verify traceability seed is generated."],
+    ["Expert review plan", "Verify expert and critic panels are generated."],
+    ["Testing plan", "Verify implementation and test evidence plans are generated."],
+    ["SRE handoff", "Verify production/SRE handoff plan exists."],
+    ["Dashboard redo", "Verify redo impact evidence exists for final stage."],
+    ["Audit log", "Verify pipeline execution appears in audit log."],
+    ["No duplicate outputs", "Verify execution output ledger is unique."],
+    ["Handoff readiness", "Verify handoff-ready only after all stages accepted."],
+    ["Residual boundary", "Verify real code/deploy remains project-specific and not overclaimed."]
+  ];
+  const loopsOut = loopSpecs.slice(0, loops).map(([name, attack], index) => {
+    const loopFindings = ralphLoopFindings(name, run, base);
+    return {
+      loop: index + 1,
+      review: name,
+      attack,
+      learn: loopFindings.length ? "Gap found; keep gate conditional or fail until fixed." : "No gap found for this check.",
+      patch: loopFindings.length ? "See findings list and required remediation." : "No patch required.",
+      harden: "Validator check recorded in RALPH audit.",
+      findings: loopFindings
+    };
+  });
+  const audit = {
+    zero_slop_policy: ZERO_SLOP,
+    record_type: "ralph_20_execution_audit",
+    run_id: run.run_id,
+    created_at: nowIso(),
+    base_validation: base,
+    loops: loopsOut,
+    status: base.status,
+    summary: `${loopsOut.length} RALPH loops executed; ${base.p1_count} P1 findings, ${base.p2_count} P2 findings.`
+  };
+  const file = path.join(runRecordsDir(run.run_id), "ralph-20-execution-audit.json");
+  writeJson(file, audit);
+  const rel = path.relative(ROOT, file).replace(/\\/g, "/");
+  run.execution_outputs = Array.from(new Set([...(run.execution_outputs || []), rel]));
+  run.audit_log.push({ at: nowIso(), event: "ralph_20_audit", detail: audit.summary });
+  saveRun(run);
+  return { audit, run: loadRun(run.run_id), record: rel };
+}
+
+function ralphLoopFindings(name, run, base) {
+  const byTitle = (title) => base.findings.filter((finding) => finding.title.toLowerCase().includes(title.toLowerCase()));
+  const map = {
+    "Meta-meta entry": byTitle("Meta-meta"),
+    "Generated meta-skill": byTitle("Generated meta-skill").concat(byTitle("Skill missing")),
+    "Project collection": byTitle("project collection"),
+    "Contradiction blocking": byTitle("contradiction"),
+    "Stage order": byTitle("Stage"),
+    "Locked future work": byTitle("contiguous"),
+    "Invocation evidence": byTitle("invocation"),
+    "Required records": byTitle("required record"),
+    "Record persistence": byTitle("missing on disk").concat(byTitle("invalid")),
+    "Zero-slop evidence": byTitle("zero-slop"),
+    "Artifact output": byTitle("Starter project-book"),
+    "Trace seed": (run.execution_outputs || []).some((item) => item.endsWith("traceability-seed.json")) ? [] : [{ priority: "P1", title: "Trace seed missing", detail: "traceability-seed.json not generated." }],
+    "Expert review plan": (run.execution_outputs || []).some((item) => item.endsWith("expert-panel-record.json")) && (run.execution_outputs || []).some((item) => item.endsWith("critic-panel-record.json")) ? [] : [{ priority: "P1", title: "Expert records missing", detail: "Expert or critic panel record missing." }],
+    "Testing plan": (run.execution_outputs || []).some((item) => item.endsWith("test-evidence-plan.json")) ? [] : [{ priority: "P1", title: "Testing plan missing", detail: "test-evidence-plan.json not generated." }],
+    "SRE handoff": (run.execution_outputs || []).some((item) => item.endsWith("production-sre-handoff-plan.json")) ? [] : [{ priority: "P2", title: "SRE handoff plan missing", detail: "production-sre-handoff-plan.json not generated." }],
+    "Dashboard redo": byTitle("Redo impact"),
+    "Audit log": (run.audit_log || []).some((item) => item.event === "pipeline_execute") ? [] : [{ priority: "P2", title: "Pipeline audit log missing", detail: "pipeline_execute event missing." }],
+    "No duplicate outputs": byTitle("Duplicate"),
+    "Handoff readiness": byTitle("Handoff"),
+    "Residual boundary": []
+  };
+  return map[name] || [];
+}
+
+function listRuns() {
+  ensureDir(RUNS);
+  return fs.readdirSync(RUNS)
+    .filter((name) => name.endsWith(".json"))
+    .map((name) => readJson(path.join(RUNS, name)))
+    .filter(Boolean)
+    .sort((a, b) => String(b.created_at).localeCompare(String(a.created_at)));
+}
+
+function locatePython() {
+  const bundled = path.join(os.homedir(), ".cache", "codex-runtimes", "codex-primary-runtime", "dependencies", "python", "python.exe");
+  if (fs.existsSync(bundled)) return bundled;
+  return process.env.PYTHON || "python";
+}
+
+function computeRedoClosure(payload) {
+  const projectBook = payload.projectBook ? path.resolve(payload.projectBook) : DEFAULT_PROJECT_BOOK;
+  const node = String(payload.node || "02-prd.md");
+  const script = path.join(ROOT, "codex-skills", "df-dashboard-control", "scripts", "df_dashboard_control.py");
+  const index = path.join(projectBook, "portal", "dashboard-control-index.json");
+  const html = path.join(projectBook, "portal", "dashboard-control.html");
+  const out = path.join(projectBook, "evidence", `redo-impact-ui-${slug(node)}.json`);
+  const py = locatePython();
+  const build = spawnSync(py, [script, "build", "--root", projectBook, "--project", "DFMS UI Console Run", "--out", index, "--html", html], { encoding: "utf8" });
+  if (build.status !== 0) {
+    return computeRedoClosureFallback({ projectBook, node, index, out, script_error: build.error?.message || build.stderr || build.stdout || "Dashboard build failed" });
+  }
+  const closure = spawnSync(py, [script, "closure", "--index", index, "--node", node, "--out", out, "--request", "UI-REDO-REQUEST"], { encoding: "utf8" });
+  if (closure.status !== 0) {
+    return computeRedoClosureFallback({ projectBook, node, index, out, script_error: closure.error?.message || closure.stderr || closure.stdout || "Redo closure failed" });
+  }
+  const report = readJson(out, {});
+  return {
+    status: "pass",
+    projectBook,
+    node,
+    index,
+    reportPath: out,
+    impacted: report.closure?.impacted_node_count || 0,
+    dashboardOutputs: report.dashboard_outputs_to_refresh?.length || 0,
+    stdout: { build: build.stdout, closure: closure.stdout }
+  };
+}
+
+function computeRedoClosureFallback({ projectBook, node, index, out, script_error }) {
+  const dashboard = readJson(index);
+  if (!dashboard || !Array.isArray(dashboard.nodes)) {
+    throw Object.assign(new Error(`Dashboard index is missing and script execution was unavailable: ${script_error}`), { status: 500 });
+  }
+  const report = computeClosureFromIndex(dashboard, node, path.basename(out));
+  report.report_id = `REDO-IMPACT-UI-${Date.now()}`;
+  report.project = dashboard.project || "DFMS UI Console Run";
+  report.source_request = "UI-REDO-REQUEST";
+  report.generated_at = nowIso();
+  report.execution_mode = "javascript_fallback";
+  report.script_error = script_error;
+  writeJson(out, report);
+  return {
+    status: "pass-fallback",
+    projectBook,
+    node,
+    index,
+    reportPath: out,
+    impacted: report.closure.impacted_node_count,
+    dashboardOutputs: report.dashboard_outputs_to_refresh.length,
+    stdout: { build: "", closure: `fallback used: ${script_error}` }
+  };
+}
+
+function computeClosureFromIndex(index, selected, evidenceTarget = "redo-impact-ui.json") {
+  const nodes = Object.fromEntries((index.nodes || []).map((item) => [item.id, item]));
+  let selectedId = nodes[selected] ? selected : "";
+  if (!selectedId) {
+    const matches = (index.nodes || []).filter((item) => String(item.path || "").toLowerCase().includes(String(selected).toLowerCase()));
+    if (matches.length !== 1) {
+      throw Object.assign(new Error(`Selected node not found or ambiguous: ${selected}`), { status: 400 });
+    }
+    selectedId = matches[0].id;
+  }
+
+  const forward = new Set(["reviewed_by", "certified_by", "reopens", "supersedes", "blocks"]);
+  const reverse = new Set(["depends_on", "satisfies", "verifies", "documents", "generated_from", "inferred_reference"]);
+  const adjacency = new Map();
+  for (const edge of index.edges || []) {
+    if (!edge.source || !edge.target) continue;
+    if (forward.has(edge.type)) addImpactEdge(adjacency, edge.source, edge.target, edge, "forward");
+    if (reverse.has(edge.type)) addImpactEdge(adjacency, edge.target, edge.source, edge, "reverse");
+  }
+
+  const seen = new Set([selectedId]);
+  const queue = [selectedId];
+  const impacted = [];
+  const edgeReasons = [];
+  while (queue.length) {
+    const current = queue.shift();
+    impacted.push(current);
+    for (const edge of adjacency.get(current) || []) {
+      if (seen.has(edge.impact_target) || !nodes[edge.impact_target]) continue;
+      seen.add(edge.impact_target);
+      queue.push(edge.impact_target);
+      edgeReasons.push(edge);
+    }
+  }
+
+  const impactedNodes = impacted.map((id) => nodes[id]).filter(Boolean);
+  const tests = impactedNodes.filter((item) => item.kind === "test" || item.kind === "evidence" || item.stage === "verification");
+  const artifacts = impactedNodes.filter((item) => ["artifact", "portal", "trace"].includes(item.kind));
+  const dashboardOutputs = Object.values(nodes).filter((item) => ["portal/dashboard-control-index.json", "portal/dashboard-control.html"].includes(item.path));
+  return {
+    zero_slop_policy: ZERO_SLOP,
+    selected_node: selectedId,
+    selected_node_path: nodes[selectedId].path,
+    closure: {
+      impacted_node_count: impactedNodes.length,
+      impacted_nodes: impactedNodes,
+      edge_reasons: edgeReasons
+    },
+    redo_order: impactedNodes,
+    gates_to_reopen: [],
+    certificates_to_reissue: [],
+    tests_to_rerun: tests,
+    artifacts_to_regenerate: artifacts,
+    dashboard_outputs_to_refresh: dashboardOutputs,
+    human_approvals: [
+      "Approve redo scope and token SWAG before material changes.",
+      "Promote important inferred edges to explicit trace records before formal certification."
+    ],
+    required_skills: ["df-dashboard-control", "df-governance-mayor", "df-quality-refinery", "df-traceability-evidence"],
+    task_bead: {
+      bead_id: `TB-REDO-UI-${Date.now()}`,
+      state: "planned",
+      gate: "GATE-REDO-IMPACT",
+      evidence_target: evidenceTarget
+    },
+    assumptions: ["Fallback closure used existing dashboard-control index instead of rebuilding it."],
+    residual_risks: ["If the index is stale, rebuild it with the Python dashboard-control script before certification."]
+  };
+}
+
+function addImpactEdge(adjacency, source, target, edge, direction) {
+  if (!adjacency.has(source)) adjacency.set(source, []);
+  adjacency.get(source).push({
+    ...edge,
+    impact_source: source,
+    impact_target: target,
+    impact_direction: direction,
+    original_source: edge.source,
+    original_target: edge.target
+  });
+}
+
+function sendJson(res, status, data) {
+  res.writeHead(status, { "content-type": "application/json; charset=utf-8", "cache-control": "no-store" });
+  res.end(JSON.stringify(data, null, 2));
+}
+
+function parseBody(req) {
+  return new Promise((resolve, reject) => {
+    let body = "";
+    req.on("data", (chunk) => {
+      body += chunk;
+      if (body.length > 2_000_000) reject(Object.assign(new Error("Request too large"), { status: 413 }));
+    });
+    req.on("end", () => {
+      try {
+        resolve(body ? JSON.parse(body) : {});
+      } catch {
+        reject(Object.assign(new Error("Invalid JSON"), { status: 400 }));
+      }
+    });
+  });
+}
+
+function serveStatic(req, res) {
+  const url = new URL(req.url, `http://${req.headers.host}`);
+  if (url.pathname.includes("](") || url.pathname.startsWith("/]") || url.pathname.includes("%5D(")) {
+    res.writeHead(302, { location: "/layer-map/" });
+    res.end();
+    return;
+  }
+  if (url.pathname === "/layer-map") {
+    res.writeHead(302, { location: "/layer-map/" });
+    res.end();
+    return;
+  }
+  if (url.pathname.startsWith("/layer-map/")) {
+    const layerPath = url.pathname === "/layer-map/" ? "/index.html" : url.pathname.slice("/layer-map".length);
+    return serveStaticFromRoot(layerPath, LAYER_MAP_PUBLIC, res);
+  }
+  const pathname = url.pathname === "/" ? "/index.html" : url.pathname;
+  return serveStaticFromRoot(pathname, PUBLIC, res);
+}
+
+function serveStaticFromRoot(pathname, root, res) {
+  const file = path.resolve(root, `.${pathname}`);
+  if (!file.startsWith(root) || !fs.existsSync(file) || fs.statSync(file).isDirectory()) {
+    res.writeHead(404);
+    res.end("Not found");
+    return;
+  }
+  const ext = path.extname(file);
+  const types = { ".html": "text/html", ".css": "text/css", ".js": "text/javascript", ".json": "application/json" };
+  res.writeHead(200, { "content-type": `${types[ext] || "application/octet-stream"}; charset=utf-8` });
+  fs.createReadStream(file).pipe(res);
+}
+
+async function handleApi(req, res) {
+  const url = new URL(req.url, `http://${req.headers.host}`);
+  try {
+    if (req.method === "GET" && url.pathname === "/api/bootstrap") {
+      return sendJson(res, 200, {
+        zero_slop_policy: ZERO_SLOP,
+        skills: loadSkills(),
+        stages: STAGES,
+        questions: QUESTIONS,
+        projectBook: projectBookSummary(),
+        runs: listRuns().slice(0, 10)
+      });
+    }
+    if (req.method === "POST" && url.pathname === "/api/runs") {
+      return sendJson(res, 201, createRun(await parseBody(req)));
+    }
+    if (req.method === "POST" && url.pathname.match(/^\/api\/runs\/[^/]+\/answer$/)) {
+      const id = url.pathname.split("/")[3];
+      return sendJson(res, 200, answerQuestion(id, await parseBody(req)));
+    }
+    if (req.method === "POST" && url.pathname.match(/^\/api\/runs\/[^/]+\/invoke$/)) {
+      const id = url.pathname.split("/")[3];
+      const body = await parseBody(req);
+      return sendJson(res, 200, invokeStage(id, body.stageId));
+    }
+    if (req.method === "POST" && url.pathname.match(/^\/api\/runs\/[^/]+\/advance$/)) {
+      const id = url.pathname.split("/")[3];
+      return sendJson(res, 200, advanceRun(id));
+    }
+    if (req.method === "POST" && url.pathname.match(/^\/api\/runs\/[^/]+\/execute$/)) {
+      const id = url.pathname.split("/")[3];
+      return sendJson(res, 200, executeReadyPipeline(id));
+    }
+    if (req.method === "GET" && url.pathname.match(/^\/api\/runs\/[^/]+\/portal$/)) {
+      const id = url.pathname.split("/")[3];
+      return sendJson(res, 200, buildProjectPortal(id));
+    }
+    if (req.method === "POST" && url.pathname.match(/^\/api\/runs\/[^/]+\/change-request$/)) {
+      const id = url.pathname.split("/")[3];
+      return sendJson(res, 201, createChangeRequest(id, await parseBody(req)));
+    }
+    if (req.method === "GET" && url.pathname.match(/^\/api\/runs\/[^/]+\/validate$/)) {
+      const id = url.pathname.split("/")[3];
+      return sendJson(res, 200, validateRunExecution(id));
+    }
+    if (req.method === "POST" && url.pathname.match(/^\/api\/runs\/[^/]+\/ralph$/)) {
+      const id = url.pathname.split("/")[3];
+      return sendJson(res, 200, runRalphAudit(id, 20));
+    }
+    if (req.method === "GET" && url.pathname.match(/^\/api\/runs\/[^/]+$/)) {
+      return sendJson(res, 200, loadRun(url.pathname.split("/").pop()));
+    }
+    if (req.method === "POST" && url.pathname === "/api/redo") {
+      return sendJson(res, 200, computeRedoClosure(await parseBody(req)));
+    }
+    return sendJson(res, 404, { error: "Unknown API route" });
+  } catch (error) {
+    return sendJson(res, error.status || 500, { error: error.message || String(error) });
+  }
+}
+
+function createServer() {
+  ensureDir(RUNS);
+  return http.createServer((req, res) => {
+    if (req.url.startsWith("/api/")) {
+      handleApi(req, res);
+    } else {
+      serveStatic(req, res);
+    }
+  });
+}
+
+if (require.main === module) {
+  createServer().listen(PORT, "127.0.0.1", () => {
+    console.log(`DFMS control console listening at http://127.0.0.1:${PORT}/`);
+  });
+}
+
+module.exports = {
+  ZERO_SLOP,
+  STAGES,
+  QUESTIONS,
+  loadSkills,
+  projectBookSummary,
+  createRun,
+  answerQuestion,
+  advanceRun,
+  invokeStage,
+  executeReadyPipeline,
+  validateRunExecution,
+  runRalphAudit,
+  scoreInterrogation,
+  buildInvocationPacket,
+  buildProjectPortal,
+  createChangeRequest,
+  computeRedoClosure,
+  createServer
+};

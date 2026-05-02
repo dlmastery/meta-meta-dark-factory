@@ -1,0 +1,115 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+  },
+  "template_only": false,
+  "contract_id": "GMSC-NORTHSTAR-20260425-001",
+  "generated_skill": {
+    "name": "northstar-daily-product-factory",
+    "purpose": "Instantiate a rigorous dark-factory workflow for a local-first productivity and habit planning browser app.",
+    "trigger_conditions": [
+      "greenfield todo or habit planning app",
+      "browser UI with local state",
+      "scenario-driven productivity workflow",
+      "dark-factory example product"
+    ],
+    "refusal_rules": [
+      "Refuse documents-only completion when app completion is claimed.",
+      "Refuse untested UI claims without browser/WYSIWYG evidence.",
+      "Refuse generic productivity claims without research or trace links.",
+      "Refuse new backend, auth, sync, or production work without change approval."
+    ],
+    "product_tailoring_profile": "project-book/records/product-tailoring-profile.json",
+    "required_child_skills": [
+      "df-meta-attractor",
+      "dark-factory-orchestrator",
+      "df-intake-spec-lab",
+      "df-governance-mayor",
+      "df-artifact-factory",
+      "df-swarm-coordination",
+      "df-quality-refinery",
+      "df-traceability-evidence",
+      "df-production-sre-handoff",
+      "df-context-memory"
+    ]
+  },
+  "compile_time_outputs": {
+    "product_tailoring_profile": "project-book/records/product-tailoring-profile.json",
+    "methodology_blend_record": "project-book/00-factory-run-summary.md",
+    "sdlc_stage_coverage_matrix": "project-book/records/sdlc-stage-coverage-matrix.json",
+    "artifact_bom_tailoring": "project-book/00-factory-run-summary.md",
+    "testing_strategy": "project-book/04-test-strategy.md",
+    "tasks_md": "project-book/records/TASKS.md",
+    "tpm_flow_ledger": "project-book/records/tpm-flow-ledger.json",
+    "pert_plan": "project-book/records/factory-pert-plan.json",
+    "knowledge_graph": "project-book/records/knowledge-graph.json",
+    "execution_kernel_report": "project-book/evidence/execution-kernel-report.json",
+    "ai_judge_jury_policy": "project-book/records/ai-judge-jury-record.json"
+  },
+  "runtime_gates": {
+    "tasks_md_validator": true,
+    "tpm_flow_validator": true,
+    "knowledge_graph_validator": true,
+    "sdlc_stage_coverage_validator": true,
+    "execution_kernel": true,
+    "quality_refinery": true,
+    "traceability": true
+  },
+  "surface_gate_mapping": {
+    "code_producing": {
+      "required": true,
+      "gates": [
+        "implementation evidence in app files",
+        "unit and scenario test evidence"
+        ,
+        "state recovery reliability evidence"
+      ]
+    },
+    "ui_surface": {
+      "required": true,
+      "gates": [
+        "browser WYSIWYG Playwright evidence",
+        "desktop and mobile screenshots",
+        "accessibility certification-readiness audit",
+        "UX and brand quality QA certificate"
+      ]
+    },
+    "api_surface": {
+      "required": false,
+      "gates": []
+    },
+    "data_surface": {
+      "required": true,
+      "gates": [
+        "local storage privacy review",
+        "state model traceability"
+      ]
+    },
+    "production_surface": {
+      "required": false,
+      "gates": []
+    },
+    "brownfield": {
+      "required": false,
+      "gates": []
+    },
+    "scenario_driven": {
+      "required": true,
+      "gates": [
+        "scenario BDD evidence",
+        "holdout and transfer evidence"
+      ]
+    }
+  },
+  "expert_panel": {
+    "meta_meta_compiler_critic": "Rejects generic factories and missing transfer guard.",
+    "product_sdlc_tailoring_critic": "Rejects lifecycle stages that do not map to this product surface.",
+    "testing_and_release_assurance_critic": "Rejects app completion without implementation, tests, browser checks, and handoff.",
+    "adversarial_generic_process_critic": "Attacks reward hacking, template-as-proof, and skipped factory controls."
+  },
+  "acceptance": {
+    "compile_time_pass": true,
+    "runtime_instantiation_pass": true,
+    "certificate": "CERT-NORTHSTAR-GENERATED-META-SKILL-20260425"
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "status": "pass",
+  "issues": [],
+  "summary": [
+    {
+      "slide": 1,
+      "text_items": 13,
+      "layout": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-01.layout.json"
+    },
+    {
+      "slide": 2,
+      "text_items": 17,
+      "layout": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-02.layout.json"
+    },
+    {
+      "slide": 3,
+      "text_items": 23,
+      "layout": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-03.layout.json"
+    },
+    {
+      "slide": 4,
+      "text_items": 14,
+      "layout": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-04.layout.json"
+    },
+    {
+      "slide": 5,
+      "text_items": 19,
+      "layout": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-05.layout.json"
+    },
+    {
+      "slide": 6,
+      "text_items": 23,
+      "layout": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-06.layout.json"
+    },
+    {
+      "slide": 7,
+      "text_items": 29,
+      "layout": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-07.layout.json"
+    },
+    {
+      "slide": 8,
+      "text_items": 23,
+      "layout": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-08.layout.json"
+    },
+    {
+      "slide": 9,
+      "text_items": 19,
+      "layout": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-09.layout.json"
+    },
+    {
+      "slide": 10,
+      "text_items": 23,
+      "layout": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-10.layout.json"
+    },
+    {
+      "slide": 11,
+      "text_items": 23,
+      "layout": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-11.layout.json"
+    },
+    {
+      "slide": 12,
+      "text_items": 23,
+      "layout": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-12.layout.json"
+    },
+    {
+      "slide": 13,
+      "text_items": 25,
+      "layout": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-13.layout.json"
+    },
+    {
+      "slide": 14,
+      "text_items": 17,
+      "layout": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-14.layout.json"
+    },
+    {
+      "slide": 15,
+      "text_items": 19,
+      "layout": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-15.layout.json"
+    },
+    {
+      "slide": 16,
+      "text_items": 15,
+      "layout": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-16.layout.json"
+    },
+    {
+      "slide": 17,
+      "text_items": 17,
+      "layout": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-17.layout.json"
+    },
+    {
+      "slide": 18,
+      "text_items": 23,
+      "layout": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-18.layout.json"
+    },
+    {
+      "slide": 19,
+      "text_items": 32,
+      "layout": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-19.layout.json"
+    },
+    {
+      "slide": 20,
+      "text_items": 17,
+      "layout": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-20.layout.json"
+    },
+    {
+      "slide": 21,
+      "text_items": 17,
+      "layout": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-21.layout.json"
+    },
+    {
+      "slide": 22,
+      "text_items": 23,
+      "layout": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-22.layout.json"
+    },
+    {
+      "slide": 23,
+      "text_items": 23,
+      "layout": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-23.layout.json"
+    },
+    {
+      "slide": 24,
+      "text_items": 15,
+      "layout": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-24.layout.json"
+    },
+    {
+      "slide": 25,
+      "text_items": 17,
+      "layout": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-25.layout.json"
+    },
+    {
+      "slide": 26,
+      "text_items": 24,
+      "layout": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-26.layout.json"
+    },
+    {
+      "slide": 27,
+      "text_items": 23,
+      "layout": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-27.layout.json"
+    },
+    {
+      "slide": 28,
+      "text_items": 17,
+      "layout": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-28.layout.json"
+    },
+    {
+      "slide": 29,
+      "text_items": 23,
+      "layout": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-29.layout.json"
+    },
+    {
+      "slide": 30,
+      "text_items": 23,
+      "layout": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-30.layout.json"
+    },
+    {
+      "slide": 31,
+      "text_items": 20,
+      "layout": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-31.layout.json"
+    },
+    {
+      "slide": 32,
+      "text_items": 14,
+      "layout": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-32.layout.json"
+    },
+    {
+      "slide": 33,
+      "text_items": 15,
+      "layout": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-33.layout.json"
+    },
+    {
+      "slide": 34,
+      "text_items": 18,
+      "layout": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-34.layout.json"
+    },
+    {
+      "slide": 35,
+      "text_items": 16,
+      "layout": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\pitch-decks\\software-assured-dark-factory\\scratch\\layouts\\slide-35.layout.json"
+    }
+  ]
+}

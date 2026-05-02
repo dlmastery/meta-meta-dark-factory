@@ -1,0 +1,83 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+    "strict_compliance": "Mandatory. Every claim must be project-specific, evidence-backed, trace-linked, reviewer-challenged, and free of unsupported invention.",
+    "missing_evidence_rule": "If evidence is missing, mark it as an assumption, risk, open question, or failure."
+  },
+  "template_only": true,
+  "contract_id": "GENERATED-META-SKILL-000",
+  "run_id": "",
+  "generated_skill": {
+    "name": "",
+    "purpose": "",
+    "trigger_conditions": [],
+    "refusal_rules": [],
+    "product_tailoring_profile": "",
+    "required_child_skills": []
+  },
+  "compile_time_outputs": {
+    "product_tailoring_profile": "",
+    "methodology_blend_record": "",
+    "sdlc_stage_coverage_matrix": "",
+    "artifact_bom_tailoring": "",
+    "testing_strategy": "",
+    "tasks_md": "",
+    "tpm_flow_ledger": "",
+    "pert_plan": "",
+    "knowledge_graph": "",
+    "execution_kernel_report": "",
+    "ai_judge_jury_policy": ""
+  },
+  "runtime_gates": {
+    "tasks_md_validator": true,
+    "tpm_flow_validator": true,
+    "knowledge_graph_validator": true,
+    "sdlc_stage_coverage_validator": true,
+    "execution_kernel": true,
+    "quality_refinery": true,
+    "traceability": true
+  },
+  "surface_gate_mapping": {
+    "code_producing": {
+      "required": false,
+      "gates": []
+    },
+    "ui_surface": {
+      "required": false,
+      "gates": []
+    },
+    "api_surface": {
+      "required": false,
+      "gates": []
+    },
+    "data_surface": {
+      "required": false,
+      "gates": []
+    },
+    "production_surface": {
+      "required": false,
+      "gates": []
+    },
+    "scenario_driven": {
+      "required": false,
+      "gates": []
+    },
+    "brownfield": {
+      "required": false,
+      "gates": []
+    }
+  },
+  "expert_panel": {
+    "meta_meta_compiler_critic": "",
+    "product_sdlc_tailoring_critic": "",
+    "testing_and_release_assurance_critic": "",
+    "adversarial_generic_process_critic": ""
+  },
+  "acceptance": {
+    "compile_time_pass": false,
+    "runtime_instantiation_pass": false,
+    "residual_risks": [],
+    "certificate": ""
+  },
+  "template_marker": true
+}

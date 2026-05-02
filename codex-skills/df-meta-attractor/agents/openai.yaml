@@ -1,0 +1,4 @@
+interface:
+  display_name: "DF Meta Attractor"
+  short_description: "Govern and merge the best factory patterns above individual meta-skills."
+  default_prompt: "Use the meta-attractor to transform my intent into a governed best-of-all dark-factory run."

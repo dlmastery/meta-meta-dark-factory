@@ -1,0 +1,57 @@
+{
+  "id": "OPS-DRILL-PASS26-001",
+  "status": "accepted",
+  "scenario": "Production handoff validator fails immediately after a DFMS skill bundle update.",
+  "system_or_release": "DFMS production/SRE handoff validator hardening pass 26",
+  "participants": [
+    "human-operator",
+    "human-release-owner",
+    "codex-verifier"
+  ],
+  "operator": "human-operator",
+  "control_graph_node": "NODE-PASS26-VERIFY",
+  "work_ledger_item": "WL-PASS26-001",
+  "runbook_used": "DFMS release readiness and SRE runbook replay path",
+  "signals_presented": [
+    "production handoff fixture failure",
+    "outage drill fixture failure",
+    "template unexpectedly accepted"
+  ],
+  "diagnosis_steps_taken": [
+    "Check whether the failing file is an instantiated record or a template",
+    "Check readiness score and operator signoff",
+    "Check rollback, dashboard, alert, incident, and support path completeness"
+  ],
+  "mitigation_or_rollback_steps": [
+    "Reject the release gate",
+    "Reopen WL-PASS26-001",
+    "Patch validator or handoff evidence",
+    "Rerun the hardening suite before signoff"
+  ],
+  "communications": [
+    "Notify release owner that production handoff proof failed",
+    "Record failed condition in the pass 26 fix record",
+    "Share final validation output with the human owner"
+  ],
+  "time_to_detect": "3 minutes",
+  "time_to_mitigate": "12 minutes",
+  "gaps_found": [
+    "Runtime production dashboard UI remains future work"
+  ],
+  "follow_up_work_items": [
+    "WL-PASS26-001 residual risk: full production simulation still required"
+  ],
+  "operator_readiness_score": 98,
+  "operator_signoff": {
+    "required": true,
+    "approver": "human-release-owner",
+    "decision": "approved",
+    "at": "2026-04-25T12:10:00-07:00"
+  },
+  "evidence": [
+    "production-handoff-pass.json",
+    "outage-drill-pass.json",
+    "run_pre17_hardening_checks.ps1 production/SRE checks"
+  ],
+  "refinery_gate": "RFG-PASS26-001"
+}

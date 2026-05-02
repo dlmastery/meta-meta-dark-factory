@@ -1,0 +1,35 @@
+{
+  "zero_slop_policy": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+  "record_type": "dashboard_control_record",
+  "record_id": "DASHBOARD-CONTROL-NORTHSTAR-20260426",
+  "project": "Northstar Todo Habits",
+  "created_at": "2026-04-26",
+  "dashboard_index": "portal/dashboard-control-index.json",
+  "dashboard_html": "portal/dashboard-control.html",
+  "source_root": "example/worlds-best-todo-habits-app/project-book",
+  "node_count": 97,
+  "edge_count": 318,
+  "selected_redo_request": "evidence/redo-node-request-prd.json",
+  "redo_impact_report": "evidence/redo-impact-prd.json",
+  "closure_result": {
+    "selected_node": "NODE-02-PRD-MD",
+    "selected_node_path": "02-prd.md",
+    "impacted_node_count": 9,
+    "impact_basis": "Reverse inferred references plus explicit graph edges, with generated dashboard outputs indexed but not treated as authoritative edge sources."
+  },
+  "owner": "dark-factory dashboard-control meta-skill",
+  "next_action": "If PRD content changes materially, open the redo task bead, approve token SWAG, update explicit trace edges, regenerate impacted artifacts, rerun affected tests, reissue gates/certificates, refresh dashboard index, and rerun Hawkeye.",
+  "gate": {
+    "id": "GATE-DASHBOARD-CONTROL-20260426",
+    "status": "conditional_pass",
+    "condition": "Current closure is structurally validated and useful for redo planning; inferred edges must be converted to explicit trace or knowledge-graph edges for formal certification."
+  },
+  "hawkeye_state": {
+    "status": "review_required_before_closure",
+    "reason": "A full closure/certification claim must include Hawkeye review of the new dashboard-control gate."
+  },
+  "residual_risks": [
+    "The dashboard-control script is filesystem-based and does not yet provide an interactive UI for selecting nodes.",
+    "Inferred text edges are advisory until promoted to explicit trace or knowledge-graph records."
+  ]
+}

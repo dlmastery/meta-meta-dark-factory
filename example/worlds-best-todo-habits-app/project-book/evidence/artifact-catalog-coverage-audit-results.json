@@ -1,0 +1,20 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+  },
+  "template_only": false,
+  "audit_id": "ARTIFACT-CATALOG-COVERAGE-AUDIT-NORTHSTAR-20260429-001",
+  "status": "pass_with_gaps",
+  "catalog_total": 63,
+  "counts": {
+    "combined": 12,
+    "missing": 14,
+    "partial": 17,
+    "standalone": 12,
+    "not_applicable": 8,
+    "deferred": 0
+  },
+  "full_saturation_status": "fail",
+  "claim_full_catalog_coverage": false,
+  "failures": []
+}

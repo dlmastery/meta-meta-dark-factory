@@ -1,0 +1,60 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+    "strict_compliance": "Mandatory. Every claim must be project-specific, evidence-backed, trace-linked, reviewer-challenged, and free of unsupported invention.",
+    "missing_evidence_rule": "If evidence is missing, mark it as an assumption, risk, open question, or failure."
+  },
+  "template_only": false,
+  "pert_plan_id": "PERT-DFMS-TPM-FLOW-20260425",
+  "run_id": "RUN-DFMS-TPM-FLOW-20260425",
+  "title": "DFMS TPM Flow And AI Jury Enforcement PERT Plan",
+  "current_step_id": "RUN-CLOSED",
+  "critical_path": [
+    "STEP-TPM-FLOW-001"
+  ],
+  "milestones": [
+    {
+      "id": "MS-TPM-FLOW-001",
+      "title": "TPM flow, PERT, and judge/jury enforcement layer added",
+      "step_id": "STEP-TPM-FLOW-001",
+      "state": "accepted"
+    }
+  ],
+  "nodes": [
+    {
+      "step_id": "STEP-TPM-FLOW-001",
+      "title": "Add strict TPM flow ledger, PERT, and AI judge/jury enforcement",
+      "state": "accepted",
+      "duration_swag": "low token SWAG for focused design, template, validator, and skill-hook update",
+      "predecessors": [],
+      "successors": [
+        "RUN-CLOSED"
+      ],
+      "ready_when": [
+        "User requested strict ledger taskflow, PERT, and AI judge/jury assurance"
+      ],
+      "blocked_by": [],
+      "gate_id": "GATE-TPM-FLOW-001",
+      "bead_id": "TB-20260425-005",
+      "template_marker": false
+    }
+  ],
+  "edges": [
+    {
+      "from": "STEP-TPM-FLOW-001",
+      "to": "RUN-CLOSED",
+      "dependency_type": "finish_to_close",
+      "rationale": "Focused update closes after validation and live skill installation.",
+      "template_marker": false
+    }
+  ],
+  "parallel_ready_candidates": [],
+  "blocked_steps": [],
+  "next_step_candidates": [],
+  "reentry_paths": [
+    {
+      "trigger": "Future finding that agents can bypass TPM flow, PERT, or judge/jury gates",
+      "target_step": "STEP-TPM-FLOW-REWORK"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "DF Artifact Factory"
+  short_description: "Create SDLC project artifacts"
+  default_prompt: "Use $df-artifact-factory to generate a reviewed SRS, HLD, trace matrix, or handoff artifact."

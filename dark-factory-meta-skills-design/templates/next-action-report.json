@@ -1,0 +1,23 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+    "strict_compliance": "Mandatory. Every claim must be project-specific, evidence-backed, trace-linked, reviewer-challenged, and free of unsupported invention.",
+    "missing_evidence_rule": "If evidence is missing, mark it as an assumption, risk, open question, or failure."
+  },
+  "template_only": true,
+  "report_id": "NEXT-ACTION-000",
+  "run_id": "",
+  "generated_at": "",
+  "kernel_status": "unknown",
+  "current_step_id": "",
+  "current_bead_id": "",
+  "legal_next_action": "",
+  "legal_next_step_id": "",
+  "legal_next_bead_id": "",
+  "blocked_reasons": [],
+  "change_control_required": false,
+  "human_boundary_required": false,
+  "evidence": [],
+  "validator_results": [],
+  "template_marker": true
+}

@@ -1,0 +1,60 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+    "strict_compliance": "Mandatory. Every claim must be project-specific, evidence-backed, trace-linked, reviewer-challenged, and free of unsupported invention.",
+    "missing_evidence_rule": "If evidence is missing, mark it as an assumption, risk, open question, or failure."
+  },
+  "id": "ITR-000",
+  "status": "draft",
+  "threshold_percent": 96,
+  "source": {
+    "kind": "user_message|transcript|meeting|artifact",
+    "reference": ""
+  },
+  "rounds": [
+    {
+      "round": "context",
+      "questions": [],
+      "answers": []
+    }
+  ],
+  "answers": [
+    {
+      "answer_id": "ANS-001",
+      "source_reference": "",
+      "summary": "",
+      "confidence": "high|medium|low",
+      "owner": "",
+      "links": {
+        "requirements": [],
+        "scenarios": [],
+        "risks": [],
+        "artifacts": [],
+        "work_ledger_items": [],
+        "spec_decomposition_nodes": []
+      },
+      "revalidation_trigger": ""
+    }
+  ],
+  "scores": {
+    "goal_clarity": 0,
+    "scope": 0,
+    "functional_completeness": 0,
+    "nonfunctional_completeness": 0,
+    "security_privacy_compliance": 0,
+    "operations_handoff": 0,
+    "scenario_readiness": 0,
+    "contradiction_resolution": 0,
+    "owner_approval": 0,
+    "traceability_readiness": 0
+  },
+  "contradictions": [],
+  "assumptions": [],
+  "deferred_questions": [],
+  "approval": {
+    "required": true,
+    "approver": "",
+    "decision": "pending",
+    "at": ""
+  }
+}

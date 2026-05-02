@@ -1,0 +1,48 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+  },
+  "template_only": false,
+  "kernel_status": "closed",
+  "current_step_id": "RUN-CLOSED",
+  "current_bead_id": "RUN-CLOSED",
+  "legal_next_action": "stop; open a new bead or change request before continuing",
+  "legal_next_step_id": "",
+  "legal_next_bead_id": "",
+  "blocked_reasons": [],
+  "consistency": {
+    "tasks_active_beads": [],
+      "tasks_accepted_beads": [
+        "TB-20260425-101",
+        "TB-20260426-102",
+        "TB-20260426-103",
+        "TB-20260426-104",
+        "TB-20260426-105",
+        "TB-20260426-106",
+        "TB-20260426-107",
+        "TB-20260426-108"
+    ],
+    "ledger_steps": [
+      "STEP-NORTHSTAR-001",
+      "STEP-NORTHSTAR-002",
+        "STEP-NORTHSTAR-003",
+        "STEP-NORTHSTAR-004",
+        "STEP-NORTHSTAR-005",
+        "STEP-NORTHSTAR-006",
+        "STEP-NORTHSTAR-007",
+        "STEP-NORTHSTAR-008"
+    ],
+    "knowledge_graph_task_beads": [
+      "TB-20260425-101",
+      "TB-20260426-102",
+        "TB-20260426-103",
+        "TB-20260426-104",
+        "TB-20260426-105",
+        "TB-20260426-106",
+        "TB-20260426-107",
+        "TB-20260426-108"
+    ],
+    "sdlc_coverage_matrix": "SDLC-NORTHSTAR-20260425-001",
+    "hawkeye_audit": "HAWKEYE-NORTHSTAR-20260425-001"
+  }
+}

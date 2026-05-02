@@ -1,0 +1,137 @@
+{
+  "id": "CG-PASS26-001",
+  "name": "Pass 26 production/SRE handoff hardening",
+  "goal": "Ensure human-owned production handoff, outage drill, runbook replay, and operator readiness proof are executable gates.",
+  "risks": [
+    "Production handoff templates could be mistaken for evidence",
+    "Outage drills could remain unsigned or below readiness threshold",
+    "Release handoff could omit rollback, observability, incident, support, or training paths"
+  ],
+  "links": {
+    "attractor": "ATTR-PASS26-001",
+    "work_ledger": "WL-PASS26-001",
+    "refinery_gate": "RFG-PASS26-001"
+  },
+  "nodes": [
+    {
+      "id": "NODE-PASS26-CRITIC",
+      "label": "Pass 26 production readiness critic review",
+      "owner": "codex",
+      "node_contract": {
+        "what": "Review whether production/SRE handoff evidence is enforceable.",
+        "why": "The original transcript requires humans to maintain and operate factory outputs safely.",
+        "how": "Inspect df-production-sre-handoff templates, skill instructions, runner coverage, and existing evidence gates.",
+        "where": "df-production-sre-handoff skill and codex-skills validation suite.",
+        "when": "Before pass 26 fixes are accepted.",
+        "who": "Codex using SRE, human-handoff, and verification expert lenses.",
+        "how_good": "New findings are reproducible and become validator checks plus negative fixtures."
+      },
+      "expert_panel": [
+        "sre-release-lead",
+        "human-operations-handoff-lead",
+        "verification-safety-critic"
+      ],
+      "rubrics": [
+        "production handoff completeness",
+        "operator readiness proof",
+        "template and low-readiness rejection"
+      ],
+      "feedback_loop": "Any missing production proof becomes validator logic and a hardening-runner fixture.",
+      "gates": [
+        "critic finding documented",
+        "validator scope selected",
+        "fix node opened"
+      ],
+      "evidence_outputs": [
+        "26-ralph-loop-critic-review-and-fix-record.md"
+      ]
+    },
+    {
+      "id": "NODE-PASS26-FIX",
+      "label": "Production handoff validator implementation",
+      "owner": "codex",
+      "node_contract": {
+        "what": "Add executable validation for production handoff and outage drill evidence.",
+        "why": "Operator readiness must be proven by live records, not templates or prose promises.",
+        "how": "Create validate_production_handoff.py, add pass fixtures, add template and low-readiness negative checks, update skill resources and manifest.",
+        "where": "Installed df-production-sre-handoff skill, workspace bundle, and validation fixtures.",
+        "when": "After critic review and before verification closure.",
+        "who": "Codex as implementer.",
+        "how_good": "Complete production and outage fixtures pass; templates, missing rollback, low readiness, and unsigned drills fail."
+      },
+      "expert_panel": [
+        "release-engineer",
+        "sre-runbook-reviewer",
+        "operator-training-reviewer"
+      ],
+      "rubrics": [
+        "release readiness completeness",
+        "runbook replay evidence",
+        "operator signoff integrity"
+      ],
+      "feedback_loop": "Rerun the full hardening suite after every production/SRE validator change.",
+      "gates": [
+        "installed validator compiles",
+        "workspace validator compiles",
+        "production/SRE fixtures pass and reject as expected"
+      ],
+      "evidence_outputs": [
+        "validate_production_handoff.py",
+        "production-handoff-pass.json",
+        "outage-drill-pass.json",
+        "run_pre17_hardening_checks.ps1"
+      ]
+    },
+    {
+      "id": "NODE-PASS26-VERIFY",
+      "label": "Pass 26 verification sweep",
+      "owner": "codex",
+      "node_contract": {
+        "what": "Verify final pass 26 state.",
+        "why": "Production/SRE hardening only counts if it survives the same repeated proof loop as other DFMS controls.",
+        "how": "Run the full hardening suite, merged-record validation, hash sync, JSON, ASCII, and artifact ID checks.",
+        "where": "Workspace validation suite and pass 26 records.",
+        "when": "After all fixes and records are written.",
+        "who": "Codex as verification runner.",
+        "how_good": "All checks pass and residual risks remain explicit."
+      },
+      "expert_panel": [
+        "verification-lead",
+        "governance-auditor",
+        "production-readiness-reviewer"
+      ],
+      "rubrics": [
+        "positive-path preservation",
+        "negative-path rejection",
+        "handoff evidence completeness"
+      ],
+      "feedback_loop": "Any failed check reopens the fix node.",
+      "gates": [
+        "hardening runner passes",
+        "pass 26 merged records validate",
+        "installed/workspace production handoff hashes match"
+      ],
+      "evidence_outputs": [
+        "DFMS hardening checks complete",
+        "records/pass26 merged records"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "ATTR-PASS26-001",
+      "to": "NODE-PASS26-CRITIC",
+      "type": "governs"
+    },
+    {
+      "from": "NODE-PASS26-CRITIC",
+      "to": "NODE-PASS26-FIX",
+      "type": "requires"
+    },
+    {
+      "from": "NODE-PASS26-FIX",
+      "to": "NODE-PASS26-VERIFY",
+      "type": "must_validate"
+    }
+  ]
+}
