@@ -6,11 +6,11 @@
   "index_id": "DPI-NORTHSTAR-20260426-001",
   "project": "Northstar Daily",
   "run_id": "DFRUN-NORTHSTAR-20260425-001",
-  "generated_at": "2026-04-26T12:45:00-07:00",
+  "generated_at": "2026-05-02T09:00:00-07:00",
   "portal_record": "project-book/records/human-review-portal-record.json",
   "summary": {
-    "current_state": "closed",
-    "legal_next_action": "Open a new change-controlled bead before backend, sync, mobile packaging, hosted portal, production, external certification, or new product surface.",
+    "current_state": "recovery_batch_1_indexed",
+    "legal_next_action": "Continue recovery batches from artifact-catalog-coverage-matrix.json; do not claim full saturation until missing, partial, and combined required items are resolved or explicitly waived.",
     "certification_boundary": "Internal DFMS portal readiness and documentation-dashboard conformance only."
   },
   "onboarding_paths": [
@@ -88,7 +88,9 @@
         "records/sdlc-stage-coverage-matrix.json",
         "records/artifact-catalog-coverage-matrix.json",
         "records/hawkeye-conformance-audit-record.json",
-        "records/knowledge-graph.json"
+        "records/knowledge-graph.json",
+        "19-rasci-matrix.md",
+        "20-methodology-blend-record.md"
       ]
     },
     {
@@ -98,7 +100,9 @@
         "01-research-competitive-benchmark.md",
         "02-prd.md",
         "03-architecture.md",
-        "05-traceability-matrix.md"
+        "05-traceability-matrix.md",
+        "21-glossary-ubiquitous-language.md",
+        "22-architecture-decision-records.md"
       ]
     },
     {
@@ -129,7 +133,10 @@
         "15-human-review-onboarding-portal-record.md",
         "16-dashboard-control-redo-record.md",
         "17-actual-vs-promised-artifact-gap-audit.md",
-        "18-ralph-20-artifact-completeness-audit.md"
+        "18-ralph-20-artifact-completeness-audit.md",
+        "23-provenance-record.md",
+        "24-human-communication-record.md",
+        "25-context-pack-predecessor-recovery-record.md"
       ]
     },
     {
@@ -151,7 +158,9 @@
         "07-handoff-and-runbook.md",
         "evidence/execution-kernel-report.json",
         "evidence/validation-summary.json",
-        "evidence/artifact-catalog-coverage-audit-results.json"
+        "evidence/artifact-catalog-coverage-audit-results.json",
+        "24-human-communication-record.md",
+        "25-context-pack-predecessor-recovery-record.md"
       ]
     }
   ],
@@ -170,13 +179,20 @@
       "10-ralph-20-e2e-completeness-record.md",
       "11-standards-meta-meta-charter-audit.md",
       "12-certification-readiness-hardening-record.md",
-        "13-ralph-ux-reliability-qa-certification-record.md",
-        "14-material-ui-standards-conformance-record.md",
-        "15-human-review-onboarding-portal-record.md",
-        "16-dashboard-control-redo-record.md",
-        "17-actual-vs-promised-artifact-gap-audit.md",
-        "18-ralph-20-artifact-completeness-audit.md"
-      ],
+      "13-ralph-ux-reliability-qa-certification-record.md",
+      "14-material-ui-standards-conformance-record.md",
+      "15-human-review-onboarding-portal-record.md",
+      "16-dashboard-control-redo-record.md",
+      "17-actual-vs-promised-artifact-gap-audit.md",
+      "18-ralph-20-artifact-completeness-audit.md",
+      "19-rasci-matrix.md",
+      "20-methodology-blend-record.md",
+      "21-glossary-ubiquitous-language.md",
+      "22-architecture-decision-records.md",
+      "23-provenance-record.md",
+      "24-human-communication-record.md",
+      "25-context-pack-predecessor-recovery-record.md"
+    ],
     "record_files": [
       "records/TASKS.md",
       "records/ai-judge-jury-record.json",
@@ -225,9 +241,9 @@
       "evidence/browser-wysiwyg-results.json",
       "evidence/certification-readiness-certificate.json",
       "evidence/certification-readiness-panel-record.json",
-        "evidence/core-test-output.txt",
-        "evidence/dashboard-control-record.json",
-        "evidence/execution-kernel-report.json",
+      "evidence/core-test-output.txt",
+      "evidence/dashboard-control-record.json",
+      "evidence/execution-kernel-report.json",
       "evidence/human-review-portal-certificate.json",
       "evidence/human-review-portal-panel-record.json",
       "evidence/human-review-portal-meta-validator-output.txt",
@@ -245,11 +261,11 @@
       "evidence/quality-refinery-gate-material-ui.yaml",
       "evidence/quality-refinery-gate-standards-audit.yaml",
       "evidence/quality-refinery-gate-ux-qa-certification.yaml",
-        "evidence/quality-refinery-gate.yaml",
-        "evidence/redo-impact-prd.json",
-        "evidence/redo-impact-ui-02-prd-md.json",
-        "evidence/redo-node-request-prd.json",
-        "evidence/scenario-test-results.json",
+      "evidence/quality-refinery-gate.yaml",
+      "evidence/redo-impact-prd.json",
+      "evidence/redo-impact-ui-02-prd-md.json",
+      "evidence/redo-node-request-prd.json",
+      "evidence/scenario-test-results.json",
       "evidence/static-ui-audit-output.txt",
       "evidence/static-ui-audit-results.json",
       "evidence/validation-summary.json",
@@ -257,14 +273,14 @@
       "evidence/wysiwyg-desktop.png",
       "evidence/wysiwyg-mobile.png"
     ],
-      "diagram_sources": [
-        "portal/diagrams.md",
-        "../../../../dark-factory-meta-skills-design/00-system-design.md",
-        "../../../../dark-factory-meta-skills-design/11-best-of-all-merged-control-plane.md",
-        "../../../../dark-factory-meta-skills-design/50-control-console-ui-record.md",
-        "../../../../dark-factory-meta-skills-design/51-factory-execution-ux-record.md",
-        "../../../../dark-factory-meta-skills-design/63-document-generation-layer-map.md"
-      ],
+    "diagram_sources": [
+      "portal/diagrams.md",
+      "../../../../dark-factory-meta-skills-design/00-system-design.md",
+      "../../../../dark-factory-meta-skills-design/11-best-of-all-merged-control-plane.md",
+      "../../../../dark-factory-meta-skills-design/50-control-console-ui-record.md",
+      "../../../../dark-factory-meta-skills-design/51-factory-execution-ux-record.md",
+      "../../../../dark-factory-meta-skills-design/63-document-generation-layer-map.md"
+    ],
     "screenshots": [
       "evidence/human-review-portal-screenshot.png",
       "evidence/wysiwyg-desktop.png",
@@ -287,6 +303,9 @@
     "unindexed_required_files": [],
     "broken_required_links": [],
     "notes": [
+      "Recovery batch 1 added seven standalone draft artifacts and reduced missing catalog entries from 14 to 7.",
+      "Portal index audit and human review portal validator passed after recovery batch 1.",
+      "Full artifact saturation still fails until remaining missing, partial, and combined required entries are resolved or waived.",
       "Browser profile subdirectories under evidence are excluded as runtime noise, not review artifacts."
     ]
   }

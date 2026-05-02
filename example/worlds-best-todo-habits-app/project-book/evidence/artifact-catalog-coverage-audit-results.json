@@ -8,10 +8,10 @@
   "catalog_total": 63,
   "counts": {
     "combined": 12,
-    "missing": 14,
+    "standalone": 19,
     "partial": 17,
-    "standalone": 12,
     "not_applicable": 8,
+    "missing": 7,
     "deferred": 0
   },
   "full_saturation_status": "fail",

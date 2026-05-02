@@ -18,7 +18,21 @@ This is the requested 20-loop RALPH audit for the artifact-completeness concern.
 
 The validator parses the DFMS artifact catalog and verifies that all 63 catalog IDs are classified as `standalone`, `combined`, `partial`, `not_applicable`, `deferred`, or `missing`.
 
-## 20 RALPH Loops
+## 2026-05-02 Recovery Batch 1 Update
+
+The original audit below is preserved as the baseline that exposed the problem. Recovery batch 1 has now generated seven standalone draft artifacts:
+
+- `19-rasci-matrix.md` for `GOV-003`
+- `20-methodology-blend-record.md` for `GOV-011`
+- `21-glossary-ubiquitous-language.md` for `REQ-005`
+- `22-architecture-decision-records.md` for `ARC-003`
+- `23-provenance-record.md` for `EVD-005`
+- `24-human-communication-record.md` for `EVD-008`
+- `25-context-pack-predecessor-recovery-record.md` for `EVD-009`
+
+The matrix now reports 19 standalone, 12 combined, 17 partial, 8 not applicable, 0 deferred, and 7 missing. Full saturation still fails because missing, partial, and combined required entries remain, and the new standalone artifacts are drafts until artifact-specific review packages are run.
+
+## 20 RALPH Loops Baseline
 
 | Loop | Attack | Result |
 | ---: | --- | --- |
@@ -49,7 +63,7 @@ The validator parses the DFMS artifact catalog and verifies that all 63 catalog 
 
 - Priority: P1
 - Status: confirmed
-- Evidence: matrix counts 12 standalone, 12 combined, 17 partial, 8 not applicable, 14 missing, 0 deferred.
+- Evidence: original matrix counted 12 standalone, 12 combined, 17 partial, 8 not applicable, 14 missing, 0 deferred; recovery batch 1 reduces missing to 7 and increases standalone to 19.
 - Required fix for full saturation: generate or formally waive every missing/partial/combined catalog artifact.
 
 ### Finding B: Prior Validators Did Not Test Full Catalog Completeness
@@ -81,4 +95,3 @@ The next serious run should be one of these:
 - **Full saturation run:** generate the missing standalone artifacts and rubrics.
 - **Tailoring acceptance run:** keep the demonstrator small but formally waive or combine each artifact with exact section-level trace.
 - **Cleanup run:** remove browser-profile runtime noise after explicit human approval.
-

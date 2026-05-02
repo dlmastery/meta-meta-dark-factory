@@ -1,8 +1,8 @@
 {
   "zero_slop_policy": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
-  "dashboard_id": "DASH-dfms-ui-console-run-20260501",
-  "project": "DFMS UI Console Run",
-  "generated_at": "2026-05-02T02:31:22+00:00",
+  "dashboard_id": "DASH-northstar-daily-20260501",
+  "project": "Northstar Daily",
+  "generated_at": "2026-05-02T03:43:00+00:00",
   "source_root": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\meta-meta-dark-factory\\example\\worlds-best-todo-habits-app\\project-book",
   "nodes": [
     {
@@ -246,6 +246,97 @@
       "path": "18-ralph-20-artifact-completeness-audit.md",
       "stage": "project-book",
       "status": "blocked",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-19-RASCI-MATRIX-MD",
+      "kind": "artifact",
+      "title": "RASCI Matrix",
+      "path": "19-rasci-matrix.md",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-20-METHODOLOGY-BLEND-RECORD-MD",
+      "kind": "artifact",
+      "title": "Methodology Blend Record",
+      "path": "20-methodology-blend-record.md",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-21-GLOSSARY-UBIQUITOUS-LANGUAGE-MD",
+      "kind": "artifact",
+      "title": "Glossary And Ubiquitous Language",
+      "path": "21-glossary-ubiquitous-language.md",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-22-ARCHITECTURE-DECISION-RECORDS-MD",
+      "kind": "artifact",
+      "title": "Architecture Decision Records",
+      "path": "22-architecture-decision-records.md",
+      "stage": "design",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-23-PROVENANCE-RECORD-MD",
+      "kind": "artifact",
+      "title": "Provenance Record",
+      "path": "23-provenance-record.md",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-24-HUMAN-COMMUNICATION-RECORD-MD",
+      "kind": "artifact",
+      "title": "Human Communication Record",
+      "path": "24-human-communication-record.md",
+      "stage": "project-book",
+      "status": "blocked",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-25-CONTEXT-PACK-PREDECESSOR-RECOVERY-RECORD-MD",
+      "kind": "artifact",
+      "title": "Context Pack And Predecessor Recovery Record",
+      "path": "25-context-pack-predecessor-recovery-record.md",
+      "stage": "project-book",
+      "status": "draft",
       "owner": "",
       "gate": "",
       "certificate": "",
@@ -2462,6 +2553,542 @@
       "reason": "text reference `index.html`"
     },
     {
+      "source": "NODE-18-RALPH-20-ARTIFACT-COMPLETENESS-AUDIT-MD",
+      "target": "NODE-19-RASCI-MATRIX-MD",
+      "type": "inferred_reference",
+      "evidence": "18-ralph-20-artifact-completeness-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `19-rasci-matrix.md`"
+    },
+    {
+      "source": "NODE-18-RALPH-20-ARTIFACT-COMPLETENESS-AUDIT-MD",
+      "target": "NODE-20-METHODOLOGY-BLEND-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "18-ralph-20-artifact-completeness-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `20-methodology-blend-record.md`"
+    },
+    {
+      "source": "NODE-18-RALPH-20-ARTIFACT-COMPLETENESS-AUDIT-MD",
+      "target": "NODE-21-GLOSSARY-UBIQUITOUS-LANGUAGE-MD",
+      "type": "inferred_reference",
+      "evidence": "18-ralph-20-artifact-completeness-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `21-glossary-ubiquitous-language.md`"
+    },
+    {
+      "source": "NODE-18-RALPH-20-ARTIFACT-COMPLETENESS-AUDIT-MD",
+      "target": "NODE-22-ARCHITECTURE-DECISION-RECORDS-MD",
+      "type": "inferred_reference",
+      "evidence": "18-ralph-20-artifact-completeness-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `22-architecture-decision-records.md`"
+    },
+    {
+      "source": "NODE-18-RALPH-20-ARTIFACT-COMPLETENESS-AUDIT-MD",
+      "target": "NODE-23-PROVENANCE-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "18-ralph-20-artifact-completeness-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `23-provenance-record.md`"
+    },
+    {
+      "source": "NODE-18-RALPH-20-ARTIFACT-COMPLETENESS-AUDIT-MD",
+      "target": "NODE-24-HUMAN-COMMUNICATION-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "18-ralph-20-artifact-completeness-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `24-human-communication-record.md`"
+    },
+    {
+      "source": "NODE-18-RALPH-20-ARTIFACT-COMPLETENESS-AUDIT-MD",
+      "target": "NODE-25-CONTEXT-PACK-PREDECESSOR-RECOVERY-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "18-ralph-20-artifact-completeness-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `25-context-pack-predecessor-recovery-record.md`"
+    },
+    {
+      "source": "NODE-19-RASCI-MATRIX-MD",
+      "target": "NODE-02-PRD-MD",
+      "type": "inferred_reference",
+      "evidence": "19-rasci-matrix.md",
+      "authority": "inferred",
+      "reason": "text reference `02-prd.md`"
+    },
+    {
+      "source": "NODE-19-RASCI-MATRIX-MD",
+      "target": "NODE-15-HUMAN-REVIEW-ONBOARDING-PORTAL-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "19-rasci-matrix.md",
+      "authority": "inferred",
+      "reason": "text reference `15-human-review-onboarding-portal-record.md`"
+    },
+    {
+      "source": "NODE-19-RASCI-MATRIX-MD",
+      "target": "NODE-16-DASHBOARD-CONTROL-REDO-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "19-rasci-matrix.md",
+      "authority": "inferred",
+      "reason": "text reference `16-dashboard-control-redo-record.md`"
+    },
+    {
+      "source": "NODE-19-RASCI-MATRIX-MD",
+      "target": "NODE-RECORDS-ENGAGEMENT-GOVERNANCE-RECORD-JSON",
+      "type": "inferred_reference",
+      "evidence": "19-rasci-matrix.md",
+      "authority": "inferred",
+      "reason": "text reference `records/engagement-governance-record.json`"
+    },
+    {
+      "source": "NODE-19-RASCI-MATRIX-MD",
+      "target": "NODE-RECORDS-TASKS-MD",
+      "type": "inferred_reference",
+      "evidence": "19-rasci-matrix.md",
+      "authority": "inferred",
+      "reason": "text reference `records/TASKS.md`"
+    },
+    {
+      "source": "NODE-19-RASCI-MATRIX-MD",
+      "target": "NODE-RECORDS-TPM-FLOW-LEDGER-JSON",
+      "type": "inferred_reference",
+      "evidence": "19-rasci-matrix.md",
+      "authority": "inferred",
+      "reason": "text reference `records/tpm-flow-ledger.json`"
+    },
+    {
+      "source": "NODE-19-RASCI-MATRIX-MD",
+      "target": "NODE-RECORDS-AI-JUDGE-JURY-RECORD-JSON",
+      "type": "inferred_reference",
+      "evidence": "19-rasci-matrix.md",
+      "authority": "inferred",
+      "reason": "text reference `records/ai-judge-jury-record.json`"
+    },
+    {
+      "source": "NODE-19-RASCI-MATRIX-MD",
+      "target": "NODE-RECORDS-ARTIFACT-CATALOG-COVERAGE-MATRIX-JSON",
+      "type": "inferred_reference",
+      "evidence": "19-rasci-matrix.md",
+      "authority": "inferred",
+      "reason": "text reference `records/artifact-catalog-coverage-matrix.json`"
+    },
+    {
+      "source": "NODE-20-METHODOLOGY-BLEND-RECORD-MD",
+      "target": "NODE-RECORDS-TPM-FLOW-LEDGER-JSON",
+      "type": "inferred_reference",
+      "evidence": "20-methodology-blend-record.md",
+      "authority": "inferred",
+      "reason": "text reference `records/tpm-flow-ledger.json`"
+    },
+    {
+      "source": "NODE-20-METHODOLOGY-BLEND-RECORD-MD",
+      "target": "NODE-RECORDS-FACTORY-PERT-PLAN-JSON",
+      "type": "inferred_reference",
+      "evidence": "20-methodology-blend-record.md",
+      "authority": "inferred",
+      "reason": "text reference `records/factory-pert-plan.json`"
+    },
+    {
+      "source": "NODE-20-METHODOLOGY-BLEND-RECORD-MD",
+      "target": "NODE-02-PRD-MD",
+      "type": "inferred_reference",
+      "evidence": "20-methodology-blend-record.md",
+      "authority": "inferred",
+      "reason": "text reference `02-prd.md`"
+    },
+    {
+      "source": "NODE-20-METHODOLOGY-BLEND-RECORD-MD",
+      "target": "NODE-03-ARCHITECTURE-MD",
+      "type": "inferred_reference",
+      "evidence": "20-methodology-blend-record.md",
+      "authority": "inferred",
+      "reason": "text reference `03-architecture.md`"
+    },
+    {
+      "source": "NODE-20-METHODOLOGY-BLEND-RECORD-MD",
+      "target": "NODE-04-TEST-STRATEGY-MD",
+      "type": "inferred_reference",
+      "evidence": "20-methodology-blend-record.md",
+      "authority": "inferred",
+      "reason": "text reference `04-test-strategy.md`"
+    },
+    {
+      "source": "NODE-20-METHODOLOGY-BLEND-RECORD-MD",
+      "target": "NODE-05-TRACEABILITY-MATRIX-MD",
+      "type": "inferred_reference",
+      "evidence": "20-methodology-blend-record.md",
+      "authority": "inferred",
+      "reason": "text reference `05-traceability-matrix.md`"
+    },
+    {
+      "source": "NODE-20-METHODOLOGY-BLEND-RECORD-MD",
+      "target": "NODE-RECORDS-SDLC-STAGE-COVERAGE-MATRIX-JSON",
+      "type": "inferred_reference",
+      "evidence": "20-methodology-blend-record.md",
+      "authority": "inferred",
+      "reason": "text reference `records/sdlc-stage-coverage-matrix.json`"
+    },
+    {
+      "source": "NODE-20-METHODOLOGY-BLEND-RECORD-MD",
+      "target": "NODE-21-GLOSSARY-UBIQUITOUS-LANGUAGE-MD",
+      "type": "inferred_reference",
+      "evidence": "20-methodology-blend-record.md",
+      "authority": "inferred",
+      "reason": "text reference `21-glossary-ubiquitous-language.md`"
+    },
+    {
+      "source": "NODE-20-METHODOLOGY-BLEND-RECORD-MD",
+      "target": "NODE-14-MATERIAL-UI-STANDARDS-CONFORMANCE-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "20-methodology-blend-record.md",
+      "authority": "inferred",
+      "reason": "text reference `14-material-ui-standards-conformance-record.md`"
+    },
+    {
+      "source": "NODE-20-METHODOLOGY-BLEND-RECORD-MD",
+      "target": "NODE-07-HANDOFF-AND-RUNBOOK-MD",
+      "type": "inferred_reference",
+      "evidence": "20-methodology-blend-record.md",
+      "authority": "inferred",
+      "reason": "text reference `07-handoff-and-runbook.md`"
+    },
+    {
+      "source": "NODE-20-METHODOLOGY-BLEND-RECORD-MD",
+      "target": "NODE-23-PROVENANCE-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "20-methodology-blend-record.md",
+      "authority": "inferred",
+      "reason": "text reference `23-provenance-record.md`"
+    },
+    {
+      "source": "NODE-20-METHODOLOGY-BLEND-RECORD-MD",
+      "target": "NODE-22-ARCHITECTURE-DECISION-RECORDS-MD",
+      "type": "inferred_reference",
+      "evidence": "20-methodology-blend-record.md",
+      "authority": "inferred",
+      "reason": "text reference `22-architecture-decision-records.md`"
+    },
+    {
+      "source": "NODE-20-METHODOLOGY-BLEND-RECORD-MD",
+      "target": "NODE-RECORDS-ARTIFACT-CATALOG-COVERAGE-MATRIX-JSON",
+      "type": "inferred_reference",
+      "evidence": "20-methodology-blend-record.md",
+      "authority": "inferred",
+      "reason": "text reference `records/artifact-catalog-coverage-matrix.json`"
+    },
+    {
+      "source": "NODE-21-GLOSSARY-UBIQUITOUS-LANGUAGE-MD",
+      "target": "NODE-02-PRD-MD",
+      "type": "inferred_reference",
+      "evidence": "21-glossary-ubiquitous-language.md",
+      "authority": "inferred",
+      "reason": "text reference `02-prd.md`"
+    },
+    {
+      "source": "NODE-21-GLOSSARY-UBIQUITOUS-LANGUAGE-MD",
+      "target": "NODE-03-ARCHITECTURE-MD",
+      "type": "inferred_reference",
+      "evidence": "21-glossary-ubiquitous-language.md",
+      "authority": "inferred",
+      "reason": "text reference `03-architecture.md`"
+    },
+    {
+      "source": "NODE-21-GLOSSARY-UBIQUITOUS-LANGUAGE-MD",
+      "target": "NODE-05-TRACEABILITY-MATRIX-MD",
+      "type": "inferred_reference",
+      "evidence": "21-glossary-ubiquitous-language.md",
+      "authority": "inferred",
+      "reason": "text reference `05-traceability-matrix.md`"
+    },
+    {
+      "source": "NODE-21-GLOSSARY-UBIQUITOUS-LANGUAGE-MD",
+      "target": "NODE-PORTAL-README-MD",
+      "type": "inferred_reference",
+      "evidence": "21-glossary-ubiquitous-language.md",
+      "authority": "inferred",
+      "reason": "text reference `README.md`"
+    },
+    {
+      "source": "NODE-22-ARCHITECTURE-DECISION-RECORDS-MD",
+      "target": "NODE-02-PRD-MD",
+      "type": "inferred_reference",
+      "evidence": "22-architecture-decision-records.md",
+      "authority": "inferred",
+      "reason": "text reference `02-prd.md`"
+    },
+    {
+      "source": "NODE-22-ARCHITECTURE-DECISION-RECORDS-MD",
+      "target": "NODE-03-ARCHITECTURE-MD",
+      "type": "inferred_reference",
+      "evidence": "22-architecture-decision-records.md",
+      "authority": "inferred",
+      "reason": "text reference `03-architecture.md`"
+    },
+    {
+      "source": "NODE-22-ARCHITECTURE-DECISION-RECORDS-MD",
+      "target": "NODE-14-MATERIAL-UI-STANDARDS-CONFORMANCE-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "22-architecture-decision-records.md",
+      "authority": "inferred",
+      "reason": "text reference `14-material-ui-standards-conformance-record.md`"
+    },
+    {
+      "source": "NODE-23-PROVENANCE-RECORD-MD",
+      "target": "NODE-RECORDS-ARTIFACT-CATALOG-COVERAGE-MATRIX-JSON",
+      "type": "inferred_reference",
+      "evidence": "23-provenance-record.md",
+      "authority": "inferred",
+      "reason": "text reference `records/artifact-catalog-coverage-matrix.json`"
+    },
+    {
+      "source": "NODE-23-PROVENANCE-RECORD-MD",
+      "target": "NODE-02-PRD-MD",
+      "type": "inferred_reference",
+      "evidence": "23-provenance-record.md",
+      "authority": "inferred",
+      "reason": "text reference `02-prd.md`"
+    },
+    {
+      "source": "NODE-23-PROVENANCE-RECORD-MD",
+      "target": "NODE-03-ARCHITECTURE-MD",
+      "type": "inferred_reference",
+      "evidence": "23-provenance-record.md",
+      "authority": "inferred",
+      "reason": "text reference `03-architecture.md`"
+    },
+    {
+      "source": "NODE-23-PROVENANCE-RECORD-MD",
+      "target": "NODE-PORTAL-README-MD",
+      "type": "inferred_reference",
+      "evidence": "23-provenance-record.md",
+      "authority": "inferred",
+      "reason": "text reference `README.md`"
+    },
+    {
+      "source": "NODE-23-PROVENANCE-RECORD-MD",
+      "target": "NODE-22-ARCHITECTURE-DECISION-RECORDS-MD",
+      "type": "inferred_reference",
+      "evidence": "23-provenance-record.md",
+      "authority": "inferred",
+      "reason": "text reference `22-architecture-decision-records.md`"
+    },
+    {
+      "source": "NODE-23-PROVENANCE-RECORD-MD",
+      "target": "NODE-RECORDS-TASKS-MD",
+      "type": "inferred_reference",
+      "evidence": "23-provenance-record.md",
+      "authority": "inferred",
+      "reason": "text reference `records/TASKS.md`"
+    },
+    {
+      "source": "NODE-23-PROVENANCE-RECORD-MD",
+      "target": "NODE-RECORDS-TPM-FLOW-LEDGER-JSON",
+      "type": "inferred_reference",
+      "evidence": "23-provenance-record.md",
+      "authority": "inferred",
+      "reason": "text reference `records/tpm-flow-ledger.json`"
+    },
+    {
+      "source": "NODE-23-PROVENANCE-RECORD-MD",
+      "target": "NODE-RECORDS-FACTORY-PERT-PLAN-JSON",
+      "type": "inferred_reference",
+      "evidence": "23-provenance-record.md",
+      "authority": "inferred",
+      "reason": "text reference `records/factory-pert-plan.json`"
+    },
+    {
+      "source": "NODE-23-PROVENANCE-RECORD-MD",
+      "target": "NODE-RECORDS-KNOWLEDGE-GRAPH-JSON",
+      "type": "inferred_reference",
+      "evidence": "23-provenance-record.md",
+      "authority": "inferred",
+      "reason": "text reference `records/knowledge-graph.json`"
+    },
+    {
+      "source": "NODE-23-PROVENANCE-RECORD-MD",
+      "target": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "type": "inferred_reference",
+      "evidence": "23-provenance-record.md",
+      "authority": "inferred",
+      "reason": "text reference `portal-data.json`"
+    },
+    {
+      "source": "NODE-23-PROVENANCE-RECORD-MD",
+      "target": "NODE-PORTAL-DIAGRAMS-MD",
+      "type": "inferred_reference",
+      "evidence": "23-provenance-record.md",
+      "authority": "inferred",
+      "reason": "text reference `diagrams.md`"
+    },
+    {
+      "source": "NODE-24-HUMAN-COMMUNICATION-RECORD-MD",
+      "target": "NODE-RECORDS-HUMAN-REVIEW-PORTAL-RECORD-JSON",
+      "type": "inferred_reference",
+      "evidence": "24-human-communication-record.md",
+      "authority": "inferred",
+      "reason": "text reference `records/human-review-portal-record.json`"
+    },
+    {
+      "source": "NODE-24-HUMAN-COMMUNICATION-RECORD-MD",
+      "target": "NODE-15-HUMAN-REVIEW-ONBOARDING-PORTAL-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "24-human-communication-record.md",
+      "authority": "inferred",
+      "reason": "text reference `15-human-review-onboarding-portal-record.md`"
+    },
+    {
+      "source": "NODE-24-HUMAN-COMMUNICATION-RECORD-MD",
+      "target": "NODE-RECORDS-ARTIFACT-CATALOG-COVERAGE-MATRIX-JSON",
+      "type": "inferred_reference",
+      "evidence": "24-human-communication-record.md",
+      "authority": "inferred",
+      "reason": "text reference `records/artifact-catalog-coverage-matrix.json`"
+    },
+    {
+      "source": "NODE-24-HUMAN-COMMUNICATION-RECORD-MD",
+      "target": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "type": "inferred_reference",
+      "evidence": "24-human-communication-record.md",
+      "authority": "inferred",
+      "reason": "text reference `portal/portal-data.json`"
+    },
+    {
+      "source": "NODE-24-HUMAN-COMMUNICATION-RECORD-MD",
+      "target": "NODE-02-PRD-MD",
+      "type": "inferred_reference",
+      "evidence": "24-human-communication-record.md",
+      "authority": "inferred",
+      "reason": "text reference `02-prd.md`"
+    },
+    {
+      "source": "NODE-24-HUMAN-COMMUNICATION-RECORD-MD",
+      "target": "NODE-17-ACTUAL-VS-PROMISED-ARTIFACT-GAP-AUDIT-MD",
+      "type": "inferred_reference",
+      "evidence": "24-human-communication-record.md",
+      "authority": "inferred",
+      "reason": "text reference `17-actual-vs-promised-artifact-gap-audit.md`"
+    },
+    {
+      "source": "NODE-25-CONTEXT-PACK-PREDECESSOR-RECOVERY-RECORD-MD",
+      "target": "NODE-RECORDS-KNOWLEDGE-GRAPH-JSON",
+      "type": "inferred_reference",
+      "evidence": "25-context-pack-predecessor-recovery-record.md",
+      "authority": "inferred",
+      "reason": "text reference `records/knowledge-graph.json`"
+    },
+    {
+      "source": "NODE-25-CONTEXT-PACK-PREDECESSOR-RECOVERY-RECORD-MD",
+      "target": "NODE-RECORDS-TASKS-MD",
+      "type": "inferred_reference",
+      "evidence": "25-context-pack-predecessor-recovery-record.md",
+      "authority": "inferred",
+      "reason": "text reference `records/TASKS.md`"
+    },
+    {
+      "source": "NODE-25-CONTEXT-PACK-PREDECESSOR-RECOVERY-RECORD-MD",
+      "target": "NODE-00-FACTORY-RUN-SUMMARY-MD",
+      "type": "inferred_reference",
+      "evidence": "25-context-pack-predecessor-recovery-record.md",
+      "authority": "inferred",
+      "reason": "text reference `00-factory-run-summary.md`"
+    },
+    {
+      "source": "NODE-25-CONTEXT-PACK-PREDECESSOR-RECOVERY-RECORD-MD",
+      "target": "NODE-17-ACTUAL-VS-PROMISED-ARTIFACT-GAP-AUDIT-MD",
+      "type": "inferred_reference",
+      "evidence": "25-context-pack-predecessor-recovery-record.md",
+      "authority": "inferred",
+      "reason": "text reference `17-actual-vs-promised-artifact-gap-audit.md`"
+    },
+    {
+      "source": "NODE-25-CONTEXT-PACK-PREDECESSOR-RECOVERY-RECORD-MD",
+      "target": "NODE-18-RALPH-20-ARTIFACT-COMPLETENESS-AUDIT-MD",
+      "type": "inferred_reference",
+      "evidence": "25-context-pack-predecessor-recovery-record.md",
+      "authority": "inferred",
+      "reason": "text reference `18-ralph-20-artifact-completeness-audit.md`"
+    },
+    {
+      "source": "NODE-25-CONTEXT-PACK-PREDECESSOR-RECOVERY-RECORD-MD",
+      "target": "NODE-RECORDS-ARTIFACT-CATALOG-COVERAGE-MATRIX-JSON",
+      "type": "inferred_reference",
+      "evidence": "25-context-pack-predecessor-recovery-record.md",
+      "authority": "inferred",
+      "reason": "text reference `records/artifact-catalog-coverage-matrix.json`"
+    },
+    {
+      "source": "NODE-25-CONTEXT-PACK-PREDECESSOR-RECOVERY-RECORD-MD",
+      "target": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "type": "inferred_reference",
+      "evidence": "25-context-pack-predecessor-recovery-record.md",
+      "authority": "inferred",
+      "reason": "text reference `portal/portal-data.json`"
+    },
+    {
+      "source": "NODE-25-CONTEXT-PACK-PREDECESSOR-RECOVERY-RECORD-MD",
+      "target": "NODE-PORTAL-DASHBOARD-CONTROL-INDEX-JSON",
+      "type": "inferred_reference",
+      "evidence": "25-context-pack-predecessor-recovery-record.md",
+      "authority": "inferred",
+      "reason": "text reference `portal/dashboard-control-index.json`"
+    },
+    {
+      "source": "NODE-25-CONTEXT-PACK-PREDECESSOR-RECOVERY-RECORD-MD",
+      "target": "NODE-02-PRD-MD",
+      "type": "inferred_reference",
+      "evidence": "25-context-pack-predecessor-recovery-record.md",
+      "authority": "inferred",
+      "reason": "text reference `02-prd.md`"
+    },
+    {
+      "source": "NODE-25-CONTEXT-PACK-PREDECESSOR-RECOVERY-RECORD-MD",
+      "target": "NODE-03-ARCHITECTURE-MD",
+      "type": "inferred_reference",
+      "evidence": "25-context-pack-predecessor-recovery-record.md",
+      "authority": "inferred",
+      "reason": "text reference `03-architecture.md`"
+    },
+    {
+      "source": "NODE-25-CONTEXT-PACK-PREDECESSOR-RECOVERY-RECORD-MD",
+      "target": "NODE-22-ARCHITECTURE-DECISION-RECORDS-MD",
+      "type": "inferred_reference",
+      "evidence": "25-context-pack-predecessor-recovery-record.md",
+      "authority": "inferred",
+      "reason": "text reference `22-architecture-decision-records.md`"
+    },
+    {
+      "source": "NODE-25-CONTEXT-PACK-PREDECESSOR-RECOVERY-RECORD-MD",
+      "target": "NODE-04-TEST-STRATEGY-MD",
+      "type": "inferred_reference",
+      "evidence": "25-context-pack-predecessor-recovery-record.md",
+      "authority": "inferred",
+      "reason": "text reference `04-test-strategy.md`"
+    },
+    {
+      "source": "NODE-25-CONTEXT-PACK-PREDECESSOR-RECOVERY-RECORD-MD",
+      "target": "NODE-RECORDS-TPM-FLOW-LEDGER-JSON",
+      "type": "inferred_reference",
+      "evidence": "25-context-pack-predecessor-recovery-record.md",
+      "authority": "inferred",
+      "reason": "text reference `records/tpm-flow-ledger.json`"
+    },
+    {
+      "source": "NODE-25-CONTEXT-PACK-PREDECESSOR-RECOVERY-RECORD-MD",
+      "target": "NODE-RECORDS-FACTORY-PERT-PLAN-JSON",
+      "type": "inferred_reference",
+      "evidence": "25-context-pack-predecessor-recovery-record.md",
+      "authority": "inferred",
+      "reason": "text reference `records/factory-pert-plan.json`"
+    },
+    {
+      "source": "NODE-25-CONTEXT-PACK-PREDECESSOR-RECOVERY-RECORD-MD",
+      "target": "NODE-PORTAL-INDEX-HTML",
+      "type": "inferred_reference",
+      "evidence": "25-context-pack-predecessor-recovery-record.md",
+      "authority": "inferred",
+      "reason": "text reference `portal/index.html`"
+    },
+    {
       "source": "NODE-EVIDENCE-BROWSER-WYSIWYG-RESULTS-JSON",
       "target": "NODE-EVIDENCE-WYSIWYG-DESKTOP-PNG",
       "type": "inferred_reference",
@@ -2748,6 +3375,62 @@
       "evidence": "portal/index.html",
       "authority": "inferred",
       "reason": "text reference `../18-ralph-20-artifact-completeness-audit.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-19-RASCI-MATRIX-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../19-rasci-matrix.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-20-METHODOLOGY-BLEND-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../20-methodology-blend-record.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-21-GLOSSARY-UBIQUITOUS-LANGUAGE-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../21-glossary-ubiquitous-language.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-22-ARCHITECTURE-DECISION-RECORDS-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../22-architecture-decision-records.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-23-PROVENANCE-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../23-provenance-record.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-24-HUMAN-COMMUNICATION-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../24-human-communication-record.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-25-CONTEXT-PACK-PREDECESSOR-RECOVERY-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../25-context-pack-predecessor-recovery-record.md`"
     },
     {
       "source": "NODE-PORTAL-INDEX-HTML",
@@ -3207,6 +3890,14 @@
     },
     {
       "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-RECORDS-ARTIFACT-CATALOG-COVERAGE-MATRIX-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `artifact-catalog-coverage-matrix.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
       "target": "NODE-00-FACTORY-RUN-SUMMARY-MD",
       "type": "inferred_reference",
       "evidence": "portal/portal-data.json",
@@ -3383,11 +4074,19 @@
     },
     {
       "source": "NODE-PORTAL-PORTAL-DATA-JSON",
-      "target": "NODE-RECORDS-ARTIFACT-CATALOG-COVERAGE-MATRIX-JSON",
+      "target": "NODE-19-RASCI-MATRIX-MD",
       "type": "inferred_reference",
       "evidence": "portal/portal-data.json",
       "authority": "inferred",
-      "reason": "text reference `records/artifact-catalog-coverage-matrix.json`"
+      "reason": "text reference `19-rasci-matrix.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-20-METHODOLOGY-BLEND-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `20-methodology-blend-record.md`"
     },
     {
       "source": "NODE-PORTAL-PORTAL-DATA-JSON",
@@ -3396,6 +4095,22 @@
       "evidence": "portal/portal-data.json",
       "authority": "inferred",
       "reason": "text reference `01-research-competitive-benchmark.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-21-GLOSSARY-UBIQUITOUS-LANGUAGE-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `21-glossary-ubiquitous-language.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-22-ARCHITECTURE-DECISION-RECORDS-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `22-architecture-decision-records.md`"
     },
     {
       "source": "NODE-PORTAL-PORTAL-DATA-JSON",
@@ -3460,6 +4175,30 @@
       "evidence": "portal/portal-data.json",
       "authority": "inferred",
       "reason": "text reference `16-dashboard-control-redo-record.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-23-PROVENANCE-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `23-provenance-record.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-24-HUMAN-COMMUNICATION-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `24-human-communication-record.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-25-CONTEXT-PACK-PREDECESSOR-RECOVERY-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `25-context-pack-predecessor-recovery-record.md`"
     },
     {
       "source": "NODE-PORTAL-PORTAL-DATA-JSON",

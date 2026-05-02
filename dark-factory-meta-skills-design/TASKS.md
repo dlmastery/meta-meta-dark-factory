@@ -77,6 +77,8 @@
 | `TB-20260502-026` | `accepted` | Add goal-specific RALPH-10 certification gate for the agent-centric protocol workflow | Codex | `CG-NODE-GOAL-RALPH10-AGENT-WORKFLOW-001` | `WL-GOAL-RALPH10-AGENT-WORKFLOW-001` | `KG:TB-20260502-026` | goal audit endpoint, UI control, tests, live browser-smoke goal record | `GATE-GOAL-RALPH10-AGENT-WORKFLOW-001:pass` | 10 goal loops passed with 0 P1 and 0 P2 on live run; unit and browser regressions pass; task ledger validates | `RUN-CLOSED` | bounded local agent-centric protocol workflow goal achieved |
 | `TB-20260502-027` | `accepted` | Add Recovery Truth Mode to DFMS skills and create the first recovery truth ledger | Codex | `CG-NODE-RECOVERY-TRUTH-MODE-001` | `WL-RECOVERY-TRUTH-MODE-001` | `KG:TB-20260502-027` | live/workspace skill updates, `64-recovery-truth-ledger-and-execution-plan.md`, recovery truth JSON record | `GATE-RECOVERY-TRUTH-MODE-001:pass` | skill bundle validation pass, task ledger validation pass, truth ledger created with proof classes and recovery batches | `RB-02` | recovery mode installed; next batch is console truth-inventory view |
 | `TB-20260502-028` | `accepted` | Add recovery truth-inventory API and dashboard view to the DFMS control console | Codex | `CG-NODE-CONSOLE-TRUTH-INVENTORY-001` | `WL-CONSOLE-TRUTH-INVENTORY-001` | `KG:TB-20260502-028` | `/api/runs/:id/truth`, Recovery Truth Inventory UI, backend/browser tests | `GATE-CONSOLE-TRUTH-INVENTORY-001:pass` | syntax pass, unit regression pass, browser workflow pass, live truth endpoint shows artifact saturation not achieved | `RB-03` | console now shows proof classes and do-not-trust boundaries; next batch is actual missing artifact generation |
+| `TB-20260502-029` | `accepted` | Run exact-prompt RALPH-10 adherence audit answering what was done and how behavior improved | Codex | `CG-NODE-RECOVERY-ADHERENCE-001` | `WL-RECOVERY-ADHERENCE-001` | `KG:TB-20260502-029` | `65-exact-prompt-adherence-ralph-10.md` | `GATE-EXACT-PROMPT-ADHERENCE-001:pass` | 10 adherence loops recorded with proof paths and no closure overclaim | `TB-20260502-030` | recovery adherence audit complete; concrete missing-artifact batch opened |
+| `TB-20260502-030` | `accepted` | Generate first real missing-artifact recovery batch for the todo/habits project book | Codex | `CG-NODE-NORTHSTAR-ARTIFACT-RECOVERY-BATCH-1` | `WL-NORTHSTAR-ARTIFACT-RECOVERY-BATCH-1` | `KG:TB-20260502-030` | seven standalone draft artifacts, updated coverage matrix, refreshed portal/dashboard indexes | `GATE-NORTHSTAR-ARTIFACT-RECOVERY-BATCH-1:pass-with-gaps` | artifact coverage audit pass-with-gaps, portal audit pass, human portal validator pass, dashboard build pass, core tests pass | `RB-04` | missing count reduced from 14 to 7; full saturation remains failed until remaining gaps and reviews close |
 
 ## Deferred And Retired Beads
 
@@ -757,6 +759,54 @@
 - Re-entry trigger: Any console change that affects progress, protocol, portal, artifact, or goal status display.
 - Residual risk: The console now exposes gaps; it does not itself close missing todo/habits artifacts or hosted platform gaps.
 
+### `TB-20260502-029`
+
+- Objective: Run exact-prompt RALPH-10 adherence audit answering what was done, how behavior improved, and how this continuation will follow rather than drift.
+- Scope boundary: Recovery adherence record only; not a claim that full artifact saturation or external certification is complete.
+- Source intent: User asked "continue - what did you do how did you improve" and demanded 10 RALPH loops on that exact prompt.
+- Requirement links: recovery truth mode, no RALPH theater, proof-class separation, exact prompt answer, concrete next batch.
+- Interrogation answer links: current user message in this thread.
+- Control graph node: `CG-NODE-RECOVERY-ADHERENCE-001`
+- Work-ledger item: `WL-RECOVERY-ADHERENCE-001`
+- Knowledge-graph node: `KG:TB-20260502-029`
+- Inputs: `64-recovery-truth-ledger-and-execution-plan.md`, user exact prompt, skill recovery rules, artifact coverage matrix.
+- Outputs: `65-exact-prompt-adherence-ralph-10.md`
+- Acceptance gate: Record directly answers what was done and how behavior improved; includes 10 differentiated RALPH loops and explicitly refuses full-closure overclaim.
+- Evidence required: created adherence audit artifact with proof paths and next concrete batch.
+- Evidence provided: `65-exact-prompt-adherence-ralph-10.md`
+- Primary critics: Recovery Truth Auditor, Human Trust Reviewer, Workflow Adherence TPM.
+- Adversarial critics: RALPH-Theater Critic, Success-Language Critic, Meta-Only Drift Critic.
+- RALPH loops: 10 exact-prompt loops completed in the artifact.
+- Token SWAG: low.
+- Approval state: user explicitly requested continuation and adherence loop.
+- Next bead: `TB-20260502-030`
+- Re-entry trigger: Any future user complaint that Codex is answering abstractly, skipping, or not reporting actual proof.
+- Residual risk: This record improves adherence discipline but does not itself produce product-book saturation.
+
+### `TB-20260502-030`
+
+- Objective: Generate the first real missing-artifact recovery batch for Northstar Daily and wire it into coverage, portal, dashboard, and validation.
+- Scope boundary: Seven standalone draft artifacts only; not artifact-specific certification, not all remaining artifact saturation, not production readiness.
+- Source intent: User challenged missing todo/habits artifacts and demanded rigorous follow-through instead of assumptions.
+- Requirement links: artifact catalog coverage, no roadmap-as-artifact, portal visibility, dashboard-control freshness, truthful full saturation failure.
+- Interrogation answer links: current user message in this thread and previous missing-artifact complaints.
+- Control graph node: `CG-NODE-NORTHSTAR-ARTIFACT-RECOVERY-BATCH-1`
+- Work-ledger item: `WL-NORTHSTAR-ARTIFACT-RECOVERY-BATCH-1`
+- Knowledge-graph node: `KG:TB-20260502-030`
+- Inputs: `records/artifact-catalog-coverage-matrix.json`, `18-ralph-20-artifact-completeness-audit.md`, product app files, project-book evidence.
+- Outputs: `19-rasci-matrix.md`, `20-methodology-blend-record.md`, `21-glossary-ubiquitous-language.md`, `22-architecture-decision-records.md`, `23-provenance-record.md`, `24-human-communication-record.md`, `25-context-pack-predecessor-recovery-record.md`, updated coverage matrix, updated portal data and static portal links, rebuilt dashboard-control index.
+- Acceptance gate: The seven files exist as standalone draft artifacts; matrix moves the seven catalog IDs from missing to standalone; missing count drops from 14 to 7; portal/dashboard indexes refresh; validators pass with truthful gaps.
+- Evidence required: artifact coverage audit, portal index audit, human portal validator, dashboard build, core test, task ledger validation.
+- Evidence provided: artifact catalog coverage audit passed with truthful gaps, human review portal audit passed, portal meta-validator passed, dashboard-control build returned 109 nodes and 418 edges, core behavior tests passed.
+- Primary critics: Artifact Coverage Auditor, Human Portal Reviewer, Context Recovery Maintainer.
+- Adversarial critics: Draft-As-Certified Critic, Missing-Gap-Hiding Critic, Portal-Drift Critic.
+- RALPH loops: Recovery batch loop completed for coverage/index/validation; artifact-specific five-loop RALPH remains pending per generated artifact.
+- Token SWAG: medium.
+- Approval state: user explicitly requested continuing and fixing actual artifacts.
+- Next bead: `RB-04`
+- Re-entry trigger: Any future artifact addition, portal drift, or claim that full saturation has passed.
+- Residual risk: Seven missing artifacts remain; 17 partial and 12 combined entries still block full saturation; new draft artifacts require specialist panels, scorecards, refinery gates, and certificates.
+
 ## Open Approvals
 
 | Approval ID | Bead ID | Approver | Decision Needed | Token/Scope Impact | Due | State |
@@ -870,6 +920,12 @@
 | `VAL-20260502-096` | `npm test` | truth-inventory backend regression | pass | unit test verifies truth inventory, descriptor-only boundary, and artifact saturation gap | keep as API regression |
 | `VAL-20260502-097` | `npm run test:browser` | truth-inventory browser workflow | pass | browser verifies Recovery Truth Inventory UI, descriptor-only count, and artifact_saturation do-not-trust row | keep as WYSIWYG regression |
 | `VAL-20260502-098` | live truth endpoint smoke | `GET /api/runs/:id/truth` | pass | latest run returned 8 truth rows and artifact saturation `not_achieved` | rerun after recovery truth display changes |
+| `VAL-20260502-099` | `artifact-catalog-coverage-audit.cjs` | Northstar recovery batch 1 coverage matrix | pass-with-gaps | all 63 catalog IDs still checked; standalone count 19, missing count 7, full saturation remains failed truthfully | rerun after any artifact coverage change |
+| `VAL-20260502-100` | `portal-index-audit.cjs` | Northstar human review portal after seven artifact additions | pass | portal indexes 26 top-level Markdown docs, 34 record entries, 42 root evidence files, and 6 Mermaid sources | rerun after portal docs, records, evidence, or diagrams change |
+| `VAL-20260502-101` | `validate_human_review_portal.py` | Northstar human review portal bundle after recovery batch 1 | pass | portal record, portal data, dashboard HTML, and diagram atlas passed with 26 Markdown docs and no failures | rerun before handoff or portal claims |
+| `VAL-20260502-102` | `df_dashboard_control.py build` | Northstar dashboard-control index after recovery batch 1 | pass | rebuilt dashboard index with 109 nodes and 418 edges | rerun after project-book artifacts change |
+| `VAL-20260502-103` | `core.test.cjs` | Northstar app core behavior after documentation recovery batch | pass | quick add, habit, stats, plan audit, planning, friction insight, and normalization tests still pass | rerun after app code changes |
+| `VAL-20260502-104` | `validate_tasks_md.py` | `dark-factory-meta-skills-design/TASKS.md` after adherence and artifact recovery beads | pass | strict bead ledger validation completed after adding `TB-20260502-029` and `TB-20260502-030` | maintain on every governed update |
 
 ## Change Log
 
@@ -905,3 +961,5 @@
 | 2026-05-02 | Codex | `TB-20260502-026` | Added goal-specific RALPH-10 gate and achieved the bounded local agent-centric workflow goal | User requested ten RALPH loops until goal achieved | goal audit endpoint, UI button, unit/browser regressions, live goal pass |
 | 2026-05-02 | Codex | `TB-20260502-027` | Added Recovery Truth Mode and first truth ledger | User demanded an end to slop, overclaiming, token-optimized shortcuts, and scaffold-as-success behavior | installed/workspace skill updates, truth ledger doc, JSON record, validators pass |
 | 2026-05-02 | Codex | `TB-20260502-028` | Added recovery truth-inventory API and dashboard band to the control console | Recovery mode required the app itself to show proof classes and do-not-trust boundaries | syntax checks, unit regression, browser regression, live truth endpoint |
+| 2026-05-02 | Codex | `TB-20260502-029` | Added exact-prompt adherence RALPH-10 record | User asked what was done, how behavior improved, and demanded adherence on this exact prompt | `65-exact-prompt-adherence-ralph-10.md` |
+| 2026-05-02 | Codex | `TB-20260502-030` | Generated seven standalone draft Northstar artifact records and refreshed coverage/portal/dashboard indexes | User demanded real missing artifacts, not more abstract control material | `19` through `25` project-book artifacts, coverage audit, portal audit, dashboard build, core test |

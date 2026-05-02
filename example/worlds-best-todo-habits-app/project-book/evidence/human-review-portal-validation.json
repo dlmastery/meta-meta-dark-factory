@@ -6,7 +6,7 @@
   "record_id": "PORTAL-AUDIT-NORTHSTAR-20260426-001",
   "status": "pass",
   "counts": {
-    "topLevelMarkdown": 19,
+    "topLevelMarkdown": 26,
     "records": 34,
     "evidenceRootFiles": 42,
     "mermaidSources": 6,
