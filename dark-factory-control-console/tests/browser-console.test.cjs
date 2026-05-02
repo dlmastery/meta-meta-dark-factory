@@ -17,6 +17,7 @@ const { chromium } = require("playwright");
   assert((await page.locator("#flowMap").textContent()).includes("Meta-Meta Attractor"), "critical path should render the stage map");
   assert((await page.locator("#legalNextAction").textContent()).trim().length > 5, "command deck should render the next legal action");
   assert((await page.locator("#protocolAguiStatus").textContent()).includes("AG-UI"), "protocol workbench should render AG-UI status");
+  assert((await page.locator("#truth-title").textContent()).includes("Recovery Truth"), "truth inventory should render");
 
   await page.fill("#projectName", "Browser Smoke Governed Product");
   await page.fill("#intent", "Build a governed UI product through meta-meta first sequencing, customer grilling, artifact gates, testing evidence, dashboard control, and redo closure.");
@@ -71,6 +72,8 @@ const { chromium } = require("playwright");
   await page.waitForFunction(() => document.querySelector("#changeRequestList")?.textContent.includes("Browser design resteer"));
   await page.click("#runGoalRalphAudit");
   await page.waitForFunction(() => document.querySelector("#goalAuditResult")?.textContent.includes("Goal achieved: yes"));
+  await page.waitForFunction(() => document.querySelector("#dontTrustList")?.textContent.includes("artifact_saturation"));
+  await page.waitForFunction(() => document.querySelector("#proofClassCounts")?.textContent.includes("descriptor_only"));
   const portalAfterChange = await page.evaluate(async () => {
     const bootstrap = await fetch("/api/bootstrap").then((response) => response.json());
     const runId = bootstrap.runs[0].run_id;

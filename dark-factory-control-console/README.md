@@ -46,6 +46,7 @@ The console includes a protocol-aware workflow cockpit for agent-centric executi
 Protocol endpoints:
 
 - `GET /api/runs/:id/protocol`
+- `GET /api/runs/:id/truth`
 - `POST /api/runs/:id/agent-message`
 - `POST /api/runs/:id/goal-ralph`
 

@@ -76,6 +76,7 @@
 | `TB-20260501-025` | `accepted` | Add AG-UI, A2UI, and MCP Apps agent-centric workflow cockpit to the local DFMS control console | Codex | `CG-NODE-AGENT-PROTOCOL-UX-001` | `WL-AGENT-PROTOCOL-UX-001` | `KG:TB-20260501-025` | protocol profile, run event ledger, A2UI surface descriptors, MCP Apps manifest, ask/resteer panel, protocol tests | `GATE-AGENT-PROTOCOL-UX-001:pass` | official protocol source check, server and client syntax pass, unit regression pass, Playwright workflow pass, public repo sync planned | `RUN-CLOSED` | local agent-centric protocol cockpit boundary complete |
 | `TB-20260502-026` | `accepted` | Add goal-specific RALPH-10 certification gate for the agent-centric protocol workflow | Codex | `CG-NODE-GOAL-RALPH10-AGENT-WORKFLOW-001` | `WL-GOAL-RALPH10-AGENT-WORKFLOW-001` | `KG:TB-20260502-026` | goal audit endpoint, UI control, tests, live browser-smoke goal record | `GATE-GOAL-RALPH10-AGENT-WORKFLOW-001:pass` | 10 goal loops passed with 0 P1 and 0 P2 on live run; unit and browser regressions pass; task ledger validates | `RUN-CLOSED` | bounded local agent-centric protocol workflow goal achieved |
 | `TB-20260502-027` | `accepted` | Add Recovery Truth Mode to DFMS skills and create the first recovery truth ledger | Codex | `CG-NODE-RECOVERY-TRUTH-MODE-001` | `WL-RECOVERY-TRUTH-MODE-001` | `KG:TB-20260502-027` | live/workspace skill updates, `64-recovery-truth-ledger-and-execution-plan.md`, recovery truth JSON record | `GATE-RECOVERY-TRUTH-MODE-001:pass` | skill bundle validation pass, task ledger validation pass, truth ledger created with proof classes and recovery batches | `RB-02` | recovery mode installed; next batch is console truth-inventory view |
+| `TB-20260502-028` | `accepted` | Add recovery truth-inventory API and dashboard view to the DFMS control console | Codex | `CG-NODE-CONSOLE-TRUTH-INVENTORY-001` | `WL-CONSOLE-TRUTH-INVENTORY-001` | `KG:TB-20260502-028` | `/api/runs/:id/truth`, Recovery Truth Inventory UI, backend/browser tests | `GATE-CONSOLE-TRUTH-INVENTORY-001:pass` | syntax pass, unit regression pass, browser workflow pass, live truth endpoint shows artifact saturation not achieved | `RB-03` | console now shows proof classes and do-not-trust boundaries; next batch is actual missing artifact generation |
 
 ## Deferred And Retired Beads
 
@@ -732,6 +733,30 @@
 - Re-entry trigger: Any future frustration, overclaim allegation, missing-artifact complaint, or goal-achievement question.
 - Residual risk: Recovery Truth Mode now governs future behavior, but the actual missing artifacts and hosted runtime still need separate batches.
 
+### `TB-20260502-028`
+
+- Objective: Add recovery truth-inventory API and dashboard view to the DFMS control console.
+- Scope boundary: Make the local console visibly distinguish proof classes and untrusted gaps; not generation of missing product artifacts.
+- Source intent: User asked to start tackling the missing things step by step after updating the meta-factory skills.
+- Requirement links: truth ledger, proof classes, no scaffold-as-success, human portal, dashboard visibility, no premature victory language.
+- Interrogation answer links: current user message in this thread.
+- Control graph node: `CG-NODE-CONSOLE-TRUTH-INVENTORY-001`
+- Work-ledger item: `WL-CONSOLE-TRUTH-INVENTORY-001`
+- Knowledge-graph node: `KG:TB-20260502-028`
+- Inputs: `64-recovery-truth-ledger-and-execution-plan.md`, control console, latest browser-smoke run, artifact coverage matrix.
+- Outputs: `GET /api/runs/:id/truth`, `buildTruthInventory`, Recovery Truth Inventory dashboard band, proof-class counts, trust-now list, do-not-trust-yet list, test assertions.
+- Acceptance gate: Browser UI exposes `artifact_saturation` as not achieved and `descriptor_only` protocol boundary; backend truth inventory exports rows, proof classes, and trust boundaries.
+- Evidence required: syntax checks, unit regression, browser regression, live endpoint smoke.
+- Evidence provided: `node --check server.js`, `node --check public/app.js`, `npm test`, `npm run test:browser`, live truth endpoint returned 8 rows and artifact saturation `not_achieved`.
+- Primary critics: Human Trust Portal Reviewer, Evidence Classification Auditor, Anti-Overclaim Critic.
+- Adversarial critics: Confident-UI Critic, Descriptor-As-Implementation Critic, Artifact-Gap-Hiding Critic.
+- RALPH loops: Focused browser/API regression on truth visibility; future artifact generation needs artifact-specific RALPH.
+- Token SWAG: medium.
+- Approval state: within current recovery request.
+- Next bead: `RB-03`
+- Re-entry trigger: Any console change that affects progress, protocol, portal, artifact, or goal status display.
+- Residual risk: The console now exposes gaps; it does not itself close missing todo/habits artifacts or hosted platform gaps.
+
 ## Open Approvals
 
 | Approval ID | Bead ID | Approver | Decision Needed | Token/Scope Impact | Due | State |
@@ -841,6 +866,10 @@
 | `VAL-20260502-092` | live protocol and goal smoke | `http://127.0.0.1:4187` latest browser-smoke run | pass | latest run has `goal_achievement.status=pass`, `achieved=true`, 0 P1, 0 P2, 61 AG-UI events, 5 A2UI surfaces, and 5 MCP-style tools | rerun after server restart or workflow changes |
 | `VAL-20260502-093` | `validate_skill_bundle.py` | `codex-skills` after Recovery Truth Mode skill updates | pass | workspace skill bundle remains structurally valid after recovery mode rules | rerun after skill edits |
 | `VAL-20260502-094` | `validate_tasks_md.py` | `dark-factory-meta-skills-design/TASKS.md` after recovery truth bead update | pass | strict bead ledger validation completed after adding `TB-20260502-027` | maintain on every governed update |
+| `VAL-20260502-095` | `node --check` | control console after truth-inventory API/UI update | pass | server and browser controller syntax accepted | rerun after console code changes |
+| `VAL-20260502-096` | `npm test` | truth-inventory backend regression | pass | unit test verifies truth inventory, descriptor-only boundary, and artifact saturation gap | keep as API regression |
+| `VAL-20260502-097` | `npm run test:browser` | truth-inventory browser workflow | pass | browser verifies Recovery Truth Inventory UI, descriptor-only count, and artifact_saturation do-not-trust row | keep as WYSIWYG regression |
+| `VAL-20260502-098` | live truth endpoint smoke | `GET /api/runs/:id/truth` | pass | latest run returned 8 truth rows and artifact saturation `not_achieved` | rerun after recovery truth display changes |
 
 ## Change Log
 
@@ -875,3 +904,4 @@
 | 2026-05-01 | Codex | `TB-20260501-025` | Added AG-UI, A2UI, and MCP Apps protocol-aware agent workflow cockpit to the local control console | User requested an agent-centric UX for greenfield and brownfield DFMS runs with step reports, interrogation, and resteer | source check, syntax checks, unit regression, Playwright workflow pass |
 | 2026-05-02 | Codex | `TB-20260502-026` | Added goal-specific RALPH-10 gate and achieved the bounded local agent-centric workflow goal | User requested ten RALPH loops until goal achieved | goal audit endpoint, UI button, unit/browser regressions, live goal pass |
 | 2026-05-02 | Codex | `TB-20260502-027` | Added Recovery Truth Mode and first truth ledger | User demanded an end to slop, overclaiming, token-optimized shortcuts, and scaffold-as-success behavior | installed/workspace skill updates, truth ledger doc, JSON record, validators pass |
+| 2026-05-02 | Codex | `TB-20260502-028` | Added recovery truth-inventory API and dashboard band to the control console | Recovery mode required the app itself to show proof classes and do-not-trust boundaries | syntax checks, unit regression, browser regression, live truth endpoint |

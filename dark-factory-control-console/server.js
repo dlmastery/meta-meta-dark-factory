@@ -174,6 +174,20 @@ const PROTOCOL_PROFILE = {
   }
 };
 
+const PROOF_CLASSES = [
+  "working_implementation",
+  "working_implementation_local",
+  "instantiated_artifact",
+  "validated_evidence",
+  "scaffold_only",
+  "template_only",
+  "descriptor_only",
+  "partial",
+  "missing",
+  "blocked",
+  "waived"
+];
+
 function ensureDir(dir) {
   fs.mkdirSync(dir, { recursive: true });
 }
@@ -1113,6 +1127,137 @@ function buildProtocolState(runOrId) {
     mcp_apps: buildMcpAppsManifest(run),
     agent_report: buildAgentReport(run),
     recent_agent_messages: (run.agent_messages || []).slice(0, 10)
+  };
+}
+
+function buildTruthInventory(runOrId) {
+  const run = typeof runOrId === "string" ? loadRun(runOrId) : runOrId;
+  const validation = validateRunExecution(run);
+  const coverage = loadArtifactCoverage(run.project_book || DEFAULT_PROJECT_BOOK);
+  const protocol = run.invocation_packet?.agent_protocols || {};
+  const eventTypes = new Set((run.agui_events || []).map((event) => event.type));
+  const truthRows = [
+    truthRow({
+      id: "TRUTH-RUN-001",
+      layer: "meta_meta_entry",
+      claim: "Governed work starts with the meta-meta attractor and generated project-specific meta-skill contract.",
+      proof_class: run.generated_meta_skill?.generated_from === "df-meta-attractor" ? "instantiated_artifact" : "missing",
+      status: run.generated_meta_skill?.generated_from === "df-meta-attractor" ? "partially_achieved" : "missing",
+      evidence: ["run.generated_meta_skill", "run.stages[0]", "run.invocation_packet"],
+      trust_boundary: "Trust sequencing evidence only; not proof that every downstream artifact exists."
+    }),
+    truthRow({
+      id: "TRUTH-RUN-002",
+      layer: "agent_centric_ux",
+      claim: "Human can ask the agent anytime and receive a stage-aware recorded response.",
+      proof_class: (run.agent_messages || []).length && eventTypes.has("USER_MESSAGE") ? "working_implementation_local" : "missing",
+      status: (run.agent_messages || []).length && eventTypes.has("USER_MESSAGE") ? "achieved_for_local_console" : "missing",
+      evidence: (run.execution_outputs || []).filter((item) => item.includes("agent-interaction-record.json")),
+      trust_boundary: "Local single-user console behavior only."
+    }),
+    truthRow({
+      id: "TRUTH-RUN-003",
+      layer: "change_control",
+      claim: "Human can resteer through a governed change request that reopens downstream work.",
+      proof_class: (run.change_requests || []).length && eventTypes.has("USER_RESTEER_REQUESTED") ? "working_implementation_local" : "missing",
+      status: (run.change_requests || []).length ? "achieved_for_local_console" : "missing",
+      evidence: (run.execution_outputs || []).filter((item) => item.includes("CR-") || item.includes("human-communication-record.json")),
+      trust_boundary: "Proves local change-control reentry; not production change advisory workflow."
+    }),
+    truthRow({
+      id: "TRUTH-RUN-004",
+      layer: "protocol_contracts",
+      claim: "AG-UI, A2UI, and MCP Apps are represented in the workflow.",
+      proof_class: protocol.agui && protocol.a2ui && protocol.mcp_apps ? "descriptor_only" : "missing",
+      status: protocol.agui && protocol.a2ui && protocol.mcp_apps ? "local_descriptors_exist" : "missing",
+      evidence: ["run.invocation_packet.agent_protocols", "/api/runs/:id/protocol"],
+      trust_boundary: "Descriptors and local endpoints exist; not a packaged remote protocol server."
+    }),
+    truthRow({
+      id: "TRUTH-RUN-005",
+      layer: "no_skip_execution",
+      claim: "Accepted stages have invocation evidence and validator does not find P1 no-skip failures.",
+      proof_class: validation.status === "pass" || validation.status === "conditional_pass" ? "validated_evidence" : "blocked",
+      status: validation.status,
+      evidence: ["validateRunExecution", ...(run.execution_outputs || []).filter((item) => item.endsWith(".json")).slice(0, 8)],
+      trust_boundary: "Structural validator only; semantic expert review still required for artifact quality."
+    }),
+    truthRow({
+      id: "TRUTH-RUN-006",
+      layer: "goal_achievement",
+      claim: "Bounded local agent-centric protocol workflow passed goal RALPH-10.",
+      proof_class: run.goal_achievement?.achieved ? "validated_evidence" : "missing",
+      status: run.goal_achievement?.achieved ? "achieved_for_bounded_local_goal" : "missing",
+      evidence: run.goal_achievement?.record ? [run.goal_achievement.record] : [],
+      trust_boundary: "Does not certify hosted outsourcing replacement platform."
+    }),
+    truthRow({
+      id: "TRUTH-RUN-007",
+      layer: "artifact_saturation",
+      claim: "Todo/habits demonstrator has full standalone SDLC artifact saturation.",
+      proof_class: coverage.full_saturation_status === "pass" ? "validated_evidence" : "partial",
+      status: coverage.full_saturation_status === "pass" ? "achieved" : "not_achieved",
+      evidence: coverage.matrix_path ? [coverage.matrix_path] : [],
+      trust_boundary: `Current catalog counts: ${coverage.counts_summary}. Full saturation is ${coverage.full_saturation_status || "unknown"}.`
+    }),
+    truthRow({
+      id: "TRUTH-RUN-008",
+      layer: "outsourcing_replacement_platform",
+      claim: "DFMS is a full hosted replacement for a human outsourcing SDLC firm.",
+      proof_class: "scaffold_only",
+      status: "not_achieved",
+      evidence: ["dark-factory-control-console", "dark-factory-meta-skills-design"],
+      trust_boundary: "Auth/RBAC, durable database, hosted runtime, production operations, and service-management model remain future batches."
+    })
+  ];
+  const counts = truthRows.reduce((acc, row) => {
+    acc[row.proof_class] = (acc[row.proof_class] || 0) + 1;
+    return acc;
+  }, {});
+  return {
+    zero_slop_policy: ZERO_SLOP,
+    inventory_type: "dfms_recovery_truth_inventory",
+    generated_at: nowIso(),
+    run_id: run.run_id,
+    proof_classes: PROOF_CLASSES,
+    counts,
+    truth_rows: truthRows,
+    overclaim_register: [
+      "Do not call the full platform achieved because the local workflow passes.",
+      "Do not call MCP Apps implemented beyond local descriptors and endpoints.",
+      "Do not call todo/habits full saturation achieved while the coverage matrix says fail.",
+      "Do not call dashboards, validators, or RALPH records product artifacts."
+    ],
+    trust_now: truthRows.filter((row) => ["working_implementation_local", "validated_evidence", "instantiated_artifact"].includes(row.proof_class)),
+    do_not_trust_yet: truthRows.filter((row) => ["scaffold_only", "descriptor_only", "partial", "missing", "blocked"].includes(row.proof_class)),
+    next_recovery_batch: {
+      id: "RB-03",
+      objective: "Generate missing high-priority standalone todo/habits artifacts or get explicit human approval for a smaller tailored set.",
+      token_swag: "high",
+      approval_required: true
+    }
+  };
+}
+
+function truthRow(row) {
+  return {
+    evidence: [],
+    ...row,
+    evidence: (row.evidence || []).filter(Boolean)
+  };
+}
+
+function loadArtifactCoverage(projectBook) {
+  const file = path.join(projectBook, "records", "artifact-catalog-coverage-matrix.json");
+  const matrix = readJson(file, {});
+  const counts = matrix.counts || {};
+  const countsSummary = Object.entries(counts).map(([key, value]) => `${key}:${value}`).join(", ") || "no coverage matrix";
+  return {
+    matrix_path: fs.existsSync(file) ? path.relative(ROOT, file).replace(/\\/g, "/") : "",
+    full_saturation_status: matrix.full_saturation_status || "missing",
+    truthful_coverage_status: matrix.truthful_coverage_status || "unknown",
+    counts,
+    counts_summary: countsSummary
   };
 }
 
@@ -2079,6 +2224,10 @@ async function handleApi(req, res) {
       const id = url.pathname.split("/")[3];
       return sendJson(res, 200, buildProtocolState(id));
     }
+    if (req.method === "GET" && url.pathname.match(/^\/api\/runs\/[^/]+\/truth$/)) {
+      const id = url.pathname.split("/")[3];
+      return sendJson(res, 200, buildTruthInventory(id));
+    }
     if (req.method === "POST" && url.pathname.match(/^\/api\/runs\/[^/]+\/agent-message$/)) {
       const id = url.pathname.split("/")[3];
       return sendJson(res, 201, createAgentMessage(id, await parseBody(req)));
@@ -2149,6 +2298,7 @@ module.exports = {
   buildA2uiSurfaces,
   buildMcpAppsManifest,
   buildProtocolState,
+  buildTruthInventory,
   createAgentMessage,
   buildProjectPortal,
   createChangeRequest,

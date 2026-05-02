@@ -102,6 +102,10 @@ function main() {
   assert.strictEqual(goalAudit.audit.status, "pass", `goal audit should pass: ${JSON.stringify(goalAudit.audit.loops.flatMap((loop) => loop.findings))}`);
   assert.strictEqual(goalAudit.audit.achieved, true, "agent-centric workflow goal should be achieved after interrogation and resteer proof");
   assert(goalAudit.run.execution_outputs.some((record) => record.includes("goal-achievement-ralph-10-audit.json")), "goal audit record should be written");
+  const truth = consoleApp.buildTruthInventory(goalAudit.run.run_id);
+  assert.strictEqual(truth.inventory_type, "dfms_recovery_truth_inventory", "truth endpoint should expose recovery truth inventory");
+  assert(truth.truth_rows.some((row) => row.proof_class === "descriptor_only"), "truth inventory must distinguish descriptors from implementation");
+  assert(truth.do_not_trust_yet.some((row) => row.layer === "artifact_saturation"), "truth inventory must expose artifact saturation gap");
 
   const summary = consoleApp.projectBookSummary();
   assert(summary.nodes > 0, "project-book dashboard should expose nodes");

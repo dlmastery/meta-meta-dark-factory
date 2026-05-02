@@ -3,6 +3,7 @@ const state = {
   run: null,
   portal: null,
   protocol: null,
+  truth: null,
   busy: false
 };
 
@@ -50,6 +51,7 @@ async function init() {
     renderRun();
     renderPortal();
     renderProtocol();
+    renderTruthInventory();
   }
 }
 
@@ -80,9 +82,11 @@ async function loadRun(runId) {
     state.run = await api(`/api/runs/${encodeURIComponent(runId)}`);
     await refreshPortal(false);
     await refreshProtocol(false);
+    await refreshTruth(false);
     renderRun();
     renderPortal();
     renderProtocol();
+    renderTruthInventory();
   } catch (error) {
     showResult(error.message, true);
   } finally {
@@ -113,6 +117,16 @@ async function refreshProtocol(shouldRender = true) {
   }
   state.protocol = await api(`/api/runs/${encodeURIComponent(state.run.run_id)}/protocol`);
   if (shouldRender) renderProtocol();
+}
+
+async function refreshTruth(shouldRender = true) {
+  if (!state.run) {
+    state.truth = null;
+    if (shouldRender) renderTruthInventory();
+    return;
+  }
+  state.truth = await api(`/api/runs/${encodeURIComponent(state.run.run_id)}/truth`);
+  if (shouldRender) renderTruthInventory();
 }
 
 function renderBootstrap() {
@@ -299,6 +313,7 @@ async function createRun() {
     await refreshBootstrap();
     await refreshPortal(false);
     await refreshProtocol(false);
+    await refreshTruth(false);
     renderRun();
     renderPortal();
     renderProtocol();
@@ -318,6 +333,7 @@ async function saveAnswer(questionId, value) {
     });
     await refreshPortal(false);
     await refreshProtocol(false);
+    await refreshTruth(false);
     renderRun();
     renderPortal();
     renderProtocol();
@@ -337,6 +353,7 @@ async function invokeCurrentStage() {
     await refreshBootstrap();
     await refreshPortal(false);
     await refreshProtocol(false);
+    await refreshTruth(false);
     renderRun();
     renderPortal();
     renderProtocol();
@@ -355,6 +372,7 @@ async function advanceStage() {
     await refreshBootstrap();
     await refreshPortal(false);
     await refreshProtocol(false);
+    await refreshTruth(false);
     renderRun();
     renderPortal();
     renderProtocol();
@@ -373,6 +391,7 @@ async function executePipeline() {
     await refreshBootstrap();
     await refreshPortal(false);
     await refreshProtocol(false);
+    await refreshTruth(false);
     renderRun();
     renderPortal();
     renderProtocol();
@@ -395,6 +414,7 @@ async function redoClosure() {
     if (state.run) {
       await refreshPortal(false);
       await refreshProtocol(false);
+      await refreshTruth(false);
       renderRun();
       renderPortal();
       renderProtocol();
@@ -415,6 +435,7 @@ async function runRalphAudit() {
     await refreshBootstrap();
     await refreshPortal(false);
     await refreshProtocol(false);
+    await refreshTruth(false);
     renderRun();
     renderPortal();
     renderProtocol();
@@ -435,6 +456,7 @@ async function runGoalRalphAudit() {
     await refreshBootstrap();
     await refreshPortal(false);
     await refreshProtocol(false);
+    await refreshTruth(false);
     renderRun();
     renderPortal();
     renderProtocol();
@@ -468,6 +490,7 @@ async function openChangeRequest() {
     state.portal = result.portal;
     await refreshBootstrap();
     await refreshProtocol(false);
+    await refreshTruth(false);
     renderRun();
     renderPortal();
     renderProtocol();
@@ -523,6 +546,7 @@ function renderRun() {
     renderContradictions();
     renderPacket({});
     renderProtocol();
+    renderTruthInventory();
     renderCommandCenter();
     return;
   }
@@ -540,6 +564,7 @@ function renderRun() {
   renderProjectSelector();
   renderProjectList();
   renderProtocol();
+  renderTruthInventory();
   renderCommandCenter();
 }
 
@@ -651,6 +676,47 @@ function renderProtocol() {
   if (latest) {
     showAgentResponse(latest.response?.summary || "Agent response recorded.", false);
   }
+}
+
+function renderTruthInventory() {
+  const truth = state.truth;
+  if (!truth) {
+    setText("truthRiskScore", "--");
+    $("proofClassCounts").innerHTML = `<div class="empty-note">No truth inventory yet.</div>`;
+    $("trustNowList").innerHTML = `<div class="empty-note">Start or select a project to see evidence-backed trust boundaries.</div>`;
+    $("dontTrustList").innerHTML = `<div class="empty-note">No gap analysis yet.</div>`;
+    $("truthRows").innerHTML = "";
+    return;
+  }
+  const risky = (truth.do_not_trust_yet || []).length;
+  setText("truthRiskScore", String(risky));
+  $("proofClassCounts").innerHTML = Object.entries(truth.counts || {}).map(([key, value]) => `
+    <span class="truth-chip"><strong>${escapeHtml(value)}</strong>${escapeHtml(key)}</span>
+  `).join("") || `<div class="empty-note">No proof classes counted.</div>`;
+  $("trustNowList").innerHTML = renderTruthStack(truth.trust_now || [], "No evidence-backed trusted items yet.");
+  $("dontTrustList").innerHTML = renderTruthStack(truth.do_not_trust_yet || [], "No gaps or boundaries listed.");
+  $("truthRows").innerHTML = (truth.truth_rows || []).map((row) => `
+    <article class="truth-row">
+      <div>
+        <div class="proof-class">${escapeHtml(row.proof_class)}</div>
+        <small>${escapeHtml(row.layer)} | ${escapeHtml(row.status)}</small>
+      </div>
+      <div>
+        <strong>${escapeHtml(row.claim)}</strong>
+        <span>${escapeHtml(row.trust_boundary || "")}</span>
+        <small>${(row.evidence || []).map(escapeHtml).join(" | ") || "No evidence path."}</small>
+      </div>
+    </article>
+  `).join("");
+}
+
+function renderTruthStack(rows, empty) {
+  return rows.length ? rows.map((row) => `
+    <div class="stack-item">
+      <strong>${escapeHtml(row.layer)} | ${escapeHtml(row.proof_class)}</strong>
+      <span>${escapeHtml(row.claim)}</span>
+    </div>
+  `).join("") : `<div class="empty-note">${escapeHtml(empty)}</div>`;
 }
 
 function renderFactoryExecution() {
