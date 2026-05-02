@@ -23,7 +23,8 @@ Quality and assurance are the optimization goal. Token use remains visible for c
 ## Workflow
 
 1. If reviewing a governed artifact, select its artifact-specific 3-critic panel from `references/artifact-critic-panel-matrix.md`; do not use a generic default panel.
-2. Load the artifact-specific rubric from `references/artifact-rubric-library/index.json`; every catalog artifact has 18 artifact-level checks plus 15 checks for each of its 3 critic seats.
+2. If the review is a recovery or goal-achievement review, first validate the truth inventory: each claim must have a proof class, evidence path, gate status, overclaim risk, and trust boundary. Reject reviews that inspect only the newest patch while ignoring missing upstream requirements.
+3. Load the artifact-specific rubric from `references/artifact-rubric-library/index.json`; every catalog artifact has 18 artifact-level checks plus 15 checks for each of its 3 critic seats.
 3. Create an Artifact Review Panel Record using `assets/templates/artifact-review-panel-record.json`.
 4. Add at least 2 adversarial critics to the artifact review panel: Anti-Slop Red Team and Failure-Mode/Reality Critic. Add more if risk demands it.
 5. Create an Artifact RALPH Loop Record using `assets/templates/artifact-ralph-loop-record.json`.
@@ -114,6 +115,9 @@ This default is a fallback only for non-catalog work. Any artifact listed in the
 - Artifact review records that score only generic role rubrics and skip the 18 artifact-level checks.
 - Critic-seat reviews that do not score exactly the 15 checks defined for that artifact's critic seat.
 - Any pass before 5 RALPH loops.
+- Any recovery or goal-achievement pass without a brutal truth inventory, overclaim register, trust boundary, concrete recovery batch plan, and evidence-backed status labels.
+- Any RALPH loop that merely restates the same claim without finding, fixing, or explicitly certifying a concrete check with evidence.
+- Any `achieved`, `complete`, `certified`, `ready`, or `world-class` wording that is not tied to a passing evidence row.
 - Any pass where token savings are cited as a reason to reduce review depth.
 - Any pass where adversarial critics have not explicitly stood down.
 - Any pass where an accepted workflow step has unmet predecessors, missing next step, missing judge/jury verdict, or no closure rationale.

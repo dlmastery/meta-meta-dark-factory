@@ -75,6 +75,7 @@
 | `TB-20260429-024` | `accepted` | Update DFMS skills so serious runs default to full artifact saturation and cannot silently tailor down | Codex | `CG-NODE-FULL-ARTIFACT-SATURATION-GUARD-001` | `WL-FULL-ARTIFACT-SATURATION-GUARD-001` | `KG:TB-20260429-024` | live and workspace skill updates, artifact coverage matrix template, strict coverage validator | `GATE-FULL-ARTIFACT-SATURATION-GUARD-001:pass` | skill bundle pass, template library pass, validator compile pass, negative rejection of incomplete todo/habits coverage matrix confirmed | `RUN-CLOSED` | future serious runs require full saturation or explicit human-approved waivers |
 | `TB-20260501-025` | `accepted` | Add AG-UI, A2UI, and MCP Apps agent-centric workflow cockpit to the local DFMS control console | Codex | `CG-NODE-AGENT-PROTOCOL-UX-001` | `WL-AGENT-PROTOCOL-UX-001` | `KG:TB-20260501-025` | protocol profile, run event ledger, A2UI surface descriptors, MCP Apps manifest, ask/resteer panel, protocol tests | `GATE-AGENT-PROTOCOL-UX-001:pass` | official protocol source check, server and client syntax pass, unit regression pass, Playwright workflow pass, public repo sync planned | `RUN-CLOSED` | local agent-centric protocol cockpit boundary complete |
 | `TB-20260502-026` | `accepted` | Add goal-specific RALPH-10 certification gate for the agent-centric protocol workflow | Codex | `CG-NODE-GOAL-RALPH10-AGENT-WORKFLOW-001` | `WL-GOAL-RALPH10-AGENT-WORKFLOW-001` | `KG:TB-20260502-026` | goal audit endpoint, UI control, tests, live browser-smoke goal record | `GATE-GOAL-RALPH10-AGENT-WORKFLOW-001:pass` | 10 goal loops passed with 0 P1 and 0 P2 on live run; unit and browser regressions pass; task ledger validates | `RUN-CLOSED` | bounded local agent-centric protocol workflow goal achieved |
+| `TB-20260502-027` | `accepted` | Add Recovery Truth Mode to DFMS skills and create the first recovery truth ledger | Codex | `CG-NODE-RECOVERY-TRUTH-MODE-001` | `WL-RECOVERY-TRUTH-MODE-001` | `KG:TB-20260502-027` | live/workspace skill updates, `64-recovery-truth-ledger-and-execution-plan.md`, recovery truth JSON record | `GATE-RECOVERY-TRUTH-MODE-001:pass` | skill bundle validation pass, task ledger validation pass, truth ledger created with proof classes and recovery batches | `RB-02` | recovery mode installed; next batch is console truth-inventory view |
 
 ## Deferred And Retired Beads
 
@@ -707,6 +708,30 @@
 - Re-entry trigger: Any future code change to protocol state, stage execution, change control, or browser workflow must rerun goal RALPH-10.
 - Residual risk: Hosted multi-user auth/RBAC, durable database queue, and remote packaged MCP server remain future product-platform work, not part of this bounded local goal pass.
 
+### `TB-20260502-027`
+
+- Objective: Add Recovery Truth Mode to DFMS skills and create the first recovery truth ledger.
+- Scope boundary: Process correction, truth inventory, and first recovery batch plan; not generation of all missing product artifacts.
+- Source intent: User said the system kept behaving like lazy AI slop, overclaiming, optimizing token generation, and not doing the requested outsourcing-grade factory work; user asked to update meta-factory skills and start tackling the missing work step by step.
+- Requirement links: no AI slop, no premature victory language, truth ledger before more construction, scaffold-versus-proof separation, exact batches, artifact inventory, no token optimization as a quality excuse.
+- Interrogation answer links: current user message in this thread.
+- Control graph node: `CG-NODE-RECOVERY-TRUTH-MODE-001`
+- Work-ledger item: `WL-RECOVERY-TRUTH-MODE-001`
+- Knowledge-graph node: `KG:TB-20260502-027`
+- Inputs: user frustration prompt, existing installed skills, workspace skill bundle, current todo/habits artifact coverage matrix, control-console state.
+- Outputs: updated `df-meta-attractor`, `dark-factory-orchestrator`, `df-artifact-factory`, `df-dashboard-control`, and `df-quality-refinery` skills; `64-recovery-truth-ledger-and-execution-plan.md`; `records/dfms-recovery-truth-ledger.json`.
+- Acceptance gate: Recovery/frustration context forces truth inventory, overclaim register, trust boundary, proof-class labels, and exact recovery batches before new completion claims; validators pass.
+- Evidence required: installed skill updates, workspace skill updates, truth ledger artifacts, skill bundle validation, task ledger validation.
+- Evidence provided: skill bundle validation passed; task ledger validation passed; truth ledger records original intent, produced reality, overclaims, trust boundary, and recovery batches.
+- Primary critics: Recovery Truth Auditor, Artifact Saturation Skeptic, User Trust Rebuild Lead.
+- Adversarial critics: Dashboard-As-Completion Critic, RALPH-Theater Critic, Token-Optimization Excuse Critic.
+- RALPH loops: Focused recovery pass on skill behavior and proof-class separation; future batches require their own artifact-specific RALPH.
+- Token SWAG: low for recovery mode and inventory; medium for console truth-inventory view; high for missing artifact generation.
+- Approval state: user explicitly requested skill update and step-by-step recovery.
+- Next bead: `RB-02`
+- Re-entry trigger: Any future frustration, overclaim allegation, missing-artifact complaint, or goal-achievement question.
+- Residual risk: Recovery Truth Mode now governs future behavior, but the actual missing artifacts and hosted runtime still need separate batches.
+
 ## Open Approvals
 
 | Approval ID | Bead ID | Approver | Decision Needed | Token/Scope Impact | Due | State |
@@ -814,6 +839,8 @@
 | `VAL-20260502-090` | `npm test` | goal RALPH-10 backend regression | pass | unit test proves goal audit runs 10 loops and passes after agent interrogation and change-control proof | keep as API regression |
 | `VAL-20260502-091` | `npm run test:browser` | goal RALPH-10 browser workflow | pass | browser created run, asked agent, executed pipeline, opened change request, ran goal audit, and saw `Goal achieved: yes` | keep as WYSIWYG regression |
 | `VAL-20260502-092` | live protocol and goal smoke | `http://127.0.0.1:4187` latest browser-smoke run | pass | latest run has `goal_achievement.status=pass`, `achieved=true`, 0 P1, 0 P2, 61 AG-UI events, 5 A2UI surfaces, and 5 MCP-style tools | rerun after server restart or workflow changes |
+| `VAL-20260502-093` | `validate_skill_bundle.py` | `codex-skills` after Recovery Truth Mode skill updates | pass | workspace skill bundle remains structurally valid after recovery mode rules | rerun after skill edits |
+| `VAL-20260502-094` | `validate_tasks_md.py` | `dark-factory-meta-skills-design/TASKS.md` after recovery truth bead update | pass | strict bead ledger validation completed after adding `TB-20260502-027` | maintain on every governed update |
 
 ## Change Log
 
@@ -847,3 +874,4 @@
 | 2026-04-29 | Codex | `TB-20260429-024` | Hardened DFMS skills to default serious runs to full artifact saturation and require explicit human-approved tailoring waivers | User rejected lazy assumptions and asked to update instructions and skills | skill bundle pass, template library pass, validator compile pass, negative rejection check |
 | 2026-05-01 | Codex | `TB-20260501-025` | Added AG-UI, A2UI, and MCP Apps protocol-aware agent workflow cockpit to the local control console | User requested an agent-centric UX for greenfield and brownfield DFMS runs with step reports, interrogation, and resteer | source check, syntax checks, unit regression, Playwright workflow pass |
 | 2026-05-02 | Codex | `TB-20260502-026` | Added goal-specific RALPH-10 gate and achieved the bounded local agent-centric workflow goal | User requested ten RALPH loops until goal achieved | goal audit endpoint, UI button, unit/browser regressions, live goal pass |
+| 2026-05-02 | Codex | `TB-20260502-027` | Added Recovery Truth Mode and first truth ledger | User demanded an end to slop, overclaiming, token-optimized shortcuts, and scaffold-as-success behavior | installed/workspace skill updates, truth ledger doc, JSON record, validators pass |

@@ -19,8 +19,9 @@ Produce a living project book of knowledge, not document filler. Every artifact 
 ## Workflow
 
 1. Identify artifact type, lifecycle stage, control graph node, and work-ledger item.
-2. Read `references/artifact-catalog.md` for required content and reviewers.
-3. Create or update an Artifact Catalog Coverage Matrix using `assets/templates/artifact-coverage-matrix.json`. It must enumerate every catalog ID before artifacts are generated and again before closure.
+2. If the run is in recovery, frustration, missed-artifact, or overclaim-correction mode, create the Artifact Truth Inventory before drafting new artifacts. It must list every expected artifact, current path, proof class, status, evidence path, reviewer/gate status, downstream dependencies, and whether the item is real, partial, combined, template-only, descriptor-only, missing, blocked, or waived.
+3. Read `references/artifact-catalog.md` for required content and reviewers.
+4. Create or update an Artifact Catalog Coverage Matrix using `assets/templates/artifact-coverage-matrix.json`. It must enumerate every catalog ID before artifacts are generated and again before closure.
 4. Default serious, outsourcing-grade, standards-based, "world's best", "full", certification, all-artifact, or recovery work to `full_saturation`. In this mode, generate every catalog artifact as a standalone artifact unless the human approves an explicit not-applicable justification artifact. Do not infer a smaller set from project size.
 5. Read `references/artifact-tailoring.md` only to document explicit human-approved tailoring. Tailoring cannot be silent; it requires waiver owner, rationale, scope, expiry/revalidation trigger, residual risk, and Hawkeye review.
 6. For catalog artifacts, require an artifact-specific critic panel from `df-quality-refinery/references/artifact-critic-panel-matrix.md`; the old reviewer list is only the starting hint, not the final panel.
@@ -39,6 +40,9 @@ Produce a living project book of knowledge, not document filler. Every artifact 
 - Prefer compact, dense, operationally useful artifacts over long generic documents.
 - Treat each artifact as a consulting deliverable that must support a client decision, a delivery decision, or an assurance decision; length alone is never evidence of rigor.
 - Do not be lazy or make quiet scope assumptions. Serious DFMS runs generate the full catalog by default and ask for explicit waivers only where the human approves a smaller boundary.
+- Do not produce an artifact roadmap and imply the artifacts exist. Roadmaps, templates, indexes, and matrices are control artifacts; each product artifact still needs its own instantiated file or explicit waiver.
+- Do not call a combined section a standalone artifact unless the coverage matrix marks it as `combined` and names the exact section-level trace, residual risk, and approval owner.
+- Do not let sample or fake realistic scenarios pass as product evidence. Samples are examples for how to fill a template, not evidence for the actual product.
 - The artifact coverage matrix is a gate, not a nice-to-have. If any catalog ID is missing from the matrix, or any required item is `missing`, `partial`, `combined` without approved section-level trace, or silently deferred, the artifact set is not complete.
 - Every artifact must include an artifact passport, source-of-truth ledger, scoped decision brief, artifact-specific body, verification model, trace model, risk/assumption controls, human-agent handoff, and quality gate package.
 - Include alternatives and rationale for design artifacts.

@@ -19,8 +19,9 @@ Coordinate a full dark-factory run while keeping context lean. Select the right 
 ## Start Here
 
 1. Decide whether this is a tiny non-factory task or a governed DFMS run.
-2. If governed, require `df-meta-attractor` first and attach an Attractor Run Record, or record an explicit waiver with owner, rationale, expiry, and residual risk.
-3. If governed, require an approved engagement governance record from `df-governance-mayor` or explicit waiver before material token spend: client owner, delivery owner, rough token SWAG, iteration checkpoint, change-control policy, and reapproval trigger.
+2. If the human expresses frustration, says artifacts are missing, accuses the run of slop/lying/overclaiming, or asks whether goals are achieved, enter Recovery Truth Mode: create a brutal truth inventory, overclaim register, trust boundary, and recovery batch plan before any new pass/certificate/goal-achieved claim.
+3. If governed, require `df-meta-attractor` first and attach an Attractor Run Record, or record an explicit waiver with owner, rationale, expiry, and residual risk.
+4. If governed, require an approved engagement governance record from `df-governance-mayor` or explicit waiver before material token spend: client owner, delivery owner, rough token SWAG, iteration checkpoint, change-control policy, and reapproval trigger.
 4. If governed, require a knowledge graph seed and a strict `TASKS.md` bead ledger, or record an explicit waiver with owner, rationale, expiry, and residual risk.
 5. If governed, require a TPM flow ledger and PERT dependency plan; the active/next work must be selected from those records.
 6. If governed, require an AI judge/jury transition record for material state movement, unless the transition is a boundary-human approval item.
@@ -62,6 +63,9 @@ Coordinate a full dark-factory run while keeping context lean. Select the right 
 ## Operating Rules
 
 - Do not claim zero mistakes. Build a zero-defect posture through redundant review, evidence, and residual-risk records.
+- Do not optimize for comforting the user with success language. In recovery or frustration contexts, report only evidence-backed states: `achieved`, `partially achieved`, `scaffolded only`, `descriptor only`, `template only`, `missing`, `blocked`, or `waived`.
+- Do not create more dashboards, validators, RALPH records, or certificates as a substitute for missing artifacts, code, tests, or runtime behavior. They may expose or govern missing work; they do not close it.
+- Do not proceed from a recovery audit to implementation until the next batch names exact files, exact artifacts, exact tests, exact acceptance gate, rough token SWAG, and whether human approval is required.
 - Do not run a governed DFMS task without an Attractor Run Record or explicit waiver.
 - Do not start material governed work without approved engagement governance: scope baseline, rough token SWAG, iteration checkpoint, and change-control policy.
 - Do not start material governed work without a task bead in `TASKS.md` and a corresponding knowledge graph node.

@@ -1,0 +1,122 @@
+{
+  "zero_slop_policy": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+  "record_type": "dfms_recovery_truth_ledger",
+  "record_id": "DFMS-RECOVERY-TRUTH-20260502-001",
+  "created_at": "2026-05-02",
+  "trigger": "Human explicitly complained about AI slop, lazy token optimization, overclaiming, and missing artifacts.",
+  "proof_classes": [
+    "working_implementation",
+    "working_implementation_local",
+    "instantiated_artifact",
+    "validated_evidence",
+    "scaffold_only",
+    "template_only",
+    "descriptor_only",
+    "partial",
+    "missing",
+    "blocked",
+    "waived"
+  ],
+  "truth_rows": [
+    {
+      "id": "TRUTH-001",
+      "layer": "meta_meta_system",
+      "claim": "Generate project-tailored factory meta-skills from broad SDLC project domains.",
+      "proof_class": "partial",
+      "status": "partially_achieved",
+      "evidence": [
+        "codex-skills/df-meta-attractor/SKILL.md",
+        "codex-skills/dark-factory-orchestrator/SKILL.md",
+        "dark-factory-meta-skills-design/records/generated-meta-skill-contract-dfms-20260425.json"
+      ],
+      "not_trust_yet": "A fully automated generator runtime that produces and installs complete product-specific factories without Codex mediation."
+    },
+    {
+      "id": "TRUTH-002",
+      "layer": "agent_centric_ux",
+      "claim": "Human can start a project, interrogate the agent anytime, see stage reports, and resteer through change control.",
+      "proof_class": "working_implementation_local",
+      "status": "achieved_for_bounded_local_console",
+      "evidence": [
+        "dark-factory-control-console/server.js",
+        "dark-factory-control-console/public/index.html",
+        "dark-factory-control-console/tests/browser-console.test.cjs",
+        "dark-factory-control-console/runs/*/records/goal-achievement-ralph-10-audit.json"
+      ],
+      "not_trust_yet": "Hosted multi-user workflow with auth, RBAC, durable storage, and remote agent runtime."
+    },
+    {
+      "id": "TRUTH-003",
+      "layer": "protocol_integration",
+      "claim": "Use AG-UI, A2UI, and MCP Apps.",
+      "proof_class": "descriptor_only",
+      "status": "local_protocol_aware_descriptors_exist",
+      "evidence": [
+        "dark-factory-control-console/server.js",
+        "dark-factory-control-console/README.md"
+      ],
+      "not_trust_yet": "A packaged remote MCP Apps server or official SDK-level conformance suite."
+    },
+    {
+      "id": "TRUTH-004",
+      "layer": "todo_habits_product_execution",
+      "claim": "Todo/habits demonstrator has full SDLC artifact saturation.",
+      "proof_class": "partial",
+      "status": "not_achieved",
+      "evidence": [
+        "example/worlds-best-todo-habits-app/project-book/records/artifact-catalog-coverage-matrix.json",
+        "example/worlds-best-todo-habits-app/project-book/18-ralph-20-artifact-completeness-audit.md"
+      ],
+      "not_trust_yet": "Full standalone catalog completion; current matrix says full_saturation_status is fail."
+    },
+    {
+      "id": "TRUTH-005",
+      "layer": "outsourcing_replacement_platform",
+      "claim": "Replace a human outsourcing SDLC company end to end.",
+      "proof_class": "scaffold_only",
+      "status": "not_achieved",
+      "evidence": [
+        "dark-factory-meta-skills-design/54-company-whitepaper-dark-factory-adoption.md",
+        "dark-factory-control-console/"
+      ],
+      "not_trust_yet": "Enterprise runtime, staff-like operating model, multi-project governance, production operations, contracts, security, and support."
+    }
+  ],
+  "recovery_batches": [
+    {
+      "id": "RB-00",
+      "objective": "Install Recovery Truth Mode into skills.",
+      "status": "done_this_batch",
+      "token_swag": "low",
+      "human_approval": "already_requested"
+    },
+    {
+      "id": "RB-01",
+      "objective": "Create truth ledger and machine-readable matrix.",
+      "status": "done_this_batch",
+      "token_swag": "low",
+      "human_approval": "already_requested"
+    },
+    {
+      "id": "RB-02",
+      "objective": "Add console truth-inventory view and API so every run shows proof class and missing work.",
+      "status": "next",
+      "token_swag": "medium",
+      "human_approval": "within_current_recovery_request"
+    },
+    {
+      "id": "RB-03",
+      "objective": "Generate missing high-priority standalone todo/habits artifacts.",
+      "status": "requires_approval",
+      "token_swag": "high",
+      "human_approval": "required"
+    }
+  ],
+  "overclaim_rules": [
+    "Do not say achieved unless a row has evidence and a pass gate.",
+    "Do not call dashboards or validators completion.",
+    "Do not call protocol descriptors a remote protocol implementation.",
+    "Do not call todo/habits full-saturation complete until the coverage matrix passes full saturation.",
+    "Do not call samples or templates product evidence."
+  ]
+}

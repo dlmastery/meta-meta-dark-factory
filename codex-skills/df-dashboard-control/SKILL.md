@@ -17,10 +17,13 @@ Make the project book inspectable and redoable. A human owner must be able to se
 
 This skill complements the Human Review and Onboarding Portal. The portal helps humans read the project; this skill adds control-plane behavior: artifact graph, dependency closure, redo request, change-impact report, and next legal redo bead.
 
+Dashboard-control is not completion. A dashboard may prove visibility, dependency knowledge, and redo control; it does not prove that missing artifacts, missing tests, missing implementation, or missing production readiness have been produced.
+
 ## Workflow
 
 1. Load the active project-book root, `TASKS.md`, knowledge graph, control graph, trace records, portal index, artifact BOM, quality certificates, and evidence folders when present.
-2. Build or refresh an Artifact Dashboard Index using `assets/templates/artifact-dashboard-index.json`.
+2. In recovery or overclaim-correction mode, build a truth inventory view that marks every node as `working_implementation`, `instantiated_artifact`, `validated_evidence`, `scaffold_only`, `template_only`, `descriptor_only`, `partial`, `missing`, `blocked`, or `waived`; do not let dashboard presence imply artifact completion.
+3. Build or refresh an Artifact Dashboard Index using `assets/templates/artifact-dashboard-index.json`.
 3. Build typed artifact nodes for Markdown docs, structured records, tests, evidence, diagrams, certificates, gates, source files, and tasks.
 4. Build typed edges from explicit graph/trace records first; infer additional edges from stable path references, artifact IDs, requirement IDs, gate IDs, certificate IDs, task beads, and evidence paths.
 5. Render or update the dashboard view if requested. The dashboard must show artifacts by lifecycle stage, status, owner, evidence, gate, and next action.

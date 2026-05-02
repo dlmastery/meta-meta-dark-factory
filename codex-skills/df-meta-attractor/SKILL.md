@@ -27,12 +27,30 @@ The attractor is not a worker. It is the shape that workers fall into.
 - The output is a governed run definition that can be instantiated for any greenfield or brownfield project without copying assumptions from a benchmark app.
 - The best-of-all merge absorbs useful patterns from Attractor, Fabro, Gas Town, Octopus-style DevOps, traceability platforms, and business rollout playbooks without cloning their products or weakening DFMS governance.
 
+## Recovery Truth Mode
+
+Use Recovery Truth Mode whenever the human expresses frustration, accuses DFMS/Codex of slop, says artifacts are missing, says the system is lying or overclaiming, asks whether goals are achieved, or asks to recover from a prior incomplete factory run.
+
+In Recovery Truth Mode, the first material output is a brutal truth inventory before any new dashboard, certificate, pitch, artifact expansion, or implementation claim:
+
+- Original intent map: what the human asked for, separated into meta-meta system, generated meta-skill, product execution, runtime/UX, artifact saturation, quality gates, and production readiness.
+- Produced reality map: what files, records, code, tests, portals, and public commits actually exist.
+- Proof class for every item: `working_implementation`, `instantiated_artifact`, `validated_evidence`, `scaffold_only`, `template_only`, `descriptor_only`, `partial`, `missing`, `blocked`, or `waived`.
+- Overclaim register: every place prior work may have implied completion without full evidence.
+- Trust boundary: what the human should trust now, what they should not trust yet, and what requires a new approval or token SWAG.
+- Recovery batches: exact next batches with files, artifacts, tests, gates, token cost, and human approval state.
+
+Do not use the words `achieved`, `complete`, `certified`, `ready`, or `world-class` in Recovery Truth Mode unless the matching inventory row has evidence and a pass gate. Prefer `partially achieved`, `scaffolded only`, `descriptor only`, `missing`, `blocked`, or `requires human approval`.
+
+Recovery Truth Mode is not a pause for more prose. After the truth inventory, start the smallest approved batch that closes the highest-risk truth gap.
+
 ## Quick Workflow
 
 1. Form the requirement field from all available signals: user messages, transcripts, artifacts, current repo state, constraints, standards, reviews, and lessons.
 2. Separate durable intent from example workload. Mark each item as product-specific, factory-evaluation-specific, policy, constraint, risk, or open question.
 3. Detect attractor tensions: ambition versus scope, rigor versus speed, automation versus human ownership, current task versus reusable process, confidence versus evidence.
-4. Select the operating mode: design the factory, run a project, repair a process gap, recover context, or update skills.
+4. If Recovery Truth Mode is triggered, produce the brutal truth inventory, overclaim register, trust boundary, and recovery batch plan before any new pass/certificate/goal-achieved claim.
+5. Select the operating mode: design the factory, run a project, repair a process gap, recover context, or update skills.
 5. Produce a node contract with `what`, `why`, `how`, `where`, `when`, `who`, and `how_good`.
 6. Route to child dark-factory skills using `references/skill-routing-map.md`.
 7. Require three elite expert personas for material choices: System Theorist and Meta-Architecture Critic, Requirements and Governance Architect, and Verification/Safety or Standards/Audit Critic; add Engagement Partner when scope, token budget, iteration, or client confidence is material.
@@ -166,6 +184,9 @@ For a skill-system revision, also produce:
 ## Guardrails
 
 - Do not claim literal zero mistakes. Convert zero-mistake ambition into repeatable gates, evidence, residual-risk records, and human approvals.
+- Do not answer frustration with more scaffolding. If the human is calling out slop, lying, missing artifacts, overclaiming, or lazy token optimization, enter Recovery Truth Mode and produce the truth inventory before further construction.
+- Do not hide behind dashboards, RALPH labels, or validators. A dashboard that points at missing work is useful evidence, not completion; a RALPH loop that changes nothing is theater; a structural validator is not semantic expert review.
+- Do not blur proof classes. Clearly distinguish implementation, instantiated artifact, validated evidence, scaffold, template, descriptor, partial work, missing work, blocked work, and waived work.
 - Do not overfit the factory to the current example app.
 - Do not silently tailor down the artifact set. For serious, outsourcing-grade, standards-based, "world's best", "full", certification, all-artifact, or recovery work, default to full artifact saturation. Tailoring is a change-control decision, not an agent assumption: it requires explicit human approval, a catalog coverage matrix, waiver records, residual-risk acceptance, and Hawkeye review.
 - Do not claim completion when any required catalog artifact is `missing`, `partial`, `combined` without approved section-level trace, or `deferred` without owner-approved change control. In `full_saturation`, `combined`, `partial`, `missing`, and silent `deferred` statuses block closure.
