@@ -22,10 +22,16 @@ function main() {
   assert(packet.agent_protocols.agui, "invocation packet should expose AG-UI protocol contract");
   assert(packet.agent_protocols.a2ui, "invocation packet should expose A2UI protocol contract");
   assert(packet.agent_protocols.mcp_apps, "invocation packet should expose MCP Apps protocol contract");
+  assert(packet.agentic_ui_contract.required_surfaces.includes("human-interrupt-inbox"), "agentic UI contract should require human interrupts");
+  assert(packet.agentic_ui_contract.required_surfaces.includes("spec-graph-impact-explorer"), "agentic UI contract should require Spec Graph impact");
+  assert(packet.spec_graph_layer.node_identity_format, "invocation packet should carry Spec Graph identity rules");
 
   const run = consoleApp.createRun({
     projectName: "Console Test",
     projectType: "greenfield",
+    scenarioMode: "greenfield-product",
+    templateId: "agentic-sdlc-factory",
+    providerQuorum: "three-provider-merge",
     tokenBand: "medium",
     intent: "Build a governed product with UI, API, tests, artifacts, dashboard, redo closure, and production handoff."
   });
@@ -34,7 +40,19 @@ function main() {
   assert(run.agui_events.some((event) => event.type === "RUN_STARTED"), "new runs should start an AG-UI event stream");
   const initialProtocol = consoleApp.buildProtocolState(run.run_id);
   assert(initialProtocol.a2ui_surfaces.some((surface) => surface.surface_id === "current-stage-report"), "protocol state should expose A2UI stage report surface");
+  assert(initialProtocol.a2ui_surfaces.some((surface) => surface.surface_id === "human-interrupt-inbox"), "protocol state should expose a human interrupt inbox");
+  assert(initialProtocol.a2ui_surfaces.some((surface) => surface.surface_id === "spec-graph-impact-explorer"), "protocol state should expose Spec Graph impact");
   assert(initialProtocol.mcp_apps.tools.some((tool) => tool.name === "dfms.askAgent"), "protocol state should expose MCP Apps askAgent tool");
+  assert(initialProtocol.mcp_apps.tools.some((tool) => tool.name === "dfms.decideInterrupt"), "protocol state should expose MCP Apps decideInterrupt tool");
+  assert(initialProtocol.human_interrupts.some((item) => item.state === "pending"), "new runs should pause on the first human interrupt");
+
+  const interruptDecision = consoleApp.decideHumanInterrupt(run.run_id, {
+    interruptId: initialProtocol.human_interrupts[0].interrupt_id,
+    decision: "approve",
+    note: "Test owner approves scenario/template/provider quorum."
+  });
+  assert.strictEqual(interruptDecision.decision.decision, "approve", "human interrupt approval should be recorded");
+  assert(interruptDecision.run.agui_events.some((event) => event.type === "HUMAN_DECISION_RECORDED"), "interrupt decision should create AG-UI evidence");
 
   let advanced = consoleApp.invokeStage(run.run_id, "stage-00-meta-meta");
   assert(advanced.execution_outputs.some((record) => record.includes("meta-attractor-run-record.json")), "meta-meta execution should create an attractor record");

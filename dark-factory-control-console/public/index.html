@@ -66,6 +66,50 @@
         </div>
       </section>
 
+      <section class="band agentic-workbench" aria-labelledby="agentic-workbench-title">
+        <div class="section-head">
+          <div>
+            <h2 id="agentic-workbench-title">Agentic SDLC Workbench</h2>
+            <p>Scenario routing, provider quorum, human interrupts, foundation authoring, and Spec Graph impact are first-class controls.</p>
+          </div>
+          <div class="protocol-pills">
+            <span class="status-chip strong" id="scenarioStatus">Scenario: --</span>
+            <span class="status-chip accent" id="interruptStatus">Interrupts: --</span>
+            <span class="status-chip" id="specGraphStatus">Spec Graph: --</span>
+          </div>
+        </div>
+        <div class="workbench-layout">
+          <div>
+            <h3>Factory Scenario</h3>
+            <div id="scenarioCards" class="scenario-list"></div>
+          </div>
+          <div>
+            <h3>Project Templates</h3>
+            <div id="templateCatalog" class="template-table"></div>
+          </div>
+        </div>
+        <div class="workbench-layout lower">
+          <div>
+            <h3>Provider Quorum</h3>
+            <div id="providerQuorumBoard" class="provider-board"></div>
+          </div>
+          <div>
+            <h3>Human Interrupt Inbox</h3>
+            <div id="humanInterrupts" class="interrupt-list"></div>
+          </div>
+        </div>
+        <div class="workbench-layout lower">
+          <div>
+            <h3>Foundation Authoring</h3>
+            <div id="foundationAuthoring" class="foundation-board"></div>
+          </div>
+          <div>
+            <h3>Spec Graph Impact</h3>
+            <div id="specGraphExplorer" class="spec-graph-panel"></div>
+          </div>
+        </div>
+      </section>
+
       <section class="band protocol-workbench" aria-labelledby="protocol-title">
         <div class="section-head">
           <div>
@@ -188,6 +232,37 @@
               <option value="brownfield">Brownfield</option>
               <option value="artifact-only">Artifact only</option>
               <option value="meta-skill-system">Meta-skill system</option>
+            </select>
+          </label>
+          <label>
+            <span>Factory scenario</span>
+            <select id="scenarioMode">
+              <option value="greenfield-product">Build a new product</option>
+              <option value="brownfield-modernization">Modernize existing system</option>
+              <option value="migration-impact">Migration impact</option>
+              <option value="document-existing">Document existing system</option>
+              <option value="regulatory-compliance">Regulatory compliance</option>
+              <option value="product-audit">Product audit</option>
+              <option value="competitor-analysis">Competitor analysis</option>
+            </select>
+          </label>
+          <label>
+            <span>Project template</span>
+            <select id="templateId">
+              <option value="agentic-sdlc-factory">Agentic SDLC Factory</option>
+              <option value="saas-starter">SaaS Starter</option>
+              <option value="marketplace">Two-Sided Marketplace</option>
+              <option value="healthcare">Healthcare Workflow</option>
+              <option value="education">EdTech Learning Platform</option>
+              <option value="brownfield-api">Brownfield API Modernization</option>
+            </select>
+          </label>
+          <label>
+            <span>Provider quorum</span>
+            <select id="providerQuorum">
+              <option value="three-provider-merge">Three-provider merge</option>
+              <option value="three-provider-critique">Three-provider critique</option>
+              <option value="single-provider-with-two-critics">Single provider with two critics</option>
             </select>
           </label>
           <label>

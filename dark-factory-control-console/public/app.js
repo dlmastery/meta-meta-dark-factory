@@ -143,6 +143,7 @@ function renderBootstrap() {
   renderSkills();
   renderProjectSelector();
   renderProjectList();
+  renderAgenticWorkbench();
   renderPacket(state.run?.invocation_packet || {});
 }
 
@@ -305,6 +306,9 @@ async function createRun() {
       body: JSON.stringify({
         projectName: $("projectName").value,
         projectType: $("projectType").value,
+        scenarioMode: $("scenarioMode").value,
+        templateId: $("templateId").value,
+        providerQuorum: $("providerQuorum").value,
         tokenBand: $("tokenBand").value,
         reapprovalTrigger: $("reapprovalTrigger").value,
         intent: $("intent").value
@@ -317,8 +321,38 @@ async function createRun() {
     renderRun();
     renderPortal();
     renderProtocol();
+    renderAgenticWorkbench();
   } catch (error) {
     showResult(error.message, true);
+  } finally {
+    setBusy(false);
+  }
+}
+
+async function decideInterrupt(interruptId, decision) {
+  if (!state.run) return showAgentResponse("Start or select a governed project first.", true);
+  setBusy(true);
+  try {
+    const result = await api(`/api/runs/${encodeURIComponent(state.run.run_id)}/interrupt`, {
+      method: "POST",
+      body: JSON.stringify({
+        interruptId,
+        decision,
+        note: `${decision} from agentic SDLC workbench`
+      })
+    });
+    state.run = result.run;
+    state.protocol = result.protocol;
+    await refreshBootstrap();
+    await refreshPortal(false);
+    await refreshTruth(false);
+    renderRun();
+    renderPortal();
+    renderProtocol();
+    renderAgenticWorkbench();
+    showAgentResponse(`Human interrupt ${decision}: ${result.decision.interrupt_id}`, false);
+  } catch (error) {
+    showAgentResponse(error.message, true);
   } finally {
     setBusy(false);
   }
@@ -547,6 +581,7 @@ function renderRun() {
     renderPacket({});
     renderProtocol();
     renderTruthInventory();
+    renderAgenticWorkbench();
     renderCommandCenter();
     return;
   }
@@ -565,6 +600,7 @@ function renderRun() {
   renderProjectList();
   renderProtocol();
   renderTruthInventory();
+  renderAgenticWorkbench();
   renderCommandCenter();
 }
 
@@ -627,6 +663,7 @@ function renderProtocol() {
     $("a2uiSurfaces").innerHTML = `<div class="empty-note">No A2UI surfaces yet.</div>`;
     $("mcpAppsList").innerHTML = `<div class="empty-note">No MCP Apps descriptors yet.</div>`;
     $("agentResponse").innerHTML = `<div class="empty-note">Ask the agent about the active stage, blockers, evidence, or a resteer.</div>`;
+    renderAgenticWorkbench();
     return;
   }
 
@@ -675,6 +712,116 @@ function renderProtocol() {
   const latest = protocol.recent_agent_messages?.[0];
   if (latest) {
     showAgentResponse(latest.response?.summary || "Agent response recorded.", false);
+  }
+  renderAgenticWorkbench();
+}
+
+function renderAgenticWorkbench() {
+  const bootstrap = state.bootstrap || {};
+  const protocol = state.protocol || {};
+  const contract = protocol.agentic_ui_contract || state.run?.agentic_ui_contract || {};
+  const templates = bootstrap.project_templates || [];
+  const selectedScenario = state.run?.scenario_mode || contract.scenario?.id || $("scenarioMode")?.value || "greenfield-product";
+  const selectedTemplate = state.run?.template_id || contract.template?.id || $("templateId")?.value || "agentic-sdlc-factory";
+  const providers = protocol.provider_quorum || state.run?.provider_quorum || bootstrap.provider_quorum || [];
+  const interrupts = protocol.human_interrupts || state.run?.human_interrupts || [];
+  const sections = protocol.foundation_sections || state.run?.foundation_sections || (bootstrap.foundation_sections || []).map((section, index) => ({
+    ...section,
+    status: index === 0 ? "ready" : "locked"
+  }));
+  const specGraph = protocol.spec_graph_layer || state.run?.spec_graph_layer || bootstrap.spec_graph_layer || {};
+
+  setText("scenarioStatus", `Scenario: ${selectedScenario}`);
+  setText("interruptStatus", `Interrupts: ${interrupts.filter((item) => item.state === "pending").length} pending`);
+  setText("specGraphStatus", `Spec Graph: ${(specGraph.nodes || []).length || "--"} nodes`);
+
+  const scenarioCards = $("scenarioCards");
+  if (scenarioCards) {
+    scenarioCards.innerHTML = (bootstrap.factory_scenarios || []).map((scenario) => `
+      <article class="scenario-card ${scenario.id === selectedScenario ? "selected" : ""}">
+        <span>${escapeHtml(scenario.route)}</span>
+        <strong>${escapeHtml(scenario.label)}</strong>
+        <small>${escapeHtml(scenario.description)}</small>
+      </article>
+    `).join("") || `<div class="empty-note">Scenario catalog not loaded.</div>`;
+  }
+
+  const templateCatalog = $("templateCatalog");
+  if (templateCatalog) {
+    templateCatalog.innerHTML = templates.length ? `
+      <div class="template-row template-head"><span>Template</span><span>Domain</span><span>Tier</span><span>Modules</span></div>
+      ${templates.map((template) => `
+        <div class="template-row ${template.id === selectedTemplate ? "selected" : ""}">
+          <strong>${escapeHtml(template.name)}</strong>
+          <span>${escapeHtml(template.domain)}</span>
+          <span>${escapeHtml(template.tier)}</span>
+          <span>${escapeHtml(template.modules)}</span>
+        </div>
+      `).join("")}
+    ` : `<div class="empty-note">Template catalog not loaded.</div>`;
+  }
+
+  const providerBoard = $("providerQuorumBoard");
+  if (providerBoard) {
+    providerBoard.innerHTML = providers.length ? providers.map((provider) => `
+      <article class="provider-card">
+        <span class="provider-dot"></span>
+        <div>
+          <strong>${escapeHtml(provider.label)}</strong>
+          <small>${escapeHtml(provider.role)} | ${escapeHtml(provider.status)} | ${escapeHtml(provider.latency_ms || "--")}ms</small>
+        </div>
+      </article>
+    `).join("") : `<div class="empty-note">Provider quorum not loaded.</div>`;
+  }
+
+  const interruptList = $("humanInterrupts");
+  if (interruptList) {
+    interruptList.innerHTML = interrupts.length ? interrupts.map((interrupt) => `
+      <article class="interrupt-card ${escapeAttr(interrupt.state)}">
+        <div>
+          <strong>${escapeHtml(interrupt.action)}</strong>
+          <span>${escapeHtml(interrupt.interrupt_id)} | ${escapeHtml(interrupt.state)}</span>
+          <small>${escapeHtml(interrupt.description || "")}</small>
+        </div>
+        ${interrupt.state === "pending" ? `
+          <div class="interrupt-actions">
+            <button class="button primary" data-interrupt-decision="approve" data-interrupt-id="${escapeAttr(interrupt.interrupt_id)}">Approve</button>
+            <button class="button secondary" data-interrupt-decision="edit" data-interrupt-id="${escapeAttr(interrupt.interrupt_id)}">Edit</button>
+            <button class="button secondary" data-interrupt-decision="reject" data-interrupt-id="${escapeAttr(interrupt.interrupt_id)}">Reject</button>
+          </div>
+        ` : ""}
+      </article>
+    `).join("") : `<div class="empty-note">No human interrupts yet.</div>`;
+    document.querySelectorAll("[data-interrupt-decision]").forEach((button) => {
+      button.addEventListener("click", () => decideInterrupt(button.dataset.interruptId, button.dataset.interruptDecision));
+    });
+  }
+
+  const foundation = $("foundationAuthoring");
+  if (foundation) {
+    foundation.innerHTML = sections.length ? sections.map((section, index) => `
+      <div class="foundation-row ${escapeAttr(section.status || "locked")}">
+        <span>${String(index + 1).padStart(2, "0")}</span>
+        <strong>${escapeHtml(section.title)}</strong>
+        <small>${escapeHtml(section.status || "locked")}${section.estimate_minutes ? ` | ~${escapeHtml(section.estimate_minutes)}m` : ""}</small>
+      </div>
+    `).join("") : `<div class="empty-note">Foundation sections not loaded.</div>`;
+  }
+
+  const explorer = $("specGraphExplorer");
+  if (explorer) {
+    const sample = (specGraph.impact_samples || [])[0];
+    explorer.innerHTML = `
+      <div class="spec-graph-rule">${escapeHtml(specGraph.node_identity_format || "No node identity format loaded.")}</div>
+      <div class="spec-graph-counts">
+        <span><strong>${escapeHtml((specGraph.nodes || []).length || 0)}</strong> nodes</span>
+        <span><strong>${escapeHtml((specGraph.edges || []).length || 0)}</strong> edges</span>
+      </div>
+      <div class="spec-impact">
+        <strong>${escapeHtml(sample?.change || "Change impact sample unavailable.")}</strong>
+        <small>${escapeHtml((sample?.required_actions || []).join(" | ") || specGraph.no_duplicate_path_rule || "")}</small>
+      </div>
+    `;
   }
 }
 

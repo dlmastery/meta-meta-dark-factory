@@ -144,6 +144,9 @@ const PROTOCOL_PROFILE = {
       "USER_MESSAGE",
       "USER_RESTEER_REQUESTED",
       "HUMAN_DECISION_REQUIRED",
+      "HUMAN_DECISION_RECORDED",
+      "PROVIDER_QUORUM_STARTED",
+      "SPEC_GRAPH_IMPACT_REQUESTED",
       "GATE_PASSED",
       "GATE_BLOCKED",
       "PIPELINE_EXECUTED",
@@ -161,7 +164,12 @@ const PROTOCOL_PROFILE = {
       "customer-interrogation",
       "change-control",
       "artifact-evidence-board",
-      "protocol-status"
+      "protocol-status",
+      "scenario-template-router",
+      "provider-quorum-board",
+      "foundation-authoring-workbench",
+      "human-interrupt-inbox",
+      "spec-graph-impact-explorer"
     ],
     contract: "The agent declares safe data-only UI surfaces that the console renders with local Material-style components."
   },
@@ -187,6 +195,90 @@ const PROOF_CLASSES = [
   "blocked",
   "waived"
 ];
+
+const AGENTIC_UI_RESEARCH_FINDINGS = [
+  {
+    source: "AG-UI",
+    principle: "Event-driven, bidirectional agent-to-user runtime",
+    implication: "Every stage, state delta, human message, interrupt, gate, and tool result must appear as a structured event, not hidden text."
+  },
+  {
+    source: "A2UI",
+    principle: "Agents declare UI as validated data, while the client renders native components",
+    implication: "DFMS agents must emit constrained surfaces such as stage reports, review cards, merge proposals, graph impacts, and approval requests."
+  },
+  {
+    source: "MCP Apps",
+    principle: "Tools can expose interactive UI resources with sandbox and permission boundaries",
+    implication: "Factory tools must declare resource URIs, input schemas, context resources, and human-consent boundaries."
+  },
+  {
+    source: "LangGraph HITL",
+    principle: "Human review uses interrupts that pause state and resume with approve, edit, or reject",
+    implication: "Sensitive DFMS transitions must create human interrupt cards before execution proceeds."
+  },
+  {
+    source: "Magentic-UI",
+    principle: "Human-agent systems need co-planning, co-tasking, multitasking, action guards, and long-term memory",
+    implication: "The console must expose planning, parallel agent work, action guards, memory/context, and recovery truth in one workbench."
+  }
+];
+
+const FACTORY_SCENARIOS = [
+  { id: "greenfield-product", label: "Build a new product", route: "greenfield", description: "Start from raw intent, interrogate, generate product-specific skills, then build/test/artifact the product." },
+  { id: "brownfield-modernization", label: "Modernize an existing system", route: "brownfield", description: "Ingest existing code/specs, recover architecture, map drift, then change safely." },
+  { id: "migration-impact", label: "Migrate to a new stack", route: "migration", description: "Use spec graph impact analysis to plan platform moves, dependency breaks, and transfer tests." },
+  { id: "document-existing", label: "Document what already exists", route: "documentation", description: "Reverse-engineer current behavior into traceable specs, diagrams, and handoff docs." },
+  { id: "regulatory-compliance", label: "Comply with a new regulation", route: "compliance", description: "Map clauses to requirements, evidence, risks, controls, tests, and waivers." },
+  { id: "product-audit", label: "Audit an existing product", route: "audit", description: "Run Hawkeye and critic panels over current artifacts, code, tests, and operations." },
+  { id: "competitor-analysis", label: "Analyze a competitor", route: "research", description: "Research external product behavior, synthesize gaps, and separate inspiration from requirements." }
+];
+
+const PROJECT_TEMPLATES = [
+  { id: "saas-starter", name: "SaaS Starter", domain: "SaaS", tier: "standard", modules: 7, tags: ["auth", "billing", "admin", "notifications"] },
+  { id: "marketplace", name: "Two-Sided Marketplace", domain: "Marketplace", tier: "standard", modules: 12, tags: ["listings", "reviews", "payments", "escrow"] },
+  { id: "healthcare", name: "Healthcare Workflow", domain: "Healthcare", tier: "enterprise", modules: 11, tags: ["privacy", "appointments", "records", "audit"] },
+  { id: "education", name: "EdTech Learning Platform", domain: "EdTech", tier: "standard", modules: 10, tags: ["courses", "assessment", "progress", "certificates"] },
+  { id: "brownfield-api", name: "Brownfield API Modernization", domain: "Backend", tier: "enterprise", modules: 9, tags: ["cir", "contracts", "drift", "migration"] },
+  { id: "agentic-sdlc-factory", name: "Agentic SDLC Factory", domain: "AI Tooling", tier: "enterprise", modules: 15, tags: ["agents", "graph", "evidence", "human-in-loop"] }
+];
+
+const PROVIDER_QUORUM = [
+  { id: "openai", label: "OpenAI", role: "planner_or_coder", status: "configured", latency_ms: 180, fallback_rank: 1 },
+  { id: "anthropic", label: "Claude", role: "critic_or_architect", status: "configured", latency_ms: 210, fallback_rank: 2 },
+  { id: "gemini", label: "Gemini", role: "research_or_multimodal", status: "configured", latency_ms: 240, fallback_rank: 3 },
+  { id: "local", label: "Local LLM", role: "privacy_preserving_reviewer", status: "available_when_configured", latency_ms: 0, fallback_rank: 4 }
+];
+
+const FOUNDATION_SECTIONS = [
+  { id: "product-brief", title: "Product Brief", estimate_minutes: 8, required: true },
+  { id: "user-personas", title: "User Personas", estimate_minutes: 6, required: true },
+  { id: "use-cases", title: "Use Cases", estimate_minutes: 10, required: true },
+  { id: "user-scenarios", title: "User Scenarios", estimate_minutes: 8, required: true },
+  { id: "user-journeys", title: "User Journeys", estimate_minutes: 8, required: true },
+  { id: "user-flows", title: "User Flows", estimate_minutes: 6, required: true },
+  { id: "business-workflows", title: "Business Workflows", estimate_minutes: 10, required: true },
+  { id: "functional-requirements", title: "Functional Requirements", estimate_minutes: 12, required: true },
+  { id: "system-constraints", title: "System Constraints", estimate_minutes: 6, required: true },
+  { id: "quality-attributes", title: "Quality Attributes", estimate_minutes: 8, required: true },
+  { id: "acceptance-and-tests", title: "Acceptance And Tests", estimate_minutes: 10, required: true }
+];
+
+const SPEC_GRAPH_LAYER = {
+  source_prd: "C:/Users/abhir/Downloads/SPEC-GRAPH-LAYER-PRD.md",
+  node_identity_format: "{kind}::{scope}::{local_id}[@{version}]",
+  v1_capabilities: [
+    "unified chunk identity",
+    "graph substrate",
+    "hybrid retrieval",
+    "brownfield ingestion",
+    "change impact engine",
+    "dependency explorer",
+    "code-spec sync dashboard"
+  ],
+  edge_taxonomy: ["derives_from", "depends_on", "implements", "tests", "invalidates", "supersedes", "owned_by", "evidenced_by"],
+  no_duplicate_path_rule: "Reuse CIR, xref, drift, schema, brownfield, dependency-graph, foundation, and project storage primitives before creating any parallel module."
+};
 
 function ensureDir(dir) {
   fs.mkdirSync(dir, { recursive: true });
@@ -299,9 +391,119 @@ function summarizeStages(nodes) {
   }, {});
 }
 
+function buildAgenticUiContract(input = {}) {
+  const scenarioInput = input.scenarioMode || input.scenario_mode;
+  const projectType = input.projectType || input.project_type;
+  const templateInput = input.templateId || input.template_id;
+  const scenario = FACTORY_SCENARIOS.find((item) => item.id === scenarioInput || item.route === projectType) || FACTORY_SCENARIOS[0];
+  const template = PROJECT_TEMPLATES.find((item) => item.id === templateInput) || PROJECT_TEMPLATES[PROJECT_TEMPLATES.length - 1];
+  return {
+    zero_slop_policy: ZERO_SLOP,
+    contract_type: "agentic_ai_centric_factory_ui_contract",
+    generated_at: nowIso(),
+    scenario,
+    template,
+    non_negotiables: [
+      "The UI is a control system for human intent, agent proposals, state, evidence, gates, interrupts, and redo impact.",
+      "Every agent-visible action has a durable event, resource, stage, owner, and approval posture.",
+      "Human approval, edit, reject, pause, takeover, and change-control paths must be available at material boundaries.",
+      "Provider quorum output is merged, reviewed, and confirmed; provider text is never treated as final proof.",
+      "Spec Graph identity and downstream impact must be visible before changing requirements, designs, tests, or code."
+    ],
+    required_surfaces: [
+      "scenario-template-router",
+      "provider-quorum-board",
+      "foundation-authoring-workbench",
+      "human-interrupt-inbox",
+      "spec-graph-impact-explorer",
+      ...PROTOCOL_PROFILE.a2ui.surfaces
+    ],
+    research_findings: AGENTIC_UI_RESEARCH_FINDINGS
+  };
+}
+
+function buildSpecGraphState(runLike = {}) {
+  const projectName = runLike.project_name || runLike.projectName || "project";
+  const scope = slug(projectName);
+  const nodes = [
+    { id: `intent::${scope}::raw-brief@v1`, kind: "intent", label: "Raw customer intent", status: "captured" },
+    { id: `question::${scope}::ANS-001@v1`, kind: "question", label: "Business outcome answer", status: "pending_or_answered" },
+    { id: `requirement::${scope}::FR-001@v1`, kind: "requirement", label: "Primary functional requirement", status: "to_be_decomposed" },
+    { id: `artifact::${scope}::PRD@v1`, kind: "artifact", label: "PRD / specification", status: "draftable" },
+    { id: `test::${scope}::E2E-001@v1`, kind: "test", label: "Scenario and browser evidence", status: "required" },
+    { id: `code::${scope}::implementation@v1`, kind: "code", label: "Future implementation", status: "blocked_until_design" }
+  ];
+  const edges = [
+    { source: nodes[0].id, target: nodes[1].id, type: "requires_answer" },
+    { source: nodes[1].id, target: nodes[2].id, type: "derives_from" },
+    { source: nodes[2].id, target: nodes[3].id, type: "documents" },
+    { source: nodes[2].id, target: nodes[4].id, type: "tests" },
+    { source: nodes[3].id, target: nodes[5].id, type: "constrains" }
+  ];
+  return {
+    zero_slop_policy: ZERO_SLOP,
+    source_prd: SPEC_GRAPH_LAYER.source_prd,
+    node_identity_format: SPEC_GRAPH_LAYER.node_identity_format,
+    v1_capabilities: SPEC_GRAPH_LAYER.v1_capabilities,
+    edge_taxonomy: SPEC_GRAPH_LAYER.edge_taxonomy,
+    no_duplicate_path_rule: SPEC_GRAPH_LAYER.no_duplicate_path_rule,
+    nodes,
+    edges,
+    impact_samples: [
+      {
+        change: "Change a confirmed use case or PRD paragraph",
+        upstream: [nodes[0].id, nodes[1].id],
+        downstream: [nodes[2].id, nodes[3].id, nodes[4].id, nodes[5].id],
+        required_actions: ["reopen requirement decomposition", "rerun critic panel", "rerun scenario/browser tests", "refresh dashboard redo closure"]
+      },
+      {
+        change: "Change a future implementation module",
+        upstream: [nodes[2].id, nodes[3].id],
+        downstream: [nodes[4].id],
+        required_actions: ["update code-spec trace", "rerun regression and WYSIWYG evidence", "record SRE impact if production-facing"]
+      }
+    ]
+  };
+}
+
+function createFoundationWorkboard() {
+  return FOUNDATION_SECTIONS.map((section, index) => ({
+    ...section,
+    status: index < 2 ? "confirmed" : index === 2 ? "ready_for_provider_quorum" : "locked",
+    provider_mode: index === 2 ? "parallel_three_provider_draft_merge_confirm" : "not_started",
+    required_human_action: index === 2 ? "Review merged draft, refine if needed, then confirm section." : ""
+  }));
+}
+
+function createHumanInterrupts(input = {}) {
+  const scenario = FACTORY_SCENARIOS.find((item) => item.id === input.scenarioMode || item.route === input.projectType) || FACTORY_SCENARIOS[0];
+  const template = PROJECT_TEMPLATES.find((item) => item.id === input.templateId) || PROJECT_TEMPLATES[PROJECT_TEMPLATES.length - 1];
+  return [
+    {
+      zero_slop_policy: ZERO_SLOP,
+      interrupt_id: `HITL-${Date.now()}-scenario-template-approval`,
+      stage_id: STAGES[0].id,
+      state: "pending",
+      action: "approve_factory_scenario_and_template",
+      description: "Approve, edit, reject, or escalate the selected scenario/template before downstream factory execution.",
+      proposed_action: {
+        scenario_id: scenario.id,
+        scenario_label: scenario.label,
+        template_id: template.id,
+        template_name: template.name,
+        provider_quorum_mode: String(input.providerQuorum || "three-provider-merge")
+      },
+      allowed_decisions: ["approve", "edit", "reject", "escalate"],
+      approval_owner: String(input.approvalOwner || "human-owner"),
+      created_at: nowIso()
+    }
+  ];
+}
+
 function createRun(input) {
   ensureDir(RUNS);
   const id = `DFRUN-UI-${new Date().toISOString().replace(/[-:TZ.]/g, "").slice(0, 14)}-${slug(input.projectName || "project")}`;
+  const agenticUiContract = buildAgenticUiContract(input);
   const run = {
     zero_slop_policy: ZERO_SLOP,
     run_id: id,
@@ -312,6 +514,9 @@ function createRun(input) {
     intent: String(input.intent || "").trim(),
     project_name: String(input.projectName || "Untitled governed project").trim(),
     project_type: String(input.projectType || "greenfield").trim(),
+    scenario_mode: String(input.scenarioMode || agenticUiContract.scenario.id),
+    template_id: String(input.templateId || agenticUiContract.template.id),
+    provider_quorum_mode: String(input.providerQuorum || "three-provider-merge"),
     project_book: input.projectBook || DEFAULT_PROJECT_BOOK,
     token_swag: {
       band: String(input.tokenBand || "medium"),
@@ -328,9 +533,14 @@ function createRun(input) {
     interrogation: scoreInterrogation({}),
     invocation_packet: buildInvocationPacket(input, {}),
     generated_meta_skill: null,
+    agentic_ui_contract: agenticUiContract,
+    provider_quorum: PROVIDER_QUORUM,
+    foundation_sections: createFoundationWorkboard(),
+    spec_graph_layer: buildSpecGraphState(input),
     execution_outputs: [],
     change_requests: [],
     human_decisions: [],
+    human_interrupts: createHumanInterrupts(input),
     agent_messages: [],
     agui_events: [],
     project_collection: {
@@ -347,10 +557,13 @@ function createRun(input) {
       }
     ]
   };
+  run.invocation_packet = buildInvocationPacket(run, {});
   appendAguiEvent(run, "RUN_STARTED", {
     actor: "human-owner",
     project_name: run.project_name,
     project_type: run.project_type,
+    scenario_mode: run.scenario_mode,
+    template_id: run.template_id,
     token_swag: run.token_swag,
     zero_slop_policy: ZERO_SLOP
   });
@@ -359,6 +572,13 @@ function createRun(input) {
     stage_title: run.stages[0].title,
     gate: run.stages[0].gate,
     legal_next_action: "Invoke the meta-meta attractor before child skill execution."
+  });
+  appendAguiEvent(run, "HUMAN_DECISION_REQUIRED", {
+    actor: "dark-factory-agent-swarm",
+    interrupt_id: run.human_interrupts[0].interrupt_id,
+    reason: "Scenario/template/provider-quorum selection is a material factory boundary.",
+    proposed_action: run.human_interrupts[0].proposed_action,
+    allowed_decisions: run.human_interrupts[0].allowed_decisions
   });
   saveRun(run);
   return run;
@@ -498,6 +718,7 @@ function scoreInterrogation(answers) {
 }
 
 function buildInvocationPacket(runLike, answers) {
+  const agenticUiContract = runLike.agentic_ui_contract || buildAgenticUiContract(runLike);
   return {
     zero_slop_policy: ZERO_SLOP,
     packet_type: "dfms_ui_invocation_packet",
@@ -507,11 +728,19 @@ function buildInvocationPacket(runLike, answers) {
     run_id: runLike.run_id || "",
     project_name: runLike.project_name || runLike.projectName || "",
     project_type: runLike.project_type || runLike.projectType || "",
+    scenario_mode: runLike.scenario_mode || runLike.scenarioMode || agenticUiContract.scenario.id,
+    template_id: runLike.template_id || runLike.templateId || agenticUiContract.template.id,
+    provider_quorum_mode: runLike.provider_quorum_mode || runLike.providerQuorum || "three-provider-merge",
     intent: runLike.intent || "",
     token_swag: runLike.token_swag || {
       band: runLike.tokenBand || "medium",
       reapproval_trigger: runLike.reapprovalTrigger || ""
     },
+    agentic_ui_contract: agenticUiContract,
+    provider_quorum: runLike.provider_quorum || PROVIDER_QUORUM,
+    foundation_sections: runLike.foundation_sections || createFoundationWorkboard(),
+    human_interrupts: runLike.human_interrupts || createHumanInterrupts(runLike),
+    spec_graph_layer: runLike.spec_graph_layer || buildSpecGraphState(runLike),
     generated_meta_skill: runLike.generated_meta_skill || null,
     agent_protocols: {
       agui: PROTOCOL_PROFILE.agui,
@@ -519,8 +748,10 @@ function buildInvocationPacket(runLike, answers) {
       mcp_apps: PROTOCOL_PROFILE.mcp_apps,
       run_protocol_endpoint: runLike.run_id ? `/api/runs/${encodeURIComponent(runLike.run_id)}/protocol` : "",
       agent_message_endpoint: runLike.run_id ? `/api/runs/${encodeURIComponent(runLike.run_id)}/agent-message` : "",
+      human_interrupt_endpoint: runLike.run_id ? `/api/runs/${encodeURIComponent(runLike.run_id)}/interrupt` : "",
       human_can_interrogate_anytime: true,
-      human_can_resteer_anytime_through_change_control: true
+      human_can_resteer_anytime_through_change_control: true,
+      human_interrupts_required_for_sensitive_actions: true
     },
     required_sequence: STAGES.map((stage) => ({ id: stage.id, title: stage.title, skills: stage.skills, gate: stage.gate })),
     executable_records_by_stage: STAGE_RECORDS,
@@ -543,6 +774,10 @@ function invokeStage(runId, stageId) {
   const currentIndex = run.stages.findIndex((item) => item.id === run.current_stage);
   const stageIndex = run.stages.findIndex((item) => item.id === stageId);
   if (stageIndex > currentIndex) throw Object.assign(new Error("Cannot invoke a locked future stage"), { status: 409 });
+  const pendingInterrupt = (run.human_interrupts || []).find((item) => item.stage_id === stageId && item.state === "pending");
+  if (pendingInterrupt) {
+    throw Object.assign(new Error(`Human interrupt ${pendingInterrupt.interrupt_id} must be resolved before invoking ${stageId}.`), { status: 409 });
+  }
   const execution = executeStageRecords(run, stage);
   const invocation = {
     invocation_id: `INV-${Date.now()}`,
@@ -921,6 +1156,7 @@ function buildStageReport(run, stageLike = null) {
   }
   if (stage?.status === "locked") blockers.push("Stage is locked behind predecessor gates.");
   if (stage?.status === "blocked") blockers.push(...(stage.gate_notes || ["Stage gate is blocked."]));
+  const pendingInterrupts = (run.human_interrupts || []).filter((item) => item.stage_id === canonical.id && item.state === "pending");
   return {
     zero_slop_policy: ZERO_SLOP,
     report_type: "dfms_stage_report",
@@ -934,6 +1170,7 @@ function buildStageReport(run, stageLike = null) {
     expected_records: STAGE_RECORDS[canonical.id] || [],
     generated_records: outputs,
     blockers,
+    pending_human_interrupts: pendingInterrupts,
     human_questions: canonical.id === "stage-01-interrogation" ? missingQuestions : [],
     next_action: stageNextAction(run, canonical, blockers),
     assurance: [
@@ -946,6 +1183,8 @@ function buildStageReport(run, stageLike = null) {
 }
 
 function stageNextAction(run, stage, blockers) {
+  const pendingInterrupt = (run.human_interrupts || []).find((item) => item.stage_id === stage.id && item.state === "pending");
+  if (pendingInterrupt) return `Resolve human interrupt ${pendingInterrupt.interrupt_id} before material execution continues.`;
   if (blockers.length) return "Resolve blockers, then re-invoke or advance the active stage.";
   if (stage.id !== run.current_stage) return "Inspect only; execute the currently active stage.";
   if (stage.id === "stage-01-interrogation" && run.interrogation?.gate !== "pass") return "Answer required customer grill questions and resolve contradictions.";
@@ -981,7 +1220,78 @@ function buildA2uiSurfaces(run) {
   const requiredQuestions = QUESTIONS.filter((question) => question.required);
   const answered = requiredQuestions.filter((question) => (run.answers?.[question.id]?.value || "").trim().length >= 8);
   const openChanges = (run.change_requests || []).filter((item) => !["closed", "rejected"].includes(item.state));
+  const agenticContract = run.agentic_ui_contract || buildAgenticUiContract(run);
+  const specGraph = run.spec_graph_layer || buildSpecGraphState(run);
   return [
+    {
+      protocol: "A2UI",
+      profile: PROTOCOL_PROFILE.a2ui.local_profile,
+      surface_id: "scenario-template-router",
+      component: "ScenarioTemplateRouter",
+      title: "Scenario And Template Router",
+      props: {
+        selected_scenario: run.scenario_mode || agenticContract.scenario.id,
+        selected_template: run.template_id || agenticContract.template.id,
+        scenarios: FACTORY_SCENARIOS,
+        templates: PROJECT_TEMPLATES,
+        rule: "Scenario and template are factory-routing decisions, not visual decoration."
+      },
+      actions: ["approveInterrupt", "editScenarioTemplate", "startProject"]
+    },
+    {
+      protocol: "A2UI",
+      profile: PROTOCOL_PROFILE.a2ui.local_profile,
+      surface_id: "provider-quorum-board",
+      component: "ProviderQuorumBoard",
+      title: "Provider Quorum And Merge",
+      props: {
+        provider_quorum_mode: run.provider_quorum_mode || "three-provider-merge",
+        providers: run.provider_quorum || PROVIDER_QUORUM,
+        merge_rule: "Parallel provider drafts are merged, refined, reviewed, and confirmed before acceptance."
+      },
+      actions: ["runProviderQuorum", "compareProviderDrafts", "confirmMergedDraft"]
+    },
+    {
+      protocol: "A2UI",
+      profile: PROTOCOL_PROFILE.a2ui.local_profile,
+      surface_id: "foundation-authoring-workbench",
+      component: "FoundationAuthoringWorkbench",
+      title: "Foundation Authoring Workbench",
+      props: {
+        sections: run.foundation_sections || createFoundationWorkboard(),
+        confirmation_rule: "Each section needs draft, merge, refine, confirm, review, and trace before downstream artifacts depend on it."
+      },
+      actions: ["draftSection", "refineSection", "confirmSection"]
+    },
+    {
+      protocol: "A2UI",
+      profile: PROTOCOL_PROFILE.a2ui.local_profile,
+      surface_id: "human-interrupt-inbox",
+      component: "HumanInterruptInbox",
+      title: "Human Interrupt Inbox",
+      props: {
+        interrupts: run.human_interrupts || [],
+        allowed_decisions: ["approve", "edit", "reject", "escalate"],
+        rule: "Sensitive actions pause execution until explicit human decision."
+      },
+      actions: ["decideHumanInterrupt"]
+    },
+    {
+      protocol: "A2UI",
+      profile: PROTOCOL_PROFILE.a2ui.local_profile,
+      surface_id: "spec-graph-impact-explorer",
+      component: "SpecGraphImpactExplorer",
+      title: "Spec Graph Impact Explorer",
+      props: {
+        source_prd: specGraph.source_prd,
+        node_identity_format: specGraph.node_identity_format,
+        nodes: specGraph.nodes,
+        edges: specGraph.edges,
+        impact_samples: specGraph.impact_samples,
+        no_duplicate_path_rule: specGraph.no_duplicate_path_rule
+      },
+      actions: ["computeSpecGraphImpact", "openRedoClosure"]
+    },
     {
       protocol: "A2UI",
       profile: PROTOCOL_PROFILE.a2ui.local_profile,
@@ -1086,18 +1396,40 @@ function buildMcpAppsManifest(run) {
         runId: { type: "string" },
         mode: { type: "string", enum: ["ask", "audit", "resteer", "explain"] },
         message: { type: "string" }
+      }),
+      tool("dfms.decideInterrupt", "Approve, edit, reject, or escalate a human interrupt before material factory execution.", "ui://dfms/human-interrupts", {
+        runId: { type: "string" },
+        interruptId: { type: "string" },
+        decision: { type: "string", enum: ["approve", "edit", "reject", "escalate"] },
+        note: { type: "string" }
+      }),
+      tool("dfms.runProviderQuorum", "Run or inspect provider quorum drafts before merge/refine/confirm.", "ui://dfms/provider-quorum", {
+        runId: { type: "string" },
+        sectionId: { type: "string" }
+      }),
+      tool("dfms.computeSpecGraphImpact", "Compute upstream and downstream impact for a selected spec graph node.", "ui://dfms/spec-graph-impact", {
+        runId: { type: "string" },
+        nodeId: { type: "string" },
+        hypotheticalChange: { type: "string" }
       })
     ],
     resources: [
       { uri: `dfms://runs/${run.run_id}/portal`, name: "Human project portal", mimeType: "application/json" },
       { uri: `dfms://runs/${run.run_id}/protocol`, name: "Protocol state", mimeType: "application/json" },
-      { uri: `dfms://runs/${run.run_id}/stage-report`, name: "Current stage report", mimeType: "application/json" }
+      { uri: `dfms://runs/${run.run_id}/stage-report`, name: "Current stage report", mimeType: "application/json" },
+      { uri: `dfms://runs/${run.run_id}/interrupts`, name: "Human interrupts", mimeType: "application/json" },
+      { uri: `dfms://runs/${run.run_id}/spec-graph`, name: "Spec graph impact substrate", mimeType: "application/json" },
+      { uri: `dfms://runs/${run.run_id}/foundation-sections`, name: "Foundation workboard", mimeType: "application/json" }
     ],
     ui_resources: [
       { uri: "ui://dfms/run-cockpit", mimeType: PROTOCOL_PROFILE.mcp_apps.resource_mime_type, title: "Dark Factory Run Cockpit" },
       { uri: "ui://dfms/customer-grill", mimeType: PROTOCOL_PROFILE.mcp_apps.resource_mime_type, title: "Customer Grill Form" },
       { uri: "ui://dfms/change-control", mimeType: PROTOCOL_PROFILE.mcp_apps.resource_mime_type, title: "Change Control And Redo" },
-      { uri: "ui://dfms/agent-interrogation", mimeType: PROTOCOL_PROFILE.mcp_apps.resource_mime_type, title: "Ask Agent Anytime" }
+      { uri: "ui://dfms/agent-interrogation", mimeType: PROTOCOL_PROFILE.mcp_apps.resource_mime_type, title: "Ask Agent Anytime" },
+      { uri: "ui://dfms/human-interrupts", mimeType: PROTOCOL_PROFILE.mcp_apps.resource_mime_type, title: "Human Interrupts" },
+      { uri: "ui://dfms/provider-quorum", mimeType: PROTOCOL_PROFILE.mcp_apps.resource_mime_type, title: "Provider Quorum Merge" },
+      { uri: "ui://dfms/spec-graph-impact", mimeType: PROTOCOL_PROFILE.mcp_apps.resource_mime_type, title: "Spec Graph Impact" },
+      { uri: "ui://dfms/foundation-authoring", mimeType: PROTOCOL_PROFILE.mcp_apps.resource_mime_type, title: "Foundation Authoring Workbench" }
     ],
     security_model: [
       "UI resources are local descriptors in this console, not remote executable code.",
@@ -1122,6 +1454,11 @@ function buildProtocolState(runOrId) {
       token_swag: run.token_swag
     },
     protocol_profile: PROTOCOL_PROFILE,
+    agentic_ui_contract: run.agentic_ui_contract || buildAgenticUiContract(run),
+    provider_quorum: run.provider_quorum || PROVIDER_QUORUM,
+    foundation_sections: run.foundation_sections || createFoundationWorkboard(),
+    human_interrupts: run.human_interrupts || [],
+    spec_graph_layer: run.spec_graph_layer || buildSpecGraphState(run),
     agui_events: run.agui_events || [],
     a2ui_surfaces: buildA2uiSurfaces(run),
     mcp_apps: buildMcpAppsManifest(run),
@@ -1299,6 +1636,78 @@ function createAgentMessage(runId, payload) {
   return { interaction, protocol: buildProtocolState(run.run_id), run: loadRun(run.run_id) };
 }
 
+function decideHumanInterrupt(runId, payload) {
+  const run = loadRun(runId);
+  const decision = String(payload.decision || "").trim().toLowerCase();
+  if (!["approve", "edit", "reject", "escalate"].includes(decision)) {
+    throw Object.assign(new Error("Decision must be approve, edit, reject, or escalate."), { status: 400 });
+  }
+  const interrupt = (run.human_interrupts || []).find((item) =>
+    item.interrupt_id === payload.interruptId || (!payload.interruptId && item.state === "pending")
+  );
+  if (!interrupt) throw Object.assign(new Error("No matching pending human interrupt."), { status: 404 });
+  if (interrupt.state !== "pending") throw Object.assign(new Error(`Interrupt is already ${interrupt.state}.`), { status: 409 });
+
+  interrupt.state = decision === "approve" ? "approved" : decision === "edit" ? "edited" : decision === "reject" ? "rejected" : "escalated";
+  interrupt.decided_at = nowIso();
+  interrupt.decided_by = String(payload.decidedBy || "human-owner");
+  interrupt.note = String(payload.note || "").trim();
+  if (payload.patch && typeof payload.patch === "object") interrupt.patch = payload.patch;
+  if (decision === "edit" && payload.patch?.scenario_mode) run.scenario_mode = String(payload.patch.scenario_mode);
+  if (decision === "edit" && payload.patch?.template_id) run.template_id = String(payload.patch.template_id);
+  if (decision === "edit" && payload.patch?.provider_quorum_mode) run.provider_quorum_mode = String(payload.patch.provider_quorum_mode);
+
+  const record = {
+    zero_slop_policy: ZERO_SLOP,
+    record_type: "human_interrupt_decision_record",
+    id: `HIDEC-${Date.now()}`,
+    at: nowIso(),
+    run_id: run.run_id,
+    interrupt_id: interrupt.interrupt_id,
+    decision,
+    resulting_state: interrupt.state,
+    decided_by: interrupt.decided_by,
+    note: interrupt.note,
+    proposed_action: interrupt.proposed_action,
+    patch: interrupt.patch || null,
+    downstream_rule: decision === "approve"
+      ? "Current stage may proceed; all later material changes still require gates and evidence."
+      : "Factory execution is blocked or re-entered until the decision is resolved through change control."
+  };
+  const recordPath = path.join(runRecordsDir(run.run_id), `${record.id}-human-interrupt-decision-record.json`);
+  writeJson(recordPath, record);
+  run.human_decisions = [record, ...(run.human_decisions || [])];
+  run.execution_outputs = Array.from(new Set([...(run.execution_outputs || []), path.relative(ROOT, recordPath).replace(/\\/g, "/")]));
+  run.audit_log.push({ at: nowIso(), event: "human_interrupt_decided", detail: `${interrupt.interrupt_id}: ${decision}` });
+  appendAguiEvent(run, "HUMAN_DECISION_RECORDED", {
+    actor: record.decided_by,
+    interrupt_id: interrupt.interrupt_id,
+    decision,
+    resulting_state: interrupt.state,
+    note: interrupt.note
+  });
+  if (["reject", "escalate"].includes(decision)) {
+    run.status = "blocked";
+    const stage = (run.stages || []).find((item) => item.id === interrupt.stage_id);
+    if (stage) {
+      stage.status = "blocked";
+      stage.gate_result = "blocked_by_human_interrupt";
+      stage.gate_notes = [`Human interrupt ${interrupt.interrupt_id} was ${decision}.`];
+    }
+    appendAguiEvent(run, "GATE_BLOCKED", {
+      stage_id: interrupt.stage_id,
+      interrupt_id: interrupt.interrupt_id,
+      reason: `Human interrupt ${decision}.`
+    });
+  } else {
+    const stage = (run.stages || []).find((item) => item.id === interrupt.stage_id);
+    if (stage && stage.gate_result === "ready") stage.gate_result = "human_interrupt_resolved";
+  }
+  run.invocation_packet = buildInvocationPacket(run, run.answers || {});
+  saveRun(run);
+  return { decision: record, run: loadRun(run.run_id), protocol: buildProtocolState(run.run_id) };
+}
+
 function buildAgentResponse(run, message, mode) {
   const lower = message.toLowerCase();
   const stage = activeStage(run);
@@ -1375,7 +1784,10 @@ function buildProjectPortal(runId) {
       external_reference: externalBook
     },
     change_requests: run.change_requests || [],
+    human_interrupts: run.human_interrupts || [],
     human_decisions: run.human_decisions || [],
+    agentic_ui_contract: run.agentic_ui_contract || buildAgenticUiContract(run),
+    spec_graph_layer: run.spec_graph_layer || buildSpecGraphState(run),
     audit_log: run.audit_log || [],
     validation,
     next_actions: projectPortalNextActions(run, validation)
@@ -1408,6 +1820,8 @@ function listRunFiles(dir, kind) {
 
 function projectPortalNextActions(run, validation) {
   const actions = [];
+  const pendingInterrupt = (run.human_interrupts || []).find((item) => item.state === "pending");
+  if (pendingInterrupt) actions.push(`Resolve human interrupt ${pendingInterrupt.interrupt_id}: ${pendingInterrupt.action}.`);
   if (run.interrogation?.gate !== "pass") actions.push("Finish customer grill answers and resolve contradiction blockers.");
   if (run.status === "change_control") actions.push("Review the active change request, then execute the reopened stage pipeline.");
   if (validation.status !== "pass") actions.push("Resolve validation findings before claiming handoff readiness.");
@@ -1654,6 +2068,28 @@ function validateRunExecution(runOrId) {
   }
   if (!run.invocation_packet?.agent_protocols?.agui || !run.invocation_packet?.agent_protocols?.a2ui || !run.invocation_packet?.agent_protocols?.mcp_apps) {
     warn("P1", "Agent protocol contracts missing", "Invocation packet does not expose AG-UI, A2UI, and MCP Apps contracts.");
+  }
+  if (!run.agentic_ui_contract?.required_surfaces?.includes("human-interrupt-inbox")) {
+    warn("P1", "Agentic UI contract missing interrupt surface", "Run does not enforce the human interrupt inbox as a required agentic UI surface.");
+  }
+  if (!run.agentic_ui_contract?.required_surfaces?.includes("spec-graph-impact-explorer")) {
+    warn("P1", "Agentic UI contract missing graph surface", "Run does not expose Spec Graph impact as a required agentic UI surface.");
+  }
+  if (!Array.isArray(run.provider_quorum) || run.provider_quorum.length < 3) {
+    warn("P1", "Provider quorum underspecified", "Run must expose at least three provider seats for independent draft/review quorum.");
+  }
+  if (!Array.isArray(run.foundation_sections) || run.foundation_sections.length < 11) {
+    warn("P1", "Foundation workboard underspecified", "Run must expose the full foundation authoring workboard.");
+  }
+  if (!Array.isArray(run.human_interrupts)) {
+    warn("P1", "Human interrupt ledger missing", "Run must carry a human interrupt ledger even if all interrupts are resolved.");
+  }
+  if (!run.spec_graph_layer?.node_identity_format || !Array.isArray(run.spec_graph_layer?.edges)) {
+    warn("P1", "Spec Graph layer state missing", "Run must expose graph identity, nodes, edges, and impact state.");
+  }
+  const surfaces = buildA2uiSurfaces(run).map((surface) => surface.surface_id);
+  for (const requiredSurface of run.agentic_ui_contract?.required_surfaces || []) {
+    if (!surfaces.includes(requiredSurface)) warn("P1", "Required A2UI surface missing", `${requiredSurface} is required by the agentic UI contract but not emitted.`);
   }
   if (!run.generated_meta_skill || run.generated_meta_skill.generated_from !== "df-meta-attractor") {
     warn("P1", "Generated meta-skill missing", "Run does not prove the meta-meta skill generated the project-tailored meta-skill.");
@@ -2192,6 +2628,12 @@ async function handleApi(req, res) {
         skills: loadSkills(),
         stages: STAGES,
         questions: QUESTIONS,
+        factory_scenarios: FACTORY_SCENARIOS,
+        project_templates: PROJECT_TEMPLATES,
+        provider_quorum: PROVIDER_QUORUM,
+        foundation_sections: FOUNDATION_SECTIONS,
+        spec_graph_layer: SPEC_GRAPH_LAYER,
+        agentic_ui_research_findings: AGENTIC_UI_RESEARCH_FINDINGS,
         projectBook: projectBookSummary(),
         runs: listRuns().slice(0, 10)
       });
@@ -2235,6 +2677,10 @@ async function handleApi(req, res) {
     if (req.method === "POST" && url.pathname.match(/^\/api\/runs\/[^/]+\/change-request$/)) {
       const id = url.pathname.split("/")[3];
       return sendJson(res, 201, createChangeRequest(id, await parseBody(req)));
+    }
+    if (req.method === "POST" && url.pathname.match(/^\/api\/runs\/[^/]+\/interrupt$/)) {
+      const id = url.pathname.split("/")[3];
+      return sendJson(res, 200, decideHumanInterrupt(id, await parseBody(req)));
     }
     if (req.method === "GET" && url.pathname.match(/^\/api\/runs\/[^/]+\/validate$/)) {
       const id = url.pathname.split("/")[3];
@@ -2300,6 +2746,7 @@ module.exports = {
   buildProtocolState,
   buildTruthInventory,
   createAgentMessage,
+  decideHumanInterrupt,
   buildProjectPortal,
   createChangeRequest,
   computeRedoClosure,
