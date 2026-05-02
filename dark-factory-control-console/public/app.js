@@ -2,6 +2,7 @@ const state = {
   bootstrap: null,
   run: null,
   portal: null,
+  protocol: null,
   busy: false
 };
 
@@ -27,7 +28,8 @@ function setBusy(value) {
     "runRalphAudit",
     "redoClosure",
     "refreshProject",
-    "openChangeRequest"
+    "openChangeRequest",
+    "sendAgentMessage"
   ]) {
     const element = $(id);
     if (element) element.disabled = value;
@@ -46,6 +48,7 @@ async function init() {
   } else {
     renderRun();
     renderPortal();
+    renderProtocol();
   }
 }
 
@@ -58,6 +61,7 @@ function wireEvents() {
   $("redoClosure").addEventListener("click", redoClosure);
   $("refreshProject").addEventListener("click", refreshCurrentProject);
   $("openChangeRequest").addEventListener("click", openChangeRequest);
+  $("sendAgentMessage").addEventListener("click", sendAgentMessage);
   $("projectSelect").addEventListener("change", (event) => loadRun(event.target.value));
 }
 
@@ -73,8 +77,10 @@ async function loadRun(runId) {
   try {
     state.run = await api(`/api/runs/${encodeURIComponent(runId)}`);
     await refreshPortal(false);
+    await refreshProtocol(false);
     renderRun();
     renderPortal();
+    renderProtocol();
   } catch (error) {
     showResult(error.message, true);
   } finally {
@@ -95,6 +101,16 @@ async function refreshPortal(shouldRender = true) {
   }
   state.portal = await api(`/api/runs/${encodeURIComponent(state.run.run_id)}/portal`);
   if (shouldRender) renderPortal();
+}
+
+async function refreshProtocol(shouldRender = true) {
+  if (!state.run) {
+    state.protocol = null;
+    if (shouldRender) renderProtocol();
+    return;
+  }
+  state.protocol = await api(`/api/runs/${encodeURIComponent(state.run.run_id)}/protocol`);
+  if (shouldRender) renderProtocol();
 }
 
 function renderBootstrap() {
@@ -280,8 +296,10 @@ async function createRun() {
     });
     await refreshBootstrap();
     await refreshPortal(false);
+    await refreshProtocol(false);
     renderRun();
     renderPortal();
+    renderProtocol();
   } catch (error) {
     showResult(error.message, true);
   } finally {
@@ -297,8 +315,10 @@ async function saveAnswer(questionId, value) {
       body: JSON.stringify({ questionId, value })
     });
     await refreshPortal(false);
+    await refreshProtocol(false);
     renderRun();
     renderPortal();
+    renderProtocol();
   } catch (error) {
     showResult(error.message, true);
   }
@@ -314,8 +334,10 @@ async function invokeCurrentStage() {
     });
     await refreshBootstrap();
     await refreshPortal(false);
+    await refreshProtocol(false);
     renderRun();
     renderPortal();
+    renderProtocol();
   } catch (error) {
     showResult(error.message, true);
   } finally {
@@ -330,8 +352,10 @@ async function advanceStage() {
     state.run = await api(`/api/runs/${encodeURIComponent(state.run.run_id)}/advance`, { method: "POST", body: "{}" });
     await refreshBootstrap();
     await refreshPortal(false);
+    await refreshProtocol(false);
     renderRun();
     renderPortal();
+    renderProtocol();
   } catch (error) {
     showResult(error.message, true);
   } finally {
@@ -346,8 +370,10 @@ async function executePipeline() {
     state.run = await api(`/api/runs/${encodeURIComponent(state.run.run_id)}/execute`, { method: "POST", body: "{}" });
     await refreshBootstrap();
     await refreshPortal(false);
+    await refreshProtocol(false);
     renderRun();
     renderPortal();
+    renderProtocol();
   } catch (error) {
     showResult(error.message, true);
   } finally {
@@ -366,8 +392,10 @@ async function redoClosure() {
     await refreshBootstrap();
     if (state.run) {
       await refreshPortal(false);
+      await refreshProtocol(false);
       renderRun();
       renderPortal();
+      renderProtocol();
     }
   } catch (error) {
     showResult(error.message, true);
@@ -384,8 +412,10 @@ async function runRalphAudit() {
     state.run = result.run;
     await refreshBootstrap();
     await refreshPortal(false);
+    await refreshProtocol(false);
     renderRun();
     renderPortal();
+    renderProtocol();
     showAuditResult(`${result.audit.summary} Record: ${result.record}`, result.audit.status === "fail");
   } catch (error) {
     showAuditResult(error.message, true);
@@ -415,12 +445,43 @@ async function openChangeRequest() {
     state.run = result.run;
     state.portal = result.portal;
     await refreshBootstrap();
+    await refreshProtocol(false);
     renderRun();
     renderPortal();
+    renderProtocol();
     const cr = result.change_request;
     showChangeResult(`Opened ${escapeHtml(cr.id)}. Reopened ${cr.reopened_stages.length} stages from ${escapeHtml(cr.target_stage)}. Redo impact: ${escapeHtml(cr.redo_impact?.status || "not selected")}.`, false);
   } catch (error) {
     showChangeResult(error.message, true);
+  } finally {
+    setBusy(false);
+  }
+}
+
+async function sendAgentMessage() {
+  if (!state.run) return showAgentResponse("Start or select a governed project first.", true);
+  const message = $("agentMessage").value.trim();
+  if (!message) return showAgentResponse("Ask the agent a concrete question or resteer request.", true);
+  setBusy(true);
+  try {
+    const result = await api(`/api/runs/${encodeURIComponent(state.run.run_id)}/agent-message`, {
+      method: "POST",
+      body: JSON.stringify({
+        mode: $("agentMessageMode").value,
+        message
+      })
+    });
+    state.run = result.run;
+    state.protocol = result.protocol;
+    await refreshBootstrap();
+    await refreshPortal(false);
+    renderRun();
+    renderPortal();
+    renderProtocol();
+    $("agentMessage").value = "";
+    showAgentResponse(result.interaction.response.summary, false);
+  } catch (error) {
+    showAgentResponse(error.message, true);
   } finally {
     setBusy(false);
   }
@@ -439,6 +500,7 @@ function renderRun() {
     $("auditLog").innerHTML = "";
     renderContradictions();
     renderPacket({});
+    renderProtocol();
     renderCommandCenter();
     return;
   }
@@ -455,6 +517,7 @@ function renderRun() {
   }
   renderProjectSelector();
   renderProjectList();
+  renderProtocol();
   renderCommandCenter();
 }
 
@@ -503,6 +566,69 @@ function renderPortal() {
     </div>
   `).join("") : `<div class="empty-note">No project records yet.</div>`;
   renderCommandCenter();
+}
+
+function renderProtocol() {
+  const protocol = state.protocol;
+  if (!protocol) {
+    setText("protocolAguiStatus", "AG-UI: no run");
+    setText("protocolA2uiStatus", "A2UI: no surfaces");
+    setText("protocolMcpStatus", "MCP Apps: no tools");
+    setText("stageReportTitle", "No active stage");
+    setText("stageReportBody", "Start or select a project to inspect agent protocol state.");
+    $("aguiEventStream").innerHTML = `<div class="empty-note">No protocol events yet.</div>`;
+    $("a2uiSurfaces").innerHTML = `<div class="empty-note">No A2UI surfaces yet.</div>`;
+    $("mcpAppsList").innerHTML = `<div class="empty-note">No MCP Apps descriptors yet.</div>`;
+    $("agentResponse").innerHTML = `<div class="empty-note">Ask the agent about the active stage, blockers, evidence, or a resteer.</div>`;
+    return;
+  }
+
+  const events = protocol.agui_events || [];
+  const surfaces = protocol.a2ui_surfaces || [];
+  const mcp = protocol.mcp_apps || { tools: [], resources: [], ui_resources: [] };
+  const report = protocol.agent_report?.active_stage || {};
+  setText("protocolAguiStatus", `AG-UI: ${events.length} events`);
+  setText("protocolA2uiStatus", `A2UI: ${surfaces.length} surfaces`);
+  setText("protocolMcpStatus", `MCP Apps: ${(mcp.tools || []).length} tools`);
+  setText("stageReportTitle", report.stage_title || "Active stage report");
+  setText("stageReportBody", `${report.status || "--"} | ${report.gate_result || "--"} | ${report.next_action || "--"}`);
+
+  $("aguiEventStream").innerHTML = events.length ? events.slice().reverse().slice(0, 12).map((event) => `
+    <div class="event-row">
+      <strong>${escapeHtml(event.type)}</strong>
+      <span>${escapeHtml(event.stage_id || "--")} | ${escapeHtml(event.at || "")}</span>
+      <small>${escapeHtml(event.payload?.response_summary || event.payload?.legal_next_action || event.payload?.stage_title || event.payload?.title || "")}</small>
+    </div>
+  `).join("") : `<div class="empty-note">No protocol events yet.</div>`;
+
+  $("a2uiSurfaces").innerHTML = surfaces.length ? surfaces.map((surface) => `
+    <article class="surface-card">
+      <div>
+        <strong>${escapeHtml(surface.title || surface.surface_id)}</strong>
+        <span>${escapeHtml(surface.component || "Component")}</span>
+      </div>
+      <small>${escapeHtml(surface.surface_id)} | ${(surface.actions || []).map(escapeHtml).join(", ") || "read-only"}</small>
+    </article>
+  `).join("") : `<div class="empty-note">No A2UI surfaces yet.</div>`;
+
+  const tools = (mcp.tools || []).map((tool) => `
+    <div class="stack-item">
+      <strong>${escapeHtml(tool.name)}</strong>
+      <span>${escapeHtml(tool.description)} | ${escapeHtml(tool._meta?.ui?.resourceUri || "")}</span>
+    </div>
+  `).join("");
+  const resources = [...(mcp.resources || []), ...(mcp.ui_resources || [])].map((resource) => `
+    <div class="stack-item muted">
+      <strong>${escapeHtml(resource.uri)}</strong>
+      <span>${escapeHtml(resource.mimeType || "resource")} | ${escapeHtml(resource.title || resource.name || "")}</span>
+    </div>
+  `).join("");
+  $("mcpAppsList").innerHTML = tools || resources ? `${tools}${resources}` : `<div class="empty-note">No MCP Apps descriptors yet.</div>`;
+
+  const latest = protocol.recent_agent_messages?.[0];
+  if (latest) {
+    showAgentResponse(latest.response?.summary || "Agent response recorded.", false);
+  }
 }
 
 function renderFactoryExecution() {
@@ -557,6 +683,10 @@ function showAuditResult(message, isError) {
 
 function showChangeResult(message, isError) {
   $("changeResult").innerHTML = `<div class="${isError ? "alert" : ""}">${message}</div>`;
+}
+
+function showAgentResponse(message, isError) {
+  $("agentResponse").innerHTML = `<div class="${isError ? "alert" : "result compact-result"}">${escapeHtml(message)}</div>`;
 }
 
 function escapeHtml(value) {

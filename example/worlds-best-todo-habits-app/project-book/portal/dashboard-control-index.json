@@ -1,9 +1,9 @@
 {
   "zero_slop_policy": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
-  "dashboard_id": "DASH-dfms-ui-console-run-20260428",
+  "dashboard_id": "DASH-dfms-ui-console-run-20260501",
   "project": "DFMS UI Console Run",
-  "generated_at": "2026-04-29T04:10:07+00:00",
-  "source_root": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\files-mentioned-by-the-user-dark\\example\\worlds-best-todo-habits-app\\project-book",
+  "generated_at": "2026-05-02T01:57:46+00:00",
+  "source_root": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\meta-meta-dark-factory\\example\\worlds-best-todo-habits-app\\project-book",
   "nodes": [
     {
       "id": "NODE-00-FACTORY-RUN-SUMMARY-MD",
@@ -227,6 +227,32 @@
       "tags": []
     },
     {
+      "id": "NODE-17-ACTUAL-VS-PROMISED-ARTIFACT-GAP-AUDIT-MD",
+      "kind": "artifact",
+      "title": "Actual Vs Promised Artifact Gap Audit",
+      "path": "17-actual-vs-promised-artifact-gap-audit.md",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-18-RALPH-20-ARTIFACT-COMPLETENESS-AUDIT-MD",
+      "kind": "artifact",
+      "title": "RALPH 20 Artifact Completeness Audit",
+      "path": "18-ralph-20-artifact-completeness-audit.md",
+      "stage": "project-book",
+      "status": "blocked",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
       "id": "NODE-EVIDENCE-ACCESSIBILITY-CERTIFICATION-OUTPUT-TXT",
       "kind": "evidence",
       "title": "Accessibility Certification Output",
@@ -246,6 +272,19 @@
       "path": "evidence/accessibility-certification-results.json",
       "stage": "verification",
       "status": "accepted",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-ARTIFACT-CATALOG-COVERAGE-AUDIT-RESULTS-JSON",
+      "kind": "evidence",
+      "title": "Artifact Catalog Coverage Audit Results",
+      "path": "evidence/artifact-catalog-coverage-audit-results.json",
+      "stage": "verification",
+      "status": "blocked",
       "owner": "",
       "gate": "",
       "certificate": "",
@@ -961,6 +1000,19 @@
       "path": "records/artifact-bom-audit-record.json",
       "stage": "project-book",
       "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-RECORDS-ARTIFACT-CATALOG-COVERAGE-MATRIX-JSON",
+      "kind": "artifact",
+      "title": "Artifact Catalog Coverage Matrix",
+      "path": "records/artifact-catalog-coverage-matrix.json",
+      "stage": "project-book",
+      "status": "blocked",
       "owner": "",
       "gate": "",
       "certificate": "",
@@ -2378,6 +2430,38 @@
       "reason": "text reference `02-prd.md`"
     },
     {
+      "source": "NODE-17-ACTUAL-VS-PROMISED-ARTIFACT-GAP-AUDIT-MD",
+      "target": "NODE-18-RALPH-20-ARTIFACT-COMPLETENESS-AUDIT-MD",
+      "type": "inferred_reference",
+      "evidence": "17-actual-vs-promised-artifact-gap-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `18-ralph-20-artifact-completeness-audit.md`"
+    },
+    {
+      "source": "NODE-17-ACTUAL-VS-PROMISED-ARTIFACT-GAP-AUDIT-MD",
+      "target": "NODE-RECORDS-ARTIFACT-CATALOG-COVERAGE-MATRIX-JSON",
+      "type": "inferred_reference",
+      "evidence": "17-actual-vs-promised-artifact-gap-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `records/artifact-catalog-coverage-matrix.json`"
+    },
+    {
+      "source": "NODE-17-ACTUAL-VS-PROMISED-ARTIFACT-GAP-AUDIT-MD",
+      "target": "NODE-RECORDS-TASKS-MD",
+      "type": "inferred_reference",
+      "evidence": "17-actual-vs-promised-artifact-gap-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `records/TASKS.md`"
+    },
+    {
+      "source": "NODE-17-ACTUAL-VS-PROMISED-ARTIFACT-GAP-AUDIT-MD",
+      "target": "NODE-PORTAL-INDEX-HTML",
+      "type": "inferred_reference",
+      "evidence": "17-actual-vs-promised-artifact-gap-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `index.html`"
+    },
+    {
       "source": "NODE-EVIDENCE-BROWSER-WYSIWYG-RESULTS-JSON",
       "target": "NODE-EVIDENCE-WYSIWYG-DESKTOP-PNG",
       "type": "inferred_reference",
@@ -2515,6 +2599,14 @@
     },
     {
       "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-RECORDS-ARTIFACT-CATALOG-COVERAGE-MATRIX-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../records/artifact-catalog-coverage-matrix.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
       "target": "NODE-RECORDS-HAWKEYE-CONFORMANCE-AUDIT-RECORD-JSON",
       "type": "inferred_reference",
       "evidence": "portal/index.html",
@@ -2640,6 +2732,22 @@
       "evidence": "portal/index.html",
       "authority": "inferred",
       "reason": "text reference `../16-dashboard-control-redo-record.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-17-ACTUAL-VS-PROMISED-ARTIFACT-GAP-AUDIT-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../17-actual-vs-promised-artifact-gap-audit.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-18-RALPH-20-ARTIFACT-COMPLETENESS-AUDIT-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../18-ralph-20-artifact-completeness-audit.md`"
     },
     {
       "source": "NODE-PORTAL-INDEX-HTML",
@@ -2979,6 +3087,14 @@
     },
     {
       "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-EVIDENCE-ARTIFACT-CATALOG-COVERAGE-AUDIT-RESULTS-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../evidence/artifact-catalog-coverage-audit-results.json`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
       "target": "NODE-EVIDENCE-HUMAN-REVIEW-PORTAL-SCREENSHOT-PNG",
       "type": "inferred_reference",
       "evidence": "portal/index.html",
@@ -3227,6 +3343,22 @@
     },
     {
       "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-17-ACTUAL-VS-PROMISED-ARTIFACT-GAP-AUDIT-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `17-actual-vs-promised-artifact-gap-audit.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-18-RALPH-20-ARTIFACT-COMPLETENESS-AUDIT-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `18-ralph-20-artifact-completeness-audit.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
       "target": "NODE-PORTAL-README-MD",
       "type": "inferred_reference",
       "evidence": "portal/portal-data.json",
@@ -3248,6 +3380,14 @@
       "evidence": "portal/portal-data.json",
       "authority": "inferred",
       "reason": "text reference `records/sdlc-stage-coverage-matrix.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-RECORDS-ARTIFACT-CATALOG-COVERAGE-MATRIX-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `records/artifact-catalog-coverage-matrix.json`"
     },
     {
       "source": "NODE-PORTAL-PORTAL-DATA-JSON",
@@ -3328,6 +3468,14 @@
       "evidence": "portal/portal-data.json",
       "authority": "inferred",
       "reason": "text reference `evidence/execution-kernel-report.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-ARTIFACT-CATALOG-COVERAGE-AUDIT-RESULTS-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/artifact-catalog-coverage-audit-results.json`"
     },
     {
       "source": "NODE-PORTAL-PORTAL-DATA-JSON",
@@ -3864,6 +4012,14 @@
       "evidence": "portal/README.md",
       "authority": "inferred",
       "reason": "text reference `diagrams.md`"
+    },
+    {
+      "source": "NODE-RECORDS-ARTIFACT-CATALOG-COVERAGE-MATRIX-JSON",
+      "target": "NODE-PORTAL-README-MD",
+      "type": "inferred_reference",
+      "evidence": "records/artifact-catalog-coverage-matrix.json",
+      "authority": "inferred",
+      "reason": "text reference `README.md`"
     },
     {
       "source": "NODE-RECORDS-HAWKEYE-CONFORMANCE-AUDIT-RECORD-JSON",

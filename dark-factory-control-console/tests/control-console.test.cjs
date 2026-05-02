@@ -19,6 +19,9 @@ function main() {
   assert.strictEqual(packet.meta_meta_first, true, "invocation packet must enforce meta-meta first");
   assert.strictEqual(packet.entry_skill, "df-meta-attractor", "entry skill must be df-meta-attractor");
   assert.strictEqual(packet.required_sequence[0].skills[0], "df-meta-attractor", "first stage must be meta-meta");
+  assert(packet.agent_protocols.agui, "invocation packet should expose AG-UI protocol contract");
+  assert(packet.agent_protocols.a2ui, "invocation packet should expose A2UI protocol contract");
+  assert(packet.agent_protocols.mcp_apps, "invocation packet should expose MCP Apps protocol contract");
 
   const run = consoleApp.createRun({
     projectName: "Console Test",
@@ -28,6 +31,10 @@ function main() {
   });
   assert.strictEqual(run.current_stage, "stage-00-meta-meta", "new runs start at meta-meta");
   assert.strictEqual(run.stages[1].status, "locked", "child stages start locked");
+  assert(run.agui_events.some((event) => event.type === "RUN_STARTED"), "new runs should start an AG-UI event stream");
+  const initialProtocol = consoleApp.buildProtocolState(run.run_id);
+  assert(initialProtocol.a2ui_surfaces.some((surface) => surface.surface_id === "current-stage-report"), "protocol state should expose A2UI stage report surface");
+  assert(initialProtocol.mcp_apps.tools.some((tool) => tool.name === "dfms.askAgent"), "protocol state should expose MCP Apps askAgent tool");
 
   let advanced = consoleApp.invokeStage(run.run_id, "stage-00-meta-meta");
   assert(advanced.execution_outputs.some((record) => record.includes("meta-attractor-run-record.json")), "meta-meta execution should create an attractor record");
@@ -49,8 +56,16 @@ function main() {
 
   advanced = consoleApp.executeReadyPipeline(advanced.run_id);
   assert(advanced.execution_outputs.some((record) => record.includes("engagement-governance-record.json")), "pipeline should execute governance records");
+  assert(advanced.execution_outputs.some((record) => record.includes("agent-protocol-session-record.json")), "pipeline should execute protocol session records");
   assert(advanced.generated_meta_skill.name.startsWith("generated-"), "generated meta skill should be attached to the run");
   assert.strictEqual(advanced.status, "ready_for_handoff", "pipeline should reach handoff readiness after answers are complete");
+  const interaction = consoleApp.createAgentMessage(advanced.run_id, {
+    mode: "resteer",
+    message: "Resteer the design and reopen the PRD downstream review path."
+  });
+  assert(interaction.interaction.response.resteer_recommended, "agent interrogation should detect a resteer path");
+  advanced = consoleApp.loadRun ? consoleApp.loadRun(advanced.run_id) : interaction.run;
+  advanced = interaction.run;
   const validation = consoleApp.validateRunExecution(advanced.run_id);
   assert.strictEqual(validation.status, "pass", `execution validator should pass: ${JSON.stringify(validation.findings)}`);
   const ralph = consoleApp.runRalphAudit(advanced.run_id, 20);

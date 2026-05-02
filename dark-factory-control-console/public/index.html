@@ -66,6 +66,62 @@
         </div>
       </section>
 
+      <section class="band protocol-workbench" aria-labelledby="protocol-title">
+        <div class="section-head">
+          <div>
+            <h2 id="protocol-title">Agent Interaction Protocol Workbench</h2>
+            <p>AG-UI event stream, A2UI dynamic surfaces, and MCP Apps tool/resources for step-by-step SDLC factory control.</p>
+          </div>
+          <div class="protocol-pills" aria-label="Protocol status">
+            <span id="protocolAguiStatus" class="status-chip strong">AG-UI: --</span>
+            <span id="protocolA2uiStatus" class="status-chip accent">A2UI: --</span>
+            <span id="protocolMcpStatus" class="status-chip">MCP Apps: --</span>
+          </div>
+        </div>
+
+        <div class="protocol-grid">
+          <div class="agent-question-panel">
+            <div class="section-head tight">
+              <div>
+                <h3>Ask Or Resteer Anytime</h3>
+                <p>The agent responds with the active stage report, blockers, legal next action, and change-control path.</p>
+              </div>
+            </div>
+            <div class="agent-input-row">
+              <select id="agentMessageMode" aria-label="Agent message mode">
+                <option value="ask">Ask</option>
+                <option value="audit">Audit</option>
+                <option value="resteer">Resteer</option>
+                <option value="explain">Explain</option>
+              </select>
+              <button id="sendAgentMessage" class="button primary">Send To Agent</button>
+            </div>
+            <textarea id="agentMessage" rows="4" placeholder="Ask what is blocked, request a stage report, or describe a design change to route through change control."></textarea>
+            <div id="agentResponse" class="agent-response"></div>
+          </div>
+
+          <div class="stage-report-panel">
+            <div class="stage-report-header">
+              <span>Current Stage Report</span>
+              <strong id="stageReportTitle">No active stage</strong>
+            </div>
+            <p id="stageReportBody">Start or select a project to inspect agent protocol state.</p>
+            <div id="aguiEventStream" class="event-stream"></div>
+          </div>
+        </div>
+
+        <div class="protocol-grid lower">
+          <div>
+            <h3>A2UI Declared Surfaces</h3>
+            <div id="a2uiSurfaces" class="surface-grid"></div>
+          </div>
+          <div>
+            <h3>MCP Apps Tools And Resources</h3>
+            <div id="mcpAppsList" class="stack-list protocol-list"></div>
+          </div>
+        </div>
+      </section>
+
       <section class="band agentic-grid" aria-labelledby="swarm-title">
         <div>
           <div class="section-head tight">

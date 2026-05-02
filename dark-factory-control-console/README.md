@@ -34,6 +34,20 @@ The UI creates governed invocation packets, generated meta-skill contracts, per-
 
 Codex skills are instruction bundles, not standalone browser functions. The console therefore records skill invocation packets for Codex-mediated execution. Where DFMS has executable tooling, such as `df-dashboard-control/scripts/df_dashboard_control.py`, the server calls it directly through `/api/redo`.
 
+## Agent Interaction Protocol Workbench
+
+The console includes a protocol-aware workflow cockpit for agent-centric execution:
+
+- AG-UI-style event ledger: every run start, stage activation, user answer, user message, gate result, pipeline execution, RALPH audit, and resteer request is persisted in `agui_events`.
+- A2UI-style declarative surfaces: the server emits safe data-only surface descriptors for stage reports, customer interrogation, change control, evidence review, and protocol status.
+- MCP Apps-style tool/resource manifest: the server exposes tool descriptors with `_meta.ui.resourceUri`, JSON resources, and `ui://` resources so an MCP host can understand how the workflow should be rendered and invoked.
+- Ask/resteer anytime panel: humans can interrogate the active agent for blockers, legal next action, audit posture, or change-control routing without leaving the dashboard.
+
+Protocol endpoints:
+
+- `GET /api/runs/:id/protocol`
+- `POST /api/runs/:id/agent-message`
+
 ## Human Project Portal
 
 The portal is per-project, not just global documentation. A human owner can:

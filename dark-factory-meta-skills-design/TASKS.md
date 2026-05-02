@@ -73,6 +73,7 @@
 | `TB-20260429-022` | `accepted` | Audit and correct the todo/habits artifact completeness claim | Codex | `CG-NODE-TODO-ARTIFACT-TRUTH-AUDIT-001` | `WL-TODO-ARTIFACT-TRUTH-AUDIT-001` | `KG:TB-20260429-022` | `17-actual-vs-promised-artifact-gap-audit.md`, portal index updates, layer-map language fixes | `GATE-TODO-ARTIFACT-TRUTH-AUDIT-001:pass` | actual inventory counted, gap audit added, portal validator pass, portal-index audit pass, layer-map UI test pass, task ledger pass | `RUN-CLOSED` | truth correction complete; full artifact saturation remains a separate change-controlled run |
 | `TB-20260429-023` | `accepted` | Run RALPH-20 artifact-catalog completeness audit for the todo/habits demonstrator | Codex | `CG-NODE-TODO-ARTIFACT-CATALOG-COVERAGE-001` | `WL-TODO-ARTIFACT-CATALOG-COVERAGE-001` | `KG:TB-20260429-023` | catalog coverage audit document, coverage matrix, audit validator, portal and layer-map updates | `GATE-TODO-ARTIFACT-CATALOG-COVERAGE-001:pass-with-gaps` | 63 catalog IDs checked; 12 standalone, 12 combined, 17 partial, 8 not applicable, 0 deferred, 14 missing; validators pass | `RUN-CLOSED` | truthful catalog coverage matrix complete; full saturation is explicitly failed |
 | `TB-20260429-024` | `accepted` | Update DFMS skills so serious runs default to full artifact saturation and cannot silently tailor down | Codex | `CG-NODE-FULL-ARTIFACT-SATURATION-GUARD-001` | `WL-FULL-ARTIFACT-SATURATION-GUARD-001` | `KG:TB-20260429-024` | live and workspace skill updates, artifact coverage matrix template, strict coverage validator | `GATE-FULL-ARTIFACT-SATURATION-GUARD-001:pass` | skill bundle pass, template library pass, validator compile pass, negative rejection of incomplete todo/habits coverage matrix confirmed | `RUN-CLOSED` | future serious runs require full saturation or explicit human-approved waivers |
+| `TB-20260501-025` | `accepted` | Add AG-UI, A2UI, and MCP Apps agent-centric workflow cockpit to the local DFMS control console | Codex | `CG-NODE-AGENT-PROTOCOL-UX-001` | `WL-AGENT-PROTOCOL-UX-001` | `KG:TB-20260501-025` | protocol profile, run event ledger, A2UI surface descriptors, MCP Apps manifest, ask/resteer panel, protocol tests | `GATE-AGENT-PROTOCOL-UX-001:pass` | official protocol source check, server and client syntax pass, unit regression pass, Playwright workflow pass, public repo sync planned | `RUN-CLOSED` | local agent-centric protocol cockpit boundary complete |
 
 ## Deferred And Retired Beads
 
@@ -657,6 +658,30 @@
 - Re-entry trigger: Any future serious DFMS run starts without artifact generation mode, coverage matrix, or explicit human-approved waivers.
 - Residual risk: The guard now blocks future false closure, but it does not retroactively generate the missing todo/habits artifacts.
 
+### `TB-20260501-025`
+
+- Objective: Add AG-UI, A2UI, and MCP Apps agent-centric workflow cockpit to the local DFMS control console.
+- Scope boundary: Local single-user console UX, API protocol state, persisted run evidence, and regression tests; not a hosted multi-user MCP server with authentication.
+- Source intent: User requested an AI-agent-centric UX workflow using A2UI, AG-UI, and MCP Apps protocol so agents can interact step by step for brownfield or greenfield projects, report every stage, and allow human interrogation and resteer at any time.
+- Requirement links: meta-meta first, generated meta-skill execution, product-specific skills, strict workflow order, human interrogation, change control, no skipped stages, stage reports, dashboard control, evidence ledger, browser/WYSIWYG verification.
+- Interrogation answer links: current user message in this thread.
+- Control graph node: `CG-NODE-AGENT-PROTOCOL-UX-001`
+- Work-ledger item: `WL-AGENT-PROTOCOL-UX-001`
+- Knowledge-graph node: `KG:TB-20260501-025`
+- Inputs: local DFMS control console, official AG-UI documentation, official A2UI documentation, MCP Apps/MCP-UI documentation, existing portal/change-control tests.
+- Outputs: `dark-factory-control-console/server.js`, `dark-factory-control-console/public/index.html`, `dark-factory-control-console/public/app.js`, `dark-factory-control-console/public/styles.css`, `dark-factory-control-console/tests/control-console.test.cjs`, `dark-factory-control-console/tests/browser-console.test.cjs`, `dark-factory-control-console/README.md`.
+- Acceptance gate: Runs persist protocol events; protocol endpoint returns AG-UI event stream, A2UI surfaces, MCP Apps tool/resource manifest, and agent status report; UI can ask the agent, see protocol state, execute stages, run RALPH, compute redo, and open change control; tests pass.
+- Evidence required: primary source check for protocol semantics, syntax checks, unit regression, Playwright browser workflow, task ledger validation, public repo sync evidence if pushed.
+- Evidence provided: AG-UI/A2UI/MCP Apps source check performed; `node --check server.js`; `node --check public/app.js`; `npm test`; `npm run test:browser`; stale server listener found and fixed before browser verification.
+- Primary critics: Agent Protocol Architect, TPM Workflow Auditor, Human Review Portal Designer.
+- Adversarial critics: Protocol-Label Theater Critic, Stale-Ledger Critic, No-Skip Workflow Critic.
+- RALPH loops: Focused RALPH pass on protocol-as-evidence, stage ordering, user interrogation, resteer path, and WYSIWYG browser behavior.
+- Token SWAG: medium for local console implementation and verification; high for a hosted multi-user MCP Apps server with auth and durable database.
+- Approval state: user requested the implementation directly.
+- Next bead: `RUN-CLOSED` for local console protocol cockpit; hosted multi-user protocol server requires a new change-controlled bead.
+- Re-entry trigger: Any future claim that DFMS has agent-centric interactive protocol support without persisted events, dynamic surfaces, MCP-style tool/resource descriptors, or browser workflow evidence.
+- Residual risk: The console exposes MCP Apps-style descriptors and local endpoints; it is not yet packaged as a separate installable remote MCP server.
+
 ## Open Approvals
 
 | Approval ID | Bead ID | Approver | Decision Needed | Token/Scope Impact | Due | State |
@@ -755,6 +780,11 @@
 | `VAL-20260429-081` | `validate_skill_bundle.py` | `codex-skills` after full-saturation guard update | pass | workspace skill bundle remains structurally valid | rerun after skill edits |
 | `VAL-20260429-082` | `validate_artifact_template_library.py` | artifact template library after coverage-matrix template addition | pass | 63 indexed artifacts and zero weak-phrase warnings | rerun after template edits |
 | `VAL-20260429-083` | `validate_artifact_coverage_matrix.py` negative check | current todo/habits coverage matrix | pass-negative | stricter validator rejects incomplete matrix and confirms it cannot pass full-artifact gate | rerun after todo/habits artifact coverage changes |
+| `VAL-20260501-084` | official protocol source check | AG-UI, A2UI, MCP Apps/MCP-UI docs | pass | AG-UI event stream, A2UI declarative UI, and MCP Apps tool-linked UI resources confirmed from primary sources | recheck before protocol policy changes |
+| `VAL-20260501-085` | `node --check` | `dark-factory-control-console/server.js` and `public/app.js` after protocol cockpit update | pass | server and browser-controller syntax accepted | rerun after console code changes |
+| `VAL-20260501-086` | `npm test` | protocol-aware control-console backend regression | pass | invocation packet protocol contracts, AG-UI run events, A2UI surfaces, MCP Apps manifest, agent-message record, pipeline, RALPH, portal, and change-control assertions passed | keep as API regression |
+| `VAL-20260501-087` | `npm run test:browser` | protocol-aware console browser workflow | pass | browser rendered protocol workbench, created run, asked agent, saw AG-UI event, executed pipeline, ran RALPH, validated, computed redo, opened change request, and saved screenshots | keep as WYSIWYG regression |
+| `VAL-20260501-088` | `validate_tasks_md.py` | `dark-factory-meta-skills-design/TASKS.md` after protocol cockpit bead update | pass | strict bead ledger validation completed after adding `TB-20260501-025` | maintain on every governed update |
 
 ## Change Log
 
@@ -786,3 +816,4 @@
 | 2026-04-29 | Codex | `TB-20260429-022` | Added todo/habits actual-vs-promised artifact gap audit and corrected portal/layer-map wording | User challenged missing artifacts and overclaiming against the full meta-meta artifact vision | `17-actual-vs-promised-artifact-gap-audit.md`, portal validator pass, layer-map test pass |
 | 2026-04-29 | Codex | `TB-20260429-023` | Added 63-item artifact-catalog coverage matrix, validator, and RALPH-20 completeness audit | User requested rigorous testing after not finding all todo/habits artifacts | catalog coverage audit pass-with-gaps, portal validator pass, layer-map test pass, task ledger pass |
 | 2026-04-29 | Codex | `TB-20260429-024` | Hardened DFMS skills to default serious runs to full artifact saturation and require explicit human-approved tailoring waivers | User rejected lazy assumptions and asked to update instructions and skills | skill bundle pass, template library pass, validator compile pass, negative rejection check |
+| 2026-05-01 | Codex | `TB-20260501-025` | Added AG-UI, A2UI, and MCP Apps protocol-aware agent workflow cockpit to the local control console | User requested an agent-centric UX for greenfield and brownfield DFMS runs with step reports, interrogation, and resteer | source check, syntax checks, unit regression, Playwright workflow pass |

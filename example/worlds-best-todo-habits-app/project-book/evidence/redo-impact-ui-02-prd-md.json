@@ -1,13 +1,13 @@
 {
   "zero_slop_policy": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
-  "report_id": "REDO-IMPACT-dfms-ui-console-run-20260428-211007",
+  "report_id": "REDO-IMPACT-dfms-ui-console-run-20260501-185746",
   "project": "DFMS UI Console Run",
   "source_request": "UI-REDO-REQUEST",
   "selected_node": "NODE-02-PRD-MD",
   "selected_node_path": "02-prd.md",
-  "generated_at": "2026-04-29T04:10:07+00:00",
+  "generated_at": "2026-05-02T01:57:46+00:00",
   "closure": {
-    "impacted_node_count": 9,
+    "impacted_node_count": 11,
     "impacted_nodes": [
       {
         "id": "NODE-02-PRD-MD",
@@ -114,12 +114,38 @@
         "tags": []
       },
       {
+        "id": "NODE-17-ACTUAL-VS-PROMISED-ARTIFACT-GAP-AUDIT-MD",
+        "kind": "artifact",
+        "title": "Actual Vs Promised Artifact Gap Audit",
+        "path": "17-actual-vs-promised-artifact-gap-audit.md",
+        "stage": "project-book",
+        "status": "draft",
+        "owner": "",
+        "gate": "",
+        "certificate": "",
+        "redo_boundary": false,
+        "tags": []
+      },
+      {
         "id": "NODE-PORTAL-README-MD",
         "kind": "portal",
         "title": "Northstar Daily Human Review Portal",
         "path": "portal/README.md",
         "stage": "portal",
         "status": "draft",
+        "owner": "",
+        "gate": "",
+        "certificate": "",
+        "redo_boundary": false,
+        "tags": []
+      },
+      {
+        "id": "NODE-RECORDS-ARTIFACT-CATALOG-COVERAGE-MATRIX-JSON",
+        "kind": "artifact",
+        "title": "Artifact Catalog Coverage Matrix",
+        "path": "records/artifact-catalog-coverage-matrix.json",
+        "stage": "project-book",
+        "status": "blocked",
         "owner": "",
         "gate": "",
         "certificate": "",
@@ -220,6 +246,19 @@
         "original_target": "NODE-PORTAL-INDEX-HTML"
       },
       {
+        "source": "NODE-17-ACTUAL-VS-PROMISED-ARTIFACT-GAP-AUDIT-MD",
+        "target": "NODE-PORTAL-INDEX-HTML",
+        "type": "inferred_reference",
+        "evidence": "17-actual-vs-promised-artifact-gap-audit.md",
+        "authority": "inferred",
+        "reason": "text reference `index.html`",
+        "impact_source": "NODE-PORTAL-INDEX-HTML",
+        "impact_target": "NODE-17-ACTUAL-VS-PROMISED-ARTIFACT-GAP-AUDIT-MD",
+        "impact_direction": "reverse",
+        "original_source": "NODE-17-ACTUAL-VS-PROMISED-ARTIFACT-GAP-AUDIT-MD",
+        "original_target": "NODE-PORTAL-INDEX-HTML"
+      },
+      {
         "source": "NODE-PORTAL-README-MD",
         "target": "NODE-PORTAL-INDEX-HTML",
         "type": "inferred_reference",
@@ -231,6 +270,19 @@
         "impact_direction": "reverse",
         "original_source": "NODE-PORTAL-README-MD",
         "original_target": "NODE-PORTAL-INDEX-HTML"
+      },
+      {
+        "source": "NODE-RECORDS-ARTIFACT-CATALOG-COVERAGE-MATRIX-JSON",
+        "target": "NODE-PORTAL-README-MD",
+        "type": "inferred_reference",
+        "evidence": "records/artifact-catalog-coverage-matrix.json",
+        "authority": "inferred",
+        "reason": "text reference `README.md`",
+        "impact_source": "NODE-PORTAL-README-MD",
+        "impact_target": "NODE-RECORDS-ARTIFACT-CATALOG-COVERAGE-MATRIX-JSON",
+        "impact_direction": "reverse",
+        "original_source": "NODE-RECORDS-ARTIFACT-CATALOG-COVERAGE-MATRIX-JSON",
+        "original_target": "NODE-PORTAL-README-MD"
       }
     ]
   },
@@ -340,12 +392,38 @@
       "tags": []
     },
     {
+      "id": "NODE-17-ACTUAL-VS-PROMISED-ARTIFACT-GAP-AUDIT-MD",
+      "kind": "artifact",
+      "title": "Actual Vs Promised Artifact Gap Audit",
+      "path": "17-actual-vs-promised-artifact-gap-audit.md",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
       "id": "NODE-PORTAL-README-MD",
       "kind": "portal",
       "title": "Northstar Daily Human Review Portal",
       "path": "portal/README.md",
       "stage": "portal",
       "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-RECORDS-ARTIFACT-CATALOG-COVERAGE-MATRIX-JSON",
+      "kind": "artifact",
+      "title": "Artifact Catalog Coverage Matrix",
+      "path": "records/artifact-catalog-coverage-matrix.json",
+      "stage": "project-book",
+      "status": "blocked",
       "owner": "",
       "gate": "",
       "certificate": "",
@@ -450,12 +528,38 @@
       "tags": []
     },
     {
+      "id": "NODE-17-ACTUAL-VS-PROMISED-ARTIFACT-GAP-AUDIT-MD",
+      "kind": "artifact",
+      "title": "Actual Vs Promised Artifact Gap Audit",
+      "path": "17-actual-vs-promised-artifact-gap-audit.md",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
       "id": "NODE-PORTAL-README-MD",
       "kind": "portal",
       "title": "Northstar Daily Human Review Portal",
       "path": "portal/README.md",
       "stage": "portal",
       "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-RECORDS-ARTIFACT-CATALOG-COVERAGE-MATRIX-JSON",
+      "kind": "artifact",
+      "title": "Artifact Catalog Coverage Matrix",
+      "path": "records/artifact-catalog-coverage-matrix.json",
+      "stage": "project-book",
+      "status": "blocked",
       "owner": "",
       "gate": "",
       "certificate": "",
@@ -504,7 +608,7 @@
     "df-dashboard-control"
   ],
   "task_bead": {
-    "bead_id": "TB-REDO-20260428-211007",
+    "bead_id": "TB-REDO-20260501-185746",
     "state": "planned",
     "gate": "GATE-REDO-IMPACT",
     "evidence_target": "redo-impact-report.json"

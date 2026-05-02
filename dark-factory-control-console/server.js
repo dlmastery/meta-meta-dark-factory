@@ -104,7 +104,8 @@ const STAGE_RECORDS = {
   "stage-03-skill-routing": [
     "skill-routing-record.json",
     "lifecycle-control-graph.json",
-    "execution-kernel-next-action.json"
+    "execution-kernel-next-action.json",
+    "agent-protocol-session-record.json"
   ],
   "stage-04-artifacts": [
     "artifact-bom.json",
@@ -126,6 +127,50 @@ const STAGE_RECORDS = {
     "human-agent-handoff-record.json",
     "context-memory-pack.json"
   ]
+};
+
+const PROTOCOL_PROFILE = {
+  agui: {
+    name: "AG-UI",
+    role: "event_stream",
+    local_profile: "dfms-agui-control-events-v1",
+    events: [
+      "RUN_STARTED",
+      "STAGE_ACTIVE",
+      "STAGE_INVOKED",
+      "STAGE_REPORT_READY",
+      "STATE_DELTA",
+      "USER_ANSWERED",
+      "USER_MESSAGE",
+      "USER_RESTEER_REQUESTED",
+      "HUMAN_DECISION_REQUIRED",
+      "GATE_PASSED",
+      "GATE_BLOCKED",
+      "PIPELINE_EXECUTED",
+      "RALPH_AUDIT_COMPLETED"
+    ],
+    contract: "Every meaningful user, agent, gate, stage, and state transition is persisted as a structured event."
+  },
+  a2ui: {
+    name: "A2UI",
+    role: "declarative_agent_surfaces",
+    local_profile: "dfms-a2ui-surfaces-v1",
+    surfaces: [
+      "current-stage-report",
+      "customer-interrogation",
+      "change-control",
+      "artifact-evidence-board",
+      "protocol-status"
+    ],
+    contract: "The agent declares safe data-only UI surfaces that the console renders with local Material-style components."
+  },
+  mcp_apps: {
+    name: "MCP Apps",
+    role: "tool_linked_interactive_resources",
+    local_profile: "dfms-mcp-apps-manifest-v1",
+    resource_mime_type: "text/html;profile=mcp-app",
+    contract: "Factory tools expose UI resources, resource URIs, schemas, and human-consent boundaries for interactive workflow execution."
+  }
 };
 
 function ensureDir(dir) {
@@ -151,6 +196,25 @@ function readJson(file, fallback = null) {
 function writeJson(file, data) {
   ensureDir(path.dirname(file));
   fs.writeFileSync(file, JSON.stringify(data, null, 2) + "\n", "utf8");
+}
+
+function appendAguiEvent(run, type, payload = {}) {
+  run.agui_events = Array.isArray(run.agui_events) ? run.agui_events : [];
+  const event = {
+    zero_slop_policy: ZERO_SLOP,
+    protocol: "AG-UI",
+    profile: PROTOCOL_PROFILE.agui.local_profile,
+    event_id: `AGUI-${Date.now()}-${String(run.agui_events.length + 1).padStart(4, "0")}`,
+    type,
+    at: nowIso(),
+    run_id: run.run_id,
+    stage_id: run.current_stage || "",
+    actor: payload.actor || "dark-factory-agent-swarm",
+    payload
+  };
+  run.agui_events.push(event);
+  if (run.agui_events.length > 240) run.agui_events = run.agui_events.slice(-240);
+  return event;
 }
 
 function parseSkill(file) {
@@ -252,6 +316,8 @@ function createRun(input) {
     execution_outputs: [],
     change_requests: [],
     human_decisions: [],
+    agent_messages: [],
+    agui_events: [],
     project_collection: {
       status: "not_started",
       required_answer_count: QUESTIONS.filter((question) => question.required).length,
@@ -266,6 +332,19 @@ function createRun(input) {
       }
     ]
   };
+  appendAguiEvent(run, "RUN_STARTED", {
+    actor: "human-owner",
+    project_name: run.project_name,
+    project_type: run.project_type,
+    token_swag: run.token_swag,
+    zero_slop_policy: ZERO_SLOP
+  });
+  appendAguiEvent(run, "STAGE_ACTIVE", {
+    stage_id: run.current_stage,
+    stage_title: run.stages[0].title,
+    gate: run.stages[0].gate,
+    legal_next_action: "Invoke the meta-meta attractor before child skill execution."
+  });
   saveRun(run);
   return run;
 }
@@ -298,6 +377,8 @@ function saveRun(run) {
   run.updated_at = nowIso();
   run.change_requests = Array.isArray(run.change_requests) ? run.change_requests : [];
   run.human_decisions = Array.isArray(run.human_decisions) ? run.human_decisions : [];
+  run.agent_messages = Array.isArray(run.agent_messages) ? run.agent_messages : [];
+  run.agui_events = Array.isArray(run.agui_events) ? run.agui_events : [];
   run.interrogation = scoreInterrogation(run.answers || {});
   run.project_collection = summarizeProjectCollection(run);
   run.generated_meta_skill = deriveGeneratedMetaSkill(run);
@@ -361,6 +442,17 @@ function answerQuestion(runId, payload) {
     updated_at: nowIso()
   };
   run.audit_log.push({ at: nowIso(), event: "answer_updated", detail: qid });
+  appendAguiEvent(run, "USER_ANSWERED", {
+    actor: "human-owner",
+    question_id: qid,
+    answer_length: run.answers[qid].value.length,
+    completeness_after_answer: scoreInterrogation(run.answers).completeness
+  });
+  appendAguiEvent(run, "STATE_DELTA", {
+    field: "interrogation",
+    gate: scoreInterrogation(run.answers).gate,
+    active_stage: run.current_stage
+  });
   saveRun(run);
   return run;
 }
@@ -406,6 +498,15 @@ function buildInvocationPacket(runLike, answers) {
       reapproval_trigger: runLike.reapprovalTrigger || ""
     },
     generated_meta_skill: runLike.generated_meta_skill || null,
+    agent_protocols: {
+      agui: PROTOCOL_PROFILE.agui,
+      a2ui: PROTOCOL_PROFILE.a2ui,
+      mcp_apps: PROTOCOL_PROFILE.mcp_apps,
+      run_protocol_endpoint: runLike.run_id ? `/api/runs/${encodeURIComponent(runLike.run_id)}/protocol` : "",
+      agent_message_endpoint: runLike.run_id ? `/api/runs/${encodeURIComponent(runLike.run_id)}/agent-message` : "",
+      human_can_interrogate_anytime: true,
+      human_can_resteer_anytime_through_change_control: true
+    },
     required_sequence: STAGES.map((stage) => ({ id: stage.id, title: stage.title, skills: stage.skills, gate: stage.gate })),
     executable_records_by_stage: STAGE_RECORDS,
     open_change_requests: (runLike.change_requests || []).filter((item) => !["closed", "rejected"].includes(item.state)).map((item) => ({
@@ -443,6 +544,16 @@ function invokeStage(runId, stageId) {
   stage.status = stage.status === "locked" ? "active" : stage.status;
   run.execution_outputs = Array.from(new Set([...(run.execution_outputs || []), ...execution.records]));
   run.audit_log.push({ at: nowIso(), event: "stage_invoked", detail: stageId });
+  appendAguiEvent(run, "STAGE_INVOKED", {
+    stage_id: stage.id,
+    stage_title: stage.title,
+    skills: stage.skills,
+    records: execution.records,
+    execution_status: execution.status
+  });
+  appendAguiEvent(run, "STAGE_REPORT_READY", {
+    stage_report: buildStageReport(run, stage)
+  });
   saveRun(run);
   return run;
 }
@@ -571,6 +682,24 @@ function buildStageRecord(run, stage, recordName) {
       status: "accepted",
       legal_next_action: run.current_stage,
       blocked_actions: ["direct child-skill execution before active gate", "artifact completion without evidence", "production handoff without owner"]
+    };
+  }
+  if (recordName === "agent-protocol-session-record.json") {
+    return {
+      ...base,
+      status: "accepted",
+      protocols: PROTOCOL_PROFILE,
+      agui_event_count: (run.agui_events || []).length,
+      a2ui_surface_count: buildA2uiSurfaces(run).length,
+      mcp_apps_tool_count: buildMcpAppsManifest(run).tools.length,
+      user_controls: [
+        "interrogate agent any time",
+        "answer customer grill questions",
+        "open change request and resteer",
+        "execute only legal next stage",
+        "inspect protocol event stream and MCP-style tool/resource descriptors"
+      ],
+      no_skip_rule: "A stage cannot be claimed accepted without invocation evidence, records, trace/evidence posture, and a protocol-visible event trail."
     };
   }
   if (recordName === "artifact-bom.json") {
@@ -758,6 +887,309 @@ ${answers["ANS-006"].value || "Missing."}
 `;
 }
 
+function activeStage(run) {
+  return (run.stages || []).find((stage) => stage.id === run.current_stage) || (run.stages || [])[0] || STAGES[0];
+}
+
+function buildStageReport(run, stageLike = null) {
+  const stage = typeof stageLike === "string"
+    ? (run.stages || []).find((item) => item.id === stageLike)
+    : stageLike || activeStage(run);
+  const canonical = STAGES.find((item) => item.id === stage?.id) || stage || STAGES[0];
+  const outputs = (run.execution_outputs || []).filter((item) => (STAGE_RECORDS[canonical.id] || []).some((record) => item.endsWith(record)) || item.includes(canonical.id));
+  const missingQuestions = QUESTIONS
+    .filter((question) => question.required && !(run.answers?.[question.id]?.value || "").trim())
+    .map((question) => ({ id: question.id, label: question.label, prompt: question.prompt }));
+  const blockers = [];
+  if (canonical.id === "stage-01-interrogation" && run.interrogation?.gate !== "pass") {
+    blockers.push(`Interrogation gate is ${run.interrogation?.gate || "unknown"} at ${run.interrogation?.completeness || 0}% completeness.`);
+  }
+  if (stage?.status === "locked") blockers.push("Stage is locked behind predecessor gates.");
+  if (stage?.status === "blocked") blockers.push(...(stage.gate_notes || ["Stage gate is blocked."]));
+  return {
+    zero_slop_policy: ZERO_SLOP,
+    report_type: "dfms_stage_report",
+    stage_id: canonical.id,
+    stage_title: canonical.title,
+    stage_kind: canonical.kind,
+    status: stage?.status || "locked",
+    gate_result: stage?.gate_result || "not_run",
+    gate: canonical.gate,
+    skills: canonical.skills,
+    expected_records: STAGE_RECORDS[canonical.id] || [],
+    generated_records: outputs,
+    blockers,
+    human_questions: canonical.id === "stage-01-interrogation" ? missingQuestions : [],
+    next_action: stageNextAction(run, canonical, blockers),
+    assurance: [
+      "Meta-meta remains first for governed work.",
+      "Future stages stay locked until predecessor gates pass.",
+      "Human resteer must open change control and reopen downstream gates.",
+      "Every stage report is exposed through AG-UI events, A2UI surfaces, and MCP Apps resources."
+    ]
+  };
+}
+
+function stageNextAction(run, stage, blockers) {
+  if (blockers.length) return "Resolve blockers, then re-invoke or advance the active stage.";
+  if (stage.id !== run.current_stage) return "Inspect only; execute the currently active stage.";
+  if (stage.id === "stage-01-interrogation" && run.interrogation?.gate !== "pass") return "Answer required customer grill questions and resolve contradictions.";
+  if (!(run.stages || []).find((item) => item.id === stage.id)?.invocations?.length) return "Invoke current stage.";
+  return "Advance gate or execute the ready pipeline.";
+}
+
+function buildAgentReport(run) {
+  const validation = validateRunExecution(run);
+  const current = activeStage(run);
+  return {
+    zero_slop_policy: ZERO_SLOP,
+    report_type: "dfms_agent_status_report",
+    run_id: run.run_id,
+    generated_at: nowIso(),
+    active_stage: buildStageReport(run, current),
+    validation: {
+      status: validation.status,
+      finding_count: validation.finding_count,
+      p1_count: validation.p1_count,
+      p2_count: validation.p2_count
+    },
+    project_collection: run.project_collection || summarizeProjectCollection(run),
+    next_actions: projectPortalNextActions(run, validation),
+    can_interrogate_anytime: true,
+    can_resteer_anytime: true,
+    resteer_rule: "Use the change-request surface so downstream artifacts, gates, tests, and certificates reopen through traceable change control."
+  };
+}
+
+function buildA2uiSurfaces(run) {
+  const stageReport = buildStageReport(run);
+  const requiredQuestions = QUESTIONS.filter((question) => question.required);
+  const answered = requiredQuestions.filter((question) => (run.answers?.[question.id]?.value || "").trim().length >= 8);
+  const openChanges = (run.change_requests || []).filter((item) => !["closed", "rejected"].includes(item.state));
+  return [
+    {
+      protocol: "A2UI",
+      profile: PROTOCOL_PROFILE.a2ui.local_profile,
+      surface_id: "protocol-status",
+      component: "ProtocolStatusPanel",
+      title: "Agent Interaction Protocols",
+      props: {
+        agui_events: (run.agui_events || []).length,
+        a2ui_surfaces: PROTOCOL_PROFILE.a2ui.surfaces,
+        mcp_apps_tools: buildMcpAppsManifest(run).tools.map((tool) => tool.name),
+        no_skip_policy: "Legal next action is computed from run state, stage gates, change control, and validation."
+      }
+    },
+    {
+      protocol: "A2UI",
+      profile: PROTOCOL_PROFILE.a2ui.local_profile,
+      surface_id: "current-stage-report",
+      component: "StageReportCard",
+      title: stageReport.stage_title,
+      props: stageReport,
+      actions: ["invokeCurrentStage", "advanceGate", "executeReadyPipeline"]
+    },
+    {
+      protocol: "A2UI",
+      profile: PROTOCOL_PROFILE.a2ui.local_profile,
+      surface_id: "customer-interrogation",
+      component: "InterrogationForm",
+      title: "Customer Grill",
+      props: {
+        required_questions: requiredQuestions.length,
+        answered_required: answered.length,
+        completeness: run.interrogation?.completeness || 0,
+        gate: run.interrogation?.gate || "blocked",
+        contradictions: run.interrogation?.contradictions || [],
+        questions: QUESTIONS
+      },
+      actions: ["answerQuestion", "askAgent"]
+    },
+    {
+      protocol: "A2UI",
+      profile: PROTOCOL_PROFILE.a2ui.local_profile,
+      surface_id: "change-control",
+      component: "ResteerChangeRequestForm",
+      title: "Resteer Or Change Design",
+      props: {
+        open_change_requests: openChanges,
+        target_stages: STAGES.map((stage) => ({ id: stage.id, title: stage.title })),
+        token_reapproval_trigger: run.token_swag?.reapproval_trigger || ""
+      },
+      actions: ["openChangeRequest", "computeRedoClosure"]
+    },
+    {
+      protocol: "A2UI",
+      profile: PROTOCOL_PROFILE.a2ui.local_profile,
+      surface_id: "artifact-evidence-board",
+      component: "ArtifactEvidenceBoard",
+      title: "Artifact Evidence",
+      props: {
+        execution_records: run.execution_outputs || [],
+        accepted_stages: (run.stages || []).filter((stage) => stage.status === "accepted").map((stage) => stage.id),
+        project_book: run.project_book,
+        generated_meta_skill: run.generated_meta_skill?.name || ""
+      }
+    }
+  ];
+}
+
+function buildMcpAppsManifest(run) {
+  const tool = (name, description, resourceUri, inputSchema = {}) => ({
+    name,
+    description,
+    inputSchema: { type: "object", properties: inputSchema, additionalProperties: false },
+    _meta: { ui: { resourceUri } }
+  });
+  return {
+    zero_slop_policy: ZERO_SLOP,
+    protocol: "MCP Apps",
+    profile: PROTOCOL_PROFILE.mcp_apps.local_profile,
+    run_id: run.run_id,
+    tools: [
+      tool("dfms.startProject", "Create a governed greenfield, brownfield, artifact-only, or meta-skill-system run.", "ui://dfms/start-project", {
+        projectName: { type: "string" },
+        projectType: { type: "string", enum: ["greenfield", "brownfield", "artifact-only", "meta-skill-system"] },
+        intent: { type: "string" }
+      }),
+      tool("dfms.answerQuestion", "Capture customer grill answers with traceable answer IDs.", "ui://dfms/customer-grill", {
+        runId: { type: "string" },
+        questionId: { type: "string" },
+        value: { type: "string" }
+      }),
+      tool("dfms.invokeStage", "Invoke only the current or reopened legal stage.", "ui://dfms/stage-report", {
+        runId: { type: "string" },
+        stageId: { type: "string" }
+      }),
+      tool("dfms.openChangeRequest", "Resteer through governed change control and downstream redo closure.", "ui://dfms/change-control", {
+        runId: { type: "string" },
+        targetStage: { type: "string" },
+        selectedNode: { type: "string" },
+        requestedChange: { type: "string" }
+      }),
+      tool("dfms.askAgent", "Ask the agent for a stage report, blocker explanation, or resteer advice.", "ui://dfms/agent-interrogation", {
+        runId: { type: "string" },
+        mode: { type: "string", enum: ["ask", "audit", "resteer", "explain"] },
+        message: { type: "string" }
+      })
+    ],
+    resources: [
+      { uri: `dfms://runs/${run.run_id}/portal`, name: "Human project portal", mimeType: "application/json" },
+      { uri: `dfms://runs/${run.run_id}/protocol`, name: "Protocol state", mimeType: "application/json" },
+      { uri: `dfms://runs/${run.run_id}/stage-report`, name: "Current stage report", mimeType: "application/json" }
+    ],
+    ui_resources: [
+      { uri: "ui://dfms/run-cockpit", mimeType: PROTOCOL_PROFILE.mcp_apps.resource_mime_type, title: "Dark Factory Run Cockpit" },
+      { uri: "ui://dfms/customer-grill", mimeType: PROTOCOL_PROFILE.mcp_apps.resource_mime_type, title: "Customer Grill Form" },
+      { uri: "ui://dfms/change-control", mimeType: PROTOCOL_PROFILE.mcp_apps.resource_mime_type, title: "Change Control And Redo" },
+      { uri: "ui://dfms/agent-interrogation", mimeType: PROTOCOL_PROFILE.mcp_apps.resource_mime_type, title: "Ask Agent Anytime" }
+    ],
+    security_model: [
+      "UI resources are local descriptors in this console, not remote executable code.",
+      "User-initiated tool calls require explicit button actions or API POSTs.",
+      "Scope, budget, production, security, privacy, and residual-risk changes require human approval evidence."
+    ]
+  };
+}
+
+function buildProtocolState(runOrId) {
+  const run = typeof runOrId === "string" ? loadRun(runOrId) : runOrId;
+  return {
+    zero_slop_policy: ZERO_SLOP,
+    protocol_state_type: "dfms_agent_centric_protocol_state",
+    generated_at: nowIso(),
+    run_summary: {
+      run_id: run.run_id,
+      project_name: run.project_name,
+      project_type: run.project_type,
+      status: run.status,
+      current_stage: run.current_stage,
+      token_swag: run.token_swag
+    },
+    protocol_profile: PROTOCOL_PROFILE,
+    agui_events: run.agui_events || [],
+    a2ui_surfaces: buildA2uiSurfaces(run),
+    mcp_apps: buildMcpAppsManifest(run),
+    agent_report: buildAgentReport(run),
+    recent_agent_messages: (run.agent_messages || []).slice(0, 10)
+  };
+}
+
+function createAgentMessage(runId, payload) {
+  const run = loadRun(runId);
+  const message = String(payload.message || "").trim();
+  if (message.length < 2) throw Object.assign(new Error("Agent message is required."), { status: 400 });
+  const mode = String(payload.mode || "ask").trim() || "ask";
+  const response = buildAgentResponse(run, message, mode);
+  const interaction = {
+    zero_slop_policy: ZERO_SLOP,
+    record_type: "agent_interaction_record",
+    id: `AIMSG-${Date.now()}`,
+    at: nowIso(),
+    run_id: run.run_id,
+    active_stage: run.current_stage,
+    mode,
+    message,
+    response
+  };
+  const recordPath = path.join(runRecordsDir(run.run_id), `${interaction.id}-agent-interaction-record.json`);
+  writeJson(recordPath, interaction);
+  run.agent_messages = [interaction, ...(run.agent_messages || [])];
+  run.execution_outputs = Array.from(new Set([...(run.execution_outputs || []), path.relative(ROOT, recordPath).replace(/\\/g, "/")]));
+  run.audit_log.push({ at: nowIso(), event: "agent_interrogated", detail: `${mode}: ${message.slice(0, 80)}` });
+  appendAguiEvent(run, "USER_MESSAGE", {
+    actor: "human-owner",
+    mode,
+    message,
+    response_summary: response.summary
+  });
+  if (response.resteer_recommended) {
+    appendAguiEvent(run, "HUMAN_DECISION_REQUIRED", {
+      reason: "Message appears to request design, workflow, budget, or scope re-steer.",
+      recommended_action: response.recommended_change_request
+    });
+  }
+  saveRun(run);
+  return { interaction, protocol: buildProtocolState(run.run_id), run: loadRun(run.run_id) };
+}
+
+function buildAgentResponse(run, message, mode) {
+  const lower = message.toLowerCase();
+  const stage = activeStage(run);
+  const stageReport = buildStageReport(run, stage);
+  const validation = validateRunExecution(run);
+  const wantsResteer = /\b(resteer|change|redo|reopen|pivot|alter|modify|scope|budget|approve|approval)\b/.test(lower) || mode === "resteer";
+  const recommendedStage = targetStageForImpact(message);
+  const missing = QUESTIONS
+    .filter((question) => question.required && !(run.answers?.[question.id]?.value || "").trim())
+    .map((question) => question.id);
+  return {
+    zero_slop_policy: ZERO_SLOP,
+    summary: wantsResteer
+      ? `Open a governed change request from ${recommendedStage}; do not mutate accepted evidence in place.`
+      : `Current legal focus is ${stage.title}; status ${stage.status}; validation ${validation.status}.`,
+    mode,
+    active_stage_report: stageReport,
+    missing_required_answers: missing,
+    validation_findings: validation.findings.slice(0, 8),
+    resteer_recommended: wantsResteer,
+    recommended_change_request: wantsResteer ? {
+      target_stage: recommendedStage,
+      selected_node: recommendedStage === "stage-04-artifacts" ? "02-prd.md" : "",
+      required_reviews: [
+        "change-control approval",
+        "downstream trace closure",
+        "quality refinery reopened gate",
+        "dashboard redo impact",
+        "human handoff note"
+      ]
+    } : null,
+    next_safe_action: wantsResteer
+      ? "Use the Resteer Or Change Design form so reopened stages and redo closure are recorded."
+      : stageReport.next_action
+  };
+}
+
 function buildProjectPortal(runId) {
   const run = loadRun(runId);
   const validation = validateRunExecution(run);
@@ -908,6 +1340,21 @@ function createChangeRequest(runId, payload) {
   run.status = "change_control";
   run.current_stage = targetStage;
   run.audit_log.push({ at: nowIso(), event: "change_request_opened", detail: `${id}: ${title}` });
+  appendAguiEvent(run, "USER_RESTEER_REQUESTED", {
+    actor: cr.requested_by,
+    change_request_id: cr.id,
+    title: cr.title,
+    target_stage: cr.target_stage,
+    selected_node: cr.selected_node,
+    reopened_stages: cr.reopened_stages,
+    redo_status: cr.redo_impact?.status || "not_requested"
+  });
+  appendAguiEvent(run, "STATE_DELTA", {
+    field: "change_control",
+    status: run.status,
+    current_stage: run.current_stage,
+    legal_next_action: cr.next_legal_action
+  });
   saveRun(run);
   return { change_request: cr, portal: buildProjectPortal(run.run_id), run: loadRun(run.run_id) };
 }
@@ -969,6 +1416,12 @@ function advanceRun(runId) {
     current.status = "blocked";
     run.status = "blocked";
     run.audit_log.push({ at: nowIso(), event: "advance_blocked", detail: `${current.id}: ${gate.notes.join(" ")}` });
+    appendAguiEvent(run, "GATE_BLOCKED", {
+      stage_id: current.id,
+      stage_title: current.title,
+      notes: gate.notes,
+      next_safe_action: "Fix gate blockers before advancing."
+    });
     saveRun(run);
     return run;
   }
@@ -983,6 +1436,18 @@ function advanceRun(runId) {
     run.status = "ready_for_handoff";
   }
   run.audit_log.push({ at: nowIso(), event: "advanced", detail: current.id });
+  appendAguiEvent(run, "GATE_PASSED", {
+    stage_id: current.id,
+    stage_title: current.title,
+    next_stage: next?.id || "",
+    run_status: run.status
+  });
+  appendAguiEvent(run, next ? "STAGE_ACTIVE" : "STATE_DELTA", {
+    stage_id: next?.id || current.id,
+    stage_title: next?.title || current.title,
+    run_status: run.status,
+    legal_next_action: next ? `Invoke ${next.title}.` : "Review portal, evidence, and handoff package."
+  });
   saveRun(run);
   return run;
 }
@@ -1021,6 +1486,12 @@ function executeReadyPipeline(runId) {
     current_stage: run.current_stage
   };
   run.audit_log.push({ at: nowIso(), event: "pipeline_execute", detail: `${visited.length} transitions, status ${run.status}` });
+  appendAguiEvent(run, "PIPELINE_EXECUTED", {
+    visited,
+    result: run.status,
+    current_stage: run.current_stage,
+    record_count: (run.execution_outputs || []).length
+  });
   saveRun(run);
   return run;
 }
@@ -1032,6 +1503,12 @@ function validateRunExecution(runOrId) {
   const stageById = Object.fromEntries((run.stages || []).map((stage) => [stage.id, stage]));
 
   if (run.zero_slop_policy !== ZERO_SLOP) warn("P1", "Missing zero-slop policy", "Run ledger does not carry the mandatory zero-slop policy.");
+  if (!Array.isArray(run.agui_events) || run.agui_events.length === 0) {
+    warn("P1", "AG-UI event stream missing", "Run does not carry persisted agent-user protocol events.");
+  }
+  if (!run.invocation_packet?.agent_protocols?.agui || !run.invocation_packet?.agent_protocols?.a2ui || !run.invocation_packet?.agent_protocols?.mcp_apps) {
+    warn("P1", "Agent protocol contracts missing", "Invocation packet does not expose AG-UI, A2UI, and MCP Apps contracts.");
+  }
   if (!run.generated_meta_skill || run.generated_meta_skill.generated_from !== "df-meta-attractor") {
     warn("P1", "Generated meta-skill missing", "Run does not prove the meta-meta skill generated the project-tailored meta-skill.");
   }
@@ -1183,6 +1660,13 @@ function runRalphAudit(runId, loops = 20) {
   const rel = path.relative(ROOT, file).replace(/\\/g, "/");
   run.execution_outputs = Array.from(new Set([...(run.execution_outputs || []), rel]));
   run.audit_log.push({ at: nowIso(), event: "ralph_20_audit", detail: audit.summary });
+  appendAguiEvent(run, "RALPH_AUDIT_COMPLETED", {
+    loops: loopsOut.length,
+    status: audit.status,
+    p1_count: base.p1_count,
+    p2_count: base.p2_count,
+    record: rel
+  });
   saveRun(run);
   return { audit, run: loadRun(run.run_id), record: rel };
 }
@@ -1457,6 +1941,14 @@ async function handleApi(req, res) {
       const id = url.pathname.split("/")[3];
       return sendJson(res, 200, buildProjectPortal(id));
     }
+    if (req.method === "GET" && url.pathname.match(/^\/api\/runs\/[^/]+\/protocol$/)) {
+      const id = url.pathname.split("/")[3];
+      return sendJson(res, 200, buildProtocolState(id));
+    }
+    if (req.method === "POST" && url.pathname.match(/^\/api\/runs\/[^/]+\/agent-message$/)) {
+      const id = url.pathname.split("/")[3];
+      return sendJson(res, 201, createAgentMessage(id, await parseBody(req)));
+    }
     if (req.method === "POST" && url.pathname.match(/^\/api\/runs\/[^/]+\/change-request$/)) {
       const id = url.pathname.split("/")[3];
       return sendJson(res, 201, createChangeRequest(id, await parseBody(req)));
@@ -1513,6 +2005,12 @@ module.exports = {
   runRalphAudit,
   scoreInterrogation,
   buildInvocationPacket,
+  buildStageReport,
+  buildAgentReport,
+  buildA2uiSurfaces,
+  buildMcpAppsManifest,
+  buildProtocolState,
+  createAgentMessage,
   buildProjectPortal,
   createChangeRequest,
   computeRedoClosure,

@@ -16,12 +16,18 @@ const { chromium } = require("playwright");
   assert((await page.locator("#agentSwarm").textContent()).includes("Meta-Attractor"), "agent swarm should render the meta-attractor");
   assert((await page.locator("#flowMap").textContent()).includes("Meta-Meta Attractor"), "critical path should render the stage map");
   assert((await page.locator("#legalNextAction").textContent()).trim().length > 5, "command deck should render the next legal action");
+  assert((await page.locator("#protocolAguiStatus").textContent()).includes("AG-UI"), "protocol workbench should render AG-UI status");
 
   await page.fill("#projectName", "Browser Smoke Governed Product");
   await page.fill("#intent", "Build a governed UI product through meta-meta first sequencing, customer grilling, artifact gates, testing evidence, dashboard control, and redo closure.");
   await page.click("#createRun");
   await page.waitForFunction(() => document.querySelector("#runState")?.textContent.includes("interrogating"));
   await page.waitForFunction(() => document.querySelector("#swarmStatus")?.textContent.includes("interrogating"));
+  await page.waitForFunction(() => document.querySelector("#protocolAguiStatus")?.textContent.includes("events"));
+  await page.fill("#agentMessage", "Explain the active stage and what the legal next action is.");
+  await page.click("#sendAgentMessage");
+  await page.waitForFunction(() => document.querySelector("#agentResponse")?.textContent.includes("Current legal focus"));
+  await page.waitForFunction(() => document.querySelector("#aguiEventStream")?.textContent.includes("USER_MESSAGE"));
   await page.click("#executePipeline");
   await page.waitForFunction(() => document.querySelector("#currentStage")?.textContent.includes("01-interrogation"));
   await page.waitForFunction(() => document.querySelector("#activeAgent")?.textContent.includes("Spec Interrogator"));
