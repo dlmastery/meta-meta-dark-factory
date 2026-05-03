@@ -11,7 +11,10 @@
     "Hawkeye audit posture",
     "named rooms for intake, evidence, graph, resteer, runtime spine, and agent protocol",
     "product rescue brief",
-    "desktop and mobile no-overflow Playwright assertions"
+    "desktop and mobile no-overflow Playwright assertions",
+    "mobile compact workflow runway",
+    "mobile top-bar brand",
+    "mobile first-viewport primary-action visibility"
   ],
   "validation": [
     {
@@ -32,6 +35,14 @@
     },
     {
       "command": "python dark-factory-meta-skills-design/scripts/validate_tasks_md.py dark-factory-meta-skills-design/TASKS.md",
+      "status": "pass"
+    },
+    {
+      "command": "browser-use plugin bootstrap",
+      "status": "blocked_by_node_runtime_v22_16_requires_v22_22"
+    },
+    {
+      "command": "live Playwright UX audit",
       "status": "pass"
     }
   ],

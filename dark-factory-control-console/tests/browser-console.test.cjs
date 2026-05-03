@@ -61,6 +61,27 @@ let createdRunId;
   }));
   assert(desktopOverflow.fits, `desktop Material-style layout should not horizontally overflow: ${JSON.stringify(desktopOverflow)}`);
 
+  const mobileStart = await browser.newPage({ viewport: { width: 390, height: 900 } });
+  await mobileStart.goto(baseUrl, { waitUntil: "networkidle" });
+  const mobileStartContract = await mobileStart.evaluate(() => {
+    const runway = document.querySelector("#workflowRunway")?.getBoundingClientRect();
+    const title = document.querySelector("#studio-title")?.getBoundingClientRect();
+    const primary = document.querySelector("#studioPrimaryAction")?.getBoundingClientRect();
+    return {
+      runwayHeight: runway?.height || 0,
+      titleTop: title?.top || 9999,
+      primaryTop: primary?.top || 9999,
+      scrollWidth: document.documentElement.scrollWidth,
+      viewport: window.innerWidth
+    };
+  });
+  assert(mobileStartContract.runwayHeight > 0 && mobileStartContract.runwayHeight < 170, `mobile workflow runway should be compact: ${JSON.stringify(mobileStartContract)}`);
+  assert(mobileStartContract.titleTop < 360, `mobile mission title should appear early: ${JSON.stringify(mobileStartContract)}`);
+  assert(mobileStartContract.primaryTop < 820, `mobile primary action should be reachable in first viewport: ${JSON.stringify(mobileStartContract)}`);
+  assert(mobileStartContract.scrollWidth <= mobileStartContract.viewport + 4, `mobile startup should not horizontally overflow: ${JSON.stringify(mobileStartContract)}`);
+  await mobileStart.screenshot({ path: path.join(__dirname, "..", "artifacts", "browser-console-mobile-start.png"), fullPage: false });
+  await mobileStart.close();
+
   await page.click('[data-panel-target="start"]');
   await page.fill("#projectName", "Browser Smoke Governed Product");
   await page.selectOption("#scenarioMode", "greenfield-product");

@@ -69,6 +69,7 @@ The first viewport must answer these questions without the user reading document
 - Added Playwright assertions for workflow-runway clarity and desktop/mobile horizontal overflow.
 - Fixed a mobile overflow defect caused by long evidence record paths.
 - Reordered mobile layout so the mission/workflow appears before navigation and ledger material.
+- Added a mobile-first refinement after live journey inspection: the workflow runway is compact on mobile, the app brand appears in the mobile top bar, nonessential status chips are suppressed, the mission title appears early, and the primary action is reachable in the first viewport.
 
 ## UX Reviewer Panel
 
@@ -97,6 +98,8 @@ The first viewport must answer these questions without the user reading document
 | 13 | Mobile browser smoke passes. | Pass |
 | 14 | Horizontal overflow is rejected by Playwright. | Pass |
 | 15 | Long evidence paths wrap instead of breaking layout. | Pass |
+| 16 | Mobile workflow stepper does not consume the full first viewport. | Pass |
+| 17 | Mobile primary action is visible without hunting through navigation. | Pass |
 
 ## Validation Evidence
 
@@ -105,6 +108,8 @@ The first viewport must answer these questions without the user reading document
 - `npm test`
 - `npm run test:browser`
 - `python dark-factory-meta-skills-design/scripts/validate_tasks_md.py dark-factory-meta-skills-design/TASKS.md`
+- Browser-use plugin requested for inspection; plugin bootstrap failed in this session because the Node REPL runtime resolved to Node `v22.16.0` while browser-use required `>= v22.22.0`. Playwright against the same live local URL was used as the fallback inspection and verification surface.
+- Live screenshot audit: `dark-factory-control-console/artifacts/live-ux-audit-desktop.png` and `dark-factory-control-console/artifacts/live-ux-audit-mobile.png`.
 
 ## Remaining Product Gap
 

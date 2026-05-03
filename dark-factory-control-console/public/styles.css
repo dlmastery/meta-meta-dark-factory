@@ -117,6 +117,25 @@ strong {
   font-weight: 900;
 }
 
+.brand-mark.mini {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  font-size: 11px;
+}
+
+.topbar-title {
+  display: grid;
+  gap: 2px;
+}
+
+.topbar-mobile-brand {
+  display: none;
+  align-items: center;
+  gap: 9px;
+  font-weight: 900;
+}
+
 .eyebrow,
 .studio-kicker,
 .breadcrumb,
@@ -267,7 +286,7 @@ strong {
   border: 1px solid var(--outline);
   border-radius: var(--radius);
   padding: 10px;
-  background: #fbfcff;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
 }
 
 .runway-step span {
@@ -330,7 +349,7 @@ strong {
   gap: 12px;
   border: 1px solid #d6deec;
   border-radius: var(--radius);
-  background: #fbfdff;
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
   padding: 14px;
 }
 
@@ -1560,6 +1579,28 @@ textarea:focus {
     align-items: stretch;
   }
 
+  .topbar {
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .topbar-mobile-brand {
+    display: flex;
+  }
+
+  .breadcrumb {
+    font-size: 10px;
+  }
+
+  .status-strip {
+    justify-content: flex-start;
+  }
+
+  .status-strip #skillCount,
+  .status-strip #graphCount {
+    display: none;
+  }
+
   .workspace {
     padding: 12px;
   }
@@ -1569,7 +1610,6 @@ textarea:focus {
   }
 
   .workspace-tabs.vertical,
-  .runway,
   .mission-grid,
   .studio-action-row,
   .refine-strip,
@@ -1593,8 +1633,70 @@ textarea:focus {
     grid-template-columns: 1fr;
   }
 
+  .runway {
+    display: flex;
+    gap: 7px;
+    overflow-x: auto;
+    padding-bottom: 2px;
+    scroll-snap-type: x proximity;
+  }
+
+  .runway-step {
+    min-width: 124px;
+    min-height: 58px;
+    padding: 8px;
+    scroll-snap-align: start;
+  }
+
+  .runway-step span {
+    width: 22px;
+    height: 22px;
+    font-size: 11px;
+  }
+
+  .runway-step strong {
+    font-size: 12px;
+    line-height: 1.15;
+  }
+
+  .runway-step small {
+    display: none;
+  }
+
   .mission-header h2 {
-    font-size: 26px;
+    font-size: 24px;
+  }
+
+  .mission-header p {
+    display: none;
+  }
+
+  .mission-grid {
+    grid-template-columns: minmax(0, 1fr) 118px;
+  }
+
+  .mission-composer {
+    gap: 10px;
+  }
+
+  .mission-composer textarea {
+    min-height: 82px;
+    max-height: 96px;
+  }
+
+  .scenario-chip {
+    min-height: 34px;
+    padding: 6px 9px;
+  }
+
+  .button.large {
+    min-height: 42px;
+  }
+
+  .mission-panel,
+  .supervisor-pane,
+  .band {
+    padding: 12px;
   }
 
   .interrogation-protocol {
