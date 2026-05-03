@@ -151,6 +151,7 @@
         <button class="tab-button" data-panel-target="evidence">Evidence</button>
         <button class="tab-button" data-panel-target="graph">Graph / Redo</button>
         <button class="tab-button" data-panel-target="change">Change</button>
+        <button class="tab-button" data-panel-target="platform">Platform Spine</button>
         <button class="tab-button" data-panel-target="debug">Agent Protocol</button>
       </nav>
 
@@ -267,6 +268,51 @@
             </div>
           </div>
           <div id="flowMap" class="flow-map"></div>
+        </div>
+      </section>
+
+      <section class="band platform-spine ux-panel" data-panel="platform" aria-labelledby="platform-title">
+        <div class="section-head">
+          <div>
+            <div class="studio-kicker">PB-01 product platform spine</div>
+            <h2 id="platform-title">Local product runtime, not just documents</h2>
+            <p id="productPlatformBoundary">Start or select a project to load the local product spine.</p>
+          </div>
+          <div class="protocol-pills">
+            <span class="status-chip strong" id="productPlatformStatus">PB-01: --</span>
+            <span class="status-chip accent" id="platformLedgerStatus">--</span>
+            <span class="status-chip" id="platformNextBatch">--</span>
+          </div>
+        </div>
+        <div class="platform-grid">
+          <div>
+            <h3>Capability Gates</h3>
+            <div id="platformCapabilityList" class="platform-stack"></div>
+          </div>
+          <div>
+            <h3>Roles And Decision Rights</h3>
+            <div id="platformRoleList" class="platform-stack"></div>
+          </div>
+        </div>
+        <div class="platform-grid lower">
+          <div>
+            <h3>Project Spaces</h3>
+            <div id="platformProjectSpaces" class="platform-stack"></div>
+          </div>
+          <div>
+            <h3>Human Collaboration</h3>
+            <div class="platform-comment-composer">
+              <select id="platformCommentTopic" aria-label="Platform comment topic">
+                <option value="platform_review">Platform review</option>
+                <option value="ux_research">UX research</option>
+                <option value="stage_gate">Stage gate</option>
+                <option value="product_gap">Product gap</option>
+              </select>
+              <button id="addPlatformComment" class="button primary">Record Comment</button>
+            </div>
+            <textarea id="platformComment" rows="3" placeholder="Record a human review note. Scope/design/risk changes still require governed change control."></textarea>
+            <div id="platformCommentList" class="platform-stack comments"></div>
+          </div>
         </div>
       </section>
 

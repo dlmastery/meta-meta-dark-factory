@@ -69,6 +69,7 @@ function buildReport(root) {
   const finalTruth = readJson(root, "dark-factory-meta-skills-design/records/final-truth-inventory.json");
   const publicManifest = readJson(root, "dark-factory-meta-skills-design/records/public-reproducibility-manifest.json");
   const publicValidation = readJson(root, "dark-factory-meta-skills-design/records/public-hardening-validation-results.json");
+  const pb01Record = readJson(root, "dark-factory-meta-skills-design/records/pb01-product-platform-spine-record.json");
   const rootReadme = read(root, "README.md");
   const releaseAudit = read(root, "PUBLIC_RELEASE_AUDIT.md");
   const planRel = "dark-factory-meta-skills-design/69-ralph-100-missing-deliverable-execution-program.md";
@@ -82,6 +83,10 @@ function buildReport(root) {
     rootReadme.includes("55 standalone artifacts") &&
     releaseAudit.includes("rb09_local_public_hardening_pass_with_residual_risks") &&
     exists(root, "dark-factory-meta-skills-design/scripts/validate_public_hardening.cjs");
+  const pb01Accepted =
+    pb01Record?.status === "accepted_for_local_product_spine" &&
+    Array.isArray(finalTruth?.accepted_batches) &&
+    finalTruth.accepted_batches.includes("PB-01");
 
   const batches = [
     {
@@ -280,6 +285,28 @@ function buildReport(root) {
     all_tasks_completed: closureBlockers.length === 0,
     truth_boundary: "This report validates the RALPH-100 recovery program and current proof classes for the bounded local/public package. It does not claim the full hosted Software Assured Dark Factory Studio product is finished.",
     batches,
+    product_batches: [
+      {
+        id: "PB-01",
+        status: pb01Accepted ? "accepted_for_local_product_spine" : "next_product_batch",
+        objective: "Local product platform spine",
+        proof_class: pb01Accepted ? "working_implementation_local" : "not_started",
+        evidence: pb01Accepted ? [
+          "dark-factory-meta-skills-design/73-pb01-product-platform-spine-record.md",
+          "dark-factory-meta-skills-design/records/pb01-product-platform-spine-record.json",
+          "dark-factory-control-console/server.js",
+          "dark-factory-control-console/public/index.html",
+          "dark-factory-control-console/tests/browser-console.test.cjs"
+        ] : []
+      },
+      {
+        id: "PB-02",
+        status: "next_product_batch",
+        objective: "Hosted enterprise runtime",
+        proof_class: "not_started",
+        evidence: []
+      }
+    ],
     loop_summary: {
       required_loops: 100,
       materialized_loops: loops.length,
@@ -292,7 +319,9 @@ function buildReport(root) {
     closure_blockers: closureBlockers,
     next_legal_action: closureBlockers.length
       ? `Continue ${batches.find((batch) => batch.status !== "accepted")?.id || "next"} before any full-factory closure claim.`
-      : "Recovery program RB-01 through RB-09 is accepted for the local/public package boundary. Continue with product batch PB-01 if building the full hosted factory product."
+      : pb01Accepted
+        ? "Recovery program RB-01 through RB-09 is accepted for the local/public package boundary, and PB-01 local product platform spine is accepted. Continue with PB-02 hosted enterprise runtime for the full product."
+        : "Recovery program RB-01 through RB-09 is accepted for the local/public package boundary. Continue with product batch PB-01 if building the full hosted factory product."
   };
 }
 

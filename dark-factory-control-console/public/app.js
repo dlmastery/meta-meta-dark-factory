@@ -3,6 +3,7 @@ const state = {
   run: null,
   portal: null,
   protocol: null,
+  platform: null,
   truth: null,
   activePanel: "overview",
   busy: false
@@ -38,7 +39,8 @@ function setBusy(value) {
     "studioRefineAction",
     "cockpitPrimaryAction",
     "cockpitAskAgent",
-    "cockpitOpenChange"
+    "cockpitOpenChange",
+    "addPlatformComment"
   ]) {
     const element = $(id);
     if (element) element.disabled = value;
@@ -49,6 +51,7 @@ function setBusy(value) {
 
 async function init() {
   state.bootstrap = await api("/api/bootstrap");
+  state.platform = state.bootstrap.product_platform_spine || null;
   renderBootstrap();
   renderQuestions();
   wireEvents();
@@ -59,6 +62,7 @@ async function init() {
     renderRun();
     renderPortal();
     renderProtocol();
+    renderProductPlatform();
     renderTruthInventory();
     renderPortalCockpit();
   }
@@ -82,6 +86,7 @@ function wireEvents() {
   $("cockpitPrimaryAction").addEventListener("click", runStudioPrimary);
   $("cockpitAskAgent").addEventListener("click", () => switchPanel("debug"));
   $("cockpitOpenChange").addEventListener("click", () => switchPanel("change"));
+  $("addPlatformComment").addEventListener("click", addPlatformComment);
   document.querySelectorAll("[data-studio-scenario]").forEach((button) => {
     button.addEventListener("click", () => selectStudioScenario(button.dataset.studioScenario));
   });
@@ -152,6 +157,7 @@ function renderPanelVisibility() {
 
 async function refreshBootstrap() {
   state.bootstrap = await api("/api/bootstrap");
+  state.platform = state.bootstrap.product_platform_spine || state.platform;
   renderBootstrap();
   renderChangeTargetStages();
 }
@@ -163,6 +169,7 @@ async function loadRun(runId) {
     state.run = await api(`/api/runs/${encodeURIComponent(runId)}`);
     await refreshPortal(false);
     await refreshProtocol(false);
+    await refreshPlatform(false);
     await refreshTruth(false);
     state.activePanel = "overview";
     renderRun();
@@ -202,6 +209,11 @@ async function refreshProtocol(shouldRender = true) {
   if (shouldRender) renderProtocol();
 }
 
+async function refreshPlatform(shouldRender = true) {
+  state.platform = await api("/api/platform");
+  if (shouldRender) renderProductPlatform();
+}
+
 async function refreshTruth(shouldRender = true) {
   if (!state.run) {
     state.truth = null;
@@ -227,6 +239,7 @@ function renderBootstrap() {
   renderProjectSelector();
   renderProjectList();
   renderAgenticWorkbench();
+  renderProductPlatform();
   renderFocusConsole();
   renderStudioState();
   renderPanelVisibility();
@@ -422,6 +435,7 @@ async function approveInterrogation() {
     await refreshBootstrap();
     await refreshPortal(false);
     await refreshProtocol(false);
+    await refreshPlatform(false);
     await refreshTruth(false);
     renderRun();
     renderPortal();
@@ -515,12 +529,14 @@ async function createRun() {
     await refreshBootstrap();
     await refreshPortal(false);
     await refreshProtocol(false);
+    await refreshPlatform(false);
     await refreshTruth(false);
     state.activePanel = "overview";
     renderRun();
     renderPortal();
     renderProtocol();
     renderAgenticWorkbench();
+    renderProductPlatform();
   } catch (error) {
     showResult(error.message, true);
   } finally {
@@ -549,6 +565,7 @@ async function decideInterrupt(interruptId, decision) {
     renderPortal();
     renderProtocol();
     renderAgenticWorkbench();
+    renderProductPlatform();
     showAgentResponse(`Human interrupt ${decision}: ${result.decision.interrupt_id}`, false);
   } catch (error) {
     showAgentResponse(error.message, true);
@@ -904,6 +921,7 @@ function renderPortalCockpit() {
   const rb = model.recovery_batches || [];
   const stages = model.stage_assurance || [];
   const graph = model.graph_and_redo || {};
+  state.platform = model.product_platform_spine || state.platform;
   const hardBlockers = blockers.filter((item) => item.severity === "P1").length;
   const validationText = `${assurance.validation_status || "--"} | ${assurance.p1_count || 0} P1 | ${assurance.p2_count || 0} P2`;
 
@@ -962,6 +980,7 @@ function renderProtocol() {
     $("mcpAppsList").innerHTML = `<div class="empty-note">No MCP Apps descriptors yet.</div>`;
     $("agentResponse").innerHTML = `<div class="empty-note">Ask the agent about the active stage, blockers, evidence, or a resteer.</div>`;
     renderAgenticWorkbench();
+    renderProductPlatform();
     renderPortalCockpit();
     return;
   }
@@ -1013,6 +1032,7 @@ function renderProtocol() {
     showAgentResponse(latest.response?.summary || "Agent response recorded.", false);
   }
   renderAgenticWorkbench();
+  renderProductPlatform();
   renderFocusConsole();
   renderPanelVisibility();
   renderPortalCockpit();
@@ -1124,6 +1144,84 @@ function renderAgenticWorkbench() {
         <small>${escapeHtml((sample?.required_actions || []).join(" | ") || specGraph.no_duplicate_path_rule || "")}</small>
       </div>
     `;
+  }
+}
+
+function renderProductPlatform() {
+  const platform = state.platform || state.portal?.portal_control_model?.product_platform_spine || state.bootstrap?.product_platform_spine;
+  if (!platform) {
+    setText("productPlatformStatus", "No PB-01 platform state.");
+    setText("platformLedgerStatus", "--");
+    setText("platformNextBatch", "--");
+    setText("productPlatformBoundary", "Start or select a project to load the local product spine.");
+    $("platformCapabilityList").innerHTML = `<div class="empty-note">No platform capabilities loaded.</div>`;
+    $("platformRoleList").innerHTML = `<div class="empty-note">No role model loaded.</div>`;
+    $("platformProjectSpaces").innerHTML = `<div class="empty-note">No project spaces loaded.</div>`;
+    $("platformCommentList").innerHTML = `<div class="empty-note">No human collaboration records yet.</div>`;
+    return;
+  }
+  const ledger = platform.durable_ledger || {};
+  const gate = platform.acceptance_gate || {};
+  setText("productPlatformStatus", `${platform.batch || "PB-01"} | ${platform.platform_status || "--"}`);
+  setText("platformLedgerStatus", `${ledger.run_count || 0} runs | ${ledger.comment_count || 0} comments | ${ledger.status || "--"}`);
+  setText("platformNextBatch", gate.next_product_batch || "PB-02 hosted enterprise runtime");
+  setText("productPlatformBoundary", platform.trust_boundary || "");
+
+  $("platformCapabilityList").innerHTML = (platform.capabilities || []).map((capability) => `
+    <article class="platform-capability ${escapeAttr(capability.status || "")}">
+      <strong>${escapeHtml(capability.id)} | ${escapeHtml(capability.title)}</strong>
+      <span>${escapeHtml(capability.status || "--")}</span>
+      <small>${escapeHtml(capability.evidence || "")}</small>
+    </article>
+  `).join("") || `<div class="empty-note">No platform capabilities loaded.</div>`;
+
+  $("platformRoleList").innerHTML = (platform.roles || []).map((role) => `
+    <article class="platform-role">
+      <strong>${escapeHtml(role.role)}</strong>
+      <span>${(role.decision_rights || []).map(escapeHtml).join(" | ")}</span>
+    </article>
+  `).join("") || `<div class="empty-note">No role model loaded.</div>`;
+
+  $("platformProjectSpaces").innerHTML = (platform.project_spaces || []).map((space) => `
+    <article class="platform-project ${space.run_id === state.run?.run_id ? "selected" : ""}">
+      <strong>${escapeHtml(space.project_name || space.run_id)}</strong>
+      <span>${escapeHtml(space.status || "--")} | ${escapeHtml(space.current_stage || "--")}</span>
+      <small>${escapeHtml(space.protocol_endpoint || "")}</small>
+    </article>
+  `).join("") || `<div class="empty-note">No project runs yet. Start a governed project to create the first project space.</div>`;
+
+  const comments = platform.human_collaboration?.comments || [];
+  $("platformCommentList").innerHTML = comments.length ? comments.slice(0, 8).map((comment) => `
+    <article class="platform-comment">
+      <strong>${escapeHtml(comment.topic || "platform_review")} | ${escapeHtml(comment.author_role || "human")}</strong>
+      <span>${escapeHtml(comment.comment || "")}</span>
+      <small>${escapeHtml(comment.id || "")} | ${escapeHtml(comment.created_at || "")}</small>
+    </article>
+  `).join("") : `<div class="empty-note">No human collaboration records yet.</div>`;
+}
+
+async function addPlatformComment() {
+  const comment = $("platformComment").value.trim();
+  if (!comment) return showResult("Write a platform review comment first.", true);
+  setBusy(true);
+  try {
+    const result = await api("/api/platform/comments", {
+      method: "POST",
+      body: JSON.stringify({
+        runId: state.run?.run_id || "",
+        topic: $("platformCommentTopic").value || "platform_review",
+        comment,
+        authorRole: "human_reviewer"
+      })
+    });
+    state.platform = result.platform;
+    $("platformComment").value = "";
+    renderProductPlatform();
+    showResult(`Platform comment recorded: ${result.comment.id}`, false);
+  } catch (error) {
+    showResult(error.message, true);
+  } finally {
+    setBusy(false);
   }
 }
 

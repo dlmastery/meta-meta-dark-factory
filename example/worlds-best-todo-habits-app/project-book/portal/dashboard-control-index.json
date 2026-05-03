@@ -1,8 +1,8 @@
 {
   "zero_slop_policy": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
-  "dashboard_id": "DASH-worlds-best-todo-habits-app-20260503",
-  "project": "worlds-best-todo-habits-app",
-  "generated_at": "2026-05-03T17:53:59+00:00",
+  "dashboard_id": "DASH-dfms-ui-console-run-20260503",
+  "project": "DFMS UI Console Run",
+  "generated_at": "2026-05-03T20:10:03+00:00",
   "source_root": "C:\\mmdf-public\\example\\worlds-best-todo-habits-app\\project-book",
   "nodes": [
     {

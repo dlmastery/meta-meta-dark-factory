@@ -60,6 +60,7 @@ The design is based on `C:\Users\abhir\Downloads\dark-software-factories-transcr
 - `64-recovery-truth-ledger-and-execution-plan.md` through `70-product-leader-missing-deliverable-recovery-plan.md` - recovery truth, prompt-adherence, UX recovery, RALPH-100, and product-leader missing-deliverable records.
 - `71-rb09-final-hawkeye-public-hardening-record.md` - final Hawkeye/public-hardening record for the bounded local package, public repo posture, README truth, and residual risks.
 - `72-full-product-gap-register-and-plan.md` - product gap register and next build plan for the full hosted Software Assured Dark Factory Studio.
+- `73-pb01-product-platform-spine-record.md` - PB-01 record for the local product platform spine: platform state endpoint, collaboration comments, Platform Spine UI tab, A2UI/MCP linkage, truth boundary, and PB-02 hosted-runtime gap.
 - `interactive-layer-map/index.html` - interactive top-down themed page for the document generation hierarchy, with search, layer focus, expand/collapse, and todo/habits trace mode; served by the local control console at `http://127.0.0.1:4187/layer-map/`.
 - `templates/control-graph-record.yaml` - template for a DFMS control graph.
 - `templates/work-ledger-record.yaml` - template for durable work-ledger entries.

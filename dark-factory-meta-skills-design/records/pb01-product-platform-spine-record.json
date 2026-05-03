@@ -1,0 +1,54 @@
+{
+  "zero_slop_policy": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+  "record_type": "pb01_product_platform_spine_record",
+  "record_id": "PB01-PRODUCT-PLATFORM-SPINE-20260503",
+  "generated_at": "2026-05-03T19:00:00.000Z",
+  "status": "accepted_for_local_product_spine",
+  "truth_boundary": "Working local single-user JSON-backed product spine. Not a hosted enterprise, multi-tenant, auth-backed production platform.",
+  "implemented_runtime": [
+    "GET /api/platform",
+    "POST /api/platform/comments",
+    "Platform Spine UI tab",
+    "A2UI product-platform-spine surface",
+    "MCP Apps dfms.addPlatformComment descriptor",
+    "Portal control model product_platform_spine",
+    "Truth inventory product_platform_spine row"
+  ],
+  "evidence": [
+    "dark-factory-control-console/server.js",
+    "dark-factory-control-console/public/index.html",
+    "dark-factory-control-console/public/app.js",
+    "dark-factory-control-console/public/styles.css",
+    "dark-factory-control-console/tests/control-console.test.cjs",
+    "dark-factory-control-console/tests/browser-console.test.cjs"
+  ],
+  "validation": [
+    {
+      "command": "node --check dark-factory-control-console/server.js",
+      "status": "pass"
+    },
+    {
+      "command": "node --check dark-factory-control-console/public/app.js",
+      "status": "pass"
+    },
+    {
+      "command": "npm test",
+      "status": "pass"
+    },
+    {
+      "command": "npm run test:browser",
+      "status": "pass"
+    }
+  ],
+  "remaining_product_batch": {
+    "id": "PB-02",
+    "title": "Hosted enterprise runtime",
+    "required_scope": [
+      "auth and RBAC enforcement",
+      "database-backed multi-tenant persistence",
+      "hosted deployment topology",
+      "enterprise audit export and retention",
+      "service-management workflow"
+    ]
+  }
+}

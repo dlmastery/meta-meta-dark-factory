@@ -14,7 +14,8 @@
     "RB-06",
     "RB-07",
     "RB-08",
-    "RB-09"
+    "RB-09",
+    "PB-01"
   ],
   "trusted_claims": [
     {
@@ -28,6 +29,10 @@
     {
       "claim": "The public repository exists and RB-09 public-hardening artifacts exist.",
       "proof_class": "validated_public_package_evidence"
+    },
+    {
+      "claim": "The local control console has a PB-01 product platform spine with workspace state, role posture, project spaces, collaboration comments, and protocol-surface linkage.",
+      "proof_class": "working_implementation_local"
     }
   ],
   "do_not_claim": [
@@ -38,11 +43,11 @@
     "Do not claim templates are instantiated proof."
   ],
   "next_product_batches": [
-    "PB-01 product platform spine",
-    "PB-02 agent protocol runtime",
-    "PB-03 no-skip execution kernel as runtime",
-    "PB-04 product-grade human-agent UX",
-    "PB-05 CI/public reproducibility",
-    "PB-06 enterprise operations layer"
+    "PB-02 hosted enterprise runtime",
+    "PB-03 agent protocol runtime packaging",
+    "PB-04 no-skip execution kernel as service runtime",
+    "PB-05 product-grade human-agent UX beyond local console",
+    "PB-06 CI/public reproducibility",
+    "PB-07 enterprise operations layer"
   ]
 }

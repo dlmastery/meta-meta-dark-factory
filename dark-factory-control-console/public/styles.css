@@ -1886,6 +1886,79 @@ textarea:focus {
   white-space: nowrap;
 }
 
+.platform-spine {
+  gap: 16px;
+}
+
+.platform-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 14px;
+}
+
+.platform-grid.lower {
+  align-items: start;
+}
+
+.platform-stack {
+  display: grid;
+  gap: 8px;
+  max-height: 360px;
+  overflow: auto;
+}
+
+.platform-capability,
+.platform-role,
+.platform-project,
+.platform-comment {
+  border: 1px solid var(--md-outline);
+  border-radius: var(--md-radius);
+  background: #fff;
+  padding: 10px;
+  display: grid;
+  gap: 4px;
+}
+
+.platform-capability.working_local_slice,
+.platform-project.selected {
+  border-color: #93c5a0;
+  background: #effaf1;
+}
+
+.platform-capability.not_achieved {
+  border-color: #f2a66f;
+  background: #fff7ed;
+}
+
+.platform-capability strong,
+.platform-role strong,
+.platform-project strong,
+.platform-comment strong {
+  color: var(--md-primary);
+}
+
+.platform-capability span,
+.platform-capability small,
+.platform-role span,
+.platform-project span,
+.platform-project small,
+.platform-comment span,
+.platform-comment small {
+  color: var(--md-on-surface-variant);
+  line-height: 1.35;
+}
+
+.platform-comment-composer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.platform-comment-composer + textarea {
+  margin-bottom: 10px;
+}
+
 .ux-panel:not(.active) {
   display: none !important;
 }
@@ -1908,7 +1981,8 @@ textarea:focus {
   .truth-row,
   .evidence-summary,
   .band.split,
-  .portal-columns {
+  .portal-columns,
+  .platform-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1960,6 +2034,11 @@ textarea:focus {
 
   .interrogation-protocol {
     display: grid;
+  }
+
+  .platform-grid,
+  .platform-comment-composer {
+    grid-template-columns: 1fr;
   }
 
   .span-2,

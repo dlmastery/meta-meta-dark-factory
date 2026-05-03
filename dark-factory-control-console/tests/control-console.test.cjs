@@ -27,6 +27,9 @@ function main() {
   assert(packet.agentic_ui_contract.required_surfaces.includes("legal-next-action-cockpit"), "agentic UI contract should require the legal next-action cockpit");
   assert(packet.agentic_ui_contract.required_surfaces.includes("hawkeye-conformance-auditor"), "agentic UI contract should require Hawkeye auditor visibility");
   assert(packet.spec_graph_layer.node_identity_format, "invocation packet should carry Spec Graph identity rules");
+  const platformBeforeRun = consoleApp.buildProductPlatformState();
+  assert.strictEqual(platformBeforeRun.platform_status, "pb01_local_spine_running", "PB-01 product platform spine should be an actual local runtime state");
+  assert(platformBeforeRun.capabilities.some((capability) => capability.id === "PB01-CAP-004"), "platform spine should include human collaboration capability");
 
   const run = consoleApp.createRun({
     projectName: "Console Test",
@@ -47,8 +50,11 @@ function main() {
   assert(initialProtocol.a2ui_surfaces.some((surface) => surface.surface_id === "legal-next-action-cockpit"), "protocol state should expose the legal cockpit surface");
   assert(initialProtocol.a2ui_surfaces.some((surface) => surface.surface_id === "hawkeye-conformance-auditor"), "protocol state should expose Hawkeye auditor surface");
   assert(initialProtocol.a2ui_surfaces.some((surface) => surface.surface_id === "rb-closure-board"), "protocol state should expose recovery closure surface");
+  assert(initialProtocol.a2ui_surfaces.some((surface) => surface.surface_id === "product-platform-spine"), "protocol state should expose PB-01 product platform spine surface");
   assert(initialProtocol.mcp_apps.tools.some((tool) => tool.name === "dfms.askAgent"), "protocol state should expose MCP Apps askAgent tool");
   assert(initialProtocol.mcp_apps.tools.some((tool) => tool.name === "dfms.decideInterrupt"), "protocol state should expose MCP Apps decideInterrupt tool");
+  assert(initialProtocol.mcp_apps.tools.some((tool) => tool.name === "dfms.addPlatformComment"), "protocol state should expose platform comment tool");
+  assert.strictEqual(initialProtocol.product_platform_spine.platform_status, "pb01_local_spine_running", "protocol state should carry the platform spine");
   assert(initialProtocol.human_interrupts.some((item) => item.state === "pending"), "new runs should pause on the first human interrupt");
   assert.strictEqual(initialProtocol.execution_legal_state.current_stage, "stage-00-meta-meta", "legal state should expose the stage cursor");
   assert.strictEqual(initialProtocol.execution_legal_state.can_invoke_current_stage, false, "pending interrupt should block initial invocation");
@@ -159,6 +165,8 @@ function main() {
   assert.strictEqual(portal.portal_control_model.model_type, "dfms_portal_control_model_v1", "portal should expose the machine-readable cockpit model");
   assert(portal.portal_control_model.first_viewport_contract.length >= 5, "portal cockpit should define first-viewport obligations");
   assert(portal.portal_control_model.recovery_batches.some((batch) => batch.id === "RB-07" && batch.status === "accepted_for_local_control_model_slice"), "RB-07 local portal control model slice should be visible");
+  assert(portal.portal_control_model.recovery_batches.some((batch) => batch.id === "PB-01" && batch.status === "accepted_for_local_product_spine"), "portal should expose PB-01 local product platform spine as accepted only within its boundary");
+  assert.strictEqual(portal.portal_control_model.product_platform_spine.platform_status, "pb01_local_spine_running", "portal should expose product platform spine state");
   assert(portal.portal_control_model.assurance.build_test_status === "pass", "portal cockpit should surface build/test status");
   assert(portal.portal_control_model.stage_assurance.length === consoleApp.STAGES.length, "portal cockpit should show every factory stage");
   assert.strictEqual(portal.progress.accepted_stages, consoleApp.STAGES.length, "portal should show all stages accepted before change");
@@ -198,7 +206,15 @@ function main() {
   assert(truth.truth_rows.some((row) => row.proof_class === "descriptor_only"), "truth inventory must distinguish descriptors from implementation");
   assert(truth.trust_now.some((row) => row.layer === "artifact_saturation" && row.status === "achieved"), "truth inventory must expose RB-08 artifact saturation as achieved after evidence exists");
   assert(truth.trust_now.some((row) => row.layer === "public_hardening" && row.status === "achieved_for_local_public_package"), "truth inventory must expose RB-09 public hardening after validation exists");
-  assert.strictEqual(truth.next_recovery_batch.id, "PB-01", "truth inventory should move beyond RB-09 to the full product platform spine after public hardening");
+  assert(truth.trust_now.some((row) => row.layer === "product_platform_spine" && row.status === "achieved_for_local_product_spine"), "truth inventory must expose PB-01 local product spine without calling it hosted");
+  assert.strictEqual(truth.next_recovery_batch.id, "PB-02", "truth inventory should move beyond PB-01 to hosted enterprise runtime after local product spine exists");
+
+  const commentResult = consoleApp.createPlatformComment({
+    runId: goalAudit.run.run_id,
+    topic: "product_gap",
+    comment: "Human reviewer confirms PB-01 local spine exists but hosted auth and database persistence remain PB-02."
+  });
+  assert(commentResult.platform.human_collaboration.comments.some((comment) => comment.topic === "product_gap"), "platform comments should persist human collaboration evidence");
 
   const summary = consoleApp.projectBookSummary();
   assert(summary.nodes > 0, "project-book dashboard should expose nodes");

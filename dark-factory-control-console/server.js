@@ -13,6 +13,48 @@ const LAYER_MAP_PUBLIC = path.join(ROOT, "dark-factory-meta-skills-design", "int
 const RUNS = path.join(__dirname, "runs");
 const SKILLS = path.join(ROOT, "codex-skills");
 const DEFAULT_PROJECT_BOOK = path.join(ROOT, "example", "worlds-best-todo-habits-app", "project-book");
+const PLATFORM_DIR = path.join(RUNS, "platform");
+const PLATFORM_STATE_FILE = path.join(PLATFORM_DIR, "product-platform-spine-state.json");
+const PLATFORM_COMMENT_FILE = path.join(PLATFORM_DIR, "human-collaboration-thread.json");
+
+const PLATFORM_CAPABILITIES = [
+  {
+    id: "PB01-CAP-001",
+    title: "Workspace And Tenant Spine",
+    status: "working_local_slice",
+    evidence: "Local workspace tenant is represented through a durable platform state record."
+  },
+  {
+    id: "PB01-CAP-002",
+    title: "Role And Decision Rights Model",
+    status: "working_local_slice",
+    evidence: "Owner, delivery lead, auditor, reviewer, and agent roles are explicit in platform state."
+  },
+  {
+    id: "PB01-CAP-003",
+    title: "Project Portfolio And Run Ledger",
+    status: "working_local_slice",
+    evidence: "Project runs are loaded from the JSON run ledger and surfaced as project spaces."
+  },
+  {
+    id: "PB01-CAP-004",
+    title: "Human Collaboration Thread",
+    status: "working_local_slice",
+    evidence: "Human comments can be persisted as platform records with audit and trace posture."
+  },
+  {
+    id: "PB01-CAP-005",
+    title: "Agent Protocol Runtime Surface",
+    status: "working_local_slice",
+    evidence: "The platform exposes AG-UI, A2UI, and MCP Apps local control endpoints."
+  },
+  {
+    id: "PB01-CAP-006",
+    title: "Hosted Enterprise Operations",
+    status: "not_achieved",
+    evidence: "Auth, RBAC enforcement, hosted database, deployment, billing, SSO, and service management remain PB-02+."
+  }
+];
 
 const STAGES = [
   {
@@ -2106,6 +2148,7 @@ function buildA2uiSurfaces(run) {
   const openChanges = (run.change_requests || []).filter((item) => !["closed", "rejected"].includes(item.state));
   const agenticContract = run.agentic_ui_contract || buildAgenticUiContract(run);
   const specGraph = run.spec_graph_layer || buildSpecGraphState(run);
+  const productPlatform = buildProductPlatformState(run);
   return [
     {
       protocol: "A2UI",
@@ -2296,10 +2339,20 @@ function buildA2uiSurfaces(run) {
       props: {
         rb_06: run.build_test_evidence?.proof_class === "working_implementation_local" ? "accepted_local_slice" : "blocked",
         rb_07: "portal_control_model_runtime",
-        rb_08: "partial_until_todo_habits_full_certification",
-        rb_09: "blocked_until_final_hawkeye_public_hardening"
+        rb_08: loadArtifactCoverage(run.project_book || DEFAULT_PROJECT_BOOK).full_saturation_status === "pass" ? "accepted" : "partial_until_todo_habits_full_certification",
+        rb_09: readJson(path.join(ROOT, "dark-factory-meta-skills-design", "records", "public-hardening-validation-results.json"), {}).status === "pass" ? "accepted_for_local_public_package" : "blocked_until_final_hawkeye_public_hardening",
+        pb_01: productPlatform.platform_status === "pb01_local_spine_running" ? "accepted_for_local_product_spine" : "next_product_batch"
       },
       actions: ["inspectEvidence", "openChangeRequest", "runGoalRalphAudit"]
+    },
+    {
+      protocol: "A2UI",
+      profile: PROTOCOL_PROFILE.a2ui.local_profile,
+      surface_id: "product-platform-spine",
+      component: "ProductPlatformSpine",
+      title: "PB-01 Product Platform Spine",
+      props: productPlatform,
+      actions: ["addPlatformComment", "inspectProjectSpace", "openChangeRequest", "askAgent"]
     }
   ];
 }
@@ -2356,9 +2409,15 @@ function buildMcpAppsManifest(run) {
         runId: { type: "string" },
         nodeId: { type: "string" },
         hypotheticalChange: { type: "string" }
+      }),
+      tool("dfms.addPlatformComment", "Persist a human review/comment record against the product platform spine.", "ui://dfms/product-platform", {
+        runId: { type: "string" },
+        topic: { type: "string" },
+        comment: { type: "string" }
       })
     ],
     resources: [
+      { uri: "dfms://platform", name: "Product platform spine", mimeType: "application/json" },
       { uri: `dfms://runs/${run.run_id}/portal`, name: "Human project portal", mimeType: "application/json" },
       { uri: `dfms://runs/${run.run_id}/protocol`, name: "Protocol state", mimeType: "application/json" },
       { uri: `dfms://runs/${run.run_id}/stage-report`, name: "Current stage report", mimeType: "application/json" },
@@ -2374,13 +2433,135 @@ function buildMcpAppsManifest(run) {
       { uri: "ui://dfms/human-interrupts", mimeType: PROTOCOL_PROFILE.mcp_apps.resource_mime_type, title: "Human Interrupts" },
       { uri: "ui://dfms/provider-quorum", mimeType: PROTOCOL_PROFILE.mcp_apps.resource_mime_type, title: "Provider Quorum Merge" },
       { uri: "ui://dfms/spec-graph-impact", mimeType: PROTOCOL_PROFILE.mcp_apps.resource_mime_type, title: "Spec Graph Impact" },
-      { uri: "ui://dfms/foundation-authoring", mimeType: PROTOCOL_PROFILE.mcp_apps.resource_mime_type, title: "Foundation Authoring Workbench" }
+      { uri: "ui://dfms/foundation-authoring", mimeType: PROTOCOL_PROFILE.mcp_apps.resource_mime_type, title: "Foundation Authoring Workbench" },
+      { uri: "ui://dfms/product-platform", mimeType: PROTOCOL_PROFILE.mcp_apps.resource_mime_type, title: "PB-01 Product Platform Spine" }
     ],
     security_model: [
       "UI resources are local descriptors in this console, not remote executable code.",
       "User-initiated tool calls require explicit button actions or API POSTs.",
       "Scope, budget, production, security, privacy, and residual-risk changes require human approval evidence."
     ]
+  };
+}
+
+function readPlatformComments() {
+  const comments = readJson(PLATFORM_COMMENT_FILE, { comments: [] });
+  return Array.isArray(comments.comments) ? comments.comments : [];
+}
+
+function buildProductPlatformState(runLike = null) {
+  ensureDir(PLATFORM_DIR);
+  const runs = listRuns();
+  const comments = readPlatformComments();
+  const activeRunId = typeof runLike === "string" ? runLike : runLike?.run_id || runs[0]?.run_id || "";
+  const projectSpaces = runs.slice(0, 25).map((run) => ({
+    run_id: run.run_id,
+    project_name: run.project_name,
+    status: run.status,
+    current_stage: run.current_stage,
+    updated_at: run.updated_at,
+    portal_endpoint: `/api/runs/${encodeURIComponent(run.run_id)}/portal`,
+    protocol_endpoint: `/api/runs/${encodeURIComponent(run.run_id)}/protocol`,
+    truth_endpoint: `/api/runs/${encodeURIComponent(run.run_id)}/truth`
+  }));
+  const state = {
+    zero_slop_policy: ZERO_SLOP,
+    platform_state_type: "dfms_product_platform_spine_v1",
+    batch: "PB-01",
+    generated_at: nowIso(),
+    platform_status: "pb01_local_spine_running",
+    active_run_id: activeRunId,
+    trust_boundary: "Working local single-user JSON-backed product spine. This is not yet a hosted enterprise, multi-tenant, auth-backed production platform.",
+    tenant: {
+      tenant_id: "LOCAL-DFMS-WORKSPACE",
+      name: "Local Dark Factory Workspace",
+      mode: "single_workspace_local",
+      status: "active_local"
+    },
+    roles: [
+      { role: "client_owner", decision_rights: ["scope", "token_budget", "residual_risk", "release"] },
+      { role: "dark_factory_delivery_lead", decision_rights: ["stage_plan", "task_bead", "quality_gate"] },
+      { role: "hawkeye_auditor", decision_rights: ["veto_conformance", "block_closure"] },
+      { role: "specialist_agent", decision_rights: ["draft", "analyze", "implement_inside_approved_stage"] },
+      { role: "human_reviewer", decision_rights: ["comment", "approve_interrupt", "open_change_request"] }
+    ],
+    durable_ledger: {
+      status: "json_ledger_active",
+      state_file: path.relative(ROOT, PLATFORM_STATE_FILE).replace(/\\/g, "/"),
+      comment_file: path.relative(ROOT, PLATFORM_COMMENT_FILE).replace(/\\/g, "/"),
+      runs_directory: path.relative(ROOT, RUNS).replace(/\\/g, "/"),
+      run_count: runs.length,
+      project_space_count: projectSpaces.length,
+      comment_count: comments.length
+    },
+    project_spaces: projectSpaces,
+    human_collaboration: {
+      status: "working_local_slice",
+      comments,
+      comment_endpoint: "/api/platform/comments",
+      rule: "Human comments are product records; material changes must still open governed change requests."
+    },
+    agent_runtime: {
+      status: "working_local_slice",
+      endpoints: [
+        "/api/bootstrap",
+        "/api/platform",
+        "/api/runs/:id/protocol",
+        "/api/runs/:id/agent-message",
+        "/api/runs/:id/interrupt",
+        "/api/runs/:id/change-request",
+        "/api/runs/:id/validate"
+      ],
+      protocols: ["AG-UI local events", "A2UI local surface descriptors", "MCP Apps local tool/resource descriptors"]
+    },
+    capabilities: PLATFORM_CAPABILITIES,
+    acceptance_gate: {
+      status: "conditional_local_pass",
+      accepted_scope: [
+        "local platform state",
+        "project portfolio view",
+        "role posture",
+        "durable JSON ledger",
+        "human collaboration records",
+        "agent protocol endpoints"
+      ],
+      remaining_blockers: [
+        "hosted auth and RBAC enforcement",
+        "database-backed multi-tenant persistence",
+        "deployment and operations environment",
+        "enterprise audit exports and retention policy",
+        "service-management workflow beyond local records"
+      ],
+      next_product_batch: "PB-02 hosted enterprise runtime"
+    }
+  };
+  writeJson(PLATFORM_STATE_FILE, state);
+  return state;
+}
+
+function createPlatformComment(payload = {}) {
+  ensureDir(PLATFORM_DIR);
+  const text = String(payload.comment || "").trim();
+  if (text.length < 4) throw Object.assign(new Error("Platform comment is required."), { status: 400 });
+  const record = {
+    zero_slop_policy: ZERO_SLOP,
+    record_type: "product_platform_human_comment",
+    id: `PCOM-${new Date().toISOString().replace(/[-:TZ.]/g, "").slice(0, 14)}`,
+    created_at: nowIso(),
+    run_id: String(payload.runId || ""),
+    author_role: String(payload.authorRole || "human_reviewer"),
+    topic: String(payload.topic || "platform_review"),
+    comment: text,
+    materiality: String(payload.materiality || "review_note"),
+    change_control_rule: "If this comment requests scope, design, budget, test, release, or risk change, open a governed change request before execution."
+  };
+  const comments = readPlatformComments();
+  const next = { comments: [record, ...comments].slice(0, 100) };
+  writeJson(PLATFORM_COMMENT_FILE, next);
+  buildProductPlatformState(payload.runId || null);
+  return {
+    comment: record,
+    platform: buildProductPlatformState(payload.runId || null)
   };
 }
 
@@ -2408,6 +2589,7 @@ function buildProtocolState(runOrId) {
     agui_events: run.agui_events || [],
     a2ui_surfaces: buildA2uiSurfaces(run),
     mcp_apps: buildMcpAppsManifest(run),
+    product_platform_spine: buildProductPlatformState(run),
     agent_report: buildAgentReport(run),
     recent_agent_messages: (run.agent_messages || []).slice(0, 10)
   };
@@ -2419,6 +2601,7 @@ function buildTruthInventory(runOrId) {
   const coverage = loadArtifactCoverage(run.project_book || DEFAULT_PROJECT_BOOK);
   const publicValidation = readJson(path.join(ROOT, "dark-factory-meta-skills-design", "records", "public-hardening-validation-results.json"), {});
   const finalTruth = readJson(path.join(ROOT, "dark-factory-meta-skills-design", "records", "final-truth-inventory.json"), {});
+  const productPlatform = buildProductPlatformState(run);
   const protocol = run.invocation_packet?.agent_protocols || {};
   const eventTypes = new Set((run.agui_events || []).map((event) => event.type));
   const truthRows = [
@@ -2515,6 +2698,20 @@ function buildTruthInventory(runOrId) {
     }),
     truthRow({
       id: "TRUTH-RUN-010",
+      layer: "product_platform_spine",
+      claim: "PB-01 local product platform spine exists: workspace, roles, project portfolio, durable JSON ledger, collaboration thread, and agent protocol endpoints.",
+      proof_class: productPlatform.platform_status === "pb01_local_spine_running" ? "working_implementation_local" : "missing",
+      status: productPlatform.platform_status === "pb01_local_spine_running" ? "achieved_for_local_product_spine" : "missing",
+      evidence: [
+        productPlatform.durable_ledger?.state_file,
+        productPlatform.durable_ledger?.comment_file,
+        "/api/platform",
+        "/api/platform/comments"
+      ],
+      trust_boundary: productPlatform.trust_boundary
+    }),
+    truthRow({
+      id: "TRUTH-RUN-011",
       layer: "outsourcing_replacement_platform",
       claim: "DFMS is a full hosted replacement for a human outsourcing SDLC firm.",
       proof_class: "scaffold_only",
@@ -2544,17 +2741,22 @@ function buildTruthInventory(runOrId) {
       publicValidation.status === "pass"
         ? "Do not call RB-09 public hardening a full hosted-product completion."
         : "Do not call public hardening accepted until validate_public_hardening.cjs passes.",
+      "Do not call PB-01 local product platform spine a hosted enterprise platform.",
       "Do not call dashboards, validators, or RALPH records product artifacts."
     ],
     trust_now: truthRows.filter((row) => ["working_implementation_local", "validated_evidence", "instantiated_artifact"].includes(row.proof_class)),
     do_not_trust_yet: truthRows.filter((row) => ["scaffold_only", "descriptor_only", "partial", "missing", "blocked"].includes(row.proof_class)),
     next_recovery_batch: {
       id: coverage.full_saturation_status === "pass"
-        ? (publicValidation.status === "pass" ? "PB-01" : "RB-09")
+        ? (publicValidation.status === "pass"
+          ? (productPlatform.platform_status === "pb01_local_spine_running" ? "PB-02" : "PB-01")
+          : "RB-09")
         : run.build_test_evidence?.proof_class === "working_implementation_local" ? "RB-08" : "RB-06",
       objective: coverage.full_saturation_status === "pass"
         ? (publicValidation.status === "pass"
-          ? "Start the full product platform spine: hosted app shell, durable database, accounts, roles, comments, and real execution ledger."
+          ? (productPlatform.platform_status === "pb01_local_spine_running"
+            ? "Build PB-02 hosted enterprise runtime: auth/RBAC, database-backed multi-tenant persistence, deployment, audit retention, and service-management workflow."
+            : "Start the full product platform spine: app shell, durable ledger, accounts/roles model, comments, and real execution ledger.")
           : "Run final Hawkeye/public hardening before any full-factory closure claim.")
         : run.build_test_evidence?.proof_class === "working_implementation_local"
           ? "Finish the todo/habits demonstrator certification run and current-catalog artifact saturation."
@@ -2791,6 +2993,7 @@ function buildPortalControlModel(run, validation, legalState, records = [], runB
   const pendingInterrupts = (run.human_interrupts || []).filter((item) => item.state === "pending");
   const coverage = loadArtifactCoverage(run.project_book || DEFAULT_PROJECT_BOOK);
   const publicValidation = readJson(path.join(ROOT, "dark-factory-meta-skills-design", "records", "public-hardening-validation-results.json"), {});
+  const productPlatform = buildProductPlatformState(run);
   const buildEvidence = run.build_test_evidence || {};
   const acceptedStages = (run.stages || []).filter((stage) => stage.status === "accepted");
   const blockers = [
@@ -2832,8 +3035,12 @@ function buildPortalControlModel(run, validation, legalState, records = [], runB
     blockers.push({
       severity: "P2",
       source: "full_product_platform",
-      title: "Full hosted product platform is still open",
-      detail: "RB-09 is accepted for local/public package hardening; PB-01 must build the hosted multi-user platform spine."
+      title: productPlatform.platform_status === "pb01_local_spine_running"
+        ? "Hosted enterprise product layer is still open"
+        : "Full product platform spine is still open",
+      detail: productPlatform.platform_status === "pb01_local_spine_running"
+        ? "PB-01 local product spine is active; PB-02 must add hosted auth/RBAC, database-backed multi-tenancy, deployment, audit retention, and service management."
+        : "RB-09 is accepted for local/public package hardening; PB-01 must build the product platform spine."
     });
   }
 
@@ -2920,11 +3127,19 @@ function buildPortalControlModel(run, validation, legalState, records = [], runB
       {
         id: "PB-01",
         title: "Full product platform spine",
+        status: productPlatform.platform_status === "pb01_local_spine_running" ? "accepted_for_local_product_spine" : "next_product_batch",
+        proof_class: productPlatform.platform_status === "pb01_local_spine_running" ? "working_implementation_local" : "not_started",
+        boundary: productPlatform.trust_boundary
+      },
+      {
+        id: "PB-02",
+        title: "Hosted enterprise runtime",
         status: "next_product_batch",
         proof_class: "not_started",
-        boundary: "Hosted multi-user app shell, durable database, identity, comments, and production execution ledger remain future product work."
+        boundary: "Auth/RBAC enforcement, database-backed multi-tenancy, deployment, audit retention, and service-management workflow are not built yet."
       }
     ],
+    product_platform_spine: productPlatform,
     stage_assurance: stageAssurance,
     graph_and_redo: {
       spec_graph_nodes: (run.spec_graph_layer?.nodes || []).length,
@@ -3862,10 +4077,17 @@ async function handleApi(req, res) {
         provider_quorum: PROVIDER_QUORUM,
         foundation_sections: FOUNDATION_SECTIONS,
         spec_graph_layer: SPEC_GRAPH_LAYER,
+        product_platform_spine: buildProductPlatformState(),
         agentic_ui_research_findings: AGENTIC_UI_RESEARCH_FINDINGS,
         projectBook: projectBookSummary(),
         runs: listRuns().slice(0, 10)
       });
+    }
+    if (req.method === "GET" && url.pathname === "/api/platform") {
+      return sendJson(res, 200, buildProductPlatformState());
+    }
+    if (req.method === "POST" && url.pathname === "/api/platform/comments") {
+      return sendJson(res, 201, createPlatformComment(await parseBody(req)));
     }
     if (req.method === "POST" && url.pathname === "/api/runs") {
       return sendJson(res, 201, createRun(await parseBody(req)));
@@ -3984,6 +4206,8 @@ module.exports = {
   buildMcpAppsManifest,
   buildProtocolState,
   buildTruthInventory,
+  buildProductPlatformState,
+  createPlatformComment,
   createAgentMessage,
   decideHumanInterrupt,
   buildProjectPortal,
