@@ -126,3 +126,16 @@ flowchart TD
     E --> F["Layer 3: Product skill execution"]
     F --> G["Project book, code, tests, evidence, portal, handoff, release package"]
 ```
+
+## AI Studio Agentic UX Rescue Layout
+
+Source: `../../../../dark-factory-meta-skills-design/68-ai-studio-apple-grade-agentic-ux-rescue-brief.md`
+
+```mermaid
+flowchart LR
+  Rail["Left Rail<br/>Projects<br/>Templates<br/>Artifacts<br/>Quality<br/>Stage Ladder"]
+  Center["Center Studio<br/>Mission Composer<br/>Scenario Chips<br/>Active Preview<br/>Refine Input<br/>Approve / Edit / Reject"]
+  Inspector["Right Inspector<br/>Agents<br/>Evidence<br/>Graph<br/>Tests<br/>Audit"]
+  Rail --> Center
+  Center --> Inspector
+```

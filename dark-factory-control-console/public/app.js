@@ -24,6 +24,7 @@ function setBusy(value) {
   state.busy = value;
   for (const id of [
     "createRun",
+    "approveInterrogation",
     "invokeStage",
     "advanceStage",
     "executePipeline",
@@ -34,7 +35,10 @@ function setBusy(value) {
     "openChangeRequest",
     "sendAgentMessage",
     "studioPrimaryAction",
-    "studioRefineAction"
+    "studioRefineAction",
+    "cockpitPrimaryAction",
+    "cockpitAskAgent",
+    "cockpitOpenChange"
   ]) {
     const element = $(id);
     if (element) element.disabled = value;
@@ -56,11 +60,13 @@ async function init() {
     renderPortal();
     renderProtocol();
     renderTruthInventory();
+    renderPortalCockpit();
   }
 }
 
 function wireEvents() {
   $("createRun").addEventListener("click", createRun);
+  $("approveInterrogation").addEventListener("click", approveInterrogation);
   $("invokeStage").addEventListener("click", invokeCurrentStage);
   $("advanceStage").addEventListener("click", advanceStage);
   $("executePipeline").addEventListener("click", executePipeline);
@@ -73,6 +79,9 @@ function wireEvents() {
   $("studioPrimaryAction").addEventListener("click", runStudioPrimary);
   $("studioSecondaryAction").addEventListener("click", () => switchPanel("start"));
   $("studioRefineAction").addEventListener("click", runStudioRefine);
+  $("cockpitPrimaryAction").addEventListener("click", runStudioPrimary);
+  $("cockpitAskAgent").addEventListener("click", () => switchPanel("debug"));
+  $("cockpitOpenChange").addEventListener("click", () => switchPanel("change"));
   document.querySelectorAll("[data-studio-scenario]").forEach((button) => {
     button.addEventListener("click", () => selectStudioScenario(button.dataset.studioScenario));
   });
@@ -160,6 +169,7 @@ async function loadRun(runId) {
     renderPortal();
     renderProtocol();
     renderTruthInventory();
+    renderPortalCockpit();
   } catch (error) {
     showResult(error.message, true);
   } finally {
@@ -396,6 +406,32 @@ function renderStudioState() {
         ? "Continue Grill"
         : "Continue Factory");
   setText("studioSecondaryAction", "Inspect Evidence");
+}
+
+async function approveInterrogation() {
+  if (!state.run) return showResult("Start a run first.", true);
+  setBusy(true);
+  try {
+    state.run = await api(`/api/runs/${encodeURIComponent(state.run.run_id)}/approve-interrogation`, {
+      method: "POST",
+      body: JSON.stringify({
+        owner: state.run.answers?.["ANS-010"]?.value || "human-owner",
+        note: "Human owner approved the captured interrogation baseline for downstream SDLC generation."
+      })
+    });
+    await refreshBootstrap();
+    await refreshPortal(false);
+    await refreshProtocol(false);
+    await refreshTruth(false);
+    renderRun();
+    renderPortal();
+    renderProtocol();
+    showResult("Interrogation baseline approved. The customer grill can now pass its gate.", false);
+  } catch (error) {
+    showResult(error.message, true);
+  } finally {
+    setBusy(false);
+  }
 }
 
 function agentPersona(stage) {
@@ -737,6 +773,9 @@ function renderRun() {
     $("collectionScore").textContent = "--";
     $("recordCount").textContent = "--";
     $("currentStage").textContent = "--";
+    $("interrogationApproval").textContent = "Approval: not requested";
+    $("interrogationProtocolSummary").textContent = "Rounds, decomposition, and trace links appear after answers are captured.";
+    $("approveInterrogation").disabled = true;
     $("generatedMetaSkill").textContent = "{}";
     $("executionRecords").innerHTML = `<div class="result">No execution records yet. Start a project to create a run ledger.</div>`;
     $("auditLog").innerHTML = "";
@@ -744,6 +783,7 @@ function renderRun() {
     renderPacket({});
     renderProtocol();
     renderTruthInventory();
+    renderPortalCockpit();
     renderAgenticWorkbench();
     renderFocusConsole();
     renderPanelVisibility();
@@ -753,6 +793,7 @@ function renderRun() {
   $("runState").textContent = `Run: ${state.run.status}`;
   renderStages(state.run.stages);
   $("completionScore").textContent = `${state.run.interrogation.completeness}%`;
+  renderInterrogationProtocol();
   renderContradictions();
   renderAuditLog();
   renderFactoryExecution();
@@ -765,10 +806,25 @@ function renderRun() {
   renderProjectList();
   renderProtocol();
   renderTruthInventory();
+  renderPortalCockpit();
   renderAgenticWorkbench();
   renderFocusConsole();
   renderPanelVisibility();
   renderCommandCenter();
+}
+
+function renderInterrogationProtocol() {
+  const interrogation = state.run?.interrogation || {};
+  const approval = interrogation.approval || {};
+  const rounds = interrogation.rounds || [];
+  const capturedRounds = rounds.filter((round) => round.status === "captured").length;
+  const requeue = interrogation.reinterrogation_queue || [];
+  const traceCount = (interrogation.trace_links || []).length;
+  const nodeCount = interrogation.decomposition_tree?.root?.children?.reduce((sum, axis) => sum + 1 + (axis.children || []).length, 1) || 0;
+  const approvalLabel = interrogation.gate === "approval_required" ? "approval_required" : approval.state || "not_requested";
+  $("interrogationApproval").textContent = `Approval: ${approvalLabel}`;
+  $("interrogationProtocolSummary").textContent = `${capturedRounds}/${rounds.length || 4} rounds captured | ${traceCount} answer trace links | ${nodeCount} decomposition nodes | ${requeue.length} re-interrogation items`;
+  $("approveInterrogation").disabled = !state.run || interrogation.gate !== "approval_required";
 }
 
 function renderPortal() {
@@ -782,6 +838,7 @@ function renderPortal() {
     $("nextActions").innerHTML = `<div class="empty-note">Start or select a project to see legal next actions.</div>`;
     $("changeRequestList").innerHTML = `<div class="empty-note">No change requests yet.</div>`;
     $("portalRecords").innerHTML = `<div class="empty-note">No records yet.</div>`;
+    renderPortalCockpit();
     renderCommandCenter();
     return;
   }
@@ -815,7 +872,81 @@ function renderPortal() {
       <span>${escapeHtml(record.kind || "record")}</span>
     </div>
   `).join("") : `<div class="empty-note">No project records yet.</div>`;
+  renderPortalCockpit();
   renderCommandCenter();
+}
+
+function renderPortalCockpit() {
+  const model = state.portal?.portal_control_model;
+  if (!model) {
+    setText("cockpitSubhead", "Start or select a project to load the legal cursor, Hawkeye posture, evidence board, and redo path.");
+    setText("cockpitLegalAction", "Start or select a project.");
+    setText("cockpitLegalMeta", "The factory cannot skip locked predecessors.");
+    setText("cockpitHumanQueue", "--");
+    setText("cockpitHumanOwner", "Approval owner: --");
+    setText("cockpitEvidencePosture", "--");
+    setText("cockpitEvidenceMeta", "Records, tests, and validation status.");
+    setText("cockpitGraphPosture", "--");
+    setText("cockpitRedoPath", "Select a node to compute downstream closure.");
+    setText("hawkeyeState", "No run");
+    setText("hawkeyeBoundary", "Validation and closure posture appears after a run is selected.");
+    $("hawkeyeBlockers").innerHTML = `<div class="empty-note">No Hawkeye blockers available yet.</div>`;
+    $("stageAssuranceBoard").innerHTML = `<div class="empty-note">No stage assurance model yet.</div>`;
+    $("rbClosureBoard").innerHTML = `<div class="empty-note">No recovery closure model yet.</div>`;
+    $("rbClosureMini").innerHTML = "";
+    return;
+  }
+
+  const legal = model.legal_action || {};
+  const human = model.human_control || {};
+  const assurance = model.assurance || {};
+  const blockers = model.blocker_board || [];
+  const rb = model.recovery_batches || [];
+  const stages = model.stage_assurance || [];
+  const graph = model.graph_and_redo || {};
+  const hardBlockers = blockers.filter((item) => item.severity === "P1").length;
+  const validationText = `${assurance.validation_status || "--"} | ${assurance.p1_count || 0} P1 | ${assurance.p2_count || 0} P2`;
+
+  setText("cockpitSubhead", `${model.first_viewport_contract?.length || 0} viewport obligations enforced by the portal control model.`);
+  setText("cockpitLegalAction", legal.legal_next_action || "No legal action computed.");
+  setText("cockpitLegalMeta", `${legal.current_stage_title || legal.current_stage || "--"} | can invoke: ${legal.can_invoke_current_stage ? "yes" : "no"} | completed: ${legal.completed ? "yes" : "no"}`);
+  setText("cockpitHumanQueue", `${human.pending_interrupts || 0} interrupts | ${human.open_change_requests || 0} changes`);
+  setText("cockpitHumanOwner", `Approval owner: ${human.approval_owner || "--"}`);
+  setText("cockpitEvidencePosture", `${assurance.execution_record_count || 0} records | ${assurance.build_test_status || "not_run"}`);
+  setText("cockpitEvidenceMeta", `${validationText} | ${assurance.build_test_proof_class || "missing"}`);
+  setText("cockpitGraphPosture", `${graph.spec_graph_nodes || 0} nodes | ${graph.spec_graph_edges || 0} edges`);
+  setText("cockpitRedoPath", graph.change_control_path || "Open change control to compute redo closure.");
+  setText("hawkeyeState", hardBlockers ? `${hardBlockers} P1 blockers` : validationText);
+  setText("hawkeyeBoundary", hardBlockers ? "Hawkeye veto remains active until P1 blockers are cleared." : "Local structural portal checks are passing; remaining boundaries are explicit.");
+
+  $("hawkeyeBlockers").innerHTML = blockers.length ? blockers.slice(0, 8).map((item) => `
+    <article class="cockpit-list-item ${escapeAttr(item.severity || "P2")}">
+      <strong>${escapeHtml(item.severity || "--")} | ${escapeHtml(item.title)}</strong>
+      <span>${escapeHtml(item.source || "audit")} | ${escapeHtml(item.detail || "")}</span>
+    </article>
+  `).join("") : `<div class="empty-note">No Hawkeye blockers in the current local control model.</div>`;
+
+  $("stageAssuranceBoard").innerHTML = stages.map((stage) => `
+    <article class="assurance-step ${escapeAttr(stage.status || "")} ${stage.id === legal.current_stage ? "current" : ""}">
+      <span>${String(stage.order || 0).padStart(2, "0")}</span>
+      <div>
+        <strong>${escapeHtml(stage.title)}</strong>
+        <small>${escapeHtml(stage.status || "--")} | ${escapeHtml(stage.gate_result || "--")} | ${escapeHtml(stage.evidence_count || 0)} outputs</small>
+      </div>
+    </article>
+  `).join("") || `<div class="empty-note">Stage assurance unavailable.</div>`;
+
+  $("rbClosureBoard").innerHTML = rb.map((batch) => `
+    <article class="cockpit-list-item">
+      <strong>${escapeHtml(batch.id)} | ${escapeHtml(batch.status)}</strong>
+      <span>${escapeHtml(batch.title)} | ${escapeHtml(batch.proof_class || "--")}</span>
+      ${batch.boundary ? `<small>${escapeHtml(batch.boundary)}</small>` : ""}
+    </article>
+  `).join("") || `<div class="empty-note">Recovery closure model unavailable.</div>`;
+
+  $("rbClosureMini").innerHTML = rb.map((batch) => `
+    <span class="rb-mini ${escapeAttr(batch.status || "")}">${escapeHtml(batch.id)} ${escapeHtml(batch.status || "--")}</span>
+  `).join("");
 }
 
 function renderProtocol() {
@@ -831,6 +962,7 @@ function renderProtocol() {
     $("mcpAppsList").innerHTML = `<div class="empty-note">No MCP Apps descriptors yet.</div>`;
     $("agentResponse").innerHTML = `<div class="empty-note">Ask the agent about the active stage, blockers, evidence, or a resteer.</div>`;
     renderAgenticWorkbench();
+    renderPortalCockpit();
     return;
   }
 
@@ -883,6 +1015,7 @@ function renderProtocol() {
   renderAgenticWorkbench();
   renderFocusConsole();
   renderPanelVisibility();
+  renderPortalCockpit();
 }
 
 function renderAgenticWorkbench() {
@@ -1043,6 +1176,31 @@ function renderFactoryExecution() {
   $("currentStage").textContent = (state.run.current_stage || "--").replace("stage-", "");
   $("generatedMetaSkill").textContent = JSON.stringify(state.run.generated_meta_skill || {}, null, 2);
   const records = state.run.execution_outputs || [];
+  const buildEvidence = state.run.build_test_evidence || {};
+  const scenarios = buildEvidence.scenario_coverage || [];
+  const generatedFiles = buildEvidence.generated_files || [];
+  $("buildTestEvidence").innerHTML = buildEvidence.proof_class ? `
+    <div class="evidence-summary">
+      <div>
+        <span class="studio-kicker">Build/Test Factory</span>
+        <strong>${escapeHtml(buildEvidence.build_status || "not_run")} | ${escapeHtml(buildEvidence.proof_class || "missing")}</strong>
+        <small>${escapeHtml(buildEvidence.trust_boundary || "")}</small>
+      </div>
+      <div class="mini-ledger">
+        <span>${generatedFiles.length} generated files</span>
+        <span>${scenarios.filter((item) => item.status === "pass").length}/${scenarios.length} scenarios passing</span>
+        <span>${escapeHtml(buildEvidence.implementation_root || "no implementation root")}</span>
+      </div>
+    </div>
+    <div class="truth-row-list compact">
+      ${scenarios.map((item) => `
+        <article class="truth-row">
+          <div><div class="proof-class">${escapeHtml(item.status)}</div><small>${escapeHtml(item.type)}</small></div>
+          <div><strong>${escapeHtml(item.name)}</strong><span>${escapeHtml(item.evidence || "")}</span></div>
+        </article>
+      `).join("")}
+    </div>
+  ` : `<div class="result">Build/test evidence has not been generated yet. Stage 06 must produce code, tests, scenario, browser, accessibility, security, and SRE evidence before product claims pass.</div>`;
   $("executionRecords").innerHTML = records.length ? records.slice().reverse().map((record) => `
     <div class="record-item"><span>${escapeHtml(record)}</span><span>record</span></div>
   `).join("") : `<div class="result">No execution records yet. Execute the active stage or ready pipeline.</div>`;

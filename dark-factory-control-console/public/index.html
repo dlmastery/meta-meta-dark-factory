@@ -123,6 +123,12 @@
             <span>Next legal action</span>
             <strong id="legalNextAction">Start or select a project.</strong>
           </div>
+          <div class="hawkeye-card">
+            <span>Hawkeye audit</span>
+            <strong id="hawkeyeState">No run</strong>
+            <small id="hawkeyeBoundary">Validation and closure posture appears after a run is selected.</small>
+          </div>
+          <div id="rbClosureMini" class="rb-mini-board" aria-label="Recovery batch closure"></div>
           <div class="mini-ledger">
             <span id="budgetPosture">Token SWAG: --</span>
             <span id="changePosture">Change control: --</span>
@@ -147,6 +153,57 @@
         <button class="tab-button" data-panel-target="change">Change</button>
         <button class="tab-button" data-panel-target="debug">Agent Protocol</button>
       </nav>
+
+      <section class="band control-cockpit ux-panel active" data-panel="overview" aria-labelledby="cockpit-title" data-testid="factory-control-cockpit">
+        <div class="section-head">
+          <div>
+            <div class="studio-kicker">No-skip control tower</div>
+            <h2 id="cockpit-title">What is happening, what is blocked, and what the human can do next</h2>
+            <p id="cockpitSubhead">Start or select a project to load the legal cursor, Hawkeye posture, evidence board, and redo path.</p>
+          </div>
+          <div class="cockpit-action-cluster">
+            <button id="cockpitAskAgent" class="button secondary">Ask Agent</button>
+            <button id="cockpitOpenChange" class="button secondary">Resteer</button>
+            <button id="cockpitPrimaryAction" class="button primary">Next Legal Action</button>
+          </div>
+        </div>
+        <div class="cockpit-grid">
+          <article class="cockpit-card legal-card">
+            <span>Legal cursor</span>
+            <strong id="cockpitLegalAction">Start or select a project.</strong>
+            <small id="cockpitLegalMeta">The factory cannot skip locked predecessors.</small>
+          </article>
+          <article class="cockpit-card">
+            <span>Human queue</span>
+            <strong id="cockpitHumanQueue">--</strong>
+            <small id="cockpitHumanOwner">Approval owner: --</small>
+          </article>
+          <article class="cockpit-card">
+            <span>Evidence posture</span>
+            <strong id="cockpitEvidencePosture">--</strong>
+            <small id="cockpitEvidenceMeta">Records, tests, and validation status.</small>
+          </article>
+          <article class="cockpit-card">
+            <span>Graph and redo</span>
+            <strong id="cockpitGraphPosture">--</strong>
+            <small id="cockpitRedoPath">Select a node to compute downstream closure.</small>
+          </article>
+        </div>
+        <div class="cockpit-columns">
+          <div>
+            <h3>Hawkeye Blockers</h3>
+            <div id="hawkeyeBlockers" class="cockpit-list"></div>
+          </div>
+          <div>
+            <h3>Stage Assurance</h3>
+            <div id="stageAssuranceBoard" class="stage-assurance-board"></div>
+          </div>
+          <div>
+            <h3>Recovery Closure</h3>
+            <div id="rbClosureBoard" class="cockpit-list"></div>
+          </div>
+        </div>
+      </section>
 
       <section class="band agentic-workbench ux-panel active" data-panel="overview" aria-labelledby="agentic-workbench-title">
         <div class="section-head">
@@ -299,6 +356,13 @@
         </div>
         <div id="questionList" class="question-list"></div>
         <div id="contradictions" class="alerts" aria-live="polite"></div>
+        <div class="interrogation-protocol">
+          <div>
+            <strong id="interrogationApproval">Approval: not requested</strong>
+            <span id="interrogationProtocolSummary">Rounds, decomposition, and trace links appear after answers are captured.</span>
+          </div>
+          <button id="approveInterrogation" class="button secondary" disabled>Approve Spec Baseline</button>
+        </div>
       </section>
 
       <section class="band protocol-workbench ux-panel" data-panel="debug" aria-labelledby="protocol-title">
@@ -512,6 +576,7 @@
             <div class="metric"><strong id="recordCount">--</strong><span>records</span></div>
             <div class="metric"><strong id="currentStage">--</strong><span>current stage</span></div>
           </div>
+          <div id="buildTestEvidence" class="evidence-board"></div>
           <div id="executionRecords" class="record-list"></div>
           <div id="auditResult" class="result"></div>
           <div id="goalAuditResult" class="result"></div>

@@ -95,3 +95,7 @@ The next serious run should be one of these:
 - **Full saturation run:** generate the missing standalone artifacts and rubrics.
 - **Tailoring acceptance run:** keep the demonstrator small but formally waive or combine each artifact with exact section-level trace.
 - **Cleanup run:** remove browser-profile runtime noise after explicit human approval.
+
+## 2026-05-03 RB-08 Saturation Update
+
+The baseline audit exposed the gap. RB-08 now closes the current catalog gap by adding 36 standalone recovery artifacts plus `26-not-applicable-waiver-register.md`, `records/artifact-saturation-review-package.json`, and `evidence/artifact-saturation-quality-certificate.json`. The artifact catalog coverage matrix now requires `claim_full_catalog_coverage=true`, `full_saturation_status=pass`, zero missing/partial/combined/deferred entries, and eight explicit local-static not-applicable waivers.

@@ -1,13 +1,13 @@
 {
   "zero_slop_policy": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
-  "report_id": "REDO-IMPACT-dfms-ui-console-run-20260501-215216",
+  "report_id": "REDO-IMPACT-dfms-ui-console-run-20260503-105347",
   "project": "DFMS UI Console Run",
   "source_request": "UI-REDO-REQUEST",
   "selected_node": "NODE-02-PRD-MD",
   "selected_node_path": "02-prd.md",
-  "generated_at": "2026-05-02T04:52:16+00:00",
+  "generated_at": "2026-05-03T17:53:47+00:00",
   "closure": {
-    "impacted_node_count": 19,
+    "impacted_node_count": 18,
     "impacted_nodes": [
       {
         "id": "NODE-02-PRD-MD",
@@ -242,19 +242,6 @@
         "certificate": "",
         "redo_boundary": false,
         "tags": []
-      },
-      {
-        "id": "NODE-RECORDS-ARTIFACT-CATALOG-COVERAGE-MATRIX-JSON",
-        "kind": "artifact",
-        "title": "Artifact Catalog Coverage Matrix",
-        "path": "records/artifact-catalog-coverage-matrix.json",
-        "stage": "project-book",
-        "status": "blocked",
-        "owner": "",
-        "gate": "",
-        "certificate": "",
-        "redo_boundary": false,
-        "tags": []
       }
     ],
     "edge_reasons": [
@@ -478,19 +465,6 @@
         "impact_direction": "reverse",
         "original_source": "NODE-PORTAL-README-MD",
         "original_target": "NODE-PORTAL-INDEX-HTML"
-      },
-      {
-        "source": "NODE-RECORDS-ARTIFACT-CATALOG-COVERAGE-MATRIX-JSON",
-        "target": "NODE-PORTAL-README-MD",
-        "type": "inferred_reference",
-        "evidence": "records/artifact-catalog-coverage-matrix.json",
-        "authority": "inferred",
-        "reason": "text reference `README.md`",
-        "impact_source": "NODE-PORTAL-README-MD",
-        "impact_target": "NODE-RECORDS-ARTIFACT-CATALOG-COVERAGE-MATRIX-JSON",
-        "impact_direction": "reverse",
-        "original_source": "NODE-RECORDS-ARTIFACT-CATALOG-COVERAGE-MATRIX-JSON",
-        "original_target": "NODE-PORTAL-README-MD"
       }
     ]
   },
@@ -728,19 +702,6 @@
       "certificate": "",
       "redo_boundary": false,
       "tags": []
-    },
-    {
-      "id": "NODE-RECORDS-ARTIFACT-CATALOG-COVERAGE-MATRIX-JSON",
-      "kind": "artifact",
-      "title": "Artifact Catalog Coverage Matrix",
-      "path": "records/artifact-catalog-coverage-matrix.json",
-      "stage": "project-book",
-      "status": "blocked",
-      "owner": "",
-      "gate": "",
-      "certificate": "",
-      "redo_boundary": false,
-      "tags": []
     }
   ],
   "gates_to_reopen": [],
@@ -968,19 +929,6 @@
       "certificate": "",
       "redo_boundary": false,
       "tags": []
-    },
-    {
-      "id": "NODE-RECORDS-ARTIFACT-CATALOG-COVERAGE-MATRIX-JSON",
-      "kind": "artifact",
-      "title": "Artifact Catalog Coverage Matrix",
-      "path": "records/artifact-catalog-coverage-matrix.json",
-      "stage": "project-book",
-      "status": "blocked",
-      "owner": "",
-      "gate": "",
-      "certificate": "",
-      "redo_boundary": false,
-      "tags": []
     }
   ],
   "dashboard_outputs_to_refresh": [
@@ -1003,7 +951,7 @@
       "title": "Dashboard Control",
       "path": "portal/dashboard-control.html",
       "stage": "portal",
-      "status": "conditional",
+      "status": "blocked",
       "owner": "",
       "gate": "",
       "certificate": "",
@@ -1024,7 +972,7 @@
     "df-dashboard-control"
   ],
   "task_bead": {
-    "bead_id": "TB-REDO-20260501-215216",
+    "bead_id": "TB-REDO-20260503-105347",
     "state": "planned",
     "gate": "GATE-REDO-IMPACT",
     "evidence_target": "redo-impact-report.json"

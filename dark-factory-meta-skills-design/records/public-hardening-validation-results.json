@@ -1,0 +1,27 @@
+{
+  "zero_slop_policy": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+  "validator": "validate_public_hardening.cjs",
+  "generated_at": "2026-05-03T17:54:06.485Z",
+  "status": "pass",
+  "repository": {
+    "name": "meta-meta-dark-factory",
+    "owner": {
+      "id": "MDQ6VXNlcjU0MjU5NDAw",
+      "login": "dlmastery"
+    },
+    "url": "https://github.com/dlmastery/meta-meta-dark-factory",
+    "visibility": "PUBLIC"
+  },
+  "required_file_count": 13,
+  "secret_scan": {
+    "scanned_text_files": 1151,
+    "hit_count": 0
+  },
+  "path_posture": {
+    "status": "pass_with_windows_longpath_residual_risk",
+    "longest_relative_path_length": 188,
+    "longest_relative_path": "codex-skills/df-artifact-factory/assets/artifact-template-library/review-panel-starters/release-production-maintenance/rel-008-outage-drill-and-operator-readiness-record-panel-example.json",
+    "note": "Use a short clone path or Git core.longpaths on Windows."
+  },
+  "findings": []
+}

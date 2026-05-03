@@ -24,6 +24,8 @@ function main() {
   assert(packet.agent_protocols.mcp_apps, "invocation packet should expose MCP Apps protocol contract");
   assert(packet.agentic_ui_contract.required_surfaces.includes("human-interrupt-inbox"), "agentic UI contract should require human interrupts");
   assert(packet.agentic_ui_contract.required_surfaces.includes("spec-graph-impact-explorer"), "agentic UI contract should require Spec Graph impact");
+  assert(packet.agentic_ui_contract.required_surfaces.includes("legal-next-action-cockpit"), "agentic UI contract should require the legal next-action cockpit");
+  assert(packet.agentic_ui_contract.required_surfaces.includes("hawkeye-conformance-auditor"), "agentic UI contract should require Hawkeye auditor visibility");
   assert(packet.spec_graph_layer.node_identity_format, "invocation packet should carry Spec Graph identity rules");
 
   const run = consoleApp.createRun({
@@ -42,9 +44,15 @@ function main() {
   assert(initialProtocol.a2ui_surfaces.some((surface) => surface.surface_id === "current-stage-report"), "protocol state should expose A2UI stage report surface");
   assert(initialProtocol.a2ui_surfaces.some((surface) => surface.surface_id === "human-interrupt-inbox"), "protocol state should expose a human interrupt inbox");
   assert(initialProtocol.a2ui_surfaces.some((surface) => surface.surface_id === "spec-graph-impact-explorer"), "protocol state should expose Spec Graph impact");
+  assert(initialProtocol.a2ui_surfaces.some((surface) => surface.surface_id === "legal-next-action-cockpit"), "protocol state should expose the legal cockpit surface");
+  assert(initialProtocol.a2ui_surfaces.some((surface) => surface.surface_id === "hawkeye-conformance-auditor"), "protocol state should expose Hawkeye auditor surface");
+  assert(initialProtocol.a2ui_surfaces.some((surface) => surface.surface_id === "rb-closure-board"), "protocol state should expose recovery closure surface");
   assert(initialProtocol.mcp_apps.tools.some((tool) => tool.name === "dfms.askAgent"), "protocol state should expose MCP Apps askAgent tool");
   assert(initialProtocol.mcp_apps.tools.some((tool) => tool.name === "dfms.decideInterrupt"), "protocol state should expose MCP Apps decideInterrupt tool");
   assert(initialProtocol.human_interrupts.some((item) => item.state === "pending"), "new runs should pause on the first human interrupt");
+  assert.strictEqual(initialProtocol.execution_legal_state.current_stage, "stage-00-meta-meta", "legal state should expose the stage cursor");
+  assert.strictEqual(initialProtocol.execution_legal_state.can_invoke_current_stage, false, "pending interrupt should block initial invocation");
+  assert(initialProtocol.execution_legal_state.blockers.some((item) => item.code === "HUMAN_INTERRUPT_PENDING"), "legal state should name the pending human decision blocker");
 
   const interruptDecision = consoleApp.decideHumanInterrupt(run.run_id, {
     interruptId: initialProtocol.human_interrupts[0].interrupt_id,
@@ -53,6 +61,15 @@ function main() {
   });
   assert.strictEqual(interruptDecision.decision.decision, "approve", "human interrupt approval should be recorded");
   assert(interruptDecision.run.agui_events.some((event) => event.type === "HUMAN_DECISION_RECORDED"), "interrupt decision should create AG-UI evidence");
+  const legalAfterInterrupt = consoleApp.computeLegalState(run.run_id);
+  assert.strictEqual(legalAfterInterrupt.can_invoke_current_stage, true, "resolved interrupt should unlock only the current stage");
+  const futureLegal = consoleApp.computeLegalState(run.run_id, "stage-01-interrogation");
+  assert.strictEqual(futureLegal.requested_stage_allowed, false, "future stage request should be illegal");
+  assert.throws(
+    () => consoleApp.invokeStage(run.run_id, "stage-01-interrogation"),
+    /FUTURE_STAGE_LOCKED|only legal invocation cursor/,
+    "future stages must not be invokable before predecessor acceptance"
+  );
 
   let advanced = consoleApp.invokeStage(run.run_id, "stage-00-meta-meta");
   assert(advanced.execution_outputs.some((record) => record.includes("meta-attractor-run-record.json")), "meta-meta execution should create an attractor record");
@@ -66,7 +83,20 @@ function main() {
     });
   }
   assert(advanced.interrogation.completeness >= 85, "required answer completeness should pass");
-  assert.strictEqual(advanced.interrogation.gate, "pass", "interrogation gate should pass after required answers");
+  assert.strictEqual(advanced.interrogation.gate, "approval_required", "interrogation should require explicit human approval after required answers");
+  assert(advanced.interrogation.decomposition_tree.root.children.length >= 10, "interrogation should build recursive decomposition axes");
+  assert(advanced.interrogation.trace_links.length >= 10, "interrogation should trace answers to downstream requirement seeds");
+  assert.throws(
+    () => consoleApp.invokeStage(advanced.run_id, "stage-01-interrogation"),
+    /INTERROGATION_NOT_APPROVED|approval_required|Customer grill/,
+    "customer grill stage must not execute until the baseline is approved"
+  );
+  advanced = consoleApp.approveInterrogation(advanced.run_id, {
+    owner: "human-owner",
+    note: "Test owner approves the interrogation baseline."
+  });
+  assert.strictEqual(advanced.interrogation.gate, "pass", "interrogation gate should pass after explicit baseline approval");
+  assert.strictEqual(advanced.interrogation.approval.state, "approved", "approval state should be recorded");
 
   advanced = consoleApp.invokeStage(advanced.run_id, "stage-01-interrogation");
   advanced = consoleApp.advanceRun(advanced.run_id);
@@ -75,6 +105,39 @@ function main() {
   advanced = consoleApp.executeReadyPipeline(advanced.run_id);
   assert(advanced.execution_outputs.some((record) => record.includes("engagement-governance-record.json")), "pipeline should execute governance records");
   assert(advanced.execution_outputs.some((record) => record.includes("agent-protocol-session-record.json")), "pipeline should execute protocol session records");
+  const artifactBomRel = advanced.execution_outputs.find((record) => record.endsWith("artifact-bom.json"));
+  assert(artifactBomRel, "pipeline should generate the artifact BOM record");
+  const artifactBom = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "..", artifactBomRel), "utf8")).artifact_bom;
+  assert(artifactBom.artifact_count >= 100, "artifact BOM should carry the full governed artifact catalog");
+  assert(artifactBom.artifacts.every((artifact) => artifact.rubric_15.length >= 15), "every artifact should carry a 15-point rubric");
+  assert(artifactBom.artifacts.every((artifact) => artifact.template.sections.length >= 10), "every artifact should carry a reusable template structure");
+  const qualityGateRel = advanced.execution_outputs.find((record) => record.endsWith("quality-refinery-gate.json"));
+  assert(qualityGateRel, "pipeline should generate the quality refinery gate");
+  const reviewEngine = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "..", qualityGateRel), "utf8")).review_engine;
+  assert(reviewEngine.assignment_count >= artifactBom.artifact_count, "review engine should cover the artifact catalog");
+  assert(reviewEngine.assignments.every((assignment) => assignment.independent_expert_panel.length >= 3), "every artifact should get three independent experts");
+  assert(reviewEngine.assignments.every((assignment) => assignment.adversarial_critic_panel.length >= 2), "every artifact should get adversarial critics");
+  assert(reviewEngine.assignments.every((assignment) => assignment.ralph_loop_plan.length >= 5), "every artifact should get a five-loop RALPH plan");
+  const implementationRel = advanced.execution_outputs.find((record) => record.endsWith("implementation-execution-record.json"));
+  const buildRel = advanced.execution_outputs.find((record) => record.endsWith("build-verification-record.json"));
+  const scenarioRel = advanced.execution_outputs.find((record) => record.endsWith("scenario-test-matrix.json"));
+  const wysiwygRel = advanced.execution_outputs.find((record) => record.endsWith("wysiwyg-browser-test-record.json"));
+  const accessibilitySecurityRel = advanced.execution_outputs.find((record) => record.endsWith("accessibility-security-evidence-record.json"));
+  const sreRel = advanced.execution_outputs.find((record) => record.endsWith("production-sre-handoff-record.json"));
+  assert(implementationRel, "pipeline should generate implementation execution evidence");
+  assert(buildRel, "pipeline should generate build verification evidence");
+  assert(scenarioRel, "pipeline should generate scenario test matrix evidence");
+  assert(wysiwygRel, "pipeline should generate WYSIWYG browser evidence");
+  assert(accessibilitySecurityRel, "pipeline should generate accessibility/security evidence");
+  assert(sreRel, "pipeline should generate production/SRE handoff evidence");
+  assert.strictEqual(advanced.build_test_evidence.proof_class, "working_implementation_local", "stage-06 should produce working local implementation proof");
+  assert.strictEqual(advanced.build_test_evidence.build_status, "pass", "generated implementation tests should pass");
+  assert(advanced.build_test_evidence.generated_files.some((file) => file.path.endsWith("src/product-core.cjs")), "generated source code should exist");
+  assert(advanced.build_test_evidence.generated_files.some((file) => file.path.endsWith("tests/product-core.test.cjs")), "generated unit tests should exist");
+  assert(advanced.build_test_evidence.scenario_coverage.some((item) => item.type === "holdout" && item.status === "pass"), "holdout scenario evidence should pass");
+  assert(advanced.build_test_evidence.scenario_coverage.some((item) => item.type === "transfer" && item.status === "pass"), "transfer scenario evidence should pass");
+  const buildRecord = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "..", buildRel), "utf8"));
+  assert.strictEqual(buildRecord.status, "pass", "build verification record should be passing");
   assert(advanced.generated_meta_skill.name.startsWith("generated-"), "generated meta skill should be attached to the run");
   assert.strictEqual(advanced.status, "ready_for_handoff", "pipeline should reach handoff readiness after answers are complete");
   const interaction = consoleApp.createAgentMessage(advanced.run_id, {
@@ -93,7 +156,13 @@ function main() {
 
   const portal = consoleApp.buildProjectPortal(advanced.run_id);
   assert.strictEqual(portal.portal_type, "dfms_human_project_control_portal", "portal should expose human control contract");
+  assert.strictEqual(portal.portal_control_model.model_type, "dfms_portal_control_model_v1", "portal should expose the machine-readable cockpit model");
+  assert(portal.portal_control_model.first_viewport_contract.length >= 5, "portal cockpit should define first-viewport obligations");
+  assert(portal.portal_control_model.recovery_batches.some((batch) => batch.id === "RB-07" && batch.status === "accepted_for_local_control_model_slice"), "RB-07 local portal control model slice should be visible");
+  assert(portal.portal_control_model.assurance.build_test_status === "pass", "portal cockpit should surface build/test status");
+  assert(portal.portal_control_model.stage_assurance.length === consoleApp.STAGES.length, "portal cockpit should show every factory stage");
   assert.strictEqual(portal.progress.accepted_stages, consoleApp.STAGES.length, "portal should show all stages accepted before change");
+  assert.strictEqual(portal.execution_legal_state.completed, true, "portal legal state should recognize completed stage chain");
   assert(portal.next_actions.some((action) => action.includes("handoff") || action.includes("change request")), "portal should expose legal human next actions");
 
   const change = consoleApp.createChangeRequest(advanced.run_id, {
@@ -110,6 +179,10 @@ function main() {
   assert.strictEqual(change.run.current_stage, "stage-04-artifacts", "design change should reopen from artifact stage");
   assert.strictEqual(change.run.stages[4].status, "active", "target stage should be active after change");
   assert.strictEqual(change.run.stages[5].status, "locked", "downstream stages should lock until re-executed");
+  const changeLegal = consoleApp.computeLegalState(change.run.run_id);
+  assert.strictEqual(changeLegal.current_stage, "stage-04-artifacts", "change control should move the legal cursor to the reopened target stage");
+  assert.strictEqual(changeLegal.can_invoke_current_stage, true, "reopened target should be the only invokable stage");
+  assert.strictEqual(consoleApp.computeLegalState(change.run.run_id, "stage-06-build-test").requested_stage_allowed, false, "downstream reopened stages stay locked until predecessors pass again");
   assert(change.change_request.reopened_stages.includes("stage-07-dashboard-redo"), "redo/handoff stage should be in the transitive reopen set");
   assert(change.portal.change_requests.length >= 1, "portal should list opened change requests");
   assert(change.run.execution_outputs.some((record) => record.includes("human-communication-record.json")), "human communication evidence should be recorded");
@@ -123,7 +196,9 @@ function main() {
   const truth = consoleApp.buildTruthInventory(goalAudit.run.run_id);
   assert.strictEqual(truth.inventory_type, "dfms_recovery_truth_inventory", "truth endpoint should expose recovery truth inventory");
   assert(truth.truth_rows.some((row) => row.proof_class === "descriptor_only"), "truth inventory must distinguish descriptors from implementation");
-  assert(truth.do_not_trust_yet.some((row) => row.layer === "artifact_saturation"), "truth inventory must expose artifact saturation gap");
+  assert(truth.trust_now.some((row) => row.layer === "artifact_saturation" && row.status === "achieved"), "truth inventory must expose RB-08 artifact saturation as achieved after evidence exists");
+  assert(truth.trust_now.some((row) => row.layer === "public_hardening" && row.status === "achieved_for_local_public_package"), "truth inventory must expose RB-09 public hardening after validation exists");
+  assert.strictEqual(truth.next_recovery_batch.id, "PB-01", "truth inventory should move beyond RB-09 to the full product platform spine after public hardening");
 
   const summary = consoleApp.projectBookSummary();
   assert(summary.nodes > 0, "project-book dashboard should expose nodes");

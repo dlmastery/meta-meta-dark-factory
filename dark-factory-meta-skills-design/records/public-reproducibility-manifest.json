@@ -1,0 +1,34 @@
+{
+  "zero_slop_policy": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+  "manifest_type": "public_reproducibility_manifest",
+  "generated_at": "2026-05-03T18:00:00.000Z",
+  "repository_url": "https://github.com/dlmastery/meta-meta-dark-factory",
+  "clone_commands": [
+    "git clone https://github.com/dlmastery/meta-meta-dark-factory C:\\mmdf-public",
+    "git config --global core.longpaths true"
+  ],
+  "run_commands": [
+    "cd dark-factory-control-console && npm start",
+    "cd dark-factory-control-console && npm test",
+    "cd dark-factory-control-console && npm run test:browser",
+    "node dark-factory-meta-skills-design/scripts/validate_public_hardening.cjs ."
+  ],
+  "critical_evidence_paths": [
+    "README.md",
+    "PUBLIC_RELEASE_AUDIT.md",
+    "dark-factory-meta-skills-design/records/ralph-100-missing-deliverable-kernel-report.json",
+    "example/worlds-best-todo-habits-app/project-book/records/artifact-catalog-coverage-matrix.json",
+    "example/worlds-best-todo-habits-app/project-book/evidence/artifact-saturation-quality-certificate.json",
+    "example/worlds-best-todo-habits-app/project-book/evidence/wysiwyg-desktop.png",
+    "example/worlds-best-todo-habits-app/project-book/evidence/wysiwyg-mobile.png"
+  ],
+  "known_clone_risks": [
+    {
+      "id": "CLONE-WIN-LONGPATH-001",
+      "severity": "P2",
+      "description": "Deep artifact library paths can exceed Windows checkout limits when cloned into a long parent directory.",
+      "mitigation": "Use a short clone path and enable Git core.longpaths. Future packaging should shorten or archive deep template paths."
+    }
+  ],
+  "release_boundary": "Local evidence package; not hosted product certification."
+}

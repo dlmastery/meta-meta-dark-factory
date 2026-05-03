@@ -138,3 +138,7 @@ The truthful status is:
 | 4 | Add a validator that fails if a future project claims full catalog coverage without standalone/combined/not-applicable status for every artifact class. | completed: `tests/artifact-catalog-coverage-audit.cjs` |
 | 5 | Ask for confirmation before deleting or moving nested browser-profile runtime files. | cleanup bead after approval |
 | 6 | If the user's intent is a full saturation demonstrator, open a new token-budgeted change-controlled run to generate the missing explicit artifacts. | new bead and token SWAG |
+
+## 2026-05-03 RB-08 Correction
+
+RB-08 generated standalone artifacts for every previously combined, partial, or missing applicable catalog item in the current 63-artifact DFMS catalog, created a not-applicable waiver register for eight production/API-only surfaces, and produced a consolidated review/rubric/RALPH evidence package. The corrected status is full current-catalog saturation for the local-static demonstrator only: 55 standalone, 8 not applicable with explicit waivers, 0 combined, 0 partial, 0 missing, and 0 deferred. This still does not claim the future larger hundreds-of-artifacts DFMS universe or hosted production readiness.

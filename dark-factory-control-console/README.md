@@ -75,3 +75,5 @@ Change requests write both the change record and a human communication record un
 ## Current Boundary
 
 This is a local single-user control console, not yet a multi-user hosted portal with authentication, RBAC, comments, notifications, or durable database storage. It is suitable for guided local project starts, interrogation capture, progress tracking, human resteer/change control, and redo closure against the current project-book.
+
+After RB-09, the console should show public hardening as accepted for the local/public package and move the remaining blocker to `PB-01`: the full hosted product platform spine. That is deliberate. A passing local console and public package do not equal the full outsourcing-replacement product.

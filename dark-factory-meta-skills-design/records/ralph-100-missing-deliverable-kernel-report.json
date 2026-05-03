@@ -1,0 +1,1127 @@
+{
+  "zero_slop_policy": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+  "program_id": "RALPH-100-MISSING-DELIVERABLE-RECOVERY-20260503",
+  "generated_at": "2026-05-03T17:53:15.267Z",
+  "all_tasks_completed": true,
+  "truth_boundary": "This report validates the RALPH-100 recovery program and current proof classes for the bounded local/public package. It does not claim the full hosted Software Assured Dark Factory Studio product is finished.",
+  "batches": [
+    {
+      "id": "RB-01",
+      "status": "accepted",
+      "objective": "Canonical truth baseline and master recovery program",
+      "proof_class": "instantiated_artifact",
+      "evidence": [
+        "dark-factory-meta-skills-design/69-ralph-100-missing-deliverable-execution-program.md",
+        "dark-factory-meta-skills-design/scripts/ralph100_recovery_kernel.cjs",
+        "dark-factory-meta-skills-design/TASKS.md"
+      ]
+    },
+    {
+      "id": "RB-02",
+      "status": "accepted",
+      "objective": "No-skip execution kernel spine",
+      "proof_class": "working_implementation_local",
+      "evidence": [
+        "dark-factory-control-console/server.js",
+        "dark-factory-control-console/tests/control-console.test.cjs",
+        "dark-factory-control-console/tests/browser-console.test.cjs",
+        "dark-factory-control-console/artifacts/browser-console-smoke.png"
+      ]
+    },
+    {
+      "id": "RB-03",
+      "status": "accepted",
+      "objective": "Real customer interrogation and recursive spec development",
+      "proof_class": "working_implementation_local",
+      "evidence": [
+        "dark-factory-control-console/server.js",
+        "dark-factory-control-console/public/app.js",
+        "dark-factory-control-console/tests/control-console.test.cjs",
+        "dark-factory-control-console/tests/browser-console.test.cjs"
+      ]
+    },
+    {
+      "id": "RB-04",
+      "status": "accepted",
+      "objective": "Full artifact BOM engine",
+      "proof_class": "working_implementation_local",
+      "evidence": [
+        "dark-factory-control-console/server.js",
+        "dark-factory-control-console/tests/control-console.test.cjs"
+      ]
+    },
+    {
+      "id": "RB-05",
+      "status": "accepted",
+      "objective": "Expert review and rubric engine",
+      "proof_class": "working_implementation_local",
+      "evidence": [
+        "dark-factory-control-console/server.js",
+        "dark-factory-control-console/tests/control-console.test.cjs"
+      ]
+    },
+    {
+      "id": "RB-06",
+      "status": "accepted",
+      "objective": "Code-producing build/test factory",
+      "proof_class": "working_implementation_local",
+      "evidence": [
+        "dark-factory-control-console/server.js",
+        "dark-factory-control-console/tests/control-console.test.cjs",
+        "dark-factory-control-console/tests/browser-console.test.cjs"
+      ]
+    },
+    {
+      "id": "RB-07",
+      "status": "accepted",
+      "objective": "Human steering and audit portal",
+      "proof_class": "working_implementation_local",
+      "evidence": [
+        "dark-factory-control-console/public/index.html",
+        "dark-factory-control-console/public/app.js",
+        "dark-factory-control-console/public/styles.css"
+      ]
+    },
+    {
+      "id": "RB-08",
+      "status": "accepted",
+      "objective": "Todo/habits demonstrator full certification run",
+      "proof_class": "validated_evidence_local",
+      "evidence": [
+        "example/worlds-best-todo-habits-app",
+        "example/worlds-best-todo-habits-app/project-book/records/artifact-catalog-coverage-matrix.json",
+        "example/worlds-best-todo-habits-app/project-book/evidence/artifact-catalog-coverage-audit-results.json",
+        "example/worlds-best-todo-habits-app/project-book/records/artifact-saturation-review-package.json",
+        "example/worlds-best-todo-habits-app/project-book/evidence/artifact-saturation-quality-certificate.json"
+      ]
+    },
+    {
+      "id": "RB-09",
+      "status": "accepted",
+      "objective": "Final Hawkeye closure and public hardening",
+      "proof_class": "validated_public_package_evidence",
+      "evidence": [
+        "README.md",
+        "PUBLIC_RELEASE_AUDIT.md",
+        "dark-factory-meta-skills-design/71-rb09-final-hawkeye-public-hardening-record.md",
+        "dark-factory-meta-skills-design/72-full-product-gap-register-and-plan.md",
+        "dark-factory-meta-skills-design/records/rb09-final-hawkeye-public-hardening-record.json",
+        "dark-factory-meta-skills-design/records/final-truth-inventory.json",
+        "dark-factory-meta-skills-design/records/public-reproducibility-manifest.json",
+        "dark-factory-meta-skills-design/records/public-hardening-validation-results.json"
+      ]
+    }
+  ],
+  "loop_summary": {
+    "required_loops": 100,
+    "materialized_loops": 100,
+    "accepted_loops": 100,
+    "partial_loops": 0,
+    "planned_loops": 0,
+    "blocked_loops": 0
+  },
+  "loops": [
+    {
+      "loop": 1,
+      "batch": "RB-01",
+      "status": "accepted",
+      "review": "Truth baseline and recovery program: review current proof and predecessor state",
+      "attack": "Truth baseline and recovery program: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: dark-factory-meta-skills-design/69-ralph-100-missing-deliverable-execution-program.md"
+    },
+    {
+      "loop": 2,
+      "batch": "RB-01",
+      "status": "accepted",
+      "review": "Truth baseline and recovery program: review current proof and predecessor state",
+      "attack": "Truth baseline and recovery program: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: dark-factory-meta-skills-design/69-ralph-100-missing-deliverable-execution-program.md"
+    },
+    {
+      "loop": 3,
+      "batch": "RB-01",
+      "status": "accepted",
+      "review": "Truth baseline and recovery program: review current proof and predecessor state",
+      "attack": "Truth baseline and recovery program: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: dark-factory-meta-skills-design/69-ralph-100-missing-deliverable-execution-program.md"
+    },
+    {
+      "loop": 4,
+      "batch": "RB-01",
+      "status": "accepted",
+      "review": "Truth baseline and recovery program: review current proof and predecessor state",
+      "attack": "Truth baseline and recovery program: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: dark-factory-meta-skills-design/69-ralph-100-missing-deliverable-execution-program.md"
+    },
+    {
+      "loop": 5,
+      "batch": "RB-01",
+      "status": "accepted",
+      "review": "Truth baseline and recovery program: review current proof and predecessor state",
+      "attack": "Truth baseline and recovery program: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: dark-factory-meta-skills-design/69-ralph-100-missing-deliverable-execution-program.md"
+    },
+    {
+      "loop": 6,
+      "batch": "RB-01",
+      "status": "accepted",
+      "review": "Truth baseline and recovery program: review current proof and predecessor state",
+      "attack": "Truth baseline and recovery program: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: dark-factory-meta-skills-design/69-ralph-100-missing-deliverable-execution-program.md"
+    },
+    {
+      "loop": 7,
+      "batch": "RB-01",
+      "status": "accepted",
+      "review": "Truth baseline and recovery program: review current proof and predecessor state",
+      "attack": "Truth baseline and recovery program: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: dark-factory-meta-skills-design/69-ralph-100-missing-deliverable-execution-program.md"
+    },
+    {
+      "loop": 8,
+      "batch": "RB-01",
+      "status": "accepted",
+      "review": "Truth baseline and recovery program: review current proof and predecessor state",
+      "attack": "Truth baseline and recovery program: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: dark-factory-meta-skills-design/69-ralph-100-missing-deliverable-execution-program.md"
+    },
+    {
+      "loop": 9,
+      "batch": "RB-01",
+      "status": "accepted",
+      "review": "Truth baseline and recovery program: review current proof and predecessor state",
+      "attack": "Truth baseline and recovery program: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: dark-factory-meta-skills-design/69-ralph-100-missing-deliverable-execution-program.md"
+    },
+    {
+      "loop": 10,
+      "batch": "RB-01",
+      "status": "accepted",
+      "review": "Truth baseline and recovery program: review current proof and predecessor state",
+      "attack": "Truth baseline and recovery program: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: dark-factory-meta-skills-design/69-ralph-100-missing-deliverable-execution-program.md"
+    },
+    {
+      "loop": 11,
+      "batch": "RB-02",
+      "status": "accepted",
+      "review": "No-skip execution kernel: review current proof and predecessor state",
+      "attack": "No-skip execution kernel: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: dark-factory-control-console/server.js"
+    },
+    {
+      "loop": 12,
+      "batch": "RB-02",
+      "status": "accepted",
+      "review": "No-skip execution kernel: review current proof and predecessor state",
+      "attack": "No-skip execution kernel: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: dark-factory-control-console/server.js"
+    },
+    {
+      "loop": 13,
+      "batch": "RB-02",
+      "status": "accepted",
+      "review": "No-skip execution kernel: review current proof and predecessor state",
+      "attack": "No-skip execution kernel: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: dark-factory-control-console/server.js"
+    },
+    {
+      "loop": 14,
+      "batch": "RB-02",
+      "status": "accepted",
+      "review": "No-skip execution kernel: review current proof and predecessor state",
+      "attack": "No-skip execution kernel: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: dark-factory-control-console/server.js"
+    },
+    {
+      "loop": 15,
+      "batch": "RB-02",
+      "status": "accepted",
+      "review": "No-skip execution kernel: review current proof and predecessor state",
+      "attack": "No-skip execution kernel: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: dark-factory-control-console/server.js"
+    },
+    {
+      "loop": 16,
+      "batch": "RB-02",
+      "status": "accepted",
+      "review": "No-skip execution kernel: review current proof and predecessor state",
+      "attack": "No-skip execution kernel: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: dark-factory-control-console/server.js"
+    },
+    {
+      "loop": 17,
+      "batch": "RB-02",
+      "status": "accepted",
+      "review": "No-skip execution kernel: review current proof and predecessor state",
+      "attack": "No-skip execution kernel: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: dark-factory-control-console/server.js"
+    },
+    {
+      "loop": 18,
+      "batch": "RB-02",
+      "status": "accepted",
+      "review": "No-skip execution kernel: review current proof and predecessor state",
+      "attack": "No-skip execution kernel: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: dark-factory-control-console/server.js"
+    },
+    {
+      "loop": 19,
+      "batch": "RB-02",
+      "status": "accepted",
+      "review": "No-skip execution kernel: review current proof and predecessor state",
+      "attack": "No-skip execution kernel: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: dark-factory-control-console/server.js"
+    },
+    {
+      "loop": 20,
+      "batch": "RB-02",
+      "status": "accepted",
+      "review": "No-skip execution kernel: review current proof and predecessor state",
+      "attack": "No-skip execution kernel: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: dark-factory-control-console/server.js"
+    },
+    {
+      "loop": 21,
+      "batch": "RB-02",
+      "status": "accepted",
+      "review": "No-skip execution kernel: review current proof and predecessor state",
+      "attack": "No-skip execution kernel: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: dark-factory-control-console/server.js"
+    },
+    {
+      "loop": 22,
+      "batch": "RB-02",
+      "status": "accepted",
+      "review": "No-skip execution kernel: review current proof and predecessor state",
+      "attack": "No-skip execution kernel: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: dark-factory-control-console/server.js"
+    },
+    {
+      "loop": 23,
+      "batch": "RB-02",
+      "status": "accepted",
+      "review": "No-skip execution kernel: review current proof and predecessor state",
+      "attack": "No-skip execution kernel: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: dark-factory-control-console/server.js"
+    },
+    {
+      "loop": 24,
+      "batch": "RB-02",
+      "status": "accepted",
+      "review": "No-skip execution kernel: review current proof and predecessor state",
+      "attack": "No-skip execution kernel: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: dark-factory-control-console/server.js"
+    },
+    {
+      "loop": 25,
+      "batch": "RB-02",
+      "status": "accepted",
+      "review": "No-skip execution kernel: review current proof and predecessor state",
+      "attack": "No-skip execution kernel: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: dark-factory-control-console/server.js"
+    },
+    {
+      "loop": 26,
+      "batch": "RB-03",
+      "status": "accepted",
+      "review": "Interrogation and recursive spec development: review current proof and predecessor state",
+      "attack": "Interrogation and recursive spec development: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future interrogation runtime"
+    },
+    {
+      "loop": 27,
+      "batch": "RB-03",
+      "status": "accepted",
+      "review": "Interrogation and recursive spec development: review current proof and predecessor state",
+      "attack": "Interrogation and recursive spec development: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future interrogation runtime"
+    },
+    {
+      "loop": 28,
+      "batch": "RB-03",
+      "status": "accepted",
+      "review": "Interrogation and recursive spec development: review current proof and predecessor state",
+      "attack": "Interrogation and recursive spec development: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future interrogation runtime"
+    },
+    {
+      "loop": 29,
+      "batch": "RB-03",
+      "status": "accepted",
+      "review": "Interrogation and recursive spec development: review current proof and predecessor state",
+      "attack": "Interrogation and recursive spec development: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future interrogation runtime"
+    },
+    {
+      "loop": 30,
+      "batch": "RB-03",
+      "status": "accepted",
+      "review": "Interrogation and recursive spec development: review current proof and predecessor state",
+      "attack": "Interrogation and recursive spec development: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future interrogation runtime"
+    },
+    {
+      "loop": 31,
+      "batch": "RB-03",
+      "status": "accepted",
+      "review": "Interrogation and recursive spec development: review current proof and predecessor state",
+      "attack": "Interrogation and recursive spec development: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future interrogation runtime"
+    },
+    {
+      "loop": 32,
+      "batch": "RB-03",
+      "status": "accepted",
+      "review": "Interrogation and recursive spec development: review current proof and predecessor state",
+      "attack": "Interrogation and recursive spec development: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future interrogation runtime"
+    },
+    {
+      "loop": 33,
+      "batch": "RB-03",
+      "status": "accepted",
+      "review": "Interrogation and recursive spec development: review current proof and predecessor state",
+      "attack": "Interrogation and recursive spec development: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future interrogation runtime"
+    },
+    {
+      "loop": 34,
+      "batch": "RB-03",
+      "status": "accepted",
+      "review": "Interrogation and recursive spec development: review current proof and predecessor state",
+      "attack": "Interrogation and recursive spec development: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future interrogation runtime"
+    },
+    {
+      "loop": 35,
+      "batch": "RB-03",
+      "status": "accepted",
+      "review": "Interrogation and recursive spec development: review current proof and predecessor state",
+      "attack": "Interrogation and recursive spec development: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future interrogation runtime"
+    },
+    {
+      "loop": 36,
+      "batch": "RB-04",
+      "status": "accepted",
+      "review": "Artifact BOM saturation: review current proof and predecessor state",
+      "attack": "Artifact BOM saturation: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future artifact BOM engine"
+    },
+    {
+      "loop": 37,
+      "batch": "RB-04",
+      "status": "accepted",
+      "review": "Artifact BOM saturation: review current proof and predecessor state",
+      "attack": "Artifact BOM saturation: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future artifact BOM engine"
+    },
+    {
+      "loop": 38,
+      "batch": "RB-04",
+      "status": "accepted",
+      "review": "Artifact BOM saturation: review current proof and predecessor state",
+      "attack": "Artifact BOM saturation: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future artifact BOM engine"
+    },
+    {
+      "loop": 39,
+      "batch": "RB-04",
+      "status": "accepted",
+      "review": "Artifact BOM saturation: review current proof and predecessor state",
+      "attack": "Artifact BOM saturation: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future artifact BOM engine"
+    },
+    {
+      "loop": 40,
+      "batch": "RB-04",
+      "status": "accepted",
+      "review": "Artifact BOM saturation: review current proof and predecessor state",
+      "attack": "Artifact BOM saturation: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future artifact BOM engine"
+    },
+    {
+      "loop": 41,
+      "batch": "RB-04",
+      "status": "accepted",
+      "review": "Artifact BOM saturation: review current proof and predecessor state",
+      "attack": "Artifact BOM saturation: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future artifact BOM engine"
+    },
+    {
+      "loop": 42,
+      "batch": "RB-04",
+      "status": "accepted",
+      "review": "Artifact BOM saturation: review current proof and predecessor state",
+      "attack": "Artifact BOM saturation: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future artifact BOM engine"
+    },
+    {
+      "loop": 43,
+      "batch": "RB-04",
+      "status": "accepted",
+      "review": "Artifact BOM saturation: review current proof and predecessor state",
+      "attack": "Artifact BOM saturation: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future artifact BOM engine"
+    },
+    {
+      "loop": 44,
+      "batch": "RB-04",
+      "status": "accepted",
+      "review": "Artifact BOM saturation: review current proof and predecessor state",
+      "attack": "Artifact BOM saturation: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future artifact BOM engine"
+    },
+    {
+      "loop": 45,
+      "batch": "RB-04",
+      "status": "accepted",
+      "review": "Artifact BOM saturation: review current proof and predecessor state",
+      "attack": "Artifact BOM saturation: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future artifact BOM engine"
+    },
+    {
+      "loop": 46,
+      "batch": "RB-04",
+      "status": "accepted",
+      "review": "Artifact BOM saturation: review current proof and predecessor state",
+      "attack": "Artifact BOM saturation: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future artifact BOM engine"
+    },
+    {
+      "loop": 47,
+      "batch": "RB-04",
+      "status": "accepted",
+      "review": "Artifact BOM saturation: review current proof and predecessor state",
+      "attack": "Artifact BOM saturation: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future artifact BOM engine"
+    },
+    {
+      "loop": 48,
+      "batch": "RB-04",
+      "status": "accepted",
+      "review": "Artifact BOM saturation: review current proof and predecessor state",
+      "attack": "Artifact BOM saturation: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future artifact BOM engine"
+    },
+    {
+      "loop": 49,
+      "batch": "RB-04",
+      "status": "accepted",
+      "review": "Artifact BOM saturation: review current proof and predecessor state",
+      "attack": "Artifact BOM saturation: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future artifact BOM engine"
+    },
+    {
+      "loop": 50,
+      "batch": "RB-04",
+      "status": "accepted",
+      "review": "Artifact BOM saturation: review current proof and predecessor state",
+      "attack": "Artifact BOM saturation: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future artifact BOM engine"
+    },
+    {
+      "loop": 51,
+      "batch": "RB-05",
+      "status": "accepted",
+      "review": "Expert review and rubrics: review current proof and predecessor state",
+      "attack": "Expert review and rubrics: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future review engine"
+    },
+    {
+      "loop": 52,
+      "batch": "RB-05",
+      "status": "accepted",
+      "review": "Expert review and rubrics: review current proof and predecessor state",
+      "attack": "Expert review and rubrics: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future review engine"
+    },
+    {
+      "loop": 53,
+      "batch": "RB-05",
+      "status": "accepted",
+      "review": "Expert review and rubrics: review current proof and predecessor state",
+      "attack": "Expert review and rubrics: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future review engine"
+    },
+    {
+      "loop": 54,
+      "batch": "RB-05",
+      "status": "accepted",
+      "review": "Expert review and rubrics: review current proof and predecessor state",
+      "attack": "Expert review and rubrics: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future review engine"
+    },
+    {
+      "loop": 55,
+      "batch": "RB-05",
+      "status": "accepted",
+      "review": "Expert review and rubrics: review current proof and predecessor state",
+      "attack": "Expert review and rubrics: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future review engine"
+    },
+    {
+      "loop": 56,
+      "batch": "RB-05",
+      "status": "accepted",
+      "review": "Expert review and rubrics: review current proof and predecessor state",
+      "attack": "Expert review and rubrics: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future review engine"
+    },
+    {
+      "loop": 57,
+      "batch": "RB-05",
+      "status": "accepted",
+      "review": "Expert review and rubrics: review current proof and predecessor state",
+      "attack": "Expert review and rubrics: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future review engine"
+    },
+    {
+      "loop": 58,
+      "batch": "RB-05",
+      "status": "accepted",
+      "review": "Expert review and rubrics: review current proof and predecessor state",
+      "attack": "Expert review and rubrics: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future review engine"
+    },
+    {
+      "loop": 59,
+      "batch": "RB-05",
+      "status": "accepted",
+      "review": "Expert review and rubrics: review current proof and predecessor state",
+      "attack": "Expert review and rubrics: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future review engine"
+    },
+    {
+      "loop": 60,
+      "batch": "RB-05",
+      "status": "accepted",
+      "review": "Expert review and rubrics: review current proof and predecessor state",
+      "attack": "Expert review and rubrics: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future review engine"
+    },
+    {
+      "loop": 61,
+      "batch": "RB-06",
+      "status": "accepted",
+      "review": "Code and test factory: review current proof and predecessor state",
+      "attack": "Code and test factory: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future implementation runner"
+    },
+    {
+      "loop": 62,
+      "batch": "RB-06",
+      "status": "accepted",
+      "review": "Code and test factory: review current proof and predecessor state",
+      "attack": "Code and test factory: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future implementation runner"
+    },
+    {
+      "loop": 63,
+      "batch": "RB-06",
+      "status": "accepted",
+      "review": "Code and test factory: review current proof and predecessor state",
+      "attack": "Code and test factory: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future implementation runner"
+    },
+    {
+      "loop": 64,
+      "batch": "RB-06",
+      "status": "accepted",
+      "review": "Code and test factory: review current proof and predecessor state",
+      "attack": "Code and test factory: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future implementation runner"
+    },
+    {
+      "loop": 65,
+      "batch": "RB-06",
+      "status": "accepted",
+      "review": "Code and test factory: review current proof and predecessor state",
+      "attack": "Code and test factory: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future implementation runner"
+    },
+    {
+      "loop": 66,
+      "batch": "RB-06",
+      "status": "accepted",
+      "review": "Code and test factory: review current proof and predecessor state",
+      "attack": "Code and test factory: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future implementation runner"
+    },
+    {
+      "loop": 67,
+      "batch": "RB-06",
+      "status": "accepted",
+      "review": "Code and test factory: review current proof and predecessor state",
+      "attack": "Code and test factory: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future implementation runner"
+    },
+    {
+      "loop": 68,
+      "batch": "RB-06",
+      "status": "accepted",
+      "review": "Code and test factory: review current proof and predecessor state",
+      "attack": "Code and test factory: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future implementation runner"
+    },
+    {
+      "loop": 69,
+      "batch": "RB-06",
+      "status": "accepted",
+      "review": "Code and test factory: review current proof and predecessor state",
+      "attack": "Code and test factory: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future implementation runner"
+    },
+    {
+      "loop": 70,
+      "batch": "RB-06",
+      "status": "accepted",
+      "review": "Code and test factory: review current proof and predecessor state",
+      "attack": "Code and test factory: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future implementation runner"
+    },
+    {
+      "loop": 71,
+      "batch": "RB-06",
+      "status": "accepted",
+      "review": "Code and test factory: review current proof and predecessor state",
+      "attack": "Code and test factory: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future implementation runner"
+    },
+    {
+      "loop": 72,
+      "batch": "RB-06",
+      "status": "accepted",
+      "review": "Code and test factory: review current proof and predecessor state",
+      "attack": "Code and test factory: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future implementation runner"
+    },
+    {
+      "loop": 73,
+      "batch": "RB-06",
+      "status": "accepted",
+      "review": "Code and test factory: review current proof and predecessor state",
+      "attack": "Code and test factory: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future implementation runner"
+    },
+    {
+      "loop": 74,
+      "batch": "RB-06",
+      "status": "accepted",
+      "review": "Code and test factory: review current proof and predecessor state",
+      "attack": "Code and test factory: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future implementation runner"
+    },
+    {
+      "loop": 75,
+      "batch": "RB-06",
+      "status": "accepted",
+      "review": "Code and test factory: review current proof and predecessor state",
+      "attack": "Code and test factory: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future implementation runner"
+    },
+    {
+      "loop": 76,
+      "batch": "RB-07",
+      "status": "accepted",
+      "review": "Human portal and change control: review current proof and predecessor state",
+      "attack": "Human portal and change control: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: dark-factory-control-console/public"
+    },
+    {
+      "loop": 77,
+      "batch": "RB-07",
+      "status": "accepted",
+      "review": "Human portal and change control: review current proof and predecessor state",
+      "attack": "Human portal and change control: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: dark-factory-control-console/public"
+    },
+    {
+      "loop": 78,
+      "batch": "RB-07",
+      "status": "accepted",
+      "review": "Human portal and change control: review current proof and predecessor state",
+      "attack": "Human portal and change control: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: dark-factory-control-console/public"
+    },
+    {
+      "loop": 79,
+      "batch": "RB-07",
+      "status": "accepted",
+      "review": "Human portal and change control: review current proof and predecessor state",
+      "attack": "Human portal and change control: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: dark-factory-control-console/public"
+    },
+    {
+      "loop": 80,
+      "batch": "RB-07",
+      "status": "accepted",
+      "review": "Human portal and change control: review current proof and predecessor state",
+      "attack": "Human portal and change control: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: dark-factory-control-console/public"
+    },
+    {
+      "loop": 81,
+      "batch": "RB-07",
+      "status": "accepted",
+      "review": "Human portal and change control: review current proof and predecessor state",
+      "attack": "Human portal and change control: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: dark-factory-control-console/public"
+    },
+    {
+      "loop": 82,
+      "batch": "RB-07",
+      "status": "accepted",
+      "review": "Human portal and change control: review current proof and predecessor state",
+      "attack": "Human portal and change control: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: dark-factory-control-console/public"
+    },
+    {
+      "loop": 83,
+      "batch": "RB-07",
+      "status": "accepted",
+      "review": "Human portal and change control: review current proof and predecessor state",
+      "attack": "Human portal and change control: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: dark-factory-control-console/public"
+    },
+    {
+      "loop": 84,
+      "batch": "RB-07",
+      "status": "accepted",
+      "review": "Human portal and change control: review current proof and predecessor state",
+      "attack": "Human portal and change control: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: dark-factory-control-console/public"
+    },
+    {
+      "loop": 85,
+      "batch": "RB-07",
+      "status": "accepted",
+      "review": "Human portal and change control: review current proof and predecessor state",
+      "attack": "Human portal and change control: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: dark-factory-control-console/public"
+    },
+    {
+      "loop": 86,
+      "batch": "RB-08",
+      "status": "accepted",
+      "review": "Todo/habits demonstrator: review current proof and predecessor state",
+      "attack": "Todo/habits demonstrator: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: example/worlds-best-todo-habits-app"
+    },
+    {
+      "loop": 87,
+      "batch": "RB-08",
+      "status": "accepted",
+      "review": "Todo/habits demonstrator: review current proof and predecessor state",
+      "attack": "Todo/habits demonstrator: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: example/worlds-best-todo-habits-app"
+    },
+    {
+      "loop": 88,
+      "batch": "RB-08",
+      "status": "accepted",
+      "review": "Todo/habits demonstrator: review current proof and predecessor state",
+      "attack": "Todo/habits demonstrator: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: example/worlds-best-todo-habits-app"
+    },
+    {
+      "loop": 89,
+      "batch": "RB-08",
+      "status": "accepted",
+      "review": "Todo/habits demonstrator: review current proof and predecessor state",
+      "attack": "Todo/habits demonstrator: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: example/worlds-best-todo-habits-app"
+    },
+    {
+      "loop": 90,
+      "batch": "RB-08",
+      "status": "accepted",
+      "review": "Todo/habits demonstrator: review current proof and predecessor state",
+      "attack": "Todo/habits demonstrator: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: example/worlds-best-todo-habits-app"
+    },
+    {
+      "loop": 91,
+      "batch": "RB-08",
+      "status": "accepted",
+      "review": "Todo/habits demonstrator: review current proof and predecessor state",
+      "attack": "Todo/habits demonstrator: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: example/worlds-best-todo-habits-app"
+    },
+    {
+      "loop": 92,
+      "batch": "RB-08",
+      "status": "accepted",
+      "review": "Todo/habits demonstrator: review current proof and predecessor state",
+      "attack": "Todo/habits demonstrator: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: example/worlds-best-todo-habits-app"
+    },
+    {
+      "loop": 93,
+      "batch": "RB-08",
+      "status": "accepted",
+      "review": "Todo/habits demonstrator: review current proof and predecessor state",
+      "attack": "Todo/habits demonstrator: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: example/worlds-best-todo-habits-app"
+    },
+    {
+      "loop": 94,
+      "batch": "RB-08",
+      "status": "accepted",
+      "review": "Todo/habits demonstrator: review current proof and predecessor state",
+      "attack": "Todo/habits demonstrator: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: example/worlds-best-todo-habits-app"
+    },
+    {
+      "loop": 95,
+      "batch": "RB-08",
+      "status": "accepted",
+      "review": "Todo/habits demonstrator: review current proof and predecessor state",
+      "attack": "Todo/habits demonstrator: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: example/worlds-best-todo-habits-app"
+    },
+    {
+      "loop": 96,
+      "batch": "RB-09",
+      "status": "accepted",
+      "review": "Final Hawkeye/public hardening: review current proof and predecessor state",
+      "attack": "Final Hawkeye/public hardening: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future closure bundle"
+    },
+    {
+      "loop": 97,
+      "batch": "RB-09",
+      "status": "accepted",
+      "review": "Final Hawkeye/public hardening: review current proof and predecessor state",
+      "attack": "Final Hawkeye/public hardening: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future closure bundle"
+    },
+    {
+      "loop": 98,
+      "batch": "RB-09",
+      "status": "accepted",
+      "review": "Final Hawkeye/public hardening: review current proof and predecessor state",
+      "attack": "Final Hawkeye/public hardening: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future closure bundle"
+    },
+    {
+      "loop": 99,
+      "batch": "RB-09",
+      "status": "accepted",
+      "review": "Final Hawkeye/public hardening: review current proof and predecessor state",
+      "attack": "Final Hawkeye/public hardening: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future closure bundle"
+    },
+    {
+      "loop": 100,
+      "batch": "RB-09",
+      "status": "accepted",
+      "review": "Final Hawkeye/public hardening: review current proof and predecessor state",
+      "attack": "Final Hawkeye/public hardening: attempt to expose skipped work, weak evidence, fake pass, or unresolved owner decision",
+      "learn": "Concrete evidence exists for this recovery scope.",
+      "patch": "Patch already applied for this loop scope.",
+      "harden": "Evidence target: future closure bundle"
+    }
+  ],
+  "closure_blockers": [],
+  "next_legal_action": "Recovery program RB-01 through RB-09 is accepted for the local/public package boundary. Continue with product batch PB-01 if building the full hosted factory product."
+}

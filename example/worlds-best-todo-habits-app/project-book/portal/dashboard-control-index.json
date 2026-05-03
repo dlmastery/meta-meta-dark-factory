@@ -1,9 +1,9 @@
 {
   "zero_slop_policy": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
-  "dashboard_id": "DASH-dfms-ui-console-run-20260501",
-  "project": "DFMS UI Console Run",
-  "generated_at": "2026-05-02T04:52:16+00:00",
-  "source_root": "C:\\Users\\abhir\\Documents\\Codex\\2026-04-23\\meta-meta-dark-factory\\example\\worlds-best-todo-habits-app\\project-book",
+  "dashboard_id": "DASH-worlds-best-todo-habits-app-20260503",
+  "project": "worlds-best-todo-habits-app",
+  "generated_at": "2026-05-03T17:53:59+00:00",
+  "source_root": "C:\\mmdf-public\\example\\worlds-best-todo-habits-app\\project-book",
   "nodes": [
     {
       "id": "NODE-00-FACTORY-RUN-SUMMARY-MD",
@@ -344,6 +344,487 @@
       "tags": []
     },
     {
+      "id": "NODE-26-NOT-APPLICABLE-WAIVER-REGISTER-MD",
+      "kind": "artifact",
+      "title": "Not-Applicable Waiver Register",
+      "path": "26-not-applicable-waiver-register.md",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-27-GOV-001-PROJECT-CHARTER-MD",
+      "kind": "artifact",
+      "title": "Project Charter",
+      "path": "27-gov-001-project-charter.md",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-28-GOV-002-STANDARDS-TAILORING-MATRIX-MD",
+      "kind": "artifact",
+      "title": "Standards Tailoring Matrix",
+      "path": "28-gov-002-standards-tailoring-matrix.md",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-29-GOV-004-RISK-REGISTER-MD",
+      "kind": "artifact",
+      "title": "Risk Register",
+      "path": "29-gov-004-risk-register.md",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-30-GOV-005-CHANGE-MANAGEMENT-PLAN-MD",
+      "kind": "artifact",
+      "title": "Change Management Plan",
+      "path": "30-gov-005-change-management-plan.md",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-31-GOV-006-QUALITY-MANAGEMENT-PLAN-MD",
+      "kind": "artifact",
+      "title": "Quality Management Plan",
+      "path": "31-gov-006-quality-management-plan.md",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-32-GOV-007-AI-GOVERNANCE-PLAN-MD",
+      "kind": "artifact",
+      "title": "AI Governance Plan",
+      "path": "32-gov-007-ai-governance-plan.md",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-33-GOV-010-ATTRACTOR-RUN-RECORD-MD",
+      "kind": "artifact",
+      "title": "Attractor Run Record",
+      "path": "33-gov-010-attractor-run-record.md",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-34-REQ-001-BUSINESS-REQUIREMENTS-DOCUMENT-MD",
+      "kind": "artifact",
+      "title": "Business Requirements Document",
+      "path": "34-req-001-business-requirements-document.md",
+      "stage": "requirements",
+      "status": "blocked",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-35-REQ-002-SOFTWARE-REQUIREMENTS-SPECIFICATION-MD",
+      "kind": "artifact",
+      "title": "Software Requirements Specification",
+      "path": "35-req-002-software-requirements-specification.md",
+      "stage": "requirements",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-36-REQ-003-NON-FUNCTIONAL-REQUIREMENTS-CATALOG-MD",
+      "kind": "artifact",
+      "title": "Non-Functional Requirements Catalog",
+      "path": "36-req-003-non-functional-requirements-catalog.md",
+      "stage": "requirements",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-37-REQ-004-ACCEPTANCE-CRITERIA-AND-SCENARIOS-MD",
+      "kind": "artifact",
+      "title": "Acceptance Criteria and Scenarios",
+      "path": "37-req-004-acceptance-criteria-and-scenarios.md",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-38-REQ-006-ASSUMPTION-AND-CONSTRAINT-LOG-MD",
+      "kind": "artifact",
+      "title": "Assumption and Constraint Log",
+      "path": "38-req-006-assumption-and-constraint-log.md",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-39-ARC-001-HIGH-LEVEL-DESIGN-MD",
+      "kind": "artifact",
+      "title": "High-Level Design",
+      "path": "39-arc-001-high-level-design.md",
+      "stage": "design",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-40-ARC-002-LOW-LEVEL-DESIGN-MD",
+      "kind": "artifact",
+      "title": "Low-Level Design",
+      "path": "40-arc-002-low-level-design.md",
+      "stage": "design",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-41-ARC-005-DATA-MODEL-AND-MIGRATION-PLAN-MD",
+      "kind": "artifact",
+      "title": "Data Model and Migration Plan",
+      "path": "41-arc-005-data-model-and-migration-plan.md",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-42-ARC-006-THREAT-MODEL-MD",
+      "kind": "artifact",
+      "title": "Threat Model",
+      "path": "42-arc-006-threat-model.md",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-43-MDA-001-COMPUTATION-INDEPENDENT-MODEL-MD",
+      "kind": "artifact",
+      "title": "Computation-Independent Model",
+      "path": "43-mda-001-computation-independent-model.md",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-44-MDA-002-PLATFORM-INDEPENDENT-MODEL-MD",
+      "kind": "artifact",
+      "title": "Platform-Independent Model",
+      "path": "44-mda-002-platform-independent-model.md",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-45-MDA-003-PLATFORM-SPECIFIC-MODEL-MD",
+      "kind": "artifact",
+      "title": "Platform-Specific Model",
+      "path": "45-mda-003-platform-specific-model.md",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-46-MDA-004-MODEL-TRANSFORMATION-RECORD-MD",
+      "kind": "artifact",
+      "title": "Model Transformation Record",
+      "path": "46-mda-004-model-transformation-record.md",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-47-DDD-001-BOUNDED-CONTEXT-MAP-MD",
+      "kind": "artifact",
+      "title": "Bounded Context Map",
+      "path": "47-ddd-001-bounded-context-map.md",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-48-DDD-002-AGGREGATE-AND-INVARIANT-CATALOG-MD",
+      "kind": "artifact",
+      "title": "Aggregate and Invariant Catalog",
+      "path": "48-ddd-002-aggregate-and-invariant-catalog.md",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-49-IMP-001-IMPLEMENTATION-PLAN-MD",
+      "kind": "artifact",
+      "title": "Implementation Plan",
+      "path": "49-imp-001-implementation-plan.md",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-50-IMP-003-BUILD-AND-DEPENDENCY-MANIFEST-MD",
+      "kind": "artifact",
+      "title": "Build and Dependency Manifest",
+      "path": "50-imp-003-build-and-dependency-manifest.md",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-51-IMP-004-CONFIGURATION-AND-ENVIRONMENT-SPEC-MD",
+      "kind": "artifact",
+      "title": "Configuration and Environment Spec",
+      "path": "51-imp-004-configuration-and-environment-spec.md",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-52-VNV-002-TEST-CASES-AND-PROCEDURES-MD",
+      "kind": "test",
+      "title": "Test Cases and Procedures",
+      "path": "52-vnv-002-test-cases-and-procedures.md",
+      "stage": "verification",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-53-VNV-004-HOLDOUT-SCENARIO-REPORT-MD",
+      "kind": "artifact",
+      "title": "Holdout Scenario Report",
+      "path": "53-vnv-004-holdout-scenario-report.md",
+      "stage": "project-book",
+      "status": "blocked",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-54-VNV-005-SECURITY-TEST-REPORT-MD",
+      "kind": "test",
+      "title": "Security Test Report",
+      "path": "54-vnv-005-security-test-report.md",
+      "stage": "verification",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-55-VNV-006-PERFORMANCE-RELIABILITY-REPORT-MD",
+      "kind": "artifact",
+      "title": "Performance/Reliability Report",
+      "path": "55-vnv-006-performance-reliability-report.md",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-56-REL-002-RELEASE-NOTES-MD",
+      "kind": "artifact",
+      "title": "Release Notes",
+      "path": "56-rel-002-release-notes.md",
+      "stage": "operations",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-57-REL-004-OPERATIONS-RUNBOOK-MD",
+      "kind": "artifact",
+      "title": "Operations Runbook",
+      "path": "57-rel-004-operations-runbook.md",
+      "stage": "operations",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-58-REL-006-MAINTENANCE-GUIDE-MD",
+      "kind": "artifact",
+      "title": "Maintenance Guide",
+      "path": "58-rel-006-maintenance-guide.md",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-59-REL-007-HUMAN-TRAINING-PACKAGE-MD",
+      "kind": "artifact",
+      "title": "Human Training Package",
+      "path": "59-rel-007-human-training-package.md",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-60-EVD-003-RUBRIC-SCORECARD-MD",
+      "kind": "artifact",
+      "title": "Rubric Scorecard",
+      "path": "60-evd-003-rubric-scorecard.md",
+      "stage": "project-book",
+      "status": "blocked",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-61-EVD-006-RESIDUAL-RISK-ACCEPTANCE-MD",
+      "kind": "artifact",
+      "title": "Residual Risk Acceptance",
+      "path": "61-evd-006-residual-risk-acceptance.md",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-62-EVD-010-RETROSPECTIVE-LEARNING-RECORD-MD",
+      "kind": "artifact",
+      "title": "Retrospective Learning Record",
+      "path": "62-evd-010-retrospective-learning-record.md",
+      "stage": "project-book",
+      "status": "blocked",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
       "id": "NODE-EVIDENCE-ACCESSIBILITY-CERTIFICATION-OUTPUT-TXT",
       "kind": "evidence",
       "title": "Accessibility Certification Output",
@@ -375,7 +856,20 @@
       "title": "Artifact Catalog Coverage Audit Results",
       "path": "evidence/artifact-catalog-coverage-audit-results.json",
       "stage": "verification",
-      "status": "blocked",
+      "status": "accepted",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-EVIDENCE-ARTIFACT-SATURATION-QUALITY-CERTIFICATE-JSON",
+      "kind": "certificate",
+      "title": "Artifact Saturation Quality Certificate",
+      "path": "evidence/artifact-saturation-quality-certificate.json",
+      "stage": "evidence",
+      "status": "draft",
       "owner": "",
       "gate": "",
       "certificate": "",
@@ -908,7 +1402,7 @@
       "title": "Dashboard Control",
       "path": "portal/dashboard-control.html",
       "stage": "portal",
-      "status": "conditional",
+      "status": "blocked",
       "owner": "",
       "gate": "",
       "certificate": "",
@@ -1102,6 +1596,19 @@
       "kind": "artifact",
       "title": "Artifact Catalog Coverage Matrix",
       "path": "records/artifact-catalog-coverage-matrix.json",
+      "stage": "project-book",
+      "status": "draft",
+      "owner": "",
+      "gate": "",
+      "certificate": "",
+      "redo_boundary": false,
+      "tags": []
+    },
+    {
+      "id": "NODE-RECORDS-ARTIFACT-SATURATION-REVIEW-PACKAGE-JSON",
+      "kind": "artifact",
+      "title": "Artifact Saturation Review Package",
+      "path": "records/artifact-saturation-review-package.json",
       "stage": "project-book",
       "status": "blocked",
       "owner": "",
@@ -2609,6 +3116,30 @@
       "reason": "text reference `25-context-pack-predecessor-recovery-record.md`"
     },
     {
+      "source": "NODE-18-RALPH-20-ARTIFACT-COMPLETENESS-AUDIT-MD",
+      "target": "NODE-26-NOT-APPLICABLE-WAIVER-REGISTER-MD",
+      "type": "inferred_reference",
+      "evidence": "18-ralph-20-artifact-completeness-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `26-not-applicable-waiver-register.md`"
+    },
+    {
+      "source": "NODE-18-RALPH-20-ARTIFACT-COMPLETENESS-AUDIT-MD",
+      "target": "NODE-RECORDS-ARTIFACT-SATURATION-REVIEW-PACKAGE-JSON",
+      "type": "inferred_reference",
+      "evidence": "18-ralph-20-artifact-completeness-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `records/artifact-saturation-review-package.json`"
+    },
+    {
+      "source": "NODE-18-RALPH-20-ARTIFACT-COMPLETENESS-AUDIT-MD",
+      "target": "NODE-EVIDENCE-ARTIFACT-SATURATION-QUALITY-CERTIFICATE-JSON",
+      "type": "inferred_reference",
+      "evidence": "18-ralph-20-artifact-completeness-audit.md",
+      "authority": "inferred",
+      "reason": "text reference `evidence/artifact-saturation-quality-certificate.json`"
+    },
+    {
       "source": "NODE-19-RASCI-MATRIX-MD",
       "target": "NODE-02-PRD-MD",
       "type": "inferred_reference",
@@ -3089,6 +3620,30 @@
       "reason": "text reference `portal/index.html`"
     },
     {
+      "source": "NODE-50-IMP-003-BUILD-AND-DEPENDENCY-MANIFEST-MD",
+      "target": "NODE-RECORDS-ARTIFACT-SATURATION-REVIEW-PACKAGE-JSON",
+      "type": "inferred_reference",
+      "evidence": "50-imp-003-build-and-dependency-manifest.md",
+      "authority": "inferred",
+      "reason": "text reference `package.json`"
+    },
+    {
+      "source": "NODE-60-EVD-003-RUBRIC-SCORECARD-MD",
+      "target": "NODE-RECORDS-ARTIFACT-SATURATION-REVIEW-PACKAGE-JSON",
+      "type": "inferred_reference",
+      "evidence": "60-evd-003-rubric-scorecard.md",
+      "authority": "inferred",
+      "reason": "text reference `records/artifact-saturation-review-package.json`"
+    },
+    {
+      "source": "NODE-60-EVD-003-RUBRIC-SCORECARD-MD",
+      "target": "NODE-EVIDENCE-ARTIFACT-SATURATION-QUALITY-CERTIFICATE-JSON",
+      "type": "inferred_reference",
+      "evidence": "60-evd-003-rubric-scorecard.md",
+      "authority": "inferred",
+      "reason": "text reference `evidence/artifact-saturation-quality-certificate.json`"
+    },
+    {
       "source": "NODE-EVIDENCE-BROWSER-WYSIWYG-RESULTS-JSON",
       "target": "NODE-EVIDENCE-WYSIWYG-DESKTOP-PNG",
       "type": "inferred_reference",
@@ -3274,27 +3829,11 @@
     },
     {
       "source": "NODE-PORTAL-INDEX-HTML",
-      "target": "NODE-01-RESEARCH-COMPETITIVE-BENCHMARK-MD",
-      "type": "inferred_reference",
-      "evidence": "portal/index.html",
-      "authority": "inferred",
-      "reason": "text reference `../01-research-competitive-benchmark.md`"
-    },
-    {
-      "source": "NODE-PORTAL-INDEX-HTML",
       "target": "NODE-06-EXPERT-REVIEW-AND-RALPH-MD",
       "type": "inferred_reference",
       "evidence": "portal/index.html",
       "authority": "inferred",
       "reason": "text reference `../06-expert-review-and-ralph.md`"
-    },
-    {
-      "source": "NODE-PORTAL-INDEX-HTML",
-      "target": "NODE-08-HAWKEYE-BLOCKER-AND-CHANGE-RECORD-MD",
-      "type": "inferred_reference",
-      "evidence": "portal/index.html",
-      "authority": "inferred",
-      "reason": "text reference `../08-hawkeye-blocker-and-change-record.md`"
     },
     {
       "source": "NODE-PORTAL-INDEX-HTML",
@@ -3306,43 +3845,11 @@
     },
     {
       "source": "NODE-PORTAL-INDEX-HTML",
-      "target": "NODE-10-RALPH-20-E2E-COMPLETENESS-RECORD-MD",
-      "type": "inferred_reference",
-      "evidence": "portal/index.html",
-      "authority": "inferred",
-      "reason": "text reference `../10-ralph-20-e2e-completeness-record.md`"
-    },
-    {
-      "source": "NODE-PORTAL-INDEX-HTML",
-      "target": "NODE-11-STANDARDS-META-META-CHARTER-AUDIT-MD",
-      "type": "inferred_reference",
-      "evidence": "portal/index.html",
-      "authority": "inferred",
-      "reason": "text reference `../11-standards-meta-meta-charter-audit.md`"
-    },
-    {
-      "source": "NODE-PORTAL-INDEX-HTML",
       "target": "NODE-12-CERTIFICATION-READINESS-HARDENING-RECORD-MD",
       "type": "inferred_reference",
       "evidence": "portal/index.html",
       "authority": "inferred",
       "reason": "text reference `../12-certification-readiness-hardening-record.md`"
-    },
-    {
-      "source": "NODE-PORTAL-INDEX-HTML",
-      "target": "NODE-13-RALPH-UX-RELIABILITY-QA-CERTIFICATION-RECORD-MD",
-      "type": "inferred_reference",
-      "evidence": "portal/index.html",
-      "authority": "inferred",
-      "reason": "text reference `../13-ralph-ux-reliability-qa-certification-record.md`"
-    },
-    {
-      "source": "NODE-PORTAL-INDEX-HTML",
-      "target": "NODE-14-MATERIAL-UI-STANDARDS-CONFORMANCE-RECORD-MD",
-      "type": "inferred_reference",
-      "evidence": "portal/index.html",
-      "authority": "inferred",
-      "reason": "text reference `../14-material-ui-standards-conformance-record.md`"
     },
     {
       "source": "NODE-PORTAL-INDEX-HTML",
@@ -3354,43 +3861,11 @@
     },
     {
       "source": "NODE-PORTAL-INDEX-HTML",
-      "target": "NODE-16-DASHBOARD-CONTROL-REDO-RECORD-MD",
-      "type": "inferred_reference",
-      "evidence": "portal/index.html",
-      "authority": "inferred",
-      "reason": "text reference `../16-dashboard-control-redo-record.md`"
-    },
-    {
-      "source": "NODE-PORTAL-INDEX-HTML",
-      "target": "NODE-17-ACTUAL-VS-PROMISED-ARTIFACT-GAP-AUDIT-MD",
-      "type": "inferred_reference",
-      "evidence": "portal/index.html",
-      "authority": "inferred",
-      "reason": "text reference `../17-actual-vs-promised-artifact-gap-audit.md`"
-    },
-    {
-      "source": "NODE-PORTAL-INDEX-HTML",
       "target": "NODE-18-RALPH-20-ARTIFACT-COMPLETENESS-AUDIT-MD",
       "type": "inferred_reference",
       "evidence": "portal/index.html",
       "authority": "inferred",
       "reason": "text reference `../18-ralph-20-artifact-completeness-audit.md`"
-    },
-    {
-      "source": "NODE-PORTAL-INDEX-HTML",
-      "target": "NODE-19-RASCI-MATRIX-MD",
-      "type": "inferred_reference",
-      "evidence": "portal/index.html",
-      "authority": "inferred",
-      "reason": "text reference `../19-rasci-matrix.md`"
-    },
-    {
-      "source": "NODE-PORTAL-INDEX-HTML",
-      "target": "NODE-20-METHODOLOGY-BLEND-RECORD-MD",
-      "type": "inferred_reference",
-      "evidence": "portal/index.html",
-      "authority": "inferred",
-      "reason": "text reference `../20-methodology-blend-record.md`"
     },
     {
       "source": "NODE-PORTAL-INDEX-HTML",
@@ -3402,11 +3877,299 @@
     },
     {
       "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-24-HUMAN-COMMUNICATION-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../24-human-communication-record.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-27-GOV-001-PROJECT-CHARTER-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../27-gov-001-project-charter.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-30-GOV-005-CHANGE-MANAGEMENT-PLAN-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../30-gov-005-change-management-plan.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-33-GOV-010-ATTRACTOR-RUN-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../33-gov-010-attractor-run-record.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-36-REQ-003-NON-FUNCTIONAL-REQUIREMENTS-CATALOG-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../36-req-003-non-functional-requirements-catalog.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-39-ARC-001-HIGH-LEVEL-DESIGN-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../39-arc-001-high-level-design.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-42-ARC-006-THREAT-MODEL-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../42-arc-006-threat-model.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-45-MDA-003-PLATFORM-SPECIFIC-MODEL-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../45-mda-003-platform-specific-model.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-48-DDD-002-AGGREGATE-AND-INVARIANT-CATALOG-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../48-ddd-002-aggregate-and-invariant-catalog.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-51-IMP-004-CONFIGURATION-AND-ENVIRONMENT-SPEC-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../51-imp-004-configuration-and-environment-spec.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-54-VNV-005-SECURITY-TEST-REPORT-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../54-vnv-005-security-test-report.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-57-REL-004-OPERATIONS-RUNBOOK-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../57-rel-004-operations-runbook.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-60-EVD-003-RUBRIC-SCORECARD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../60-evd-003-rubric-scorecard.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-01-RESEARCH-COMPETITIVE-BENCHMARK-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../01-research-competitive-benchmark.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-10-RALPH-20-E2E-COMPLETENESS-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../10-ralph-20-e2e-completeness-record.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-13-RALPH-UX-RELIABILITY-QA-CERTIFICATION-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../13-ralph-ux-reliability-qa-certification-record.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-16-DASHBOARD-CONTROL-REDO-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../16-dashboard-control-redo-record.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-19-RASCI-MATRIX-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../19-rasci-matrix.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
       "target": "NODE-22-ARCHITECTURE-DECISION-RECORDS-MD",
       "type": "inferred_reference",
       "evidence": "portal/index.html",
       "authority": "inferred",
       "reason": "text reference `../22-architecture-decision-records.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-25-CONTEXT-PACK-PREDECESSOR-RECOVERY-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../25-context-pack-predecessor-recovery-record.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-28-GOV-002-STANDARDS-TAILORING-MATRIX-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../28-gov-002-standards-tailoring-matrix.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-31-GOV-006-QUALITY-MANAGEMENT-PLAN-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../31-gov-006-quality-management-plan.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-34-REQ-001-BUSINESS-REQUIREMENTS-DOCUMENT-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../34-req-001-business-requirements-document.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-37-REQ-004-ACCEPTANCE-CRITERIA-AND-SCENARIOS-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../37-req-004-acceptance-criteria-and-scenarios.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-40-ARC-002-LOW-LEVEL-DESIGN-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../40-arc-002-low-level-design.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-43-MDA-001-COMPUTATION-INDEPENDENT-MODEL-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../43-mda-001-computation-independent-model.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-46-MDA-004-MODEL-TRANSFORMATION-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../46-mda-004-model-transformation-record.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-49-IMP-001-IMPLEMENTATION-PLAN-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../49-imp-001-implementation-plan.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-52-VNV-002-TEST-CASES-AND-PROCEDURES-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../52-vnv-002-test-cases-and-procedures.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-55-VNV-006-PERFORMANCE-RELIABILITY-REPORT-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../55-vnv-006-performance-reliability-report.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-58-REL-006-MAINTENANCE-GUIDE-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../58-rel-006-maintenance-guide.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-61-EVD-006-RESIDUAL-RISK-ACCEPTANCE-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../61-evd-006-residual-risk-acceptance.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-08-HAWKEYE-BLOCKER-AND-CHANGE-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../08-hawkeye-blocker-and-change-record.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-11-STANDARDS-META-META-CHARTER-AUDIT-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../11-standards-meta-meta-charter-audit.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-14-MATERIAL-UI-STANDARDS-CONFORMANCE-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../14-material-ui-standards-conformance-record.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-17-ACTUAL-VS-PROMISED-ARTIFACT-GAP-AUDIT-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../17-actual-vs-promised-artifact-gap-audit.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-20-METHODOLOGY-BLEND-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../20-methodology-blend-record.md`"
     },
     {
       "source": "NODE-PORTAL-INDEX-HTML",
@@ -3418,19 +4181,107 @@
     },
     {
       "source": "NODE-PORTAL-INDEX-HTML",
-      "target": "NODE-24-HUMAN-COMMUNICATION-RECORD-MD",
+      "target": "NODE-26-NOT-APPLICABLE-WAIVER-REGISTER-MD",
       "type": "inferred_reference",
       "evidence": "portal/index.html",
       "authority": "inferred",
-      "reason": "text reference `../24-human-communication-record.md`"
+      "reason": "text reference `../26-not-applicable-waiver-register.md`"
     },
     {
       "source": "NODE-PORTAL-INDEX-HTML",
-      "target": "NODE-25-CONTEXT-PACK-PREDECESSOR-RECOVERY-RECORD-MD",
+      "target": "NODE-29-GOV-004-RISK-REGISTER-MD",
       "type": "inferred_reference",
       "evidence": "portal/index.html",
       "authority": "inferred",
-      "reason": "text reference `../25-context-pack-predecessor-recovery-record.md`"
+      "reason": "text reference `../29-gov-004-risk-register.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-32-GOV-007-AI-GOVERNANCE-PLAN-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../32-gov-007-ai-governance-plan.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-35-REQ-002-SOFTWARE-REQUIREMENTS-SPECIFICATION-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../35-req-002-software-requirements-specification.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-38-REQ-006-ASSUMPTION-AND-CONSTRAINT-LOG-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../38-req-006-assumption-and-constraint-log.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-41-ARC-005-DATA-MODEL-AND-MIGRATION-PLAN-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../41-arc-005-data-model-and-migration-plan.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-44-MDA-002-PLATFORM-INDEPENDENT-MODEL-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../44-mda-002-platform-independent-model.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-47-DDD-001-BOUNDED-CONTEXT-MAP-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../47-ddd-001-bounded-context-map.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-50-IMP-003-BUILD-AND-DEPENDENCY-MANIFEST-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../50-imp-003-build-and-dependency-manifest.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-53-VNV-004-HOLDOUT-SCENARIO-REPORT-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../53-vnv-004-holdout-scenario-report.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-56-REL-002-RELEASE-NOTES-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../56-rel-002-release-notes.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-59-REL-007-HUMAN-TRAINING-PACKAGE-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../59-rel-007-human-training-package.md`"
+    },
+    {
+      "source": "NODE-PORTAL-INDEX-HTML",
+      "target": "NODE-62-EVD-010-RETROSPECTIVE-LEARNING-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/index.html",
+      "authority": "inferred",
+      "reason": "text reference `../62-evd-010-retrospective-learning-record.md`"
     },
     {
       "source": "NODE-PORTAL-INDEX-HTML",
@@ -3890,14 +4741,6 @@
     },
     {
       "source": "NODE-PORTAL-PORTAL-DATA-JSON",
-      "target": "NODE-RECORDS-ARTIFACT-CATALOG-COVERAGE-MATRIX-JSON",
-      "type": "inferred_reference",
-      "evidence": "portal/portal-data.json",
-      "authority": "inferred",
-      "reason": "text reference `artifact-catalog-coverage-matrix.json`"
-    },
-    {
-      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
       "target": "NODE-00-FACTORY-RUN-SUMMARY-MD",
       "type": "inferred_reference",
       "evidence": "portal/portal-data.json",
@@ -4066,14 +4909,6 @@
     },
     {
       "source": "NODE-PORTAL-PORTAL-DATA-JSON",
-      "target": "NODE-RECORDS-SDLC-STAGE-COVERAGE-MATRIX-JSON",
-      "type": "inferred_reference",
-      "evidence": "portal/portal-data.json",
-      "authority": "inferred",
-      "reason": "text reference `records/sdlc-stage-coverage-matrix.json`"
-    },
-    {
-      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
       "target": "NODE-19-RASCI-MATRIX-MD",
       "type": "inferred_reference",
       "evidence": "portal/portal-data.json",
@@ -4087,6 +4922,38 @@
       "evidence": "portal/portal-data.json",
       "authority": "inferred",
       "reason": "text reference `20-methodology-blend-record.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-26-NOT-APPLICABLE-WAIVER-REGISTER-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `26-not-applicable-waiver-register.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-RECORDS-ARTIFACT-CATALOG-COVERAGE-MATRIX-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `records/artifact-catalog-coverage-matrix.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-RECORDS-ARTIFACT-SATURATION-REVIEW-PACKAGE-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `records/artifact-saturation-review-package.json`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-RECORDS-SDLC-STAGE-COVERAGE-MATRIX-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `records/sdlc-stage-coverage-matrix.json`"
     },
     {
       "source": "NODE-PORTAL-PORTAL-DATA-JSON",
@@ -4111,6 +4978,14 @@
       "evidence": "portal/portal-data.json",
       "authority": "inferred",
       "reason": "text reference `22-architecture-decision-records.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-EVIDENCE-ARTIFACT-SATURATION-QUALITY-CERTIFICATE-JSON",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `evidence/artifact-saturation-quality-certificate.json`"
     },
     {
       "source": "NODE-PORTAL-PORTAL-DATA-JSON",
@@ -4729,6 +5604,294 @@
       "reason": "text reference `evidence/wysiwyg-mobile.png`"
     },
     {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-27-GOV-001-PROJECT-CHARTER-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `27-gov-001-project-charter.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-28-GOV-002-STANDARDS-TAILORING-MATRIX-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `28-gov-002-standards-tailoring-matrix.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-29-GOV-004-RISK-REGISTER-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `29-gov-004-risk-register.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-30-GOV-005-CHANGE-MANAGEMENT-PLAN-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `30-gov-005-change-management-plan.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-31-GOV-006-QUALITY-MANAGEMENT-PLAN-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `31-gov-006-quality-management-plan.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-32-GOV-007-AI-GOVERNANCE-PLAN-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `32-gov-007-ai-governance-plan.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-33-GOV-010-ATTRACTOR-RUN-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `33-gov-010-attractor-run-record.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-34-REQ-001-BUSINESS-REQUIREMENTS-DOCUMENT-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `34-req-001-business-requirements-document.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-35-REQ-002-SOFTWARE-REQUIREMENTS-SPECIFICATION-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `35-req-002-software-requirements-specification.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-36-REQ-003-NON-FUNCTIONAL-REQUIREMENTS-CATALOG-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `36-req-003-non-functional-requirements-catalog.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-37-REQ-004-ACCEPTANCE-CRITERIA-AND-SCENARIOS-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `37-req-004-acceptance-criteria-and-scenarios.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-38-REQ-006-ASSUMPTION-AND-CONSTRAINT-LOG-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `38-req-006-assumption-and-constraint-log.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-39-ARC-001-HIGH-LEVEL-DESIGN-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `39-arc-001-high-level-design.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-40-ARC-002-LOW-LEVEL-DESIGN-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `40-arc-002-low-level-design.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-41-ARC-005-DATA-MODEL-AND-MIGRATION-PLAN-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `41-arc-005-data-model-and-migration-plan.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-42-ARC-006-THREAT-MODEL-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `42-arc-006-threat-model.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-43-MDA-001-COMPUTATION-INDEPENDENT-MODEL-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `43-mda-001-computation-independent-model.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-44-MDA-002-PLATFORM-INDEPENDENT-MODEL-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `44-mda-002-platform-independent-model.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-45-MDA-003-PLATFORM-SPECIFIC-MODEL-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `45-mda-003-platform-specific-model.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-46-MDA-004-MODEL-TRANSFORMATION-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `46-mda-004-model-transformation-record.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-47-DDD-001-BOUNDED-CONTEXT-MAP-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `47-ddd-001-bounded-context-map.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-48-DDD-002-AGGREGATE-AND-INVARIANT-CATALOG-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `48-ddd-002-aggregate-and-invariant-catalog.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-49-IMP-001-IMPLEMENTATION-PLAN-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `49-imp-001-implementation-plan.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-50-IMP-003-BUILD-AND-DEPENDENCY-MANIFEST-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `50-imp-003-build-and-dependency-manifest.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-51-IMP-004-CONFIGURATION-AND-ENVIRONMENT-SPEC-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `51-imp-004-configuration-and-environment-spec.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-52-VNV-002-TEST-CASES-AND-PROCEDURES-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `52-vnv-002-test-cases-and-procedures.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-53-VNV-004-HOLDOUT-SCENARIO-REPORT-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `53-vnv-004-holdout-scenario-report.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-54-VNV-005-SECURITY-TEST-REPORT-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `54-vnv-005-security-test-report.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-55-VNV-006-PERFORMANCE-RELIABILITY-REPORT-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `55-vnv-006-performance-reliability-report.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-56-REL-002-RELEASE-NOTES-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `56-rel-002-release-notes.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-57-REL-004-OPERATIONS-RUNBOOK-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `57-rel-004-operations-runbook.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-58-REL-006-MAINTENANCE-GUIDE-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `58-rel-006-maintenance-guide.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-59-REL-007-HUMAN-TRAINING-PACKAGE-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `59-rel-007-human-training-package.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-60-EVD-003-RUBRIC-SCORECARD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `60-evd-003-rubric-scorecard.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-61-EVD-006-RESIDUAL-RISK-ACCEPTANCE-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `61-evd-006-residual-risk-acceptance.md`"
+    },
+    {
+      "source": "NODE-PORTAL-PORTAL-DATA-JSON",
+      "target": "NODE-62-EVD-010-RETROSPECTIVE-LEARNING-RECORD-MD",
+      "type": "inferred_reference",
+      "evidence": "portal/portal-data.json",
+      "authority": "inferred",
+      "reason": "text reference `62-evd-010-retrospective-learning-record.md`"
+    },
+    {
       "source": "NODE-PORTAL-README-MD",
       "target": "NODE-PORTAL-INDEX-HTML",
       "type": "inferred_reference",
@@ -4754,11 +5917,11 @@
     },
     {
       "source": "NODE-RECORDS-ARTIFACT-CATALOG-COVERAGE-MATRIX-JSON",
-      "target": "NODE-PORTAL-README-MD",
+      "target": "NODE-26-NOT-APPLICABLE-WAIVER-REGISTER-MD",
       "type": "inferred_reference",
       "evidence": "records/artifact-catalog-coverage-matrix.json",
       "authority": "inferred",
-      "reason": "text reference `README.md`"
+      "reason": "text reference `26-not-applicable-waiver-register.md`"
     },
     {
       "source": "NODE-RECORDS-HAWKEYE-CONFORMANCE-AUDIT-RECORD-JSON",

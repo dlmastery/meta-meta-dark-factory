@@ -5,14 +5,26 @@ const path = require("path");
 
 module.paths.push(path.join(os.homedir(), ".cache", "codex-runtimes", "codex-primary-runtime", "dependencies", "node", "node_modules"));
 const { chromium } = require("playwright");
+const consoleApp = require("../server");
+
+let browser;
+let server;
 
 (async () => {
-  const browser = await chromium.launch({ headless: true });
+  server = process.env.DFMS_BROWSER_BASE_URL ? null : consoleApp.createServer();
+  if (server) {
+    await new Promise((resolve) => server.listen(0, "127.0.0.1", resolve));
+  }
+  const baseUrl = process.env.DFMS_BROWSER_BASE_URL || `http://127.0.0.1:${server.address().port}/`;
+  browser = await chromium.launch({ headless: true });
   const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
-  await page.goto("http://127.0.0.1:4187/", { waitUntil: "networkidle" });
+  await page.goto(baseUrl, { waitUntil: "networkidle" });
 
   assert((await page.locator("h1").textContent()).includes("Dark Factory Studio"), "studio title should render");
   assert((await page.locator("#studio-title").textContent()).includes("Describe the mission"), "mission composer should lead the first screen");
+  assert((await page.locator("#cockpit-title").textContent()).includes("what is blocked"), "control cockpit should explain the no-skip work state");
+  assert((await page.locator("#cockpitLegalAction").textContent()).trim().length > 5, "control cockpit should show the legal next action");
+  assert((await page.locator("#hawkeyeState").textContent()).trim().length > 2, "Hawkeye auditor state should render");
   assert((await page.locator("#studioPrimaryAction").textContent()).trim().length > 5, "studio primary action should be visible");
   assert((await page.locator("#skillCount").textContent()).includes("Skills:"), "skill count should render");
   assert((await page.locator("#agentSwarm").textContent()).includes("Meta-Attractor"), "agent swarm should render the meta-attractor");
@@ -59,9 +71,19 @@ const { chromium } = require("playwright");
   }
 
   await page.waitForFunction(() => document.querySelector("#completionScore")?.textContent.trim() === "100%");
+  await page.waitForFunction(() => document.querySelector("#interrogationApproval")?.textContent.includes("approval_required"));
+  await page.click("#approveInterrogation");
+  await page.waitForFunction(() => document.querySelector("#interrogationApproval")?.textContent.includes("approved"));
+  await page.waitForFunction(() => document.querySelector("#interrogationProtocolSummary")?.textContent.includes("trace links"));
   await page.click('[data-panel-target="evidence"]');
   await page.click("#executePipeline");
   await page.waitForFunction(() => Number(document.querySelector("#recordCount")?.textContent || "0") >= 5);
+  await page.waitForFunction(() => document.querySelector("#buildTestEvidence")?.textContent.includes("working_implementation_local"));
+  await page.waitForFunction(() => document.querySelector("#buildTestEvidence")?.textContent.includes("generated files"));
+  await page.waitForFunction(() => document.querySelector("#cockpitEvidenceMeta")?.textContent.includes("working_implementation_local"));
+  await page.waitForFunction(() => document.querySelector("#rbClosureBoard")?.textContent.includes("RB-07"));
+  await page.waitForFunction(() => document.querySelector("#stageAssuranceBoard")?.textContent.includes("Build, Test, Evidence"));
+  await page.waitForFunction(() => document.querySelector("#executionRecords")?.textContent.includes("scenario-test-matrix.json"));
   await page.click("#runRalphAudit");
   await page.waitForFunction(() => document.querySelector("#auditResult")?.textContent.includes("20 RALPH loops executed"));
   const validateStatus = await page.evaluate(async () => {
@@ -92,13 +114,18 @@ const { chromium } = require("playwright");
   await page.waitForFunction(() => document.querySelector("#changeRequestList")?.textContent.includes("Browser design resteer"));
   await page.click("#runGoalRalphAudit");
   await page.waitForFunction(() => document.querySelector("#goalAuditResult")?.textContent.includes("Goal achieved: yes"));
-  await page.waitForFunction(() => document.querySelector("#dontTrustList")?.textContent.includes("artifact_saturation"));
+  await page.waitForFunction(() => document.querySelector("#trustNowList")?.textContent.includes("artifact_saturation"));
   await page.waitForFunction(() => document.querySelector("#proofClassCounts")?.textContent.includes("descriptor_only"));
   const portalAfterChange = await page.evaluate(async () => {
     const bootstrap = await fetch("/api/bootstrap").then((response) => response.json());
     const runId = bootstrap.runs[0].run_id;
     return fetch(`/api/runs/${encodeURIComponent(runId)}/portal`).then((response) => response.json());
   });
+  assert.strictEqual(portalAfterChange.portal_control_model.model_type, "dfms_portal_control_model_v1", "portal should expose a machine-readable control model");
+  assert(portalAfterChange.portal_control_model.recovery_batches.some((batch) => batch.id === "RB-07"), "portal control model should expose RB-07");
+  assert(portalAfterChange.portal_control_model.recovery_batches.some((batch) => batch.id === "RB-08" && batch.status === "accepted"), "portal should truthfully show RB-08 saturation as accepted after evidence exists");
+  assert(portalAfterChange.portal_control_model.recovery_batches.some((batch) => batch.id === "RB-09" && batch.status === "accepted_for_local_public_package"), "portal should truthfully show RB-09 local/public hardening as accepted after validation exists");
+  assert(portalAfterChange.portal_control_model.blocker_board.some((item) => item.source === "full_product_platform"), "portal should move the remaining blocker to the full hosted product platform after RB-09");
   assert.strictEqual(portalAfterChange.change_requests[0].target_stage, "stage-04-artifacts", "change request should preserve the selected reopen stage");
   assert.strictEqual(portalAfterChange.progress.accepted_stages, 4, "design resteer should preserve accepted predecessor stages");
 
@@ -108,8 +135,11 @@ const { chromium } = require("playwright");
   await page.setViewportSize({ width: 390, height: 900 });
   await page.screenshot({ path: path.join(artifacts, "browser-console-mobile-smoke.png"), fullPage: true });
   await browser.close();
+  if (server) await new Promise((resolve) => server.close(resolve));
   console.log("browser-console smoke passed");
 })().catch(async (error) => {
+  if (browser) await browser.close().catch(() => {});
+  if (server) await new Promise((resolve) => server.close(resolve)).catch(() => {});
   console.error(error);
   process.exit(1);
 });

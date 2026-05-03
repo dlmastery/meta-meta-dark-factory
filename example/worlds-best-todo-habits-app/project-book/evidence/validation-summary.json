@@ -3,8 +3,8 @@
     "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
   },
   "record_id": "VAL-NORTHSTAR-20260425-001",
-  "overall_status": "passed_for_bounded_slice_with_artifact_catalog_gaps",
-  "summary": "The app is implemented; iteration 2 added plan audit and habit friction insight; RALPH-20 added full browser E2E outcome coverage, ARIA state checks, isolated browser contexts, and refreshed evidence. The standards/meta-meta audit added a fourth governed bead, corrected stale quality-gate residual risk, and generated audit records. Certification-readiness hardening added contrast and labeling fixes plus executable accessibility evidence. UX/reliability QA certification added mobile shell compaction, explicit state controls, local-state normalization, corrupted-state tests, and an internal QA certificate. Material UI standards conformance added Google Material 3 / Material 3 Expressive tokenization, role colors, shape, motion, static/accessibility enforcement, refreshed WYSIWYG evidence, and an internal Material conformance certificate. Human review portal readiness added a static dashboard, machine index, Mermaid diagram atlas, role-based onboarding paths, portal validators, meta-meta skill updates, and an internal portal readiness certificate. Hawkeye and the execution kernel pass. The artifact-catalog coverage audit passes only as truthful gap disclosure: full standalone catalog saturation fails with 14 missing catalog artifacts.",
+  "overall_status": "passed_for_current_catalog_local_static_demonstrator",
+  "summary": "The app is implemented and the RB-08 recovery pass now saturates the current 63-artifact DFMS catalog for the local-static demonstrator. Applicable artifacts are standalone, production/API-only items have explicit not-applicable waivers, and executable tests plus portal/catalog audits remain required evidence. This does not certify hosted production, sync, mobile packaging, external certification, regulated data, or the future larger hundreds-of-artifacts DFMS universe.",
   "checks": [
     {
       "name": "core_behavior_tests",
@@ -123,9 +123,14 @@
     },
     {
       "name": "artifact_catalog_coverage",
-      "status": "pass_with_gaps",
+      "status": "pass_with_not_applicable_waivers",
       "evidence": "project-book/evidence/artifact-catalog-coverage-audit-results.json"
+    },
+    {
+      "name": "artifact_saturation_quality_certificate",
+      "status": "pass_with_not_applicable_waivers",
+      "evidence": "project-book/evidence/artifact-saturation-quality-certificate.json"
     }
   ],
-  "required_unblock": "None for the bounded static app slice. Full artifact saturation is not complete: the 63-item catalog matrix lists 14 missing standalone artifacts plus combined and partial coverage. Future backend, sync, mobile, hosting, auth, production, external QA/certification, regulated-data work, native Material implementation, hosted documentation portal, additional UI/documentation standards scope, or full artifact saturation requires a new change-controlled bead."
+  "required_unblock": "RB-08 current-catalog artifact saturation is unblocked for the local-static demonstrator. RB-09 final Hawkeye/public hardening, public repository publication, hosted documentation, production deployment, backend sync, mobile packaging, external certification, and regulated-data work remain separate change-controlled scopes."
 }

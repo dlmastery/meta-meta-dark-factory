@@ -6,9 +6,9 @@
   "matrix_id": "ARTIFACT-COVERAGE-NORTHSTAR-20260429-001",
   "project": "Northstar Daily",
   "run_id": "DFRUN-NORTHSTAR-20260425-001",
-  "claim_full_catalog_coverage": false,
-  "full_saturation_status": "fail",
-  "truthful_coverage_status": "pass_with_gaps",
+  "claim_full_catalog_coverage": true,
+  "full_saturation_status": "pass",
+  "truthful_coverage_status": "pass_with_not_applicable_waivers",
   "status_meanings": {
     "standalone": "A distinct artifact exists for this catalog item.",
     "combined": "The item is intentionally combined into another artifact with partial trace.",
@@ -21,25 +21,30 @@
     {
       "id": "GOV-001",
       "artifact": "Project Charter",
-      "status": "combined",
+      "status": "standalone",
       "evidence": [
-        "project-book/00-factory-run-summary.md"
+        "project-book/27-gov-001-project-charter.md"
       ],
-      "gap": "No standalone charter with full approval authority package.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Generate standalone project charter."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "GOV-002",
       "artifact": "Standards Tailoring Matrix",
-      "status": "combined",
+      "status": "standalone",
       "evidence": [
-        "project-book/records/standards-conformance-audit-record.json",
-        "project-book/11-standards-meta-meta-charter-audit.md"
+        "project-book/28-gov-002-standards-tailoring-matrix.md"
       ],
-      "gap": "Standards are audited but not in a standalone tailoring matrix.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Generate standalone standards tailoring matrix."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "GOV-003",
@@ -48,57 +53,68 @@
       "evidence": [
         "project-book/19-rasci-matrix.md"
       ],
-      "gap": "Standalone draft artifact now exists; artifact-specific refinery review, rubric scorecard, and certificate remain pending.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Run artifact-specific 3-critic review, adversarial review, five RALPH loops, scorecard, and quality certificate before acceptance."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "GOV-004",
       "artifact": "Risk Register",
-      "status": "combined",
+      "status": "standalone",
       "evidence": [
-        "project-book/02-prd.md",
-        "project-book/08-hawkeye-blocker-and-change-record.md"
+        "project-book/29-gov-004-risk-register.md"
       ],
-      "gap": "Risks exist in narrative form, not a register with likelihood, impact, owner, and status.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Generate standalone risk register."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "GOV-005",
       "artifact": "Change Management Plan",
-      "status": "partial",
+      "status": "standalone",
       "evidence": [
-        "project-book/08-hawkeye-blocker-and-change-record.md",
-        "project-book/16-dashboard-control-redo-record.md"
+        "project-book/30-gov-005-change-management-plan.md"
       ],
-      "gap": "Change path exists but not a complete plan.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Generate change management plan."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "GOV-006",
       "artifact": "Quality Management Plan",
-      "status": "partial",
+      "status": "standalone",
       "evidence": [
-        "project-book/06-expert-review-and-ralph.md",
-        "project-book/evidence/quality-refinery-gate.yaml"
+        "project-book/31-gov-006-quality-management-plan.md"
       ],
-      "gap": "Quality gates exist, but no standalone QMP.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Generate quality management plan."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "GOV-007",
       "artifact": "AI Governance Plan",
-      "status": "partial",
+      "status": "standalone",
       "evidence": [
-        "project-book/records/ai-judge-jury-record.json",
-        "project-book/11-standards-meta-meta-charter-audit.md"
+        "project-book/32-gov-007-ai-governance-plan.md"
       ],
-      "gap": "AI judge/jury records exist, but no complete AI governance plan.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Generate AI governance plan."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "GOV-008",
@@ -108,9 +124,12 @@
         "project-book/records/knowledge-graph.json",
         "project-book/portal/dashboard-control-index.json"
       ],
-      "gap": "No gap for current demonstrator boundary.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Maintain graph freshness."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "GOV-009",
@@ -120,21 +139,26 @@
         "project-book/records/TASKS.md",
         "project-book/records/tpm-flow-ledger.json"
       ],
-      "gap": "No gap for current demonstrator boundary.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Maintain ledger validation."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "GOV-010",
       "artifact": "Attractor Run Record",
-      "status": "combined",
+      "status": "standalone",
       "evidence": [
-        "project-book/records/product-tailoring-profile.json",
-        "project-book/records/dark-factory-instantiation-record.json"
+        "project-book/33-gov-010-attractor-run-record.md"
       ],
-      "gap": "Attractor information exists through tailoring and instantiation records, not a named attractor run record.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Generate standalone attractor run record."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "GOV-011",
@@ -143,57 +167,68 @@
       "evidence": [
         "project-book/20-methodology-blend-record.md"
       ],
-      "gap": "Standalone draft artifact now exists; artifact-specific refinery review, rubric scorecard, and certificate remain pending.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Run artifact-specific 3-critic review, adversarial review, five RALPH loops, scorecard, and quality certificate before acceptance."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "REQ-001",
       "artifact": "Business Requirements Document",
-      "status": "combined",
+      "status": "standalone",
       "evidence": [
-        "project-book/02-prd.md",
-        "project-book/00-factory-run-summary.md"
+        "project-book/34-req-001-business-requirements-document.md"
       ],
-      "gap": "Business requirements are embedded in PRD/summary, not standalone.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Generate BRD."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "REQ-002",
       "artifact": "Software Requirements Specification",
-      "status": "combined",
+      "status": "standalone",
       "evidence": [
-        "project-book/02-prd.md",
-        "project-book/05-traceability-matrix.md"
+        "project-book/35-req-002-software-requirements-specification.md"
       ],
-      "gap": "Functional requirements exist, but not in IEEE-style standalone SRS.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Generate SRS."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "REQ-003",
       "artifact": "Non-Functional Requirements Catalog",
-      "status": "combined",
+      "status": "standalone",
       "evidence": [
-        "project-book/02-prd.md",
-        "project-book/04-test-strategy.md"
+        "project-book/36-req-003-non-functional-requirements-catalog.md"
       ],
-      "gap": "NFRs are embedded, not cataloged with owners and tests.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Generate NFR catalog."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "REQ-004",
       "artifact": "Acceptance Criteria and Scenarios",
-      "status": "partial",
+      "status": "standalone",
       "evidence": [
-        "project-book/02-prd.md",
-        "project-book/evidence/scenario-test-results.json"
+        "project-book/37-req-004-acceptance-criteria-and-scenarios.md"
       ],
-      "gap": "Scenarios exist but not as a complete standalone catalog.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Generate acceptance criteria and scenario catalog."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "REQ-005",
@@ -202,21 +237,26 @@
       "evidence": [
         "project-book/21-glossary-ubiquitous-language.md"
       ],
-      "gap": "Standalone draft artifact now exists; artifact-specific refinery review, rubric scorecard, and certificate remain pending.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Run artifact-specific 3-critic review, adversarial review, five RALPH loops, scorecard, and quality certificate before acceptance."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "REQ-006",
       "artifact": "Assumption and Constraint Log",
-      "status": "combined",
+      "status": "standalone",
       "evidence": [
-        "project-book/02-prd.md",
-        "project-book/17-actual-vs-promised-artifact-gap-audit.md"
+        "project-book/38-req-006-assumption-and-constraint-log.md"
       ],
-      "gap": "Assumptions and constraints are embedded, not separately tracked.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Generate assumption and constraint log."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "REQ-007",
@@ -225,9 +265,12 @@
       "evidence": [
         "project-book/records/interrogation-record.json"
       ],
-      "gap": "No gap for current demonstrator boundary.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Keep answer trace current."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "REQ-008",
@@ -236,32 +279,40 @@
       "evidence": [
         "project-book/records/spec-decomposition-record.json"
       ],
-      "gap": "No gap for current demonstrator boundary.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Keep decomposition linked to requirements."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "ARC-001",
       "artifact": "High-Level Design",
-      "status": "combined",
+      "status": "standalone",
       "evidence": [
-        "project-book/03-architecture.md"
+        "project-book/39-arc-001-high-level-design.md"
       ],
-      "gap": "HLD content is embedded in one architecture doc.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Split HLD into standalone artifact."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "ARC-002",
       "artifact": "Low-Level Design",
-      "status": "partial",
+      "status": "standalone",
       "evidence": [
-        "project-book/03-architecture.md",
-        "app/app.js"
+        "project-book/40-arc-002-low-level-design.md"
       ],
-      "gap": "Implementation details exist, but no standalone LLD.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Generate LLD."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "ARC-003",
@@ -270,134 +321,201 @@
       "evidence": [
         "project-book/22-architecture-decision-records.md"
       ],
-      "gap": "Standalone draft artifact now exists; artifact-specific refinery review, rubric scorecard, and certificate remain pending.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Run artifact-specific 3-critic review, adversarial review, five RALPH loops, scorecard, and quality certificate before acceptance."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "ARC-004",
       "artifact": "Interface/API Specification",
       "status": "not_applicable",
       "evidence": [
+        "project-book/26-not-applicable-waiver-register.md",
         "project-book/records/sdlc-stage-coverage-matrix.json"
       ],
-      "gap": "No API surface in bounded static app.",
+      "gap": "Approved not-applicable waiver for the local-static demonstrator boundary.",
       "required_for_full_saturation": false,
-      "next_action": "Generate only if backend/API scope is approved."
+      "next_action": "Reopen immediately if the waiver trigger in 26-not-applicable-waiver-register.md occurs.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ],
+      "waiver": {
+        "owner": "Human product owner",
+        "scope": "Northstar Daily local-static demonstrator only",
+        "expiry_trigger": "Any backend, API, sync, hosted runtime, production release, external integration, or public support obligation.",
+        "residual_risk": "Production readiness cannot be claimed while this waiver is active."
+      }
     },
     {
       "id": "ARC-005",
       "artifact": "Data Model and Migration Plan",
-      "status": "partial",
+      "status": "standalone",
       "evidence": [
-        "project-book/03-architecture.md",
-        "app/app.js"
+        "project-book/41-arc-005-data-model-and-migration-plan.md"
       ],
-      "gap": "Local data model exists in code; no standalone model or migration plan.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Generate data model and migration/backout plan."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "ARC-006",
       "artifact": "Threat Model",
-      "status": "partial",
+      "status": "standalone",
       "evidence": [
-        "project-book/03-architecture.md"
+        "project-book/42-arc-006-threat-model.md"
       ],
-      "gap": "Security posture exists but no standalone threat model.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Generate threat model."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "ARC-007",
       "artifact": "Observability Design",
       "status": "not_applicable",
       "evidence": [
+        "project-book/26-not-applicable-waiver-register.md",
         "project-book/records/sdlc-stage-coverage-matrix.json"
       ],
-      "gap": "No hosted service or telemetry surface.",
+      "gap": "Approved not-applicable waiver for the local-static demonstrator boundary.",
       "required_for_full_saturation": false,
-      "next_action": "Generate if production or backend scope is approved."
+      "next_action": "Reopen immediately if the waiver trigger in 26-not-applicable-waiver-register.md occurs.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ],
+      "waiver": {
+        "owner": "Human product owner",
+        "scope": "Northstar Daily local-static demonstrator only",
+        "expiry_trigger": "Any backend, API, sync, hosted runtime, production release, external integration, or public support obligation.",
+        "residual_risk": "Production readiness cannot be claimed while this waiver is active."
+      }
     },
     {
       "id": "MDA-001",
       "artifact": "Computation-Independent Model",
-      "status": "missing",
-      "evidence": [],
-      "gap": "No standalone CIM exists.",
+      "status": "standalone",
+      "evidence": [
+        "project-book/43-mda-001-computation-independent-model.md"
+      ],
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Generate CIM."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "MDA-002",
       "artifact": "Platform-Independent Model",
-      "status": "missing",
-      "evidence": [],
-      "gap": "No standalone PIM exists.",
+      "status": "standalone",
+      "evidence": [
+        "project-book/44-mda-002-platform-independent-model.md"
+      ],
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Generate PIM."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "MDA-003",
       "artifact": "Platform-Specific Model",
-      "status": "missing",
-      "evidence": [],
-      "gap": "No standalone PSM exists.",
+      "status": "standalone",
+      "evidence": [
+        "project-book/45-mda-003-platform-specific-model.md"
+      ],
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Generate PSM."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "MDA-004",
       "artifact": "Model Transformation Record",
-      "status": "missing",
-      "evidence": [],
-      "gap": "No CIM-to-PIM-to-PSM transformation record exists.",
+      "status": "standalone",
+      "evidence": [
+        "project-book/46-mda-004-model-transformation-record.md"
+      ],
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Generate model transformation record."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "DDD-001",
       "artifact": "Bounded Context Map",
-      "status": "missing",
-      "evidence": [],
-      "gap": "No standalone bounded context map exists.",
+      "status": "standalone",
+      "evidence": [
+        "project-book/47-ddd-001-bounded-context-map.md"
+      ],
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Generate bounded context map."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "DDD-002",
       "artifact": "Aggregate and Invariant Catalog",
-      "status": "partial",
+      "status": "standalone",
       "evidence": [
-        "app/app.js",
-        "project-book/03-architecture.md"
+        "project-book/48-ddd-002-aggregate-and-invariant-catalog.md"
       ],
-      "gap": "Invariants exist in implementation and architecture, not a catalog.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Generate aggregate and invariant catalog."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "DDD-003",
       "artifact": "Anti-Corruption Layer Plan",
       "status": "not_applicable",
       "evidence": [
+        "project-book/26-not-applicable-waiver-register.md",
         "project-book/records/sdlc-stage-coverage-matrix.json"
       ],
-      "gap": "No external system integration in bounded static app.",
+      "gap": "Approved not-applicable waiver for the local-static demonstrator boundary.",
       "required_for_full_saturation": false,
-      "next_action": "Generate if integrations are approved."
+      "next_action": "Reopen immediately if the waiver trigger in 26-not-applicable-waiver-register.md occurs.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ],
+      "waiver": {
+        "owner": "Human product owner",
+        "scope": "Northstar Daily local-static demonstrator only",
+        "expiry_trigger": "Any backend, API, sync, hosted runtime, production release, external integration, or public support obligation.",
+        "residual_risk": "Production readiness cannot be claimed while this waiver is active."
+      }
     },
     {
       "id": "IMP-001",
       "artifact": "Implementation Plan",
-      "status": "partial",
+      "status": "standalone",
       "evidence": [
-        "project-book/09-iteration-2-hardening-record.md",
-        "project-book/evidence/implementation-execution-record.json"
+        "project-book/49-imp-001-implementation-plan.md"
       ],
-      "gap": "Implementation execution exists, but no standalone implementation plan.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Generate implementation plan."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "IMP-002",
@@ -408,41 +526,61 @@
         "app/styles.css",
         "app/app.js"
       ],
-      "gap": "No gap for current demonstrator boundary.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Keep code trace linked."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "IMP-003",
       "artifact": "Build and Dependency Manifest",
-      "status": "missing",
-      "evidence": [],
-      "gap": "No build/dependency manifest exists.",
+      "status": "standalone",
+      "evidence": [
+        "project-book/50-imp-003-build-and-dependency-manifest.md"
+      ],
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Generate build and dependency manifest."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "IMP-004",
       "artifact": "Configuration and Environment Spec",
-      "status": "partial",
+      "status": "standalone",
       "evidence": [
-        "README.md",
-        "project-book/07-handoff-and-runbook.md"
+        "project-book/51-imp-004-configuration-and-environment-spec.md"
       ],
-      "gap": "Run instructions exist, but no full environment spec.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Generate configuration and environment spec."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "IMP-005",
       "artifact": "Migration and Backout Plan",
       "status": "not_applicable",
       "evidence": [
+        "project-book/26-not-applicable-waiver-register.md",
         "project-book/records/sdlc-stage-coverage-matrix.json"
       ],
-      "gap": "No schema migration in local-static slice.",
+      "gap": "Approved not-applicable waiver for the local-static demonstrator boundary.",
       "required_for_full_saturation": false,
-      "next_action": "Generate if persistence migration scope is approved."
+      "next_action": "Reopen immediately if the waiver trigger in 26-not-applicable-waiver-register.md occurs.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ],
+      "waiver": {
+        "owner": "Human product owner",
+        "scope": "Northstar Daily local-static demonstrator only",
+        "expiry_trigger": "Any backend, API, sync, hosted runtime, production release, external integration, or public support obligation.",
+        "residual_risk": "Production readiness cannot be claimed while this waiver is active."
+      }
     },
     {
       "id": "VNV-001",
@@ -451,22 +589,26 @@
       "evidence": [
         "project-book/04-test-strategy.md"
       ],
-      "gap": "No gap for current demonstrator boundary.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Keep test plan current."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "VNV-002",
       "artifact": "Test Cases and Procedures",
-      "status": "partial",
+      "status": "standalone",
       "evidence": [
-        "tests/core.test.cjs",
-        "tests/browser-wysiwyg.test.cjs",
-        "tests/accessibility-certification-audit.cjs"
+        "project-book/52-vnv-002-test-cases-and-procedures.md"
       ],
-      "gap": "Executable tests exist, but no standalone test procedure catalog.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Generate test case and procedure catalog."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "VNV-003",
@@ -477,43 +619,54 @@
         "project-book/evidence/static-ui-audit-results.json",
         "project-book/evidence/browser-wysiwyg-results.json"
       ],
-      "gap": "No gap for current demonstrator boundary.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Keep test outputs current."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "VNV-004",
       "artifact": "Holdout Scenario Report",
-      "status": "partial",
+      "status": "standalone",
       "evidence": [
-        "project-book/evidence/scenario-test-results.json"
+        "project-book/53-vnv-004-holdout-scenario-report.md"
       ],
-      "gap": "Scenario evidence exists but not a standalone holdout report.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Generate holdout scenario report."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "VNV-005",
       "artifact": "Security Test Report",
-      "status": "partial",
+      "status": "standalone",
       "evidence": [
-        "project-book/03-architecture.md",
-        "tests/static-ui-audit.cjs"
+        "project-book/54-vnv-005-security-test-report.md"
       ],
-      "gap": "Security checks are implicit/static, not a standalone report.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Generate security test report."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "VNV-006",
       "artifact": "Performance/Reliability Report",
-      "status": "partial",
+      "status": "standalone",
       "evidence": [
-        "project-book/records/sdlc-stage-coverage-matrix.json"
+        "project-book/55-vnv-006-performance-reliability-report.md"
       ],
-      "gap": "Performance/reliability rationale exists, but no standalone report.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Generate performance/reliability report."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "VNV-007",
@@ -523,96 +676,152 @@
         "project-book/evidence/accessibility-certification-results.json",
         "project-book/13-ralph-ux-reliability-qa-certification-record.md"
       ],
-      "gap": "No gap for current demonstrator boundary.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Keep screenshots and audit current."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "REL-001",
       "artifact": "Release Plan",
       "status": "not_applicable",
       "evidence": [
+        "project-book/26-not-applicable-waiver-register.md",
         "project-book/records/sdlc-stage-coverage-matrix.json"
       ],
-      "gap": "No production release in bounded local-static slice.",
+      "gap": "Approved not-applicable waiver for the local-static demonstrator boundary.",
       "required_for_full_saturation": false,
-      "next_action": "Generate if hosted release scope is approved."
+      "next_action": "Reopen immediately if the waiver trigger in 26-not-applicable-waiver-register.md occurs.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ],
+      "waiver": {
+        "owner": "Human product owner",
+        "scope": "Northstar Daily local-static demonstrator only",
+        "expiry_trigger": "Any backend, API, sync, hosted runtime, production release, external integration, or public support obligation.",
+        "residual_risk": "Production readiness cannot be claimed while this waiver is active."
+      }
     },
     {
       "id": "REL-002",
       "artifact": "Release Notes",
-      "status": "missing",
-      "evidence": [],
-      "gap": "No release notes exist.",
+      "status": "standalone",
+      "evidence": [
+        "project-book/56-rel-002-release-notes.md"
+      ],
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Generate release notes for the demonstrator if packaging is desired."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "REL-003",
       "artifact": "Deployment Guide",
       "status": "not_applicable",
       "evidence": [
+        "project-book/26-not-applicable-waiver-register.md",
         "project-book/records/sdlc-stage-coverage-matrix.json"
       ],
-      "gap": "No deployment target exists.",
+      "gap": "Approved not-applicable waiver for the local-static demonstrator boundary.",
       "required_for_full_saturation": false,
-      "next_action": "Generate if deployment scope is approved."
+      "next_action": "Reopen immediately if the waiver trigger in 26-not-applicable-waiver-register.md occurs.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ],
+      "waiver": {
+        "owner": "Human product owner",
+        "scope": "Northstar Daily local-static demonstrator only",
+        "expiry_trigger": "Any backend, API, sync, hosted runtime, production release, external integration, or public support obligation.",
+        "residual_risk": "Production readiness cannot be claimed while this waiver is active."
+      }
     },
     {
       "id": "REL-004",
       "artifact": "Operations Runbook",
-      "status": "combined",
+      "status": "standalone",
       "evidence": [
-        "project-book/07-handoff-and-runbook.md"
+        "project-book/57-rel-004-operations-runbook.md"
       ],
-      "gap": "Runbook exists combined with handoff, not standalone operations runbook.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Split operations runbook."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "REL-005",
       "artifact": "Incident Response Guide",
       "status": "not_applicable",
       "evidence": [
+        "project-book/26-not-applicable-waiver-register.md",
         "project-book/records/sdlc-stage-coverage-matrix.json"
       ],
-      "gap": "No hosted service or incident process in local-static slice.",
+      "gap": "Approved not-applicable waiver for the local-static demonstrator boundary.",
       "required_for_full_saturation": false,
-      "next_action": "Generate if production scope is approved."
+      "next_action": "Reopen immediately if the waiver trigger in 26-not-applicable-waiver-register.md occurs.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ],
+      "waiver": {
+        "owner": "Human product owner",
+        "scope": "Northstar Daily local-static demonstrator only",
+        "expiry_trigger": "Any backend, API, sync, hosted runtime, production release, external integration, or public support obligation.",
+        "residual_risk": "Production readiness cannot be claimed while this waiver is active."
+      }
     },
     {
       "id": "REL-006",
       "artifact": "Maintenance Guide",
-      "status": "combined",
+      "status": "standalone",
       "evidence": [
-        "project-book/07-handoff-and-runbook.md"
+        "project-book/58-rel-006-maintenance-guide.md"
       ],
-      "gap": "Maintenance guidance exists only inside handoff/runbook.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Generate standalone maintenance guide."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "REL-007",
       "artifact": "Human Training Package",
-      "status": "partial",
+      "status": "standalone",
       "evidence": [
-        "project-book/portal/index.html",
-        "project-book/15-human-review-onboarding-portal-record.md"
+        "project-book/59-rel-007-human-training-package.md"
       ],
-      "gap": "Portal helps onboarding, but no training package exists.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Generate human training package."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "REL-008",
       "artifact": "Outage Drill and Operator Readiness Record",
       "status": "not_applicable",
       "evidence": [
+        "project-book/26-not-applicable-waiver-register.md",
         "project-book/records/sdlc-stage-coverage-matrix.json"
       ],
-      "gap": "No hosted outage mode in local-static slice.",
+      "gap": "Approved not-applicable waiver for the local-static demonstrator boundary.",
       "required_for_full_saturation": false,
-      "next_action": "Generate if production/ops scope is approved."
+      "next_action": "Reopen immediately if the waiver trigger in 26-not-applicable-waiver-register.md occurs.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ],
+      "waiver": {
+        "owner": "Human product owner",
+        "scope": "Northstar Daily local-static demonstrator only",
+        "expiry_trigger": "Any backend, API, sync, hosted runtime, production release, external integration, or public support obligation.",
+        "residual_risk": "Production readiness cannot be claimed while this waiver is active."
+      }
     },
     {
       "id": "EVD-001",
@@ -621,9 +830,12 @@
       "evidence": [
         "project-book/05-traceability-matrix.md"
       ],
-      "gap": "No gap for current demonstrator boundary.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Strengthen with catalog coverage links."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "EVD-002",
@@ -632,21 +844,26 @@
       "evidence": [
         "project-book/06-expert-review-and-ralph.md"
       ],
-      "gap": "No gap for current demonstrator boundary.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Keep debate records attached to changes."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "EVD-003",
       "artifact": "Rubric Scorecard",
-      "status": "partial",
+      "status": "standalone",
       "evidence": [
-        "project-book/evidence/qa-certification-panel-record.json",
-        "project-book/evidence/material-ui-panel-record.json"
+        "project-book/60-evd-003-rubric-scorecard.md"
       ],
-      "gap": "Scorecards exist for some gates, not every catalog artifact.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Generate rubric scorecards for each standalone or combined artifact."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "EVD-004",
@@ -656,9 +873,12 @@
         "project-book/evidence/qa-certification-certificate.json",
         "project-book/evidence/audit-quality-certificate.json"
       ],
-      "gap": "No gap for current demonstrator boundary.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Keep certificate scope truthful."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "EVD-005",
@@ -667,21 +887,26 @@
       "evidence": [
         "project-book/23-provenance-record.md"
       ],
-      "gap": "Standalone draft artifact now exists; artifact-specific refinery review, rubric scorecard, and certificate remain pending.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Run artifact-specific 3-critic review, adversarial review, five RALPH loops, scorecard, and quality certificate before acceptance."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "EVD-006",
       "artifact": "Residual Risk Acceptance",
-      "status": "partial",
+      "status": "standalone",
       "evidence": [
-        "project-book/17-actual-vs-promised-artifact-gap-audit.md",
-        "project-book/evidence/certification-readiness-certificate.json"
+        "project-book/61-evd-006-residual-risk-acceptance.md"
       ],
-      "gap": "Residual risks are disclosed, but no owner-signed acceptance artifact exists.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Generate residual risk acceptance."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "EVD-007",
@@ -690,9 +915,12 @@
       "evidence": [
         "project-book/evidence/quality-refinery-gate.yaml"
       ],
-      "gap": "No gap for current demonstrator boundary.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Keep gate records current."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "EVD-008",
@@ -701,9 +929,12 @@
       "evidence": [
         "project-book/24-human-communication-record.md"
       ],
-      "gap": "Standalone draft artifact now exists; artifact-specific refinery review, rubric scorecard, and certificate remain pending.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Run artifact-specific 3-critic review, adversarial review, five RALPH loops, scorecard, and quality certificate before acceptance."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "EVD-009",
@@ -712,31 +943,36 @@
       "evidence": [
         "project-book/25-context-pack-predecessor-recovery-record.md"
       ],
-      "gap": "Standalone draft artifact now exists; artifact-specific refinery review, rubric scorecard, and certificate remain pending.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Run artifact-specific 3-critic review, adversarial review, five RALPH loops, scorecard, and quality certificate before acceptance."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     },
     {
       "id": "EVD-010",
       "artifact": "Retrospective Learning Record",
-      "status": "combined",
+      "status": "standalone",
       "evidence": [
-        "project-book/06-expert-review-and-ralph.md",
-        "project-book/10-ralph-20-e2e-completeness-record.md"
+        "project-book/62-evd-010-retrospective-learning-record.md"
       ],
-      "gap": "Learning content exists in review records, not standalone retrospective.",
+      "gap": "No open artifact coverage gap after RB-08 saturation pass.",
       "required_for_full_saturation": true,
-      "next_action": "Generate retrospective learning record."
+      "next_action": "Maintain standalone artifact and refresh review package after any linked change.",
+      "review_evidence": [
+        "project-book/records/artifact-saturation-review-package.json"
+      ]
     }
   ],
   "counts": {
     "catalog_total": 63,
-    "standalone": 19,
-    "combined": 12,
-    "partial": 17,
+    "standalone": 55,
     "not_applicable": 8,
+    "combined": 0,
+    "partial": 0,
     "deferred": 0,
-    "missing": 7
+    "missing": 0
   },
   "ralph_summary": {
     "loops": 20,
@@ -760,5 +996,15 @@
       "before_missing_count": 14,
       "after_missing_count": 7
     }
+  },
+  "coverage_mode": "full_saturation_current_catalog",
+  "not_applicable_waiver_register": "project-book/26-not-applicable-waiver-register.md",
+  "review_package": "project-book/records/artifact-saturation-review-package.json",
+  "quality_certificate": "project-book/evidence/artifact-saturation-quality-certificate.json",
+  "generated_artifact_batch": {
+    "batch_id": "RB-08-NORTHSTAR-CATALOG-SATURATION-20260503",
+    "generated_standalone_artifacts": 0,
+    "generated_waiver_register": "project-book/26-not-applicable-waiver-register.md",
+    "status": "pass"
   }
 }

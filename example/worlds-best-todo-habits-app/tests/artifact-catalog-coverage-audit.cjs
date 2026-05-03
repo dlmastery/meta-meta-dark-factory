@@ -25,6 +25,19 @@ function existsEvidence(rel) {
   return fs.existsSync(path.join(root, rel)) || fs.existsSync(path.join(projectBook, rel));
 }
 
+function resolveEvidence(rel) {
+  const rootPath = path.join(root, rel);
+  if (fs.existsSync(rootPath)) return rootPath;
+  const projectBookPath = path.join(projectBook, rel);
+  if (fs.existsSync(projectBookPath)) return projectBookPath;
+  return "";
+}
+
+function readJsonEvidence(rel) {
+  const file = resolveEvidence(rel);
+  return file ? JSON.parse(fs.readFileSync(file, "utf8")) : null;
+}
+
 const catalog = parseCatalog(fs.readFileSync(catalogPath, "utf8"));
 const matrix = JSON.parse(fs.readFileSync(matrixPath, "utf8"));
 const failures = [];
@@ -35,9 +48,10 @@ function fail(message) {
 
 if (matrix.zero_slop_policy?.statement !== ZERO) fail("matrix missing zero-slop statement");
 if (matrix.template_only !== false) fail("matrix must be instantiated evidence, not a template");
-if (matrix.claim_full_catalog_coverage !== false) fail("todo/habits matrix must not claim full catalog coverage");
-if (matrix.full_saturation_status !== "fail") fail("full saturation status must truthfully fail");
-if (matrix.truthful_coverage_status !== "pass_with_gaps") fail("truthful coverage status must be pass_with_gaps");
+if (matrix.claim_full_catalog_coverage !== true) fail("RB-08 matrix must claim current-catalog coverage only after saturation evidence exists");
+if (matrix.full_saturation_status !== "pass") fail("full saturation status must pass after RB-08 saturation");
+if (matrix.truthful_coverage_status !== "pass_with_not_applicable_waivers") fail("truthful coverage status must be pass_with_not_applicable_waivers");
+if (matrix.coverage_mode !== "full_saturation_current_catalog") fail("coverage mode must be full_saturation_current_catalog");
 
 const catalogIds = catalog.map((item) => item.id).sort();
 const entryIds = matrix.entries.map((item) => item.id).sort();
@@ -61,8 +75,18 @@ for (const entry of matrix.entries) {
       if (!existsEvidence(rel)) fail(`${entry.id} evidence does not exist: ${rel}`);
     }
   }
-  if (entry.status === "missing" && Array.isArray(entry.evidence) && entry.evidence.length) {
-    fail(`${entry.id} is missing but cites evidence`);
+  if (["missing", "partial", "combined", "deferred"].includes(entry.status)) {
+    fail(`${entry.id} remains ${entry.status}; RB-08 saturation requires standalone or not_applicable with waiver`);
+  }
+  if (entry.status === "not_applicable") {
+    if (!entry.waiver?.owner) fail(`${entry.id} not_applicable missing waiver owner`);
+    if (!entry.waiver?.expiry_trigger) fail(`${entry.id} not_applicable missing expiry trigger`);
+    if (!entry.evidence.includes(matrix.not_applicable_waiver_register)) fail(`${entry.id} not_applicable missing waiver register evidence`);
+  }
+  if (entry.status === "standalone") {
+    if (!Array.isArray(entry.review_evidence) || !entry.review_evidence.includes(matrix.review_package)) {
+      fail(`${entry.id} standalone missing saturation review package link`);
+    }
   }
 }
 
@@ -76,21 +100,83 @@ for (const key of ["standalone", "combined", "partial", "not_applicable", "defer
   if (matrix.counts[key] !== actual) fail(`count mismatch for ${key}: expected ${actual}, matrix says ${matrix.counts[key]}`);
 }
 if (matrix.counts.catalog_total !== catalog.length) fail(`catalog total mismatch: expected ${catalog.length}`);
-if ((counts.missing || 0) < 1) fail("matrix should expose missing artifacts for this demonstrator");
-if ((counts.standalone || 0) >= catalog.length) fail("matrix incorrectly implies all artifacts are standalone");
+if ((counts.missing || 0) !== 0) fail("missing count must be zero after RB-08");
+if ((counts.partial || 0) !== 0) fail("partial count must be zero after RB-08");
+if ((counts.combined || 0) !== 0) fail("combined count must be zero after RB-08");
+if ((counts.deferred || 0) !== 0) fail("deferred count must be zero after RB-08");
+if ((counts.standalone || 0) + (counts.not_applicable || 0) !== catalog.length) {
+  fail("standalone plus not_applicable count must equal catalog total");
+}
+
+const reviewPackage = readJsonEvidence(matrix.review_package);
+if (!reviewPackage) {
+  fail("review package missing");
+} else {
+  if (reviewPackage.zero_slop_policy?.statement !== ZERO) fail("review package missing zero-slop statement");
+  if (reviewPackage.template_only !== false) fail("review package must be instantiated evidence");
+  if (!Array.isArray(reviewPackage.artifacts) || reviewPackage.artifacts.length !== catalog.length) {
+    fail("review package must contain one record per catalog artifact");
+  } else {
+    const reviewById = new Map(reviewPackage.artifacts.map((item) => [item.id, item]));
+    for (const id of catalogIds) {
+      const record = reviewById.get(id);
+      if (!record) {
+        fail(`review package missing ${id}`);
+        continue;
+      }
+      if (!Array.isArray(record.artifact_level_rubric_15) || record.artifact_level_rubric_15.length !== 15) {
+        fail(`${id} must have 15 artifact-level rubric checks`);
+      }
+      if (!Array.isArray(record.reviewers) || record.reviewers.length !== 3) {
+        fail(`${id} must have exactly three expert reviewers`);
+      } else {
+        for (const reviewer of record.reviewers) {
+          if (!reviewer.persona || !reviewer.seniority_bar || !reviewer.decision_rights) {
+            fail(`${id} reviewer missing persona contract`);
+          }
+          if (!Array.isArray(reviewer.rubric_checks) || reviewer.rubric_checks.length !== 15) {
+            fail(`${id} reviewer ${reviewer.persona || "<unknown>"} must have 15 checks`);
+          }
+        }
+      }
+      if (!Array.isArray(record.adversarial_critics) || record.adversarial_critics.length < 2) {
+        fail(`${id} must have at least two adversarial critics`);
+      }
+      if (!Array.isArray(record.ralph_loops) || record.ralph_loops.length < 5) {
+        fail(`${id} must have at least five RALPH loops`);
+      }
+      if (record.unresolved_p0_p1_findings !== 0) fail(`${id} has unresolved P0/P1 findings`);
+    }
+  }
+}
+
+const certificate = readJsonEvidence(matrix.quality_certificate);
+if (!certificate) {
+  fail("artifact saturation quality certificate missing");
+} else {
+  if (certificate.zero_slop_policy?.statement !== ZERO) fail("certificate missing zero-slop statement");
+  if (certificate.template_only !== false) fail("certificate must be instantiated evidence");
+  if (certificate.status !== "pass_with_not_applicable_waivers") fail("certificate status must match matrix boundary");
+  if (certificate.review_package !== matrix.review_package) fail("certificate does not point at the review package");
+  if (certificate.matrix !== "project-book/records/artifact-catalog-coverage-matrix.json") fail("certificate does not point at matrix");
+}
 
 const report = {
   zero_slop_policy: { statement: ZERO },
   template_only: false,
-  audit_id: "ARTIFACT-CATALOG-COVERAGE-AUDIT-NORTHSTAR-20260429-001",
-  status: failures.length ? "fail" : "pass_with_gaps",
+  audit_id: "ARTIFACT-CATALOG-COVERAGE-AUDIT-NORTHSTAR-20260503-RB08",
+  status: failures.length ? "fail" : "pass",
   catalog_total: catalog.length,
   counts,
   full_saturation_status: matrix.full_saturation_status,
   claim_full_catalog_coverage: matrix.claim_full_catalog_coverage,
+  truthful_coverage_status: matrix.truthful_coverage_status,
+  review_package: matrix.review_package,
+  quality_certificate: matrix.quality_certificate,
+  not_applicable_waiver_register: matrix.not_applicable_waiver_register,
   failures
 };
 
 fs.writeFileSync(evidencePath, JSON.stringify(report, null, 2) + "\n", "utf8");
 assert.deepEqual(failures, []);
-console.log("Artifact catalog coverage audit passed with truthful gaps.");
+console.log("Artifact catalog coverage audit passed for RB-08 current-catalog saturation with explicit not-applicable waivers.");

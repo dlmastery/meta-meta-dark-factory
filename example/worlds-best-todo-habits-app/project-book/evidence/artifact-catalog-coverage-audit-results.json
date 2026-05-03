@@ -3,18 +3,22 @@
     "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
   },
   "template_only": false,
-  "audit_id": "ARTIFACT-CATALOG-COVERAGE-AUDIT-NORTHSTAR-20260429-001",
-  "status": "pass_with_gaps",
+  "audit_id": "ARTIFACT-CATALOG-COVERAGE-AUDIT-NORTHSTAR-20260503-RB08",
+  "status": "pass",
   "catalog_total": 63,
   "counts": {
-    "combined": 12,
-    "standalone": 19,
-    "partial": 17,
+    "standalone": 55,
     "not_applicable": 8,
-    "missing": 7,
-    "deferred": 0
+    "combined": 0,
+    "partial": 0,
+    "deferred": 0,
+    "missing": 0
   },
-  "full_saturation_status": "fail",
-  "claim_full_catalog_coverage": false,
+  "full_saturation_status": "pass",
+  "claim_full_catalog_coverage": true,
+  "truthful_coverage_status": "pass_with_not_applicable_waivers",
+  "review_package": "project-book/records/artifact-saturation-review-package.json",
+  "quality_certificate": "project-book/evidence/artifact-saturation-quality-certificate.json",
+  "not_applicable_waiver_register": "project-book/26-not-applicable-waiver-register.md",
   "failures": []
 }

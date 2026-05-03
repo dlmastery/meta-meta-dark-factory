@@ -1,0 +1,28 @@
+{
+  "zero_slop_policy": {
+    "statement": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS"
+  },
+  "template_only": false,
+  "certificate_id": "CERT-NORTHSTAR-ARTIFACT-SATURATION-20260503-001",
+  "project": "Northstar Daily",
+  "scope": "Current 63-artifact DFMS catalog for the local-static todo plus habits demonstrator.",
+  "status": "pass_with_not_applicable_waivers",
+  "counts": {
+    "catalog_total": 63,
+    "standalone": 55,
+    "not_applicable": 8,
+    "combined": 0,
+    "partial": 0,
+    "deferred": 0,
+    "missing": 0
+  },
+  "review_package": "project-book/records/artifact-saturation-review-package.json",
+  "matrix": "project-book/records/artifact-catalog-coverage-matrix.json",
+  "not_applicable_waiver_register": "project-book/26-not-applicable-waiver-register.md",
+  "required_followup": "RB-09 final Hawkeye/public hardening remains separate and is not certified by this certificate.",
+  "residual_risks": [
+    "This is internal DFMS certification, not external legal, regulatory, or third-party certification.",
+    "Production/API/sync/deployment/incident artifacts are waived only because the product remains local-static.",
+    "Any scope expansion reopens the waiver register, artifact matrix, portal index, tests, and certificate."
+  ]
+}
