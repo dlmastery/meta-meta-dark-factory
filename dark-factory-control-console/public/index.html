@@ -3,683 +3,753 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dark Factory Project Control Portal</title>
+  <title>Dark Factory Studio</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="topbar">
-    <div class="brand-lockup">
-      <div class="brand-mark" aria-hidden="true">DF</div>
-      <div>
-        <div class="eyebrow">Agentic SDLC Studio</div>
-        <h1>Dark Factory Studio</h1>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Factory navigation">
+      <div class="brand-lockup">
+        <div class="brand-mark" aria-hidden="true">DF</div>
+        <div>
+          <div class="eyebrow">Assured Agentic SDLC</div>
+          <h1>Dark Factory Studio</h1>
+        </div>
       </div>
-    </div>
-    <div class="status-strip" aria-label="Run status">
-      <span class="status-chip accent" id="swarmStatus">Swarm: standing by</span>
-      <span class="status-chip" id="skillCount">Skills: --</span>
-      <span class="status-chip" id="graphCount">Graph: --</span>
-      <span class="status-chip strong" id="runState">No run</span>
-    </div>
-  </header>
 
-  <main class="layout">
-    <aside class="rail" aria-label="Factory navigation">
-      <div class="rail-title">Projects</div>
-      <label class="rail-control">
-        <span>Open project</span>
-        <select id="projectSelect"></select>
-      </label>
-      <button id="refreshProject" class="button secondary wide">Refresh Project</button>
-      <div id="projectList" class="project-list"></div>
+      <div class="sidebar-section">
+        <div class="sidebar-label">Current project</div>
+        <label class="field quiet">
+          <span>Open project</span>
+          <select id="projectSelect"></select>
+        </label>
+        <button id="refreshProject" class="button secondary wide">Refresh</button>
+        <div id="projectList" class="project-list" aria-label="Project list"></div>
+      </div>
 
-      <div class="rail-title flow-title">Strict Flow</div>
-      <ol id="stageList" class="stage-list"></ol>
+      <nav class="workspace-tabs vertical" aria-label="Workspace sections">
+        <button class="tab-button active" data-panel-target="overview">Mission Control</button>
+        <button class="tab-button" data-panel-target="start">Intake And Grill</button>
+        <button class="tab-button" data-panel-target="evidence">Evidence Room</button>
+        <button class="tab-button" data-panel-target="graph">Spec Graph</button>
+        <button class="tab-button" data-panel-target="change">Resteer</button>
+        <button class="tab-button" data-panel-target="platform">Runtime Spine</button>
+        <button class="tab-button" data-panel-target="debug">Agent Protocol</button>
+      </nav>
+
+      <div class="sidebar-section stage-section">
+        <div class="sidebar-label">No-skip stage ledger</div>
+        <ol id="stageList" class="stage-list"></ol>
+      </div>
     </aside>
 
-    <section class="workspace">
-      <section class="studio-shell" aria-labelledby="studio-title">
-        <div class="studio-main">
-          <div class="studio-kicker">Meta-meta first agentic delivery</div>
-          <h2 id="studio-title">Describe the mission. Supervise the agents. Approve the next move.</h2>
+    <div class="main-shell">
+      <header class="topbar">
+        <div>
+          <div class="breadcrumb">Meta-meta -> product meta-skill -> execution skills</div>
           <p id="deckProjectName">No project selected</p>
+        </div>
+        <div class="status-strip" aria-label="Run status">
+          <span class="status-chip accent" id="swarmStatus">Swarm: standing by</span>
+          <span class="status-chip" id="skillCount">Skills: --</span>
+          <span class="status-chip" id="graphCount">Graph: --</span>
+          <span class="status-chip strong" id="runState">No run</span>
+        </div>
+      </header>
 
-          <div class="mission-composer" aria-label="Factory mission composer">
-            <div class="scenario-chips" aria-label="Factory scenario">
-              <button class="scenario-chip active" data-studio-scenario="greenfield-product">New product</button>
-              <button class="scenario-chip" data-studio-scenario="brownfield-modernization">Modernize</button>
-              <button class="scenario-chip" data-studio-scenario="product-audit">Audit</button>
-              <button class="scenario-chip" data-studio-scenario="regulatory-compliance">Comply</button>
+      <main class="workspace">
+        <section class="studio-shell" aria-labelledby="studio-title">
+          <div class="mission-panel">
+            <div class="runway" id="workflowRunway" aria-label="Factory workflow">
+              <div class="runway-step active" data-runway-step="mission"><span>1</span><strong>Set mission</strong><small>Describe outcome</small></div>
+              <div class="runway-step" data-runway-step="route"><span>2</span><strong>Approve route</strong><small>Meta-meta gate</small></div>
+              <div class="runway-step" data-runway-step="grill"><span>3</span><strong>Grill spec</strong><small>Validate intent</small></div>
+              <div class="runway-step" data-runway-step="execute"><span>4</span><strong>Execute skills</strong><small>Artifacts and code</small></div>
+              <div class="runway-step" data-runway-step="evidence"><span>5</span><strong>Review evidence</strong><small>Tests and audit</small></div>
+              <div class="runway-step" data-runway-step="handoff"><span>6</span><strong>Resteer or handoff</strong><small>Change closure</small></div>
             </div>
-            <label class="studio-project-name">
-              <span>Project name</span>
-              <input id="studioProjectName" value="New governed product">
-            </label>
-            <label class="studio-intent-label">
-              <span>What should the dark factory deliver?</span>
-              <textarea id="studioIntent" rows="5">Build a serious governed software project through dark-factory skills with standards artifacts, expert grilling, implementation, testing, dashboard review, and redo closure.</textarea>
-            </label>
-            <div class="studio-action-row">
-              <label>
-                <span>Token SWAG</span>
-                <select id="studioTokenBand">
+
+            <div class="mission-header">
+              <div>
+                <div class="studio-kicker">Human-led agent swarm</div>
+                <h2 id="studio-title">Describe the mission. The factory shows the only legal next move.</h2>
+                <p>Start with intent, not templates. The agents can propose, critique, build, test, and document, but material movement stays gated by evidence and human decisions.</p>
+              </div>
+              <span class="status-chip strong" id="runPreviewState">Waiting for mission</span>
+            </div>
+
+            <div class="mission-composer" aria-label="Factory mission composer">
+              <div class="scenario-chips" aria-label="Factory scenario">
+                <button class="scenario-chip active" data-studio-scenario="greenfield-product">New product</button>
+                <button class="scenario-chip" data-studio-scenario="brownfield-modernization">Modernize</button>
+                <button class="scenario-chip" data-studio-scenario="product-audit">Audit</button>
+                <button class="scenario-chip" data-studio-scenario="regulatory-compliance">Comply</button>
+              </div>
+
+              <div class="mission-grid">
+                <label class="field">
+                  <span>Project name</span>
+                  <input id="studioProjectName" value="New governed product">
+                </label>
+                <label class="field">
+                  <span>Token SWAG</span>
+                  <select id="studioTokenBand">
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                    <option value="high">High</option>
+                    <option value="xhigh">Extra high</option>
+                  </select>
+                </label>
+              </div>
+
+              <label class="field">
+                <span>What should the dark factory deliver?</span>
+                <textarea id="studioIntent" rows="5">Build a serious governed software project through dark-factory skills with standards artifacts, expert grilling, implementation, testing, dashboard review, and redo closure.</textarea>
+              </label>
+
+              <div class="studio-action-row">
+                <button id="studioPrimaryAction" class="button primary large">Start Factory Run</button>
+                <button id="studioSecondaryAction" class="button secondary large">Open Detailed Grill</button>
+                <div class="refine-strip">
+                  <input id="studioRefineInput" placeholder="Ask the agents to explain, refine, audit, or prepare a resteer request.">
+                  <button id="studioRefineAction" class="button secondary">Ask Agent</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="proposal-canvas" aria-labelledby="proposal-title">
+              <div>
+                <span class="studio-kicker">Active proposal</span>
+                <h3 id="proposal-title">Factory run preview</h3>
+                <p id="focusSummary">Start or select a project. The factory will surface the next human decision before agents execute material work.</p>
+              </div>
+              <div class="proposal-grid">
+                <div><span>Route</span><strong id="focusRoute">Choose scenario and template</strong></div>
+                <div><span>Agent</span><strong id="focusAgentMode">Meta-attractor standing by</strong></div>
+                <div><span>Proof</span><strong id="focusProof">No run yet</strong></div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="supervisor-pane" aria-label="Factory supervisor">
+            <div class="supervisor-card primary-card">
+              <span>Current legal next action</span>
+              <strong id="legalNextAction">Start or select a project.</strong>
+              <small>The factory refuses future-stage execution until predecessors pass or are explicitly waived.</small>
+            </div>
+
+            <div class="supervisor-grid">
+              <div class="supervisor-card">
+                <span>Active agent</span>
+                <strong id="activeAgent">Meta-attractor</strong>
+              </div>
+              <div class="supervisor-card">
+                <span>Evidence</span>
+                <strong id="evidencePulse">--</strong>
+              </div>
+              <div class="supervisor-card">
+                <span>Handoff</span>
+                <strong id="handoffState">Not ready</strong>
+              </div>
+              <div class="supervisor-card">
+                <span>Hawkeye</span>
+                <strong id="hawkeyeState">No run</strong>
+              </div>
+            </div>
+
+            <div class="hawkeye-card">
+              <span>Audit boundary</span>
+              <strong id="hawkeyeBoundary">Validation and closure posture appears after a run is selected.</strong>
+            </div>
+
+            <div class="mini-ledger">
+              <span id="budgetPosture">Token SWAG: --</span>
+              <span id="changePosture">Change control: --</span>
+              <span id="validationPosture">Validation: --</span>
+            </div>
+
+            <div class="decision-panel">
+              <div class="next-action-label">Human decision queue</div>
+              <div id="focusDecisionList" class="focus-decisions"></div>
+              <div class="focus-buttons">
+                <button id="focusPrimaryAction" class="button primary">Review Decision</button>
+                <button id="focusSecondaryAction" class="button secondary">Inspect Evidence</button>
+              </div>
+            </div>
+
+            <div>
+              <div class="next-action-label">Recovery batches</div>
+              <div id="rbClosureMini" class="rb-mini-board" aria-label="Recovery batch closure"></div>
+            </div>
+          </aside>
+        </section>
+
+        <section class="ux-panel active" data-panel="overview" aria-labelledby="cockpit-title">
+          <section class="band control-cockpit" data-testid="factory-control-cockpit">
+            <div class="section-head">
+              <div>
+                <div class="studio-kicker">No-skip cockpit</div>
+                <h2 id="cockpit-title">What is happening, what is blocked, and what the human can do next</h2>
+                <p id="cockpitSubhead">Start or select a project to load the legal cursor, Hawkeye posture, evidence board, and redo path.</p>
+              </div>
+              <div class="cockpit-action-cluster">
+                <button id="cockpitAskAgent" class="button secondary">Ask Agent</button>
+                <button id="cockpitOpenChange" class="button secondary">Resteer</button>
+                <button id="cockpitPrimaryAction" class="button primary">Next Legal Action</button>
+              </div>
+            </div>
+
+            <div class="cockpit-grid">
+              <article class="cockpit-card legal-card">
+                <span>Legal cursor</span>
+                <strong id="cockpitLegalAction">Start or select a project.</strong>
+                <small id="cockpitLegalMeta">The factory cannot skip locked predecessors.</small>
+              </article>
+              <article class="cockpit-card">
+                <span>Human queue</span>
+                <strong id="cockpitHumanQueue">--</strong>
+                <small id="cockpitHumanOwner">Approval owner: --</small>
+              </article>
+              <article class="cockpit-card">
+                <span>Evidence posture</span>
+                <strong id="cockpitEvidencePosture">--</strong>
+                <small id="cockpitEvidenceMeta">Records, tests, and validation status.</small>
+              </article>
+              <article class="cockpit-card">
+                <span>Graph and redo</span>
+                <strong id="cockpitGraphPosture">--</strong>
+                <small id="cockpitRedoPath">Select a node to compute downstream closure.</small>
+              </article>
+            </div>
+
+            <div class="cockpit-columns">
+              <div>
+                <h3>Hawkeye blockers</h3>
+                <div id="hawkeyeBlockers" class="cockpit-list"></div>
+              </div>
+              <div>
+                <h3>Stage assurance</h3>
+                <div id="stageAssuranceBoard" class="stage-assurance-board"></div>
+              </div>
+              <div>
+                <h3>Recovery closure</h3>
+                <div id="rbClosureBoard" class="cockpit-list"></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="band product-truth">
+            <div class="section-head">
+              <div>
+                <div class="studio-kicker">Product rescue brief</div>
+                <h2>What was built, why it still missed, and what you actually want</h2>
+                <p>This surface exists because the previous work produced too much proof theater and not enough legible product workflow.</p>
+              </div>
+            </div>
+            <div class="truth-brief-grid">
+              <article>
+                <span>Accomplished</span>
+                <strong>Local factory spine, task ledger, artifact catalog, tests, truth inventory, and PB-01 runtime panel.</strong>
+              </article>
+              <article>
+                <span>Missed</span>
+                <strong>The UX did not behave like a guided agentic product. It scattered controls instead of exposing the workflow cursor.</strong>
+              </article>
+              <article>
+                <span>Real target</span>
+                <strong>A human-led SDLC factory where agents show their plan, ask for approval, execute in order, prove results, and support resteer.</strong>
+              </article>
+            </div>
+          </section>
+
+          <section class="band agentic-workbench" aria-labelledby="agentic-workbench-title">
+            <div class="section-head">
+              <div>
+                <h2 id="agentic-workbench-title">Agentic SDLC Workbench</h2>
+                <p>Scenario routing, provider quorum, human interrupts, foundation authoring, and Spec Graph impact are first-class controls.</p>
+              </div>
+              <div class="protocol-pills">
+                <span class="status-chip strong" id="scenarioStatus">Scenario: --</span>
+                <span class="status-chip accent" id="interruptStatus">Interrupts: --</span>
+                <span class="status-chip" id="specGraphStatus">Spec Graph: --</span>
+              </div>
+            </div>
+            <div class="workbench-layout">
+              <div>
+                <h3>Factory scenario</h3>
+                <div id="scenarioCards" class="scenario-list"></div>
+              </div>
+              <div>
+                <h3>Project templates</h3>
+                <div id="templateCatalog" class="template-table"></div>
+              </div>
+            </div>
+            <div class="workbench-layout lower">
+              <div>
+                <h3>Provider quorum</h3>
+                <div id="providerQuorumBoard" class="provider-board"></div>
+              </div>
+              <div>
+                <h3>Human interrupt inbox</h3>
+                <div id="humanInterrupts" class="interrupt-list"></div>
+              </div>
+            </div>
+            <div class="workbench-layout lower">
+              <div>
+                <h3>Foundation authoring</h3>
+                <div id="foundationAuthoring" class="foundation-board"></div>
+              </div>
+              <div>
+                <h3>Spec Graph impact</h3>
+                <div id="specGraphExplorer" class="spec-graph-panel"></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="band agentic-grid">
+            <div>
+              <div class="section-head tight">
+                <div>
+                  <h2>Agent swarm</h2>
+                  <p>Meta-meta control, generated meta-skill routing, specialist execution, and human review.</p>
+                </div>
+              </div>
+              <div id="agentSwarm" class="agent-grid-list"></div>
+            </div>
+            <div>
+              <div class="section-head tight">
+                <div>
+                  <h2>Critical path</h2>
+                  <p>Stage order, gate posture, and no-skip execution state.</p>
+                </div>
+              </div>
+              <div id="flowMap" class="flow-map"></div>
+            </div>
+          </section>
+        </section>
+
+        <section class="ux-panel" data-panel="start" aria-labelledby="start-title">
+          <section class="band compact">
+            <div class="section-head">
+              <div>
+                <h2 id="start-title">Intake And Customer Grill</h2>
+                <p>Create a per-project factory run. The meta-meta attractor generates the product-specific factory before child skills execute.</p>
+              </div>
+              <button id="createRun" class="button primary">Start Project</button>
+            </div>
+            <div class="form-grid">
+              <label class="field">
+                <span>Project name</span>
+                <input id="projectName" value="New governed product">
+              </label>
+              <label class="field">
+                <span>Project type</span>
+                <select id="projectType">
+                  <option value="greenfield">Greenfield</option>
+                  <option value="brownfield">Brownfield</option>
+                  <option value="artifact-only">Artifact only</option>
+                  <option value="meta-skill-system">Meta-skill system</option>
+                </select>
+              </label>
+              <label class="field">
+                <span>Factory scenario</span>
+                <select id="scenarioMode">
+                  <option value="greenfield-product">Build a new product</option>
+                  <option value="brownfield-modernization">Modernize existing system</option>
+                  <option value="migration-impact">Migration impact</option>
+                  <option value="document-existing">Document existing system</option>
+                  <option value="regulatory-compliance">Regulatory compliance</option>
+                  <option value="product-audit">Product audit</option>
+                  <option value="competitor-analysis">Competitor analysis</option>
+                </select>
+              </label>
+              <label class="field">
+                <span>Project template</span>
+                <select id="templateId">
+                  <option value="agentic-sdlc-factory">Agentic SDLC Factory</option>
+                  <option value="saas-starter">SaaS Starter</option>
+                  <option value="marketplace">Two-Sided Marketplace</option>
+                  <option value="healthcare">Healthcare Workflow</option>
+                  <option value="education">EdTech Learning Platform</option>
+                  <option value="brownfield-api">Brownfield API Modernization</option>
+                </select>
+              </label>
+              <label class="field">
+                <span>Provider quorum</span>
+                <select id="providerQuorum">
+                  <option value="three-provider-merge">Three-provider merge</option>
+                  <option value="three-provider-critique">Three-provider critique</option>
+                  <option value="single-provider-with-two-critics">Single provider with two critics</option>
+                </select>
+              </label>
+              <label class="field">
+                <span>Token SWAG band</span>
+                <select id="tokenBand">
                   <option value="medium">Medium</option>
                   <option value="low">Low</option>
                   <option value="high">High</option>
                   <option value="xhigh">Extra high</option>
                 </select>
               </label>
-              <button id="studioPrimaryAction" class="button primary large">Start Factory Run</button>
-              <button id="studioSecondaryAction" class="button secondary">Open Detailed Grill</button>
-            </div>
-          </div>
-
-          <section class="preview-canvas" aria-labelledby="preview-title">
-            <div class="preview-head">
-              <div>
-                <span class="studio-kicker">Active preview</span>
-                <h3 id="preview-title">Factory proposal</h3>
-              </div>
-              <span class="status-chip strong" id="runPreviewState">Waiting for mission</span>
-            </div>
-            <p id="focusSummary">Start or select a project. The factory will surface the next human decision before agents execute material work.</p>
-            <div class="preview-grid">
-              <div>
-                <span>Route</span>
-                <strong id="focusRoute">Choose scenario and template</strong>
-              </div>
-              <div>
-                <span>Agent</span>
-                <strong id="focusAgentMode">Meta-attractor standing by</strong>
-              </div>
-              <div>
-                <span>Proof</span>
-                <strong id="focusProof">No run yet</strong>
-              </div>
-            </div>
-            <div class="refine-strip">
-              <input id="studioRefineInput" placeholder="Ask the agents to refine the proposal, explain a blocker, or prepare a resteer request.">
-              <button id="studioRefineAction" class="button secondary">Ask Agent</button>
+              <label class="field span-3">
+                <span>Reapproval trigger</span>
+                <input id="reapprovalTrigger" value="Any scope, production, security, privacy, budget, or artifact expansion beyond this iteration.">
+              </label>
+              <label class="field span-3">
+                <span>Raw intent</span>
+                <textarea id="intent" rows="4">Build a serious governed software project through dark-factory skills with standards artifacts, expert grilling, implementation, testing, dashboard review, and redo closure.</textarea>
+              </label>
             </div>
           </section>
-        </div>
 
-        <aside class="studio-inspector" aria-label="Factory inspector">
-          <div class="inspector-tabs" aria-label="Inspector sections">
-            <button class="inspector-tab active">Agents</button>
-            <button class="inspector-tab">Evidence</button>
-            <button class="inspector-tab">Graph</button>
-            <button class="inspector-tab">Tests</button>
-          </div>
-          <div class="inspector-card">
-            <span>Active agent</span>
-            <strong id="activeAgent">Meta-attractor</strong>
-          </div>
-          <div class="inspector-metrics">
-            <div><span>Evidence</span><strong id="evidencePulse">--</strong></div>
-            <div><span>Handoff</span><strong id="handoffState">Not ready</strong></div>
-          </div>
-          <div class="next-action-card">
-            <span>Next legal action</span>
-            <strong id="legalNextAction">Start or select a project.</strong>
-          </div>
-          <div class="hawkeye-card">
-            <span>Hawkeye audit</span>
-            <strong id="hawkeyeState">No run</strong>
-            <small id="hawkeyeBoundary">Validation and closure posture appears after a run is selected.</small>
-          </div>
-          <div id="rbClosureMini" class="rb-mini-board" aria-label="Recovery batch closure"></div>
-          <div class="mini-ledger">
-            <span id="budgetPosture">Token SWAG: --</span>
-            <span id="changePosture">Change control: --</span>
-            <span id="validationPosture">Validation: --</span>
-          </div>
-          <div class="decision-panel">
-            <div class="next-action-label">Decision Queue</div>
-            <div id="focusDecisionList" class="focus-decisions"></div>
-            <div class="focus-buttons">
-              <button id="focusPrimaryAction" class="button primary">Review Decision</button>
-              <button id="focusSecondaryAction" class="button secondary">Inspect Evidence</button>
-            </div>
-          </div>
-        </aside>
-      </section>
-
-      <nav class="workspace-tabs" aria-label="Workspace sections">
-        <button class="tab-button active" data-panel-target="overview">Overview</button>
-        <button class="tab-button" data-panel-target="start">Start / Grill</button>
-        <button class="tab-button" data-panel-target="evidence">Evidence</button>
-        <button class="tab-button" data-panel-target="graph">Graph / Redo</button>
-        <button class="tab-button" data-panel-target="change">Change</button>
-        <button class="tab-button" data-panel-target="platform">Platform Spine</button>
-        <button class="tab-button" data-panel-target="debug">Agent Protocol</button>
-      </nav>
-
-      <section class="band control-cockpit ux-panel active" data-panel="overview" aria-labelledby="cockpit-title" data-testid="factory-control-cockpit">
-        <div class="section-head">
-          <div>
-            <div class="studio-kicker">No-skip control tower</div>
-            <h2 id="cockpit-title">What is happening, what is blocked, and what the human can do next</h2>
-            <p id="cockpitSubhead">Start or select a project to load the legal cursor, Hawkeye posture, evidence board, and redo path.</p>
-          </div>
-          <div class="cockpit-action-cluster">
-            <button id="cockpitAskAgent" class="button secondary">Ask Agent</button>
-            <button id="cockpitOpenChange" class="button secondary">Resteer</button>
-            <button id="cockpitPrimaryAction" class="button primary">Next Legal Action</button>
-          </div>
-        </div>
-        <div class="cockpit-grid">
-          <article class="cockpit-card legal-card">
-            <span>Legal cursor</span>
-            <strong id="cockpitLegalAction">Start or select a project.</strong>
-            <small id="cockpitLegalMeta">The factory cannot skip locked predecessors.</small>
-          </article>
-          <article class="cockpit-card">
-            <span>Human queue</span>
-            <strong id="cockpitHumanQueue">--</strong>
-            <small id="cockpitHumanOwner">Approval owner: --</small>
-          </article>
-          <article class="cockpit-card">
-            <span>Evidence posture</span>
-            <strong id="cockpitEvidencePosture">--</strong>
-            <small id="cockpitEvidenceMeta">Records, tests, and validation status.</small>
-          </article>
-          <article class="cockpit-card">
-            <span>Graph and redo</span>
-            <strong id="cockpitGraphPosture">--</strong>
-            <small id="cockpitRedoPath">Select a node to compute downstream closure.</small>
-          </article>
-        </div>
-        <div class="cockpit-columns">
-          <div>
-            <h3>Hawkeye Blockers</h3>
-            <div id="hawkeyeBlockers" class="cockpit-list"></div>
-          </div>
-          <div>
-            <h3>Stage Assurance</h3>
-            <div id="stageAssuranceBoard" class="stage-assurance-board"></div>
-          </div>
-          <div>
-            <h3>Recovery Closure</h3>
-            <div id="rbClosureBoard" class="cockpit-list"></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="band agentic-workbench ux-panel active" data-panel="overview" aria-labelledby="agentic-workbench-title">
-        <div class="section-head">
-          <div>
-            <h2 id="agentic-workbench-title">Agentic SDLC Workbench</h2>
-            <p>Scenario routing, provider quorum, human interrupts, foundation authoring, and Spec Graph impact are first-class controls.</p>
-          </div>
-          <div class="protocol-pills">
-            <span class="status-chip strong" id="scenarioStatus">Scenario: --</span>
-            <span class="status-chip accent" id="interruptStatus">Interrupts: --</span>
-            <span class="status-chip" id="specGraphStatus">Spec Graph: --</span>
-          </div>
-        </div>
-        <div class="workbench-layout">
-          <div>
-            <h3>Factory Scenario</h3>
-            <div id="scenarioCards" class="scenario-list"></div>
-          </div>
-          <div>
-            <h3>Project Templates</h3>
-            <div id="templateCatalog" class="template-table"></div>
-          </div>
-        </div>
-        <div class="workbench-layout lower">
-          <div>
-            <h3>Provider Quorum</h3>
-            <div id="providerQuorumBoard" class="provider-board"></div>
-          </div>
-          <div>
-            <h3>Human Interrupt Inbox</h3>
-            <div id="humanInterrupts" class="interrupt-list"></div>
-          </div>
-        </div>
-        <div class="workbench-layout lower">
-          <div>
-            <h3>Foundation Authoring</h3>
-            <div id="foundationAuthoring" class="foundation-board"></div>
-          </div>
-          <div>
-            <h3>Spec Graph Impact</h3>
-            <div id="specGraphExplorer" class="spec-graph-panel"></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="band agentic-grid ux-panel active" data-panel="overview" aria-labelledby="swarm-title">
-        <div>
-          <div class="section-head tight">
-            <div>
-              <h2 id="swarm-title">Agent Swarm</h2>
-              <p>Meta-meta control, generated meta-skill routing, specialist execution, and human review.</p>
-            </div>
-          </div>
-          <div id="agentSwarm" class="agent-grid-list"></div>
-        </div>
-        <div>
-          <div class="section-head tight">
-            <div>
-              <h2>Critical Path</h2>
-              <p>Stage order, gate posture, and no-skip execution state.</p>
-            </div>
-          </div>
-          <div id="flowMap" class="flow-map"></div>
-        </div>
-      </section>
-
-      <section class="band platform-spine ux-panel" data-panel="platform" aria-labelledby="platform-title">
-        <div class="section-head">
-          <div>
-            <div class="studio-kicker">PB-01 product platform spine</div>
-            <h2 id="platform-title">Local product runtime, not just documents</h2>
-            <p id="productPlatformBoundary">Start or select a project to load the local product spine.</p>
-          </div>
-          <div class="protocol-pills">
-            <span class="status-chip strong" id="productPlatformStatus">PB-01: --</span>
-            <span class="status-chip accent" id="platformLedgerStatus">--</span>
-            <span class="status-chip" id="platformNextBatch">--</span>
-          </div>
-        </div>
-        <div class="platform-grid">
-          <div>
-            <h3>Capability Gates</h3>
-            <div id="platformCapabilityList" class="platform-stack"></div>
-          </div>
-          <div>
-            <h3>Roles And Decision Rights</h3>
-            <div id="platformRoleList" class="platform-stack"></div>
-          </div>
-        </div>
-        <div class="platform-grid lower">
-          <div>
-            <h3>Project Spaces</h3>
-            <div id="platformProjectSpaces" class="platform-stack"></div>
-          </div>
-          <div>
-            <h3>Human Collaboration</h3>
-            <div class="platform-comment-composer">
-              <select id="platformCommentTopic" aria-label="Platform comment topic">
-                <option value="platform_review">Platform review</option>
-                <option value="ux_research">UX research</option>
-                <option value="stage_gate">Stage gate</option>
-                <option value="product_gap">Product gap</option>
-              </select>
-              <button id="addPlatformComment" class="button primary">Record Comment</button>
-            </div>
-            <textarea id="platformComment" rows="3" placeholder="Record a human review note. Scope/design/risk changes still require governed change control."></textarea>
-            <div id="platformCommentList" class="platform-stack comments"></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="band compact ux-panel" data-panel="start" aria-labelledby="start-title">
-        <div class="section-head">
-          <div>
-            <h2 id="start-title">Start A Governed Project</h2>
-            <p>Create a per-project factory run. The meta-meta attractor generates the project-specific meta-skill before child skills execute.</p>
-          </div>
-          <button id="createRun" class="button primary">Start Project</button>
-        </div>
-        <div class="form-grid">
-          <label>
-            <span>Project name</span>
-            <input id="projectName" value="New governed product">
-          </label>
-          <label>
-            <span>Project type</span>
-            <select id="projectType">
-              <option value="greenfield">Greenfield</option>
-              <option value="brownfield">Brownfield</option>
-              <option value="artifact-only">Artifact only</option>
-              <option value="meta-skill-system">Meta-skill system</option>
-            </select>
-          </label>
-          <label>
-            <span>Factory scenario</span>
-            <select id="scenarioMode">
-              <option value="greenfield-product">Build a new product</option>
-              <option value="brownfield-modernization">Modernize existing system</option>
-              <option value="migration-impact">Migration impact</option>
-              <option value="document-existing">Document existing system</option>
-              <option value="regulatory-compliance">Regulatory compliance</option>
-              <option value="product-audit">Product audit</option>
-              <option value="competitor-analysis">Competitor analysis</option>
-            </select>
-          </label>
-          <label>
-            <span>Project template</span>
-            <select id="templateId">
-              <option value="agentic-sdlc-factory">Agentic SDLC Factory</option>
-              <option value="saas-starter">SaaS Starter</option>
-              <option value="marketplace">Two-Sided Marketplace</option>
-              <option value="healthcare">Healthcare Workflow</option>
-              <option value="education">EdTech Learning Platform</option>
-              <option value="brownfield-api">Brownfield API Modernization</option>
-            </select>
-          </label>
-          <label>
-            <span>Provider quorum</span>
-            <select id="providerQuorum">
-              <option value="three-provider-merge">Three-provider merge</option>
-              <option value="three-provider-critique">Three-provider critique</option>
-              <option value="single-provider-with-two-critics">Single provider with two critics</option>
-            </select>
-          </label>
-          <label>
-            <span>Token SWAG band</span>
-            <select id="tokenBand">
-              <option value="medium">Medium</option>
-              <option value="low">Low</option>
-              <option value="high">High</option>
-              <option value="xhigh">Extra high</option>
-            </select>
-          </label>
-          <label class="span-3">
-            <span>Reapproval trigger</span>
-            <input id="reapprovalTrigger" value="Any scope, production, security, privacy, budget, or artifact expansion beyond this iteration.">
-          </label>
-          <label class="span-3">
-            <span>Raw intent</span>
-            <textarea id="intent" rows="4">Build a serious governed software project through dark-factory skills with standards artifacts, expert grilling, implementation, testing, dashboard review, and redo closure.</textarea>
-          </label>
-        </div>
-      </section>
-
-      <section class="band ux-panel" data-panel="start" aria-labelledby="grill-title">
-        <div class="section-head">
-          <div>
-            <h2 id="grill-title">Customer Grill</h2>
-            <p>Answer capture, contradiction scoring, and re-interrogation blockers.</p>
-          </div>
-          <div class="scorebox">
-            <span id="completionScore">0%</span>
-            <small>complete</small>
-          </div>
-        </div>
-        <div id="questionList" class="question-list"></div>
-        <div id="contradictions" class="alerts" aria-live="polite"></div>
-        <div class="interrogation-protocol">
-          <div>
-            <strong id="interrogationApproval">Approval: not requested</strong>
-            <span id="interrogationProtocolSummary">Rounds, decomposition, and trace links appear after answers are captured.</span>
-          </div>
-          <button id="approveInterrogation" class="button secondary" disabled>Approve Spec Baseline</button>
-        </div>
-      </section>
-
-      <section class="band protocol-workbench ux-panel" data-panel="debug" aria-labelledby="protocol-title">
-        <div class="section-head">
-          <div>
-            <h2 id="protocol-title">Agent Interaction Protocol Workbench</h2>
-            <p>AG-UI event stream, A2UI dynamic surfaces, and MCP Apps tool/resources for step-by-step SDLC factory control.</p>
-          </div>
-          <div class="protocol-pills" aria-label="Protocol status">
-            <span id="protocolAguiStatus" class="status-chip strong">AG-UI: --</span>
-            <span id="protocolA2uiStatus" class="status-chip accent">A2UI: --</span>
-            <span id="protocolMcpStatus" class="status-chip">MCP Apps: --</span>
-          </div>
-        </div>
-
-        <div class="protocol-grid">
-          <div class="agent-question-panel">
-            <div class="section-head tight">
+          <section class="band">
+            <div class="section-head">
               <div>
-                <h3>Ask Or Resteer Anytime</h3>
-                <p>The agent responds with the active stage report, blockers, legal next action, and change-control path.</p>
+                <h2>Customer grill protocol</h2>
+                <p>Answer capture, contradiction scoring, recursive decomposition, and approval baseline gate.</p>
+              </div>
+              <div class="scorebox">
+                <span id="completionScore">0%</span>
+                <small>complete</small>
               </div>
             </div>
-            <div class="agent-input-row">
-              <select id="agentMessageMode" aria-label="Agent message mode">
-                <option value="ask">Ask</option>
-                <option value="audit">Audit</option>
-                <option value="resteer">Resteer</option>
-                <option value="explain">Explain</option>
-              </select>
-              <button id="sendAgentMessage" class="button primary">Send To Agent</button>
+            <div id="questionList" class="question-list"></div>
+            <div id="contradictions" class="alerts" aria-live="polite"></div>
+            <div class="interrogation-protocol">
+              <div>
+                <strong id="interrogationApproval">Approval: not requested</strong>
+                <span id="interrogationProtocolSummary">Rounds, decomposition, and trace links appear after answers are captured.</span>
+              </div>
+              <button id="approveInterrogation" class="button secondary" disabled>Approve Spec Baseline</button>
             </div>
-            <textarea id="agentMessage" rows="4" placeholder="Ask what is blocked, request a stage report, or describe a design change to route through change control."></textarea>
-            <div id="agentResponse" class="agent-response"></div>
-          </div>
+          </section>
+        </section>
 
-          <div class="stage-report-panel">
-            <div class="stage-report-header">
-              <span>Current Stage Report</span>
-              <strong id="stageReportTitle">No active stage</strong>
+        <section class="ux-panel" data-panel="evidence" aria-labelledby="truth-title">
+          <section class="band truth-inventory">
+            <div class="section-head">
+              <div>
+                <h2 id="truth-title">Recovery Truth Inventory</h2>
+                <p>Proof classes, overclaim boundaries, and the next recovery batch. Progress here is evidence-backed, not optimism-backed.</p>
+              </div>
+              <div class="scorebox">
+                <span id="truthRiskScore">--</span>
+                <small>risk rows</small>
+              </div>
             </div>
-            <p id="stageReportBody">Start or select a project to inspect agent protocol state.</p>
-            <div id="aguiEventStream" class="event-stream"></div>
-          </div>
-        </div>
+            <div id="proofClassCounts" class="truth-counts"></div>
+            <div class="truth-columns">
+              <div>
+                <h3>Trust now</h3>
+                <div id="trustNowList" class="stack-list"></div>
+              </div>
+              <div>
+                <h3>Do not trust yet</h3>
+                <div id="dontTrustList" class="stack-list"></div>
+              </div>
+            </div>
+            <div id="truthRows" class="truth-row-list"></div>
+          </section>
 
-        <div class="protocol-grid lower">
-          <div>
-            <h3>A2UI Declared Surfaces</h3>
-            <div id="a2uiSurfaces" class="surface-grid"></div>
-          </div>
-          <div>
-            <h3>MCP Apps Tools And Resources</h3>
-            <div id="mcpAppsList" class="stack-list protocol-list"></div>
-          </div>
-        </div>
-      </section>
+          <section class="band">
+            <div class="section-head">
+              <div>
+                <h2>Human project portal</h2>
+                <p>Return here to inspect records, check validation, approve handoff, or resteer the design through change control.</p>
+              </div>
+              <div class="scorebox">
+                <span id="portalScore">--</span>
+                <small>stage pass</small>
+              </div>
+            </div>
+            <div class="portal-grid">
+              <div class="metric"><strong id="portalStatus">--</strong><span>status</span></div>
+              <div class="metric"><strong id="portalValidation">--</strong><span>validation</span></div>
+              <div class="metric"><strong id="portalChanges">--</strong><span>open changes</span></div>
+              <div class="metric"><strong id="portalRecordsCount">--</strong><span>records</span></div>
+            </div>
+            <div class="portal-columns">
+              <div>
+                <h3>Next legal actions</h3>
+                <div id="nextActions" class="stack-list"></div>
+              </div>
+              <div>
+                <h3>Change requests</h3>
+                <div id="changeRequestList" class="stack-list"></div>
+              </div>
+            </div>
+          </section>
 
-      <section class="band truth-inventory ux-panel" data-panel="evidence" aria-labelledby="truth-title">
-        <div class="section-head">
-          <div>
-            <h2 id="truth-title">Recovery Truth Inventory</h2>
-            <p>Proof classes, overclaim boundaries, and the next recovery batch. Progress here is evidence-backed, not optimism-backed.</p>
-          </div>
-          <div class="scorebox">
-            <span id="truthRiskScore">--</span>
-            <small>risk rows</small>
-          </div>
-        </div>
-        <div id="proofClassCounts" class="truth-counts"></div>
-        <div class="truth-columns">
-          <div>
-            <h3>Trust Now</h3>
-            <div id="trustNowList" class="stack-list"></div>
-          </div>
-          <div>
-            <h3>Do Not Trust Yet</h3>
-            <div id="dontTrustList" class="stack-list"></div>
-          </div>
-        </div>
-        <div id="truthRows" class="truth-row-list"></div>
-      </section>
-
-      <section class="band ux-panel" data-panel="evidence" aria-labelledby="portal-title">
-        <div class="section-head">
-          <div>
-            <h2 id="portal-title">Human Project Portal</h2>
-            <p>Return here to inspect records, check validation, approve handoff, or resteer the design through change control.</p>
-          </div>
-          <div class="scorebox">
-            <span id="portalScore">--</span>
-            <small>stage pass</small>
-          </div>
-        </div>
-        <div class="portal-grid">
-          <div class="metric"><strong id="portalStatus">--</strong><span>status</span></div>
-          <div class="metric"><strong id="portalValidation">--</strong><span>validation</span></div>
-          <div class="metric"><strong id="portalChanges">--</strong><span>open changes</span></div>
-          <div class="metric"><strong id="portalRecordsCount">--</strong><span>records</span></div>
-        </div>
-        <div class="portal-columns">
-          <div>
-            <h3>Next Legal Actions</h3>
-            <div id="nextActions" class="stack-list"></div>
-          </div>
-          <div>
-            <h3>Change Requests</h3>
-            <div id="changeRequestList" class="stack-list"></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="band ux-panel" data-panel="change" aria-labelledby="change-title">
-        <div class="section-head">
-          <div>
-            <h2 id="change-title">Resteer Or Change Design</h2>
-            <p>A human change creates a governed change request, computes redo impact when a node is selected, reopens downstream stages, and records handoff communication.</p>
-          </div>
-          <button id="openChangeRequest" class="button primary">Open Change Request</button>
-        </div>
-        <div class="form-grid">
-          <label>
-            <span>Change title</span>
-            <input id="changeTitle" value="Resteer design">
-          </label>
-          <label>
-            <span>Impact area</span>
-            <select id="changeImpact">
-              <option value="requirements">Requirements / PRD</option>
-              <option value="design">Design / Architecture</option>
-              <option value="workflow">Workflow / Skills</option>
-              <option value="quality">Quality / Review</option>
-              <option value="implementation">Implementation / Testing</option>
-              <option value="production">Production / SRE</option>
-              <option value="budget">Budget / Approval</option>
-            </select>
-          </label>
-          <label>
-            <span>Reopen from stage</span>
-            <select id="changeTargetStage"></select>
-          </label>
-          <label>
-            <span>Selected artifact/node</span>
-            <input id="changeNode" value="02-prd.md">
-          </label>
-          <label>
-            <span>Token delta</span>
-            <select id="changeTokenDelta">
-              <option value="medium">Medium</option>
-              <option value="low">Low</option>
-              <option value="high">High</option>
-              <option value="xhigh">Extra high</option>
-            </select>
-          </label>
-          <label>
-            <span>Approval owner</span>
-            <input id="changeApprovalOwner" value="human-owner">
-          </label>
-          <label class="span-3">
-            <span>Requested change</span>
-            <textarea id="changeRequested" rows="3">Change the design direction, reopen affected gates, and require downstream trace, review, test, and handoff updates.</textarea>
-          </label>
-          <label class="span-3">
-            <span>Reason</span>
-            <textarea id="changeReason" rows="2">Human owner wants to resteer the project after reviewing the portal.</textarea>
-          </label>
-        </div>
-        <div id="changeResult" class="result"></div>
-      </section>
-
-      <section class="band split ux-panel" data-panel="evidence" aria-labelledby="progress-title">
-        <div>
-          <div class="section-head tight">
+          <section class="band split">
             <div>
-              <h2 id="progress-title">Invocation Progress</h2>
-              <p>Invoke only the active or reopened stage. Locked child work stays locked.</p>
+              <div class="section-head tight">
+                <div>
+                  <h2>Invocation progress</h2>
+                  <p>Invoke only the active or reopened stage. Locked child work stays locked.</p>
+                </div>
+              </div>
+              <div class="actions">
+                <button id="invokeStage" class="button secondary">Invoke Current Stage</button>
+                <button id="advanceStage" class="button primary">Advance Gate</button>
+              </div>
+              <div id="auditLog" class="timeline"></div>
             </div>
-          </div>
-          <div class="actions">
-            <button id="invokeStage" class="button secondary">Invoke Current Stage</button>
-            <button id="advanceStage" class="button primary">Advance Gate</button>
-          </div>
-          <div id="auditLog" class="timeline"></div>
-        </div>
-        <div>
-          <div class="section-head tight">
             <div>
-              <h2>Skill Stack</h2>
-              <p>Loaded from the local `codex-skills` directory.</p>
+              <div class="section-head tight">
+                <div>
+                  <h2>Skill stack</h2>
+                  <p>Loaded from the local `codex-skills` directory.</p>
+                </div>
+              </div>
+              <div id="skillStack" class="skill-stack"></div>
             </div>
-          </div>
-          <div id="skillStack" class="skill-stack"></div>
-        </div>
-      </section>
+          </section>
 
-      <section class="band split ux-panel" data-panel="evidence" aria-labelledby="factory-title">
-        <div>
-          <div class="section-head tight">
+          <section class="band split">
             <div>
-              <h2 id="factory-title">Factory Execution</h2>
-              <p>Execute the generated meta-skill hierarchy into concrete run records and starter artifacts.</p>
+              <div class="section-head tight">
+                <div>
+                  <h2>Factory execution</h2>
+                  <p>Execute the generated meta-skill hierarchy into concrete run records and starter artifacts.</p>
+                </div>
+              </div>
+              <div class="actions">
+                <button id="executePipeline" class="button primary">Execute Ready Pipeline</button>
+                <button id="runRalphAudit" class="button secondary">Run 20x RALPH Audit</button>
+                <button id="runGoalRalphAudit" class="button secondary">Run Goal RALPH-10</button>
+              </div>
+              <div class="graph-grid">
+                <div class="metric"><strong id="collectionScore">--</strong><span>collection</span></div>
+                <div class="metric"><strong id="recordCount">--</strong><span>records</span></div>
+                <div class="metric"><strong id="currentStage">--</strong><span>current stage</span></div>
+              </div>
+              <div id="buildTestEvidence" class="evidence-board"></div>
+              <div id="executionRecords" class="record-list"></div>
+              <div id="auditResult" class="result"></div>
+              <div id="goalAuditResult" class="result"></div>
             </div>
-          </div>
-          <div class="actions">
-            <button id="executePipeline" class="button primary">Execute Ready Pipeline</button>
-            <button id="runRalphAudit" class="button secondary">Run 20x RALPH Audit</button>
-            <button id="runGoalRalphAudit" class="button secondary">Run Goal RALPH-10</button>
-          </div>
-          <div class="graph-grid">
-            <div class="metric"><strong id="collectionScore">--</strong><span>collection</span></div>
-            <div class="metric"><strong id="recordCount">--</strong><span>records</span></div>
-            <div class="metric"><strong id="currentStage">--</strong><span>current stage</span></div>
-          </div>
-          <div id="buildTestEvidence" class="evidence-board"></div>
-          <div id="executionRecords" class="record-list"></div>
-          <div id="auditResult" class="result"></div>
-          <div id="goalAuditResult" class="result"></div>
-        </div>
-        <div>
-          <div class="section-head tight">
             <div>
-              <h2>Generated Meta Skill</h2>
-              <p>Tailored by the meta-meta attractor before child skills execute.</p>
+              <div class="section-head tight">
+                <div>
+                  <h2>Generated meta skill</h2>
+                  <p>Tailored by the meta-meta attractor before child skills execute.</p>
+                </div>
+              </div>
+              <pre id="generatedMetaSkill" class="packet small">{}</pre>
             </div>
-          </div>
-          <pre id="generatedMetaSkill" class="packet small">{}</pre>
-        </div>
-      </section>
+          </section>
+        </section>
 
-      <section class="band split ux-panel" data-panel="graph" aria-labelledby="dashboard-title">
-        <div>
-          <div class="section-head tight">
+        <section class="ux-panel" data-panel="graph" aria-labelledby="dashboard-title">
+          <section class="band split">
             <div>
-              <h2 id="dashboard-title">Artifact Graph</h2>
-              <p>Dashboard-control index and selected-node redo closure.</p>
+              <div class="section-head tight">
+                <div>
+                  <h2 id="dashboard-title">Spec Graph And Redo Closure</h2>
+                  <p>Dashboard-control index, selected-node closure, and downstream transitive impact.</p>
+                </div>
+              </div>
+              <div class="graph-grid">
+                <div class="metric"><strong id="nodeCount">--</strong><span>nodes</span></div>
+                <div class="metric"><strong id="edgeCount">--</strong><span>edges</span></div>
+                <div class="metric"><strong id="stageCount">--</strong><span>stages</span></div>
+              </div>
+              <label class="field">
+                <span>Node or path fragment to redo</span>
+                <input id="redoNode" value="02-prd.md">
+              </label>
+              <button id="redoClosure" class="button secondary wide">Compute Redo Closure</button>
+              <div id="redoResult" class="result"></div>
             </div>
-          </div>
-          <div class="graph-grid">
-            <div class="metric"><strong id="nodeCount">--</strong><span>nodes</span></div>
-            <div class="metric"><strong id="edgeCount">--</strong><span>edges</span></div>
-            <div class="metric"><strong id="stageCount">--</strong><span>stages</span></div>
-          </div>
-          <label>
-            <span>Node or path fragment to redo</span>
-            <input id="redoNode" value="02-prd.md">
-          </label>
-          <button id="redoClosure" class="button secondary wide">Compute Redo Closure</button>
-          <div id="redoResult" class="result"></div>
-        </div>
-        <div>
-          <div class="section-head tight">
             <div>
-              <h2>Records And Project Book</h2>
-              <p>Human-readable docs and machine records for the selected project.</p>
+              <div class="section-head tight">
+                <div>
+                  <h2>Records and project book</h2>
+                  <p>Human-readable docs and machine records for the selected project.</p>
+                </div>
+              </div>
+              <div id="portalRecords" class="record-list tall"></div>
             </div>
-          </div>
-          <div id="portalRecords" class="record-list tall"></div>
-        </div>
-      </section>
+          </section>
+        </section>
 
-      <section class="band ux-panel" data-panel="debug" aria-labelledby="packet-title">
-        <div class="section-head tight">
-          <div>
-            <h2 id="packet-title">Invocation Packet</h2>
-            <p>The packet a Codex run should consume before executing skills.</p>
-          </div>
-        </div>
-        <pre id="packetView" class="packet">{}</pre>
-      </section>
-    </section>
-  </main>
+        <section class="ux-panel" data-panel="change" aria-labelledby="change-title">
+          <section class="band">
+            <div class="section-head">
+              <div>
+                <h2 id="change-title">Resteer Or Change Design</h2>
+                <p>A human change creates a governed change request, computes redo impact, reopens downstream stages, and records handoff communication.</p>
+              </div>
+              <button id="openChangeRequest" class="button primary">Open Change Request</button>
+            </div>
+            <div class="form-grid">
+              <label class="field">
+                <span>Change title</span>
+                <input id="changeTitle" value="Resteer design">
+              </label>
+              <label class="field">
+                <span>Impact area</span>
+                <select id="changeImpact">
+                  <option value="requirements">Requirements / PRD</option>
+                  <option value="design">Design / Architecture</option>
+                  <option value="workflow">Workflow / Skills</option>
+                  <option value="quality">Quality / Review</option>
+                  <option value="implementation">Implementation / Testing</option>
+                  <option value="production">Production / SRE</option>
+                  <option value="budget">Budget / Approval</option>
+                </select>
+              </label>
+              <label class="field">
+                <span>Reopen from stage</span>
+                <select id="changeTargetStage"></select>
+              </label>
+              <label class="field">
+                <span>Selected artifact/node</span>
+                <input id="changeNode" value="02-prd.md">
+              </label>
+              <label class="field">
+                <span>Token delta</span>
+                <select id="changeTokenDelta">
+                  <option value="medium">Medium</option>
+                  <option value="low">Low</option>
+                  <option value="high">High</option>
+                  <option value="xhigh">Extra high</option>
+                </select>
+              </label>
+              <label class="field">
+                <span>Approval owner</span>
+                <input id="changeApprovalOwner" value="human-owner">
+              </label>
+              <label class="field span-3">
+                <span>Requested change</span>
+                <textarea id="changeRequested" rows="3">Change the design direction, reopen affected gates, and require downstream trace, review, test, and handoff updates.</textarea>
+              </label>
+              <label class="field span-3">
+                <span>Reason</span>
+                <textarea id="changeReason" rows="2">Human owner wants to resteer the project after reviewing the portal.</textarea>
+              </label>
+            </div>
+            <div id="changeResult" class="result"></div>
+          </section>
+        </section>
+
+        <section class="ux-panel" data-panel="platform" aria-labelledby="platform-title">
+          <section class="band platform-spine">
+            <div class="section-head">
+              <div>
+                <div class="studio-kicker">PB-01 product platform spine</div>
+                <h2 id="platform-title">Local product runtime, not just documents</h2>
+                <p id="productPlatformBoundary">Start or select a project to load the local product spine.</p>
+              </div>
+              <div class="protocol-pills">
+                <span class="status-chip strong" id="productPlatformStatus">PB-01: --</span>
+                <span class="status-chip accent" id="platformLedgerStatus">--</span>
+                <span class="status-chip" id="platformNextBatch">--</span>
+              </div>
+            </div>
+            <div class="platform-grid">
+              <div>
+                <h3>Capability gates</h3>
+                <div id="platformCapabilityList" class="platform-stack"></div>
+              </div>
+              <div>
+                <h3>Roles and decision rights</h3>
+                <div id="platformRoleList" class="platform-stack"></div>
+              </div>
+            </div>
+            <div class="platform-grid lower">
+              <div>
+                <h3>Project spaces</h3>
+                <div id="platformProjectSpaces" class="platform-stack"></div>
+              </div>
+              <div>
+                <h3>Human collaboration</h3>
+                <div class="platform-comment-composer">
+                  <select id="platformCommentTopic" aria-label="Platform comment topic">
+                    <option value="platform_review">Platform review</option>
+                    <option value="ux_research">UX research</option>
+                    <option value="stage_gate">Stage gate</option>
+                    <option value="product_gap">Product gap</option>
+                  </select>
+                  <button id="addPlatformComment" class="button primary">Record Comment</button>
+                </div>
+                <textarea id="platformComment" rows="3" placeholder="Record a human review note. Scope/design/risk changes still require governed change control."></textarea>
+                <div id="platformCommentList" class="platform-stack comments"></div>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <section class="ux-panel" data-panel="debug" aria-labelledby="protocol-title">
+          <section class="band protocol-workbench">
+            <div class="section-head">
+              <div>
+                <h2 id="protocol-title">Agent Interaction Protocol Workbench</h2>
+                <p>AG-UI event stream, A2UI dynamic surfaces, and MCP Apps tool/resources for step-by-step SDLC factory control.</p>
+              </div>
+              <div class="protocol-pills" aria-label="Protocol status">
+                <span id="protocolAguiStatus" class="status-chip strong">AG-UI: --</span>
+                <span id="protocolA2uiStatus" class="status-chip accent">A2UI: --</span>
+                <span id="protocolMcpStatus" class="status-chip">MCP Apps: --</span>
+              </div>
+            </div>
+
+            <div class="protocol-grid">
+              <div class="agent-question-panel">
+                <div class="section-head tight">
+                  <div>
+                    <h3>Ask or resteer anytime</h3>
+                    <p>The agent responds with the active stage report, blockers, legal next action, and change-control path.</p>
+                  </div>
+                </div>
+                <div class="agent-input-row">
+                  <select id="agentMessageMode" aria-label="Agent message mode">
+                    <option value="ask">Ask</option>
+                    <option value="audit">Audit</option>
+                    <option value="resteer">Resteer</option>
+                    <option value="explain">Explain</option>
+                  </select>
+                  <button id="sendAgentMessage" class="button primary">Send To Agent</button>
+                </div>
+                <textarea id="agentMessage" rows="4" placeholder="Ask what is blocked, request a stage report, or describe a design change to route through change control."></textarea>
+                <div id="agentResponse" class="agent-response"></div>
+              </div>
+
+              <div class="stage-report-panel">
+                <div class="stage-report-header">
+                  <span>Current stage report</span>
+                  <strong id="stageReportTitle">No active stage</strong>
+                </div>
+                <p id="stageReportBody">Start or select a project to inspect agent protocol state.</p>
+                <div id="aguiEventStream" class="event-stream"></div>
+              </div>
+            </div>
+
+            <div class="protocol-grid lower">
+              <div>
+                <h3>A2UI declared surfaces</h3>
+                <div id="a2uiSurfaces" class="surface-grid"></div>
+              </div>
+              <div>
+                <h3>MCP Apps tools and resources</h3>
+                <div id="mcpAppsList" class="stack-list protocol-list"></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="band">
+            <div class="section-head tight">
+              <div>
+                <h2>Invocation packet</h2>
+                <p>The packet a Codex run should consume before executing skills.</p>
+              </div>
+            </div>
+            <pre id="packetView" class="packet">{}</pre>
+          </section>
+        </section>
+      </main>
+    </div>
+  </div>
 
   <script src="app.js"></script>
 </body>

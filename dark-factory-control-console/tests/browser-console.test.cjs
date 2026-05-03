@@ -9,6 +9,7 @@ const consoleApp = require("../server");
 
 let browser;
 let server;
+let createdRunId;
 
 (async () => {
   server = process.env.DFMS_BROWSER_BASE_URL ? null : consoleApp.createServer();
@@ -23,6 +24,8 @@ let server;
   assert((await page.locator("h1").textContent()).includes("Dark Factory Studio"), "studio title should render");
   assert((await page.locator("#studio-title").textContent()).includes("Describe the mission"), "mission composer should lead the first screen");
   assert((await page.locator("#cockpit-title").textContent()).includes("what is blocked"), "control cockpit should explain the no-skip work state");
+  assert((await page.locator("#workflowRunway").textContent()).includes("Set mission"), "workflow runway should make the first legal step explicit");
+  assert((await page.locator("#workflowRunway").textContent()).includes("Review evidence"), "workflow runway should show the evidence review stage");
   assert((await page.locator("#cockpitLegalAction").textContent()).trim().length > 5, "control cockpit should show the legal next action");
   assert((await page.locator("#hawkeyeState").textContent()).trim().length > 2, "Hawkeye auditor state should render");
   assert((await page.locator("#studioPrimaryAction").textContent()).trim().length > 5, "studio primary action should be visible");
@@ -40,6 +43,23 @@ let server;
   assert((await page.locator("#platform-title").textContent()).includes("Local product runtime"), "PB-01 platform spine should render as a product surface");
   assert((await page.locator("#productPlatformStatus").textContent()).includes("pb01_local_spine_running"), "PB-01 platform spine should expose local runtime state");
   assert((await page.locator("#platformCapabilityList").textContent()).includes("Human Collaboration Thread"), "platform capability gates should render");
+  const desktopOverflow = await page.evaluate(() => ({
+    fits: document.documentElement.scrollWidth <= window.innerWidth + 4,
+    viewport: window.innerWidth,
+    scrollWidth: document.documentElement.scrollWidth,
+    offenders: [...document.querySelectorAll("body *")].map((element) => {
+      const rect = element.getBoundingClientRect();
+      return {
+        tag: element.tagName,
+        id: element.id,
+        className: String(element.className || ""),
+        right: Math.round(rect.right),
+        width: Math.round(rect.width),
+        text: (element.textContent || "").replace(/\s+/g, " ").trim().slice(0, 80)
+      };
+    }).filter((item) => item.right > window.innerWidth + 4).slice(0, 5)
+  }));
+  assert(desktopOverflow.fits, `desktop Material-style layout should not horizontally overflow: ${JSON.stringify(desktopOverflow)}`);
 
   await page.click('[data-panel-target="start"]');
   await page.fill("#projectName", "Browser Smoke Governed Product");
@@ -49,6 +69,10 @@ let server;
   await page.fill("#intent", "Build a governed UI product through meta-meta first sequencing, customer grilling, artifact gates, testing evidence, dashboard control, and redo closure.");
   await page.click("#createRun");
   await page.waitForFunction(() => document.querySelector("#runState")?.textContent.includes("interrogating"));
+  createdRunId = await page.evaluate(async () => {
+    const bootstrap = await fetch("/api/bootstrap").then((response) => response.json());
+    return bootstrap.runs[0]?.run_id;
+  });
   await page.waitForFunction(() => document.querySelector("#swarmStatus")?.textContent.includes("interrogating"));
   await page.waitForFunction(() => document.querySelector("#protocolAguiStatus")?.textContent.includes("events"));
   await page.waitForFunction(() => document.querySelector("#humanInterrupts")?.textContent.includes("approve_factory_scenario"));
@@ -144,13 +168,38 @@ let server;
   fs.mkdirSync(artifacts, { recursive: true });
   await page.screenshot({ path: path.join(artifacts, "browser-console-smoke.png"), fullPage: true });
   await page.setViewportSize({ width: 390, height: 900 });
+  const mobileOverflow = await page.evaluate(() => ({
+    fits: document.documentElement.scrollWidth <= window.innerWidth + 4,
+    viewport: window.innerWidth,
+    scrollWidth: document.documentElement.scrollWidth,
+    offenders: [...document.querySelectorAll("body *")].map((element) => {
+      const rect = element.getBoundingClientRect();
+      return {
+        tag: element.tagName,
+        id: element.id,
+        className: String(element.className || ""),
+        right: Math.round(rect.right),
+        width: Math.round(rect.width),
+        text: (element.textContent || "").replace(/\s+/g, " ").trim().slice(0, 80)
+      };
+    }).filter((item) => item.right > window.innerWidth + 4).slice(0, 5)
+  }));
+  assert(mobileOverflow.fits, `mobile Material-style layout should not horizontally overflow: ${JSON.stringify(mobileOverflow)}`);
   await page.screenshot({ path: path.join(artifacts, "browser-console-mobile-smoke.png"), fullPage: true });
   await browser.close();
   if (server) await new Promise((resolve) => server.close(resolve));
+  if (createdRunId && /^DFRUN-UI-/.test(createdRunId)) {
+    fs.rmSync(path.join(__dirname, "..", "runs", createdRunId), { recursive: true, force: true });
+    fs.rmSync(path.join(__dirname, "..", "runs", `${createdRunId}.json`), { force: true });
+  }
   console.log("browser-console smoke passed");
 })().catch(async (error) => {
   if (browser) await browser.close().catch(() => {});
   if (server) await new Promise((resolve) => server.close(resolve)).catch(() => {});
+  if (createdRunId && /^DFRUN-UI-/.test(createdRunId)) {
+    fs.rmSync(path.join(__dirname, "..", "runs", createdRunId), { recursive: true, force: true });
+    fs.rmSync(path.join(__dirname, "..", "runs", `${createdRunId}.json`), { force: true });
+  }
   console.error(error);
   process.exit(1);
 });

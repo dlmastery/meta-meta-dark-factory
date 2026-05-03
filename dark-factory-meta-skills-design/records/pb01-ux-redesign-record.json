@@ -1,0 +1,39 @@
+{
+  "record_type": "agentic_product_ux_rescue_redesign_record",
+  "zero_slop_policy": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
+  "status": "accepted_for_local_ui_redesign_slice",
+  "scope_boundary": "Local control-console UX redesign only; not a hosted enterprise product.",
+  "implemented": [
+    "guided mission-control first viewport",
+    "six-step workflow runway",
+    "legal next action supervisor pane",
+    "human decision queue",
+    "Hawkeye audit posture",
+    "named rooms for intake, evidence, graph, resteer, runtime spine, and agent protocol",
+    "product rescue brief",
+    "desktop and mobile no-overflow Playwright assertions"
+  ],
+  "validation": [
+    {
+      "command": "node --check dark-factory-control-console/server.js",
+      "status": "pass"
+    },
+    {
+      "command": "node --check dark-factory-control-console/public/app.js",
+      "status": "pass"
+    },
+    {
+      "command": "npm test",
+      "status": "pass"
+    },
+    {
+      "command": "npm run test:browser",
+      "status": "pass"
+    },
+    {
+      "command": "python dark-factory-meta-skills-design/scripts/validate_tasks_md.py dark-factory-meta-skills-design/TASKS.md",
+      "status": "pass"
+    }
+  ],
+  "remaining_gap": "PB-02 hosted enterprise runtime: auth/RBAC, durable database, hosted deployment, external provider orchestration, and service-management operations."
+}

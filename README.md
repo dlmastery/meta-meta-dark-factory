@@ -9,6 +9,7 @@ This repository is not allowed to claim that the full outsourcing-replacement pr
 - `RB-01` through `RB-08` are accepted for their stated local evidence boundaries.
 - The todo/habits demonstrator has current-catalog saturation evidence: 55 standalone artifacts, 8 explicit not-applicable waivers, zero missing/partial/combined/deferred catalog entries, review package, quality certificate, dashboard index, and browser screenshots.
 - `RB-09` is the final Hawkeye/public-hardening track. It verifies public repo posture, reproducibility, overclaim controls, validation commands, and residual risks.
+- `PB-01` adds a local product-platform spine and a guided agentic UX rescue slice: mission-control first viewport, workflow runway, legal-next-action supervisor pane, human decision queue, runtime spine, and Playwright desktop/mobile no-overflow checks.
 - A full hosted multi-user outsourcing-replacement product still needs production platform work: authentication/RBAC, durable database, provider orchestration, collaboration, hosted deployment, CI/CD, policy controls, and operational service management.
 
 ## What The Owner Actually Wanted

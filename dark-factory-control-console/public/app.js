@@ -111,6 +111,31 @@ function selectStudioScenario(scenario) {
   });
 }
 
+function updateWorkflowRunway(run, pendingCount = 0) {
+  const order = ["mission", "route", "grill", "execute", "evidence", "handoff"];
+  let activeKey = "mission";
+  if (run) {
+    if (pendingCount > 0 || run.current_stage === "stage-00-meta-meta") {
+      activeKey = "route";
+    } else if (run.current_stage === "stage-01-interrogation" || run.interrogation?.gate !== "pass") {
+      activeKey = "grill";
+    } else if (["stage-02-engagement", "stage-03-methodology", "stage-04-artifacts", "stage-05-review"].includes(run.current_stage)) {
+      activeKey = "execute";
+    } else if (run.current_stage === "stage-06-build-test") {
+      activeKey = "evidence";
+    } else {
+      activeKey = "handoff";
+    }
+    if (run.status === "change_control" || run.status === "ready_for_handoff") activeKey = "handoff";
+  }
+  const activeIndex = order.indexOf(activeKey);
+  document.querySelectorAll("[data-runway-step]").forEach((step) => {
+    const index = order.indexOf(step.dataset.runwayStep);
+    step.classList.toggle("active", index === activeIndex);
+    step.classList.toggle("completed", index >= 0 && index < activeIndex);
+  });
+}
+
 function syncStudioMissionToStartForm() {
   if ($("studioProjectName")?.value) $("projectName").value = $("studioProjectName").value;
   if ($("studioIntent")?.value) $("intent").value = $("studioIntent").value;
@@ -393,6 +418,7 @@ function renderStudioState() {
   const active = currentStages().find((stage) => stage.id === run?.current_stage) || currentStages()[0];
   const scenario = run?.scenario_mode || $("scenarioMode")?.value || "greenfield-product";
   selectStudioScenario(scenario);
+  updateWorkflowRunway(run, pending.length);
 
   if (!run) {
     setText("studioPrimaryAction", "Start Factory Run");
