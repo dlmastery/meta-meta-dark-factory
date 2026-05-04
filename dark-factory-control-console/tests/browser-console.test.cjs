@@ -26,6 +26,10 @@ let createdRunId;
   assert((await page.locator("#cockpit-title").textContent()).includes("what is blocked"), "control cockpit should explain the no-skip work state");
   assert((await page.locator("#workflowRunway").textContent()).includes("Set mission"), "workflow runway should make the first legal step explicit");
   assert((await page.locator("#workflowRunway").textContent()).includes("Review evidence"), "workflow runway should show the evidence review stage");
+  assert((await page.locator("#operating-loop-title").textContent()).includes("Prompt"), "operating loop should expose prompt-first workflow");
+  assert((await page.locator("#outcomeLoop").textContent()).includes("Verified result"), "operating loop should expose verified-result workflow");
+  assert((await page.locator("#protocolA2aInline").textContent()).includes("A2A"), "first screen should expose A2A as a protocol layer");
+  assert((await page.locator("#serviceInvocationRail").textContent()).includes("/api/"), "first screen should expose backend services as workflow objects");
   assert((await page.locator("#cockpitLegalAction").textContent()).trim().length > 5, "control cockpit should show the legal next action");
   assert((await page.locator("#hawkeyeState").textContent()).trim().length > 2, "Hawkeye auditor state should render");
   assert((await page.locator("#studioPrimaryAction").textContent()).trim().length > 5, "studio primary action should be visible");
@@ -34,6 +38,7 @@ let createdRunId;
   assert((await page.locator("#flowMap").textContent()).includes("Meta-Meta Attractor"), "critical path should render the stage map");
   assert((await page.locator("#legalNextAction").textContent()).trim().length > 5, "command deck should render the next legal action");
   assert((await page.locator("#protocolAguiStatus").textContent()).includes("AG-UI"), "protocol workbench should render AG-UI status");
+  assert((await page.locator("#protocolA2aStatus").textContent()).includes("A2A"), "protocol workbench should render A2A status");
   assert((await page.locator("#truth-title").textContent()).includes("Recovery Truth"), "truth inventory should render");
   assert((await page.locator("#agentic-workbench-title").textContent()).includes("Agentic SDLC"), "agentic workbench should render");
   assert((await page.locator("#scenarioCards").textContent()).includes("Build a new product"), "scenario router should render");
@@ -66,10 +71,14 @@ let createdRunId;
   const mobileStartContract = await mobileStart.evaluate(() => {
     const runway = document.querySelector("#workflowRunway")?.getBoundingClientRect();
     const title = document.querySelector("#studio-title")?.getBoundingClientRect();
+    const operatingLoop = document.querySelector("#operating-loop-title")?.getBoundingClientRect();
+    const outcomeLoop = document.querySelector("#outcomeLoop")?.getBoundingClientRect();
     const primary = document.querySelector("#studioPrimaryAction")?.getBoundingClientRect();
     return {
       runwayHeight: runway?.height || 0,
       titleTop: title?.top || 9999,
+      operatingLoopTop: operatingLoop?.top || 9999,
+      outcomeLoopBottom: outcomeLoop?.bottom || 9999,
       primaryTop: primary?.top || 9999,
       scrollWidth: document.documentElement.scrollWidth,
       viewport: window.innerWidth
@@ -77,7 +86,9 @@ let createdRunId;
   });
   assert(mobileStartContract.runwayHeight > 0 && mobileStartContract.runwayHeight < 170, `mobile workflow runway should be compact: ${JSON.stringify(mobileStartContract)}`);
   assert(mobileStartContract.titleTop < 360, `mobile mission title should appear early: ${JSON.stringify(mobileStartContract)}`);
-  assert(mobileStartContract.primaryTop < 820, `mobile primary action should be reachable in first viewport: ${JSON.stringify(mobileStartContract)}`);
+  assert(mobileStartContract.operatingLoopTop < 560, `mobile agentic operating loop should appear before the form details: ${JSON.stringify(mobileStartContract)}`);
+  assert(mobileStartContract.outcomeLoopBottom < 760, `mobile prompt-to-verified-result loop should be visible in the first viewport: ${JSON.stringify(mobileStartContract)}`);
+  assert(mobileStartContract.primaryTop < 1120, `mobile primary action should follow the visible workflow without disappearing far down-page: ${JSON.stringify(mobileStartContract)}`);
   assert(mobileStartContract.scrollWidth <= mobileStartContract.viewport + 4, `mobile startup should not horizontally overflow: ${JSON.stringify(mobileStartContract)}`);
   await mobileStart.screenshot({ path: path.join(__dirname, "..", "artifacts", "browser-console-mobile-start.png"), fullPage: false });
   await mobileStart.close();
@@ -96,10 +107,14 @@ let createdRunId;
   });
   await page.waitForFunction(() => document.querySelector("#swarmStatus")?.textContent.includes("interrogating"));
   await page.waitForFunction(() => document.querySelector("#protocolAguiStatus")?.textContent.includes("events"));
+  await page.waitForFunction(() => document.querySelector("#protocolA2aStatus")?.textContent.includes("agents"));
+  await page.waitForFunction(() => document.querySelector("#protocolServicesInline")?.textContent.includes("Backend services:"));
   await page.waitForFunction(() => document.querySelector("#humanInterrupts")?.textContent.includes("approve_factory_scenario"));
   await page.click('[data-interrupt-decision="approve"]');
   await page.waitForFunction(() => document.querySelector("#aguiEventStream")?.textContent.includes("HUMAN_DECISION_RECORDED"));
   await page.click('[data-panel-target="debug"]');
+  await page.waitForFunction(() => document.querySelector("#a2aDelegationMap")?.textContent.includes("Meta-Attractor"));
+  await page.waitForFunction(() => document.querySelector("#backendServiceMap")?.textContent.includes("Legal stage invocation"));
   await page.fill("#agentMessage", "Explain the active stage and what the legal next action is.");
   await page.click("#sendAgentMessage");
   await page.waitForFunction(() => document.querySelector("#agentResponse")?.textContent.includes("Current legal focus"));

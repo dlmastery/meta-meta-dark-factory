@@ -1,7 +1,7 @@
 {
   "zero_slop_policy": "NO AI SLOP ALLOWED AT ALL - ZERO TOLERANCE TO SLOP AND HALLUCINATIONS",
   "validator": "validate_public_hardening.cjs",
-  "generated_at": "2026-05-03T20:59:55.767Z",
+  "generated_at": "2026-05-04T19:16:08.203Z",
   "status": "pass",
   "repository": {
     "name": "meta-meta-dark-factory",
@@ -14,7 +14,7 @@
   },
   "required_file_count": 13,
   "secret_scan": {
-    "scanned_text_files": 1155,
+    "scanned_text_files": 1156,
     "hit_count": 0
   },
   "path_posture": {

@@ -46,7 +46,7 @@ const PLATFORM_CAPABILITIES = [
     id: "PB01-CAP-005",
     title: "Agent Protocol Runtime Surface",
     status: "working_local_slice",
-    evidence: "The platform exposes AG-UI, A2UI, and MCP Apps local control endpoints."
+    evidence: "The platform exposes AG-UI, A2UI, MCP Apps, A2A, and backend service-map local control endpoints."
   },
   {
     id: "PB01-CAP-006",
@@ -295,7 +295,9 @@ const PROTOCOL_PROFILE = {
       "provider-quorum-board",
       "foundation-authoring-workbench",
       "human-interrupt-inbox",
-      "spec-graph-impact-explorer"
+      "spec-graph-impact-explorer",
+      "agent-delegation-map",
+      "backend-service-invocation-rail"
     ],
     contract: "The agent declares safe data-only UI surfaces that the console renders with local Material-style components."
   },
@@ -305,6 +307,13 @@ const PROTOCOL_PROFILE = {
     local_profile: "dfms-mcp-apps-manifest-v1",
     resource_mime_type: "text/html;profile=mcp-app",
     contract: "Factory tools expose UI resources, resource URIs, schemas, and human-consent boundaries for interactive workflow execution."
+  },
+  a2a: {
+    name: "A2A",
+    role: "agent_to_agent_delegation",
+    local_profile: "dfms-a2a-delegation-map-v1",
+    agent_card_fields: ["agent_id", "name", "role", "capabilities", "delegated_stage", "endpoint", "guardrail"],
+    contract: "Specialist agents are discoverable, stage-scoped, cancellable, and unable to mutate work outside the legal factory cursor."
   }
 };
 
@@ -337,6 +346,11 @@ const AGENTIC_UI_RESEARCH_FINDINGS = [
     source: "MCP Apps",
     principle: "Tools can expose interactive UI resources with sandbox and permission boundaries",
     implication: "Factory tools must declare resource URIs, input schemas, context resources, and human-consent boundaries."
+  },
+  {
+    source: "A2A",
+    principle: "Agent-to-agent work needs explicit capability discovery, task ownership, and lifecycle status",
+    implication: "The UI must show which specialist agent owns the current task, which backend service it can call, and what evidence proves its result."
   },
   {
     source: "LangGraph HITL",
@@ -539,11 +553,13 @@ function buildAgenticUiContract(input = {}) {
     scenario,
     template,
     non_negotiables: [
+      "The first screen must be prompt-first, task-based, outcome-based, verified-result-based, and steerable at any time.",
       "The UI is a control system for human intent, agent proposals, state, evidence, gates, interrupts, and redo impact.",
       "Every agent-visible action has a durable event, resource, stage, owner, and approval posture.",
       "Human approval, edit, reject, pause, takeover, and change-control paths must be available at material boundaries.",
       "Provider quorum output is merged, reviewed, and confirmed; provider text is never treated as final proof.",
-      "Spec Graph identity and downstream impact must be visible before changing requirements, designs, tests, or code."
+      "Spec Graph identity and downstream impact must be visible before changing requirements, designs, tests, or code.",
+      "A2A delegated agents and MCP Apps backend services must be visible as first-class execution objects."
     ],
     required_surfaces: [
       "scenario-template-router",
@@ -1064,9 +1080,11 @@ function buildInvocationPacket(runLike, answers) {
       agui: PROTOCOL_PROFILE.agui,
       a2ui: PROTOCOL_PROFILE.a2ui,
       mcp_apps: PROTOCOL_PROFILE.mcp_apps,
+      a2a: PROTOCOL_PROFILE.a2a,
       run_protocol_endpoint: runLike.run_id ? `/api/runs/${encodeURIComponent(runLike.run_id)}/protocol` : "",
       agent_message_endpoint: runLike.run_id ? `/api/runs/${encodeURIComponent(runLike.run_id)}/agent-message` : "",
       human_interrupt_endpoint: runLike.run_id ? `/api/runs/${encodeURIComponent(runLike.run_id)}/interrupt` : "",
+      backend_services_endpoint: runLike.run_id ? `/api/runs/${encodeURIComponent(runLike.run_id)}/backend-services` : "",
       human_can_interrogate_anytime: true,
       human_can_resteer_anytime_through_change_control: true,
       human_interrupts_required_for_sensitive_actions: true
@@ -2348,6 +2366,24 @@ function buildA2uiSurfaces(run) {
     {
       protocol: "A2UI",
       profile: PROTOCOL_PROFILE.a2ui.local_profile,
+      surface_id: "agent-delegation-map",
+      component: "A2ADelegationMap",
+      title: "A2A Delegated Agents",
+      props: buildA2aDelegationMap(run),
+      actions: ["inspectAgent", "cancelDelegation", "askAgent"]
+    },
+    {
+      protocol: "A2UI",
+      profile: PROTOCOL_PROFILE.a2ui.local_profile,
+      surface_id: "backend-service-invocation-rail",
+      component: "BackendServiceInvocationRail",
+      title: "Agent-Invoked Backend Services",
+      props: buildBackendServiceMap(run),
+      actions: ["inspectService", "invokeLegalService", "auditServiceCall"]
+    },
+    {
+      protocol: "A2UI",
+      profile: PROTOCOL_PROFILE.a2ui.local_profile,
       surface_id: "product-platform-spine",
       component: "ProductPlatformSpine",
       title: "PB-01 Product Platform Spine",
@@ -2410,6 +2446,10 @@ function buildMcpAppsManifest(run) {
         nodeId: { type: "string" },
         hypotheticalChange: { type: "string" }
       }),
+      tool("dfms.inspectBackendServices", "Inspect the backend services that agents may invoke under legal-state and human-approval guardrails.", "ui://dfms/backend-services", {
+        runId: { type: "string" },
+        serviceId: { type: "string" }
+      }),
       tool("dfms.addPlatformComment", "Persist a human review/comment record against the product platform spine.", "ui://dfms/product-platform", {
         runId: { type: "string" },
         topic: { type: "string" },
@@ -2423,7 +2463,9 @@ function buildMcpAppsManifest(run) {
       { uri: `dfms://runs/${run.run_id}/stage-report`, name: "Current stage report", mimeType: "application/json" },
       { uri: `dfms://runs/${run.run_id}/interrupts`, name: "Human interrupts", mimeType: "application/json" },
       { uri: `dfms://runs/${run.run_id}/spec-graph`, name: "Spec graph impact substrate", mimeType: "application/json" },
-      { uri: `dfms://runs/${run.run_id}/foundation-sections`, name: "Foundation workboard", mimeType: "application/json" }
+      { uri: `dfms://runs/${run.run_id}/foundation-sections`, name: "Foundation workboard", mimeType: "application/json" },
+      { uri: `dfms://runs/${run.run_id}/a2a-delegation`, name: "A2A delegation map", mimeType: "application/json" },
+      { uri: `dfms://runs/${run.run_id}/backend-services`, name: "Agent-invoked backend services", mimeType: "application/json" }
     ],
     ui_resources: [
       { uri: "ui://dfms/run-cockpit", mimeType: PROTOCOL_PROFILE.mcp_apps.resource_mime_type, title: "Dark Factory Run Cockpit" },
@@ -2434,12 +2476,86 @@ function buildMcpAppsManifest(run) {
       { uri: "ui://dfms/provider-quorum", mimeType: PROTOCOL_PROFILE.mcp_apps.resource_mime_type, title: "Provider Quorum Merge" },
       { uri: "ui://dfms/spec-graph-impact", mimeType: PROTOCOL_PROFILE.mcp_apps.resource_mime_type, title: "Spec Graph Impact" },
       { uri: "ui://dfms/foundation-authoring", mimeType: PROTOCOL_PROFILE.mcp_apps.resource_mime_type, title: "Foundation Authoring Workbench" },
+      { uri: "ui://dfms/backend-services", mimeType: PROTOCOL_PROFILE.mcp_apps.resource_mime_type, title: "Agent-Invoked Backend Services" },
+      { uri: "ui://dfms/a2a-delegation", mimeType: PROTOCOL_PROFILE.mcp_apps.resource_mime_type, title: "A2A Delegated Agent Map" },
       { uri: "ui://dfms/product-platform", mimeType: PROTOCOL_PROFILE.mcp_apps.resource_mime_type, title: "PB-01 Product Platform Spine" }
     ],
     security_model: [
       "UI resources are local descriptors in this console, not remote executable code.",
       "User-initiated tool calls require explicit button actions or API POSTs.",
       "Scope, budget, production, security, privacy, and residual-risk changes require human approval evidence."
+    ]
+  };
+}
+
+function stageAgentName(stage) {
+  const byKind = {
+    "meta-meta": "Meta-Attractor Lead",
+    intake: "Spec Interrogator",
+    governance: "TPM Governance Mayor",
+    orchestration: "Factory Skill Router",
+    planning: "Artifact And Trace Architect",
+    review: "Critic Jury Foreperson",
+    execution: "Build/Test Executor",
+    control: "Dashboard And Handoff Controller"
+  };
+  return byKind[stage?.kind] || "Specialist Agent";
+}
+
+function buildA2aDelegationMap(run) {
+  const stages = run.stages || STAGES;
+  return {
+    zero_slop_policy: ZERO_SLOP,
+    protocol: "A2A",
+    profile: PROTOCOL_PROFILE.a2a.local_profile,
+    run_id: run.run_id,
+    active_stage: run.current_stage,
+    task_lifecycle: ["discover", "delegate", "stream_status", "return_artifact", "verify", "handoff_or_resteer"],
+    agents: stages.map((stage, index) => ({
+      agent_id: `a2a-${stage.id}`,
+      name: stageAgentName(stage),
+      role: stage.kind,
+      delegated_stage: stage.id,
+      status: stage.id === run.current_stage ? "active_or_next" : stage.status || "locked",
+      capabilities: stage.skills || [],
+      endpoint: `/api/runs/${encodeURIComponent(run.run_id)}/protocol#${stage.id}`,
+      guardrail: index === 0
+        ? "Owns governed entry and product-tailored factory generation."
+        : "Cannot execute until predecessor stage is accepted or reopened through change control."
+    })),
+    coordination_rules: [
+      "The user-facing agent hosts the specialist agents and never hides delegation status from the human.",
+      "Delegated agents receive only the stage contract, allowed tools, trace links, and current legal cursor.",
+      "Every delegated result must return an artifact, test/evidence pointer, or explicit blocker.",
+      "Failed or contradictory results route to critic review and human steering before downstream execution."
+    ]
+  };
+}
+
+function buildBackendServiceMap(run) {
+  const runId = run.run_id || ":id";
+  const service = (id, label, method, endpoint, invokedBy, guardrail) => ({
+    id,
+    label,
+    method,
+    endpoint,
+    invoked_by_agent: invokedBy,
+    status: "available_local",
+    guardrail
+  });
+  return {
+    zero_slop_policy: ZERO_SLOP,
+    service_map_type: "dfms_agent_invoked_backend_services_v1",
+    run_id: run.run_id,
+    services: [
+      service("svc-bootstrap", "Factory bootstrap and catalog load", "GET", "/api/bootstrap", "Meta-Attractor Lead", "Read-only context and catalog hydration."),
+      service("svc-protocol", "Agent protocol state", "GET", `/api/runs/${encodeURIComponent(runId)}/protocol`, "User-facing host agent", "Read-only protocol aggregation for AG-UI, A2UI, MCP Apps, and A2A."),
+      service("svc-agent-message", "Ask, explain, audit, or resteer message", "POST", `/api/runs/${encodeURIComponent(runId)}/agent-message`, "User-facing host agent", "Records USER_MESSAGE or USER_RESTEER_REQUESTED event; material changes still require change control."),
+      service("svc-interrupt", "Human interrupt decision", "POST", `/api/runs/${encodeURIComponent(runId)}/interrupt`, "Human owner through AG-UI", "Approve/edit/reject/escalate before material routing or execution."),
+      service("svc-stage-invoke", "Legal stage invocation", "POST", `/api/runs/${encodeURIComponent(runId)}/invoke`, "Stage specialist agent", "Server rejects non-current stages using execution_legal_state."),
+      service("svc-change", "Governed change request", "POST", `/api/runs/${encodeURIComponent(runId)}/change-request`, "Resteer controller", "Creates downstream redo closure and reopens impacted stages."),
+      service("svc-validate", "Run validation and quality gate", "GET", `/api/runs/${encodeURIComponent(runId)}/validate`, "Hawkeye auditor", "Read-only conformance and evidence validation."),
+      service("svc-platform-comment", "Human platform collaboration record", "POST", "/api/platform/comments", "Human reviewer", "Comment record only; not a substitute for governed change approval.")
     ]
   };
 }
@@ -2507,12 +2623,15 @@ function buildProductPlatformState(runLike = null) {
         "/api/bootstrap",
         "/api/platform",
         "/api/runs/:id/protocol",
+        "/api/runs/:id/backend-services",
         "/api/runs/:id/agent-message",
         "/api/runs/:id/interrupt",
         "/api/runs/:id/change-request",
         "/api/runs/:id/validate"
       ],
-      protocols: ["AG-UI local events", "A2UI local surface descriptors", "MCP Apps local tool/resource descriptors"]
+      protocols: ["AG-UI local events", "A2UI local surface descriptors", "MCP Apps local tool/resource descriptors", "A2A local delegation map"],
+      service_map_endpoint: activeRunId ? `/api/runs/${encodeURIComponent(activeRunId)}/backend-services` : "",
+      service_guardrail: "Backend service calls are visible as first-class workflow objects and remain gated by legal-state, human interrupt, and change-control policy."
     },
     capabilities: PLATFORM_CAPABILITIES,
     acceptance_gate: {
@@ -2589,6 +2708,8 @@ function buildProtocolState(runOrId) {
     agui_events: run.agui_events || [],
     a2ui_surfaces: buildA2uiSurfaces(run),
     mcp_apps: buildMcpAppsManifest(run),
+    a2a_delegation: buildA2aDelegationMap(run),
+    backend_services: buildBackendServiceMap(run),
     product_platform_spine: buildProductPlatformState(run),
     agent_report: buildAgentReport(run),
     recent_agent_messages: (run.agent_messages || []).slice(0, 10)
@@ -3440,14 +3561,20 @@ function validateRunExecution(runOrId) {
   if (!Array.isArray(run.agui_events) || run.agui_events.length === 0) {
     warn("P1", "AG-UI event stream missing", "Run does not carry persisted agent-user protocol events.");
   }
-  if (!run.invocation_packet?.agent_protocols?.agui || !run.invocation_packet?.agent_protocols?.a2ui || !run.invocation_packet?.agent_protocols?.mcp_apps) {
-    warn("P1", "Agent protocol contracts missing", "Invocation packet does not expose AG-UI, A2UI, and MCP Apps contracts.");
+  if (!run.invocation_packet?.agent_protocols?.agui || !run.invocation_packet?.agent_protocols?.a2ui || !run.invocation_packet?.agent_protocols?.mcp_apps || !run.invocation_packet?.agent_protocols?.a2a) {
+    warn("P1", "Agent protocol contracts missing", "Invocation packet does not expose AG-UI, A2UI, MCP Apps, and A2A contracts.");
   }
   if (!run.agentic_ui_contract?.required_surfaces?.includes("human-interrupt-inbox")) {
     warn("P1", "Agentic UI contract missing interrupt surface", "Run does not enforce the human interrupt inbox as a required agentic UI surface.");
   }
   if (!run.agentic_ui_contract?.required_surfaces?.includes("spec-graph-impact-explorer")) {
     warn("P1", "Agentic UI contract missing graph surface", "Run does not expose Spec Graph impact as a required agentic UI surface.");
+  }
+  if (!run.agentic_ui_contract?.required_surfaces?.includes("agent-delegation-map")) {
+    warn("P1", "Agentic UI contract missing A2A surface", "Run does not expose delegated agents as a required agentic UI surface.");
+  }
+  if (!run.agentic_ui_contract?.required_surfaces?.includes("backend-service-invocation-rail")) {
+    warn("P1", "Agentic UI contract missing backend service surface", "Run does not expose backend services as a required agentic UI surface.");
   }
   if (!Array.isArray(run.provider_quorum) || run.provider_quorum.length < 3) {
     warn("P1", "Provider quorum underspecified", "Run must expose at least three provider seats for independent draft/review quorum.");
@@ -3777,7 +3904,7 @@ function goalLoopFindings(name, run, validation) {
     if (run.generated_meta_skill?.generated_from !== "df-meta-attractor") add("P1", "Generated meta-skill source missing", "Run does not prove df-meta-attractor generated the project-tailored meta-skill.");
   }
   if (name === "Protocol contracts") {
-    for (const key of ["agui", "a2ui", "mcp_apps"]) {
+    for (const key of ["agui", "a2ui", "mcp_apps", "a2a"]) {
       if (!protocol[key]) add("P1", "Protocol contract missing", `${key} missing from invocation packet.`);
     }
   }
@@ -3798,6 +3925,10 @@ function goalLoopFindings(name, run, validation) {
       if (!tool._meta?.ui?.resourceUri) add("P1", "MCP Apps tool lacks UI resource", `${tool.name} has no _meta.ui.resourceUri.`);
     }
     if (!(mcp.ui_resources || []).some((resource) => resource.mimeType === PROTOCOL_PROFILE.mcp_apps.resource_mime_type)) add("P1", "MCP Apps UI resource missing", "No ui resource declares the MCP Apps HTML profile.");
+    const a2a = buildA2aDelegationMap(run);
+    const services = buildBackendServiceMap(run);
+    if ((a2a.agents || []).length < STAGES.length) add("P1", "A2A delegation map underspecified", "Expected one delegated agent per stage.");
+    if ((services.services || []).length < 6) add("P1", "Backend service map underspecified", "Expected service rail for prompt, protocol, interrupt, stage, change, and validation services.");
   }
   if (name === "Human interrogation") {
     if (!(run.agent_messages || []).length) add("P1", "Agent interrogation not proven", "No agent-message interaction record exists for this run.");
@@ -4121,6 +4252,10 @@ async function handleApi(req, res) {
       const id = url.pathname.split("/")[3];
       return sendJson(res, 200, buildProtocolState(id));
     }
+    if (req.method === "GET" && url.pathname.match(/^\/api\/runs\/[^/]+\/backend-services$/)) {
+      const id = url.pathname.split("/")[3];
+      return sendJson(res, 200, buildBackendServiceMap(loadRun(id)));
+    }
     if (req.method === "GET" && url.pathname.match(/^\/api\/runs\/[^/]+\/legal-state$/)) {
       const id = url.pathname.split("/")[3];
       return sendJson(res, 200, computeLegalState(id));
@@ -4204,6 +4339,8 @@ module.exports = {
   buildAgentReport,
   buildA2uiSurfaces,
   buildMcpAppsManifest,
+  buildA2aDelegationMap,
+  buildBackendServiceMap,
   buildProtocolState,
   buildTruthInventory,
   buildProductPlatformState,

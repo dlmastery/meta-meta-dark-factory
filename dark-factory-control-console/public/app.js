@@ -90,6 +90,10 @@ function wireEvents() {
   document.querySelectorAll("[data-studio-scenario]").forEach((button) => {
     button.addEventListener("click", () => selectStudioScenario(button.dataset.studioScenario));
   });
+  ["studioIntent", "studioProjectName", "studioTokenBand"].forEach((id) => {
+    const element = $(id);
+    if (element) element.addEventListener("input", renderOperatingLoop);
+  });
   $("projectSelect").addEventListener("change", (event) => loadRun(event.target.value));
   document.querySelectorAll("[data-panel-target]").forEach((button) => {
     button.addEventListener("click", () => switchPanel(button.dataset.panelTarget));
@@ -408,7 +412,60 @@ function renderFocusConsole() {
 
   setText("focusPrimaryAction", pending.length ? "Review Decision" : run ? "Open Evidence" : "Start Project");
   setText("focusSecondaryAction", run ? "Inspect Evidence" : "See Start Form");
+  renderOperatingLoop();
   renderStudioState();
+}
+
+function renderOperatingLoop() {
+  const run = state.run;
+  const protocol = state.protocol || {};
+  const stages = currentStages();
+  const active = stages.find((stage) => stage.id === run?.current_stage) || stages.find((stage) => stage.status === "active") || stages[0];
+  const pending = (protocol.human_interrupts || run?.human_interrupts || []).filter((item) => item.state === "pending");
+  const events = protocol.agui_events || [];
+  const surfaces = protocol.a2ui_surfaces || [];
+  const mcpTools = protocol.mcp_apps?.tools || [];
+  const a2aAgents = protocol.a2a_delegation?.agents || [];
+  const services = protocol.backend_services?.services || [];
+  const validation = state.portal?.progress?.validation_status || (run ? "pending" : "--");
+  const recordCount = state.portal?.progress?.execution_record_count ?? run?.execution_outputs?.length ?? 0;
+  const prompt = run?.intent || $("studioIntent")?.value || "Write the mission.";
+  const promptSummary = prompt.length > 112 ? `${prompt.slice(0, 109)}...` : prompt;
+  const next = state.portal?.next_actions?.[0] || (run ? "Continue the active stage." : "Start by committing a mission, route, token band, and scenario.");
+
+  setText("loopOutcomeState", run ? `${run.status} | ${active?.title || "Factory"}` : "No outcome committed yet");
+  setText("loopPrompt", run ? promptSummary : "Write the mission and desired verified outcome.");
+  setText("loopTasks", run ? `${active?.title || "Current stage"} | ${next}` : "Meta-meta will convert the prompt into the first legal task.");
+  setText("loopAgents", run ? `${agentPersona(active)} plus ${a2aAgents.length || stages.length} delegated agents` : "Meta-attractor will route specialist agents.");
+  setText("loopServices", services.length ? `${services.length} backend services exposed with guardrails.` : "Backend services activate after a run starts.");
+  setText("loopVerify", run ? `${recordCount} evidence records | validation ${validation}` : "No verified result until tests, records, and audit evidence exist.");
+  setText("loopSteer", pending.length
+    ? `${pending.length} decision waiting: approve, edit, reject, or escalate.`
+    : run?.status === "change_control"
+      ? "Change control is open; downstream stages are reopened."
+      : "Ask anytime, approve gates, or open a governed change request.");
+  setText("protocolAguiInline", `AG-UI events: ${events.length || "--"}`);
+  setText("protocolA2uiInline", `A2UI surfaces: ${surfaces.length || "--"}`);
+  setText("protocolMcpInline", `MCP Apps tools: ${mcpTools.length || "--"}`);
+  setText("protocolA2aInline", `A2A agents: ${a2aAgents.length || "--"}`);
+  setText("protocolServicesInline", `Backend services: ${services.length || "--"}`);
+
+  const rail = $("serviceInvocationRail");
+  if (rail) {
+    const visible = services.length ? services.slice(0, 5) : [
+      { label: "Bootstrap", endpoint: "/api/bootstrap", guardrail: "Read-only factory context." },
+      { label: "Create run", endpoint: "/api/runs", guardrail: "Starts only at meta-meta entry." },
+      { label: "Ask agent", endpoint: "/api/runs/:id/agent-message", guardrail: "Records every human prompt." }
+    ];
+    rail.innerHTML = visible.map((service) => `
+      <article class="service-item">
+        <span>${escapeHtml(service.method || "LOCAL")}</span>
+        <strong>${escapeHtml(service.label || service.id)}</strong>
+        <small>${escapeHtml(service.endpoint || "")}</small>
+        <small>${escapeHtml(service.guardrail || "")}</small>
+      </article>
+    `).join("");
+  }
 }
 
 function renderStudioState() {
@@ -999,14 +1056,18 @@ function renderProtocol() {
     setText("protocolAguiStatus", "AG-UI: no run");
     setText("protocolA2uiStatus", "A2UI: no surfaces");
     setText("protocolMcpStatus", "MCP Apps: no tools");
+    setText("protocolA2aStatus", "A2A: no agents");
     setText("stageReportTitle", "No active stage");
     setText("stageReportBody", "Start or select a project to inspect agent protocol state.");
     $("aguiEventStream").innerHTML = `<div class="empty-note">No protocol events yet.</div>`;
     $("a2uiSurfaces").innerHTML = `<div class="empty-note">No A2UI surfaces yet.</div>`;
     $("mcpAppsList").innerHTML = `<div class="empty-note">No MCP Apps descriptors yet.</div>`;
+    $("a2aDelegationMap").innerHTML = `<div class="empty-note">No A2A delegated agents yet.</div>`;
+    $("backendServiceMap").innerHTML = `<div class="empty-note">No backend service map yet.</div>`;
     $("agentResponse").innerHTML = `<div class="empty-note">Ask the agent about the active stage, blockers, evidence, or a resteer.</div>`;
     renderAgenticWorkbench();
     renderProductPlatform();
+    renderOperatingLoop();
     renderPortalCockpit();
     return;
   }
@@ -1014,10 +1075,13 @@ function renderProtocol() {
   const events = protocol.agui_events || [];
   const surfaces = protocol.a2ui_surfaces || [];
   const mcp = protocol.mcp_apps || { tools: [], resources: [], ui_resources: [] };
+  const a2a = protocol.a2a_delegation || { agents: [] };
+  const backendServices = protocol.backend_services || { services: [] };
   const report = protocol.agent_report?.active_stage || {};
   setText("protocolAguiStatus", `AG-UI: ${events.length} events`);
   setText("protocolA2uiStatus", `A2UI: ${surfaces.length} surfaces`);
   setText("protocolMcpStatus", `MCP Apps: ${(mcp.tools || []).length} tools`);
+  setText("protocolA2aStatus", `A2A: ${(a2a.agents || []).length} agents`);
   setText("stageReportTitle", report.stage_title || "Active stage report");
   setText("stageReportBody", `${report.status || "--"} | ${report.gate_result || "--"} | ${report.next_action || "--"}`);
 
@@ -1053,12 +1117,29 @@ function renderProtocol() {
   `).join("");
   $("mcpAppsList").innerHTML = tools || resources ? `${tools}${resources}` : `<div class="empty-note">No MCP Apps descriptors yet.</div>`;
 
+  $("a2aDelegationMap").innerHTML = (a2a.agents || []).length ? (a2a.agents || []).map((agent) => `
+    <div class="stack-item">
+      <strong>${escapeHtml(agent.name)} | ${escapeHtml(agent.delegated_stage)}</strong>
+      <span>${escapeHtml(agent.status)} | ${(agent.capabilities || []).map(escapeHtml).join(" + ")}</span>
+      <small>${escapeHtml(agent.guardrail || "")}</small>
+    </div>
+  `).join("") : `<div class="empty-note">No A2A delegated agents yet.</div>`;
+
+  $("backendServiceMap").innerHTML = (backendServices.services || []).length ? (backendServices.services || []).map((service) => `
+    <div class="stack-item">
+      <strong>${escapeHtml(service.label)} | ${escapeHtml(service.method)}</strong>
+      <span>${escapeHtml(service.endpoint)} | invoked by ${escapeHtml(service.invoked_by_agent || "--")}</span>
+      <small>${escapeHtml(service.guardrail || "")}</small>
+    </div>
+  `).join("") : `<div class="empty-note">No backend service map yet.</div>`;
+
   const latest = protocol.recent_agent_messages?.[0];
   if (latest) {
     showAgentResponse(latest.response?.summary || "Agent response recorded.", false);
   }
   renderAgenticWorkbench();
   renderProductPlatform();
+  renderOperatingLoop();
   renderFocusConsole();
   renderPanelVisibility();
   renderPortalCockpit();

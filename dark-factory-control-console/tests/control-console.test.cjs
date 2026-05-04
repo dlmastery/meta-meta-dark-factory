@@ -22,10 +22,13 @@ function main() {
   assert(packet.agent_protocols.agui, "invocation packet should expose AG-UI protocol contract");
   assert(packet.agent_protocols.a2ui, "invocation packet should expose A2UI protocol contract");
   assert(packet.agent_protocols.mcp_apps, "invocation packet should expose MCP Apps protocol contract");
+  assert(packet.agent_protocols.a2a, "invocation packet should expose A2A protocol contract");
   assert(packet.agentic_ui_contract.required_surfaces.includes("human-interrupt-inbox"), "agentic UI contract should require human interrupts");
   assert(packet.agentic_ui_contract.required_surfaces.includes("spec-graph-impact-explorer"), "agentic UI contract should require Spec Graph impact");
   assert(packet.agentic_ui_contract.required_surfaces.includes("legal-next-action-cockpit"), "agentic UI contract should require the legal next-action cockpit");
   assert(packet.agentic_ui_contract.required_surfaces.includes("hawkeye-conformance-auditor"), "agentic UI contract should require Hawkeye auditor visibility");
+  assert(packet.agentic_ui_contract.required_surfaces.includes("agent-delegation-map"), "agentic UI contract should require A2A delegated agent visibility");
+  assert(packet.agentic_ui_contract.required_surfaces.includes("backend-service-invocation-rail"), "agentic UI contract should require backend service visibility");
   assert(packet.spec_graph_layer.node_identity_format, "invocation packet should carry Spec Graph identity rules");
   const platformBeforeRun = consoleApp.buildProductPlatformState();
   assert.strictEqual(platformBeforeRun.platform_status, "pb01_local_spine_running", "PB-01 product platform spine should be an actual local runtime state");
@@ -50,9 +53,14 @@ function main() {
   assert(initialProtocol.a2ui_surfaces.some((surface) => surface.surface_id === "legal-next-action-cockpit"), "protocol state should expose the legal cockpit surface");
   assert(initialProtocol.a2ui_surfaces.some((surface) => surface.surface_id === "hawkeye-conformance-auditor"), "protocol state should expose Hawkeye auditor surface");
   assert(initialProtocol.a2ui_surfaces.some((surface) => surface.surface_id === "rb-closure-board"), "protocol state should expose recovery closure surface");
+  assert(initialProtocol.a2ui_surfaces.some((surface) => surface.surface_id === "agent-delegation-map"), "protocol state should expose A2A delegated agent surface");
+  assert(initialProtocol.a2ui_surfaces.some((surface) => surface.surface_id === "backend-service-invocation-rail"), "protocol state should expose backend service rail surface");
   assert(initialProtocol.a2ui_surfaces.some((surface) => surface.surface_id === "product-platform-spine"), "protocol state should expose PB-01 product platform spine surface");
   assert(initialProtocol.mcp_apps.tools.some((tool) => tool.name === "dfms.askAgent"), "protocol state should expose MCP Apps askAgent tool");
   assert(initialProtocol.mcp_apps.tools.some((tool) => tool.name === "dfms.decideInterrupt"), "protocol state should expose MCP Apps decideInterrupt tool");
+  assert(initialProtocol.mcp_apps.tools.some((tool) => tool.name === "dfms.inspectBackendServices"), "protocol state should expose backend service inspection tool");
+  assert(initialProtocol.a2a_delegation.agents.length >= consoleApp.STAGES.length, "protocol state should expose one A2A agent per stage");
+  assert(initialProtocol.backend_services.services.some((service) => service.id === "svc-stage-invoke"), "protocol state should expose legal stage invocation backend service");
   assert(initialProtocol.mcp_apps.tools.some((tool) => tool.name === "dfms.addPlatformComment"), "protocol state should expose platform comment tool");
   assert.strictEqual(initialProtocol.product_platform_spine.platform_status, "pb01_local_spine_running", "protocol state should carry the platform spine");
   assert(initialProtocol.human_interrupts.some((item) => item.state === "pending"), "new runs should pause on the first human interrupt");

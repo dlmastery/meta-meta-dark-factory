@@ -35,8 +35,8 @@ body {
   margin: 0;
   background: var(--surface);
   color: var(--text);
-  font-family: "Google Sans Text", Roboto, "Segoe UI", Arial, sans-serif;
-  font-size: 14px;
+  font-family: "Google Sans", "Google Sans Text", Roboto, "Segoe UI", Arial, sans-serif;
+  font-size: 15px;
   line-height: 1.45;
 }
 
@@ -59,13 +59,13 @@ p {
 }
 
 h1 {
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.2;
 }
 
 h2 {
-  font-size: 24px;
-  line-height: 1.18;
+  font-size: 26px;
+  line-height: 1.14;
 }
 
 h3 {
@@ -83,7 +83,7 @@ strong {
 
 .app-shell {
   display: grid;
-  grid-template-columns: 296px minmax(0, 1fr);
+  grid-template-columns: 280px minmax(0, 1fr);
   min-height: 100vh;
 }
 
@@ -95,7 +95,7 @@ strong {
   display: grid;
   grid-template-rows: auto auto auto minmax(0, 1fr);
   gap: 18px;
-  padding: 18px;
+  padding: 18px 16px;
   border-right: 1px solid var(--outline);
   background: #ffffff;
 }
@@ -222,9 +222,9 @@ strong {
 
 .workspace {
   display: grid;
-  gap: 16px;
+  gap: 20px;
   width: 100%;
-  max-width: 1580px;
+  max-width: 1360px;
   min-width: 0;
   margin: 0 auto;
   padding: 20px 24px 40px;
@@ -245,8 +245,10 @@ strong {
 
 .studio-shell {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(340px, 410px);
-  gap: 16px;
+  grid-template-columns: minmax(0, 850px) minmax(320px, 380px);
+  justify-content: center;
+  align-items: start;
+  gap: 18px;
 }
 
 .mission-panel,
@@ -260,8 +262,11 @@ strong {
 
 .mission-panel {
   display: grid;
-  gap: 16px;
-  padding: 18px;
+  gap: 14px;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
 }
 
 .supervisor-pane {
@@ -270,23 +275,31 @@ strong {
   top: 92px;
   display: grid;
   gap: 12px;
-  padding: 16px;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
 }
 
 .runway {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 8px;
+  border: 1px solid var(--outline);
+  border-radius: var(--radius);
+  background: #ffffff;
+  box-shadow: var(--shadow);
+  padding: 10px;
 }
 
 .runway-step {
   display: grid;
   gap: 4px;
-  min-height: 86px;
+  min-height: 78px;
   border: 1px solid var(--outline);
   border-radius: var(--radius);
   padding: 10px;
-  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  background: #fafcff;
 }
 
 .runway-step span {
@@ -330,12 +343,17 @@ strong {
   justify-content: space-between;
   gap: 14px;
   align-items: flex-start;
+  border: 1px solid var(--outline);
+  border-radius: var(--radius);
+  background: #ffffff;
+  box-shadow: var(--shadow);
+  padding: 20px;
 }
 
 .mission-header h2 {
   max-width: 850px;
   margin-top: 4px;
-  font-size: 32px;
+  font-size: 36px;
 }
 
 .mission-header p {
@@ -347,10 +365,11 @@ strong {
 .mission-composer {
   display: grid;
   gap: 12px;
-  border: 1px solid #d6deec;
+  border: 1px solid var(--outline);
   border-radius: var(--radius);
-  background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
-  padding: 14px;
+  background: #ffffff;
+  box-shadow: var(--shadow);
+  padding: 16px;
 }
 
 .scenario-chip,
@@ -364,6 +383,7 @@ strong {
   padding: 8px 11px;
   font-weight: 800;
   cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
 }
 
 .scenario-chip.active,
@@ -371,6 +391,28 @@ strong {
 .tab-button.active {
   border-color: var(--primary);
   background: var(--primary);
+  color: var(--on-primary);
+}
+
+.scenario-chip:hover,
+.inspector-tab:hover,
+.tab-button:hover,
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.scenario-chip:hover,
+.inspector-tab:hover,
+.tab-button:hover {
+  background: var(--primary-container);
+  border-color: #adc6ff;
+}
+
+.scenario-chip.active:hover,
+.inspector-tab.active:hover,
+.tab-button.active:hover {
+  background: var(--primary);
+  border-color: var(--primary);
   color: var(--on-primary);
 }
 
@@ -394,17 +436,24 @@ strong {
   padding: 9px 14px;
   font-weight: 800;
   cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
 }
 
 .button.primary {
   background: var(--primary);
   color: var(--on-primary);
+  box-shadow: 0 2px 4px rgba(11, 87, 208, 0.18);
 }
 
 .button.secondary {
   background: #ffffff;
   color: var(--primary);
   border-color: var(--outline);
+}
+
+.button.secondary:hover {
+  background: var(--primary-container);
+  border-color: #adc6ff;
 }
 
 .button.large {
@@ -433,10 +482,11 @@ strong {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(360px, 0.7fr);
   gap: 14px;
-  border: 1px solid #d6deec;
+  border: 1px solid var(--outline);
   border-radius: var(--radius);
   background: #ffffff;
-  padding: 14px;
+  box-shadow: var(--shadow);
+  padding: 16px;
 }
 
 .proposal-canvas h3 {
@@ -446,6 +496,91 @@ strong {
 
 .proposal-canvas p {
   margin-top: 6px;
+}
+
+.operating-loop {
+  display: grid;
+  gap: 12px;
+  border: 1px solid var(--outline);
+  border-radius: var(--radius);
+  background: #ffffff;
+  box-shadow: var(--shadow);
+  padding: 16px;
+}
+
+.loop-head {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.loop-head h3 {
+  margin-top: 4px;
+  font-size: 22px;
+}
+
+.loop-head > strong {
+  max-width: 280px;
+  border: 1px solid #adc6ff;
+  border-radius: var(--radius);
+  background: var(--primary-container);
+  color: var(--primary);
+  padding: 8px 10px;
+  text-align: right;
+}
+
+.loop-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.loop-grid article {
+  display: grid;
+  gap: 6px;
+  min-height: 112px;
+  border: 1px solid #dce3ee;
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, #ffffff 0%, #f7faff 100%);
+  padding: 10px;
+  border-top: 3px solid #adc6ff;
+}
+
+.loop-grid article span,
+.protocol-service-rail span,
+.service-rail span {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.loop-grid article strong {
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.28;
+}
+
+.loop-grid article small {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.protocol-service-rail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.protocol-service-rail span {
+  min-height: 30px;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #d6deec;
+  border-radius: 999px;
+  background: var(--surface-container-high);
+  padding: 6px 9px;
 }
 
 .proposal-grid,
@@ -539,6 +674,31 @@ strong {
   font-size: 12px;
 }
 
+.service-rail {
+  display: grid;
+  gap: 7px;
+  margin-top: 8px;
+}
+
+.service-item {
+  display: grid;
+  gap: 4px;
+  border: 1px solid #dce3ee;
+  border-radius: var(--radius);
+  background: #ffffff;
+  padding: 9px;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.service-item strong {
+  font-size: 13px;
+}
+
+.service-item small {
+  color: var(--muted);
+  font-size: 11px;
+}
+
 .decision-panel {
   display: grid;
   gap: 10px;
@@ -546,6 +706,7 @@ strong {
   border-radius: var(--radius);
   background: #ffffff;
   padding: 12px;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
 }
 
 .focus-decisions {
@@ -1574,7 +1735,8 @@ textarea:focus {
 
   .topbar,
   .mission-header,
-  .section-head {
+  .section-head,
+  .loop-head {
     flex-direction: column;
     align-items: stretch;
   }
@@ -1613,6 +1775,7 @@ textarea:focus {
   .mission-grid,
   .studio-action-row,
   .refine-strip,
+  .loop-grid,
   .proposal-grid,
   .supervisor-grid,
   .truth-brief-grid,
@@ -1680,8 +1843,40 @@ textarea:focus {
   }
 
   .mission-composer textarea {
-    min-height: 82px;
-    max-height: 96px;
+    min-height: 72px;
+    max-height: 82px;
+  }
+
+  .loop-grid {
+    display: flex;
+    gap: 7px;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+  }
+
+  .loop-grid article {
+    min-width: 154px;
+    min-height: 88px;
+    padding: 8px;
+    scroll-snap-align: start;
+  }
+
+  .loop-grid article strong {
+    font-size: 12px;
+    line-height: 1.2;
+  }
+
+  .loop-grid article small {
+    display: none;
+  }
+
+  .protocol-service-rail {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .protocol-service-rail span {
+    flex: 0 0 auto;
   }
 
   .scenario-chip {
@@ -1693,10 +1888,27 @@ textarea:focus {
     min-height: 42px;
   }
 
-  .mission-panel,
-  .supervisor-pane,
-  .band {
+  .band,
+  .operating-loop {
     padding: 12px;
+  }
+
+  .mission-panel,
+  .supervisor-pane {
+    padding: 0;
+  }
+
+  .loop-head h3 {
+    font-size: 17px;
+  }
+
+  .loop-head > strong {
+    max-width: none;
+    text-align: left;
+  }
+
+  .loop-grid article {
+    min-height: auto;
   }
 
   .interrogation-protocol {

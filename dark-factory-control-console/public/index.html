@@ -82,6 +82,30 @@
               <span class="status-chip strong" id="runPreviewState">Waiting for mission</span>
             </div>
 
+            <div class="operating-loop" aria-labelledby="operating-loop-title">
+              <div class="loop-head">
+                <div>
+                  <span class="studio-kicker">Agentic operating loop</span>
+                  <h3 id="operating-loop-title">Prompt -> tasks -> agents/services -> verified result -> steer</h3>
+                </div>
+                <strong id="loopOutcomeState">No outcome committed yet</strong>
+              </div>
+              <div class="loop-grid" id="outcomeLoop" aria-label="Prompt-first verified outcome workflow">
+                <article><span>Prompt first</span><strong id="loopPrompt">Write the mission.</strong><small>Human intent is the source of truth.</small></article>
+                <article><span>Task plan</span><strong id="loopTasks">Meta-meta route pending.</strong><small>Only the legal next task can execute.</small></article>
+                <article><span>Agents + services</span><strong id="loopAgents">Meta-attractor standing by.</strong><small id="loopServices">Backend services idle.</small></article>
+                <article><span>Verified result</span><strong id="loopVerify">No evidence yet.</strong><small>Tests, records, and audit proof appear here.</small></article>
+                <article><span>Steering</span><strong id="loopSteer">Ask, approve, edit, reject, or resteer.</strong><small>Human control stays live through the run.</small></article>
+              </div>
+              <div class="protocol-service-rail" aria-label="Agent protocol and backend service rail">
+                <span id="protocolAguiInline">AG-UI events: --</span>
+                <span id="protocolA2uiInline">A2UI surfaces: --</span>
+                <span id="protocolMcpInline">MCP Apps tools: --</span>
+                <span id="protocolA2aInline">A2A agents: --</span>
+                <span id="protocolServicesInline">Backend services: --</span>
+              </div>
+            </div>
+
             <div class="mission-composer" aria-label="Factory mission composer">
               <div class="scenario-chips" aria-label="Factory scenario">
                 <button class="scenario-chip active" data-studio-scenario="greenfield-product">New product</button>
@@ -179,6 +203,11 @@
                 <button id="focusPrimaryAction" class="button primary">Review Decision</button>
                 <button id="focusSecondaryAction" class="button secondary">Inspect Evidence</button>
               </div>
+            </div>
+
+            <div>
+              <div class="next-action-label">Backend services</div>
+              <div id="serviceInvocationRail" class="service-rail" aria-label="Agent-invoked backend services"></div>
             </div>
 
             <div>
@@ -689,12 +718,13 @@
             <div class="section-head">
               <div>
                 <h2 id="protocol-title">Agent Interaction Protocol Workbench</h2>
-                <p>AG-UI event stream, A2UI dynamic surfaces, and MCP Apps tool/resources for step-by-step SDLC factory control.</p>
+                <p>AG-UI event stream, A2UI dynamic surfaces, MCP Apps tool/resources, and A2A delegation for step-by-step SDLC factory control.</p>
               </div>
               <div class="protocol-pills" aria-label="Protocol status">
                 <span id="protocolAguiStatus" class="status-chip strong">AG-UI: --</span>
                 <span id="protocolA2uiStatus" class="status-chip accent">A2UI: --</span>
                 <span id="protocolMcpStatus" class="status-chip">MCP Apps: --</span>
+                <span id="protocolA2aStatus" class="status-chip">A2A: --</span>
               </div>
             </div>
 
@@ -737,6 +767,17 @@
               <div>
                 <h3>MCP Apps tools and resources</h3>
                 <div id="mcpAppsList" class="stack-list protocol-list"></div>
+              </div>
+            </div>
+
+            <div class="protocol-grid lower">
+              <div>
+                <h3>A2A delegated agents</h3>
+                <div id="a2aDelegationMap" class="stack-list protocol-list"></div>
+              </div>
+              <div>
+                <h3>Backend service invocations</h3>
+                <div id="backendServiceMap" class="stack-list protocol-list"></div>
               </div>
             </div>
           </section>
